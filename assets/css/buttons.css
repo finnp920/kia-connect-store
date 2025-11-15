@@ -1,0 +1,51 @@
+.cut-corner-btn {
+  height: 56px;
+  width: 100%;
+  min-width: 16rem;
+  display: flex;
+}
+.cut-corner-btn::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 56px;
+  background-image: url(../icons/cut-corner-btn-left.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.cut-corner-btn::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 56px;
+  background-image: url(../icons/cut-corner-btn-right.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.cut-corner-btn-inner {
+  height: 56px;
+  width: calc(100% - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #9ba1a5;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 1;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.cut-corner-btn:hover::before,
+.cut-corner-btn:hover::after {
+  filter: invert(100%);
+}
+.cut-corner-btn:hover .cut-corner-btn-inner {
+  border-color: black;
+  background-color: black;
+  color: white;
+}

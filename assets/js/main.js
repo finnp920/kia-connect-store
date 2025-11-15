@@ -4,9 +4,9 @@
 // ----------------------------------------
 // Global State
 // ----------------------------------------
-let currentTheme = 'baby-animals';
-let themeData = null;
-let currentSlide = 1; // 클론 때문에 1부터 시작
+const themeNames = Object.keys(themeData);
+let currentTheme = themeNames[0];
+let currentSlide = 1;
 let carouselInterval = null;
 let isLiked = false;
 let realSlideCount = 3; // 실제 슬라이드 개수
@@ -16,7 +16,6 @@ let realSlideCount = 3; // 실제 슬라이드 개수
 // ----------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    await loadThemeData();
     setupThumbnailLoader();
 
     const urlTheme = getQueryParam('theme');
@@ -34,28 +33,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // ----------------------------------------
-// Data Loading
-// ----------------------------------------
-async function loadThemeData() {
-  const response = await fetch('js/theme-data.json');
-  if (!response.ok) {
-    throw new Error('Failed to load theme data');
-  }
-  themeData = await response.json();
-}
-
-// ----------------------------------------
 // Query-String Helpers
 // ----------------------------------------
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
-}
-
-function updateQueryParam(param, value) {
-  const url = new URL(window.location.href);
-  url.searchParams.set(param, value);
-  window.history.pushState({}, '', url);
 }
 
 // ----------------------------------------
@@ -207,6 +189,7 @@ function updatePreviewImages(theme) {
   const previewNavigation = document.getElementById('previewNavigation');
   const previewWelcome = document.getElementById('previewWelcome');
   const previewGoodbyeVideo = document.getElementById('previewGoodbyeVideo');
+  const previewGoodbye = document.getElementById('previewGoodbye');
   const labelElements = {
     cluster: document.getElementById('previewClusterLabel'),
     welcome: document.getElementById('previewWelcomeLabel'),
@@ -249,21 +232,8 @@ function updatePreviewImages(theme) {
     previewWelcome.src = images.welcome;
   }
 
-  if (previewGoodbyeVideo) {
-    const goodbyeVideoSrc = theme.videos?.goodbye?.avnt;
-    if (goodbyeVideoSrc) {
-      if (previewGoodbyeVideo.getAttribute('data-src') !== goodbyeVideoSrc) {
-        previewGoodbyeVideo.src = goodbyeVideoSrc;
-        previewGoodbyeVideo.setAttribute('data-src', goodbyeVideoSrc);
-      }
-      if (images?.goodbye) {
-        previewGoodbyeVideo.poster = images.goodbye;
-      }
-      const playPromise = previewGoodbyeVideo.play();
-      if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch(() => {});
-      }
-    }
+  if (previewGoodbye && images?.goodbye) {
+    previewGoodbye.src = images.goodbye;
   }
 }
 
@@ -483,23 +453,23 @@ function updateReasonImages(theme) {
   const reasonImages = [
     {
       id: 'reasonCardImage1',
-      pc: theme.kvImages?.[0] || 'assets/images/kv-slide-1.png',
-      mobile: 'assets/images/mobile-reason-1.png',
+      pc: theme.kvImages?.[0] || 'assets/images/details/kv-slide-1.png',
+      mobile: 'assets/images/details/mobile-reason-1.png',
     },
     {
       id: 'reasonCardImage2',
-      pc: 'assets/images/reasons-space-wonders.png',
-      mobile: 'assets/images/mobile-reason-2.png',
+      pc: 'assets/images/details/reasons-space-wonders.png',
+      mobile: 'assets/images/details/mobile-reason-2.png',
     },
     {
       id: 'reasonCardImage3',
-      pc: 'assets/images/reasons-landscape.png',
-      mobile: 'assets/images/mobile-reason-3.png',
+      pc: 'assets/images/details/reasons-landscape.png',
+      mobile: 'assets/images/details/mobile-reason-3.png',
     },
     {
       id: 'reasonCardImage4',
-      pc: 'assets/images/reasons-car-display.png',
-      mobile: 'assets/images/mobile-reason-4.png',
+      pc: 'assets/images/details/reasons-car-display.png',
+      mobile: 'assets/images/details/mobile-reason-4.png',
     },
   ];
 
@@ -514,16 +484,16 @@ function updateReasonImages(theme) {
   const reasonsBannerImage = document.getElementById('reasonsBannerImage');
   if (reasonsBannerImage) {
     const themeId = theme.id;
-    let bannerSrc = 'assets/images/kv-banner-reasons.png'; // PC 기본
+    let bannerSrc = 'assets/images/details/kv-banner-reasons.png'; // PC 기본
 
     if (isMobile) {
       // 모바일에서는 테마별 배너 사용
       if (themeId === 'baby-animals') {
-        bannerSrc = 'assets/images/mobile-kv-banner-reasons-1.png';
+        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-1.png';
       } else if (themeId === 'space-wonders') {
-        bannerSrc = 'assets/images/mobile-kv-banner-reasons-2.png';
+        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-2.png';
       } else if (themeId === 'landscape') {
-        bannerSrc = 'assets/images/mobile-kv-banner-reasons-3.png';
+        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-3.png';
       }
     }
 
@@ -596,7 +566,6 @@ function handleOptionSelect(themeId) {
   if (!themeId || themeId === currentTheme) return;
 
   currentTheme = themeId;
-  updateQueryParam('theme', themeId);
 
   const theme = themeData[currentTheme];
   if (!theme) return;
@@ -769,6 +738,11 @@ function updateCarousel(noTransition = false) {
   indicators.forEach((indicator, index) => {
     indicator.classList.toggle('active', index === realIndex);
   });
+
+  const kvSectionElement = document.querySelector('section.section-kv');
+  if (kvSectionElement) {
+    kvSectionElement.dataset.theme = themeNames[realIndex];
+  }
 }
 
 function setupCarouselTouchSupport() {

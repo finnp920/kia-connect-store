@@ -1,7 +1,7 @@
 {
   "name": "kia-connect-store",
   "version": "1.0.0",
-  "description": "Kia Connect Store - National Geographic Display Themes",
+  "description": "Kia Connect Store - Display Themes",
   "scripts": {
     "start": "npx http-server -p 8000 -c-1",
     "dev": "npx http-server -p 8000 -c-1 -o"

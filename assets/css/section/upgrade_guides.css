@@ -1,0 +1,42 @@
+/* ========================================
+   Section > Upgrade Guides
+   ======================================== */
+section.upgrade-guides {
+  position: relative;
+  background-color: #ffffff;
+  border-top: 1px solid #dedede;
+  padding: 100px 0;
+}
+
+section.upgrade-guides .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.upgrade-guides-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.upgrade-guides-video {
+  margin-bottom: 10px;
+}
+
+.upgrade-guides-link {
+  width: 162px;
+  margin: 0 auto;
+}
+
+/* Mobile Styles (<= 360px) */
+@media screen and (max-width: 360px) {
+  section.upgrade-guides {
+    padding: 60px 0;
+  }
+  .upgrade-guides-title,
+  .upgrade-guides-video {
+    display: none;
+  }
+}

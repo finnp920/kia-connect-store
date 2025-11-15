@@ -1,0 +1,59 @@
+/* ========================================
+   Section > Info
+   ======================================== */
+section.info {
+  position: relative;
+  padding: 100px 0;
+}
+
+section.info .section-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.info-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.info-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.info-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.info-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: #676767;
+  margin: 0;
+}
+
+/* TODO 모바일 대응 */

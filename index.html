@@ -1,18 +1,91 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>National Geographic Display Themes - Kia Connect Store</title>
+    <title>제품상세명 &gt; 제품리스트 &gt; 회사명</title>
+    <!-- 위에 순서대로 title 이 변경되어야 합니다. -->
+    <meta charset="utf-8" />
     <meta
-      name="description"
-      content="National Geographic Display Themes turns every drive into an adventure"
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!-- 설정 필요 -->
+    <meta name="title" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:title" content="Page Title" />
+    <meta property="og:type" content="Page Contens" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Page name" />
+    <meta property="og:description" content="Page Coment" />
+
+    <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/variables.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/buttons.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/gnb.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/product.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/key_visual.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/themes.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/playful.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/reasons.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/details/credit.css"
+      type="text/css"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/pc.css" />
-    <link rel="stylesheet" href="css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/info-sticky.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/section/info.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/section/upgrade_guides.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/section/disclaimer.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/section/related_feature.css"
+      type="text/css"
+    />
   </head>
   <body>
     <!-- GNB (Global Navigation Bar) -->
@@ -20,7 +93,7 @@
       <div class="gnb-inner">
         <div class="gnb-logo">
           <img
-            src="assets/logos/logo-kia-connect.svg"
+            src="assets/images/logos/logo-kia-connect.svg"
             alt="Kia Connect Store"
           />
         </div>
@@ -46,41 +119,37 @@
             </button>
           </div>
           <button class="gnb-mypage" aria-label="마이페이지">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle
-                cx="12"
-                cy="8"
-                r="4"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <path
-                d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-            </svg>
+            <img src="./assets/icons/icon-user.svg" alt="user icon" />
+          </button>
+
+          <button class="gnb-mobile-menu" aria-label="모바일 메뉴">
+            <img src="./assets/icons/icon-mo_menu.svg" alt="menu icon" />
           </button>
         </div>
       </div>
     </header>
+    <!-- GNB (Global Navigation Bar) -->
 
-    <!-- Top Black Bar -->
-    <div class="top-black-bar">
-      <div class="top-black-bar-inner">
-        <h1 class="product-title" id="productTitle">
-          National Geographic Display Themes
-        </h1>
-        <div class="product-price-top">
-          <span class="price-label" id="priceLabelTop">Lifetime pass</span>
-          <span class="price-value" id="priceValueTop">₩ 29,900</span>
+    <!-- Sticky Information -->
+    <div class="info-sticky">
+      <div class="info-sticky-inner">
+        <div class="info-sticky-left">
+          <p>
+            <strong>National Geographic Display Themes</strong>
+          </p>
+        </div>
+        <div class="info-sticky-right">
+          <dl>
+            <dt>Lifetime pass</dt>
+            <dd>₩ 29,900</dd>
+          </dl>
         </div>
       </div>
     </div>
+    <!-- Sticky Information -->
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Section 00: Product Info & Options -->
+    <main>
+      <!-- Detail Section > Product -->
       <section class="section section-product">
         <div class="section-inner">
           <!-- Product Thumbnail -->
@@ -116,7 +185,7 @@
                 <div class="option-item selected" data-theme="baby-animals">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/theme-baby-animals-thumbnail.png"
+                      src="assets/images/details/theme-baby-animals-thumbnail.png"
                       alt="Baby Animals"
                     />
                   </div>
@@ -125,18 +194,11 @@
                       >National Geographic Baby Animals</span
                     >
                     <span class="option-check" aria-hidden="true">
-                      <svg
-                        class="option-check-icon"
-                        viewBox="0 0 14 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 5.5L4.5 9L13 1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <img
+                        src="assets/icons/icon-checked.svg"
+                        alt="check icon"
+                        loading="lazy"
+                      />
                     </span>
                   </div>
                 </div>
@@ -145,7 +207,7 @@
                 <div class="option-item" data-theme="space-wonders">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/theme-space-wonders-thumbnail.png"
+                      src="assets/images/details/theme-space-wonders-thumbnail.png"
                       alt="Space Wonders"
                     />
                   </div>
@@ -154,18 +216,11 @@
                       >National Geographic Space Wonders</span
                     >
                     <span class="option-check" aria-hidden="true">
-                      <svg
-                        class="option-check-icon"
-                        viewBox="0 0 14 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 5.5L4.5 9L13 1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <img
+                        src="assets/icons/icon-checked.svg"
+                        alt="check icon"
+                        loading="lazy"
+                      />
                     </span>
                   </div>
                 </div>
@@ -174,7 +229,7 @@
                 <div class="option-item" data-theme="landscape">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/theme-landscape-thumbnail.png"
+                      src="assets/images/details/theme-landscape-thumbnail.png"
                       alt="Landscape"
                     />
                   </div>
@@ -183,18 +238,11 @@
                       >National Geographic Landscape</span
                     >
                     <span class="option-check" aria-hidden="true">
-                      <svg
-                        class="option-check-icon"
-                        viewBox="0 0 14 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 5.5L4.5 9L13 1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <img
+                        src="assets/icons/icon-checked.svg"
+                        alt="check icon"
+                        loading="lazy"
+                      />
                     </span>
                   </div>
                 </div>
@@ -208,7 +256,7 @@
                 <h3 class="price-options-title">
                   Select your preferred payment plan.
                 </h3>
-                <div class="price-option-box selected">
+                <div class="price-option-box">
                   <span class="price-option-label" id="priceLabel"
                     >Lifetime pass</span
                   >
@@ -227,13 +275,16 @@
               </div>
 
               <!-- Buy Button -->
-              <button class="btn-buy" id="btnBuy">Buy now</button>
+              <button class="cut-corner-btn btn-buy" id="btnBuy">
+                <span class="cut-corner-btn-inner">Buy now</span>
+              </button>
             </div>
           </div>
         </div>
       </section>
+      <!-- Detail Section > Product -->
 
-      <!-- Section 01: KV (Key Visual) -->
+      <!-- Detail Section >  KV (Key Visual) -->
       <section class="section section-kv">
         <div class="kv-content">
           <!-- KV Carousel -->
@@ -323,8 +374,9 @@
           </div>
         </div>
       </section>
+      <!-- Detail Section >  KV (Key Visual) -->
 
-      <!-- Section 02: Display Themes List -->
+      <!-- Detail Section > Display Themes List -->
       <section class="section section-themes">
         <div class="themes-header">
           <h2 class="themes-title">Available Display Themes</h2>
@@ -339,7 +391,7 @@
               <div class="theme-card is-active" data-theme="baby-animals">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/theme-baby-animals-card.png"
+                    src="assets/images/details/theme-baby-animals-card.png"
                     alt="National Geographic Baby Animals thumbnail"
                     loading="lazy"
                   />
@@ -357,7 +409,7 @@
               <div class="theme-card" data-theme="space-wonders">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/theme-space-wonders-thumbnail.png"
+                    src="assets/images/details/theme-space-wonders-thumbnail.png"
                     alt="National Geographic Space Wonders thumbnail"
                     loading="lazy"
                   />
@@ -375,7 +427,7 @@
               <div class="theme-card" data-theme="landscape">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/theme-landscape-thumbnail.png"
+                    src="assets/images/details/theme-landscape-thumbnail.png"
                     alt="National Geographic Landscape thumbnail"
                     loading="lazy"
                   />
@@ -492,7 +544,7 @@
                 <div class="preview-item">
                   <img
                     id="previewCluster"
-                    src="assets/images/cluster-1.png"
+                    src="assets/images/details/cluster-1.png"
                     alt="Cluster"
                     loading="lazy"
                   />
@@ -505,7 +557,7 @@
                 <div class="preview-item">
                   <img
                     id="previewWelcome"
-                    src="assets/images/welcome-1.png"
+                    src="assets/images/details/welcome-1.png"
                     alt="Welcome Message"
                     loading="lazy"
                   />
@@ -522,7 +574,7 @@
                 <div class="preview-item">
                   <img
                     id="previewHomecard"
-                    src="assets/images/homecard-1.png"
+                    src="assets/images/details/homecard-1.png"
                     alt="Homecard"
                     loading="lazy"
                   />
@@ -539,7 +591,7 @@
                 <div class="preview-item">
                   <img
                     id="previewNavigation"
-                    src="assets/images/navigation-1.png"
+                    src="assets/images/details/navigation-1.png"
                     alt="Navigation"
                     loading="lazy"
                   />
@@ -549,18 +601,13 @@
                     >
                   </span>
                 </div>
-                <div class="preview-item preview-item-video">
-                  <video
-                    id="previewGoodbyeVideo"
-                    class="preview-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
-                    data-src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
-                    poster="assets/images/goodbye-1.png"
-                  ></video>
+                <div class="preview-item">
+                  <img
+                    id="previewGoodbye"
+                    src="assets/images/details/goodbye-1.png"
+                    alt="Navigation"
+                    loading="lazy"
+                  />
                   <span class="preview-label">
                     <span class="label-text" id="previewGoodbyeLabel"
                       >Goodbye Video</span
@@ -572,8 +619,9 @@
           </div>
         </div>
       </section>
+      <!-- Detail Section > Display Themes List -->
 
-      <!-- Section 03-08: Features & Details -->
+      <!-- Detail Section > Features & Details -->
       <section class="section section-playful" id="discover">
         <div class="section-playful-inner">
           <h2 class="playful-title">
@@ -584,7 +632,7 @@
             <!-- Welcome Video Area -->
             <div class="playful-video-item" data-discover="welcome">
               <img
-                src="assets/images/kv-banner-discover_1.png"
+                src="assets/images/details/kv-banner-discover_1.png"
                 alt="Welcome video preview"
                 loading="lazy"
                 class="playful-video-bg"
@@ -647,7 +695,7 @@
             <!-- Goodbye Video Area -->
             <div class="playful-video-item" data-discover="goodbye">
               <img
-                src="assets/images/kv-banner-discover_1.png"
+                src="assets/images/details/kv-banner-discover_1.png"
                 alt="Goodbye video preview"
                 loading="lazy"
                 class="playful-video-bg"
@@ -719,11 +767,11 @@
           <figure class="playful-feature">
             <div class="feature-media">
               <img
-                src="assets/images/discover-cluster.png"
+                src="assets/images/details/discover-cluster.png"
                 alt="Cluster preview"
                 loading="lazy"
               />
-              <figcaption class="feature-text">
+              <div class="feature-text">
                 <h3>Cluster</h3>
                 <p>
                   The selected National Geographic theme appears on the cluster
@@ -733,64 +781,65 @@
                   &#x203B; Depending on the vehicle model, the cluster screen
                   design may differ from the image above.
                 </p>
-              </figcaption>
+              </div>
             </div>
           </figure>
 
           <figure class="playful-feature">
             <div class="feature-media">
               <img
-                src="assets/images/preview-navigation.png"
+                src="assets/images/details/preview-navigation.png"
                 alt="Navigation preview"
                 loading="lazy"
               />
-              <figcaption class="feature-text">
+              <div class="feature-text">
                 <h3>Navigation</h3>
                 <p>
                   National Geographic photography highlights your current
                   location during navigation.
                 </p>
-              </figcaption>
+              </div>
             </div>
           </figure>
 
           <figure class="playful-feature">
             <div class="feature-media">
               <img
-                src="assets/images/discover-homecard_1.png"
+                src="assets/images/details/discover-homecard_1.png"
                 alt="Homecard preview"
                 loading="lazy"
               />
-              <figcaption class="feature-text">
+              <div class="feature-text">
                 <h3>Homecard</h3>
                 <p>
                   National Geographic photographs appear across various menu
                   screens.
                 </p>
-              </figcaption>
+              </div>
             </div>
           </figure>
 
           <figure class="playful-feature">
             <div class="feature-media">
               <img
-                src="assets/images/discover-profile.png"
+                src="assets/images/details/discover-profile_1.png"
                 alt="Profile image selection"
                 loading="lazy"
               />
-              <figcaption class="feature-text">
+              <div class="feature-text">
                 <h3>Profile</h3>
                 <p>
                   Choose from National Geographic-themed profile
                   images&mdash;choose a unique one for each driver.
                 </p>
-              </figcaption>
+              </div>
             </div>
           </figure>
         </div>
       </section>
+      <!-- Detail Section > Features & Details -->
 
-      <!-- Section 04: The Reasons Why You Can't Miss Out -->
+      <!-- Detail Section > The Reasons Why You Can't Miss Out -->
       <section class="section section-reasons">
         <div class="section-reasons-inner">
           <!-- Section Title -->
@@ -809,7 +858,7 @@
               <div class="reason-image">
                 <img
                   id="reasonCardImage1"
-                  src="assets/images/kv-slide-1.png"
+                  src="assets/images/details/kv-slide-1.png"
                   alt="Baby Animals theme preview"
                   loading="lazy"
                 />
@@ -848,7 +897,7 @@
               <div class="reason-image">
                 <img
                   id="reasonCardImage2"
-                  src="assets/images/reasons-space-wonders.png"
+                  src="assets/images/details/reasons-space-wonders.png"
                   alt="Space Wonders theme preview"
                   loading="lazy"
                 />
@@ -860,7 +909,7 @@
               <div class="reason-image">
                 <img
                   id="reasonCardImage3"
-                  src="assets/images/reasons-landscape.png"
+                  src="assets/images/details/reasons-landscape.png"
                   alt="Landscape theme preview"
                   loading="lazy"
                 />
@@ -899,7 +948,7 @@
               <div class="reason-image">
                 <img
                   id="reasonCardImage4"
-                  src="assets/images/reasons-car-display.png"
+                  src="assets/images/details/reasons-car-display.png"
                   alt="Car with National Geographic display"
                   loading="lazy"
                 />
@@ -912,7 +961,7 @@
             <div class="reasons-video-container">
               <img
                 id="reasonsBannerImage"
-                src="assets/images/kv-banner-reasons.png"
+                src="assets/images/details/kv-banner-reasons.png"
                 alt="National Geographic Display Themes Preview"
                 loading="lazy"
                 class="reasons-video-image"
@@ -930,8 +979,9 @@
           <p class="reasons-copyright">© National Geographic</p>
         </div>
       </section>
+      <!-- Detail Section > The Reasons Why You Can't Miss Out -->
 
-      <!-- Section 05: Credit -->
+      <!-- Detail Section > Credit -->
       <section class="section section-credit">
         <div class="section-credit-inner">
           <!-- Section Title -->
@@ -968,10 +1018,11 @@
           </div>
         </div>
       </section>
+      <!-- Detail Section > Credit -->
 
-      <!-- Section 06: Info -->
-      <section class="section section-info">
-        <div class="section-info-inner">
+      <!-- Section > Info -->
+      <section class="info">
+        <div class="section-inner">
           <!-- Info Item 1 -->
           <div class="info-item">
             <div class="info-icon">
@@ -982,7 +1033,7 @@
               />
             </div>
             <div class="info-text">
-              <h3 class="info-title">Available only<br />for ccNC vehicles</h3>
+              <h3 class="info-title">Available only for ccNC vehicles</h3>
               <p class="info-description">
                 Only vehicles with 12.3-inch clusters can be selected from Kia
                 ccNC infotainment platforms.
@@ -1009,254 +1060,176 @@
           </div>
         </div>
       </section>
+      <!-- Section > Info -->
 
-      <!-- Section 07: Upgrade Guides -->
-      <section class="section section-upgrade">
-        <div class="section-upgrade-inner">
-          <h2 class="upgrade-title">Upgrade Guides</h2>
+      <!-- Section > Upgrade Guides -->
+      <section class="upgrade-guides">
+        <div class="section-inner">
+          <h2 class="upgrade-guides-title">Upgrade Guides</h2>
 
-          <div class="upgrade-video">
-            <img
-              src="assets/images/upgrade-video-thumbnail.png"
-              alt="Upgrade Guide Video Thumbnail"
-              loading="lazy"
-              class="upgrade-thumbnail"
-            />
-            <div class="upgrade-play">
-              <img
-                src="assets/icons/icon-play-button.png"
-                alt="Play button"
-                loading="lazy"
-              />
-            </div>
+          <div class="upgrade-guides-video youtube-container">
+            <div
+              class="youtubeArea youtubeArea_pdp"
+              data-value="lNuSUuf7hYU"
+            ></div>
           </div>
 
-          <button class="upgrade-button">
-            <svg
-              class="upgrade-button-bg upgrade-button-bg-mobile"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 56"
-              fill="none"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M26.4219 0.5H316C317.933 0.5 319.5 2.067 319.5 4V35.7188C319.5 38.2263 318.247 40.568 316.16 41.959L297.738 54.2402C296.506 55.0615 295.059 55.4999 293.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
-                fill="white"
-                stroke="#9BA1A5"
-              />
-            </svg>
-            <svg
-              class="upgrade-button-bg upgrade-button-bg-pc"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 160 56"
-              fill="none"
-            >
-              <path
-                d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
-                stroke="white"
-              />
-              <path
-                d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
-                stroke="#9BA1A5"
-              />
-            </svg>
-            <span class="upgrade-button-text">Upgrade Guides</span>
-          </button>
+          <a href="" class="upgrade-guides-link cut-corner-btn">
+            <span class="cut-corner-btn-inner">Upgrade Guides</span>
+          </a>
         </div>
       </section>
+      <!-- Section > Upgrade Guides -->
 
-      <!-- Section 08: Disclaimer -->
-      <section class="section section-disclaimer">
-        <div class="section-disclaimer-inner">
+      <!-- Section > Disclaimer -->
+      <section class="disclaimer">
+        <div class="section-inner">
           <h2 class="disclaimer-title">Disclaimer</h2>
 
-          <div class="disclaimer-list">
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+          <ul class="disclaimer-list">
+            <li>
               <p class="disclaimer-text">
                 It is only available for Kia Connect service users.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 Available only for vehicles with Kia ccNC infotainment platform.
                 (Not applicable for vehicles with 4-inch clusters.)
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 Kia Connect service must be maintained for normal use.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 It may fail to use due to a temporary communication failure.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 There may be restrictions on use in communication shaded areas.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 If you choose to use it for a lifetime, you can use it without a
                 period limit.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 However, the service will be automatically terminated when Kia
                 Connect is terminated.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 The item belongs to the vehicle, not the account.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 Lifetime use can be canceled within 7 days of payment.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 The cancellation of the purchase will take place after the
                 product installed in the vehicle is deleted.
               </p>
-            </div>
-            <div class="disclaimer-row">
-              <span class="disclaimer-bullet">∙</span>
+            </li>
+            <li>
               <p class="disclaimer-text">
                 Repeated purchases and cancellations may be restricted.
               </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
+      <!-- Section > Disclaimer -->
 
-      <!-- Section 09: Related Feature -->
-      <section class="section section-related">
-        <div class="section-related-inner">
-          <h2 class="related-title">Related Feature</h2>
+      <!-- Section > Related Feature -->
+      <section class="related-feature">
+        <div class="section-inner">
+          <h2 class="related-feature-title">Related Feature</h2>
 
-          <div class="related-list">
+          <div class="feature-list">
             <!-- Feature 1: Lighting Patterns -->
-            <a href="#" class="related-item">
-              <div class="related-content">
-                <div class="related-thumbnail">
+            <a href="#" class="feature-item">
+              <div class="feature-content">
+                <div class="thumbnail">
                   <img
                     src="assets/images/related-lighting-patterns.png"
                     alt="Lighting Patterns"
                     loading="lazy"
                   />
                 </div>
-                <div class="related-text">
-                  <h3 class="related-feature-title">Lighting Patterns</h3>
-                  <p class="related-description">
+                <div class="feature-text">
+                  <h3 class="title">Lighting Patterns</h3>
+                  <p class="description">
                     Variations of light to make your daily life more colorful
                   </p>
                 </div>
               </div>
-              <div class="related-price">
-                <p class="related-price-label">Lifetime pass</p>
-                <p class="related-price-value">₩180,000</p>
+              <div class="feature-price">
+                <p class="label">Lifetime pass</p>
+                <p class="value">₩180,000</p>
               </div>
             </a>
 
             <!-- Feature 2: NBA Display Themes -->
-            <a href="#" class="related-item">
-              <div class="related-content">
-                <div class="related-thumbnail">
+            <a href="#" class="feature-item">
+              <div class="feature-content">
+                <div class="thumbnail">
                   <img
                     src="assets/images/related-nba-themes.png"
                     alt="NBA Display Themes"
                     loading="lazy"
                   />
                 </div>
-                <div class="related-text">
-                  <h3 class="related-feature-title">NBA Display Themes</h3>
-                  <p class="related-description">
+                <div class="feature-text">
+                  <h3 class="title">NBA Display Themes</h3>
+                  <p class="description">
                     A special theme that adds style to driving
                   </p>
                 </div>
               </div>
-              <div class="related-price">
-                <p class="related-price-label">Lifetime pass</p>
-                <p class="related-price-value">₩29,900</p>
+              <div class="feature-price">
+                <p class="label">Lifetime pass</p>
+                <p class="value">₩29,900</p>
               </div>
             </a>
           </div>
-
-          <button class="related-help-button" aria-label="Help">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="12" cy="12" r="11.5" stroke="#9BA1A5" />
-              <path
-                d="M12 17V17.01"
-                stroke="#9BA1A5"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-              <path
-                d="M12 14C12 13.5 12.2 13.1 12.6 12.8C13 12.5 13.5 12.2 13.9 11.8C14.7 11.1 15 10.3 15 9.5C15 7.6 13.4 6 11.5 6C9.6 6 8 7.6 8 9.5"
-                stroke="#9BA1A5"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
-          </button>
         </div>
       </section>
+      <!-- Related Feature -->
 
-      <!-- Go to the List Button -->
-      <section class="section section-go-to-list">
-        <div class="go-to-list-inner">
-          <a href="#" class="go-to-list-button">
-            <svg
-              class="go-to-list-icon"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 12L6 8L10 4"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+      <!-- Section > Go to the List -->
+      <section class="section go-to-list">
+        <div class="section-inner">
+          <a href="#" class="go-to-list-link">
+            <img src="./assets/icons/icon-arrow.svg" alt="arrow icon" />
             <span>Go to the List</span>
           </a>
         </div>
       </section>
+      <!-- Section > Go to the List -->
     </main>
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer class="footer">
       <div class="footer-inner">
         <!-- Left Section: Logo and Links -->
         <div class="footer-left">
           <div class="footer-logo">
-            <img src="assets/logos/kn-logo.svg" alt="KIA" loading="lazy" />
+            <img
+              src="assets/images/logos/kn-logo.svg"
+              alt="KIA"
+              loading="lazy"
+            />
           </div>
 
           <div class="footer-content">
@@ -1332,8 +1305,25 @@
         </div>
       </div>
     </footer>
+    <!--//footer-->
+
+    <!-- floating 메뉴-->
+    <div class="floating_menu">
+      <a href="" class="floating_inquiry"
+        ><img src="assets/icons/floating_faq.png" alt="문의하기"
+      /></a>
+      <a href="" class="floating_faq"
+        ><img src="assets/icons/floating_inquiry.png" alt="자주하는 질문"
+      /></a>
+      <button class="floating_top">
+        <img src="assets/icons/floating_top.png" alt="top" />
+      </button>
+    </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="./assets/js/theme-data.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/youtube.js"></script>
+    <script src="./assets/js/floating_menu.js"></script>
   </body>
 </html>

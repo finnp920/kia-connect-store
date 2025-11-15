@@ -1,0 +1,168 @@
+/* ========================================
+   Section 01: KV (Key Visual)
+   ======================================== */
+.section-kv {
+  position: relative;
+  height: 876px;
+  background-color: #ffffff;
+}
+
+.kv-content {
+  position: relative;
+  height: 100%;
+}
+
+.kv-carousel {
+  position: relative;
+  width: 100%;
+  height: 876px;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 80px),
+    calc(100% - 80px) 100%,
+    0 100%
+  );
+}
+
+.kv-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.kv-slides.dragging,
+.kv-slides.no-transition {
+  transition: none;
+}
+
+.kv-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.kv-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kv-logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 170px;
+  height: 50px;
+  background-image: url('../../images/logos/logo-national-geographic_black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.kv-copyright {
+  position: absolute;
+  bottom: 34px;
+  left: 20px;
+  font-size: 12px;
+  color: #b1b1b1;
+  letter-spacing: -0.02em;
+}
+
+.kv-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.kv-arrow:hover {
+  opacity: 0.7;
+}
+
+.kv-arrow-prev {
+  left: 272px;
+}
+
+.kv-arrow-next {
+  right: 272px;
+}
+
+.kv-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.kv-indicator {
+  width: 56px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  border-radius: 0;
+}
+
+.kv-indicator.active {
+  background-color: #ffffff;
+}
+
+.kv-title {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  text-align: center;
+  z-index: 10;
+}
+
+.kv-main-title {
+  margin-bottom: 20px;
+  color: #05141f;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+
+.kv-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #05141f;
+  letter-spacing: -0.32px;
+  max-width: 866px;
+  margin: 0 auto;
+}
+
+/* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
+section.section-kv[data-theme='space-wonders'] .kv-main-title,
+section.section-kv[data-theme='space-wonders'] .kv-subtitle {
+  color: #ffffff;
+}
+section.section-kv[data-theme='space-wonders'] .kv-logo {
+  background-image: url('../../images/logos/logo-national-geographic.png');
+}
+
+/* TODO 모바일 대응 필요 */

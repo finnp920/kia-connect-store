@@ -1,0 +1,68 @@
+/* ========================================
+   Detail Section > Credit
+   ======================================== */
+.section-credit {
+  position: relative;
+  background-color: black;
+  color: var(--color-white);
+  padding: 100px 0;
+}
+
+.section-credit-inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.credit-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 116px;
+}
+
+.credit-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: -0.96px;
+  color: var(--color-white);
+}
+
+.credit-underline {
+  width: 73px;
+  height: 4px;
+  background-color: #ffcc00;
+  border-radius: 999px;
+}
+
+/* Credit Content */
+.credit-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: stretch;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.credit-text {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: #dedede;
+  margin: 0;
+}
+
+.credit-text strong {
+  color: var(--color-white);
+  font-weight: 700;
+}

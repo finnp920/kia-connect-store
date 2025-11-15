@@ -1,0 +1,68 @@
+/* PC Styles (Desktop: 1920px base) */
+.info-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 59px;
+  background-color: #000;
+  color: #fff;
+}
+
+.info-sticky .info-sticky-inner {
+  width: 100%;
+  height: 59px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-sticky .info-sticky-inner .info-sticky-left p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #fff;
+}
+
+.info-sticky .info-sticky-inner .info-sticky-right dl {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.info-sticky .info-sticky-inner .info-sticky-right dl dt {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: right;
+  color: #fff;
+}
+.info-sticky .info-sticky-inner .info-sticky-right dl dd {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+  color: #fff;
+}
+
+/* Large Mobile Styles (<= 1120px) */
+@media screen and (max-width: 1120px) {
+  /* TODO 글자 크기 */
+
+  .info-sticky {
+    height: 56px;
+  }
+  .info-sticky .info-sticky-inner .info-sticky-right dl {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Mobile Styles (<= 360px) */
+@media screen and (max-width: 360px) {
+  .info-sticky .info-sticky-inner .info-sticky-left {
+    max-width: 123px;
+  }
+}
