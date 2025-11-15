@@ -1,854 +1,1339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>National Geographic Display Themes - Kia Connect Store</title>
-    <meta name="description" content="National Geographic Display Themes turns every drive into an adventure">
-    
+    <meta
+      name="description"
+      content="National Geographic Display Themes turns every drive into an adventure"
+    />
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/pc.css">
-    <link rel="stylesheet" href="css/mobile.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pc.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+  </head>
+  <body>
     <!-- GNB (Global Navigation Bar) -->
     <header class="gnb">
-        <div class="gnb-inner">
-            <div class="gnb-logo">
-                <img src="assets/logos/logo-kia-connect.svg" alt="Kia Connect Store">
-            </div>
-            <nav class="gnb-menu">
-                <a href="#" class="gnb-menu-item">All upgrades</a>
-                <a href="#" class="gnb-menu-item">Upgrade guides</a>
-                <a href="#" class="gnb-menu-item">Store Info</a>
-                <a href="#" class="gnb-menu-item">Customer support</a>
-            </nav>
-            <div class="gnb-right">
-                <div class="gnb-car-info">
-                    <span class="car-model" id="carModel">Model</span>
-                    <span class="divider"></span>
-                    <span class="car-vin" id="carVin">VIN</span>
-                    <button class="car-dropdown" aria-label="차량 정보 펼치기">
-                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none">
-                            <path d="M1 1L6 5L11 1" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
-                <button class="gnb-mypage" aria-label="마이페이지">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
-                </button>
-            </div>
+      <div class="gnb-inner">
+        <div class="gnb-logo">
+          <img
+            src="assets/logos/logo-kia-connect.svg"
+            alt="Kia Connect Store"
+          />
         </div>
+        <nav class="gnb-menu">
+          <a href="#" class="gnb-menu-item">All upgrades</a>
+          <a href="#" class="gnb-menu-item">Upgrade guides</a>
+          <a href="#" class="gnb-menu-item">Store Info</a>
+          <a href="#" class="gnb-menu-item">Customer support</a>
+        </nav>
+        <div class="gnb-right">
+          <div class="gnb-car-info">
+            <span class="car-model" id="carModel">Model</span>
+            <span class="divider"></span>
+            <span class="car-vin" id="carVin">VIN</span>
+            <button class="car-dropdown" aria-label="차량 정보 펼치기">
+              <svg width="12" height="6" viewBox="0 0 12 6" fill="none">
+                <path
+                  d="M1 1L6 5L11 1"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <button class="gnb-mypage" aria-label="마이페이지">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="8"
+                r="4"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
 
     <!-- Top Black Bar -->
     <div class="top-black-bar">
-        <div class="top-black-bar-inner">
-            <h1 class="product-title" id="productTitle">National Geographic Display Themes</h1>
-            <div class="product-price-top">
-                <span class="price-label" id="priceLabelTop">Lifetime pass</span>
-                <span class="price-value" id="priceValueTop">₩ 29,900</span>
-            </div>
+      <div class="top-black-bar-inner">
+        <h1 class="product-title" id="productTitle">
+          National Geographic Display Themes
+        </h1>
+        <div class="product-price-top">
+          <span class="price-label" id="priceLabelTop">Lifetime pass</span>
+          <span class="price-value" id="priceValueTop">₩ 29,900</span>
         </div>
+      </div>
     </div>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Section 00: Product Info & Options -->
-        <section class="section section-product">
-            <div class="section-inner">
-                <!-- Product Thumbnail -->
-                <div class="product-thumbnail">
-                    <div class="thumbnail-wrapper is-loading">
-                        <img id="productThumbnail" src="" alt="Product Thumbnail">
-                    </div>
-                </div>
-
-                <!-- Product Options -->
-                <div class="product-options">
-                    <!-- Product Info -->
-                    <div class="product-info">
-                        <div class="product-header">
-                            <h2 class="product-name" id="productName">
-                                National Geographic Display Themes
-                            </h2>
-                            <button class="btn-like" id="btnLike" aria-label="좋아요">
-                                <img src="assets/icons/icon-heart.svg" alt="Like">
-                            </button>
-                        </div>
-                        <p class="product-description" id="productDescription">
-                            National Geographic Display Themes turns every drive into an adventure
-                        </p>
-                    </div>
-
-                    <!-- Option List -->
-                    <div class="option-list-section">
-                        <h3 class="option-list-title">Select product option you want.</h3>
-                        <div class="option-list" id="optionList">
-                            <!-- Baby Animals Option -->
-                            <div class="option-item selected" data-theme="baby-animals">
-                                <div class="option-thumbnail">
-                                    <img src="assets/images/theme-baby-animals-thumbnail.png" alt="Baby Animals">
-                                </div>
-                                <div class="option-info">
-                                    <span class="option-name">National Geographic Baby Animals</span>
-                                    <span class="option-check" aria-hidden="true">
-                                        <svg class="option-check-icon" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 5.5L4.5 9L13 1" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- Space Wonders Option -->
-                            <div class="option-item" data-theme="space-wonders">
-                                <div class="option-thumbnail">
-                                    <img src="assets/images/theme-space-wonders-thumbnail.png" alt="Space Wonders">
-                                </div>
-                                <div class="option-info">
-                                    <span class="option-name">National Geographic Space Wonders</span>
-                                    <span class="option-check" aria-hidden="true">
-                                        <svg class="option-check-icon" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 5.5L4.5 9L13 1" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- Landscape Option -->
-                            <div class="option-item" data-theme="landscape">
-                                <div class="option-thumbnail">
-                                    <img src="assets/images/theme-landscape-thumbnail.png" alt="Landscape">
-                                </div>
-                                <div class="option-info">
-                                    <span class="option-name">National Geographic Landscape</span>
-                                    <span class="option-check" aria-hidden="true">
-                                        <svg class="option-check-icon" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 5.5L4.5 9L13 1" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Payment Section -->
-                    <div class="payment-section">
-                        <!-- Price Options -->
-                        <div class="price-options">
-                            <h3 class="price-options-title">Select your preferred payment plan.</h3>
-                            <div class="price-option-box selected">
-                                <span class="price-option-label" id="priceLabel">Lifetime pass</span>
-                                <span class="price-option-value" id="priceValue">₩ 29,900</span>
-                            </div>
-                        </div>
-
-                        <!-- Total Price -->
-                        <div class="total-price">
-                            <span class="total-price-label">Total costs (VAT included)</span>
-                            <span class="total-price-value" id="totalPrice">₩ 29,900</span>
-                        </div>
-
-                        <!-- Buy Button -->
-                        <button class="btn-buy" id="btnBuy">Buy now</button>
-                    </div>
-                </div>
+      <!-- Section 00: Product Info & Options -->
+      <section class="section section-product">
+        <div class="section-inner">
+          <!-- Product Thumbnail -->
+          <div class="product-thumbnail">
+            <div class="thumbnail-wrapper is-loading">
+              <img id="productThumbnail" src="" alt="Product Thumbnail" />
             </div>
-        </section>
+          </div>
 
-        <!-- Section 01: KV (Key Visual) -->
-        <section class="section section-kv">
-            <div class="kv-content">
-                <!-- KV Carousel -->
-                <div class="kv-carousel" id="kvCarousel">
-                    <div class="kv-slides">
-                        <div class="kv-slide active">
-                            <img data-role="kv-shot" src="" alt="KV Image 1">
-                            <div class="kv-logo" role="img" aria-label="National Geographic"></div>
-                            <p class="kv-copyright">© National Geographic</p>
-                        </div>
-                        <div class="kv-slide">
-                            <img data-role="kv-shot" src="" alt="KV Image 2">
-                            <div class="kv-logo" role="img" aria-label="National Geographic"></div>
-                            <p class="kv-copyright">© National Geographic</p>
-                        </div>
-                        <div class="kv-slide">
-                            <img data-role="kv-shot" src="" alt="KV Image 3">
-                            <div class="kv-logo" role="img" aria-label="National Geographic"></div>
-                            <p class="kv-copyright">© National Geographic</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Navigation Arrows -->
-                    <button class="kv-arrow kv-arrow-prev" aria-label="이전 슬라이드">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="38" viewBox="0 0 21 38" fill="none">
-                            <path d="M19.4142 0.707031L1.41422 18.707L19.4142 36.707" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-                        </svg>
-                    </button>
-                    <button class="kv-arrow kv-arrow-next" aria-label="다음 슬라이드">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="38" viewBox="0 0 21 38" fill="none">
-                            <path d="M1.58579 0.707031L19.5858 18.707L1.58579 36.707" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-                        </svg>
-                    </button>
-
-                    <!-- Indicators -->
-                    <div class="kv-indicators">
-                        <span class="kv-indicator active" data-slide="0"></span>
-                        <span class="kv-indicator" data-slide="1"></span>
-                        <span class="kv-indicator" data-slide="2"></span>
-                    </div>
-                </div>
-
-                <!-- KV Title -->
-                <div class="kv-title">
-                    <h2 class="kv-main-title" id="kvTitle">
-                        Dive into Wonder<br>
-                        with National Geographic in your Kia!
-                    </h2>
-                    <p class="kv-subtitle" id="kvSubtitle">Personalize your dashboard with National Geographic themes that will inspire your drive.</p>
-                </div>
+          <!-- Product Options -->
+          <div class="product-options">
+            <!-- Product Info -->
+            <div class="product-info">
+              <div class="product-header">
+                <h2 class="product-name" id="productName">
+                  National Geographic Display Themes
+                </h2>
+                <button class="btn-like" id="btnLike" aria-label="좋아요">
+                  <img src="assets/icons/icon-heart.svg" alt="Like" />
+                </button>
+              </div>
+              <p class="product-description" id="productDescription">
+                National Geographic Display Themes turns every drive into an
+                adventure
+              </p>
             </div>
-        </section>
 
-        <!-- Section 02: Display Themes List -->
-    <section class="section section-themes">
+            <!-- Option List -->
+            <div class="option-list-section">
+              <h3 class="option-list-title">Select product option you want.</h3>
+              <div class="option-list" id="optionList">
+                <!-- Baby Animals Option -->
+                <div class="option-item selected" data-theme="baby-animals">
+                  <div class="option-thumbnail">
+                    <img
+                      src="assets/images/theme-baby-animals-thumbnail.png"
+                      alt="Baby Animals"
+                    />
+                  </div>
+                  <div class="option-info">
+                    <span class="option-name"
+                      >National Geographic Baby Animals</span
+                    >
+                    <span class="option-check" aria-hidden="true">
+                      <svg
+                        class="option-check-icon"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 5.5L4.5 9L13 1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Space Wonders Option -->
+                <div class="option-item" data-theme="space-wonders">
+                  <div class="option-thumbnail">
+                    <img
+                      src="assets/images/theme-space-wonders-thumbnail.png"
+                      alt="Space Wonders"
+                    />
+                  </div>
+                  <div class="option-info">
+                    <span class="option-name"
+                      >National Geographic Space Wonders</span
+                    >
+                    <span class="option-check" aria-hidden="true">
+                      <svg
+                        class="option-check-icon"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 5.5L4.5 9L13 1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Landscape Option -->
+                <div class="option-item" data-theme="landscape">
+                  <div class="option-thumbnail">
+                    <img
+                      src="assets/images/theme-landscape-thumbnail.png"
+                      alt="Landscape"
+                    />
+                  </div>
+                  <div class="option-info">
+                    <span class="option-name"
+                      >National Geographic Landscape</span
+                    >
+                    <span class="option-check" aria-hidden="true">
+                      <svg
+                        class="option-check-icon"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 5.5L4.5 9L13 1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+              <!-- Price Options -->
+              <div class="price-options">
+                <h3 class="price-options-title">
+                  Select your preferred payment plan.
+                </h3>
+                <div class="price-option-box selected">
+                  <span class="price-option-label" id="priceLabel"
+                    >Lifetime pass</span
+                  >
+                  <span class="price-option-value" id="priceValue"
+                    >₩ 29,900</span
+                  >
+                </div>
+              </div>
+
+              <!-- Total Price -->
+              <div class="total-price">
+                <span class="total-price-label"
+                  >Total costs (VAT included)</span
+                >
+                <span class="total-price-value" id="totalPrice">₩ 29,900</span>
+              </div>
+
+              <!-- Buy Button -->
+              <button class="btn-buy" id="btnBuy">Buy now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 01: KV (Key Visual) -->
+      <section class="section section-kv">
+        <div class="kv-content">
+          <!-- KV Carousel -->
+          <div class="kv-carousel" id="kvCarousel">
+            <div class="kv-slides">
+              <div class="kv-slide active">
+                <img data-role="kv-shot" src="" alt="KV Image 1" />
+                <div
+                  class="kv-logo"
+                  role="img"
+                  aria-label="National Geographic"
+                ></div>
+                <p class="kv-copyright">© National Geographic</p>
+              </div>
+              <div class="kv-slide">
+                <img data-role="kv-shot" src="" alt="KV Image 2" />
+                <div
+                  class="kv-logo"
+                  role="img"
+                  aria-label="National Geographic"
+                ></div>
+                <p class="kv-copyright">© National Geographic</p>
+              </div>
+              <div class="kv-slide">
+                <img data-role="kv-shot" src="" alt="KV Image 3" />
+                <div
+                  class="kv-logo"
+                  role="img"
+                  aria-label="National Geographic"
+                ></div>
+                <p class="kv-copyright">© National Geographic</p>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="kv-arrow kv-arrow-prev" aria-label="이전 슬라이드">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="38"
+                viewBox="0 0 21 38"
+                fill="none"
+              >
+                <path
+                  d="M19.4142 0.707031L1.41422 18.707L19.4142 36.707"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="kv-arrow kv-arrow-next" aria-label="다음 슬라이드">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="38"
+                viewBox="0 0 21 38"
+                fill="none"
+              >
+                <path
+                  d="M1.58579 0.707031L19.5858 18.707L1.58579 36.707"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+
+            <!-- Indicators -->
+            <div class="kv-indicators">
+              <span class="kv-indicator active" data-slide="0"></span>
+              <span class="kv-indicator" data-slide="1"></span>
+              <span class="kv-indicator" data-slide="2"></span>
+            </div>
+          </div>
+
+          <!-- KV Title -->
+          <div class="kv-title">
+            <h2 class="kv-main-title" id="kvTitle">
+              Dive into Wonder<br />
+              with National Geographic in your Kia!
+            </h2>
+            <p class="kv-subtitle" id="kvSubtitle">
+              Personalize your dashboard with National Geographic themes that
+              will inspire your drive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 02: Display Themes List -->
+      <section class="section section-themes">
         <div class="themes-header">
-            <h2 class="themes-title">Available Display Themes</h2>
-            <p class="themes-subtitle">Pick a theme and preview the delightful changes to your screen!</p>
+          <h2 class="themes-title">Available Display Themes</h2>
+          <p class="themes-subtitle">
+            Pick a theme and preview the delightful changes to your screen!
+          </p>
         </div>
 
         <div class="themes-stage">
-            <div class="themes-stage-inner">
-                <div class="themes-cards">
-                    <div class="theme-card is-active" data-theme="baby-animals">
-                        <div class="theme-card-thumb">
-                            <img src="assets/images/theme-baby-animals-card.png" alt="National Geographic Baby Animals thumbnail" loading="lazy">
-                        </div>
-                        <div class="theme-card-body">
-                            <h3 class="theme-card-title">National Geographic Baby Animals</h3>
-                            <p class="theme-card-tags">#FurryFriends #AnimalKingdom #LittleExplorers</p>
-                        </div>
-                    </div>
-
-                    <div class="theme-card" data-theme="space-wonders">
-                        <div class="theme-card-thumb">
-                            <img src="assets/images/theme-space-wonders-thumbnail.png" alt="National Geographic Space Wonders thumbnail" loading="lazy">
-                        </div>
-                        <div class="theme-card-body">
-                            <h3 class="theme-card-title">National Geographic Space Wonders</h3>
-                            <p class="theme-card-tags">#StellaOdyssey #Vatness #SpaceExploration</p>
-                        </div>
-                    </div>
-
-                    <div class="theme-card" data-theme="landscape">
-                        <div class="theme-card-thumb">
-                            <img src="assets/images/theme-landscape-thumbnail.png" alt="National Geographic Landscape thumbnail" loading="lazy">
-                        </div>
-                        <div class="theme-card-body">
-                            <h3 class="theme-card-title">National Geographic Landscape</h3>
-                            <p class="theme-card-tags">#Natural Wonders #Majestic #Cinematic Scenery</p>
-                        </div>
-                    </div>
-
-                    <div class="theme-card theme-card-cta">
-                        <div class="theme-card-icon">
-                            <img src="assets/icons/icon-pick-theme.png" alt="Theme selection icon" loading="lazy">
-                        </div>
-                        <div class="theme-card-body">
-                            <h3 class="theme-card-title">Pick Your Theme</h3>
-                            <p class="theme-card-copy">Choose the theme<br>that speaks to you most.</p>
-                        </div>
-                    </div>
+          <div class="themes-stage-inner">
+            <div class="themes-cards">
+              <div class="theme-card is-active" data-theme="baby-animals">
+                <div class="theme-card-thumb">
+                  <img
+                    src="assets/images/theme-baby-animals-card.png"
+                    alt="National Geographic Baby Animals thumbnail"
+                    loading="lazy"
+                  />
                 </div>
+                <div class="theme-card-body">
+                  <h3 class="theme-card-title">
+                    National Geographic Baby Animals
+                  </h3>
+                  <p class="theme-card-tags">
+                    #FurryFriends #AnimalKingdom #LittleExplorers
+                  </p>
+                </div>
+              </div>
+
+              <div class="theme-card" data-theme="space-wonders">
+                <div class="theme-card-thumb">
+                  <img
+                    src="assets/images/theme-space-wonders-thumbnail.png"
+                    alt="National Geographic Space Wonders thumbnail"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="theme-card-body">
+                  <h3 class="theme-card-title">
+                    National Geographic Space Wonders
+                  </h3>
+                  <p class="theme-card-tags">
+                    #StellaOdyssey #Vatness #SpaceExploration
+                  </p>
+                </div>
+              </div>
+
+              <div class="theme-card" data-theme="landscape">
+                <div class="theme-card-thumb">
+                  <img
+                    src="assets/images/theme-landscape-thumbnail.png"
+                    alt="National Geographic Landscape thumbnail"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="theme-card-body">
+                  <h3 class="theme-card-title">
+                    National Geographic Landscape
+                  </h3>
+                  <p class="theme-card-tags">
+                    #Natural Wonders #Majestic #Cinematic Scenery
+                  </p>
+                </div>
+              </div>
+
+              <div class="theme-card theme-card-cta">
+                <div class="theme-card-icon">
+                  <img
+                    src="assets/icons/icon-pick-theme.png"
+                    alt="Theme selection icon"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="theme-card-body">
+                  <h3 class="theme-card-title">Pick Your Theme</h3>
+                  <p class="theme-card-copy">
+                    Choose the theme<br />that speaks to you most.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
 
         <!-- Mobile Theme Dropdown -->
         <div class="mobile-theme-dropdown">
-            <select id="mobileThemeSelect">
-                <option value="baby-animals">National Geographic Baby Animals</option>
-                <option value="space-wonders">National Geographic Space Wonders</option>
-                <option value="landscape">National Geographic Landscape</option>
-            </select>
+          <select id="mobileThemeSelect">
+            <option value="baby-animals">
+              National Geographic Baby Animals
+            </option>
+            <option value="space-wonders">
+              National Geographic Space Wonders
+            </option>
+            <option value="landscape">National Geographic Landscape</option>
+          </select>
         </div>
 
         <div class="theme-header-wrapper theme-baby-animals">
-            <!-- Theme Selectors (PC only) -->
-            <div class="theme-selectors">
-                <span class="theme-selector selected" data-theme="baby-animals">
-                    <svg class="selector-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                        <circle cx="11" cy="11" r="11" fill="#05141F"/>
-                        <path d="M5 11L9.74194 15.5L17 6.5" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-                    </svg>
-                    National Geographic Baby Animals
-                </span>
-                <span class="theme-selector" data-theme="space-wonders">
-                    <svg class="selector-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                        <circle cx="11" cy="11" r="11" fill="#B2B8BD"/>
-                        <path d="M5.1875 11L9.78126 15.5L16.8125 6.5" stroke="#DADADA" stroke-width="2" stroke-linejoin="round"/>
-                    </svg>
-                    National Geographic Space Wonders
-                </span>
-                <span class="theme-selector" data-theme="landscape">
-                    <svg class="selector-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                        <circle cx="11" cy="11" r="11" fill="#B2B8BD"/>
-                        <path d="M5.1875 11L9.78126 15.5L16.8125 6.5" stroke="#DADADA" stroke-width="2" stroke-linejoin="round"/>
-                    </svg>
-                    National Geographic Landscape
-                </span>
-            </div>
+          <!-- Theme Selectors (PC only) -->
+          <div class="theme-selectors">
+            <span class="theme-selector selected" data-theme="baby-animals">
+              <svg
+                class="selector-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle cx="11" cy="11" r="11" fill="#05141F" />
+                <path
+                  d="M5 11L9.74194 15.5L17 6.5"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              National Geographic Baby Animals
+            </span>
+            <span class="theme-selector" data-theme="space-wonders">
+              <svg
+                class="selector-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle cx="11" cy="11" r="11" fill="#B2B8BD" />
+                <path
+                  d="M5.1875 11L9.78126 15.5L16.8125 6.5"
+                  stroke="#DADADA"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              National Geographic Space Wonders
+            </span>
+            <span class="theme-selector" data-theme="landscape">
+              <svg
+                class="selector-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle cx="11" cy="11" r="11" fill="#B2B8BD" />
+                <path
+                  d="M5.1875 11L9.78126 15.5L16.8125 6.5"
+                  stroke="#DADADA"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              National Geographic Landscape
+            </span>
+          </div>
 
-            <!-- Screenshot Grid -->
-            <div class="themes-preview">
-                <div class="themes-preview-grid">
-                    <!-- Left Column (2 items) -->
-                    <div class="preview-column preview-column-left">
-                        <div class="preview-item">
-                            <img id="previewCluster" src="assets/images/cluster-1.png" alt="Cluster" loading="lazy">
-                            <span class="preview-label">
-                                <span class="label-text" id="previewClusterLabel">Cluster</span>
-                            </span>
-                        </div>
-                        <div class="preview-item">
-                            <img id="previewWelcome" src="assets/images/welcome-1.png" alt="Welcome Message" loading="lazy">
-                            <span class="preview-label">
-                                <span class="label-text" id="previewWelcomeLabel">Welcome Message</span>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Center Column (1 item) -->
-                    <div class="preview-column preview-column-center">
-                        <div class="preview-item">
-                            <img id="previewHomecard" src="assets/images/homecard-1.png" alt="Homecard" loading="lazy">
-                            <span class="preview-label">
-                                <span class="label-text" id="previewHomecardLabel">Homecard</span>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Column (2 items) -->
-                    <div class="preview-column preview-column-right">
-                        <div class="preview-item">
-                            <img id="previewNavigation" src="assets/images/navigation-1.png" alt="Navigation" loading="lazy">
-                            <span class="preview-label">
-                                <span class="label-text" id="previewNavigationLabel">Navigation</span>
-                            </span>
-                        </div>
-                        <div class="preview-item preview-item-video">
-                            <video id="previewGoodbyeVideo" class="preview-video" autoplay muted loop playsinline
-                                src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
-                                data-src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
-                                poster="assets/images/goodbye-1.png">
-                            </video>
-                            <span class="preview-label">
-                                <span class="label-text" id="previewGoodbyeLabel">Goodbye Video</span>
-                            </span>
-                        </div>
-                    </div>
+          <!-- Screenshot Grid -->
+          <div class="themes-preview">
+            <div class="themes-preview-grid">
+              <!-- Left Column (2 items) -->
+              <div class="preview-column preview-column-left">
+                <div class="preview-item">
+                  <img
+                    id="previewCluster"
+                    src="assets/images/cluster-1.png"
+                    alt="Cluster"
+                    loading="lazy"
+                  />
+                  <span class="preview-label">
+                    <span class="label-text" id="previewClusterLabel"
+                      >Cluster</span
+                    >
+                  </span>
                 </div>
+                <div class="preview-item">
+                  <img
+                    id="previewWelcome"
+                    src="assets/images/welcome-1.png"
+                    alt="Welcome Message"
+                    loading="lazy"
+                  />
+                  <span class="preview-label">
+                    <span class="label-text" id="previewWelcomeLabel"
+                      >Welcome Message</span
+                    >
+                  </span>
+                </div>
+              </div>
+
+              <!-- Center Column (1 item) -->
+              <div class="preview-column preview-column-center">
+                <div class="preview-item">
+                  <img
+                    id="previewHomecard"
+                    src="assets/images/homecard-1.png"
+                    alt="Homecard"
+                    loading="lazy"
+                  />
+                  <span class="preview-label">
+                    <span class="label-text" id="previewHomecardLabel"
+                      >Homecard</span
+                    >
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right Column (2 items) -->
+              <div class="preview-column preview-column-right">
+                <div class="preview-item">
+                  <img
+                    id="previewNavigation"
+                    src="assets/images/navigation-1.png"
+                    alt="Navigation"
+                    loading="lazy"
+                  />
+                  <span class="preview-label">
+                    <span class="label-text" id="previewNavigationLabel"
+                      >Navigation</span
+                    >
+                  </span>
+                </div>
+                <div class="preview-item preview-item-video">
+                  <video
+                    id="previewGoodbyeVideo"
+                    class="preview-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
+                    data-src="assets/videos/baby-animals/goodbye/avnt_goodbye.mp4"
+                    poster="assets/images/goodbye-1.png"
+                  ></video>
+                  <span class="preview-label">
+                    <span class="label-text" id="previewGoodbyeLabel"
+                      >Goodbye Video</span
+                    >
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Section 03-08: Features & Details -->
-        <section class="section section-playful" id="discover">
-            <div class="section-playful-inner">
-                <h2 class="playful-title">Discover <br class="mobile-br">Playful Designs</h2>
+      <!-- Section 03-08: Features & Details -->
+      <section class="section section-playful" id="discover">
+        <div class="section-playful-inner">
+          <h2 class="playful-title">
+            Discover <br class="mobile-br" />Playful Designs
+          </h2>
 
-                <div class="playful-videos">
-                    <!-- Welcome Video Area -->
-                    <div class="playful-video-item" data-discover="welcome">
-                        <img src="assets/images/kv-banner-discover_1.png" alt="Welcome video preview" loading="lazy" class="playful-video-bg">
-                        <div class="playful-video-grid">
-                            <!-- Welcome Cluster Video -->
-                            <div class="playful-video-cell" data-video-type="welcome-cluster">
-                                <video class="playful-video-player" muted loop playsinline preload="metadata">
-                                    <source src="" type="video/mp4">
-                                </video>
-                                <div class="playful-video-overlay">
-                                    <div class="playful-video-label">
-                                        <span class="playful-label-type">Welcome</span>
-                                        <span class="playful-label-device">Cluster</span>
-                                    </div>
-                                    <div class="playful-video-play">
-                                        <img src="assets/icons/icon-play-button.png" alt="Play button">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Welcome AVNT Video -->
-                            <div class="playful-video-cell" data-video-type="welcome-avnt">
-                                <video class="playful-video-player" muted loop playsinline preload="metadata">
-                                    <source src="" type="video/mp4">
-                                </video>
-                                <div class="playful-video-overlay">
-                                    <div class="playful-video-label">
-                                        <span class="playful-label-type">Welcome</span>
-                                        <span class="playful-label-device">AVNT</span>
-                                    </div>
-                                    <div class="playful-video-play">
-                                        <img src="assets/icons/icon-play-button.png" alt="Play button">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          <div class="playful-videos">
+            <!-- Welcome Video Area -->
+            <div class="playful-video-item" data-discover="welcome">
+              <img
+                src="assets/images/kv-banner-discover_1.png"
+                alt="Welcome video preview"
+                loading="lazy"
+                class="playful-video-bg"
+              />
+              <div class="playful-video-grid">
+                <!-- Welcome Cluster Video -->
+                <div
+                  class="playful-video-cell"
+                  data-video-type="welcome-cluster"
+                >
+                  <video
+                    class="playful-video-player"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source src="" type="video/mp4" />
+                  </video>
+                  <div class="playful-video-overlay">
+                    <div class="playful-video-label">
+                      <span class="playful-label-type">Welcome</span>
+                      <span class="playful-label-device">Cluster</span>
                     </div>
-
-                    <!-- Goodbye Video Area -->
-                    <div class="playful-video-item" data-discover="goodbye">
-                        <img src="assets/images/kv-banner-discover_1.png" alt="Goodbye video preview" loading="lazy" class="playful-video-bg">
-                        <div class="playful-video-grid">
-                            <!-- Goodbye Cluster Video -->
-                            <div class="playful-video-cell" data-video-type="goodbye-cluster">
-                                <video class="playful-video-player" muted loop playsinline preload="metadata">
-                                    <source src="" type="video/mp4">
-                                </video>
-                                <div class="playful-video-overlay">
-                                    <div class="playful-video-label">
-                                        <span class="playful-label-type">Goodbye</span>
-                                        <span class="playful-label-device">Cluster</span>
-                                    </div>
-                                    <div class="playful-video-play">
-                                        <img src="assets/icons/icon-play-button.png" alt="Play button">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Goodbye AVNT Video -->
-                            <div class="playful-video-cell" data-video-type="goodbye-avnt">
-                                <video class="playful-video-player" muted loop playsinline preload="metadata">
-                                    <source src="" type="video/mp4">
-                                </video>
-                                <div class="playful-video-overlay">
-                                    <div class="playful-video-label">
-                                        <span class="playful-label-type">Goodbye</span>
-                                        <span class="playful-label-device">AVNT</span>
-                                    </div>
-                                    <div class="playful-video-play">
-                                        <img src="assets/icons/icon-play-button.png" alt="Play button">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="playful-video-play">
+                      <img
+                        src="assets/icons/icon-play-button.png"
+                        alt="Play button"
+                      />
                     </div>
-
-                    <div class="playful-text-block">
-                        <h3>Welcome &amp; Goodbye Video</h3>
-                        <p>National Geographic themed motion graphics play once at start-up (from sleep mode) and shutdown.</p>
-                    </div>    
+                  </div>
                 </div>
-
-                <figure class="playful-feature">
-                    <div class="feature-media">
-                        <img src="assets/images/discover-cluster.png" alt="Cluster preview" loading="lazy">
-                        <figcaption class="feature-text">
-                            <h3>Cluster</h3>
-                            <p>The selected National Geographic theme appears on the cluster with themed graphics and gauges.</p>
-                            <p class="feature-note">&#x203B; Depending on the vehicle model, the cluster screen design may differ from the image above.</p>
-                        </figcaption>
+                <!-- Welcome AVNT Video -->
+                <div class="playful-video-cell" data-video-type="welcome-avnt">
+                  <video
+                    class="playful-video-player"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source src="" type="video/mp4" />
+                  </video>
+                  <div class="playful-video-overlay">
+                    <div class="playful-video-label">
+                      <span class="playful-label-type">Welcome</span>
+                      <span class="playful-label-device">AVNT</span>
                     </div>
-                </figure>
-
-                <figure class="playful-feature">
-                    <div class="feature-media">
-                        <img src="assets/images/preview-navigation.png" alt="Navigation preview" loading="lazy">
-                        <figcaption class="feature-text">
-                            <h3>Navigation</h3>
-                            <p>National Geographic photography highlights your current location during navigation.</p>
-                        </figcaption>
+                    <div class="playful-video-play">
+                      <img
+                        src="assets/icons/icon-play-button.png"
+                        alt="Play button"
+                      />
                     </div>
-                </figure>
-
-                <figure class="playful-feature">
-                    <div class="feature-media">
-                        <img src="assets/images/discover-homecard_1.png" alt="Homecard preview" loading="lazy">
-                        <figcaption class="feature-text">
-                            <h3>Homecard</h3>
-                            <p>National Geographic photographs appear across various menu screens.</p>
-                        </figcaption>
-                    </div>
-                </figure>
-
-                <figure class="playful-feature">
-                    <div class="feature-media">
-                        <img src="assets/images/discover-profile.png" alt="Profile image selection" loading="lazy">
-                        <figcaption class="feature-text">
-                            <h3>Profile</h3>
-                            <p>Choose from National Geographic-themed profile images&mdash;choose a unique one for each driver.</p>
-                        </figcaption>
-                    </div>
-                </figure>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Section 04: The Reasons Why You Can't Miss Out -->
-        <section class="section section-reasons">
-            <div class="section-reasons-inner">
-                <!-- Section Title -->
-                <div class="reasons-header">
-                    <h2 class="reasons-title">
-                        The Reasons<br>
-                        Why You Can't Miss Out
-                    </h2>
-                    <div class="reasons-underline"></div>
+            <!-- Goodbye Video Area -->
+            <div class="playful-video-item" data-discover="goodbye">
+              <img
+                src="assets/images/kv-banner-discover_1.png"
+                alt="Goodbye video preview"
+                loading="lazy"
+                class="playful-video-bg"
+              />
+              <div class="playful-video-grid">
+                <!-- Goodbye Cluster Video -->
+                <div
+                  class="playful-video-cell"
+                  data-video-type="goodbye-cluster"
+                >
+                  <video
+                    class="playful-video-player"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source src="" type="video/mp4" />
+                  </video>
+                  <div class="playful-video-overlay">
+                    <div class="playful-video-label">
+                      <span class="playful-label-type">Goodbye</span>
+                      <span class="playful-label-device">Cluster</span>
+                    </div>
+                    <div class="playful-video-play">
+                      <img
+                        src="assets/icons/icon-play-button.png"
+                        alt="Play button"
+                      />
+                    </div>
+                  </div>
                 </div>
-
-                <!-- Feature Cards -->
-                <div class="reasons-cards">
-                    <!-- Card 1 -->
-                    <div class="reason-card reason-card-left">
-                        <div class="reason-image">
-                            <img id="reasonCardImage1" src="assets/images/kv-slide-1.png" alt="Baby Animals theme preview" loading="lazy">
-                        </div>
-                        <div class="reason-content">
-                            <div class="reason-header">
-                                <div class="reason-number">1</div>
-                                <h3 class="reason-title">
-                                    The Delight of<br>
-                                    Baby Animals in Every Drive
-                                </h3>
-                            </div>
-                            <p class="reason-description">
-                                National Geographic's Baby Animals theme<br>
-                                turns every drive into an adventure.
-                            </p>
-                        </div>
+                <!-- Goodbye AVNT Video -->
+                <div class="playful-video-cell" data-video-type="goodbye-avnt">
+                  <video
+                    class="playful-video-player"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source src="" type="video/mp4" />
+                  </video>
+                  <div class="playful-video-overlay">
+                    <div class="playful-video-label">
+                      <span class="playful-label-type">Goodbye</span>
+                      <span class="playful-label-device">AVNT</span>
                     </div>
-
-                    <!-- Card 2 -->
-                    <div class="reason-card reason-card-left">
-                        <div class="reason-content">
-                            <div class="reason-header">
-                                <div class="reason-number">2</div>
-                                <h3 class="reason-title">
-                                    The Wonders of<br>
-                                    the Expanding Universe
-                                </h3>
-                            </div>
-                            <p class="reason-description">
-                                National Geographic's Space Wonders theme<br>
-                                turns every drive into a cosmic journey filled with awe and discovery.
-                            </p>
-                        </div>
-                        <div class="reason-image">
-                            <img id="reasonCardImage2" src="assets/images/reasons-space-wonders.png" alt="Space Wonders theme preview" loading="lazy">
-                        </div>
+                    <div class="playful-video-play">
+                      <img
+                        src="assets/icons/icon-play-button.png"
+                        alt="Play button"
+                      />
                     </div>
-
-                    <!-- Card 3 -->
-                    <div class="reason-card reason-card-left">
-                        <div class="reason-image">
-                            <img id="reasonCardImage3" src="assets/images/reasons-landscape.png" alt="Landscape theme preview" loading="lazy">
-                        </div>
-                        <div class="reason-content">
-                            <div class="reason-header">
-                                <div class="reason-number">3</div>
-                                <h3 class="reason-title">
-                                    The Splendor of<br>
-                                    Earth's Natural Landscapes
-                                </h3>
-                            </div>
-                            <p class="reason-description">
-                                National Geographic's Landscape theme captures<br>
-                                the awe-inspiring beauty of our planet's most iconic sceneries.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="reason-card reason-card-left">
-                        <div class="reason-content">
-                            <div class="reason-header">
-                                <div class="reason-number">4</div>
-                                <h3 class="reason-title">
-                                    Explore the World<br>
-                                    Through Every Drive
-                                </h3>
-                            </div>
-                            <p class="reason-description">
-                                With National Geographic display themes,<br>
-                                every moment behind the wheel becomes a window to wonder.
-                            </p>
-                        </div>
-                        <div class="reason-image">
-                            <img id="reasonCardImage4" src="assets/images/reasons-car-display.png" alt="Car with National Geographic display" loading="lazy">
-                        </div>
-                    </div>
+                  </div>
                 </div>
-
-                <!-- Bottom Section -->
-                <div class="reasons-bottom">
-                    <div class="reasons-video-container">
-                        <img id="reasonsBannerImage" src="assets/images/kv-banner-reasons.png" alt="National Geographic Display Themes Preview" loading="lazy" class="reasons-video-image">
-                    </div>
-                    <div class="reasons-final-message">
-                        <p>
-                            Experience inspiring drives<br>
-                            with the National Geographic Display Themes
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Copyright -->
-                <p class="reasons-copyright">© National Geographic</p>
+              </div>
             </div>
-        </section>
 
-        <!-- Section 05: Credit -->
-        <section class="section section-credit">
-            <div class="section-credit-inner">
-                <!-- Section Title -->
-                <div class="credit-header">
-                    <h2 class="credit-title">Credit</h2>
-                    <div class="credit-underline"></div>
-                </div>
-
-                <!-- Credit List -->
-                <div class="credit-content">
-                    <p class="credit-text">(Welcome&amp;Goodbye) Welcome: 001e_978DPWYRPB308, 020d_978DPWYRPB308, 079b_978DPWYRPB308, 058k_978DPWYRPB308, 064m_978DPWYRPB308, 059b_978DPWYRPB308, 037b_978DPWYRPB308, 036m_978DPWYRPB308, 061a_978DPWYRPB308, 065e_978DPWYRPB308; Goodbye: 058g_978DPWYRPB308, 055c_978DPWYRPB308, 045b_978DPWYRPB308, 047c_978DPWYRPB308, 063k_978DPWYRPB308, 010b_978DPWYRPB308, 065j_978DPWYRPB308, 058f_978DPWYRPB308, 062b_978DPWYRPB308, 060f_978DPWYRPB308, 049e_978DPWYRPB308; (Cluster) 2042628_PG104_1550509; (AVNT) Common BG: 130882403/shutterstock; Navigation: Beverly Joubert/nationalgeographic; (Home) 054f_978DPWYRPB308, 003b_978DPWYRPB308, 044a_978DPWYRPB308, 071a_978DPWYRPB308, 064l_978DPWYRPB308, 047a_978DPWYRPB308; (Profile) 014i_978DPWYRPB308 / 059g_978DPWYRPB308 / 043j_978DPWYRPB308 / 056f_978DPWYRPB308 / 036j_978DPWYRPB308 / 060d_978DPWYRPB308 / 061h_978DPWYRPB308 / 062d_978DPWYRPB308 / 058i_978DPWYRPB308 / 010b_978DPWYRPB308 / 063a_978DPWYRPB308; (PDP) Option Thumbnail: 068b_978DPWYRPB308; (PDP Hero image) twi001t978822/clipartkorea; twi001t867452/clipartkorea; tic288a0184/clipartkorea; (PDP BACKGROUND) twi001t3405953/clipartkorea; hand drawn tropical leaves 777280: designed by freepik;</p>
-                 </div>
+            <div class="playful-text-block">
+              <h3>Welcome &amp; Goodbye Video</h3>
+              <p>
+                National Geographic themed motion graphics play once at start-up
+                (from sleep mode) and shutdown.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- Section 06: Info -->
-        <section class="section section-info">
-            <div class="section-info-inner">
-                <!-- Info Item 1 -->
-                <div class="info-item">
-                    <div class="info-icon">
-                        <img src="assets/icons/icon-ccnc-vehicles.svg" alt="ccNC vehicles icon" loading="lazy">
-                    </div>
-                    <div class="info-text">
-                        <h3 class="info-title">Available only<br>for ccNC vehicles</h3>
-                        <p class="info-description">Only vehicles with 12.3-inch clusters can be selected from Kia ccNC infotainment platforms.</p>
-                    </div>
-                </div>
-
-                <!-- Info Item 2 -->
-                <div class="info-item">
-                    <div class="info-icon">
-                        <img src="assets/icons/icon-personal-customizing.svg" alt="Personal Customizing icon" loading="lazy">
-                    </div>
-                    <div class="info-text">
-                        <h3 class="info-title">Personal Customizing</h3>
-                        <p class="info-description">You can purchase multiple themes and set them differently for each driver.</p>
-                    </div>
-                </div>
+          <figure class="playful-feature">
+            <div class="feature-media">
+              <img
+                src="assets/images/discover-cluster.png"
+                alt="Cluster preview"
+                loading="lazy"
+              />
+              <figcaption class="feature-text">
+                <h3>Cluster</h3>
+                <p>
+                  The selected National Geographic theme appears on the cluster
+                  with themed graphics and gauges.
+                </p>
+                <p class="feature-note">
+                  &#x203B; Depending on the vehicle model, the cluster screen
+                  design may differ from the image above.
+                </p>
+              </figcaption>
             </div>
-        </section>
+          </figure>
 
-        <!-- Section 07: Upgrade Guides -->
-        <section class="section section-upgrade">
-            <div class="section-upgrade-inner">
-                <h2 class="upgrade-title">Upgrade Guides</h2>
-                
-                <div class="upgrade-video">
-                    <img src="assets/images/upgrade-video-thumbnail.png" alt="Upgrade Guide Video Thumbnail" loading="lazy" class="upgrade-thumbnail">
-                    <div class="upgrade-play">
-                        <img src="assets/icons/icon-play-button.png" alt="Play button" loading="lazy">
-                    </div>
+          <figure class="playful-feature">
+            <div class="feature-media">
+              <img
+                src="assets/images/preview-navigation.png"
+                alt="Navigation preview"
+                loading="lazy"
+              />
+              <figcaption class="feature-text">
+                <h3>Navigation</h3>
+                <p>
+                  National Geographic photography highlights your current
+                  location during navigation.
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="playful-feature">
+            <div class="feature-media">
+              <img
+                src="assets/images/discover-homecard_1.png"
+                alt="Homecard preview"
+                loading="lazy"
+              />
+              <figcaption class="feature-text">
+                <h3>Homecard</h3>
+                <p>
+                  National Geographic photographs appear across various menu
+                  screens.
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="playful-feature">
+            <div class="feature-media">
+              <img
+                src="assets/images/discover-profile.png"
+                alt="Profile image selection"
+                loading="lazy"
+              />
+              <figcaption class="feature-text">
+                <h3>Profile</h3>
+                <p>
+                  Choose from National Geographic-themed profile
+                  images&mdash;choose a unique one for each driver.
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Section 04: The Reasons Why You Can't Miss Out -->
+      <section class="section section-reasons">
+        <div class="section-reasons-inner">
+          <!-- Section Title -->
+          <div class="reasons-header">
+            <h2 class="reasons-title">
+              The Reasons<br />
+              Why You Can't Miss Out
+            </h2>
+            <div class="reasons-underline"></div>
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="reasons-cards">
+            <!-- Card 1 -->
+            <div class="reason-card reason-card-left">
+              <div class="reason-image">
+                <img
+                  id="reasonCardImage1"
+                  src="assets/images/kv-slide-1.png"
+                  alt="Baby Animals theme preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reason-content">
+                <div class="reason-header">
+                  <div class="reason-number">1</div>
+                  <h3 class="reason-title">
+                    The Delight of<br />
+                    Baby Animals in Every Drive
+                  </h3>
                 </div>
-
-                <button class="upgrade-button">
-                    <svg class="upgrade-button-bg upgrade-button-bg-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" fill="none" preserveAspectRatio="none">
-                        <path d="M26.4219 0.5H316C317.933 0.5 319.5 2.067 319.5 4V35.7188C319.5 38.2263 318.247 40.568 316.16 41.959L297.738 54.2402C296.506 55.0615 295.059 55.4999 293.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z" fill="white" stroke="#9BA1A5"/>
-                    </svg>
-                    <svg class="upgrade-button-bg upgrade-button-bg-pc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 56" fill="none">
-                        <path d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z" stroke="white"/>
-                        <path d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z" stroke="#9BA1A5"/>
-                    </svg>
-                    <span class="upgrade-button-text">Upgrade Guides</span>
-                </button>
+                <p class="reason-description">
+                  National Geographic's Baby Animals theme<br />
+                  turns every drive into an adventure.
+                </p>
+              </div>
             </div>
-        </section>
 
-        <!-- Section 08: Disclaimer -->
-        <section class="section section-disclaimer">
-            <div class="section-disclaimer-inner">
-                <h2 class="disclaimer-title">Disclaimer</h2>
-                
-                <div class="disclaimer-list">
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">It is only available for Kia Connect service users.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">Available only for vehicles with Kia ccNC infotainment platform. (Not applicable for vehicles with 4-inch clusters.)</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">Kia Connect service must be maintained for normal use.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">It may fail to use due to a temporary communication failure.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">There may be restrictions on use in communication shaded areas.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">If you choose to use it for a lifetime, you can use it without a period limit.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">However, the service will be automatically terminated when Kia Connect is terminated.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">The item belongs to the vehicle, not the account.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">Lifetime use can be canceled within 7 days of payment.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">The cancellation of the purchase will take place after the product installed in the vehicle is deleted.</p>
-                    </div>
-                    <div class="disclaimer-row">
-                        <span class="disclaimer-bullet">∙</span>
-                        <p class="disclaimer-text">Repeated purchases and cancellations may be restricted.</p>
-                    </div>
+            <!-- Card 2 -->
+            <div class="reason-card reason-card-left">
+              <div class="reason-content">
+                <div class="reason-header">
+                  <div class="reason-number">2</div>
+                  <h3 class="reason-title">
+                    The Wonders of<br />
+                    the Expanding Universe
+                  </h3>
                 </div>
+                <p class="reason-description">
+                  National Geographic's Space Wonders theme<br />
+                  turns every drive into a cosmic journey filled with awe and
+                  discovery.
+                </p>
+              </div>
+              <div class="reason-image">
+                <img
+                  id="reasonCardImage2"
+                  src="assets/images/reasons-space-wonders.png"
+                  alt="Space Wonders theme preview"
+                  loading="lazy"
+                />
+              </div>
             </div>
-        </section>
 
-        <!-- Section 09: Related Feature -->
-        <section class="section section-related">
-            <div class="section-related-inner">
-                <h2 class="related-title">Related Feature</h2>
-                
-                <div class="related-list">
-                    <!-- Feature 1: Lighting Patterns -->
-                    <a href="#" class="related-item">
-                        <div class="related-content">
-                            <div class="related-thumbnail">
-                                <img src="assets/images/related-lighting-patterns.png" alt="Lighting Patterns" loading="lazy">
-                            </div>
-                            <div class="related-text">
-                                <h3 class="related-feature-title">Lighting Patterns</h3>
-                                <p class="related-description">Variations of light to make your daily life more colorful</p>
-                            </div>
-                        </div>
-                        <div class="related-price">
-                            <p class="related-price-label">Lifetime pass</p>
-                            <p class="related-price-value">₩180,000</p>
-                        </div>
-                    </a>
-
-                    <!-- Feature 2: NBA Display Themes -->
-                    <a href="#" class="related-item">
-                        <div class="related-content">
-                            <div class="related-thumbnail">
-                                <img src="assets/images/related-nba-themes.png" alt="NBA Display Themes" loading="lazy">
-                            </div>
-                            <div class="related-text">
-                                <h3 class="related-feature-title">NBA Display Themes</h3>
-                                <p class="related-description">A special theme that adds style to driving</p>
-                            </div>
-                        </div>
-                        <div class="related-price">
-                            <p class="related-price-label">Lifetime pass</p>
-                            <p class="related-price-value">₩29,900</p>
-                        </div>
-                    </a>
+            <!-- Card 3 -->
+            <div class="reason-card reason-card-left">
+              <div class="reason-image">
+                <img
+                  id="reasonCardImage3"
+                  src="assets/images/reasons-landscape.png"
+                  alt="Landscape theme preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reason-content">
+                <div class="reason-header">
+                  <div class="reason-number">3</div>
+                  <h3 class="reason-title">
+                    The Splendor of<br />
+                    Earth's Natural Landscapes
+                  </h3>
                 </div>
-                
-                <button class="related-help-button" aria-label="Help">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="11.5" stroke="#9BA1A5"/>
-                        <path d="M12 17V17.01" stroke="#9BA1A5" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M12 14C12 13.5 12.2 13.1 12.6 12.8C13 12.5 13.5 12.2 13.9 11.8C14.7 11.1 15 10.3 15 9.5C15 7.6 13.4 6 11.5 6C9.6 6 8 7.6 8 9.5" stroke="#9BA1A5" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+                <p class="reason-description">
+                  National Geographic's Landscape theme captures<br />
+                  the awe-inspiring beauty of our planet's most iconic
+                  sceneries.
+                </p>
+              </div>
             </div>
-        </section>
 
-        <!-- Go to the List Button -->
-        <section class="section section-go-to-list">
-            <div class="go-to-list-inner">
-                <a href="#" class="go-to-list-button">
-                    <svg class="go-to-list-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Go to the List</span>
-                </a>
+            <!-- Card 4 -->
+            <div class="reason-card reason-card-left">
+              <div class="reason-content">
+                <div class="reason-header">
+                  <div class="reason-number">4</div>
+                  <h3 class="reason-title">
+                    Explore the World<br />
+                    Through Every Drive
+                  </h3>
+                </div>
+                <p class="reason-description">
+                  With National Geographic display themes,<br />
+                  every moment behind the wheel becomes a window to wonder.
+                </p>
+              </div>
+              <div class="reason-image">
+                <img
+                  id="reasonCardImage4"
+                  src="assets/images/reasons-car-display.png"
+                  alt="Car with National Geographic display"
+                  loading="lazy"
+                />
+              </div>
             </div>
-        </section>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="reasons-bottom">
+            <div class="reasons-video-container">
+              <img
+                id="reasonsBannerImage"
+                src="assets/images/kv-banner-reasons.png"
+                alt="National Geographic Display Themes Preview"
+                loading="lazy"
+                class="reasons-video-image"
+              />
+            </div>
+            <div class="reasons-final-message">
+              <p>
+                Experience inspiring drives<br />
+                with the National Geographic Display Themes
+              </p>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <p class="reasons-copyright">© National Geographic</p>
+        </div>
+      </section>
+
+      <!-- Section 05: Credit -->
+      <section class="section section-credit">
+        <div class="section-credit-inner">
+          <!-- Section Title -->
+          <div class="credit-header">
+            <h2 class="credit-title">Credit</h2>
+            <div class="credit-underline"></div>
+          </div>
+
+          <!-- Credit List -->
+          <div class="credit-content">
+            <p class="credit-text">
+              (Welcome&amp;Goodbye) Welcome: 001e_978DPWYRPB308,
+              020d_978DPWYRPB308, 079b_978DPWYRPB308, 058k_978DPWYRPB308,
+              064m_978DPWYRPB308, 059b_978DPWYRPB308, 037b_978DPWYRPB308,
+              036m_978DPWYRPB308, 061a_978DPWYRPB308, 065e_978DPWYRPB308;
+              Goodbye: 058g_978DPWYRPB308, 055c_978DPWYRPB308,
+              045b_978DPWYRPB308, 047c_978DPWYRPB308, 063k_978DPWYRPB308,
+              010b_978DPWYRPB308, 065j_978DPWYRPB308, 058f_978DPWYRPB308,
+              062b_978DPWYRPB308, 060f_978DPWYRPB308, 049e_978DPWYRPB308;
+              (Cluster) 2042628_PG104_1550509; (AVNT) Common BG:
+              130882403/shutterstock; Navigation: Beverly
+              Joubert/nationalgeographic; (Home) 054f_978DPWYRPB308,
+              003b_978DPWYRPB308, 044a_978DPWYRPB308, 071a_978DPWYRPB308,
+              064l_978DPWYRPB308, 047a_978DPWYRPB308; (Profile)
+              014i_978DPWYRPB308 / 059g_978DPWYRPB308 / 043j_978DPWYRPB308 /
+              056f_978DPWYRPB308 / 036j_978DPWYRPB308 / 060d_978DPWYRPB308 /
+              061h_978DPWYRPB308 / 062d_978DPWYRPB308 / 058i_978DPWYRPB308 /
+              010b_978DPWYRPB308 / 063a_978DPWYRPB308; (PDP) Option Thumbnail:
+              068b_978DPWYRPB308; (PDP Hero image) twi001t978822/clipartkorea;
+              twi001t867452/clipartkorea; tic288a0184/clipartkorea; (PDP
+              BACKGROUND) twi001t3405953/clipartkorea; hand drawn tropical
+              leaves 777280: designed by freepik;
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 06: Info -->
+      <section class="section section-info">
+        <div class="section-info-inner">
+          <!-- Info Item 1 -->
+          <div class="info-item">
+            <div class="info-icon">
+              <img
+                src="assets/icons/icon-ccnc-vehicles.svg"
+                alt="ccNC vehicles icon"
+                loading="lazy"
+              />
+            </div>
+            <div class="info-text">
+              <h3 class="info-title">Available only<br />for ccNC vehicles</h3>
+              <p class="info-description">
+                Only vehicles with 12.3-inch clusters can be selected from Kia
+                ccNC infotainment platforms.
+              </p>
+            </div>
+          </div>
+
+          <!-- Info Item 2 -->
+          <div class="info-item">
+            <div class="info-icon">
+              <img
+                src="assets/icons/icon-personal-customizing.svg"
+                alt="Personal Customizing icon"
+                loading="lazy"
+              />
+            </div>
+            <div class="info-text">
+              <h3 class="info-title">Personal Customizing</h3>
+              <p class="info-description">
+                You can purchase multiple themes and set them differently for
+                each driver.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 07: Upgrade Guides -->
+      <section class="section section-upgrade">
+        <div class="section-upgrade-inner">
+          <h2 class="upgrade-title">Upgrade Guides</h2>
+
+          <div class="upgrade-video">
+            <img
+              src="assets/images/upgrade-video-thumbnail.png"
+              alt="Upgrade Guide Video Thumbnail"
+              loading="lazy"
+              class="upgrade-thumbnail"
+            />
+            <div class="upgrade-play">
+              <img
+                src="assets/icons/icon-play-button.png"
+                alt="Play button"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <button class="upgrade-button">
+            <svg
+              class="upgrade-button-bg upgrade-button-bg-mobile"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 56"
+              fill="none"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M26.4219 0.5H316C317.933 0.5 319.5 2.067 319.5 4V35.7188C319.5 38.2263 318.247 40.568 316.16 41.959L297.738 54.2402C296.506 55.0615 295.059 55.4999 293.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
+                fill="white"
+                stroke="#9BA1A5"
+              />
+            </svg>
+            <svg
+              class="upgrade-button-bg upgrade-button-bg-pc"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 160 56"
+              fill="none"
+            >
+              <path
+                d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
+                stroke="white"
+              />
+              <path
+                d="M26.4219 0.5H156C157.933 0.5 159.5 2.067 159.5 4V35.7188C159.5 38.2263 158.247 40.568 156.16 41.959L137.738 54.2402C136.506 55.0615 135.059 55.4999 133.578 55.5H4C2.067 55.5 0.5 53.933 0.5 52V20.2812C0.500074 17.7737 1.75342 15.432 3.83984 14.041L22.2617 1.75977C23.4936 0.938489 24.9413 0.500065 26.4219 0.5Z"
+                stroke="#9BA1A5"
+              />
+            </svg>
+            <span class="upgrade-button-text">Upgrade Guides</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section 08: Disclaimer -->
+      <section class="section section-disclaimer">
+        <div class="section-disclaimer-inner">
+          <h2 class="disclaimer-title">Disclaimer</h2>
+
+          <div class="disclaimer-list">
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                It is only available for Kia Connect service users.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                Available only for vehicles with Kia ccNC infotainment platform.
+                (Not applicable for vehicles with 4-inch clusters.)
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                Kia Connect service must be maintained for normal use.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                It may fail to use due to a temporary communication failure.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                There may be restrictions on use in communication shaded areas.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                If you choose to use it for a lifetime, you can use it without a
+                period limit.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                However, the service will be automatically terminated when Kia
+                Connect is terminated.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                The item belongs to the vehicle, not the account.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                Lifetime use can be canceled within 7 days of payment.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                The cancellation of the purchase will take place after the
+                product installed in the vehicle is deleted.
+              </p>
+            </div>
+            <div class="disclaimer-row">
+              <span class="disclaimer-bullet">∙</span>
+              <p class="disclaimer-text">
+                Repeated purchases and cancellations may be restricted.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 09: Related Feature -->
+      <section class="section section-related">
+        <div class="section-related-inner">
+          <h2 class="related-title">Related Feature</h2>
+
+          <div class="related-list">
+            <!-- Feature 1: Lighting Patterns -->
+            <a href="#" class="related-item">
+              <div class="related-content">
+                <div class="related-thumbnail">
+                  <img
+                    src="assets/images/related-lighting-patterns.png"
+                    alt="Lighting Patterns"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="related-text">
+                  <h3 class="related-feature-title">Lighting Patterns</h3>
+                  <p class="related-description">
+                    Variations of light to make your daily life more colorful
+                  </p>
+                </div>
+              </div>
+              <div class="related-price">
+                <p class="related-price-label">Lifetime pass</p>
+                <p class="related-price-value">₩180,000</p>
+              </div>
+            </a>
+
+            <!-- Feature 2: NBA Display Themes -->
+            <a href="#" class="related-item">
+              <div class="related-content">
+                <div class="related-thumbnail">
+                  <img
+                    src="assets/images/related-nba-themes.png"
+                    alt="NBA Display Themes"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="related-text">
+                  <h3 class="related-feature-title">NBA Display Themes</h3>
+                  <p class="related-description">
+                    A special theme that adds style to driving
+                  </p>
+                </div>
+              </div>
+              <div class="related-price">
+                <p class="related-price-label">Lifetime pass</p>
+                <p class="related-price-value">₩29,900</p>
+              </div>
+            </a>
+          </div>
+
+          <button class="related-help-button" aria-label="Help">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="11.5" stroke="#9BA1A5" />
+              <path
+                d="M12 17V17.01"
+                stroke="#9BA1A5"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M12 14C12 13.5 12.2 13.1 12.6 12.8C13 12.5 13.5 12.2 13.9 11.8C14.7 11.1 15 10.3 15 9.5C15 7.6 13.4 6 11.5 6C9.6 6 8 7.6 8 9.5"
+                stroke="#9BA1A5"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Go to the List Button -->
+      <section class="section section-go-to-list">
+        <div class="go-to-list-inner">
+          <a href="#" class="go-to-list-button">
+            <svg
+              class="go-to-list-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 12L6 8L10 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Go to the List</span>
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-inner">
-            <!-- Left Section: Logo and Links -->
-            <div class="footer-left">
-                <div class="footer-logo">
-                    <img src="assets/logos/kn-logo.svg" alt="KIA" loading="lazy">
-                </div>
+      <div class="footer-inner">
+        <!-- Left Section: Logo and Links -->
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="assets/logos/kn-logo.svg" alt="KIA" loading="lazy" />
+          </div>
 
-                <div class="footer-content">
-                    <div class="footer-nav-primary">
-                        <a href="#" class="footer-nav-link footer-nav-link-primary">Privacy Notice</a>
-                        <span class="footer-divider">|</span>
-                        <a href="#" class="footer-nav-link">Terms of Use</a>
-                    </div>
-
-                    <div class="footer-nav">
-                        <div class="footer-nav-secondary">
-                            <p>Kia Corporation, CEO Song Ho-sung, Choi Joon-young</p>
-                            <span class="footer-divider">|</span>
-                            <p>Kia, Hyeonneung-ro 12, Seocho-gu, Seoul</p>
-                            <span class="footer-divider">|</span>
-                            <p>Email: connectstore@kia.com</p>
-                        </div>
-
-                        <div class="footer-nav-secondary">
-                            <p>Business registration No.: 119-81-02316</p>
-                            <span class="footer-divider">|</span>
-                            <p>Mail order report: 2006-07935</p>
-                            <span class="footer-divider">|</span>
-                            <p>Hosting provider: Hyundai AutoEver</p>
-                        </div>
-
-                        <div class="footer-nav-secondary">
-                            <p>Personal Information Manager: Lee Sang-young, Kia Information Protection Center, privacy@kia.com / 080-200-2000</p>
-                        </div>
-                    </div>
-
-                    <div class="footer-copyright">
-                        <p>© Kia CORP. ALL RIGHTS RESERVED.</p>
-                    </div>
-                </div>
+          <div class="footer-content">
+            <div class="footer-nav-primary">
+              <a href="#" class="footer-nav-link footer-nav-link-primary"
+                >Privacy Notice</a
+              >
+              <span class="footer-divider">|</span>
+              <a href="#" class="footer-nav-link">Terms of Use</a>
             </div>
 
-            <!-- Right Section: Customer Service and Family Site -->
-            <div class="footer-right">
-                <div class="footer-customer-service">
-                    <h3 class="footer-cs-title">Customer Service: 080-200-2000</h3>
-                    <p class="footer-cs-time">Error inquiry: 24 hours a day, 7 days a week</p>
-                    <p class="footer-cs-time">General Inquiry: 09:00–18:00</p>
-                </div>
+            <div class="footer-nav">
+              <div class="footer-nav-secondary">
+                <p>Kia Corporation, CEO Song Ho-sung, Choi Joon-young</p>
+                <span class="footer-divider">|</span>
+                <p>Kia, Hyeonneung-ro 12, Seocho-gu, Seoul</p>
+                <span class="footer-divider">|</span>
+                <p>Email: connectstore@kia.com</p>
+              </div>
 
-                <div class="footer-family-site">
-                    <button class="footer-family-button">
-                        <span>Family Site</span>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L6 6L11 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
+              <div class="footer-nav-secondary">
+                <p>Business registration No.: 119-81-02316</p>
+                <span class="footer-divider">|</span>
+                <p>Mail order report: 2006-07935</p>
+                <span class="footer-divider">|</span>
+                <p>Hosting provider: Hyundai AutoEver</p>
+              </div>
+
+              <div class="footer-nav-secondary">
+                <p>
+                  Personal Information Manager: Lee Sang-young, Kia Information
+                  Protection Center, privacy@kia.com / 080-200-2000
+                </p>
+              </div>
             </div>
+
+            <div class="footer-copyright">
+              <p>© Kia CORP. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Right Section: Customer Service and Family Site -->
+        <div class="footer-right">
+          <div class="footer-customer-service">
+            <h3 class="footer-cs-title">Customer Service: 080-200-2000</h3>
+            <p class="footer-cs-time">
+              Error inquiry: 24 hours a day, 7 days a week
+            </p>
+            <p class="footer-cs-time">General Inquiry: 09:00–18:00</p>
+          </div>
+
+          <div class="footer-family-site">
+            <button class="footer-family-button">
+              <span>Family Site</span>
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L6 6L11 1"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
-
