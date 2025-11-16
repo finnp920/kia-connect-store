@@ -4,7 +4,7 @@
 // ----------------------------------------
 // Global State
 // ----------------------------------------
-const themeNames = Object.keys(themeData);
+let themeNames = Object.keys(themeData);
 let currentTheme = themeNames[0];
 let currentSlide = 1;
 let carouselInterval = null;
@@ -592,6 +592,7 @@ function handleOptionSelect(themeId) {
   updateCreditText(theme);
   updateMobileDropdown();
 
+  themeNames = theme.themeNames;
   currentSlide = 1; // 클론 때문에 1로 리셋
   updateCarousel(true);
 }
@@ -1005,9 +1006,9 @@ function setupFooterMenu() {
   btn.addEventListener('click', toggleMenu);
 
   // 메뉴 항목 클릭 시 닫기
-  menu.querySelectorAll('.sub-item').forEach((item) =>
-    item.addEventListener('click', closeMenu)
-  );
+  menu
+    .querySelectorAll('.sub-item')
+    .forEach((item) => item.addEventListener('click', closeMenu));
 
   // 바깥 클릭 시 닫기
   document.addEventListener('click', (e) => {

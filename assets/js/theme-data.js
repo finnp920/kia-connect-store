@@ -9,6 +9,7 @@ const themeData = {
     priceLabel: 'Lifetime pass',
     thumbnail: 'assets/images/details/theme-baby-animals-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_1.png',
+    themeNames: ['baby-animals', 'space-wonders', 'landscape'],
     kvImages: [
       'assets/images/details/kv-slide-1.png',
       'assets/images/details/kv-slide-2.png',
@@ -154,6 +155,7 @@ const themeData = {
     priceLabel: 'Lifetime pass',
     thumbnail: 'assets/images/details/theme-space-wonders-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_2.png',
+    themeNames: ['space-wonders', 'landscape', 'baby-animals'],
     kvImages: [
       'assets/images/details/kv-slide-2.png',
       'assets/images/details/kv-slide-3.png',
@@ -297,6 +299,7 @@ const themeData = {
     priceLabel: 'Lifetime pass',
     thumbnail: 'assets/images/details/theme-landscape-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_3.png',
+    themeNames: ['landscape', 'baby-animals', 'space-wonders'],
     kvImages: [
       'assets/images/details/kv-slide-3.png',
       'assets/images/details/kv-slide-1.png',
