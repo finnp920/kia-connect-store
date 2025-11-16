@@ -74,6 +74,7 @@
   min-height: 276px;
   max-width: 289px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent
 }
 
 .theme-card-thumb {
@@ -204,6 +205,7 @@
   justify-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
+  -webkit-tap-highlight-color: transparent
 }
 
 .themes-preview {

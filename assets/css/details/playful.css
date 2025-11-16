@@ -304,9 +304,15 @@
     background-repeat: repeat;
   }
   .playful-title {
+    padding-bottom: 19px;
     font-size: 30px;
     letter-spacing: -0.6px;
+    line-height: normal;
     margin-bottom: 40px;
+  }
+  .playful-title::after {
+    width: 35px;
+    height: 3px;
   }
   .playful-title .mobile-br {
     display: inline;

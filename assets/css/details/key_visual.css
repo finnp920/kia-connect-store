@@ -102,6 +102,7 @@
   align-items: center;
   justify-content: center;
   transition: scale 0.3s ease;
+  -webkit-tap-highlight-color: transparent
 }
 .kv-arrow:hover {
   transform: scale(1.1);
