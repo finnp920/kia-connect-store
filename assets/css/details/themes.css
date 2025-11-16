@@ -219,55 +219,30 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 16px;
+  gap: 6px;
+  padding: 0 16px 0 12px;
   height: 43px;
   border-radius: 999px;
   background: #f2f4f6;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   color: #666666;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.32px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-
 .theme-selector .selector-icon {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-}
-
-.theme-selector .selector-icon circle {
-  fill: #b2b8bd;
-  stroke: #b2b8bd;
-}
-
-.theme-selector .selector-icon path {
-  display: block;
-  stroke: #ffffff;
+  width: 22px;
+  height: 22px;
+  background-image: url('../../icons/icon_circle_unchecked.svg');
 }
 
 .theme-selector.selected {
-  background: #ffcc00;
-  border-color: #ffcc00;
+  background-color: #ffcc00;
   color: #05141f;
-  gap: 6px;
 }
-
 .theme-selector.selected .selector-icon {
-  color: #05141f;
-}
-
-.theme-selector.selected .selector-icon circle {
-  fill: #05141f;
-  stroke: #05141f;
-}
-
-.theme-selector.selected .selector-icon path {
-  display: block;
-  stroke: #ffcc00;
+  background-image: url('../../icons/icon_circle_checked.svg');
 }
 
 /* Screenshot Preview Grid */
