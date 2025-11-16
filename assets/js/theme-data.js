@@ -35,11 +35,11 @@ const themeData = {
     mobileKvSubtitle:
       'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
-      cluster: 'assets/images/details/cluster-1.png',
-      welcome: 'assets/images/details/welcome-1.png',
-      homecard: 'assets/images/details/homecard-1.png',
-      navigation: 'assets/images/details/navigation-1.png',
-      goodbye: 'assets/images/details/goodbye-1.png',
+      cluster: 'assets/images/details/img_bc_detail_01.png',
+      welcome: 'assets/images/details/img_bc_detail_02.png',
+      homecard: 'assets/images/details/img_bc_detail_03.png',
+      navigation: 'assets/images/details/img_bc_detail_04.png',
+      goodbye: 'assets/images/details/img_bc_detail_05.png',
     },
     mobilePreviewImages: {
       cluster: 'assets/images/details/mobile-cluster-1.png',
@@ -181,11 +181,11 @@ const themeData = {
     mobileKvSubtitle:
       'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
-      cluster: 'assets/images/details/cluster-2.png',
-      welcome: 'assets/images/details/welcome-2.png',
-      homecard: 'assets/images/details/homecard-2.png',
-      navigation: 'assets/images/details/navigation-2.png',
-      goodbye: 'assets/images/details/goodbye-2.png',
+      cluster: 'assets/images/details/img_sw_detail_01.png',
+      welcome: 'assets/images/details/img_sw_detail_02.png',
+      homecard: 'assets/images/details/img_sw_detail_03.png',
+      navigation: 'assets/images/details/img_sw_detail_04.png',
+      goodbye: 'assets/images/details/img_sw_detail_05.png',
     },
     mobilePreviewImages: {
       cluster: 'assets/images/details/mobile-cluster-2.png',
@@ -325,11 +325,11 @@ const themeData = {
     mobileKvSubtitle:
       'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
-      cluster: 'assets/images/details/cluster-3.png',
-      welcome: 'assets/images/details/welcome-3.png',
-      homecard: 'assets/images/details/homecard-3.png',
-      navigation: 'assets/images/details/navigation-3.png',
-      goodbye: 'assets/images/details/goodbye-3.png',
+      cluster: 'assets/images/details/img_ls_detail_01.png',
+      welcome: 'assets/images/details/img_ls_detail_02.png',
+      homecard: 'assets/images/details/img_ls_detail_03.png',
+      navigation: 'assets/images/details/img_ls_detail_04.png',
+      goodbye: 'assets/images/details/img_ls_detail_05.png',
     },
     mobilePreviewImages: {
       cluster: 'assets/images/details/mobile-cluster-3.png',
