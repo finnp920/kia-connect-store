@@ -189,13 +189,16 @@
   transition: background-image 0.5s ease-in-out;
 }
 
+.theme-header-wrapper::before {
+  top: -75px;
+  height: calc(100% + 75px);
+}
+
 .theme-header-wrapper.theme-baby-animals::before {
   background-image: url('../../images/details/img_bc_detail_bg.png');
 }
 
-.theme-header-wrapper.theme-space-wonders::before {
-  top: -75px;
-  height: calc(100% + 75px);
+.theme-header-wrapper::before {
   background-color: black;
   background-image: url('../../images/details/img_sw_detail_bg.png');
 }
