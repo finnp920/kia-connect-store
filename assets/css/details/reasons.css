@@ -236,6 +236,9 @@
   .reason-card {
     gap: 30px;
   }
+  .reason-title {
+    font-size: 30px;
+  }
   .reason-card-left .reason-image {
     width: 50%;
     height: fit-content;
@@ -249,13 +252,6 @@
   .reason-card:nth-child(1) .reason-description br.v-mo {
     display: block;
   }
-  .reason-card:nth-child(4) .reason-image .v-pc {
-    display: none;
-  }
-   .reason-card:nth-child(4) .reason-image .v-mo {
-    display: block;
-    clip-path: none;
-   }
   .reasons-final-message p {
     font-size: 26px;
   }
@@ -278,6 +274,13 @@
     width: 88%;
     height: fit-content;
     transform: translateX(8.5vw);
+  }
+  .reason-card:nth-child(4) .reason-image .v-pc {
+    display: none;
+  }
+  .reason-card:nth-child(4) .reason-image .v-mo {
+    display: block;
+    clip-path: none;
   }
   .reason-title br.v-pc{
     display: none;
