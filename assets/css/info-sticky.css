@@ -38,12 +38,14 @@
 .info-sticky .info-sticky-inner .info-sticky-right dl dt {
   font-weight: 400;
   font-size: 14px;
+  line-height: 15px;
   text-align: right;
   color: #fff;
 }
 .info-sticky .info-sticky-inner .info-sticky-right dl dd {
   font-weight: 600;
   font-size: 14px;
+  line-height: 15px;
   text-align: right;
   color: #fff;
 }
