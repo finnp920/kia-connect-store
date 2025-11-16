@@ -289,26 +289,47 @@
     display: block;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 769px) { 
   .section-reasons {
     padding: 40px 0;
   }
   .reasons-header {
     margin-bottom: 40px;
   }
+  .reasons-title::after {
+    width: 35px;
+    height: 3px;
+  }
   .reasons-title {
     padding-bottom: 19px;
     font-size: 24px;
     letter-spacing: -0.48px;
   }
-  .reasons-title::after {
-    width: 35px;
-    height: 3px;
+  .reason-title {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
   }
   .reasons-cards {
     gap: 60px;
     margin-bottom: 60px;
   }
+  .reasons-final-message {
+    margin-bottom: 50px;
+  }
+  .reasons-final-message p {
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    white-space: normal;
+  }
+  .reasons-copyright {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+}
+@media screen and (max-width: 640px) {
   .reason-card {
     flex-direction: column;
     width: 100%;
@@ -328,11 +349,7 @@
     border-radius: 4px;
     margin-top: -1px;
   }
-  .reason-title {
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.36px;
-  }
+
   .reason-description {
     padding-left: 36px;
   }
@@ -344,20 +361,6 @@
   }
   .reasons-video-container {
     height: fit-content;
-  }
-  .reasons-final-message {
-    margin-bottom: 50px;
-  }
-  .reasons-final-message p {
-    padding: 0 30px;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.36px;
-    white-space: normal;
-  }
-  .reasons-copyright {
-    font-size: 10px;
-    letter-spacing: -0.2px;
   }
 }
 @media screen and (max-width: 360px) {
