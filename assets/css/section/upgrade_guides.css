@@ -26,8 +26,11 @@ section.upgrade-guides .section-inner {
 }
 
 .upgrade-guides-link {
-  width: 162px;
+  width: 160px;
   margin: 0 auto;
+}
+.upgrade-guides-link .cut-corner-btn-inner {
+  width: auto;
 }
 
 /* Mobile Styles (<= 360px) */
