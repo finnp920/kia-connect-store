@@ -225,7 +225,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Navigate with the beauty of the universe highlighting your journey.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/preview-navigation2.png',
         },
         {
           title: 'Homecard',
@@ -267,7 +267,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/preview-navigation2.png',
         },
         {
           title: 'Homecard',
@@ -369,7 +369,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Navigate through beautiful landscapes highlighting your journey.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/preview-navigation3.png',
         },
         {
           title: 'Homecard',
@@ -411,7 +411,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/preview-navigation3.png',
         },
         {
           title: 'Homecard',
