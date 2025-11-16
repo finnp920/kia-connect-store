@@ -208,7 +208,9 @@
   color: #b2b8bd;
   white-space: nowrap;
 }
-
+.reasons-final-message p br.v-mo {
+  display: none;
+}
 .reasons-copyright {
   font-size: 12px;
   font-weight: 400;
@@ -304,6 +306,12 @@
     display: none;
   }
   .reason-title br.v-mo {
+    display: block;
+  }
+  .reasons-bottom {
+    padding: 0 20px;
+  }
+  .reasons-final-message p br.v-mo {
     display: block;
   }
 }
