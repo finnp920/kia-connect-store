@@ -95,16 +95,16 @@ function updateTopBar(theme) {
 }
 
 function updateProductInfo(theme) {
-  const productName = document.getElementById('productName');
+  // const productName = document.getElementById('productName');
   const productDescription = document.getElementById('productDescription');
   const productThumbnail = document.getElementById('productThumbnail');
   const thumbnailWrapper = productThumbnail?.closest('.thumbnail-wrapper');
 
-  if (productName) {
-    const productTitle = theme.fullName || theme.name || '';
-    productName.textContent = productTitle;
-    productName.setAttribute('title', productTitle);
-  }
+  // if (productName) {
+  //   const productTitle = theme.name || theme.fullName || '';
+  //   productName.textContent = productTitle;
+  //   productName.setAttribute('title', productTitle);
+  // }
 
   if (productDescription) productDescription.textContent = theme.description;
 
