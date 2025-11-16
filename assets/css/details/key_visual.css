@@ -14,16 +14,17 @@
 
 .kv-carousel {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 876px;
+  max-height: 80vh;
   overflow: hidden;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 80px),
-    calc(100% - 80px) 100%,
-    0 100%
-  );
+  /*clip-path: polygon(*/
+  /*  0 0,*/
+  /*  100% 0,*/
+  /*  100% calc(100% - 80px),*/
+  /*  calc(100% - 80px) 100%,*/
+  /*  0 100%*/
+  /*);*/
 }
 
 .kv-slides {
@@ -53,6 +54,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  clip-path: url(../../icons/polygon-clip-path.svg#device-clip);
 }
 
 .kv-logo {
@@ -110,7 +112,7 @@
 
 .kv-indicators {
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -120,7 +122,7 @@
 
 .kv-indicator {
   width: 56px;
-  height: 2px;
+  height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: background-color var(--transition-base);
@@ -136,8 +138,10 @@
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1200px;
+  width: 100%;
+  max-width: 1240px;
   text-align: center;
+  padding: 0 20px;
   z-index: 10;
 }
 
@@ -168,4 +172,43 @@ section.section-kv[data-theme='space-wonders'] .kv-logo {
   background-image: url('../../images/logos/logo-national-geographic.png');
 }
 
-/* TODO 모바일 대응 필요 */
+@media screen and (max-width: 1240px) {
+  .kv-main-title {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .kv-main-title {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .kv-main-title {
+    font-size: 30px;
+  }
+  .kv-subtitle {
+    font-size: 14px;
+  }
+
+  .kv-carousel {
+    height: auto;
+    aspect-ratio: 1 / 1.47;
+  }
+  .kv-logo {
+    top: 35px;
+    right: 35px;
+    width: 100px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .kv-logo {
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 18px;
+  }
+}

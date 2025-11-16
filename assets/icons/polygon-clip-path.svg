@@ -1,0 +1,7 @@
+<svg width="0" height="0" style="position: absolute;">
+  <defs>
+    <clipPath id="device-clip">
+      <path d="M0 0 L300 0 L300 180 Q290 200 270 200 L0 200 Z" />
+    </clipPath>
+  </defs>
+</svg>
