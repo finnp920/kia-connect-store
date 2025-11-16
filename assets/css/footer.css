@@ -95,7 +95,7 @@ footer .footer-inner {
   align-items: center;
   gap: 10px;
   font-size: 12px;
-  line-height: 13px;  
+  line-height: 13px;
   color: #aaa;
   flex-wrap: wrap;
 }
@@ -135,7 +135,7 @@ footer .footer-inner {
 }
 
 .footer-cs-title {
-  font-size: 16px;  
+  font-size: 16px;
   line-height: 20px;
   color: var(--color-white);
   margin-bottom: 2px;
@@ -194,4 +194,17 @@ footer .footer-inner {
 }
 .footer-family-button:hover {
   border-color: var(--color-white);
+}
+
+@media screen and (max-width: 769px) {
+  footer::before {
+    right: -250px;
+    width: 1600px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  footer::before {
+    right: -300px;
+  }
 }
