@@ -99,6 +99,7 @@
 
 .product-info .product-description {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
   color: black;
 }
@@ -123,6 +124,8 @@
 }
 
 .option-item {
+  overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -149,7 +152,6 @@
   width: 120px;
   height: 120px;
   flex-shrink: 0;
-  border-radius: 6px 0 0 6px;
   overflow: hidden;
 }
 
@@ -208,24 +210,21 @@
 }
 
 .price-option-box {
-  height: 90px;
-  padding: 0 20px 0 24px;
+  padding: 34px 20px 34px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #05141F;
   border-radius: 6px;
-  color: black;
+  background-color: #fff;
   cursor: pointer;
 }
 .price-option-box .price-option-label {
   font-size: 16px;
   font-weight: 400;
-  color: black;
 }
 
 .price-option-box .price-option-value {
-  color: black;
   text-align: right;
   font-size: 20px;
   font-weight: 600;
@@ -263,6 +262,9 @@
 .btn-buy {
   margin-top: 32px;
 }
+.btn-buy .cut-corner-btn-inner {
+  /* background-color: #05141F; */
+}
 
 @media screen and (max-width: 1240px) {
   .section-product .section-inner {
@@ -290,5 +292,73 @@
   .product-options {
     width: 100%;
     max-width: 100%;
+  }
+  .product-info .product-header {
+    margin-bottom: 4.167vw;
+  }
+  .product-info .product-name {
+    width: auto;
+    font-size: 34px;
+  }
+  .option-list-title {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .price-options-title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .price-option-box {
+    padding: 31px 20px 30px 20px;
+  }
+  .total-price {
+    margin-top: 30px;
+  }
+  .total-price-label {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .btn-buy {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-info .product-name {
+    font-size: 8.333vw;
+    line-height: 1.2;
+  }
+  .option-item {
+    height: auto;
+  }
+  .option-thumbnail {
+    width: 22.222vw;
+    height: 22.222vw;
+  }
+  .option-info {
+    padding: 0 3.703vw;
+  }
+  .option-name {
+    font-size: 3.889vw;
+    line-height: 1.4;
+  }
+  .price-option-box .price-option-label {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .price-option-box .price-option-value {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .total-price {
+    align-items : flex-start;
+    flex-direction: column;
+  }
+  .total-price-label {
+    margin-bottom: 15px;
+  }
+  .total-price-value {
+    font-size: 30px;
+    line-height: 25px;
   }
 }
