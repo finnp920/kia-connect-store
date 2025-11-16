@@ -12,6 +12,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -56,7 +57,7 @@ button {
 
 main > section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: #ffffff;
 }
 main > section > .section-inner {
