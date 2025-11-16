@@ -136,13 +136,7 @@
   min-width: 300px;
   overflow: hidden;
   cursor: pointer;
-  transition:
-    background-color var(--transition-base),
-    height var(--transition-base);
-}
-
-.playful-video-cell:hover {
-  background-color: rgba(89, 89, 89, 0.95);
+  transition: height var(--transition-base);
 }
 
 .playful-video-player {

@@ -77,6 +77,11 @@
   letter-spacing: -0.02em;
 }
 
+.kv-btn-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .kv-arrow {
   position: absolute;
   top: 50%;

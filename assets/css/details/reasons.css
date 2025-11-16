@@ -6,14 +6,13 @@
   position: relative;
   background-color: #272727;
   color: var(--color-white);
-  padding: 151px 0 167px;
+  padding: 151px 0 120px;
 }
 
 .section-reasons-inner {
   position: relative;
-  max-width: 1536px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 /* Header */
@@ -21,17 +20,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  margin-bottom: 80px;
+  margin-bottom: 121px;
 }
 
 .reasons-title {
+  position: relative;
+  padding-bottom: 28px;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-align: center;
   letter-spacing: -0.96px;
   color: var(--color-white);
+}
+.reasons-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 73px;
+  height: 4px;
+  background-color: #ffcc00;
 }
 
 .reasons-underline {
@@ -46,14 +58,14 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 118.12px;
 }
 
 .reason-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 51px;
+  gap: 100px;
   width: 1200px;
   margin: 0 auto;
 }
@@ -83,7 +95,7 @@
 
 .reason-image {
   flex-shrink: 0;
-  width: 573px;
+  width: 570px;
   height: 324px;
   overflow: hidden;
 }
@@ -93,12 +105,12 @@
   height: 100%;
   object-fit: cover;
   clip-path: polygon(
-    40px 0,
+    20px 0,
     100% 0,
-    100% calc(100% - 40px),
-    calc(100% - 40px) 100%,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
     0 100%,
-    0 40px
+    0 20px
   );
 }
 
@@ -131,48 +143,47 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 576px;
+  gap: 20px;
 }
 
 .reason-header {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: flex-start;
 }
 
 .reason-number {
   margin-top: 0;
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #ffffff;
   color: #05141f;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(16, 34, 42, 0.45);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.60);
 }
 
 .reason-title {
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 42px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45px;
   letter-spacing: -0.48px;
   color: var(--color-white);
 }
 
 .reason-description {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.28px;
   color: #d0d5db;
-  padding-left: 56px;
+  padding-left: 52px;
 }
 
 /* 카드 1, 3번: 좌측 이미지 + 우측 텍스트 (padding-left 유지) */
@@ -211,13 +222,12 @@
   flex-direction: column;
   align-items: center;
   gap: 80px;
-  margin-top: 120px;
 }
 
 .reasons-video-container {
   width: 100%;
   max-width: 1200px;
-  height: 238px;
+  height: 236px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -233,17 +243,15 @@
 
 .reasons-final-message {
   text-align: center;
-  margin-top: 0;
+  margin-bottom: 78px;
 }
 
 .reasons-final-message p {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
-  letter-spacing: -0.02em;
   color: #b2b8bd;
   white-space: nowrap;
-  margin: 0;
 }
 
 .reasons-copyright {
@@ -253,5 +261,4 @@
   letter-spacing: -0.24px;
   color: #b1b1b1;
   text-align: center;
-  padding-bottom: 80px;
 }
