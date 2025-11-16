@@ -487,15 +487,13 @@ function updateReasonImages(theme) {
     const themeId = theme.id;
     let bannerSrc = 'assets/images/details/kv-banner-reasons.png'; // PC 기본
 
-    if (isMobile) {
-      // 모바일에서는 테마별 배너 사용
-      if (themeId === 'baby-animals') {
-        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-1.png';
-      } else if (themeId === 'space-wonders') {
-        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-2.png';
-      } else if (themeId === 'landscape') {
-        bannerSrc = 'assets/images/details/mobile-kv-banner-reasons-3.png';
-      }
+    //  테마별 배너 사용
+    if (themeId === 'baby-animals') {
+      bannerSrc = 'assets/images/details/kv-banner-reasons.png';
+    } else if (themeId === 'space-wonders') {
+      bannerSrc = 'assets/images/details/kv-banner-reasons-2.png';
+    } else if (themeId === 'landscape') {
+      bannerSrc = 'assets/images/details/kv-banner-reasons-3.png';
     }
 
     reasonsBannerImage.src = bannerSrc;
