@@ -310,12 +310,7 @@ footer .footer-inner {
 }
 @media screen and (max-width: 769px) {
   footer::before {
-    right: -250px;
-    width: 1600px;
-  }
-}
-@media screen and (max-width: 360px) {
-  footer::before {
-    right: -300px;
+    width: 100%;
+    background-size: 160%;
   }
 }
