@@ -220,7 +220,6 @@
 
 @media screen and (max-width: 1200px) {
   .section-reasons-inner {
-    overflow-x: hidden;
     width: auto;
     padding: 0 20px;
   }
@@ -287,9 +286,9 @@
     display: none;
   }
   .reason-card:nth-child(4) .reason-image .v-mo {
-    display: none;
-    /*display: block;*/
-    /*clip-path: none;*/
+    /* display: none; */
+    display: block;
+    clip-path: none;
   }
   .reason-title br.v-pc {
     display: none;
