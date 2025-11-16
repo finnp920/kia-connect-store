@@ -21,12 +21,12 @@ const themeData = {
       'assets/images/details/img_ls_hero_mo.png',
     ],
     discoverShots: [
-      'assets/images/details/kv-banner-discover_1.png',
-      'assets/images/details/kv-banner-discover_1.png',
+      'assets/images/details/img_disc_video.png',
+      'assets/images/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/details/kv-banner-discover_1.png',
-      'assets/images/details/kv-banner-discover_1.png',
+      'assets/images/details/img_disc_video_mo.png',
+      'assets/images/details/img_disc_video_mo.png',
     ],
     kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
     mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
@@ -80,7 +80,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'National Geographic photography highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/img_bc_disc_02.png',
         },
         {
           title: 'Homecard',
@@ -113,7 +113,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation.png',
+          image: 'assets/images/details/img_bc_disc_02.png',
         },
         {
           title: 'Homecard',
@@ -167,12 +167,12 @@ const themeData = {
       'assets/images/details/img_bc_hero_mo.png',
     ],
     discoverShots: [
-      'assets/images/details/kv-banner-discover_2-1.png',
-      'assets/images/details/kv-banner-discover_2-2.png',
+      'assets/images/details/img_disc_video.png',
+      'assets/images/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/details/mobile-kv-banner-discover_2-1.png',
-      'assets/images/details/kv-banner-discover_2-2.png',
+      'assets/images/details/img_disc_video_mo.png',
+      'assets/images/details/img_disc_video_mo.png',
     ],
     kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
     mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
@@ -225,7 +225,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Navigate with the beauty of the universe highlighting your journey.',
-          image: 'assets/images/details/preview-navigation2.png',
+          image: 'assets/images/details/img_sw_disc_02.png',
         },
         {
           title: 'Homecard',
@@ -267,7 +267,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation2.png',
+          image: 'assets/images/details/img_sw_disc_02.png',
         },
         {
           title: 'Homecard',
@@ -311,12 +311,12 @@ const themeData = {
       'assets/images/details/img_sw_hero_mo.png',
     ],
     discoverShots: [
-      'assets/images/details/kv-banner-discover_1.png',
-      'assets/images/details/kv-banner-discover_1.png',
+      'assets/images/details/img_disc_video.png',
+      'assets/images/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/details/kv-banner-discover_1.png',
-      'assets/images/details/kv-banner-discover_1.png',
+      'assets/images/details/img_disc_video_mo.png',
+      'assets/images/details/img_disc_video_mo.png',
     ],
     kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
     mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
@@ -369,7 +369,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Navigate through beautiful landscapes highlighting your journey.',
-          image: 'assets/images/details/preview-navigation3.png',
+          image: 'assets/images/details/img_ls_disc_02.png',
         },
         {
           title: 'Homecard',
@@ -411,7 +411,7 @@ const themeData = {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/details/preview-navigation3.png',
+          image: 'assets/images/details/img_ls_disc_02.png',
         },
         {
           title: 'Homecard',
