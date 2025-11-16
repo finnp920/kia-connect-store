@@ -99,7 +99,9 @@
   background-color: #ffffff;
   color: var(--color-black);
 }
-
+.theme-card-body br{
+  display: none;
+}
 .theme-card-title {
   font-weight: 600;
   font-size: 24px;
@@ -360,6 +362,9 @@
     padding: 10px;
     gap: 10px;
   }
+  .theme-card-body br{
+    display: block;
+  }
   .theme-card-title {
     font-size: 14px;
     line-height: 120%; /* 16.8px */
@@ -383,6 +388,7 @@
 
   .themes-stage {
     padding: 50px 0;
+    border-width: 4px;
   }
   .themes-stage::after {
     width: 48px;
