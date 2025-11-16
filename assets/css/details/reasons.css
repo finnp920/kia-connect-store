@@ -220,6 +220,7 @@
 
 @media screen and (max-width: 1200px) {
   .section-reasons-inner {
+    overflow-x: hidden;
     width: auto;
     padding: 0 20px;
   }
