@@ -219,7 +219,7 @@ const themeData = {
           description:
             'Journey through the cosmos with stunning space imagery on your cluster display.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/details/discover-cluster.png',
+          image: 'assets/images/details/discover-cluster2.png',
         },
         {
           title: 'Navigation',
@@ -261,7 +261,7 @@ const themeData = {
           description:
             'The selected Disney Theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/details/discover-cluster.png',
+          image: 'assets/images/details/discover-cluster2.png',
         },
         {
           title: 'Navigation',
@@ -363,7 +363,7 @@ const themeData = {
           description:
             "Experience Earth's most stunning vistas on your cluster display with cinematic scenery.",
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/details/discover-cluster.png',
+          image: 'assets/images/details/discover-cluster3.png',
         },
         {
           title: 'Navigation',
@@ -405,7 +405,7 @@ const themeData = {
           description:
             'The selected Disney Theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/details/discover-cluster.png',
+          image: 'assets/images/details/discover-cluster3.png',
         },
         {
           title: 'Navigation',
