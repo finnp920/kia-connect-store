@@ -56,4 +56,24 @@ ul.disclaimer-list > li::before {
   section.disclaimer {
     padding: 60px 0;
   }
+  section.disclaimer .section-inner {
+    gap: 30px;
+  }
+  .disclaimer-title {
+    font-size: 25px;
+    line-height: 1;
+  }
+  ul.disclaimer-list {
+    padding: 20px 0 0 0;
+  }
+  .disclaimer-text {
+    font-size: 14px;
+  }
 }
+
+@media screen and (max-width: 480px) { 
+  .disclaimer-title {
+    font-size: 20px;
+  }
+}
+

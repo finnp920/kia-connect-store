@@ -113,26 +113,29 @@ section.related-feature .section-inner {
 @media screen and (max-width: 769px) {
   /*  TODO 모바일 디자인 대응 */
   section.related-feature {
-    padding: 16.667vw 0 25vw;
+    padding: 60px 0 90px;
+  }
+  .related-feature-title {
+    font-size: 25px;
   }
   .feature-item {
     height: auto;
     flex-direction: column;
     gap: 5.556vw;
     padding: 4.167vw 4.167vw 5.556vw;
-    border-radius: 1.667vw;
+    border-radius: 6px;
   }
   .feature-item > .feature-content {
     width: 100%;
-    gap: 4.167vw;
+    gap: 4.17vw;
   }
   .feature-content .thumbnail {
     width: 20.833vw;
     height: 20.833vw;
-    border-radius: 1.667vw;
+    border-radius: 6px;
   }
   .feature-content .feature-text {
-    gap: 2.778vw;
+    gap: 10px;
     padding: 0;
   }
   .feature-item > .feature-price {
@@ -141,28 +144,31 @@ section.related-feature .section-inner {
     width: 100%;
     padding-right: 0;
   }
-
 }
 
 @media screen and (max-width: 480px) {
+  .related-feature-title {
+    font-size: 18px;
+  }
   .feature-item {
-    gap: 8.333vw;
-    padding: 5.556vw 5.556vw 8.333vw;
+    gap: 30px;
+    padding: 20px 20px 30px;
   }
   .feature-text > .title {
-    font-size: 5vw;
-    line-height: 5.278vw;
+    font-size: 18px;
+    line-height: 19px;
   }
   .feature-text > .description {
-    font-size: 3.889vw;
-    line-height: 4.167vw;
+    font-size: 14px;
+    line-height: 15px;
   }
   .feature-price > .label {
-    font-size: 3.889vw;
-    line-height: 4.167vw;
+    font-size: 14px;
+    line-height: 15px;
   }
   .feature-price > .value {
-    font-size: 3.889vw;
-    line-height: 4.167vw;
+    font-size: 14px;
+    line-height: 15px;
   }
+  
 }

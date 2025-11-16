@@ -49,11 +49,37 @@ section.info .section-inner {
 
 .info-description {
   font-size: 14px;
-  font-weight: 400;
   line-height: 22px;
-  letter-spacing: -0.02em;
   color: #676767;
-  margin: 0;
 }
 
 /* TODO 모바일 대응 */
+@media screen and (max-width: 769px) {
+  section.info {
+    padding: 60px 0;
+  }
+  section.info .section-inner {
+    flex-direction: column;
+    gap: 60px;
+    max-width: none;
+  }
+  .info-item {
+    gap: 15px;
+  }
+  .info-icon {
+    width: 75px;
+    height: 75px;
+  }
+  .info-text {
+    gap: 15px;
+  }
+  .info-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .info-item {
+    align-items: center;
+  }
+}
