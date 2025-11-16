@@ -194,6 +194,8 @@
 }
 
 .theme-header-wrapper.theme-space-wonders::before {
+  top: -75px;
+  height: calc(100% + 75px);
   background-color: black;
   background-image: url('../../images/details/img_sw_detail_bg.png');
 }
