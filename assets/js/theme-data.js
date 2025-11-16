@@ -11,14 +11,14 @@ const themeData = {
     backgroundImage: 'assets/images/details/bg_1.png',
     themeNames: ['baby-animals', 'space-wonders', 'landscape'],
     kvImages: [
-      'assets/images/details/kv-slide-1.png',
-      'assets/images/details/kv-slide-2.png',
-      'assets/images/details/kv-slide-3.png',
+      'assets/images/details/img_bc_hero.png',
+      'assets/images/details/img_sw_hero.png',
+      'assets/images/details/img_ls_hero.png',
     ],
     mobileKvImages: [
-      'assets/images/details/mobile-kv-slide-1.png',
-      'assets/images/details/mobile-kv-slide-2.png',
-      'assets/images/details/mobile-kv-slide-3.png',
+      'assets/images/details/img_bc_hero_mo.png',
+      'assets/images/details/img_sw_hero_mo.png',
+      'assets/images/details/img_ls_hero_mo.png',
     ],
     discoverShots: [
       'assets/images/details/kv-banner-discover_1.png',
@@ -42,11 +42,11 @@ const themeData = {
       goodbye: 'assets/images/details/img_bc_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/details/mobile-cluster-1.png',
-      welcome: 'assets/images/details/mobile-welcome-1.png',
-      homecard: 'assets/images/details/mobile-homecard-1.png',
-      navigation: 'assets/images/details/mobile-navigation-1.png',
-      goodbye: 'assets/images/details/mobile-goodbye-1.png',
+      cluster: 'assets/images/details/img_bc_detail_01_mo.png',
+      welcome: 'assets/images/details/img_bc_detail_02_mo.png',
+      homecard: 'assets/images/details/img_bc_detail_03_mo.png',
+      navigation: 'assets/images/details/img_bc_detail_04_mo.png',
+      goodbye: 'assets/images/details/img_bc_detail_05_mo.png',
     },
     features: [
       {
@@ -157,14 +157,14 @@ const themeData = {
     backgroundImage: 'assets/images/details/bg_2.png',
     themeNames: ['space-wonders', 'landscape', 'baby-animals'],
     kvImages: [
-      'assets/images/details/kv-slide-2.png',
-      'assets/images/details/kv-slide-3.png',
-      'assets/images/details/kv-slide-1.png',
+      'assets/images/details/img_sw_hero.png',
+      'assets/images/details/img_ls_hero.png',
+      'assets/images/details/img_bc_hero.png',
     ],
     mobileKvImages: [
-      'assets/images/details/mobile-kv-slide-2.png',
-      'assets/images/details/mobile-kv-slide-3.png',
-      'assets/images/details/mobile-kv-slide-1.png',
+      'assets/images/details/img_sw_hero_mo.png',
+      'assets/images/details/img_ls_hero_mo.png',
+      'assets/images/details/img_bc_hero_mo.png',
     ],
     discoverShots: [
       'assets/images/details/kv-banner-discover_2-1.png',
@@ -188,11 +188,11 @@ const themeData = {
       goodbye: 'assets/images/details/img_sw_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/details/mobile-cluster-2.png',
-      welcome: 'assets/images/details/mobile-welcome-2.png',
-      homecard: 'assets/images/details/mobile-homecard-2.png',
-      navigation: 'assets/images/details/mobile-navigation-2.png',
-      goodbye: 'assets/images/details/mobile-goodbye-2.png',
+      cluster: 'assets/images/details/img_sw_detail_01_mo.png',
+      welcome: 'assets/images/details/img_sw_detail_02_mo.png',
+      homecard: 'assets/images/details/img_sw_detail_03_mo.png',
+      navigation: 'assets/images/details/img_sw_detail_04_mo.png',
+      goodbye: 'assets/images/details/img_sw_detail_05_mo.png',
     },
     features: [
       {
@@ -301,14 +301,14 @@ const themeData = {
     backgroundImage: 'assets/images/details/bg_3.png',
     themeNames: ['landscape', 'baby-animals', 'space-wonders'],
     kvImages: [
-      'assets/images/details/kv-slide-3.png',
-      'assets/images/details/kv-slide-1.png',
-      'assets/images/details/kv-slide-2.png',
+      'assets/images/details/img_ls_hero.png',
+      'assets/images/details/img_bc_hero.png',
+      'assets/images/details/img_sw_hero.png',
     ],
     mobileKvImages: [
-      'assets/images/details/mobile-kv-slide-3.png',
-      'assets/images/details/mobile-kv-slide-1.png',
-      'assets/images/details/mobile-kv-slide-2.png',
+      'assets/images/details/img_ls_hero_mo.png',
+      'assets/images/details/img_bc_hero_mo.png',
+      'assets/images/details/img_sw_hero_mo.png',
     ],
     discoverShots: [
       'assets/images/details/kv-banner-discover_1.png',
@@ -332,11 +332,11 @@ const themeData = {
       goodbye: 'assets/images/details/img_ls_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/details/mobile-cluster-3.png',
-      welcome: 'assets/images/details/mobile-welcome-3.png',
-      homecard: 'assets/images/details/mobile-homecard-3.png',
-      navigation: 'assets/images/details/mobile-navigation-3.png',
-      goodbye: 'assets/images/details/mobile-goodbye-3.png',
+      cluster: 'assets/images/details/img_ls_detail_01_mo.png',
+      welcome: 'assets/images/details/img_ls_detail_02_mo.png',
+      homecard: 'assets/images/details/img_ls_detail_03_mo.png',
+      navigation: 'assets/images/details/img_ls_detail_04_mo.png',
+      goodbye: 'assets/images/details/img_ls_detail_05_mo.png',
     },
     features: [
       {

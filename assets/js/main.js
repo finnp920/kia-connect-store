@@ -131,7 +131,7 @@ function updateKVSection(theme) {
   const kvSubtitle = document.getElementById('kvSubtitle');
 
   // 모바일 여부 확인
-  const isMobile = window.innerWidth <= 360;
+  const isMobile = window.innerWidth <= 769;
 
   // 모바일이면 mobileKvTitle/mobileKvSubtitle 사용, 없으면 기본값 사용
   const titleText =
@@ -200,7 +200,7 @@ function updatePreviewImages(theme) {
   };
 
   // 모바일 여부 확인
-  const isMobile = window.innerWidth <= 360;
+  const isMobile = window.innerWidth <= 769;
   const images = isMobile ? theme.mobilePreviewImages : theme.previewImages;
   const themeLabels = theme.previewLabels || theme.labels?.preview || {};
   const defaultLabels = {
@@ -213,8 +213,7 @@ function updatePreviewImages(theme) {
 
   Object.entries(labelElements).forEach(([key, element]) => {
     if (!element) return;
-    const labelValue = themeLabels[key] || defaultLabels[key];
-    element.textContent = labelValue;
+    element.textContent = themeLabels[key] || defaultLabels[key];
   });
 
   if (previewCluster && images?.cluster) {
@@ -306,7 +305,7 @@ function updateDiscoverShots(theme) {
   if (!theme || !theme.videos) return;
 
   const videoItems = document.querySelectorAll('.playful-video-item');
-  const isMobile = window.innerWidth <= 360;
+  const isMobile = window.innerWidth <= 769;
 
   // 썸네일 이미지 소스 결정
   let thumbnailSources;
@@ -388,7 +387,7 @@ function updateBackgroundImage(theme) {
 }
 
 function updateDiscoverFeatures(theme) {
-  const isMobile = window.innerWidth <= 360;
+  const isMobile = window.innerWidth <= 769;
 
   // 모바일이면 mobileDiscoverFeatures, 없으면 discoverFeatures 사용
   let features;
@@ -448,13 +447,13 @@ function updateDiscoverFeatures(theme) {
 }
 
 function updateReasonImages(theme) {
-  const isMobile = window.innerWidth <= 360;
+  const isMobile = window.innerWidth <= 769;
 
   // Reason Card 1-4: 모바일/PC 이미지 분리
   const reasonImages = [
     {
       id: 'reasonCardImage1',
-      pc: theme.kvImages?.[0] || 'assets/images/details/kv-slide-1.png',
+      pc: theme.kvImages?.[0] || 'assets/images/details/img_bc_hero.png',
       mobile: 'assets/images/details/mobile-reason-1.png',
     },
     {
