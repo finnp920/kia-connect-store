@@ -95,7 +95,7 @@
   display: flex;
   align-items: stretch;
   justify-content: stretch;
-  padding: 1.6cqw 1.6cqw 1.8cqw;
+  padding: 20px 22px 25px;
   aspect-ratio: 300 / 59;
 }
 
@@ -119,13 +119,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  gap: calc((100% / 1200) * 155);
+  gap: 160px;
   margin: 0 auto;
   padding: 0;
   z-index: 2;
 }
 
 .playful-video-cell {
+  /* 확인용 값 */
   /*opacity: 0.3;*/
   /*border: 1px solid red;*/
   position: relative;
@@ -274,9 +275,12 @@
   letter-spacing: -0.32px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1240px) {
+  .playful-video-grid {
+    gap: calc(100% * 164 / 1200);
+  }
   .playful-video-item {
-    padding: 1.75cqw 2cqw 2.25cqw;
+    padding: 1.75cqw 2cqw 2cqw;
   }
 }
 
