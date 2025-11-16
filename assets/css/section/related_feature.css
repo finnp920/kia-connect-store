@@ -28,6 +28,8 @@ section.related-feature .section-inner {
 }
 
 .feature-item {
+  overflow: hidden; 
+  position: relative;
   display: flex;
   align-items: center;
   height: 200px;
@@ -53,7 +55,6 @@ section.related-feature .section-inner {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  border-radius: 6px 0 0 6px;
 }
 
 .feature-content .thumbnail img {
@@ -72,9 +73,9 @@ section.related-feature .section-inner {
 
 .feature-text > .title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 25px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--color-black);
   margin: 0;
 }
@@ -83,7 +84,6 @@ section.related-feature .section-inner {
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: -0.02em;
   color: #676767;
   margin: 0;
 }
@@ -93,32 +93,76 @@ section.related-feature .section-inner {
   flex-direction: column;
   gap: 11px;
   text-align: right;
-  margin-right: 40px;
+  padding-right: 40px;
 }
 
 .feature-price > .label {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  line-height: 17px;
   color: #676767;
-  margin: 0;
 }
 
 .feature-price > .value {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 17px;
   color: var(--color-black);
-  margin: 0;
 }
 
 /* Medium Mobile Styles (<= 769px) */
 @media screen and (max-width: 769px) {
   /*  TODO 모바일 디자인 대응 */
+  section.related-feature {
+    padding: 16.667vw 0 25vw;
+  }
   .feature-item {
     height: auto;
     flex-direction: column;
+    gap: 5.556vw;
+    padding: 4.167vw 4.167vw 5.556vw;
+    border-radius: 1.667vw;
+  }
+  .feature-item > .feature-content {
+    width: 100%;
+    gap: 4.167vw;
+  }
+  .feature-content .thumbnail {
+    width: 20.833vw;
+    height: 20.833vw;
+    border-radius: 1.667vw;
+  }
+  .feature-content .feature-text {
+    gap: 2.778vw;
+    padding: 0;
+  }
+  .feature-item > .feature-price {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 0;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .feature-item {
+    gap: 8.333vw;
+    padding: 5.556vw 5.556vw 8.333vw;
+  }
+  .feature-text > .title {
+    font-size: 5vw;
+    line-height: 5.278vw;
+  }
+  .feature-text > .description {
+    font-size: 3.889vw;
+    line-height: 4.167vw;
+  }
+  .feature-price > .label {
+    font-size: 3.889vw;
+    line-height: 4.167vw;
+  }
+  .feature-price > .value {
+    font-size: 3.889vw;
+    line-height: 4.167vw;
   }
 }

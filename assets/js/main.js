@@ -62,6 +62,7 @@ function initializePage() {
   updateBackgroundImage(theme);
   updateDiscoverFeatures(theme);
   updateReasonImages(theme);
+  updateCreditText(theme);
   updateMobileDropdown();
 }
 
@@ -501,6 +502,12 @@ function updateReasonImages(theme) {
   }
 }
 
+function updateCreditText(theme) {
+  const creditTextElement = document.getElementById('credit-text');
+  if (creditTextElement)
+    creditTextElement.innerHTML = theme.credit.replace(/\n/g, '<br>');
+}
+
 // ----------------------------------------
 // Event Binding
 // ----------------------------------------
@@ -582,6 +589,7 @@ function handleOptionSelect(themeId) {
   updateBackgroundImage(theme);
   updateDiscoverFeatures(theme);
   updateReasonImages(theme);
+  updateCreditText(theme);
   updateMobileDropdown();
 
   currentSlide = 1; // 클론 때문에 1로 리셋
@@ -623,6 +631,7 @@ function handleResize() {
     updateDiscoverShots(theme);
     updateDiscoverFeatures(theme);
     updateReasonImages(theme);
+    updateCreditText(theme);
   }
 }
 

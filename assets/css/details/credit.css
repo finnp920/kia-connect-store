@@ -9,13 +9,9 @@
 }
 
 .section-credit-inner {
-  position: relative;
-  max-width: 1920px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 360px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 20px;
 }
 
 /* Header */
@@ -24,12 +20,12 @@
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  margin-bottom: 116px;
+  margin-bottom: 60px;
 }
 
 .credit-title {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-align: center;
   letter-spacing: -0.96px;
@@ -55,9 +51,8 @@
 }
 
 .credit-text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
-  letter-spacing: -0.02em;
   color: #dedede;
   margin: 0;
 }
