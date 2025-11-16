@@ -135,6 +135,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: height var(--transition-base);
+  background-color: black;
 }
 
 .playful-video-player {
