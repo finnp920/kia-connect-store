@@ -106,31 +106,6 @@
   );
 }
 
-/* 카드 2번 이미지 크기 조정 */
-.reason-card:nth-child(2) .reason-image {
-  width: 500px;
-}
-
-/* 카드 2번 텍스트 영역 너비 조정 */
-.reason-card:nth-child(2) .reason-content {
-  max-width: 576px;
-}
-
-/* 카드 3번 gap 조정 */
-.reason-card:nth-child(3) {
-  gap: 99px;
-}
-
-/* 카드 3번 텍스트 너비 조정 */
-.reason-card:nth-child(3) .reason-content {
-  max-width: 551px;
-}
-
-/* 카드 4번 텍스트 영역 너비 조정 */
-.reason-card:nth-child(4) .reason-content {
-  max-width: 534px;
-}
-
 .reason-content {
   flex: 1;
   display: flex;
@@ -178,36 +153,6 @@
   padding-left: 52px;
 }
 
-/* 카드 1, 3번: 좌측 이미지 + 우측 텍스트 (padding-left 유지) */
-/* 카드 2, 4번: 좌측 텍스트 + 우측 이미지 (padding-left 유지) */
-.reason-card:nth-child(2) .reason-description,
-.reason-card:nth-child(4) .reason-description {
-  padding-left: 56px;
-}
-
-/* Card 2 specific */
-.reason-card:nth-child(2) .reason-description {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-/* Card 3 specific */
-.reason-card:nth-child(3) .reason-description {
-  font-size: 16px;
-  line-height: 25.352px;
-  letter-spacing: -0.02em;
-}
-
-/* Card 4 specific */
-.reason-card:nth-child(4) .reason-description {
-  font-size: 16px;
-  line-height: 25.352px;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
 /* Bottom Section */
 .reasons-bottom {
   display: flex;
@@ -253,4 +198,105 @@
   letter-spacing: -0.24px;
   color: #b1b1b1;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-reasons-inner {
+    width: auto;
+    padding: 0 20px;
+  }
+  .reason-card {
+    width: 1000px;
+    gap: 55px;
+  }
+  .reason-image {
+    width: 480px;
+    height: 273px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section-reasons {
+    padding: 100px 0 80px;
+  }
+  .reason-card {
+    flex-direction: column;
+    width: 100%;
+  }
+  .reason-card-left .reason-content {
+    order: 1;
+    width: 100%;
+  }
+  .reason-card-left .reason-image {
+    order: 2;
+    width: 100%;
+  }
+  .reason-title br, .reason-description br {
+    display: none;
+  }
+  .reasons-final-message p {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .section-reasons {
+    padding: 40px 0;
+  }
+  .reasons-header {
+    margin-bottom: 40px;
+  }
+  .reasons-title {
+    padding-bottom: 19px;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
+  .reasons-title::after {
+    width: 35px;
+    height: 3px;
+  }
+  .reasons-cards {
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .reason-card {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .reason-card-left .reason-content {
+    gap: 8px;
+  }
+  .reason-header {
+    gap: 12px;
+  }
+  .reason-number {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 4px;
+    margin-top: -1px;
+  }
+  .reason-title {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+  }
+  .reason-description {
+    padding-left: 36px;
+  }
+  .reasons-bottom {
+    gap: 38px;
+  }
+  .reasons-final-message {
+    margin-bottom: 50px;
+  }
+  .reasons-final-message p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+  }
+  .reasons-copyright {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
 }

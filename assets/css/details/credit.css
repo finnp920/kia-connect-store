@@ -68,3 +68,22 @@
   color: var(--color-white);
   font-weight: 700;
 }
+
+@media screen and (max-width: 769px) {
+  .section-credit {
+    padding: 60px 0 80px;
+  }
+  .credit-header {
+    margin-bottom: 32px;
+  }
+  .credit-title {
+    padding-bottom: 23px;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: -0.48px;
+  }
+  .credit-title::after {
+    width: 35px;
+    height: 3px;
+  }
+}
