@@ -3,17 +3,15 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 59px;
   background-color: #000;
   color: #fff;
 }
 
 .info-sticky .info-sticky-inner {
   width: 100%;
-  height: 59px;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 22px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,9 +23,12 @@
   align-items: center;
   flex-wrap: wrap;
   font-size: 14px;
+  line-height: 15px;
   color: #fff;
 }
-
+.info-sticky .info-sticky-inner .info-sticky-left p br {
+  display: none;
+}
 .info-sticky .info-sticky-inner .info-sticky-right dl {
   display: flex;
   align-items: center;
@@ -47,19 +48,29 @@
   color: #fff;
 }
 
-/* Large Mobile Styles (<= 1120px) */
-@media screen and (max-width: 1120px) {
-  /* TODO 글자 크기 */
-
-  .info-sticky {
-    height: 56px;
+@media screen and (max-width: 769px) {
+  .info-sticky .info-sticky-inner {
+    height: auto;
+    padding: 12px 20px;
+  }
+  .info-sticky .info-sticky-inner .info-sticky-left p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  .info-sticky .info-sticky-inner .info-sticky-left p br {
+    display: block;
   }
   .info-sticky .info-sticky-inner .info-sticky-right dl {
     flex-direction: column;
     gap: 5px;
   }
+  .info-sticky .info-sticky-inner .info-sticky-right dl dt,
+  .info-sticky .info-sticky-inner .info-sticky-right dl dd {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
-
 /* Mobile Styles (<= 360px) */
 @media screen and (max-width: 360px) {
   .info-sticky .info-sticky-inner .info-sticky-left {
