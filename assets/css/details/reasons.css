@@ -356,6 +356,12 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .section-reasons {
+    padding-top: 72px;
+  }
+  .reasons-header {
+    margin-bottom: 60px;
+  }
   .reason-card {
     flex-direction: column;
     width: 100%;
