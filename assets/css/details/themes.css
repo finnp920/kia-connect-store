@@ -151,7 +151,9 @@
   font-size: 16px;
   letter-spacing: -0.32px;
 }
-
+.theme-card-cta .theme-card-copy br {
+  display: block;
+}
 .theme-card-icon img {
   width: 32px;
   height: auto;
