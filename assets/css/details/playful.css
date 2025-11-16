@@ -284,9 +284,6 @@
   .playful-wrapper {
     padding: 40px 0 50px;
   }
-  .playful-wrapper::before {
-    background-size: contain;
-  }
   .playful-title {
     padding-bottom: 19px;
     font-size: 30px;
@@ -322,6 +319,9 @@
 
   .feature-media {
     gap: 16px;
+  }
+  .feature-media img {
+    border-radius: 4px;
   }
   .feature-text h3 {
     font-size: 18px;
