@@ -59,6 +59,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 100px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -153,6 +154,12 @@
   display: block;
 }
 .reason-title br.v-mo {
+  display: none;
+}
+.reason-description br.v-pc {
+  display: block;
+}
+.reason-description br.v-mo {
   display: none;
 }
 .reason-description {
