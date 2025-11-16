@@ -59,7 +59,7 @@
 
 .credit-text {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #dedede;
   margin: 0;
 }
@@ -85,5 +85,8 @@
   .credit-title::after {
     width: 35px;
     height: 3px;
+  }
+  .credit-text {
+    font-size: 12px;
   }
 }
