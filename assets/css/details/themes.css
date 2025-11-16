@@ -180,19 +180,20 @@
   z-index: 0;
   pointer-events: none;
   aspect-ratio: 1920 / 857;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .theme-header-wrapper.theme-baby-animals::before {
-  background-image: url('../../images/details/bg-top-1.png');
+  background-image: url('../../images/details/img_bc_detail_bg.png');
 }
 
 .theme-header-wrapper.theme-space-wonders::before {
   background-color: black;
-  background-image: url('../../images/details/bg-top-2.png');
+  background-image: url('../../images/details/img_sw_detail_bg.png');
 }
 
 .theme-header-wrapper.theme-landscape::before {
-  background-image: url('../../images/details/bg-top-3.png');
+  background-image: url('../../images/details/img_ls_detail_bg.png');
 }
 
 .theme-selectors {
@@ -330,6 +331,9 @@
 }
 
 @media screen and (max-width: 769px) {
+  .theme-header-wrapper::before {
+    background-size: contain;
+  }
   .themes-header {
     width: 100%;
     padding: 40px 20px;
@@ -427,11 +431,6 @@
     padding: 12px;
   }
 
-  .theme-header-wrapper::before {
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: left;
-  }
   .themes-preview {
     padding-bottom: 64px;
   }
