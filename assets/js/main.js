@@ -982,6 +982,43 @@ function handlePlayfulVideoClick(cell) {
   }
 }
 
+// ----------------------------------------
+// Footer Navigation Menu Toggle
+// ----------------------------------------
+function setupFooterMenu() {
+  const btn = document.querySelector('button.nav-item');
+  const menu = document.getElementById(btn?.getAttribute('aria-controls'));
+  if (!btn || !menu) return;
+
+  const closeMenu = () => {
+    btn.setAttribute('aria-expanded', 'false');
+    menu.hidden = true;
+  };
+
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    menu.hidden = expanded;
+  };
+
+  btn.addEventListener('click', toggleMenu);
+
+  // 메뉴 항목 클릭 시 닫기
+  menu.querySelectorAll('.sub-item').forEach((item) =>
+    item.addEventListener('click', closeMenu)
+  );
+
+  // 바깥 클릭 시 닫기
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      closeMenu();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', setupFooterMenu);
+
 // Testing Support (optional)
 // ----------------------------------------
 if (typeof module !== 'undefined' && module.exports) {
