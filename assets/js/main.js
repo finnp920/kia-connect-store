@@ -545,11 +545,11 @@ function setupEventListeners() {
   const mobileThemeSelect = document.getElementById('mobileThemeSelect');
   const mobileThemeList = document.querySelector('.mobile-theme-dropdown .theme-list');
   
-  if (mobileThemeSelect && mobileThemeList) {
-    // 셀렉트 버튼 클릭 시 리스트 토글
+  if (mobileThemeSelect && mobileThemeList && mobileThemeBox) {
+    // 셀렉트 버튼 클릭 시 mobile-theme-dropdown에 active 토글
     mobileThemeSelect.addEventListener('click', (e) => {
       e.stopPropagation();
-      mobileThemeList.classList.toggle('active');
+      mobileThemeBox.classList.toggle('active');
     });
 
     // 리스트 항목 클릭 시
@@ -558,7 +558,7 @@ function setupEventListeners() {
       item.addEventListener('click', () => {
         const themeValue = item.getAttribute('value');
         mobileThemeSelect.textContent = item.textContent;
-        mobileThemeList.classList.remove('active');
+        mobileThemeBox.classList.remove('active');
         if (mobileThemeBox) {
           mobileThemeBox.setAttribute('data-theme', themeValue);
         }
@@ -567,10 +567,10 @@ function setupEventListeners() {
     });
   }
 
-  // 외부 클릭 시 리스트 닫기
+  // 외부 클릭 시 드롭다운 닫기
   document.addEventListener('click', (e) => {
-    if (mobileThemeList && !e.target.closest('.mobile-theme-dropdown')) {
-      mobileThemeList.classList.remove('active');
+    if (mobileThemeBox && !e.target.closest('.mobile-theme-dropdown')) {
+      mobileThemeBox.classList.remove('active');
     }
   });
 

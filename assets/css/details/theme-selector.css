@@ -81,16 +81,36 @@
     border: 1.4px solid #DEDEDE;
     border-radius: 4px;
     background-color: #f2f4f6;
-    background-image: url('../../icons/icon-angle-down.svg');
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    background-size: 13px;
     cursor: pointer;
     text-align: left;
     padding-right: 48px;
+    position: relative;
     -webkit-tap-highlight-color: transparent;
   }
 
+  .mobile-theme-dropdown .theme-text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    height: 6px;
+    margin: auto 0;
+    background-image: url('../../icons/icon-angle-down.svg');
+    background-size: 12px 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateX(0deg);
+    transition: transform 0.3s;
+    pointer-events: none;
+  }
+
+  .mobile-theme-dropdown.active .theme-text::before {
+    transform: rotateX(-180deg);
+  }
+  
   .mobile-theme-dropdown .theme-text:focus {
     outline: none;
   }
@@ -109,7 +129,7 @@
     transition: max-height 0.3s ease;
   }
 
-  .mobile-theme-dropdown .theme-list.active {
+  .mobile-theme-dropdown.active .theme-list {
     max-height: 300px;
     border: 1.4px solid #dedede;
     background-color: #f2f4f6;
@@ -140,11 +160,14 @@
   .mobile-theme-dropdown[data-theme="space-wonders"] .theme-text {
     border-color: rgba(255, 255, 255, 0.20);
     background-color: #171717;
-    background-image: url('../../icons/icon-angle-down_white.svg');
     color: #d1d1d1;
   }
 
-  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-list.active {
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-text::before {
+    background-image: url('../../icons/icon-angle-down_white.svg');
+  }
+
+  .mobile-theme-dropdown[data-theme="space-wonders"].active .theme-list {
     background-color: #171717;
     border-color: rgba(255, 255, 255, 0.20);
   }
