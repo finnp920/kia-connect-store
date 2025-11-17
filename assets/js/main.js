@@ -622,6 +622,9 @@ function handleOptionSelect(themeId) {
   updateCreditText(theme);
   updateMobileDropdown();
 
+  // Sticky 요소로 스크롤 이동
+  scrollToThemeSelector();
+
   themeNames = theme.themeNames;
   currentSlide = 1; // 클론 때문에 1로 리셋
   updateCarousel(true);
@@ -911,6 +914,20 @@ function formatPrice(price) {
 
 function showError(message) {
   console.error(message);
+}
+
+function scrollToThemeSelector() {
+  // sticky-wrapper로 스크롤 이동
+  const stickyWrapper = document.querySelector('.sticky-wrapper');
+
+  if (stickyWrapper) {
+    // 요소의 top 위치로 smooth 스크롤
+    const elementPosition = stickyWrapper.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementPosition - 10, // 약간의 마진
+      behavior: 'smooth',
+    });
+  }
 }
 
 // Accessibility - keyboard navigation

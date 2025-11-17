@@ -253,7 +253,6 @@ section.playful {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  z-index: 10;
 }
 
 .feature-text h3 {
