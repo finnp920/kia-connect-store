@@ -924,7 +924,7 @@ function scrollToThemeSelector() {
     // 요소의 top 위치로 smooth 스크롤
     const elementPosition = stickyWrapper.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
-      top: elementPosition - 10, // 약간의 마진
+      top: elementPosition,
       behavior: 'smooth',
     });
   }
