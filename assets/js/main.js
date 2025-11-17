@@ -300,7 +300,11 @@ function updateMobileDropdown() {
   if (mobileThemeSelect) {
     const theme = themeData[currentTheme];
     if (theme) {
-      mobileThemeSelect.textContent = theme.fullName || theme.name;
+      let displayName = theme.name || theme.fullName;
+      if (displayName && displayName.endsWith('Display Themes')) {
+        displayName = displayName.replace(/\s*Display Themes$/, '');
+      }
+      mobileThemeSelect.textContent = displayName;
     }
   }
   if (mobileThemeBox) {
