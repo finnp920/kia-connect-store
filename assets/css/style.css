@@ -1,0 +1,26 @@
+/* @import 규칙은 CSS 파일의 맨 처음에 와야 합니다.
+  모든 CSS 파일을 이 파일 하나로 통합합니다.
+*/
+
+/* 1. 공통/기본 스타일 */
+@import url('./fonts.css');
+@import url('./variables.css');
+@import url('./common.css');
+@import url('./buttons.css');
+@import url('./gnb.css');
+@import url('./footer.css');
+@import url('./info-sticky.css');
+
+/* 2. 'details' 페이지 관련 스타일 */
+@import url('./details/product.css');
+@import url('./details/key_visual.css');
+@import url('./details/themes.css');
+@import url('./details/playful.css');
+@import url('./details/reasons.css');
+@import url('./details/credit.css');
+
+/* 3. 'section' 스타일 */
+@import url('./section/info.css');
+@import url('./section/upgrade_guides.css');
+@import url('./section/disclaimer.css');
+@import url('./section/related_feature.css');
