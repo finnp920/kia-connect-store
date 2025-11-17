@@ -453,7 +453,7 @@ function updateReasonImages(theme) {
   const reasonImages = [
     {
       id: 'reasonCardImage1',
-      pc: theme.kvImages?.[0] || 'assets/images/details/img_bc_hero.png',
+      pc: 'assets/images/details/reasons-babycreatures.png',
       mobile: 'assets/images/details/mobile-reason-1.png',
     },
     {
