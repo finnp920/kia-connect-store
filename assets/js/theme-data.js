@@ -10,16 +10,7 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-baby-animals-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_1.png',
     themeNames: ['baby-animals', 'space-wonders', 'landscape'],
-    kvImages: [
-      'assets/images/details/img_bc_hero.png',
-      'assets/images/details/img_sw_hero.png',
-      'assets/images/details/img_ls_hero.png',
-    ],
-    mobileKvImages: [
-      'assets/images/details/img_bc_hero_mo.png',
-      'assets/images/details/img_sw_hero_mo.png',
-      'assets/images/details/img_ls_hero_mo.png',
-    ],
+    kv: ['bc', 'sw', 'ls'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
@@ -28,12 +19,6 @@ const themeData = {
       'assets/images/details/img_disc_video_mo.png',
       'assets/images/details/img_disc_video_mo.png',
     ],
-    kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
-    mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
-    kvSubtitle:
-      'Personalize your dashboard with National Geographic themes that will inspire your drive.',
-    mobileKvSubtitle:
-      'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
       cluster: 'assets/images/details/img_bc_detail_01.png',
       welcome: 'assets/images/details/img_bc_detail_02.png',
@@ -156,16 +141,7 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-space-wonders-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_2.png',
     themeNames: ['space-wonders', 'landscape', 'baby-animals'],
-    kvImages: [
-      'assets/images/details/img_sw_hero.png',
-      'assets/images/details/img_ls_hero.png',
-      'assets/images/details/img_bc_hero.png',
-    ],
-    mobileKvImages: [
-      'assets/images/details/img_sw_hero_mo.png',
-      'assets/images/details/img_ls_hero_mo.png',
-      'assets/images/details/img_bc_hero_mo.png',
-    ],
+    kv: ['sw', 'ls', 'bc'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
@@ -174,12 +150,6 @@ const themeData = {
       'assets/images/details/img_disc_video_mo.png',
       'assets/images/details/img_disc_video_mo.png',
     ],
-    kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
-    mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
-    kvSubtitle:
-      'Personalize your dashboard with National Geographic themes that will inspire your drive.',
-    mobileKvSubtitle:
-      'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
       cluster: 'assets/images/details/img_sw_detail_01.png',
       welcome: 'assets/images/details/img_sw_detail_02.png',
@@ -300,16 +270,7 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-landscape-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_3.png',
     themeNames: ['landscape', 'baby-animals', 'space-wonders'],
-    kvImages: [
-      'assets/images/details/img_ls_hero.png',
-      'assets/images/details/img_bc_hero.png',
-      'assets/images/details/img_sw_hero.png',
-    ],
-    mobileKvImages: [
-      'assets/images/details/img_ls_hero_mo.png',
-      'assets/images/details/img_bc_hero_mo.png',
-      'assets/images/details/img_sw_hero_mo.png',
-    ],
+    kv: ['ls', 'bc', 'sw'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
@@ -318,12 +279,6 @@ const themeData = {
       'assets/images/details/img_disc_video_mo.png',
       'assets/images/details/img_disc_video_mo.png',
     ],
-    kvTitle: 'Dive into Wonder\nwith National Geographic in your Kia!',
-    mobileKvTitle: 'Dive into Wonder with\nNational Geographic\nin your Kia!',
-    kvSubtitle:
-      'Personalize your dashboard with National Geographic themes that will inspire your drive.',
-    mobileKvSubtitle:
-      'Personalize your dashboard with National\nGeographic themes that will inspire your drive.',
     previewImages: {
       cluster: 'assets/images/details/img_ls_detail_01.png',
       welcome: 'assets/images/details/img_ls_detail_02.png',

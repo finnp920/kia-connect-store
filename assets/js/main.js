@@ -127,61 +127,76 @@ function updateOptionList() {
 }
 
 function updateKVSection(theme) {
-  const kvTitle = document.getElementById('kvTitle');
-  const kvSubtitle = document.getElementById('kvSubtitle');
+  const slidesContainer = document.querySelector('#kvCarousel .kv-slides');
 
-  // 모바일 여부 확인
-  const isMobile = window.innerWidth <= 769;
+  // 0. 컨테이너가 없거나 배열이 비어있으면 종료
+  if (!slidesContainer) {
+    console.error(`Error: Container "${containerSelector}" not found.`);
+    return;
+  }
 
-  // 모바일이면 mobileKvTitle/mobileKvSubtitle 사용, 없으면 기본값 사용
-  const titleText =
-    isMobile && theme.mobileKvTitle ? theme.mobileKvTitle : theme.kvTitle;
-  const subtitleText =
-    isMobile && theme.mobileKvSubtitle
-      ? theme.mobileKvSubtitle
-      : theme.kvSubtitle;
+  const themesArray = theme.kv;
+  if (!themesArray || themesArray.length === 0) {
+    slidesContainer.innerHTML = ''; // 배열이 비어있으면 내용도 비움
+    console.warn('Themes array is empty. No slides created.');
+    return;
+  }
+  realSlideCount = themesArray.length;
 
-  if (kvTitle) kvTitle.innerHTML = titleText.replace(/\n/g, '<br>');
-  if (kvSubtitle) kvSubtitle.innerHTML = subtitleText.replace(/\n/g, '<br>');
+  // --- 1. (Cleanup) 기존에 생성된 복제본(clone)이 있다면 먼저 제거 ---
+  // (복제본 식별을 위해 '.kv-slide--clone' 클래스를 사용합니다)
+  slidesContainer.querySelectorAll('.kv-slide--clone').forEach((clone) => {
+    clone.remove();
+  });
 
-  // 테마에 따라 body에 data-theme 속성 설정
-  document.body.setAttribute('data-theme', theme.id);
-
-  // 사용할 이미지 배열 결정 (모바일이면 mobile-kv 이미지, PC면 기본 kv 이미지)
-  const kvImages =
-    isMobile && theme.mobileKvImages ? theme.mobileKvImages : theme.kvImages;
-
-  // 클론을 제외한 원본 슬라이드만 선택
-  const kvSlides = document.querySelectorAll('.kv-slide:not(.clone)');
-  kvSlides.forEach((slide, index) => {
-    const img = slide.querySelector('img[data-role="kv-shot"]');
-    if (img && kvImages?.[index]) {
-      img.src = kvImages[index];
+  // --- 2. (Indexing) 현재 남아있는 *원본* DOM 요소들을 Map에 저장 ---
+  const slideElementMap = new Map();
+  slidesContainer.querySelectorAll('.kv-slide').forEach((slide) => {
+    // (이제 '.kv-slide--clone'이 없으므로 모두 원본입니다)
+    const theme = slide.dataset.theme;
+    if (theme) {
+      slideElementMap.set(theme, slide);
     }
   });
 
-  // 클론 슬라이드도 업데이트 (무한 스크롤을 위해)
-  const slidesContainer = document.querySelector('.kv-slides');
-  if (slidesContainer) {
-    const allSlides = slidesContainer.querySelectorAll('.kv-slide');
-    const clones = Array.from(allSlides).filter((s) =>
-      s.classList.contains('clone')
-    );
+  // --- 3. (Re-order) 깜빡임 없이 순서 재배치 ---
+  // [핵심] innerHTML = ''를 사용하지 않습니다.
+  // append()는 요소가 이미 DOM에 존재하면, 그 요소를 현재 위치에서
+  // 컨테이너의 '맨 뒤'로 '이동'시킵니다.
+  themesArray.forEach((themeName) => {
+    const originalSlideElement = slideElementMap.get(themeName);
 
-    clones.forEach((clone) => {
-      const img = clone.querySelector('img[data-role="kv-shot"]');
-      if (img) {
-        // 첫 번째 클론(마지막 슬라이드의 복사본)
-        if (clone === allSlides[0]) {
-          img.src = kvImages[kvImages.length - 1] || kvImages[0];
-        }
-        // 마지막 클론(첫 번째 슬라이드의 복사본)
-        else if (clone === allSlides[allSlides.length - 1]) {
-          img.src = kvImages[0];
-        }
-      }
-    });
+    if (originalSlideElement) {
+      // 배열 순서대로 요소를 컨테이너의 맨 뒤로 계속 이동시키면,
+      // 최종적으로 컨테이너는 배열의 순서를 갖게 됩니다.
+      slidesContainer.append(originalSlideElement);
+    } else {
+      console.warn(
+        `Slide for theme "${themeName}" not found in original HTML.`
+      );
+    }
+  });
+
+  // --- 4. (Cloning) 재배치된 순서 기준으로 무한 루프 설정 ---
+  const firstSlide = slidesContainer.firstElementChild;
+  const lastSlide = slidesContainer.lastElementChild;
+
+  if (!firstSlide || !lastSlide) {
+    console.warn('No slides to create loop from.');
+    return;
   }
+
+  const lastSlideClone = lastSlide.cloneNode(true);
+  const firstSlideClone = firstSlide.cloneNode(true);
+
+  // [중요] 나중에 이 함수가 다시 실행될 때 식별할 수 있도록
+  // 복제본에 클래스를 추가합니다.
+  lastSlideClone.classList.add('kv-slide--clone');
+  firstSlideClone.classList.add('kv-slide--clone');
+
+  // 앞뒤로 삽입
+  slidesContainer.prepend(lastSlideClone);
+  slidesContainer.append(firstSlideClone);
 }
 
 function updatePreviewImages(theme) {
@@ -541,10 +556,12 @@ function setupEventListeners() {
     });
 
   // 모바일 드롭다운 이벤트 (커스텀 셀렉트 박스)
-  const mobileThemeBox = document.querySelector('.mobile-theme-dropdown')
+  const mobileThemeBox = document.querySelector('.mobile-theme-dropdown');
   const mobileThemeSelect = document.getElementById('mobileThemeSelect');
-  const mobileThemeList = document.querySelector('.mobile-theme-dropdown .theme-list');
-  
+  const mobileThemeList = document.querySelector(
+    '.mobile-theme-dropdown .theme-list'
+  );
+
   if (mobileThemeSelect && mobileThemeList && mobileThemeBox) {
     // 셀렉트 버튼 클릭 시 mobile-theme-dropdown에 active 토글
     mobileThemeSelect.addEventListener('click', (e) => {
@@ -677,7 +694,7 @@ function handleResize() {
 // Carousel
 // ----------------------------------------
 function initCarousel() {
-  setupInfiniteSlides();
+  updateCarousel(true);
   startCarouselAutoPlay();
 
   const carousel = document.getElementById('kvCarousel');
@@ -689,30 +706,9 @@ function initCarousel() {
   setupCarouselTouchSupport();
 }
 
-function setupInfiniteSlides() {
-  const slidesContainer = document.querySelector('.kv-slides');
-  if (!slidesContainer) return;
-
-  const slides = Array.from(slidesContainer.querySelectorAll('.kv-slide'));
-  realSlideCount = slides.length;
-
-  // 마지막 슬라이드 클론을 맨 앞에 추가
-  const lastClone = slides[slides.length - 1].cloneNode(true);
-  lastClone.classList.add('clone');
-  slidesContainer.insertBefore(lastClone, slides[0]);
-
-  // 첫 번째 슬라이드 클론을 맨 뒤에 추가
-  const firstClone = slides[0].cloneNode(true);
-  firstClone.classList.add('clone');
-  slidesContainer.appendChild(firstClone);
-
-  // 초기 위치 설정 (클론을 건너뛰고 첫 번째 실제 슬라이드)
-  updateCarousel(true);
-}
-
 function startCarouselAutoPlay() {
   stopCarouselAutoPlay();
-  carouselInterval = setInterval(() => navigateCarousel('next'), 3000);
+  // carouselInterval = setInterval(() => navigateCarousel('next'), 3000);
 }
 
 function stopCarouselAutoPlay() {
@@ -926,7 +922,8 @@ function scrollToThemeSelector() {
 
   if (stickyWrapper) {
     // 요소의 top 위치로 smooth 스크롤
-    const elementPosition = stickyWrapper.getBoundingClientRect().top + window.scrollY;
+    const elementPosition =
+      stickyWrapper.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: elementPosition,
       behavior: 'smooth',

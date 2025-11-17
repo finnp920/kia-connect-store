@@ -43,7 +43,7 @@ section.kv {
   max-width: 1920px;
 }
 
-.kv-slide img {
+.kv-slide img.kv-image {
   aspect-ratio: 160 / 73;
 }
 
@@ -152,12 +152,16 @@ section.kv {
 }
 
 /* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
-section.kv[data-theme='space-wonders'] .kv-main-title,
-section.kv[data-theme='space-wonders'] .kv-subtitle {
+.kv-slide[data-theme='sw'] .kv-main-title,
+.kv-slide[data-theme='sw'] .kv-subtitle {
   color: #ffffff;
 }
-section.kv[data-theme='space-wonders'] .kv-logo {
-  background-image: url('../../images/logos/logo-national-geographic.png');
+
+section.kv .view-pc {
+  display: block;
+}
+section.kv .view-mo {
+  display: none;
 }
 
 @media screen and (max-width: 1240px) {
@@ -165,22 +169,18 @@ section.kv[data-theme='space-wonders'] .kv-logo {
     font-size: 42px;
   }
 }
-
-@media screen and (max-width: 900px) {
-  .kv-main-title {
-    font-size: 38px;
+@media screen and (max-width: 1024px) {
+  section.kv .view-pc {
+    display: none;
   }
-}
-
-@media screen and (max-width: 769px) {
-  .kv-content {
-    padding: 0;
+  section.kv .view-mo {
+    display: block;
   }
-  .kv-main-title {
-    font-size: 30px;
-  }
-  .kv-subtitle {
-    font-size: 14px;
+  .kv-slide img.kv-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 36 / 53;
+    object-fit: cover;
   }
 
   .kv-carousel {
@@ -192,17 +192,8 @@ section.kv[data-theme='space-wonders'] .kv-logo {
   .kv-indicators {
     bottom: 28px;
   }
-  .kv-slide {
-    padding-right: 0;
-  }
   .kv-title {
     top: 100px;
-  }
-  .kv-slide img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 36 / 53;
-    object-fit: cover;
   }
   .kv-logo {
     top: 35px;
@@ -213,6 +204,19 @@ section.kv[data-theme='space-wonders'] .kv-logo {
   .kv-copyright {
     bottom: 12px;
     font-size: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .kv-main-title {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .kv-main-title {
+    font-size: 30px;
+  }
+  .kv-subtitle {
+    font-size: 14px;
   }
 }
 
