@@ -71,34 +71,94 @@
     padding: 16px 20px;
     backdrop-filter: blur(3px);
   }
-  .mobile-theme-dropdown select {
-    position: relative;
+  .mobile-theme-dropdown .theme-text {
     width: 100%;
+    padding: 14px 18px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: -0.28px;
     color: #05141f;
-    border: 1.4px solid #dedede;
+    border: 1.4px solid #DEDEDE;
     border-radius: 4px;
-    appearance: none;
+    background-color: #f2f4f6;
     background-image: url('../../icons/icon-angle-down.svg');
     background-repeat: no-repeat;
     background-position: right 18px center;
-    background-color: #f2f4f6;
-    padding: 14px 48px 14px 18px;
+    background-size: 13px;
     cursor: pointer;
-    backdrop-filter: blur(3px);
+    text-align: left;
+    padding-right: 48px;
+    -webkit-tap-highlight-color: transparent;
   }
-  .mobile-theme-dropdown select::before {
-    content: '';
-  }
-  .mobile-theme-dropdown select:focus {
+
+  .mobile-theme-dropdown .theme-text:focus {
     outline: none;
-    border-color: black;
   }
-  .mobile-theme-dropdown select option {
+
+  .mobile-theme-dropdown .theme-list {
+    position: absolute;
+    top: calc(100% - 17px);
+    left: 20px;
+    right: 20px;
+    list-style: none;
+    max-height: 0;
+    border: 1.4px solid transparent;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-theme-dropdown .theme-list.active {
+    max-height: 300px;
+    border: 1.4px solid #dedede;
     background-color: #f2f4f6;
+  }
+
+  .mobile-theme-dropdown .theme-list li {
+    padding: 12px 18px;
+    font-size: 14px;
     color: #05141f;
-    padding: 12px;
+    cursor: pointer;
+    background-color: #f2f4f6;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-theme-dropdown .theme-list li:first-child {
+    border-radius: 4px 4px 0 0;
+    border-top: none;
+  }
+
+  .mobile-theme-dropdown .theme-list li:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .mobile-theme-dropdown .theme-list li:hover {
+    background-color: #e8e8e8;
+  }
+
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-text {
+    border-color: rgba(255, 255, 255, 0.20);
+    background-color: #171717;
+    background-image: url('../../icons/icon-angle-down_white.svg');
+    color: #d1d1d1;
+  }
+
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-list.active {
+    background-color: #171717;
+    border-color: rgba(255, 255, 255, 0.20);
+  }
+  
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-list li {
+    background-color: #171717;
+    color: #d1d1d1;
+  }
+
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-list li:first-child {
+    border-top: none;
+  }
+
+  .mobile-theme-dropdown[data-theme="space-wonders"] .theme-list li:hover {
+    background-color: #222;
   }
 }

@@ -296,8 +296,15 @@ function updateSectionThemesBackground() {
 
 function updateMobileDropdown() {
   const mobileThemeSelect = document.getElementById('mobileThemeSelect');
+  const mobileThemeBox = document.querySelector('.mobile-theme-dropdown');
   if (mobileThemeSelect) {
-    mobileThemeSelect.value = currentTheme;
+    const theme = themeData[currentTheme];
+    if (theme) {
+      mobileThemeSelect.textContent = theme.fullName || theme.name;
+    }
+  }
+  if (mobileThemeBox) {
+    mobileThemeBox.setAttribute('data-theme', currentTheme);
   }
 }
 
@@ -529,13 +536,39 @@ function setupEventListeners() {
       );
     });
 
-  // 모바일 드롭다운 이벤트
+  // 모바일 드롭다운 이벤트 (커스텀 셀렉트 박스)
+  const mobileThemeBox = document.querySelector('.mobile-theme-dropdown')
   const mobileThemeSelect = document.getElementById('mobileThemeSelect');
-  if (mobileThemeSelect) {
-    mobileThemeSelect.addEventListener('change', (e) => {
-      handleOptionSelect(e.target.value);
+  const mobileThemeList = document.querySelector('.mobile-theme-dropdown .theme-list');
+  
+  if (mobileThemeSelect && mobileThemeList) {
+    // 셀렉트 버튼 클릭 시 리스트 토글
+    mobileThemeSelect.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileThemeList.classList.toggle('active');
+    });
+
+    // 리스트 항목 클릭 시
+    const themeItems = mobileThemeList.querySelectorAll('li');
+    themeItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const themeValue = item.getAttribute('value');
+        mobileThemeSelect.textContent = item.textContent;
+        mobileThemeList.classList.remove('active');
+        if (mobileThemeBox) {
+          mobileThemeBox.setAttribute('data-theme', themeValue);
+        }
+        handleOptionSelect(themeValue);
+      });
     });
   }
+
+  // 외부 클릭 시 리스트 닫기
+  document.addEventListener('click', (e) => {
+    if (mobileThemeList && !e.target.closest('.mobile-theme-dropdown')) {
+      mobileThemeList.classList.remove('active');
+    }
+  });
 
   const btnLike = document.getElementById('btnLike');
   if (btnLike) btnLike.addEventListener('click', handleLikeClick);
