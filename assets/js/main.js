@@ -257,7 +257,7 @@ function updateThemeSelectors() {
 }
 
 function updateSectionThemesBackground() {
-  const sectionThemes = document.querySelector('.section-themes');
+  const sectionThemes = document.querySelector('section.themes');
   if (sectionThemes) {
     // 모든 테마 클래스 제거
     sectionThemes.classList.remove(
@@ -269,7 +269,7 @@ function updateSectionThemesBackground() {
     sectionThemes.classList.add(`theme-${currentTheme}`);
   }
 
-  const sectionPlayful = document.querySelector('.section-playful');
+  const sectionPlayful = document.querySelector('section#playful');
   if (sectionPlayful) {
     // 모든 테마 클래스 제거
     sectionPlayful.classList.remove(
@@ -746,7 +746,7 @@ function updateCarousel(noTransition = false) {
     indicator.classList.toggle('active', index === realIndex);
   });
 
-  const kvSectionElement = document.querySelector('section.section-kv');
+  const kvSectionElement = document.querySelector('section#kv');
   if (kvSectionElement) {
     kvSectionElement.dataset.theme = themeNames[realIndex];
   }

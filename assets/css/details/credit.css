@@ -1,7 +1,7 @@
 /* ========================================
    Detail Section > Credit
    ======================================== */
-.section-credit {
+section.credit {
   position: relative;
   background-color: black;
   color: var(--color-white);

@@ -2,7 +2,7 @@
    Detail Section > The Reasons Why You Can't Miss Out
    ======================================== */
 
-.section-reasons {
+section.reasons {
   position: relative;
   background-color: #272727;
   color: var(--color-white);

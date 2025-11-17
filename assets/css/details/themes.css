@@ -1,7 +1,7 @@
 /* ========================================
    Detail Section > Display Themes List
    ======================================== */
-.section-themes {
+section.themes {
   background-color: var(--color-white);
   transition: background-color 0.3s ease;
 }
@@ -39,6 +39,7 @@
   background: linear-gradient(174deg, #3f3e3e -1.07%, #111 96.73%);
   border-top: 6px solid #ffcc00;
   margin-bottom: 0;
+  z-index: 1;
 }
 
 .themes-stage::after {
@@ -165,198 +166,13 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-.mobile-theme-dropdown {
-  display: none;
-}
-
-.theme-header-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.theme-header-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  z-index: 0;
-  pointer-events: none;
-  aspect-ratio: 1920 / 857;
-  transition: background-image 0.5s ease-in-out;
-}
-
-.theme-header-wrapper::before {
-  top: -75px;
-  height: calc(100% + 75px);
-}
-
-.theme-header-wrapper.theme-baby-animals::before {
-  background-image: url('../../images/details/img_bc_detail_bg.png');
-}
-
-.theme-header-wrapper::before {
-  background-color: black;
-  background-image: url('../../images/details/img_sw_detail_bg.png');
-}
-
-.theme-header-wrapper.theme-landscape::before {
-  background-image: url('../../images/details/img_ls_detail_bg.png');
-}
-
-.theme-selectors {
-  position: sticky;
-  top: 65px;
-  max-width: 1634px;
-  margin: 75px auto 28px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  flex-wrap: wrap;
-  -webkit-tap-highlight-color: transparent;
-  z-index: 3;
-  backdrop-filter: blur(3px);
-}
-
-.themes-preview {
-  position: relative;
-  z-index: 1;
-  padding: 0 0 80px;
-}
-
-.theme-selector {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 0 16px 0 12px;
-  height: 43px;
-  border-radius: 999px;
-  background: #f2f4f6;
-  color: #666666;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.32px;
-  cursor: pointer;
-}
-.theme-selector .selector-icon {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  background-image: url('../../icons/icon_circle_unchecked.svg');
-}
-
-.theme-selector.selected {
-  background-color: #ffcc00;
-  color: #05141f;
-}
-.theme-selector.selected .selector-icon {
-  background-image: url('../../icons/icon_circle_checked.svg');
-}
-
-/* Screenshot Preview Grid */
-.themes-preview {
-  padding: 0 0 80px;
-}
-
-.themes-preview-grid {
-  max-width: 1634px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 528px 514px 528px;
-  gap: 12px;
-  align-items: end;
-}
-
-.preview-column {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.preview-column-left {
-  align-self: end;
-}
-
-.preview-column-center {
-  align-self: end;
-}
-
-.preview-column-right {
-  align-self: start;
-}
-
-.preview-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.preview-item:before {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-  z-index: 2;
-}
-.preview-column-center .preview-item img {
-  aspect-ratio: 514 / 525;
-}
-
-.preview-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 533 / 258;
-  position: relative;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.preview-label {
-  position: absolute;
-  bottom: 25px;
-  right: 20px;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  white-space: nowrap;
-  color: #fff;
-  text-align: right;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.48px;
-  z-index: 3;
-}
-
-@media screen and (max-width: 1634px) {
-  .themes-preview-grid {
-    grid-template-columns: 33% 32% 33%;
-  }
-}
-
 @media screen and (max-width: 1240px) {
   .themes-cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .themes-preview-grid {
-    grid-template-columns: 32.5% 32% 32.5%;
-  }
 }
 
 @media screen and (max-width: 769px) {
-  .theme-header-wrapper::before {
-    background-size: contain;
-  }
   .themes-header {
     width: 100%;
     padding: 40px 20px;
@@ -425,82 +241,5 @@
     left: calc(50% - 48px / 2);
     bottom: -24px;
     background-image: url('../../icons/theme-stage-after-mobile.svg');
-  }
-
-  .theme-selectors {
-    display: none;
-  }
-  .mobile-theme-dropdown {
-    position: sticky;
-    z-index: 3;
-    top: 56px;
-    display: block !important;
-    margin: 32px 0 24px;
-    padding: 16px 20px;
-    backdrop-filter: blur(3px);
-  }
-
-  .mobile-theme-dropdown select {
-    position: relative;
-    width: 100%;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: -0.28px;
-    color: #05141f;
-    border: 1.4px solid #dedede;
-    border-radius: 4px;
-    appearance: none;
-    background-image: url('../../icons/icon-angle-down.svg');
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    background-color: #f2f4f6;
-    padding: 14px 48px 14px 18px;
-    cursor: pointer;
-    backdrop-filter: blur(3px);
-  }
-  .mobile-theme-dropdown select::before {
-    content: '';
-  }
-  .mobile-theme-dropdown select:focus {
-    outline: none;
-    border-color: black;
-  }
-  .mobile-theme-dropdown select option {
-    background-color: #f2f4f6;
-    color: #05141f;
-    padding: 12px;
-  }
-
-  .themes-preview {
-    padding-bottom: 64px;
-  }
-  .themes-preview-grid {
-    grid-template-columns: none;
-  }
-  .preview-column,
-  .themes-preview-grid {
-    gap: 24px;
-  }
-  .preview-label {
-    z-index: 10;
-    left: 16px;
-    bottom: 12px;
-    right: auto;
-    font-size: 18px;
-  }
-  .preview-item img {
-    aspect-ratio: 533 / 332 !important;
-  }
-
-  .theme-header-wrapper.theme-space-wonders::before {
-    top: -135px;
-    height: calc(100% + 135px);
-  }
-  .section-themes.theme-space-wonders .mobile-theme-dropdown select {
-    border-color: rgba(255, 255, 255, 0.2);
-    background-color: #171717;
-    backdrop-filter: blur(3px);
-    background-image: url('../../icons/icon-angle-down_white.svg');
-    color: #d1d1d1;
   }
 }

@@ -91,7 +91,7 @@
 
     <main>
       <!-- Detail Section > Product -->
-      <section class="section section-product">
+      <section class="product">
         <div class="section-inner">
           <!-- Product Thumbnail -->
           <div class="product-thumbnail">
@@ -226,7 +226,7 @@
       <!-- Detail Section > Product -->
 
       <!-- Detail Section >  KV (Key Visual) -->
-      <section class="section section-kv">
+      <section class="kv" id="kv">
         <div class="kv-content">
           <!-- KV Carousel -->
           <div class="kv-carousel" id="kvCarousel">
@@ -302,7 +302,7 @@
       <!-- Detail Section >  KV (Key Visual) -->
 
       <!-- Detail Section > Display Themes List -->
-      <section class="section section-themes">
+      <section class="themes">
         <div class="themes-header">
           <h2 class="themes-title">Available Display Themes</h2>
           <p class="themes-subtitle">
@@ -310,7 +310,6 @@
             the delightful changes to your screen!
           </p>
         </div>
-
         <div class="themes-stage">
           <div class="themes-stage-inner">
             <div class="themes-cards">
@@ -396,7 +395,10 @@
             </div>
           </div>
         </div>
+      </section>
 
+      <!-- Sticky Wrapper -->
+      <div class="sticky-wrapper">
         <!-- Mobile Theme Dropdown -->
         <div class="mobile-theme-dropdown">
           <select id="mobileThemeSelect">
@@ -409,557 +411,560 @@
             <option value="landscape">National Geographic Landscape</option>
           </select>
         </div>
-
-        <div class="theme-header-wrapper theme-baby-animals">
-          <!-- Theme Selectors (PC only) -->
-          <div class="theme-selectors">
-            <div class="theme-selector selected" data-theme="baby-animals">
-              <div class="selector-icon"></div>
-              National Geographic Baby Animals
-            </div>
-            <div class="theme-selector" data-theme="space-wonders">
-              <div class="selector-icon"></div>
-              National Geographic Space Wonders
-            </div>
-            <div class="theme-selector" data-theme="landscape">
-              <div class="selector-icon"></div>
-              National Geographic Landscape
-            </div>
+        <!-- Mobile Theme Dropdown -->
+        <!-- Theme Selectors (PC only) -->
+        <div class="theme-selectors">
+          <div class="theme-selector selected" data-theme="baby-animals">
+            <div class="selector-icon"></div>
+            National Geographic Baby Animals
           </div>
-
-          <!-- Screenshot Grid -->
-          <div class="themes-preview">
-            <div class="themes-preview-grid">
-              <!-- Left Column (2 items) -->
-              <div class="preview-column preview-column-left">
-                <div class="preview-item">
-                  <img
-                    id="previewCluster"
-                    src="assets/images/details/img_bc_detail_01.png"
-                    alt="Cluster"
-                    loading="lazy"
-                  />
-                  <span class="preview-label" id="previewClusterLabel">
-                    Cluster
-                  </span>
-                </div>
-                <div class="preview-item">
-                  <img
-                    id="previewWelcome"
-                    src="assets/images/details/img_bc_detail_02.png"
-                    alt="Welcome Message"
-                    loading="lazy"
-                  />
-                  <span class="preview-label" id="previewWelcomeLabel">
-                    Welcome Message
-                  </span>
-                </div>
-              </div>
-
-              <!-- Center Column (1 item) -->
-              <div class="preview-column preview-column-center">
-                <div class="preview-item">
-                  <img
-                    id="previewHomecard"
-                    src="assets/images/details/img_bc_detail_03.png"
-                    alt="Homecard"
-                    loading="lazy"
-                  />
-                  <span class="preview-label" id="previewHomecardLabel">
-                    Homecard
-                  </span>
-                </div>
-              </div>
-
-              <!-- Right Column (2 items) -->
-              <div class="preview-column preview-column-right">
-                <div class="preview-item">
-                  <img
-                    id="previewNavigation"
-                    src="assets/images/details/img_bc_detail_04.png"
-                    alt="Navigation"
-                    loading="lazy"
-                  />
-                  <span class="preview-label" id="previewNavigationLabel">
-                    Navigation
-                  </span>
-                </div>
-                <div class="preview-item">
-                  <img
-                    id="previewGoodbye"
-                    src="assets/images/details/img_bc_detail_05.png"
-                    alt="Navigation"
-                    loading="lazy"
-                  />
-                  <span class="preview-label" id="previewGoodbyeLabel">
-                    Goodbye Video
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div class="theme-selector" data-theme="space-wonders">
+            <div class="selector-icon"></div>
+            National Geographic Space Wonders
+          </div>
+          <div class="theme-selector" data-theme="landscape">
+            <div class="selector-icon"></div>
+            National Geographic Landscape
           </div>
         </div>
-      </section>
-      <!-- Detail Section > Display Themes List -->
+        <!-- Theme Selectors (PC only) -->
 
-      <!-- Detail Section > Features & Details -->
-      <section class="section section-playful" id="discover">
-        <div class="playful-wrapper">
-          <h2 class="playful-title">
-            Discover <br class="mobile-br" />Playful Designs
-          </h2>
-          <div class="section-playful-inner">
-            <div class="playful-videos">
-              <!-- Welcome Video Area -->
-              <div class="playful-video-item" data-discover="welcome">
-                <img
-                  src="assets/images/details/img_disc_video.png"
-                  alt="Welcome video preview"
-                  loading="lazy"
-                  class="playful-video-bg"
-                />
-                <div class="playful-video-grid">
-                  <!-- Welcome Cluster Video -->
-                  <div
-                    class="playful-video-cell"
-                    data-video-type="welcome-cluster"
-                  >
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      preload="metadata"
-                    >
-                      <source src="" type="video/mp4" />
-                    </video>
-                    <div class="playful-video-overlay">
-                      <div class="playful-video-label">
-                        <span class="playful-label-type">Welcome</span>
-                        <span class="playful-label-device">Cluster</span>
-                      </div>
-                      <div class="playful-video-play">
-                        <img
-                          src="assets/icons/icon-play-button.png"
-                          alt="Play button"
-                        />
-                      </div>
-                    </div>
+        <!-- Detail Section > Screenshots -->
+        <section class="screenshot">
+          <div class="theme-header-wrapper theme-baby-animals">
+            <!-- Screenshot Grid -->
+            <div class="themes-preview">
+              <div class="themes-preview-grid">
+                <!-- Left Column (2 items) -->
+                <div class="preview-column preview-column-left">
+                  <div class="preview-item">
+                    <img
+                      id="previewCluster"
+                      src="assets/images/details/img_bc_detail_01.png"
+                      alt="Cluster"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewClusterLabel">
+                      Cluster
+                    </span>
                   </div>
-                  <!-- Welcome AVNT Video -->
-                  <div
-                    class="playful-video-cell"
-                    data-video-type="welcome-avnt"
-                  >
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      preload="metadata"
-                    >
-                      <source src="" type="video/mp4" />
-                    </video>
-                    <div class="playful-video-overlay">
-                      <div class="playful-video-label">
-                        <span class="playful-label-type">Welcome</span>
-                        <span class="playful-label-device">AVNT</span>
-                      </div>
-                      <div class="playful-video-play">
-                        <img
-                          src="assets/icons/icon-play-button.png"
-                          alt="Play button"
-                        />
-                      </div>
-                    </div>
+                  <div class="preview-item">
+                    <img
+                      id="previewWelcome"
+                      src="assets/images/details/img_bc_detail_02.png"
+                      alt="Welcome Message"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewWelcomeLabel">
+                      Welcome Message
+                    </span>
                   </div>
                 </div>
-              </div>
 
-              <!-- Goodbye Video Area -->
-              <div class="playful-video-item" data-discover="goodbye">
-                <img
-                  src="assets/images/details/img_disc_video.png"
-                  alt="Goodbye video preview"
-                  loading="lazy"
-                  class="playful-video-bg"
-                />
-                <div class="playful-video-grid">
-                  <!-- Goodbye Cluster Video -->
-                  <div
-                    class="playful-video-cell"
-                    data-video-type="goodbye-cluster"
-                  >
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      preload="metadata"
-                    >
-                      <source src="" type="video/mp4" />
-                    </video>
-                    <div class="playful-video-overlay">
-                      <div class="playful-video-label">
-                        <span class="playful-label-type">Goodbye</span>
-                        <span class="playful-label-device">Cluster</span>
-                      </div>
-                      <div class="playful-video-play">
-                        <img
-                          src="assets/icons/icon-play-button.png"
-                          alt="Play button"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Goodbye AVNT Video -->
-                  <div
-                    class="playful-video-cell"
-                    data-video-type="goodbye-avnt"
-                  >
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      preload="metadata"
-                    >
-                      <source src="" type="video/mp4" />
-                    </video>
-                    <div class="playful-video-overlay">
-                      <div class="playful-video-label">
-                        <span class="playful-label-type">Goodbye</span>
-                        <span class="playful-label-device">AVNT</span>
-                      </div>
-                      <div class="playful-video-play">
-                        <img
-                          src="assets/icons/icon-play-button.png"
-                          alt="Play button"
-                        />
-                      </div>
-                    </div>
+                <!-- Center Column (1 item) -->
+                <div class="preview-column preview-column-center">
+                  <div class="preview-item">
+                    <img
+                      id="previewHomecard"
+                      src="assets/images/details/img_bc_detail_03.png"
+                      alt="Homecard"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewHomecardLabel">
+                      Homecard
+                    </span>
                   </div>
                 </div>
-              </div>
 
-              <div class="playful-text-block">
-                <h3>Welcome &amp; Goodbye Video</h3>
-                <p>
-                  National Geographic themed motion graphics play once at
-                  start-up (from sleep mode) and shutdown.
-                </p>
+                <!-- Right Column (2 items) -->
+                <div class="preview-column preview-column-right">
+                  <div class="preview-item">
+                    <img
+                      id="previewNavigation"
+                      src="assets/images/details/img_bc_detail_04.png"
+                      alt="Navigation"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewNavigationLabel">
+                      Navigation
+                    </span>
+                  </div>
+                  <div class="preview-item">
+                    <img
+                      id="previewGoodbye"
+                      src="assets/images/details/img_bc_detail_05.png"
+                      alt="Navigation"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewGoodbyeLabel">
+                      Goodbye Video
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <figure class="playful-feature">
-              <div class="feature-media">
-                <img
-                  src="assets/images/details/discover-cluster.png"
-                  alt="Cluster preview"
-                  loading="lazy"
-                />
-                <div class="feature-text">
-                  <h3>Cluster</h3>
-                  <p>
-                    The selected National Geographic theme appears on the
-                    cluster with themed graphics and gauges.
-                  </p>
-                  <p class="feature-note">
-                    &#x203B; Depending on the vehicle model, the cluster screen
-                    design may differ from the image above.
-                  </p>
-                </div>
-              </div>
-            </figure>
-
-            <figure class="playful-feature">
-              <div class="feature-media">
-                <img
-                  src="assets/images/details/img_bc_disc_02.png"
-                  alt="Navigation preview"
-                  loading="lazy"
-                />
-                <div class="feature-text">
-                  <h3>Navigation</h3>
-                  <p>
-                    National Geographic photography highlights your current
-                    location during navigation.
-                  </p>
-                </div>
-              </div>
-            </figure>
-
-            <figure class="playful-feature">
-              <div class="feature-media">
-                <img
-                  src="assets/images/details/discover-homecard_1.png"
-                  alt="Homecard preview"
-                  loading="lazy"
-                />
-                <div class="feature-text">
-                  <h3>Homecard</h3>
-                  <p>
-                    National Geographic photographs appear across various menu
-                    screens.
-                  </p>
-                </div>
-              </div>
-            </figure>
-
-            <figure class="playful-feature">
-              <div class="feature-media">
-                <img
-                  src="assets/images/details/discover-profile_1.png"
-                  alt="Profile image selection"
-                  loading="lazy"
-                />
-                <div class="feature-text">
-                  <h3>Profile</h3>
-                  <p>
-                    Choose from National Geographic-themed profile
-                    images&mdash;choose a unique one for each driver.
-                  </p>
-                </div>
-              </div>
-            </figure>
           </div>
-        </div>
-      </section>
-      <!-- Detail Section > Features & Details -->
+        </section>
 
-      <!-- Detail Section > The Reasons Why You Can't Miss Out -->
-      <section class="section section-reasons">
-        <div class="section-reasons-inner">
-          <!-- Section Title -->
-          <div class="reasons-header">
-            <h2 class="reasons-title">
-              The Reasons<br />
-              Why You Can’t Miss Out
+        <!-- Detail Section > Discover Playful Designs -->
+        <section class="playful" id="playful">
+          <div class="playful-wrapper">
+            <h2 class="playful-title">
+              Discover <br class="mobile-br" />Playful Designs
             </h2>
-          </div>
-
-          <!-- Feature Cards -->
-          <div class="reasons-cards">
-            <!-- Card 1 -->
-            <div class="reason-card reason-card-left">
-              <div class="reason-image">
-                <img
-                  id="reasonCardImage1"
-                  src="assets/images/details/reasons-babycreatures.png"
-                  alt="Baby Animals theme preview"
-                  loading="lazy"
-                />
-              </div>
-              <div class="reason-content">
-                <div class="reason-header">
-                  <div class="reason-number">1</div>
-                  <h3 class="reason-title">
-                    The Delight of Baby<br class="v-pc" />
-                    Animals<br class="v-mo" />
-                    in Every Drive
-                  </h3>
+            <div class="section-playful-inner">
+              <div class="playful-videos">
+                <!-- Welcome Video Area -->
+                <div class="playful-video-item" data-discover="welcome">
+                  <img
+                    src="assets/images/details/img_disc_video.png"
+                    alt="Welcome video preview"
+                    loading="lazy"
+                    class="playful-video-bg"
+                  />
+                  <div class="playful-video-grid">
+                    <!-- Welcome Cluster Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="welcome-cluster"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Welcome</span>
+                          <span class="playful-label-device">Cluster</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Welcome AVNT Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="welcome-avnt"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Welcome</span>
+                          <span class="playful-label-device">AVNT</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p class="reason-description">
-                  National Geographic's Baby Animals theme<br class="v-mo" />
-                  turns every drive into an <br class="v-pc" />adventure.
-                </p>
+
+                <!-- Goodbye Video Area -->
+                <div class="playful-video-item" data-discover="goodbye">
+                  <img
+                    src="assets/images/details/img_disc_video.png"
+                    alt="Goodbye video preview"
+                    loading="lazy"
+                    class="playful-video-bg"
+                  />
+                  <div class="playful-video-grid">
+                    <!-- Goodbye Cluster Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="goodbye-cluster"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Goodbye</span>
+                          <span class="playful-label-device">Cluster</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Goodbye AVNT Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="goodbye-avnt"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Goodbye</span>
+                          <span class="playful-label-device">AVNT</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="playful-text-block">
+                  <h3>Welcome &amp; Goodbye Video</h3>
+                  <p>
+                    National Geographic themed motion graphics play once at
+                    start-up (from sleep mode) and shutdown.
+                  </p>
+                </div>
               </div>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
+                  <img
+                    src="assets/images/details/discover-cluster.png"
+                    alt="Cluster preview"
+                    loading="lazy"
+                  />
+                  <div class="feature-text">
+                    <h3>Cluster</h3>
+                    <p>
+                      The selected National Geographic theme appears on the
+                      cluster with themed graphics and gauges.
+                    </p>
+                    <p class="feature-note">
+                      &#x203B; Depending on the vehicle model, the cluster
+                      screen design may differ from the image above.
+                    </p>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
+                  <img
+                    src="assets/images/details/img_bc_disc_02.png"
+                    alt="Navigation preview"
+                    loading="lazy"
+                  />
+                  <div class="feature-text">
+                    <h3>Navigation</h3>
+                    <p>
+                      National Geographic photography highlights your current
+                      location during navigation.
+                    </p>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
+                  <img
+                    src="assets/images/details/discover-homecard_1.png"
+                    alt="Homecard preview"
+                    loading="lazy"
+                  />
+                  <div class="feature-text">
+                    <h3>Homecard</h3>
+                    <p>
+                      National Geographic photographs appear across various menu
+                      screens.
+                    </p>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
+                  <img
+                    src="assets/images/details/discover-profile_1.png"
+                    alt="Profile image selection"
+                    loading="lazy"
+                  />
+                  <div class="feature-text">
+                    <h3>Profile</h3>
+                    <p>
+                      Choose from National Geographic-themed profile
+                      images&mdash;choose a unique one for each driver.
+                    </p>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <!-- Detail Section > Discover Playful Designs -->
+
+        <!-- Detail Section > The Reasons Why You Can't Miss Out -->
+        <section class="reasons">
+          <div class="section-reasons-inner">
+            <!-- Section Title -->
+            <div class="reasons-header">
+              <h2 class="reasons-title">
+                The Reasons<br />
+                Why You Can’t Miss Out
+              </h2>
             </div>
 
-            <!-- Card 2 -->
-            <div class="reason-card reason-card-left">
-              <div class="reason-content">
-                <div class="reason-header">
-                  <div class="reason-number">2</div>
-                  <h3 class="reason-title">
-                    The Wonders of<br />
-                    the Expanding Universe
-                  </h3>
+            <!-- Feature Cards -->
+            <div class="reasons-cards">
+              <!-- Card 1 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage1"
+                    src="assets/images/details/reasons-babycreatures.png"
+                    alt="Baby Animals theme preview"
+                    loading="lazy"
+                  />
                 </div>
-                <p class="reason-description">
-                  National Geographic's Space Wonders<br class="v-mo" />
-                  theme turns every <br class="v-pc" />drive into a cosmic<br
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">1</div>
+                    <h3 class="reason-title">
+                      The Delight of Baby<br class="v-pc" />
+                      Animals<br class="v-mo" />
+                      in Every Drive
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Baby Animals theme<br class="v-mo" />
+                    turns every drive into an <br class="v-pc" />adventure.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">2</div>
+                    <h3 class="reason-title">
+                      The Wonders of<br />
+                      the Expanding Universe
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Space Wonders<br class="v-mo" />
+                    theme turns every <br class="v-pc" />drive into a cosmic<br
+                      class="v-mo"
+                    />
+                    journey filled with awe and discovery.
+                  </p>
+                </div>
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage2"
+                    src="assets/images/details/reasons-space-wonders.png"
+                    alt="Space Wonders theme preview"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage3"
+                    src="assets/images/details/reasons-landscape.png"
+                    alt="Landscape theme preview"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">3</div>
+                    <h3 class="reason-title">
+                      The Splendor of<br />
+                      Earth's Natural Landscapes
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Landscape theme<br class="v-mo" />
+                    captures <br class="v-pc" />the awe-inspiring beauty of
+                    our<br class="v-mo" />
+                    planet's most iconic sceneries.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">4</div>
+                    <h3 class="reason-title">
+                      Explore the World<br />
+                      Through Every Drive
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    With National Geographic display themes,<br
+                      class="v-pc v-mo"
+                    />every moment behind the wheel becomes<br class="v-mo" />
+                    a window to wonder.
+                  </p>
+                </div>
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage4"
+                    src="assets/images/details/reasons-car-display.png"
+                    alt="Car with National Geographic display"
+                    loading="lazy"
+                    class="v-pc"
+                  />
+                  <img
+                    id="reasonCardImage4_mo"
+                    src="assets/images/details/m_reasons-car-display.png"
+                    alt="Car with National Geographic display"
+                    loading="lazy"
                     class="v-mo"
                   />
-                  journey filled with awe and discovery.
-                </p>
-              </div>
-              <div class="reason-image">
-                <img
-                  id="reasonCardImage2"
-                  src="assets/images/details/reasons-space-wonders.png"
-                  alt="Space Wonders theme preview"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="reason-card reason-card-left">
-              <div class="reason-image">
-                <img
-                  id="reasonCardImage3"
-                  src="assets/images/details/reasons-landscape.png"
-                  alt="Landscape theme preview"
-                  loading="lazy"
-                />
-              </div>
-              <div class="reason-content">
-                <div class="reason-header">
-                  <div class="reason-number">3</div>
-                  <h3 class="reason-title">
-                    The Splendor of<br />
-                    Earth's Natural Landscapes
-                  </h3>
                 </div>
-                <p class="reason-description">
-                  National Geographic's Landscape theme<br class="v-mo" />
-                  captures <br class="v-pc" />the awe-inspiring beauty of our<br
-                    class="v-mo"
-                  />
-                  planet's most iconic sceneries.
+              </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="reasons-bottom">
+              <div class="reasons-video-container">
+                <img
+                  id="reasonsBannerImage"
+                  src="assets/images/details/kv-banner-reasons.png"
+                  alt="National Geographic Display Themes Preview"
+                  loading="lazy"
+                  class="reasons-video-image"
+                />
+              </div>
+              <div class="reasons-final-message">
+                <p>
+                  Experience inspiring drives<br />
+                  with the National Geographic<br class="v-mo" />
+                  Display Themes
                 </p>
               </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="reason-card reason-card-left">
-              <div class="reason-content">
-                <div class="reason-header">
-                  <div class="reason-number">4</div>
-                  <h3 class="reason-title">
-                    Explore the World<br />
-                    Through Every Drive
-                  </h3>
-                </div>
-                <p class="reason-description">
-                  With National Geographic display themes,<br
-                    class="v-pc v-mo"
-                  />every moment behind the wheel becomes<br class="v-mo" />
-                  a window to wonder.
+            <!-- Copyright -->
+            <p class="reasons-copyright">© National Geographic</p>
+          </div>
+        </section>
+        <!-- Detail Section > The Reasons Why You Can't Miss Out -->
+
+        <!-- Detail Section > Credit -->
+        <section class="credit">
+          <div class="section-credit-inner">
+            <!-- Section Title -->
+            <div class="credit-header">
+              <h2 class="credit-title">Credit</h2>
+            </div>
+
+            <!-- Credit List -->
+            <div class="credit-content">
+              <p class="credit-text" id="credit-text"></p>
+            </div>
+          </div>
+        </section>
+        <!-- Detail Section > Credit -->
+
+        <!-- Section > Info -->
+        <section class="info">
+          <div class="section-inner">
+            <!-- Info Item 1 -->
+            <div class="info-item">
+              <div class="info-icon">
+                <img
+                  src="assets/icons/icon-ccnc-vehicles.svg"
+                  alt="ccNC vehicles icon"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info-text">
+                <h3 class="info-title">Available only for ccNC vehicles</h3>
+                <p class="info-description">
+                  Only vehicles with 12.3-inch clusters can be selected from Kia
+                  ccNC infotainment platforms.
                 </p>
               </div>
-              <div class="reason-image">
+            </div>
+
+            <!-- Info Item 2 -->
+            <div class="info-item">
+              <div class="info-icon">
                 <img
-                  id="reasonCardImage4"
-                  src="assets/images/details/reasons-car-display.png"
-                  alt="Car with National Geographic display"
+                  src="assets/icons/icon-personal-customizing.svg"
+                  alt="Personal Customizing icon"
                   loading="lazy"
-                  class="v-pc"
                 />
-                <img
-                  id="reasonCardImage4_mo"
-                  src="assets/images/details/m_reasons-car-display.png"
-                  alt="Car with National Geographic display"
-                  loading="lazy"
-                  class="v-mo"
-                />
+              </div>
+              <div class="info-text">
+                <h3 class="info-title">Personal Customizing</h3>
+                <p class="info-description">
+                  You can purchase multiple themes and set them differently for
+                  each driver.
+                </p>
               </div>
             </div>
           </div>
+        </section>
+        <!-- Section > Info -->
 
-          <!-- Bottom Section -->
-          <div class="reasons-bottom">
-            <div class="reasons-video-container">
-              <img
-                id="reasonsBannerImage"
-                src="assets/images/details/kv-banner-reasons.png"
-                alt="National Geographic Display Themes Preview"
-                loading="lazy"
-                class="reasons-video-image"
-              />
+        <!-- Section > Upgrade Guides -->
+        <section class="upgrade-guides">
+          <div class="section-inner">
+            <h2 class="upgrade-guides-title">Upgrade Guides</h2>
+
+            <div class="upgrade-guides-video youtube-container">
+              <div
+                class="youtubeArea youtubeArea_pdp"
+                data-value="lNuSUuf7hYU"
+              ></div>
             </div>
-            <div class="reasons-final-message">
-              <p>
-                Experience inspiring drives<br />
-                with the National Geographic<br class="v-mo" />
-                Display Themes
-              </p>
-            </div>
+
+            <a href="" class="upgrade-guides-link cut-corner-btn">
+              <span class="cut-corner-btn-inner">Upgrade Guides</span>
+            </a>
           </div>
-
-          <!-- Copyright -->
-          <p class="reasons-copyright">© National Geographic</p>
-        </div>
-      </section>
-      <!-- Detail Section > The Reasons Why You Can't Miss Out -->
-
-      <!-- Detail Section > Credit -->
-      <section class="section section-credit">
-        <div class="section-credit-inner">
-          <!-- Section Title -->
-          <div class="credit-header">
-            <h2 class="credit-title">Credit</h2>
-          </div>
-
-          <!-- Credit List -->
-          <div class="credit-content">
-            <p class="credit-text" id="credit-text"></p>
-          </div>
-        </div>
-      </section>
-      <!-- Detail Section > Credit -->
-
-      <!-- Section > Info -->
-      <section class="info">
-        <div class="section-inner">
-          <!-- Info Item 1 -->
-          <div class="info-item">
-            <div class="info-icon">
-              <img
-                src="assets/icons/icon-ccnc-vehicles.svg"
-                alt="ccNC vehicles icon"
-                loading="lazy"
-              />
-            </div>
-            <div class="info-text">
-              <h3 class="info-title">Available only for ccNC vehicles</h3>
-              <p class="info-description">
-                Only vehicles with 12.3-inch clusters can be selected from Kia
-                ccNC infotainment platforms.
-              </p>
-            </div>
-          </div>
-
-          <!-- Info Item 2 -->
-          <div class="info-item">
-            <div class="info-icon">
-              <img
-                src="assets/icons/icon-personal-customizing.svg"
-                alt="Personal Customizing icon"
-                loading="lazy"
-              />
-            </div>
-            <div class="info-text">
-              <h3 class="info-title">Personal Customizing</h3>
-              <p class="info-description">
-                You can purchase multiple themes and set them differently for
-                each driver.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section > Info -->
-
-      <!-- Section > Upgrade Guides -->
-      <section class="upgrade-guides">
-        <div class="section-inner">
-          <h2 class="upgrade-guides-title">Upgrade Guides</h2>
-
-          <div class="upgrade-guides-video youtube-container">
-            <div
-              class="youtubeArea youtubeArea_pdp"
-              data-value="lNuSUuf7hYU"
-            ></div>
-          </div>
-
-          <a href="" class="upgrade-guides-link cut-corner-btn">
-            <span class="cut-corner-btn-inner">Upgrade Guides</span>
-          </a>
-        </div>
-      </section>
-      <!-- Section > Upgrade Guides -->
+        </section>
+        <!-- Section > Upgrade Guides -->
+      </div>
+      <!-- Sticky Wrapper -->
 
       <!-- Section > Disclaimer -->
       <section class="disclaimer">

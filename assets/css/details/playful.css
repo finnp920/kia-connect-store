@@ -1,7 +1,7 @@
 /* ========================================
    Detail Section > Discover Playful Designs
    ======================================== */
-.section-playful {
+section.playful {
   position: relative;
   color: var(--color-white);
 }

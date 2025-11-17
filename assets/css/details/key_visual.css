@@ -1,7 +1,7 @@
 /* ========================================
    Detail Section > KV (Key Visual)
    ======================================== */
-.section-kv {
+section.kv {
   position: relative;
   background-color: #ffffff;
 }
@@ -152,11 +152,11 @@
 }
 
 /* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
-section.section-kv[data-theme='space-wonders'] .kv-main-title,
-section.section-kv[data-theme='space-wonders'] .kv-subtitle {
+section.kv[data-theme='space-wonders'] .kv-main-title,
+section.kv[data-theme='space-wonders'] .kv-subtitle {
   color: #ffffff;
 }
-section.section-kv[data-theme='space-wonders'] .kv-logo {
+section.kv[data-theme='space-wonders'] .kv-logo {
   background-image: url('../../images/logos/logo-national-geographic.png');
 }
 

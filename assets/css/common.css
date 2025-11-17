@@ -55,12 +55,12 @@ button {
   font-family: inherit;
 }
 
-main > section {
+main section {
   position: relative;
   width: 100%;
   background-color: #ffffff;
 }
-main > section > .section-inner {
+main section > .section-inner {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;

@@ -18,6 +18,8 @@
 @import url('./details/playful.css');
 @import url('./details/reasons.css');
 @import url('./details/credit.css');
+@import url('./details/theme-selector.css');
+@import url('./details/screenshots.css');
 
 /* 3. 'section' 스타일 */
 @import url('./section/info.css');
