@@ -195,6 +195,9 @@ section.section-kv[data-theme='space-wonders'] .kv-logo {
   .kv-slide {
     padding-right: 0;
   }
+  .kv-title {
+    top: 100px;
+  }
   .kv-slide img {
     width: 100%;
     height: auto;
