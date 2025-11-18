@@ -100,7 +100,6 @@ function updateProductInfo(theme) {
 
   if (productDescription) productDescription.textContent = theme.description;
 
-  console.log(productThumbnail, theme.thumbnail);
   if (productThumbnail) {
     if (thumbnailWrapper) {
       thumbnailWrapper.classList.add('is-loading');
