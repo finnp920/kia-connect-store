@@ -20,31 +20,23 @@ section.screenshots {
   top: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: bottom center;
+  background-position: bottom right;
   background-repeat: no-repeat;
   z-index: 0;
   pointer-events: none;
-  aspect-ratio: 1920 / 857;
   transition: background-image 0.5s ease-in-out;
 }
 
-.theme-header-wrapper::before {
-  top: -75px;
-  height: calc(100% + 75px);
-}
-
 .theme-header-wrapper.theme-baby-animals::before {
-  background-image: url('../../images/details/img_bc_detail_bg.png');
+  background-image: url('../../images/bg_bc-top.png');
 }
 
-.theme-header-wrapper::before {
-  background-color: black;
-  background-image: url('../../images/details/img_sw_detail_bg.png');
+.theme-header-wrapper.theme-space-wonders::before {
+  background-image: url('../../images/bg_sw-top.png');
 }
 
 .theme-header-wrapper.theme-landscape::before {
-  background-image: url('../../images/details/img_ls_detail_bg.png');
+  background-image: url('../../images/bg_ls_top.png');
 }
 
 .themes-preview {

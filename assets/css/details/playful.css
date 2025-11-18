@@ -16,26 +16,24 @@ section.playful {
   top: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: top center;
+  background-position: top right;
   background-repeat: no-repeat;
   z-index: 0;
   pointer-events: none;
-  aspect-ratio: 1920 / 857;
   transition: background-image 0.5s ease-in-out;
 }
 
 .theme-baby-animals .playful-wrapper::before {
-  background-image: url('../../images/details/img_bc_disc_bg.png');
+  background-image: url('../../images/bg_bc-bottom.png');
 }
 
 .theme-space-wonders .playful-wrapper::before {
   background-color: black;
-  background-image: url('../../images/details/img_sw_disc_bg.png');
+  background-image: url('../../images/bg_sw-bottom.png');
 }
 
 .theme-landscape .playful-wrapper::before {
-  background-image: url('../../images/details/img_ls_disc_bg.png');
+  background-image: url('../../images/bg_ls_bottom.png');
 }
 
 .playful-title {
@@ -287,6 +285,9 @@ section.playful {
 @media screen and (max-width: 769px) {
   .playful-wrapper {
     padding: 40px 0 50px;
+  }
+  .playful-wrapper::before{
+    background-size: contain;
   }
   .playful-title {
     padding-bottom: 19px;
