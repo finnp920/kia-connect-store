@@ -10,7 +10,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="apple-mobile-web-app-title" content="" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <!-- 설정 필요 -->
     <meta name="title" content="" />
@@ -23,6 +23,10 @@
     <meta property="og:site_name" content="Page name" />
     <meta property="og:description" content="Page Coment" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -225,167 +229,148 @@
       </section>
       <!-- Detail Section > Product -->
 
-      <!-- Detail Section >  KV (Key Visual) -->
-      <section class="kv" id="kv">
-        <div class="kv-content">
-          <!-- KV Carousel -->
-          <div class="kv-carousel" id="kvCarousel">
-            <div class="kv-slides">
-              <div class="kv-slide" data-theme="bc">
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_bc_hero.png"
-                  alt="KV Image 1"
-                  class="kv-image view-pc"
-                />
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_bc_hero_mo.png"
-                  alt="KV Image 1"
-                  class="kv-image view-mo"
-                />
-                <img
-                  class="kv-logo"
-                  src="assets/images/logos/logo-national-geographic_black.png"
-                  alt="national-geographic"
-                />
-                <div class="kv-title">
-                  <h2 class="kv-main-title">
-                    <span class="view-pc"
-                      >Dive into Wonder<br />
-                      with National Geographic in your Kia!</span
-                    >
-                    <span class="view-mo"
-                      >Dive into Wonder with<br />
-                      National Geographic<br />
-                      in your Kia!</span
-                    >
-                  </h2>
-                  <p class="kv-subtitle">
-                    <span class="view-pc"
-                      >Personalize your dashboard with National Geographic
-                      themes that will inspire your drive.</span
-                    >
-                    <span class="view-mo">
-                      Personalize your dashboard with National<br />
-                      Geographic themes that will inspire your drive.
-                    </span>
-                  </p>
-                </div>
-                <p class="kv-copyright">© National Geographic</p>
+      <!-- Detail Section > KV (Key Visual) -->
+      <section class="kv">
+        <div class="swiper kv-content">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide kv-slide" data-theme="theme-bc">
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_bc_hero.png"
+                alt="KV Image 1"
+                class="kv-image view-pc"
+              />
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_bc_hero_mo.png"
+                alt="KV Image 1"
+                class="kv-image view-mo"
+              />
+              <img
+                class="kv-logo"
+                src="assets/images/logos/logo-national-geographic_black.png"
+                alt="national-geographic"
+              />
+              <div class="kv-title">
+                <h2 class="kv-main-title">
+                  <span class="view-pc"
+                    >Dive into Wonder<br />
+                    with National Geographic in your Kia!</span
+                  >
+                  <span class="view-mo"
+                    >Dive into Wonder with<br />
+                    National Geographic<br />
+                    in your Kia!</span
+                  >
+                </h2>
+                <p class="kv-subtitle">
+                  <span class="view-pc"
+                    >Personalize your dashboard with National Geographic themes
+                    that will inspire your drive.</span
+                  >
+                  <span class="view-mo">
+                    Personalize your dashboard with National<br />
+                    Geographic themes that will inspire your drive.
+                  </span>
+                </p>
               </div>
-              <div class="kv-slide" data-theme="sw">
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_sw_hero.png"
-                  alt="KV Image 2"
-                  class="kv-image view-pc"
-                />
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_sw_hero_mo.png"
-                  alt="KV Image 2"
-                  class="kv-image view-mo"
-                />
-                <img
-                  class="kv-logo"
-                  src="assets/images/logos/logo-national-geographic.png"
-                  alt="national-geographic"
-                />
-                <div class="kv-title">
-                  <h2 class="kv-main-title">
-                    <span class="view-pc"
-                      >Dive into Wonder<br />
-                      with National Geographic in your Kia!</span
-                    >
-                    <span class="view-mo"
-                      >Dive into Wonder with<br />
-                      National Geographic<br />
-                      in your Kia!</span
-                    >
-                  </h2>
-                  <p class="kv-subtitle">
-                    <span class="view-pc"
-                      >Personalize your dashboard with National Geographic
-                      themes that will inspire your drive.</span
-                    >
-                    <span class="view-mo">
-                      Personalize your dashboard with National<br />
-                      Geographic themes that will inspire your drive.
-                    </span>
-                  </p>
-                </div>
-                <p class="kv-copyright">© National Geographic</p>
-              </div>
-              <div class="kv-slide" data-theme="ls">
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_ls_hero.png"
-                  alt="KV Image 3"
-                  class="kv-image view-pc"
-                />
-                <img
-                  data-role="kv-shot"
-                  src="assets/images/details/img_ls_hero_mo.png"
-                  alt="KV Image 3"
-                  class="kv-image view-mo"
-                />
-                <img
-                  class="kv-logo"
-                  src="assets/images/logos/logo-national-geographic_black.png"
-                  alt="national-geographic"
-                />
-                <div class="kv-title">
-                  <h2 class="kv-main-title">
-                    <span class="view-pc"
-                      >Dive into Wonder<br />
-                      with National Geographic in your Kia!</span
-                    >
-                    <span class="view-mo"
-                      >Dive into Wonder with<br />
-                      National Geographic<br />
-                      in your Kia!</span
-                    >
-                  </h2>
-                  <p class="kv-subtitle">
-                    <span class="view-pc"
-                      >Personalize your dashboard with National Geographic
-                      themes that will inspire your drive.</span
-                    >
-                    <span class="view-mo">
-                      Personalize your dashboard with National<br />
-                      Geographic themes that will inspire your drive.
-                    </span>
-                  </p>
-                </div>
-                <p class="kv-copyright">© National Geographic</p>
-              </div>
+              <p class="kv-copyright">© National Geographic</p>
             </div>
+            <div class="swiper-slide kv-slide" data-theme="theme-sw">
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_sw_hero.png"
+                alt="KV Image 2"
+                class="kv-image view-pc"
+              />
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_sw_hero_mo.png"
+                alt="KV Image 2"
+                class="kv-image view-mo"
+              />
+              <img
+                class="kv-logo"
+                src="assets/images/logos/logo-national-geographic.png"
+                alt="national-geographic"
+              />
+              <div class="kv-title">
+                <h2 class="kv-main-title">
+                  <span class="view-pc"
+                    >Dive into Wonder<br />
+                    with National Geographic in your Kia!</span
+                  >
+                  <span class="view-mo"
+                    >Dive into Wonder with<br />
+                    National Geographic<br />
+                    in your Kia!</span
+                  >
+                </h2>
+                <p class="kv-subtitle">
+                  <span class="view-pc"
+                    >Personalize your dashboard with National Geographic themes
+                    that will inspire your drive.</span
+                  >
+                  <span class="view-mo">
+                    Personalize your dashboard with National<br />
+                    Geographic themes that will inspire your drive.
+                  </span>
+                </p>
+              </div>
+              <p class="kv-copyright">© National Geographic</p>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="theme-ls">
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_ls_hero.png"
+                alt="KV Image 3"
+                class="kv-image view-pc"
+              />
+              <img
+                data-role="kv-shot"
+                src="assets/images/details/img_ls_hero_mo.png"
+                alt="KV Image 3"
+                class="kv-image view-mo"
+              />
+              <img
+                class="kv-logo"
+                src="assets/images/logos/logo-national-geographic_black.png"
+                alt="national-geographic"
+              />
+              <div class="kv-title">
+                <h2 class="kv-main-title">
+                  <span class="view-pc"
+                    >Dive into Wonder<br />
+                    with National Geographic in your Kia!</span
+                  >
+                  <span class="view-mo"
+                    >Dive into Wonder with<br />
+                    National Geographic<br />
+                    in your Kia!</span
+                  >
+                </h2>
+                <p class="kv-subtitle">
+                  <span class="view-pc"
+                    >Personalize your dashboard with National Geographic themes
+                    that will inspire your drive.</span
+                  >
+                  <span class="view-mo">
+                    Personalize your dashboard with National<br />
+                    Geographic themes that will inspire your drive.
+                  </span>
+                </p>
+              </div>
+              <p class="kv-copyright">© National Geographic</p>
+            </div>
+          </div>
 
-            <!-- Navigation Arrows -->
-            <div class="kv-btn-wrapper">
-              <button class="kv-arrow kv-arrow-prev" aria-label="이전 슬라이드">
-                <img
-                  src="assets/icons/arrow-prev.svg"
-                  alt="arrow-prev icon"
-                  loading="lazy"
-                />
-              </button>
-              <button class="kv-arrow kv-arrow-next" aria-label="다음 슬라이드">
-                <img
-                  src="assets/icons/arrow-next.svg"
-                  alt="arrow-next icon"
-                  loading="lazy"
-                />
-              </button>
-            </div>
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination"></div>
 
-            <!-- Indicators -->
-            <div class="kv-indicators">
-              <span class="kv-indicator active" data-slide="0"></span>
-              <span class="kv-indicator" data-slide="1"></span>
-              <span class="kv-indicator" data-slide="2"></span>
-            </div>
+          <!-- 네비게이션 화살표 (이전/다음) -->
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -1359,6 +1344,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/theme-data.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/youtube.js"></script>

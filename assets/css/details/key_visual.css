@@ -6,34 +6,14 @@ section.kv {
   background-color: #ffffff;
 }
 
-.kv-content {
+.swiper {
   position: relative;
   height: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
 
-.kv-carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.kv-slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
-}
-
-.kv-slides.dragging,
-.kv-slides.no-transition {
-  transition: none;
-}
-
-.kv-slide {
+.swiper-slide {
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -42,11 +22,9 @@ section.kv {
   pointer-events: auto;
   max-width: 1920px;
 }
-
-.kv-slide img.kv-image {
+.kv-image {
   aspect-ratio: 160 / 73;
 }
-
 .kv-logo {
   position: absolute;
   top: 40px;
@@ -59,7 +37,6 @@ section.kv {
   background-position: center;
   pointer-events: none;
 }
-
 .kv-copyright {
   position: absolute;
   bottom: 20px;
@@ -68,60 +45,6 @@ section.kv {
   color: #d4d4d4;
   letter-spacing: -0.2px;
 }
-
-.kv-btn-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 48px;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between; /* ⬅️ 핵심: 좌우 양쪽 끝으로 밀어냅니다 */
-  align-items: center;
-}
-.kv-arrow {
-  width: 48px;
-  height: 48px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: scale 0.3s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-.kv-arrow:hover {
-  transform: scale(1.1);
-}
-
-.kv-indicators {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 10;
-}
-.kv-indicator {
-  width: 56px;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: background-color var(--transition-base);
-  border-radius: 0;
-}
-.kv-indicator.active {
-  background-color: #ffffff;
-}
-
 .kv-title {
   position: absolute;
   top: 90px;
@@ -150,11 +73,53 @@ section.kv {
   max-width: 866px;
   margin: 0 auto;
 }
-
 /* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
-.kv-slide[data-theme='sw'] .kv-main-title,
-.kv-slide[data-theme='sw'] .kv-subtitle {
+.swiper-slide[data-theme='theme-sw'] .kv-main-title,
+.swiper-slide[data-theme='theme-sw'] .kv-subtitle {
   color: #ffffff;
+}
+
+.swiper-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 32px;
+}
+.swiper-pagination-bullet {
+  width: 56px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  border-radius: 0;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
 }
 
 section.kv .view-pc {
@@ -176,20 +141,14 @@ section.kv .view-mo {
   section.kv .view-mo {
     display: block;
   }
-  .kv-slide img.kv-image {
+  .swiper-slide img.kv-image {
     width: 100%;
     height: auto;
     aspect-ratio: 36 / 53;
     object-fit: cover;
   }
 
-  .kv-carousel {
-    height: auto;
-  }
-  .kv-btn-wrapper {
-    display: none;
-  }
-  .kv-indicators {
+  .swiper-pagination {
     bottom: 28px;
   }
   .kv-title {
@@ -221,6 +180,9 @@ section.kv .view-mo {
 }
 
 @media screen and (max-width: 360px) {
+  .swiper-navigation {
+    display: none;
+  }
   .kv-logo {
     top: 20px;
     right: 20px;

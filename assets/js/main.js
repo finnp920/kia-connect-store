@@ -6,10 +6,8 @@
 // ----------------------------------------
 let themeNames = Object.keys(themeData);
 let currentTheme = themeNames[0];
-let currentSlide = 1;
-let carouselInterval = null;
+let swiper = null;
 let isLiked = false;
-let realSlideCount = 3; // 실제 슬라이드 개수
 
 // ----------------------------------------
 // Initialization
@@ -24,8 +22,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     initializePage();
+    initSwiper();
     setupEventListeners();
-    initCarousel();
   } catch (error) {
     console.error('Initialization error:', error);
     showError('Failed to load page data');
@@ -53,7 +51,7 @@ function initializePage() {
   updateTopBar(theme);
   updateProductInfo(theme);
   updateOptionList();
-  updateKVSection(theme);
+  // updateKVSection(theme);
   updatePreviewImages(theme);
   updatePriceSection(theme);
   updateThemeSelectors();
@@ -96,19 +94,13 @@ function updateTopBar(theme) {
 }
 
 function updateProductInfo(theme) {
-  // const productName = document.getElementById('productName');
   const productDescription = document.getElementById('productDescription');
   const productThumbnail = document.getElementById('productThumbnail');
   const thumbnailWrapper = productThumbnail?.closest('.thumbnail-wrapper');
 
-  // if (productName) {
-  //   const productTitle = theme.name || theme.fullName || '';
-  //   productName.textContent = productTitle;
-  //   productName.setAttribute('title', productTitle);
-  // }
-
   if (productDescription) productDescription.textContent = theme.description;
 
+  console.log(productThumbnail, theme.thumbnail);
   if (productThumbnail) {
     if (thumbnailWrapper) {
       thumbnailWrapper.classList.add('is-loading');
@@ -124,79 +116,6 @@ function updateOptionList() {
     item.classList.toggle('selected', isSelected);
     item.setAttribute('aria-selected', isSelected ? 'true' : 'false');
   });
-}
-
-function updateKVSection(theme) {
-  const slidesContainer = document.querySelector('#kvCarousel .kv-slides');
-
-  // 0. 컨테이너가 없거나 배열이 비어있으면 종료
-  if (!slidesContainer) {
-    console.error(`Error: Container "${containerSelector}" not found.`);
-    return;
-  }
-
-  const themesArray = theme.kv;
-  if (!themesArray || themesArray.length === 0) {
-    slidesContainer.innerHTML = ''; // 배열이 비어있으면 내용도 비움
-    console.warn('Themes array is empty. No slides created.');
-    return;
-  }
-  realSlideCount = themesArray.length;
-
-  // --- 1. (Cleanup) 기존에 생성된 복제본(clone)이 있다면 먼저 제거 ---
-  // (복제본 식별을 위해 '.kv-slide--clone' 클래스를 사용합니다)
-  slidesContainer.querySelectorAll('.kv-slide--clone').forEach((clone) => {
-    clone.remove();
-  });
-
-  // --- 2. (Indexing) 현재 남아있는 *원본* DOM 요소들을 Map에 저장 ---
-  const slideElementMap = new Map();
-  slidesContainer.querySelectorAll('.kv-slide').forEach((slide) => {
-    // (이제 '.kv-slide--clone'이 없으므로 모두 원본입니다)
-    const theme = slide.dataset.theme;
-    if (theme) {
-      slideElementMap.set(theme, slide);
-    }
-  });
-
-  // --- 3. (Re-order) 깜빡임 없이 순서 재배치 ---
-  // [핵심] innerHTML = ''를 사용하지 않습니다.
-  // append()는 요소가 이미 DOM에 존재하면, 그 요소를 현재 위치에서
-  // 컨테이너의 '맨 뒤'로 '이동'시킵니다.
-  themesArray.forEach((themeName) => {
-    const originalSlideElement = slideElementMap.get(themeName);
-
-    if (originalSlideElement) {
-      // 배열 순서대로 요소를 컨테이너의 맨 뒤로 계속 이동시키면,
-      // 최종적으로 컨테이너는 배열의 순서를 갖게 됩니다.
-      slidesContainer.append(originalSlideElement);
-    } else {
-      console.warn(
-        `Slide for theme "${themeName}" not found in original HTML.`
-      );
-    }
-  });
-
-  // --- 4. (Cloning) 재배치된 순서 기준으로 무한 루프 설정 ---
-  const firstSlide = slidesContainer.firstElementChild;
-  const lastSlide = slidesContainer.lastElementChild;
-
-  if (!firstSlide || !lastSlide) {
-    console.warn('No slides to create loop from.');
-    return;
-  }
-
-  const lastSlideClone = lastSlide.cloneNode(true);
-  const firstSlideClone = firstSlide.cloneNode(true);
-
-  // [중요] 나중에 이 함수가 다시 실행될 때 식별할 수 있도록
-  // 복제본에 클래스를 추가합니다.
-  lastSlideClone.classList.add('kv-slide--clone');
-  firstSlideClone.classList.add('kv-slide--clone');
-
-  // 앞뒤로 삽입
-  slidesContainer.prepend(lastSlideClone);
-  slidesContainer.append(firstSlideClone);
 }
 
 function updatePreviewImages(theme) {
@@ -597,18 +516,6 @@ function setupEventListeners() {
   const btnBuy = document.getElementById('btnBuy');
   if (btnBuy) btnBuy.addEventListener('click', handleBuyClick);
 
-  const prevArrow = document.querySelector('.kv-arrow-prev');
-  if (prevArrow)
-    prevArrow.addEventListener('click', () => navigateCarousel('prev'));
-
-  const nextArrow = document.querySelector('.kv-arrow-next');
-  if (nextArrow)
-    nextArrow.addEventListener('click', () => navigateCarousel('next'));
-
-  document.querySelectorAll('.kv-indicator').forEach((indicator, index) => {
-    indicator.addEventListener('click', () => goToSlide(index));
-  });
-
   // Playful video cells click handlers (inline video playback)
   document.querySelectorAll('.playful-video-cell').forEach((cell) => {
     cell.addEventListener('click', () => handlePlayfulVideoClick(cell));
@@ -631,7 +538,7 @@ function handleOptionSelect(themeId) {
   updateTopBar(theme);
   updateProductInfo(theme);
   updateOptionList();
-  updateKVSection(theme);
+  // updateKVSection(theme);
   updatePreviewImages(theme);
   updatePriceSection(theme);
   updateThemeSelectors();
@@ -647,8 +554,6 @@ function handleOptionSelect(themeId) {
   scrollToThemeSelector();
 
   themeNames = theme.themeNames;
-  currentSlide = 1; // 클론 때문에 1로 리셋
-  updateCarousel(true);
 }
 
 function handleLikeClick() {
@@ -675,13 +580,10 @@ function handleBuyClick() {
 }
 
 function handleResize() {
-  // 화면 크기 변경 시 캐러셀 업데이트
-  updateCarousel();
-
   // 모바일/PC 전환 시 KV 이미지, Preview 이미지, Discover 이미지, 텍스트, Reason 이미지 업데이트
   const theme = themeData[currentTheme];
   if (theme) {
-    updateKVSection(theme);
+    // updateKVSection(theme);
     updatePreviewImages(theme);
     updateDiscoverShots(theme);
     updateDiscoverFeatures(theme);
@@ -691,218 +593,25 @@ function handleResize() {
 }
 
 // ----------------------------------------
-// Carousel
+// Swiper
 // ----------------------------------------
-function initCarousel() {
-  updateCarousel(true);
-  startCarouselAutoPlay();
-
-  const carousel = document.getElementById('kvCarousel');
-  if (carousel) {
-    carousel.addEventListener('mouseenter', stopCarouselAutoPlay);
-    carousel.addEventListener('mouseleave', startCarouselAutoPlay);
-  }
-
-  setupCarouselTouchSupport();
-}
-
-function startCarouselAutoPlay() {
-  stopCarouselAutoPlay();
-  // carouselInterval = setInterval(() => navigateCarousel('next'), 3000);
-}
-
-function stopCarouselAutoPlay() {
-  if (carouselInterval) {
-    clearInterval(carouselInterval);
-    carouselInterval = null;
-  }
-}
-
-function navigateCarousel(direction) {
-  if (direction === 'next') {
-    currentSlide++;
-    updateCarousel();
-
-    // 마지막 클론에 도달하면 첫 번째 실제 슬라이드로 점프
-    if (currentSlide === realSlideCount + 1) {
-      setTimeout(() => {
-        currentSlide = 1;
-        updateCarousel(true);
-      }, 500);
-    }
-  } else {
-    currentSlide--;
-    updateCarousel();
-
-    // 첫 번째 클론에 도달하면 마지막 실제 슬라이드로 점프
-    if (currentSlide === 0) {
-      setTimeout(() => {
-        currentSlide = realSlideCount;
-        updateCarousel(true);
-      }, 500);
-    }
-  }
-}
-
-function goToSlide(index) {
-  currentSlide = index + 1; // 클론 때문에 +1
-  updateCarousel();
-}
-
-function updateCarousel(noTransition = false) {
-  const carousel = document.getElementById('kvCarousel');
-  const slidesContainer = carousel?.querySelector('.kv-slides');
-  const indicators = document.querySelectorAll('.kv-indicator');
-
-  if (slidesContainer) {
-    if (noTransition) {
-      slidesContainer.classList.add('no-transition');
-    }
-
-    const translateX = -(currentSlide * carousel.offsetWidth);
-    slidesContainer.style.transform = `translateX(${translateX}px)`;
-
-    // transition을 끈 경우, 다음 프레임에 다시 켜기
-    if (noTransition) {
-      setTimeout(() => {
-        slidesContainer.classList.remove('no-transition');
-      }, 50);
-    }
-  }
-
-  // 인디케이터는 실제 슬라이드 인덱스만 표시
-  const realIndex =
-    currentSlide === 0
-      ? realSlideCount - 1
-      : currentSlide === realSlideCount + 1
-        ? 0
-        : currentSlide - 1;
-
-  indicators.forEach((indicator, index) => {
-    indicator.classList.toggle('active', index === realIndex);
-  });
-
-  const kvSectionElement = document.querySelector('section#kv');
-  if (kvSectionElement) {
-    kvSectionElement.dataset.theme = themeNames[realIndex];
-  }
-}
-
-function setupCarouselTouchSupport() {
-  const carousel = document.getElementById('kvCarousel');
-  const slides = carousel?.querySelector('.kv-slides');
-  if (!carousel || !slides) return;
-
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
-  let startTranslate = 0;
-
-  const getTranslateX = () => {
-    return -(currentSlide * carousel.offsetWidth);
-  };
-
-  const setTranslate = (x) => {
-    slides.style.transform = `translateX(${x}px)`;
-  };
-
-  // Touch events for mobile
-  carousel.addEventListener(
-    'touchstart',
-    (event) => {
-      startX = event.touches[0].clientX;
-      currentX = startX;
-      startTranslate = getTranslateX();
-      isDragging = true;
-      slides.classList.add('dragging');
-      stopCarouselAutoPlay();
+function initSwiper() {
+  swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3초마다 슬라이드 전환
+      disableOnInteraction: false, // 사용자가 조작해도 자동 재생 유지
+      pauseOnMouseEnter: true, // 마우스를 올리면 일시 정지 (핵심 옵션)
     },
-    { passive: true }
-  );
-
-  carousel.addEventListener(
-    'touchmove',
-    (event) => {
-      if (!isDragging) return;
-      currentX = event.touches[0].clientX;
-      const diff = currentX - startX;
-      setTranslate(startTranslate + diff);
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    { passive: true }
-  );
-
-  carousel.addEventListener(
-    'touchend',
-    () => {
-      if (!isDragging) return;
-      isDragging = false;
-      slides.classList.remove('dragging');
-
-      const diff = startX - currentX;
-      const threshold = 50;
-
-      if (Math.abs(diff) >= threshold) {
-        if (diff > 0) {
-          navigateCarousel('next');
-        } else {
-          navigateCarousel('prev');
-        }
-      } else {
-        updateCarousel();
-      }
-
-      startCarouselAutoPlay();
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    { passive: true }
-  );
-
-  // Mouse events for desktop drag
-  carousel.addEventListener('mousedown', (event) => {
-    startX = event.clientX;
-    currentX = startX;
-    startTranslate = getTranslateX();
-    isDragging = true;
-    slides.classList.add('dragging');
-    carousel.style.cursor = 'grabbing';
-    stopCarouselAutoPlay();
-    event.preventDefault();
   });
-
-  carousel.addEventListener('mousemove', (event) => {
-    if (!isDragging) return;
-    currentX = event.clientX;
-    const diff = currentX - startX;
-    setTranslate(startTranslate + diff);
-    event.preventDefault();
-  });
-
-  const handleDragEnd = () => {
-    if (!isDragging) return;
-    isDragging = false;
-    slides.classList.remove('dragging');
-    carousel.style.cursor = 'grab';
-
-    const diff = startX - currentX;
-    const threshold = 50;
-
-    if (Math.abs(diff) >= threshold) {
-      if (diff > 0) {
-        navigateCarousel('next');
-      } else {
-        navigateCarousel('prev');
-      }
-    } else {
-      updateCarousel();
-    }
-
-    startCarouselAutoPlay();
-  };
-
-  carousel.addEventListener('mouseup', handleDragEnd);
-  carousel.addEventListener('mouseleave', handleDragEnd);
-
-  // Set initial cursor style
-  carousel.style.cursor = 'grab';
 }
 
 // ----------------------------------------
@@ -931,27 +640,6 @@ function scrollToThemeSelector() {
   }
 }
 
-// Accessibility - keyboard navigation
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowLeft') navigateCarousel('prev');
-  if (event.key === 'ArrowRight') navigateCarousel('next');
-});
-
-// Accessibility - pause autoplay when carousel is focused
-document.addEventListener('focusin', (event) => {
-  const carousel = document.getElementById('kvCarousel');
-  if (carousel && carousel.contains(event.target)) {
-    stopCarouselAutoPlay();
-  }
-});
-
-document.addEventListener('focusout', (event) => {
-  const carousel = document.getElementById('kvCarousel');
-  if (carousel && !carousel.contains(event.relatedTarget)) {
-    startCarouselAutoPlay();
-  }
-});
-
 // Performance helpers
 let resizeTimeout = null;
 window.addEventListener('resize', () => {
@@ -979,11 +667,9 @@ if ('IntersectionObserver' in window) {
     .forEach((img) => observer.observe(img));
 }
 
-// ----------------------------------------
 // ========================================
 // Playful Videos: Inline Video Playback
 // ========================================
-
 function handlePlayfulVideoClick(cell) {
   const video = cell.querySelector('.playful-video-player');
   if (!video) return;
@@ -1076,6 +762,5 @@ if (typeof module !== 'undefined' && module.exports) {
     getQueryParam,
     formatPrice,
     handleOptionSelect,
-    navigateCarousel,
   };
 }

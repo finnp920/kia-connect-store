@@ -10,7 +10,6 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-baby-animals-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_1.png',
     themeNames: ['baby-animals', 'space-wonders', 'landscape'],
-    kv: ['bc', 'sw', 'ls'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
@@ -141,7 +140,6 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-space-wonders-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_2.png',
     themeNames: ['space-wonders', 'landscape', 'baby-animals'],
-    kv: ['sw', 'ls', 'bc'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
@@ -270,7 +268,6 @@ const themeData = {
     thumbnail: 'assets/images/details/theme-landscape-thumbnail.png',
     backgroundImage: 'assets/images/details/bg_3.png',
     themeNames: ['landscape', 'baby-animals', 'space-wonders'],
-    kv: ['ls', 'bc', 'sw'],
     discoverShots: [
       'assets/images/details/img_disc_video.png',
       'assets/images/details/img_disc_video.png',
