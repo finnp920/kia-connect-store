@@ -24,6 +24,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializePage();
     initSwiper();
     setupEventListeners();
+
+    // Sticky blur effect for .theme-selectors
+    const themeSelectors = document.querySelector('.theme-selectors');
+    if (themeSelectors) {
+      const stickyTop = parseInt(getComputedStyle(themeSelectors).top, 10) || 0;
+      function checkThemeSelectorsSticky() {
+        const rect = themeSelectors.getBoundingClientRect();
+        if (rect.top <= stickyTop) {
+          themeSelectors.classList.add('is-sticky');
+        } else {
+          themeSelectors.classList.remove('is-sticky');
+        }
+      }
+      window.addEventListener('scroll', checkThemeSelectorsSticky, { passive: true });
+      window.addEventListener('resize', checkThemeSelectorsSticky);
+      checkThemeSelectorsSticky();
+    }
   } catch (error) {
     console.error('Initialization error:', error);
     showError('Failed to load page data');

@@ -15,8 +15,11 @@
   gap: 16px;
   -webkit-tap-highlight-color: transparent;
   z-index: 3;
-  backdrop-filter: blur(3px);
   flex-wrap: nowrap;
+}
+
+.theme-selectors.is-sticky {
+  backdrop-filter: blur(3px);
 }
 
 .theme-selector {
