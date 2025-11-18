@@ -273,6 +273,12 @@ section.playful {
   letter-spacing: -0.32px;
 }
 
+@media screen and (min-width: 1920px) {
+  .playful-wrapper::before {
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .playful-video-grid {
     gap: calc(100% * 164 / 1200);
@@ -286,7 +292,7 @@ section.playful {
   .playful-wrapper {
     padding: 40px 0 50px;
   }
-  .playful-wrapper::before{
+  .playful-wrapper::before {
     background-size: contain;
   }
   .playful-title {

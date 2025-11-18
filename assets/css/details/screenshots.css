@@ -124,6 +124,12 @@ section.screenshots {
   z-index: 3;
 }
 
+@media screen and (min-width: 1920px) {
+  .theme-header-wrapper::before {
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 1634px) {
   .themes-preview-grid {
     grid-template-columns: 33% 32% 33%;
