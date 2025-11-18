@@ -292,7 +292,7 @@ section.playful {
   .playful-wrapper {
     padding: 40px 0 50px;
   }
-  .playful-wrapper::before{
+  .playful-wrapper::before {
     background-position: center top;
     background-size: cover;
   }
