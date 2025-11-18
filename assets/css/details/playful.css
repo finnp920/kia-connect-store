@@ -287,7 +287,8 @@ section.playful {
     padding: 40px 0 50px;
   }
   .playful-wrapper::before{
-    background-size: contain;
+    background-position: center top;
+    background-size: cover;
   }
   .playful-title {
     padding-bottom: 19px;

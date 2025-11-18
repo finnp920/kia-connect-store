@@ -138,7 +138,8 @@ section.screenshots {
 
 @media screen and (max-width: 769px) {
   .theme-header-wrapper::before {
-    background-size: contain;
+    background-position: center bottom;
+    background-size: cover;
   }
   .theme-header-wrapper {
     padding-top: 134px;
