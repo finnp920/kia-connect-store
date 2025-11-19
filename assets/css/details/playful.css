@@ -5,6 +5,16 @@ section.playful {
   position: relative;
   color: var(--color-white);
 }
+section.playful.theme-baby-animals {
+  background-color: #213125;
+}
+section.playful.theme-space-wonders {
+  background-color: #222220;
+}
+section.playful.theme-landscape {
+  background-color: #5a4231;
+}
+
 .playful-wrapper {
   position: relative;
   width: 100%;
@@ -24,16 +34,15 @@ section.playful {
 }
 
 .theme-baby-animals .playful-wrapper::before {
-  background-image: url('../../images/bg_bc-bottom.png');
+  background-image: url('../../images/pattern-bg/img_bg_bc_02.png');
 }
 
 .theme-space-wonders .playful-wrapper::before {
-  background-color: black;
-  background-image: url('../../images/bg_sw-bottom.png');
+  background-image: url('../../images/pattern-bg/img_bg_sw_02.png');
 }
 
 .theme-landscape .playful-wrapper::before {
-  background-image: url('../../images/bg_ls_bottom.png');
+  background-image: url('../../images/pattern-bg/img_bg_ls_02.png');
 }
 
 .playful-title {
@@ -296,6 +305,16 @@ section.playful {
     background-position: center top;
     background-size: cover;
   }
+  .theme-baby-animals .playful-wrapper::before {
+    background-image: url('../../images/pattern-bg/img_bc_disc_bg_mo.png');
+  }
+  .theme-space-wonders .playful-wrapper::before {
+    background-image: url('../../images/pattern-bg/img_sw_disc_bg_mo.png');
+  }
+  .theme-landscape .playful-wrapper::before {
+    background-image: url('../../images/pattern-bg/img_ls_disc_bg_mo.png');
+  }
+
   .playful-title {
     padding-bottom: 19px;
     font-size: 30px;

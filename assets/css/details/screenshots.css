@@ -28,15 +28,15 @@ section.screenshots {
 }
 
 .theme-header-wrapper.theme-baby-animals::before {
-  background-image: url('../../images/bg_bc-top.png');
+  background-image: url('../../images/pattern-bg/img_bg_bc_01.png');
 }
 
 .theme-header-wrapper.theme-space-wonders::before {
-  background-image: url('../../images/bg_sw-top.png');
+  background-image: url('../../images/pattern-bg/img_bg_sw_01.png');
 }
 
 .theme-header-wrapper.theme-landscape::before {
-  background-image: url('../../images/bg_ls_top.png');
+  background-image: url('../../images/pattern-bg/img_bg_ls_01.png');
 }
 
 .themes-preview {
@@ -151,6 +151,15 @@ section.screenshots {
     padding-top: 134px;
     margin-bottom: -134px;
     transform: translateY(-134px);
+  }
+  .theme-header-wrapper.theme-baby-animals::before {
+    background-image: url('../../images/pattern-bg/img_bc_detail_bg_mo.png');
+  }
+  .theme-header-wrapper.theme-space-wonders::before {
+    background-image: url('../../images/pattern-bg/img_sw_detail_bg_mo.png');
+  }
+  .theme-header-wrapper.theme-landscape::before {
+    background-image: url('../../images/pattern-bg/img_ls_detail_bg_mo.png');
   }
 
   .themes-preview {
