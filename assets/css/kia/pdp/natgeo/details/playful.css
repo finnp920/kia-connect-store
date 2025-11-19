@@ -34,15 +34,15 @@ section.playful.theme-landscape {
 }
 
 .theme-baby-animals .playful-wrapper::before {
-  background-image: url('../../../../../images/natgeo/pattern-bg/img_bg_bc_02.png');
+  background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_bg_bc_02.png');
 }
 
 .theme-space-wonders .playful-wrapper::before {
-  background-image: url('../../../../../images/natgeo/pattern-bg/img_bg_sw_02.png');
+  background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_bg_sw_02.png');
 }
 
 .theme-landscape .playful-wrapper::before {
-  background-image: url('../../../../../images/natgeo/pattern-bg/img_bg_ls_02.png');
+  background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_bg_ls_02.png');
 }
 
 .playful-title {
@@ -308,13 +308,13 @@ section.playful.theme-landscape {
     background-size: cover;
   }
   .theme-baby-animals .playful-wrapper::before {
-    background-image: url('../../../../../images/natgeo/pattern-bg/img_bc_disc_bg_mo.png');
+    background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_bc_disc_bg_mo.png');
   }
   .theme-space-wonders .playful-wrapper::before {
-    background-image: url('../../../../../images/natgeo/pattern-bg/img_sw_disc_bg_mo.png');
+    background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_sw_disc_bg_mo.png');
   }
   .theme-landscape .playful-wrapper::before {
-    background-image: url('../../../../../images/natgeo/pattern-bg/img_ls_disc_bg_mo.png');
+    background-image: url('../../../../../images/pdp/natgeo/pattern-bg/img_ls_disc_bg_mo.png');
   }
 
   .playful-title {

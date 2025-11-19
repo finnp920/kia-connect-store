@@ -12,61 +12,318 @@
     <meta name="apple-mobile-web-app-title" content="" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
-    <!-- 설정 필요 -->
     <meta name="title" content="" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="format-detection" content="telephone=no" />
     <meta property="og:title" content="Page Title" />
     <meta property="og:type" content="Page Contens" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="../assets/images/kia/meta_img.png" />
     <meta property="og:site_name" content="Page name" />
     <meta property="og:description" content="Page Coment" />
+    <link rel="shortcut icon" href="../assets/images/kia/home_icon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../assets/images/kia/home_icon.png"
+    />
+    <link rel="shortcut icon" href="../assets/images/kia/favicon-16x16.png" />
+    <link rel="icon" href="../assets/images/kia/favicon-16x16.png" />
 
+    <!--  Stylesheet  -->
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="../assets/css/kia/pdp/index.css"
+      type="text/css"
     />
-    <link rel="stylesheet" href="assets/css/kia/pdp/natgeo/index.css" />
+    <link rel="stylesheet" href="../assets/css/kia/pdp/natgeo/index.css" />
   </head>
   <body>
     <!-- GNB (Global Navigation Bar) -->
-    <header class="gnb">
-      <div class="gnb-inner">
-        <div class="gnb-logo">
-          <img
-            src="assets/images/logos/logo-kia-connect.svg"
-            alt="Kia Connect Store"
-          />
-        </div>
-        <nav class="gnb-menu">
-          <a href="#" class="gnb-menu-item">All upgrades</a>
-          <a href="#" class="gnb-menu-item">Upgrade guides</a>
-          <a href="#" class="gnb-menu-item">Store Info</a>
-          <a href="#" class="gnb-menu-item">Customer support</a>
-        </nav>
-        <div class="gnb-right">
-          <div class="gnb-car-info">
-            <span class="car-model" id="carModel">Model</span>
-            <span class="divider"></span>
-            <span class="car-vin" id="carVin">VIN</span>
-            <button class="car-dropdown" aria-label="차량 정보 펼치기">
-              <svg width="12" height="6" viewBox="0 0 12 6" fill="none">
-                <path
-                  d="M1 1L6 5L11 1"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                />
-              </svg>
-            </button>
+    <header class="header">
+      <div class="hederWarp_n noBoder">
+        <div class="headerInner">
+          <div class="gnb">
+            <!-- GNB 로고 영역입니다. -->
+            <div class="logoWrap">
+              <a href="/kr/kia.html">
+                <i class="logoImg"></i>
+              </a>
+            </div>
+            <div class="menuWarp">
+              <div class="mobileMenuTop">
+                <!-- 모바일 슬라이드 메뉴의 로고 영역입니다. -->
+                <div class="mobileLogoWrap">
+                  <a href="">
+                    <i class="logoImg"></i>
+                  </a>
+                </div>
+                <span class="closeBtn" id="closeBtn">
+                  <a href="#"></a>
+                </span>
+              </div>
+              <!-- 모바일 전용 USER 관련 링크 영역입니다. -->
+              <div class="mobileFunc">
+                <button>
+                  <span>마이페이지</span>
+                  <!--<span>로그인</span>-->
+                </button>
+                <!-- <button>
+                  <span>장바구니</span>
+                 </button> -->
+              </div>
+              <!-- 모바일 전용 차량 선택 UI입니다. -->
+              <div class="mobileCarlist">
+                <a href="javascript:void(0)" class="mobilecarItem">
+                  <div class="item">
+                    <span>MV</span>
+                    <span>161어 1660</span>
+                  </div>
+                  <div class="arrow"></div>
+                </a>
+                <div class="carlistItem">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <span>MV</span>
+                        <span>KMTKEXXBPMU000081</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <span>SX</span>
+                        <span>161어 1660</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <span>MV</span>
+                        <span>452허 1234</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- PC 모바일 공통 메뉴 영역입니다. -->
+              <ul class="menu">
+                <li class="menuDepth1Wrap">
+                  <a
+                    href="/kr/kia.html#mainProductList"
+                    class="menuDepth1 lower"
+                    >디지털 사양</a
+                  >
+                  <div class="menuDepth2Wrap info">
+                    <h3>
+                      <a href="/kr/kia.html#mainProductList">디지털 사양</a>
+                    </h3>
+                    <ul>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_display_theme_disney.html"
+                          >디즈니 디스플레이 테마</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_display_theme_kbo.html"
+                          >KBO 디스플레이 테마</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_display_theme.html"
+                          >NBA 디스플레이 테마</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_in_car_game.html"
+                          >아케이드 게임</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_rspa2.html"
+                          >원격 스마트 주차 보조(RSPA 2)</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_rspa2_ev9.html"
+                          >부스트(The 2025 EV9)</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_lighting_pattern.html"
+                          >라이팅 패턴</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_srs_plus.html"
+                          >스마트 회생 시스템 플러스</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_streaming_premium.html"
+                          >스트리밍 프리미엄</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/product/pdp_streaming_plus.html"
+                          >스트리밍 플러스</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuDepth1Wrap">
+                  <a
+                    href="/kr/info/product-usage-guide.html"
+                    class="menuDepth1"
+                    data-url="/kr/info/product-usage-guide.html"
+                    >사양별 이용 안내</a
+                  >
+                  <div class="menuDepth2Wrap info">
+                    <h3>
+                      <a href="/kr/info/product-usage-guide.html"
+                        >사양별 이용 안내</a
+                      >
+                    </h3>
+                  </div>
+                </li>
+                <li class="menuDepth1Wrap">
+                  <a
+                    href="/kr/info/service-info.html"
+                    class="menuDepth1 lower"
+                    data-url="/kr/info/service-info.html"
+                    >스토어 소개</a
+                  >
+                  <div class="menuDepth2Wrap info">
+                    <h3>
+                      <a href="/kr/info/service-info.html">스토어 소개</a>
+                    </h3>
+                    <ul>
+                      <li class="menuDepth2">
+                        <a href="/kr/info/service-info.html">스토어 소개</a>
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/info/registration-guide.html"
+                          >스토어 가입안내</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/info/buying-Installation-guide.html"
+                          >스토어 이용안내</a
+                        >
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/service/event-list.html">이벤트</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuDepth1Wrap">
+                  <a
+                    href="/kr/info/as-guide.html"
+                    class="menuDepth1 lower"
+                    data-url="/kr/info/as-guide.html"
+                    >고객지원</a
+                  >
+                  <div class="menuDepth2Wrap support">
+                    <h3><a href="/kr/info/as-guide.html">고객지원</a></h3>
+                    <ul>
+                      <li class="menuDepth2">
+                        <a href="/kr/service/faq.html">자주하는 질문</a>
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/service/inquiry-list.html">문의하기</a>
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/info/as-guide.html">고객센터 및 AS안내</a>
+                      </li>
+                      <li class="menuDepth2">
+                        <a href="/kr/service/notice-list.html">공지사항</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <!-- 모바일 전용 추가 메뉴 영역입니다. -->
+              <div class="mobileSubMenu">
+                <a
+                  href="https://privacy.kia.com/overview/full-policy/"
+                  target="_blank"
+                  >개인정보 처리방침</a
+                >
+                <a href="/kr/member/terms.html">이용약관</a>
+              </div>
+              <!-- 모바일 전용 로그아웃 버튼입니다. -->
+              <!-- <div class="loginBtn oneButton">
+                 <button><p>로그아웃</p></button>
+               </div> -->
+            </div>
           </div>
-          <button class="gnb-mypage" aria-label="마이페이지">
-            <img src="./assets/icons/icon-user.svg" alt="user icon" />
-          </button>
+          <div class="func">
+            <!-- PC 전용 차량 선택 UI입니다. -->
+            <div class="carlist">
+              <a href="javascript:void(0)" class="carItem">
+                <span>MV</span>
+                <span>161어 1660</span>
+              </a>
+              <div class="carlistItem">
+                <svg
+                  width="14"
+                  height="10"
+                  viewBox="0 0 14 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="boxBullet"
+                >
+                  <path d="M7 1L1 10H13L7 1Z" fill="white" />
+                  <path d="M1 9L7 1L13 9" stroke="#DEDEDE" />
+                </svg>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <span>MV</span>
+                      <span>KMTKEXXBPMU000081</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <span>SX</span>
+                      <span>161어 1660</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <span>MV</span>
+                      <span>452허 1234</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-          <button class="gnb-mobile-menu" aria-label="모바일 메뉴">
-            <img src="./assets/icons/icon-mo_menu.svg" alt="menu icon" />
-          </button>
+            <!-- PC 전용 로그인 버튼입니다. -->
+            <div class="userLogin">
+              <a href="#">로그인/가입</a>
+            </div>
+
+            <!-- PC 전용 USER 관련 링크 영역입니다. -->
+            <div class="user">
+              <a href="../mypage/my-product-list.html"
+                ><i class="icon-user"></i
+              ></a>
+            </div>
+
+            <!-- PC 모바일 공통 장바구니 버튼입니다. -->
+            <!-- <div class="cart">
+               <a href="" class="login-alrt"><i class="icon-cart"></i></a>
+              </div> -->
+
+            <!-- 모바일 전용 햄버거 메뉴 버튼입니다. -->
+            <div class="moblieMenu burgurBtn">
+              <span class="burgur" id="burgur">
+                <span class="top-line"></span>
+                <span class="bot-line"></span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -113,7 +370,7 @@
                   National Geographic Display Themes
                 </h2>
                 <button class="btn-like" id="btnLike" aria-label="좋아요">
-                  <img src="assets/icons/icon-heart.svg" alt="Like" />
+                  <img src="../assets/icons/icon-heart.svg" alt="Like" />
                 </button>
               </div>
               <p class="product-description" id="productDescription">
@@ -130,7 +387,7 @@
                 <div class="option-item selected" data-theme="baby-animals">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-baby-animals-thumbnail.png"
+                      src="../assets/images/pdp/natgeo/details/theme-baby-animals-thumbnail.png"
                       alt="Baby Animals"
                     />
                   </div>
@@ -140,7 +397,7 @@
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
@@ -152,7 +409,7 @@
                 <div class="option-item" data-theme="space-wonders">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-space-wonders-thumbnail.png"
+                      src="../assets/images/pdp/natgeo/details/theme-space-wonders-thumbnail.png"
                       alt="Space Wonders"
                     />
                   </div>
@@ -162,7 +419,7 @@
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
@@ -174,7 +431,7 @@
                 <div class="option-item" data-theme="landscape">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-landscape-thumbnail.png"
+                      src="../assets/images/pdp/natgeo/details/theme-landscape-thumbnail.png"
                       alt="Landscape"
                     />
                   </div>
@@ -184,7 +441,7 @@
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
@@ -236,19 +493,19 @@
             <div class="swiper-slide kv-slide" data-theme="theme-bc">
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_bc_hero.png"
+                src="../assets/images/pdp/natgeo/details/img_bc_hero.png"
                 alt="KV Image 1"
                 class="kv-image view-pc"
               />
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_bc_hero_mo.png"
+                src="../assets/images/pdp/natgeo/details/img_bc_hero_mo.png"
                 alt="KV Image 1"
                 class="kv-image view-mo"
               />
               <img
                 class="kv-logo"
-                src="assets/images/natgeo/logo-national-geographic_black.png"
+                src="../assets/images/pdp/natgeo/logo-national-geographic_black.png"
                 alt="national-geographic"
               />
               <div class="kv-title">
@@ -279,19 +536,19 @@
             <div class="swiper-slide kv-slide" data-theme="theme-sw">
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_sw_hero.png"
+                src="../assets/images/pdp/natgeo/details/img_sw_hero.png"
                 alt="KV Image 2"
                 class="kv-image view-pc"
               />
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_sw_hero_mo.png"
+                src="../assets/images/pdp/natgeo/details/img_sw_hero_mo.png"
                 alt="KV Image 2"
                 class="kv-image view-mo"
               />
               <img
                 class="kv-logo"
-                src="assets/images/natgeo/logo-national-geographic.png"
+                src="../assets/images/pdp/natgeo/logo-national-geographic.png"
                 alt="national-geographic"
               />
               <div class="kv-title">
@@ -322,19 +579,19 @@
             <div class="swiper-slide kv-slide" data-theme="theme-ls">
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_ls_hero.png"
+                src="../assets/images/pdp/natgeo/details/img_ls_hero.png"
                 alt="KV Image 3"
                 class="kv-image view-pc"
               />
               <img
                 data-role="kv-shot"
-                src="assets/images/natgeo/details/img_ls_hero_mo.png"
+                src="../assets/images/pdp/natgeo/details/img_ls_hero_mo.png"
                 alt="KV Image 3"
                 class="kv-image view-mo"
               />
               <img
                 class="kv-logo"
-                src="assets/images/natgeo/logo-national-geographic_black.png"
+                src="../assets/images/pdp/natgeo/logo-national-geographic_black.png"
                 alt="national-geographic"
               />
               <div class="kv-title">
@@ -391,7 +648,7 @@
               <div class="theme-card is-active" data-theme="baby-animals">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/natgeo/details/theme-baby-animals-card.png"
+                    src="../assets/images/pdp/natgeo/details/theme-baby-animals-card.png"
                     alt="National Geographic Baby Animals thumbnail"
                     loading="lazy"
                   />
@@ -413,7 +670,7 @@
               <div class="theme-card" data-theme="space-wonders">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/natgeo/details/theme-space-wonders-thumbnail.png"
+                    src="../assets/images/pdp/natgeo/details/theme-space-wonders-thumbnail.png"
                     alt="National Geographic Space Wonders thumbnail"
                     loading="lazy"
                   />
@@ -434,7 +691,7 @@
               <div class="theme-card" data-theme="landscape">
                 <div class="theme-card-thumb">
                   <img
-                    src="assets/images/natgeo/details/theme-landscape-thumbnail.png"
+                    src="../assets/images/pdp/natgeo/details/theme-landscape-thumbnail.png"
                     alt="National Geographic Landscape thumbnail"
                     loading="lazy"
                   />
@@ -455,7 +712,7 @@
               <div class="theme-card theme-card-cta">
                 <div class="theme-card-icon">
                   <img
-                    src="assets/icons/icon-pick-theme.png"
+                    src="../assets/icons/icon-pick-theme.png"
                     alt="Theme selection icon"
                     loading="lazy"
                   />
@@ -514,7 +771,7 @@
                   <div class="preview-item">
                     <img
                       id="previewCluster"
-                      src="assets/images/natgeo/details/img_bc_detail_01.png"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_01.png"
                       alt="Cluster"
                       loading="lazy"
                     />
@@ -525,7 +782,7 @@
                   <div class="preview-item">
                     <img
                       id="previewWelcome"
-                      src="assets/images/natgeo/details/img_bc_detail_02.png"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_02.png"
                       alt="Welcome Message"
                       loading="lazy"
                     />
@@ -540,7 +797,7 @@
                   <div class="preview-item">
                     <img
                       id="previewHomecard"
-                      src="assets/images/natgeo/details/img_bc_detail_03.png"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_03.png"
                       alt="Homecard"
                       loading="lazy"
                     />
@@ -555,7 +812,7 @@
                   <div class="preview-item">
                     <img
                       id="previewNavigation"
-                      src="assets/images/natgeo/details/img_bc_detail_04.png"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_04.png"
                       alt="Navigation"
                       loading="lazy"
                     />
@@ -566,7 +823,7 @@
                   <div class="preview-item">
                     <img
                       id="previewGoodbye"
-                      src="assets/images/natgeo/details/img_bc_detail_05.png"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_05.png"
                       alt="Navigation"
                       loading="lazy"
                     />
@@ -591,7 +848,7 @@
                 <!-- Welcome Video Area -->
                 <div class="playful-video-item" data-discover="welcome">
                   <img
-                    src="assets/images/natgeo/details/img_disc_video.png"
+                    src="../assets/images/pdp/natgeo/details/img_disc_video.png"
                     alt="Welcome video preview"
                     loading="lazy"
                     class="playful-video-bg"
@@ -618,7 +875,7 @@
                         </div>
                         <div class="playful-video-play">
                           <img
-                            src="assets/icons/icon-play-button.png"
+                            src="../assets/icons/icon-play-button.png"
                             alt="Play button"
                           />
                         </div>
@@ -645,7 +902,7 @@
                         </div>
                         <div class="playful-video-play">
                           <img
-                            src="assets/icons/icon-play-button.png"
+                            src="../assets/icons/icon-play-button.png"
                             alt="Play button"
                           />
                         </div>
@@ -657,7 +914,7 @@
                 <!-- Goodbye Video Area -->
                 <div class="playful-video-item" data-discover="goodbye">
                   <img
-                    src="assets/images/natgeo/details/img_disc_video.png"
+                    src="../assets/images/pdp/natgeo/details/img_disc_video.png"
                     alt="Goodbye video preview"
                     loading="lazy"
                     class="playful-video-bg"
@@ -684,7 +941,7 @@
                         </div>
                         <div class="playful-video-play">
                           <img
-                            src="assets/icons/icon-play-button.png"
+                            src="../assets/icons/icon-play-button.png"
                             alt="Play button"
                           />
                         </div>
@@ -711,7 +968,7 @@
                         </div>
                         <div class="playful-video-play">
                           <img
-                            src="assets/icons/icon-play-button.png"
+                            src="../assets/icons/icon-play-button.png"
                             alt="Play button"
                           />
                         </div>
@@ -732,7 +989,7 @@
               <figure class="playful-feature">
                 <div class="feature-media">
                   <img
-                    src="assets/images/natgeo/details/discover-cluster.png"
+                    src="../assets/images/pdp/natgeo/details/discover-cluster.png"
                     alt="Cluster preview"
                     loading="lazy"
                   />
@@ -753,7 +1010,7 @@
               <figure class="playful-feature">
                 <div class="feature-media">
                   <img
-                    src="assets/images/natgeo/details/img_bc_disc_02.png"
+                    src="../assets/images/pdp/natgeo/details/img_bc_disc_02.png"
                     alt="Navigation preview"
                     loading="lazy"
                   />
@@ -770,7 +1027,7 @@
               <figure class="playful-feature">
                 <div class="feature-media">
                   <img
-                    src="assets/images/natgeo/details/discover-homecard_1.png"
+                    src="../assets/images/pdp/natgeo/details/discover-homecard_1.png"
                     alt="Homecard preview"
                     loading="lazy"
                   />
@@ -787,7 +1044,7 @@
               <figure class="playful-feature">
                 <div class="feature-media">
                   <img
-                    src="assets/images/natgeo/details/discover-profile_1.png"
+                    src="../assets/images/pdp/natgeo/details/discover-profile_1.png"
                     alt="Profile image selection"
                     loading="lazy"
                   />
@@ -823,7 +1080,7 @@
                 <div class="reason-image">
                   <img
                     id="reasonCardImage1"
-                    src="assets/images/natgeo/details/reasons-babycreatures.png"
+                    src="../assets/images/pdp/natgeo/details/reasons-babycreatures.png"
                     alt="Baby Animals theme preview"
                     loading="lazy"
                   />
@@ -865,7 +1122,7 @@
                 <div class="reason-image">
                   <img
                     id="reasonCardImage2"
-                    src="assets/images/natgeo/details/reasons-space-wonders.png"
+                    src="../assets/images/pdp/natgeo/details/reasons-space-wonders.png"
                     alt="Space Wonders theme preview"
                     loading="lazy"
                   />
@@ -877,7 +1134,7 @@
                 <div class="reason-image">
                   <img
                     id="reasonCardImage3"
-                    src="assets/images/natgeo/details/reasons-landscape.png"
+                    src="../assets/images/pdp/natgeo/details/reasons-landscape.png"
                     alt="Landscape theme preview"
                     loading="lazy"
                   />
@@ -919,14 +1176,14 @@
                 <div class="reason-image">
                   <img
                     id="reasonCardImage4"
-                    src="assets/images/natgeo/details/reasons-car-display.png"
+                    src="../assets/images/pdp/natgeo/details/reasons-car-display.png"
                     alt="Car with National Geographic display"
                     loading="lazy"
                     class="v-pc"
                   />
                   <img
                     id="reasonCardImage4_mo"
-                    src="assets/images/natgeo/details/m_reasons-car-display.png"
+                    src="../assets/images/pdp/natgeo/details/m_reasons-car-display.png"
                     alt="Car with National Geographic display"
                     loading="lazy"
                     class="v-mo"
@@ -940,7 +1197,7 @@
               <div class="reasons-video-container">
                 <img
                   id="reasonsBannerImage"
-                  src="assets/images/natgeo/details/kv-banner-reasons.png"
+                  src="../assets/images/pdp/natgeo/details/kv-banner-reasons.png"
                   alt="National Geographic Display Themes Preview"
                   loading="lazy"
                   class="reasons-video-image"
@@ -984,7 +1241,7 @@
             <div class="info-item">
               <div class="info-icon">
                 <img
-                  src="assets/icons/icon-ccnc-vehicles.svg"
+                  src="../assets/icons/icon-ccnc-vehicles.svg"
                   alt="ccNC vehicles icon"
                   loading="lazy"
                 />
@@ -1002,7 +1259,7 @@
             <div class="info-item">
               <div class="info-icon">
                 <img
-                  src="assets/icons/icon-personal-customizing.svg"
+                  src="../assets/icons/icon-personal-customizing.svg"
                   alt="Personal Customizing icon"
                   loading="lazy"
                 />
@@ -1121,7 +1378,7 @@
               <div class="feature-content">
                 <div class="thumbnail">
                   <img
-                    src="assets/images/natgeo/related-lighting-patterns.png"
+                    src="../assets/images/pdp/natgeo/related-lighting-patterns.png"
                     alt="Lighting Patterns"
                     loading="lazy"
                   />
@@ -1144,7 +1401,7 @@
               <div class="feature-content">
                 <div class="thumbnail">
                   <img
-                    src="assets/images/natgeo/related-nba-themes.png"
+                    src="../assets/images/pdp/natgeo/related-nba-themes.png"
                     alt="NBA Display Themes"
                     loading="lazy"
                   />
@@ -1165,189 +1422,179 @@
         </div>
       </section>
       <!-- Related Feature -->
-
-      <!-- Section > Go to the List -->
-      <section class="section go-to-list">
-        <div class="section-inner">
-          <a href="#" class="go-to-list-link">
-            <img src="./assets/icons/icon-arrow.svg" alt="arrow icon" />
-            <span>Go to the List</span>
-          </a>
-        </div>
-      </section>
-      <!-- Section > Go to the List -->
     </main>
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="v-pc">
-        <div class="footer-inner">
-          <!-- Left Section: Logo and Links -->
-          <div class="footer-left">
-            <div class="footer-logo">
-              <img
-                src="assets/images/logos/kn-logo.svg"
-                alt="KIA"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="footer-content">
-              <div class="footer-nav-primary">
-                <a href="#" class="footer-nav-link footer-nav-link-primary"
-                  >Privacy Notice</a
-                >
-                <span class="footer-divider">|</span>
-                <a href="#" class="footer-nav-link">Terms of Use</a>
-              </div>
-
-              <div class="footer-nav">
-                <div class="footer-nav-secondary">
-                  <p>Kia Corporation, CEO Song Ho-sung, Choi Joon-young</p>
-                  <span class="footer-divider">|</span>
-                  <p>Kia, Hyeonneung-ro 12, Seocho-gu, Seoul</p>
-                  <span class="footer-divider">|</span>
-                  <p>Email: connectstore@kia.com</p>
-                </div>
-
-                <div class="footer-nav-secondary">
-                  <p>Business registration No.: 119-81-02316</p>
-                  <span class="footer-divider">|</span>
-                  <p>Mail order report: 2006-07935</p>
-                  <span class="footer-divider">|</span>
-                  <p>Hosting provider: Hyundai AutoEver</p>
-                </div>
-
-                <div class="footer-nav-secondary">
-                  <p>
-                    Personal Information Manager: Lee Sang-young, Kia
-                    Information Protection Center, privacy@kia.com /
-                    080-200-2000
-                  </p>
-                </div>
-              </div>
-
-              <div class="footer-copyright">
-                <p>© Kia CORP. ALL RIGHTS RESERVED.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Section: Customer Service and Family Site -->
-          <div class="footer-right">
-            <div class="footer-customer-service">
-              <h3 class="footer-cs-title">Customer Service: 080-200-2000</h3>
-              <p class="footer-cs-time">
-                Error inquiry: 24 hours a day, 7 days a week
-              </p>
-              <p class="footer-cs-time">General Inquiry: 09:00–18:00</p>
-            </div>
-
-            <div class="footer-family-site">
-              <button class="footer-family-button">
-                <span>Family Site</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="v-mo">
-        <div class="footer-inner">
-          <div class="footer-logo">
-            <img
-              src="./assets/images/logos/logo-kia-connect-footer.svg"
-              alt="KIA Connect"
-              loading="lazy"
-            />
-          </div>
-          <div class="footer-nav">
-            <nav>
-              <a href="" class="nav-item">All upgrades</a>
-              <button
-                type="button"
-                class="nav-item"
-                aria-haspopup="true"
-                aria-expanded="false"
-                aria-controls="myOrdersMenu"
-              >
-                My orders
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="9"
-                  viewBox="0 0 13 9"
-                  fill="none"
-                >
-                  <path
-                    d="M0.379395 0.325195L6.37914 7.3252L12.3794 0.325195"
-                    stroke="#D9D9D9"
-                  />
-                </svg>
-              </button>
-
-              <div class="sub" id="myOrdersMenu" role="menu" hidden>
-                <a href="" class="sub-item" role="menuitem">item1</a>
-                <a href="" class="sub-item" role="menuitem">item2</a>
-              </div>
-              <a href="" class="nav-item">Upgrade guides</a>
-              <a href="" class="nav-item">FAQ</a>
-              <a href="" class="nav-item">Customer support</a>
-            </nav>
-          </div>
-          <div class="footer-terms">
-            <ul>
-              <li>
-                <a href="">Terms of use</a>
-              </li>
-              <li>
-                <a href="">Privacy notice</a>
-              </li>
-              <li>
-                <a href="">Right of withdrawal</a>
-              </li>
-              <li>
-                <a href="">Cookies policy</a>
-              </li>
-            </ul>
-          </div>
-          <p class="copyright">
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.12385 7.59554C4.22785 7.59554 3.56785 7.35554 3.14385 6.87554C2.71985 6.39554 2.50785 5.73954 2.50785 4.90754C2.50785 4.06754 2.73985 3.41154 3.20385 2.93954C3.67585 2.45954 4.30785 2.21954 5.09985 2.21954C5.38785 2.21954 5.65585 2.24754 5.90385 2.30354C6.15985 2.35154 6.39585 2.43154 6.61185 2.54354L6.31185 3.15554C6.12785 3.06754 5.93185 3.00354 5.72385 2.96354C5.52385 2.91554 5.31185 2.89154 5.08785 2.89154C4.55985 2.89154 4.14385 3.06754 3.83985 3.41954C3.53585 3.77154 3.38385 4.27154 3.38385 4.91954C3.38385 6.25554 3.97185 6.92354 5.14785 6.92354C5.39585 6.92354 5.62385 6.90754 5.83185 6.87554C6.03985 6.84354 6.23185 6.79554 6.40785 6.73154V7.40354C6.23185 7.45954 6.03585 7.50754 5.81985 7.54754C5.61185 7.57954 5.37985 7.59554 5.12385 7.59554ZM4.94385 9.88754C4.26385 9.88754 3.62385 9.75954 3.02385 9.50354C2.42385 9.24754 1.89585 8.89554 1.43985 8.44754C0.991848 7.99154 0.639848 7.46354 0.383848 6.86354C0.127848 6.26354 -0.00015226 5.62354 -0.00015226 4.94354C-0.00015226 4.25554 0.127848 3.61554 0.383848 3.02354C0.639848 2.42354 0.991848 1.89954 1.43985 1.45154C1.89585 0.995539 2.42385 0.639539 3.02385 0.383538C3.62385 0.127538 4.26385 -0.000461578 4.94385 -0.000461578C5.63185 -0.000461578 6.27185 0.127538 6.86385 0.383538C7.46385 0.639539 7.98785 0.995539 8.43585 1.45154C8.89185 1.89954 9.24785 2.42354 9.50385 3.02354C9.75985 3.61554 9.88785 4.25554 9.88785 4.94354C9.88785 5.62354 9.75985 6.26354 9.50385 6.86354C9.24785 7.46354 8.89185 7.99154 8.43585 8.44754C7.98785 8.89554 7.46385 9.24754 6.86385 9.50354C6.27185 9.75954 5.63185 9.88754 4.94385 9.88754ZM4.94385 9.21554C5.53585 9.21554 6.08785 9.10754 6.59985 8.89154C7.11985 8.66754 7.57585 8.35954 7.96785 7.96754C8.35985 7.57554 8.66385 7.12354 8.87985 6.61154C9.10385 6.09154 9.21585 5.53554 9.21585 4.94354C9.21585 4.35154 9.10385 3.79954 8.87985 3.28754C8.66385 2.76754 8.35985 2.31154 7.96785 1.91954C7.57585 1.52754 7.11985 1.22354 6.59985 1.00754C6.08785 0.783538 5.53585 0.671538 4.94385 0.671538C4.35185 0.671538 3.79585 0.783538 3.27585 1.00754C2.76385 1.22354 2.31185 1.52754 1.91985 1.91954C1.52785 2.31154 1.21985 2.76754 0.995848 3.28754C0.779848 3.79954 0.671848 4.35154 0.671848 4.94354C0.671848 5.53554 0.779848 6.09154 0.995848 6.61154C1.21985 7.12354 1.52785 7.57554 1.91985 7.96754C2.31185 8.35954 2.76385 8.66754 3.27585 8.89154C3.79585 9.10754 4.35185 9.21554 4.94385 9.21554Z"
-                fill="#9BA1A5"
-              />
-            </svg>
-            Copyright 2023 Kia Connect GmbH. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-    <!--//footer-->
 
     <!-- floating 메뉴-->
     <div class="floating_menu">
-      <a href="" class="floating_inquiry"
-        ><img src="assets/icons/floating_faq.png" alt="문의하기"
+      <a href="/kr/service/faq.html" class="floating_inquiry"
+        ><img src="../assets/icons/floating_faq.png" alt="문의하기"
       /></a>
-      <a href="" class="floating_faq"
-        ><img src="assets/icons/floating_inquiry.png" alt="자주하는 질문"
+      <a href="/kr/service/inquiry-list.html" class="floating_faq"
+        ><img src="../assets/icons/floating_inquiry.png" alt="자주하는 질문"
       /></a>
       <button class="floating_top">
-        <img src="assets/icons/floating_top.png" alt="top" />
+        <img src="../assets/icons/floating_top.png" alt="top" />
       </button>
     </div>
 
+    <!--  Go to the List  -->
+    <section class="go-to-list">
+      <div class="section-inner">
+        <a href="#" class="go-to-list-link">
+          <img src="../assets/icons/icon-arrow.svg" alt="arrow icon" />
+          <span>Go to the List</span>
+        </a>
+      </div>
+    </section>
+    <!--  Go to the List  -->
+    <!-- footer -->
+    <div class="footer">
+      <div class="kiaInner">
+        <div class="tLeft">
+          <div class="logoSEction">
+            <a href="/kr/kia.html"
+              ><img src="../assets/images/kia/kia-logo.svg" alt="kia"
+            /></a>
+          </div>
+          <div class="companyInfo">
+            <ul>
+              <li>
+                <a
+                  href="https://privacy.kia.com/overview/full-policy/"
+                  target="_blank"
+                  >개인정보 처리방침</a
+                >
+              </li>
+              <li><a href="/kr/member/terms.html">이용약관</a></li>
+            </ul>
+            <ul>
+              <li>사업자: 기아주식회사, 대표 송호성, 최준영</li>
+              <li>주소: 서울특별시 서초구 현릉로 12 기아</li>
+              <li>사업자등록번호: 119-81-02316</li>
+              <li>통신판매신고: 2006-07935</li>
+              <li>호스팅제공자: 현대오토에버</li>
+              <li>이메일: KiaConnectStore@kia.com</li>
+              <li>
+                개인정보책임자: 기아정보보호센터 이상영 상무, privacy@kia.com /
+                080-200-2000
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="csTime">
+          <div>
+            <p>
+              <strong>고객센터: 080-200-2000</strong>
+            </p>
+            <p><span>오류문의: 24시간 연중 무휴</span></p>
+            <p>
+              <span>
+                일반 문의: 주중 08:30 ~ 18:00<br /><span
+                  style="margin-left: 64px"
+                  >(토·일·공휴일 휴무)</span
+                >
+              </span>
+            </p>
+          </div>
+          <div class="familyBoxWarp">
+            <div class="familyBox">
+              <div class="familyInner">
+                <div class="cont-select">
+                  <ul class="list-member">
+                    <li>
+                      <a href="https://www.kia.com/kr" target="_balnk">기아</a>
+                    </li>
+                    <li>
+                      <a href="https://connect.kia.com/kr" target="_balnk"
+                        >기아 커넥트</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://worldwide.kia.com/kr" target="_balnk"
+                        >Worldwide</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.hyundai.co.kr" target="_balnk"
+                        >현대자동차그룹</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://members.kia.com" target="_balnk"
+                        >기아멤버스</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://drivingexperience.hyundai.co.kr/"
+                        target="_balnk"
+                        >기아 드라이빙 아카데미</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://worldwide.kia.com/kr/company/ir"
+                        target="_balnk"
+                        >IR</a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://winwin.hyundai.com/" target="_balnk"
+                        >동반성장</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://gbic.hyundai.com/" target="_balnk"
+                        >글로벌경영연구소</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://tigers.co.kr" target="_balnk"
+                        >기아타이거즈</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://special.kia.com" target="_balnk"
+                        >기아군용</a
+                      >
+                    </li>
+                  </ul>
+                  <button class="btn-select">Family Site</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="copyRight"><span>Ⓒ</span> Kia CORP. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+    <!--//footer-->
+
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/js/pdp/natgeo/theme-data.js"></script>
-    <script src="assets/js/pdp/natgeo/main.js"></script>
-    <script src="./assets/js/youtube.js"></script>
-    <script src="./assets/js/floating_menu.js"></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="../assets/js/library/jquery.js?v1"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="../assets/js/library/jquery-ui.min.js?v1"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="../assets/js/library/swiper-bundle.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="../assets/js/library/aos.js?v1"
+    ></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/pdp/natgeo/theme-data.js"></script>
+    <script src="../assets/js/pdp/natgeo/main.js"></script>
+    <script src="../assets/js/youtube.js"></script>
+    <script src="../assets/js/floating_menu.js"></script>
   </body>
 </html>

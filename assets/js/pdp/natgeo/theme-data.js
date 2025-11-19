@@ -7,30 +7,31 @@ const natgeo_themeData = {
       'National Geographic Display Themes turns every drive into an adventure',
     price: 29900,
     priceLabel: 'Lifetime pass',
-    thumbnail: 'assets/images/natgeo/details/theme-baby-animals-thumbnail.png',
-    backgroundImage: 'assets/images/natgeo/details/bg_1.png',
+    thumbnail:
+      '/assets/images/pdp/natgeo/details/theme-baby-animals-thumbnail.png',
+    backgroundImage: '/assets/images/pdp/natgeo/details/bg_1.png',
     themeNames: ['baby-animals', 'space-wonders', 'landscape'],
     discoverShots: [
-      'assets/images/natgeo/details/img_disc_video.png',
-      'assets/images/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/natgeo/details/img_disc_video_mo.png',
-      'assets/images/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
     ],
     previewImages: {
-      cluster: 'assets/images/natgeo/details/img_bc_detail_01.png',
-      welcome: 'assets/images/natgeo/details/img_bc_detail_02.png',
-      homecard: 'assets/images/natgeo/details/img_bc_detail_03.png',
-      navigation: 'assets/images/natgeo/details/img_bc_detail_04.png',
-      goodbye: 'assets/images/natgeo/details/img_bc_detail_05.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_bc_detail_01.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_bc_detail_02.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_bc_detail_03.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_bc_detail_04.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_bc_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/natgeo/details/img_bc_detail_01_mo.png',
-      welcome: 'assets/images/natgeo/details/img_bc_detail_02_mo.png',
-      homecard: 'assets/images/natgeo/details/img_bc_detail_03_mo.png',
-      navigation: 'assets/images/natgeo/details/img_bc_detail_04_mo.png',
-      goodbye: 'assets/images/natgeo/details/img_bc_detail_05_mo.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_bc_detail_01_mo.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_bc_detail_02_mo.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_bc_detail_03_mo.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_bc_detail_04_mo.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_bc_detail_05_mo.png',
     },
     features: [
       {
@@ -58,25 +59,25 @@ const natgeo_themeData = {
           description:
             'The selected National Geographic theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster.png',
         },
         {
           title: 'Navigation',
           description:
             'National Geographic photography highlights your current location during navigation.',
-          image: 'assets/images/natgeo/details/img_bc_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_bc_disc_02.png',
         },
         {
           title: 'Homecard',
           description:
             'National Geographic photographs appear across various menu screens.',
-          image: 'assets/images/natgeo/details/discover-homecard_1.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_1.png',
         },
         {
           title: 'Profile',
           description:
             'Choose from National Geographic-themed profile images—choose a unique one for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_1.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_1.png',
         },
       ],
     },
@@ -91,36 +92,38 @@ const natgeo_themeData = {
           description:
             'The selected Disney Theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster.png',
         },
         {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/natgeo/details/img_bc_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_bc_disc_02.png',
         },
         {
           title: 'Homecard',
           description:
             'Artwork of Disney National Geographic graphics and logos appear across various menu screens.',
-          image: 'assets/images/natgeo/details/discover-homecard_1.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_1.png',
         },
         {
           title: 'Profile',
           description:
             'Choose from Disney National Geographic-themed profile images—choose a unique one for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_1.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_1.png',
         },
       ],
     },
     videos: {
       welcome: {
-        avnt: 'assets/videos/baby-animals/welcome/avnt_welcome.mp4',
-        cluster: 'assets/videos/baby-animals/welcome/cluster_welcome.mp4',
+        avnt: '/assets/videos/pdp/natgeo/baby-animals/welcome/avnt_welcome.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/baby-animals/welcome/cluster_welcome.mp4',
       },
       goodbye: {
-        avnt: 'assets/videos/baby-animals/goodbye/avnt_goodbye.mp4',
-        cluster: 'assets/videos/baby-animals/goodbye/cluster_goodbye.mp4',
+        avnt: '/assets/videos/pdp/natgeo/baby-animals/goodbye/avnt_goodbye.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/baby-animals/goodbye/cluster_goodbye.mp4',
       },
     },
     credit:
@@ -137,30 +140,31 @@ const natgeo_themeData = {
       'National Geographic Display Themes turns every drive into an adventure',
     price: 29900,
     priceLabel: 'Lifetime pass',
-    thumbnail: 'assets/images/natgeo/details/theme-space-wonders-thumbnail.png',
-    backgroundImage: 'assets/images/natgeo/details/bg_2.png',
+    thumbnail:
+      '/assets/images/pdp/natgeo/details/theme-space-wonders-thumbnail.png',
+    backgroundImage: '/assets/images/pdp/natgeo/details/bg_2.png',
     themeNames: ['space-wonders', 'landscape', 'baby-animals'],
     discoverShots: [
-      'assets/images/natgeo/details/img_disc_video.png',
-      'assets/images/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/natgeo/details/img_disc_video_mo.png',
-      'assets/images/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
     ],
     previewImages: {
-      cluster: 'assets/images/natgeo/details/img_sw_detail_01.png',
-      welcome: 'assets/images/natgeo/details/img_sw_detail_02.png',
-      homecard: 'assets/images/natgeo/details/img_sw_detail_03.png',
-      navigation: 'assets/images/natgeo/details/img_sw_detail_04.png',
-      goodbye: 'assets/images/natgeo/details/img_sw_detail_05.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_sw_detail_01.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_sw_detail_02.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_sw_detail_03.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_sw_detail_04.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_sw_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/natgeo/details/img_sw_detail_01_mo.png',
-      welcome: 'assets/images/natgeo/details/img_sw_detail_02_mo.png',
-      homecard: 'assets/images/natgeo/details/img_sw_detail_03_mo.png',
-      navigation: 'assets/images/natgeo/details/img_sw_detail_04_mo.png',
-      goodbye: 'assets/images/natgeo/details/img_sw_detail_05_mo.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_sw_detail_01_mo.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_sw_detail_02_mo.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_sw_detail_03_mo.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_sw_detail_04_mo.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_sw_detail_05_mo.png',
     },
     features: [
       {
@@ -187,35 +191,37 @@ const natgeo_themeData = {
           description:
             'Journey through the cosmos with stunning space imagery on your cluster display.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster2.png',
         },
         {
           title: 'Navigation',
           description:
             'Navigate with the beauty of the universe highlighting your journey.',
-          image: 'assets/images/natgeo/details/img_sw_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_sw_disc_02.png',
         },
         {
           title: 'Homecard',
           description: 'Explore space photography across various menu screens.',
-          image: 'assets/images/natgeo/details/discover-homecard_2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_2.png',
         },
         {
           title: 'Profile',
           description:
             'Select from cosmic-themed profile images for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_2.png',
         },
       ],
     },
     videos: {
       welcome: {
-        avnt: 'assets/videos/space-wonders/welcome/avnt_welcome.mp4',
-        cluster: 'assets/videos/space-wonders/welcome/cluster_welcome.mp4',
+        avnt: '/assets/videos/pdp/natgeo/space-wonders/welcome/avnt_welcome.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/space-wonders/welcome/cluster_welcome.mp4',
       },
       goodbye: {
-        avnt: 'assets/videos/space-wonders/goodbye/avnt_goodbye.mp4',
-        cluster: 'assets/videos/space-wonders/goodbye/cluster_goodbye.mp4',
+        avnt: '/assets/videos/pdp/natgeo/space-wonders/goodbye/avnt_goodbye.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/space-wonders/goodbye/cluster_goodbye.mp4',
       },
     },
     mobileDiscoverFeatures: {
@@ -229,25 +235,25 @@ const natgeo_themeData = {
           description:
             'The selected Disney Theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster2.png',
         },
         {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/natgeo/details/img_sw_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_sw_disc_02.png',
         },
         {
           title: 'Homecard',
           description:
             'Artwork of Disney National Geographic graphics and logos appear across various menu screens.',
-          image: 'assets/images/natgeo/details/discover-homecard_2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_2.png',
         },
         {
           title: 'Profile',
           description:
             'Choose from Disney National Geographic-themed profile images—choose a unique one for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_2.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_2.png',
         },
       ],
     },
@@ -265,30 +271,31 @@ const natgeo_themeData = {
       'National Geographic Display Themes turns every drive into an adventure',
     price: 29900,
     priceLabel: 'Lifetime pass',
-    thumbnail: 'assets/images/natgeo/details/theme-landscape-thumbnail.png',
-    backgroundImage: 'assets/images/natgeo/details/bg_3.png',
+    thumbnail:
+      '/assets/images/pdp/natgeo/details/theme-landscape-thumbnail.png',
+    backgroundImage: '/assets/images/pdp/natgeo/details/bg_3.png',
     themeNames: ['landscape', 'baby-animals', 'space-wonders'],
     discoverShots: [
-      'assets/images/natgeo/details/img_disc_video.png',
-      'assets/images/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video.png',
     ],
     mobileDiscoverShots: [
-      'assets/images/natgeo/details/img_disc_video_mo.png',
-      'assets/images/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
+      '/assets/images/pdp/natgeo/details/img_disc_video_mo.png',
     ],
     previewImages: {
-      cluster: 'assets/images/natgeo/details/img_ls_detail_01.png',
-      welcome: 'assets/images/natgeo/details/img_ls_detail_02.png',
-      homecard: 'assets/images/natgeo/details/img_ls_detail_03.png',
-      navigation: 'assets/images/natgeo/details/img_ls_detail_04.png',
-      goodbye: 'assets/images/natgeo/details/img_ls_detail_05.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_ls_detail_01.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_ls_detail_02.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_ls_detail_03.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_ls_detail_04.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_ls_detail_05.png',
     },
     mobilePreviewImages: {
-      cluster: 'assets/images/natgeo/details/img_ls_detail_01_mo.png',
-      welcome: 'assets/images/natgeo/details/img_ls_detail_02_mo.png',
-      homecard: 'assets/images/natgeo/details/img_ls_detail_03_mo.png',
-      navigation: 'assets/images/natgeo/details/img_ls_detail_04_mo.png',
-      goodbye: 'assets/images/natgeo/details/img_ls_detail_05_mo.png',
+      cluster: '/assets/images/pdp/natgeo/details/img_ls_detail_01_mo.png',
+      welcome: '/assets/images/pdp/natgeo/details/img_ls_detail_02_mo.png',
+      homecard: '/assets/images/pdp/natgeo/details/img_ls_detail_03_mo.png',
+      navigation: '/assets/images/pdp/natgeo/details/img_ls_detail_04_mo.png',
+      goodbye: '/assets/images/pdp/natgeo/details/img_ls_detail_05_mo.png',
     },
     features: [
       {
@@ -315,35 +322,37 @@ const natgeo_themeData = {
           description:
             "Experience Earth's most stunning vistas on your cluster display with cinematic scenery.",
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster3.png',
         },
         {
           title: 'Navigation',
           description:
             'Navigate through beautiful landscapes highlighting your journey.',
-          image: 'assets/images/natgeo/details/img_ls_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_ls_disc_02.png',
         },
         {
           title: 'Homecard',
           description: "Explore nature's grandeur across various menu screens.",
-          image: 'assets/images/natgeo/details/discover-homecard_3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_3.png',
         },
         {
           title: 'Profile',
           description:
             'Choose from stunning landscape-themed profile images for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_3.png',
         },
       ],
     },
     videos: {
       welcome: {
-        avnt: 'assets/videos/landscape/welcome/avnt_welcome.mp4',
-        cluster: 'assets/videos/landscape/welcome/cluster_welcome.mp4',
+        avnt: '/assets/videos/pdp/natgeo/landscape/welcome/avnt_welcome.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/landscape/welcome/cluster_welcome.mp4',
       },
       goodbye: {
-        avnt: 'assets/videos/landscape/goodbye/avnt_goodbye.mp4',
-        cluster: 'assets/videos/landscape/goodbye/cluster_goodbye.mp4',
+        avnt: '/assets/videos/pdp/natgeo/landscape/goodbye/avnt_goodbye.mp4',
+        cluster:
+          '/assets/videos/pdp/natgeo/landscape/goodbye/cluster_goodbye.mp4',
       },
     },
     mobileDiscoverFeatures: {
@@ -357,25 +366,25 @@ const natgeo_themeData = {
           description:
             'The selected Disney Theme appears on the cluster with themed graphics and gauges.',
           note: '※ Depending on the vehicle model, the cluster screen design may differ from the image above.',
-          image: 'assets/images/natgeo/details/discover-cluster3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-cluster3.png',
         },
         {
           title: 'Navigation',
           description:
             'Disney National Geographic artwork highlights your current location during navigation.',
-          image: 'assets/images/natgeo/details/img_ls_disc_02.png',
+          image: '/assets/images/pdp/natgeo/details/img_ls_disc_02.png',
         },
         {
           title: 'Homecard',
           description:
             'Artwork of Disney National Geographic graphics and logos appear across various menu screens.',
-          image: 'assets/images/natgeo/details/discover-homecard_3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-homecard_3.png',
         },
         {
           title: 'Profile',
           description:
             'Choose from Disney National Geographic-themed profile images—choose a unique one for each driver.',
-          image: 'assets/images/natgeo/details/discover-profile_3.png',
+          image: '/assets/images/pdp/natgeo/details/discover-profile_3.png',
         },
       ],
     },

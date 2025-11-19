@@ -405,8 +405,6 @@ function updateDiscoverFeatures(theme) {
       }
     }
   });
-
-  console.log('Discover features updated:', features.title);
 }
 
 function updateReasonImages(theme) {
@@ -416,23 +414,23 @@ function updateReasonImages(theme) {
   const reasonImages = [
     {
       id: 'reasonCardImage1',
-      pc: 'assets/images/details/reasons-babycreatures.png',
-      mobile: 'assets/images/details/mobile-reason-1.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-babycreatures.png',
+      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-1.png',
     },
     {
       id: 'reasonCardImage2',
-      pc: 'assets/images/details/reasons-space-wonders.png',
-      mobile: 'assets/images/details/mobile-reason-2.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-space-wonders.png',
+      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-2.png',
     },
     {
       id: 'reasonCardImage3',
-      pc: 'assets/images/details/reasons-landscape.png',
-      mobile: 'assets/images/details/mobile-reason-3.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-landscape.png',
+      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-3.png',
     },
     {
       id: 'reasonCardImage4',
-      pc: 'assets/images/details/reasons-car-display.png',
-      mobile: 'assets/images/details/mobile-reason-4.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-car-display.png',
+      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-4.png',
     },
   ];
 
@@ -447,15 +445,15 @@ function updateReasonImages(theme) {
   const reasonsBannerImage = document.getElementById('reasonsBannerImage');
   if (reasonsBannerImage) {
     const themeId = theme.id;
-    let bannerSrc = 'assets/images/details/kv-banner-reasons.png'; // PC 기본
+    let bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons.png'; // PC 기본
 
     //  테마별 배너 사용
     if (themeId === 'baby-animals') {
-      bannerSrc = 'assets/images/details/kv-banner-reasons.png';
+      bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons.png';
     } else if (themeId === 'space-wonders') {
-      bannerSrc = 'assets/images/details/kv-banner-reasons-2.png';
+      bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons-2.png';
     } else if (themeId === 'landscape') {
-      bannerSrc = 'assets/images/details/kv-banner-reasons-3.png';
+      bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons-3.png';
     }
 
     reasonsBannerImage.src = bannerSrc;
