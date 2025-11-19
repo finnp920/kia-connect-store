@@ -1,4 +1,6 @@
-/* PC Styles (Desktop: 1920px base) */
+/* ========================================
+   info-sticky
+   ======================================== */
 .info-sticky {
   position: sticky;
   top: 0;
@@ -73,7 +75,7 @@
     line-height: 13px;
   }
 }
-/* Mobile Styles (<= 360px) */
+
 @media screen and (max-width: 360px) {
   .info-sticky .info-sticky-inner .info-sticky-left {
     max-width: 123px;

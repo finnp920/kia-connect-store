@@ -49,7 +49,7 @@ section.themes {
   height: 52px;
   left: calc(50% - 101px / 2);
   bottom: -52px;
-  background-image: url('../../../icons/theme-stage-after.svg');
+  background-image: url('../../../../../icons/theme-stage-after.svg');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -240,6 +240,6 @@ section.themes {
     height: 24px;
     left: calc(50% - 48px / 2);
     bottom: -24px;
-    background-image: url('../../../icons/theme-stage-after-mobile.svg');
+    background-image: url('../../../../../icons/theme-stage-after-mobile.svg');
   }
 }

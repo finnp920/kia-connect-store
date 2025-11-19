@@ -1,6 +1,7 @@
-/* ========================================
-   CSS Reset & Base Styles
-   ======================================== */
+@import url('info-sticky.css');
+@import url('go_to_list.css');
+@import url('variables.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,6 @@
 }
 
 html {
-  /*font-size: 16px;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
@@ -102,37 +102,4 @@ main section > .section-inner {
 .floating_menu.is-visible {
   opacity: 1;
   visibility: visible;
-}
-
-/* ========================================
-   Section > Go to the List
-   ======================================== */
-section.go-to-list {
-  background-color: #f3f3f3;
-  width: 100vw;
-  height: 100px;
-}
-
-section.go-to-list .section-inner {
-  height: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-section.go-to-list a.go-to-list-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 13px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
-  text-decoration: none;
-}
-
-section.go-to-list a.go-to-list-link:hover {
-  text-decoration: underline;
 }
