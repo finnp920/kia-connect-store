@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Kia Connect Store - Display Themes",
   "scripts": {
-    "sass:build": "sass assets/scss:assets/css --style compressed",
-    "sass:watch": "sass --watch assets/scss:assets/css",
+    "sass:build": "sass assets/css:assets/css --style compressed",
+    "sass:watch": "sass --watch assets/css:assets/css",
     "start": "npx http-server -p 8000 -c-1",
     "dev": "npx http-server -p 8000 -c-1 -o",
     "build": "npm run sass:build && echo 'SCSS compilation complete for Vercel'"
