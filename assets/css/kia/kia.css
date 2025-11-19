@@ -1,0 +1,1552 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*css 디폴트는 모바일이 기준*/
+/*반응형, 브라우저 크기가 300px 이하일때*/
+/*반응형, 브라우저 크기가 800px 이상일때*/
+/*@media (min-width: $mobile ) and (max-width: $tablet){*/
+/*반응형, 브라우저 크기가 1025px 이상일때*/
+/*반응형, 브라우저 크기가 1204px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+html body {
+  font-family: "KiaSignature";
+  font-weight: 400;
+  overflow-x: hidden;
+}
+html input[type=checkbox] {
+  accent-color: #000;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.6rem;
+  border-color: #dedede;
+}
+html button {
+  font-family: "KiaSignature";
+}
+html .icon-cs {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-wcs.svg);
+}
+html .icon-user {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-wuser.svg);
+}
+html .icon-cart {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-wcart.svg);
+}
+html .hederWarp.noBoder .icon-cs,
+html .hederWarp.hBoder .icon-cs {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-tbcs.svg);
+}
+html .hederWarp.noBoder .icon-user,
+html .hederWarp.hBoder .icon-user {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-user.svg);
+}
+html .hederWarp.noBoder .icon-cart,
+html .hederWarp.hBoder .icon-cart {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-cart.svg);
+}
+html .hederWarp_n.noBoder .icon-cs,
+html .hederWarp_n.hBoder .icon-cs {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-tbcs.svg);
+}
+html .hederWarp_n.noBoder .icon-user,
+html .hederWarp_n.hBoder .icon-user {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-user.svg);
+}
+html .hederWarp_n.noBoder .icon-cart,
+html .hederWarp_n.hBoder .icon-cart {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-cart.svg);
+}
+html textarea {
+  width: 100%;
+  border: 1px solid #dedede;
+  outline: 0 none;
+  border-radius: 0;
+  padding: 1.5rem 1.7rem;
+  font-size: 1.6rem;
+  font-family: "KiaSignature";
+}
+html .icon-tbarrow {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-tbarrow.svg);
+}
+html .icon-wtbarrow {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-wtbarrow.svg);
+}
+html .scrollDisable .logoImg {
+  background-image: url(../../images/kia/kia-blogo-n.svg);
+}
+html .mainNotice {
+  background-color: #f3f3f3;
+  height: 11.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 768px) {
+  html .mainNotice {
+    height: 10rem;
+  }
+}
+@media (min-width: 1240px) {
+  html .mainNotice {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+html .mainNotice .noticInnerWarp {
+  width: 100%;
+}
+@media (min-width: 1240px) {
+  html .mainNotice .noticInnerWarp {
+    width: 120rem;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner {
+  display: flex;
+  height: 11.5rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner {
+    height: 10rem;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner h2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList {
+  margin-left: 0rem;
+  display: flex;
+  align-items: center;
+  height: 11.5rem;
+  width: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList {
+    margin-left: 7.5rem;
+    width: calc(100% - 25rem);
+    height: 10rem;
+  }
+}
+@media (min-width: 1025px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList {
+    width: calc(100% - 40rem);
+  }
+}
+@media (min-width: 1025px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList {
+    width: calc(100% - 35rem);
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2.3rem;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li {
+    align-items: center;
+    padding-top: 0;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl {
+    flex-wrap: nowrap;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dt,
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dd {
+  font-size: 1.4rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dt,
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dd {
+    font-size: 1.6rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dt {
+  color: #9ea1a2;
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dd {
+  color: #000;
+  margin-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList ul li dl dd {
+    margin-top: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp {
+  right: 0;
+  margin-top: 0rem;
+}
+@media (min-width: 768px) {
+  html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp {
+    margin-top: 2rem;
+  }
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-next,
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-prev {
+  position: relative;
+  justify-content: flex-end;
+  top: 55%;
+  margin-top: 0;
+  height: auto;
+  width: auto;
+  right: inherit;
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-next::after,
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-prev::after {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 0.8rem;
+  background-image: url(../../images/common/icon-notice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-next {
+  transform: rotate(0deg);
+  margin-top: -2rem;
+  right: 0;
+}
+html .mainNotice .noticInnerWarp .noticeInner .mainNiticeList .swiperButtonWarp .swiper-button-prev {
+  transform: rotate(-180deg);
+  margin-bottom: 0;
+  left: 0;
+  margin-top: 2rem;
+}
+html .mainBanner {
+  background-image: url(../../images/kia/product-img/producy-mtemp8.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 36rem;
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  html .mainBanner {
+    height: 34rem;
+    background-image: url(../../images/kia/product-img/producy-temp8.png);
+  }
+}
+@media (min-width: 1025px) {
+  html .mainBanner {
+    margin-top: 15rem;
+  }
+}
+html .mainBanner .mabannerInner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1240px) {
+  html .mainBanner .mabannerInner {
+    max-width: 120rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+html .mainBanner .mabannerInner dl {
+  width: 100%;
+}
+html .mainBanner .mabannerInner dl dt,
+html .mainBanner .mabannerInner dl dd {
+  width: 100%;
+  color: #fff;
+}
+html .mainBanner .mabannerInner dl dt {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  html .mainBanner .mabannerInner dl dt {
+    font-size: 4rem;
+  }
+}
+html .mainBanner .mabannerInner dl dd {
+  margin-top: 1.5rem;
+  line-height: 2.2rem;
+}
+html .mainBanner .mabannerInner dl dd br {
+  display: none;
+}
+@media (min-width: 768px) {
+  html .mainBanner .mabannerInner dl dd br {
+    display: block;
+  }
+}
+html .mainBanner .mabannerInner .listImgBtn {
+  width: 100%;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  html .mainBanner .mabannerInner .listImgBtn {
+    width: 17.6rem;
+  }
+}
+html .mainBanner .mabannerInner .listImgBtn .oneButton div::after, html .mainBanner .mabannerInner .listImgBtn .oneButton div::before {
+  width: 3.2rem;
+}
+@media (min-width: 768px) {
+  html .mainBanner .mabannerInner .listImgBtn .oneButton div::after, html .mainBanner .mabannerInner .listImgBtn .oneButton div::before {
+    width: 3.2rem;
+  }
+}
+html .hederWarp .headerInner .headerTop .headerGnb .logo a {
+  font-family: "KiaSignature";
+}
+html .hederWarp .headerInner .headerTop .headerGnb .logo a .logoImg {
+  display: block;
+  width: 16.7rem;
+  height: 1.5rem;
+  background-image: url(../../images/kia/kia-logo-n.svg);
+}
+@media (min-width: 1025px) {
+  html .hederWarp .headerInner .headerTop .headerGnb .logo a .logoImg {
+    height: 2rem;
+    width: 22.8rem;
+  }
+}
+html .hederWarp .headerInner .headerTop .headerGnb .logo.on a .logoImg {
+  background-image: url(../../images/kia/kia-blogo-n.svg);
+}
+html .hederWarp .headerInner .headerTop .headerGnb .logo.on p {
+  color: #000;
+}
+html .hederWarp .headerInner .headerTop .headerGnb .topUtil .gnbIcon .mMenuWarp .mobileMember button {
+  font-weight: 700;
+}
+html .hederWarp.hBoder .headerInner .headerGnb .logo a .logoImg,
+html .hederWarp.noBoder .headerInner .headerGnb .logo a .logoImg {
+  background-image: url(../../images/kia/kia-blogo-n.svg);
+}
+html .hederWarp_n.hBoder .headerInner .gnb .logoWrap a .logoImg,
+html .hederWarp_n.noBoder .headerInner .gnb .logoWrap a .logoImg {
+  background-image: url(../../images/kia/kia-blogo-n.svg);
+}
+html .hederWarp_n .headerInner .gnb .logoWrap a {
+  font-family: "KiaSignature";
+}
+html .hederWarp_n .headerInner .gnb .logoWrap a .logoImg {
+  display: block;
+  width: 16.7rem;
+  height: 1.5rem;
+  background-image: url(../../images/kia/kia-logo-n.svg);
+  background-repeat: no-repeat;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+@media (min-width: 1025px) {
+  html .hederWarp_n .headerInner .gnb .logoWrap a .logoImg {
+    height: 2rem;
+    width: 22.8rem;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+}
+html .hederWarp_n.menu-open .headerInner .gnb .logoWrap a .logoImg {
+  background-image: url(../../images/kia/kia-blogo-n.svg);
+}
+html .mainSwiper ul li .mainText p strong + span {
+  margin-top: 2.5rem;
+}
+html .mainSwiper ul li .mainText p span {
+  line-height: 2.6rem;
+}
+html .mainSwiper ul li .mainText .oneButton {
+  margin-top: 5rem;
+}
+html .mainSwiper ul li .mainText .oneButton a::before, html .mainSwiper ul li .mainText .oneButton a::after {
+  width: 3.2rem;
+}
+html .mainCarNum .oneButton a {
+  position: relative;
+}
+html .mainCarNum .oneButton a::before, html .mainCarNum .oneButton a::after {
+  background-image: initial;
+  width: 0;
+  height: 0;
+}
+html .mainCarNum .oneButton a::after {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 2.5rem;
+  width: 1.2rem;
+  height: 0.6rem;
+  background: url("/kr/assets/images/common/icon-wtbarrow.svg") center center no-repeat;
+  -webkit-transform: rotate(-90deg);
+}
+html .mainCarNum .oneButton a:hover p {
+  color: #ffffff;
+  background-color: initial;
+}
+html .mainCarNum .oneButton a:hover::after {
+  background-image: url("/kr/assets/images/common/icon-wtbarrow.svg");
+}
+html .mainCarNum .oneButton a p {
+  justify-content: flex-start;
+  margin-left: 2rem;
+  background-color: initial;
+  color: #ffffff;
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+}
+html .mainCarNum .oneButton a p:hover {
+  color: #ffffff;
+  border-color: initial;
+  background-color: initial;
+}
+@media (min-width: 1025px) {
+  html .mainCarNum .oneButton {
+    width: 16rem;
+  }
+  html .mainCarNum .oneButton a::before, html .mainCarNum .oneButton a::after {
+    background-image: initial;
+    width: 5rem;
+    margin-left: -0.1rem;
+  }
+  html .mainCarNum .oneButton a::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-wleft.svg);
+    height: 5.6rem;
+  }
+  html .mainCarNum .oneButton a::after {
+    content: "";
+    position: initial;
+    background-image: url(../../images/kia/svg/kia-btn-wright.svg);
+    height: 5.6rem;
+    -webkit-transform: initial;
+  }
+  html .mainCarNum .oneButton a p {
+    justify-content: center;
+    margin-left: initial;
+    background-color: #fff;
+    color: #05141f;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #9ba1a5;
+  }
+  html .mainCarNum .oneButton a p:hover {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+  html .mainCarNum .oneButton a:hover p {
+    color: #05141f;
+    background-color: #f3c300;
+  }
+  html .mainCarNum .oneButton a:hover::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+    height: 5.6rem;
+  }
+  html .mainCarNum .oneButton a:hover::after {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yright.svg);
+    height: 5.6rem;
+  }
+}
+html .footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #05141f;
+  color: #fff;
+  font-family: "KiaSignature";
+  padding-top: 9rem;
+}
+@media (min-width: 768px) {
+  html .footer {
+    padding-bottom: 10rem;
+  }
+}
+@media (min-width: 1240px) {
+  html .footer {
+    padding-top: 15rem;
+    height: 39rem;
+    padding-bottom: 0rem;
+  }
+}
+html .footer::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  width: 100%;
+  height: 4rem;
+  display: block;
+  background-image: url(../../images/kia/svg/footer-bg.svg);
+  background-position: top right -35rem;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1025px) {
+  html .footer::before {
+    background-position: top right -22rem;
+  }
+}
+@media (min-width: 1240px) {
+  html .footer::before {
+    background-position: top right;
+  }
+}
+html .footer .kiaInner {
+  position: relative;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  background-color: #05141f;
+  display: block;
+  padding-bottom: 10.3rem;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner {
+    display: flex;
+    padding-bottom: 0rem;
+  }
+}
+@media (min-width: 1240px) {
+  html .footer .kiaInner {
+    width: 120rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+html .footer .kiaInner .tLeft {
+  display: block;
+}
+@media (min-width: 1240px) {
+  html .footer .kiaInner .tLeft {
+    display: flex;
+  }
+}
+html .footer .kiaInner .tLeft .logoSEction {
+  width: 15rem;
+}
+html .footer .kiaInner .tLeft .logoSEction img {
+  width: 9rem;
+  height: 2.2rem;
+}
+html .footer .kiaInner .tLeft .companyInfo {
+  margin-left: 0rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1240px) {
+  html .footer .kiaInner .tLeft .companyInfo {
+    margin-left: 5.5rem;
+    margin-top: 0;
+    padding-right: 18rem;
+  }
+}
+html .footer .kiaInner .tLeft .companyInfo ul {
+  display: flex;
+}
+html .footer .kiaInner .tLeft .companyInfo ul li {
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .tLeft .companyInfo ul li {
+    font-size: 1.2rem;
+  }
+}
+html .footer .kiaInner .tLeft .companyInfo ul li a {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+html .footer .kiaInner .tLeft .companyInfo ul li:first-child a {
+  color: #fff;
+  font-weight: 600;
+}
+html .footer .kiaInner .tLeft .companyInfo ul li::after {
+  content: "";
+  display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 1px;
+  height: 1.5rem;
+  background-color: rgb(68, 68, 68);
+}
+html .footer .kiaInner .tLeft .companyInfo ul li:last-child::after {
+  display: none;
+}
+html .footer .kiaInner .tLeft .companyInfo ul + ul {
+  margin-top: 1.3rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .tLeft .companyInfo ul + ul {
+    margin-top: 0.9rem;
+  }
+}
+html .footer .kiaInner .tLeft .companyInfo ul + ul li {
+  margin-bottom: 1rem;
+}
+html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(3)::after {
+  display: none;
+}
+html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(1), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(2), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(3), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(4) {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(1), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(2), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(3), html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(4) {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(1)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(2)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(3)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(4)::after {
+  display: none;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(1)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(2)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(3)::after, html .footer .kiaInner .tLeft .companyInfo ul + ul li:nth-child(4)::after {
+    display: block;
+  }
+}
+html .footer .kiaInner .csTime {
+  min-width: 24rem;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .csTime {
+    margin-left: 5rem;
+  }
+}
+@media (min-width: 1240px) {
+  html .footer .kiaInner .csTime {
+    margin-top: 0;
+    margin-left: 0rem;
+  }
+}
+html .footer .kiaInner .csTime p strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+html .footer .kiaInner .csTime p span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #aaa;
+}
+html .footer .kiaInner .csTime p + p {
+  margin-top: 0.8rem;
+}
+html .footer .kiaInner .copyRight {
+  position: absolute;
+  left: 2rem;
+  bottom: 4rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .copyRight {
+    bottom: 0;
+  }
+}
+@media (min-width: 1240px) {
+  html .footer .kiaInner .copyRight {
+    left: 15rem;
+  }
+}
+html .footer .kiaInner .copyRight span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html .footer .kiaInner .familyBoxWarp {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .familyBoxWarp {
+    width: 24rem;
+    justify-content: flex-end;
+  }
+}
+html .footer .kiaInner .familyBoxWarp .familyBox {
+  margin-top: 2.7rem;
+  width: 100%;
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select {
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  min-width: 10rem;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select {
+    width: 24rem;
+  }
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .btn-select {
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  font-size: 1.4rem;
+  padding: 1.4rem 2rem;
+  background-color: #05141f;
+  border: 1px solid #676767;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  line-height: 1;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .btn-select {
+    font-size: 1.4rem;
+  }
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .btn-select::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 40%;
+  transform: translate(-50%, 0);
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  background: url("/kr/assets/images/common/icon-wplus.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .list-member {
+  display: none;
+  position: absolute;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  bottom: 4.4rem;
+  left: 0;
+  border: 1px solid #676767;
+  box-sizing: border-box;
+  background-color: #05141f;
+  z-index: 1;
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .btn-select.on::after {
+  transform: rotate(0deg);
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .btn-select.on + .list-member {
+  display: block;
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .list-member li {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 2;
+  height: 3rem;
+  box-sizing: border-box;
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .list-member li a {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #676767;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html .footer .kiaInner .familyBoxWarp .familyBox .familyInner .cont-select .list-member li a:hover {
+  color: #fff;
+}
+html .footer .kiaInner .familyBoxWarp .searchTextBox {
+  width: 100%;
+  border: 1px solid #dedede;
+  border-left: 0;
+  height: 4.5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  html .footer .kiaInner .familyBoxWarp .searchTextBox {
+    width: 32rem;
+  }
+}
+html .footer .kiaInner .familyBoxWarp .searchTextBox input[type=text] {
+  width: 100%;
+}
+html .footer .kiaInner .familyBoxWarp .searchTextBox .icon-search {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../images/common/icon-search.svg);
+  background-size: contain;
+}
+html .footer .top {
+  position: absolute;
+  right: 2rem;
+  bottom: 45rem;
+  display: none;
+}
+html .threeButton {
+  display: block;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  html .threeButton {
+    display: flex;
+    justify-content: center;
+  }
+}
+html .threeButton .leftBtn,
+html .threeButton .centerBtn,
+html .threeButton .rightBtn {
+  height: 5.6rem;
+  display: flex;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  html .threeButton .leftBtn,
+html .threeButton .centerBtn,
+html .threeButton .rightBtn {
+    width: 18rem;
+  }
+}
+html .threeButton .leftBtn p,
+html .threeButton .centerBtn p,
+html .threeButton .rightBtn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "KiaSignature";
+}
+html .threeButton .leftBtn p {
+  padding-right: 2.8rem;
+  background-color: #fff;
+  color: #000;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #9ba1a5;
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+html .threeButton .leftBtn::before {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wleft.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+html .threeButton .leftBtn:hover p {
+  color: #05141f;
+  border-color: #f3c300;
+  background-color: #f3c300;
+}
+html .threeButton .leftBtn:hover::before {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+}
+@media (hover: hover) and (pointer: fine) {
+  html .threeButton .leftBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+  html .threeButton .leftBtn:hover::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  html .threeButton .leftBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+  html .threeButton .leftBtn:hover::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+  }
+}
+html .threeButton .centerBtn {
+  margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  html .threeButton .centerBtn {
+    margin: 0;
+  }
+}
+html .threeButton .centerBtn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.6rem;
+  padding: 0 1.6rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #9ba1a5;
+  border-radius: 0.4rem;
+}
+html .threeButton .centerBtn:hover p {
+  color: #05141f;
+  border-color: #f3c300;
+  background-color: #f3c300;
+}
+@media (hover: hover) and (pointer: fine) {
+  html .threeButton .centerBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  html .threeButton .centerBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+}
+html .threeButton .rightBtn {
+  border-radius: 0.4rem;
+}
+html .threeButton .rightBtn p {
+  background-color: #05141f;
+  color: #fff !important;
+  border: none;
+  border-right: none;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding-left: 2.8rem;
+  font-family: "KiaSignature";
+  text-align: center;
+}
+html .threeButton .rightBtn::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  border: none;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-bright.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-left: -1px;
+}
+@media (min-width: 768px) {
+  html .threeButton .rightBtn::after {
+    width: 3.2rem;
+  }
+}
+html .threeButton .rightBtn:hover p {
+  color: #05141f;
+  border-color: #cdd0d2;
+  background-color: #cdd0d2;
+}
+html .threeButton .rightBtn:hover::after {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-gright.svg);
+}
+html .towButton {
+  display: flex;
+  justify-content: space-between;
+}
+html .towButton .leftBtn,
+html .towButton .centerBtn,
+html .towButton .rightBtn {
+  height: 5.6rem;
+  display: flex;
+  width: 100%;
+}
+html .towButton .leftBtn p,
+html .towButton .centerBtn p,
+html .towButton .rightBtn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "KiaSignature";
+}
+@media (min-width: 768px) {
+  html .towButton .leftBtn {
+    margin-right: 0.5rem;
+  }
+}
+html .towButton .leftBtn p {
+  padding-right: 2.8rem;
+  background-color: #fff;
+  color: #000;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #9ba1a5;
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+html .towButton .leftBtn::before {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wleft.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  html .towButton .leftBtn::before {
+    width: 3.2rem;
+  }
+}
+html .towButton .leftBtn:hover p {
+  color: #05141f;
+  border-color: #f3c300;
+  background-color: #f3c300;
+}
+html .towButton .leftBtn:hover::before {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+}
+@media (hover: hover) and (pointer: fine) {
+  html .towButton .leftBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+  html .towButton .leftBtn:hover::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  html .towButton .leftBtn:hover p {
+    color: #05141f;
+    border-color: #f3c300;
+    background-color: #f3c300;
+  }
+  html .towButton .leftBtn:hover::before {
+    content: "";
+    background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+  }
+}
+html .towButton .rightBtn {
+  border-radius: 0.4rem;
+}
+@media (min-width: 768px) {
+  html .towButton .rightBtn {
+    margin-left: 0.5rem;
+  }
+}
+html .towButton .rightBtn p {
+  background-color: #05141f;
+  color: #fff;
+  border: none;
+  border-right: none;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding-left: 2.8rem;
+  font-family: "KiaSignature";
+  text-align: center;
+}
+html .towButton .rightBtn::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  border: none;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-bright.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-left: -1px;
+}
+@media (min-width: 768px) {
+  html .towButton .rightBtn::after {
+    width: 3.2rem;
+  }
+}
+html .towButton .rightBtn:hover p {
+  color: #05141f;
+  border-color: #cdd0d2;
+  background-color: #cdd0d2;
+}
+html .towButton .rightBtn:hover::after {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-gright.svg);
+}
+html .oneButton {
+  height: 5.6rem;
+  width: 100%;
+  min-width: 16rem;
+}
+html .oneButton button,
+html .oneButton div,
+html .oneButton a {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+html .oneButton button::before,
+html .oneButton div::before,
+html .oneButton a::before {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wleft.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+@media (min-width: 768px) {
+  html .oneButton button::before,
+html .oneButton div::before,
+html .oneButton a::before {
+    width: 3.2rem;
+  }
+}
+html .oneButton button::after,
+html .oneButton div::after,
+html .oneButton a::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wright.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+@media (min-width: 768px) {
+  html .oneButton button::after,
+html .oneButton div::after,
+html .oneButton a::after {
+    width: 3.2rem;
+  }
+}
+html .oneButton button:hover p,
+html .oneButton div:hover p,
+html .oneButton a:hover p {
+  color: #05141f;
+  border-color: #f3c300;
+  background-color: #f3c300;
+}
+html .oneButton button:hover::before,
+html .oneButton div:hover::before,
+html .oneButton a:hover::before {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-yleft.svg);
+}
+html .oneButton button:hover::after,
+html .oneButton div:hover::after,
+html .oneButton a:hover::after {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-yright.svg);
+}
+html .oneButton button p,
+html .oneButton div p,
+html .oneButton a p {
+  font-family: "KiaSignature";
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  height: 5.6rem;
+  width: calc(100% - 64px);
+  background-color: #fff;
+  color: #05141f;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #9ba1a5;
+  border-radius: 0;
+}
+html .oneButtonBlack {
+  height: 5.6rem;
+  width: 100%;
+}
+html .oneButtonBlack button,
+html .oneButtonBlack a {
+  width: 100%;
+  display: flex;
+}
+html .oneButtonBlack button::before,
+html .oneButtonBlack a::before {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-bleft.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+@media (max-width: 320px) {
+  html .oneButtonBlack button::before,
+html .oneButtonBlack a::before {
+    width: 3.2rem;
+  }
+}
+@media (max-width: 768px) {
+  html .oneButtonBlack button::before,
+html .oneButtonBlack a::before {
+    width: 3.2rem;
+  }
+}
+@media (max-width: 501px) {
+  html .oneButtonBlack button::before,
+html .oneButtonBlack a::before {
+    width: 3.2rem;
+  }
+}
+html .oneButtonBlack button::after,
+html .oneButtonBlack a::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-bright.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+@media (max-width: 320px) {
+  html .oneButtonBlack button::after,
+html .oneButtonBlack a::after {
+    width: 4.2rem;
+  }
+}
+@media (max-width: 768px) {
+  html .oneButtonBlack button::after,
+html .oneButtonBlack a::after {
+    width: 3rem;
+  }
+}
+@media (max-width: 501px) {
+  html .oneButtonBlack button::after,
+html .oneButtonBlack a::after {
+    width: 3rem;
+  }
+}
+html .oneButtonBlack button:hover p,
+html .oneButtonBlack a:hover p {
+  color: #05141f;
+  border-color: #cdd0d2;
+  background-color: #cdd0d2;
+}
+html .oneButtonBlack button:hover::before,
+html .oneButtonBlack a:hover::before {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-gleft.svg);
+}
+html .oneButtonBlack button:hover::after,
+html .oneButtonBlack a:hover::after {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-gright.svg);
+}
+html .oneButtonBlack button p,
+html .oneButtonBlack a p {
+  font-family: "KiaSignature";
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  height: 5.6rem;
+  width: calc(100% - 64px);
+  background-color: #05141f;
+  color: #fff;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #05141f;
+  border-radius: 0;
+}
+html .productRight .optionWarp .producOption .optionList .productSmallVideo {
+  border-radius: 0.6rem;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn label {
+  border-radius: 0.6rem;
+  border: 1px solid #dedede;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label {
+  background-color: #05141f;
+  border: 1px solid #05141f;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label::before {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../../images/common/icon_select.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label div p span,
+html .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label div p strong {
+  color: #fff;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn:hover label {
+  border: 1px solid #000;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 3rem;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn div p span,
+html .productRight .optionWarp .producOption .optionList .checkBtn div p strong {
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn div p strong {
+  font-weight: 600;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn div p span {
+  font-weight: 400;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn div p strong + span {
+  margin-top: 1rem;
+}
+html .productRight .optionWarp .producOption .optionList .checkBtn + .checkBtn {
+  margin-top: 1rem;
+}
+html .inquiryBtn a::before, html .inquiryBtn a::after {
+  width: 3.2rem;
+}
+@media (min-width: 768px) {
+  html .inquiryBtn a::before, html .inquiryBtn a::after {
+    width: 3.2rem;
+  }
+}
+html .contentWarp .mypageWarp .rightConWarp .listbtnWarp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+html .contentWarp .mypageWarp .rightConWarp .listbtnWarp .towButton {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  html .contentWarp .mypageWarp .rightConWarp .listbtnWarp .towButton {
+    width: 37rem;
+  }
+}
+
+body .faqKey {
+  background-image: url(../../images/kia/keybg/faq-key.png);
+  background-position: 70%;
+}
+@media (min-width: 1025px) {
+  body .faqKey {
+    background-image: url(../../images/kia/keybg/faq-key.png);
+  }
+}
+body .csKey {
+  background-image: url(../../images/kia/keybg/cs-key.png);
+  background-position: 70%;
+}
+@media (min-width: 1025px) {
+  body .csKey {
+    background-image: url(../../images/kia/keybg/cs-key.png);
+  }
+}
+body .serviceInfo {
+  background-image: url(../../images/kia/keybg/serviceinfo-key.png);
+}
+@media (min-width: 1025px) {
+  body .serviceInfo {
+    background-image: url(../../images/kia/keybg/serviceinfo-key.png);
+  }
+}
+body .notice {
+  background-image: url(../../images/kia/keybg/notice-key.png);
+  background-position: center;
+}
+@media (min-width: 1025px) {
+  body .notice {
+    background-image: url(../../images/kia/keybg/notice-key.png);
+  }
+}
+body .event {
+  background-image: url(../../images/kia/keybg/event-key.png);
+  background-position: 30%;
+}
+@media (min-width: 1025px) {
+  body .event {
+    background-image: url(../../images/kia/keybg/event-key.png);
+  }
+}
+
+body#faq .csWarp {
+  border-radius: 0.6rem;
+}
+
+.hederWarp .headerInner .headerTop .headerGnb .logo p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  .hederWarp .headerInner .headerTop .headerGnb .logo p {
+    font-size: 2rem;
+  }
+}
+
+.oneButtonLine {
+  height: 5.6rem;
+  width: 100%;
+  min-width: 16rem;
+}
+.oneButtonLine button,
+.oneButtonLine div,
+.oneButtonLine a {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.oneButtonLine button::before,
+.oneButtonLine div::before,
+.oneButtonLine a::before {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wleft.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+@media (min-width: 768px) {
+  .oneButtonLine button::before,
+.oneButtonLine div::before,
+.oneButtonLine a::before {
+    width: 3.2rem;
+  }
+}
+.oneButtonLine button::after,
+.oneButtonLine div::after,
+.oneButtonLine a::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 5.6rem;
+  background-image: url(../../images/kia/svg/kia-btn-wright.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+@media (min-width: 768px) {
+  .oneButtonLine button::after,
+.oneButtonLine div::after,
+.oneButtonLine a::after {
+    width: 3.2rem;
+  }
+}
+.oneButtonLine button:hover p,
+.oneButtonLine div:hover p,
+.oneButtonLine a:hover p {
+  color: #fff;
+  border-color: #05141f;
+  background-color: #05141f;
+}
+.oneButtonLine button:hover::before,
+.oneButtonLine div:hover::before,
+.oneButtonLine a:hover::before {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-bleft.svg);
+}
+.oneButtonLine button:hover::after,
+.oneButtonLine div:hover::after,
+.oneButtonLine a:hover::after {
+  content: "";
+  background-image: url(../../images/kia/svg/kia-btn-bright.svg);
+}
+.oneButtonLine button p,
+.oneButtonLine div p,
+.oneButtonLine a p {
+  font-family: "KiaSignature";
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  height: 5.6rem;
+  width: calc(100% - 64px);
+  background-color: #fff;
+  color: #05141f;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #9ba1a5;
+  border-radius: 0;
+}
+/*# sourceMappingURL=kia.css.map */

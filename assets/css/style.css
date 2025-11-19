@@ -3,26 +3,22 @@
 */
 
 /* 1. 공통/기본 스타일 */
-@import url('./fonts.css');
-@import url('./variables.css');
-@import url('./common.css');
-@import url('./buttons.css');
-@import url('./gnb.css');
-@import url('./footer.css');
-@import url('./info-sticky.css');
+@import url('natgeo/common.css');
+@import url('natgeo/gnb.css');
+@import url('natgeo/footer.css');
 
 /* 2. 'details' 페이지 관련 스타일 */
-@import url('./details/product.css');
-@import url('./details/key_visual.css');
-@import url('./details/themes.css');
-@import url('./details/playful.css');
-@import url('./details/reasons.css');
-@import url('./details/credit.css');
-@import url('./details/theme-selector.css');
-@import url('./details/screenshots.css');
+@import url('natgeo/details/product.css');
+@import url('natgeo/details/key_visual.css');
+@import url('natgeo/details/themes.css');
+@import url('natgeo/details/playful.css');
+@import url('natgeo/details/reasons.css');
+@import url('natgeo/details/credit.css');
+@import url('natgeo/details/theme-selector.css');
+@import url('natgeo/details/screenshots.css');
 
 /* 3. 'section' 스타일 */
-@import url('./section/info.css');
-@import url('./section/upgrade_guides.css');
-@import url('./section/disclaimer.css');
-@import url('./section/related_feature.css');
+@import url('natgeo/section/info.css');
+@import url('natgeo/section/upgrade_guides.css');
+@import url('natgeo/section/disclaimer.css');
+@import url('natgeo/section/related_feature.css');

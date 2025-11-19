@@ -1,0 +1,3723 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*css 디폴트는 모바일이 기준*/
+/*반응형, 브라우저 크기가 300px 이하일때*/
+/*반응형, 브라우저 크기가 800px 이상일때*/
+/*@media (min-width: $mobile ) and (max-width: $tablet){*/
+/*반응형, 브라우저 크기가 1025px 이상일때*/
+/*반응형, 브라우저 크기가 1204px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+/*변수파일 import*/
+body {
+  overflow-x: hidden;
+}
+body .faqKey,
+body .serviceInfo,
+body .notice,
+body .event,
+body .csKey {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 22rem;
+  background-size: cover;
+}
+@media (min-width: 1025px) {
+  body .faqKey,
+body .serviceInfo,
+body .notice,
+body .event,
+body .csKey {
+    height: 35rem;
+  }
+}
+
+.hederWarp.hskey {
+  height: 35rem;
+}
+
+.hederWarp_n.hskey {
+  height: 35rem;
+  z-index: initial;
+}
+
+.comp_wide {
+  width: 100%;
+  max-width: 192rem;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 12rem;
+}
+.comp_wide:first-child {
+  margin-top: 0;
+}
+
+.comp_body {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (max-width: 1240px) {
+  .comp_body {
+    padding: 0 2rem;
+  }
+}
+
+body#serviceinfo .hederWarp.hskey,
+body#notice .hederWarp.hskey,
+body#event .hederWarp.hskey,
+body#faq .hederWarp.hskey {
+  height: 22rem;
+  background-size: cover;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .hederWarp.hskey,
+body#notice .hederWarp.hskey,
+body#event .hederWarp.hskey,
+body#faq .hederWarp.hskey {
+    height: 35rem;
+  }
+}
+body#serviceinfo .hederWarp_n.hskey,
+body#notice .hederWarp_n.hskey,
+body#event .hederWarp_n.hskey,
+body#faq .hederWarp_n.hskey {
+  height: 22rem;
+  background-size: cover;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .hederWarp_n.hskey,
+body#notice .hederWarp_n.hskey,
+body#event .hederWarp_n.hskey,
+body#faq .hederWarp_n.hskey {
+    height: 35rem;
+  }
+}
+body#serviceinfo .hederWarp_n.hskey::before,
+body#notice .hederWarp_n.hskey::before,
+body#event .hederWarp_n.hskey::before,
+body#faq .hederWarp_n.hskey::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  margin-left: -2rem;
+  top: 0;
+  background: linear-gradient(180deg, rgba(5, 20, 31, 0.8) 0%, rgba(5, 20, 31, 0) 100%);
+  z-index: 0;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .hederWarp_n.hskey::before,
+body#notice .hederWarp_n.hskey::before,
+body#event .hederWarp_n.hskey::before,
+body#faq .hederWarp_n.hskey::before {
+    margin-left: 0;
+  }
+}
+body#serviceinfo .hederWarp_n.hskey.menu-open::before,
+body#notice .hederWarp_n.hskey.menu-open::before,
+body#event .hederWarp_n.hskey.menu-open::before,
+body#faq .hederWarp_n.hskey.menu-open::before {
+  background: rgb(255, 255, 255);
+}
+body#serviceinfo .pageTitle,
+body#notice .pageTitle,
+body#event .pageTitle,
+body#faq .pageTitle {
+  position: relative;
+  max-width: 192rem;
+  margin: 0 auto;
+  margin-top: -8.5rem;
+  z-index: 100;
+}
+body#serviceinfo .pageTitle h1,
+body#notice .pageTitle h1,
+body#event .pageTitle h1,
+body#faq .pageTitle h1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-shadow: 1px 1px 10px #999;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .pageTitle h1,
+body#notice .pageTitle h1,
+body#event .pageTitle h1,
+body#faq .pageTitle h1 {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 4.5rem;
+  }
+}
+body#serviceinfo .contentWarp,
+body#notice .contentWarp,
+body#event .contentWarp,
+body#faq .contentWarp {
+  margin-top: 8.5rem;
+}
+body#serviceinfo .contentWarp .infoWrap,
+body#notice .contentWarp .infoWrap,
+body#event .contentWarp .infoWrap,
+body#faq .contentWarp .infoWrap {
+  width: 100%;
+}
+@media (max-width: 1240px) {
+  body#serviceinfo .contentWarp .infoWrap,
+body#notice .contentWarp .infoWrap,
+body#event .contentWarp .infoWrap,
+body#faq .contentWarp .infoWrap {
+    padding: 0 2rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .tabWarp,
+body#notice .contentWarp .infoWrap .tabWarp,
+body#event .contentWarp .infoWrap .tabWarp,
+body#faq .contentWarp .infoWrap .tabWarp {
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp .infoWrap h3,
+body#notice .contentWarp .infoWrap h3,
+body#event .contentWarp .infoWrap h3,
+body#faq .contentWarp .infoWrap h3 {
+  margin-top: 7rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.8rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap h3,
+body#notice .contentWarp .infoWrap h3,
+body#event .contentWarp .infoWrap h3,
+body#faq .contentWarp .infoWrap h3 {
+    margin-top: 6rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap p,
+body#notice .contentWarp .infoWrap p,
+body#event .contentWarp .infoWrap p,
+body#faq .contentWarp .infoWrap p {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+body#serviceinfo .contentWarp .infoWrap .top_img,
+body#notice .contentWarp .infoWrap .top_img,
+body#event .contentWarp .infoWrap .top_img,
+body#faq .contentWarp .infoWrap .top_img {
+  width: 100%;
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp .infoWrap .top_img img,
+body#notice .contentWarp .infoWrap .top_img img,
+body#event .contentWarp .infoWrap .top_img img,
+body#faq .contentWarp .infoWrap .top_img img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap,
+body#notice .contentWarp .infoWrap .info_box_wrap,
+body#event .contentWarp .infoWrap .info_box_wrap,
+body#faq .contentWarp .infoWrap .info_box_wrap {
+  margin-top: 4rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap,
+body#notice .contentWarp .infoWrap .info_box_wrap,
+body#event .contentWarp .infoWrap .info_box_wrap,
+body#faq .contentWarp .infoWrap .info_box_wrap {
+    margin-top: 3rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box {
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box:not(:first-child),
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box:not(:first-child),
+body#event .contentWarp .infoWrap .info_box_wrap .info_box:not(:first-child),
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box:not(:first-child) {
+  margin-top: 2rem;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area {
+    display: block;
+    text-align: left;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area {
+    display: inline-block;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .step,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .step,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .step,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .step {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .num,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .num,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .num,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .step_area .num {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title {
+  margin-left: 2.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .title_area .title {
+    margin-top: 2rem;
+    margin-left: 0;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .contents_area {
+  margin-top: 0;
+  padding: 0 3rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .contents_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .contents_area {
+    padding: 0 2rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3F3F3;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area {
+    display: block;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item {
+  width: calc((100% - 8rem) / 5);
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item {
+    width: 100%;
+    text-align: center;
+  }
+  body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item:not(:first-child),
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item:not(:first-child),
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item:not(:first-child),
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item img,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item img,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item img,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item img {
+  width: 100%;
+  max-width: 22.4rem;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .num,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .num,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .num,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .num {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #676767;
+}
+body#serviceinfo .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .text,
+body#notice .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .text,
+body#event .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .text,
+body#faq .contentWarp .infoWrap .info_box_wrap .info_box .image_area .item .text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #676767;
+}
+body#serviceinfo .contentWarp .infoWrap .note_area,
+body#notice .contentWarp .infoWrap .note_area,
+body#event .contentWarp .infoWrap .note_area,
+body#faq .contentWarp .infoWrap .note_area {
+  margin-top: 7rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .note_area,
+body#notice .contentWarp .infoWrap .note_area,
+body#event .contentWarp .infoWrap .note_area,
+body#faq .contentWarp .infoWrap .note_area {
+    margin-top: 6rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .note_area h4,
+body#notice .contentWarp .infoWrap .note_area h4,
+body#event .contentWarp .infoWrap .note_area h4,
+body#faq .contentWarp .infoWrap .note_area h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .note_area h4,
+body#notice .contentWarp .infoWrap .note_area h4,
+body#event .contentWarp .infoWrap .note_area h4,
+body#faq .contentWarp .infoWrap .note_area h4 {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .note_area ul,
+body#notice .contentWarp .infoWrap .note_area ul,
+body#event .contentWarp .infoWrap .note_area ul,
+body#faq .contentWarp .infoWrap .note_area ul {
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .infoWrap .note_area ul,
+body#notice .contentWarp .infoWrap .note_area ul,
+body#event .contentWarp .infoWrap .note_area ul,
+body#faq .contentWarp .infoWrap .note_area ul {
+    margin-top: 1.5rem;
+  }
+}
+body#serviceinfo .contentWarp .infoWrap .note_area ul li,
+body#notice .contentWarp .infoWrap .note_area ul li,
+body#event .contentWarp .infoWrap .note_area ul li,
+body#faq .contentWarp .infoWrap .note_area ul li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #676767;
+}
+body#serviceinfo .contentWarp .infoWrap .note_area ul li::before,
+body#notice .contentWarp .infoWrap .note_area ul li::before,
+body#event .contentWarp .infoWrap .note_area ul li::before,
+body#faq .contentWarp .infoWrap .note_area ul li::before {
+  content: "·";
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+}
+body#serviceinfo .contentWarp .noticeList,
+body#notice .contentWarp .noticeList,
+body#event .contentWarp .noticeList,
+body#faq .contentWarp .noticeList {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp .noticeList,
+body#notice .contentWarp .noticeList,
+body#event .contentWarp .noticeList,
+body#faq .contentWarp .noticeList {
+    width: 120rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+body#serviceinfo .contentWarp .noticeList .borderList,
+body#notice .contentWarp .noticeList .borderList,
+body#event .contentWarp .noticeList .borderList,
+body#faq .contentWarp .noticeList .borderList {
+  margin-top: 3rem;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul,
+body#notice .contentWarp .noticeList .borderList ul,
+body#event .contentWarp .noticeList .borderList ul,
+body#faq .contentWarp .noticeList .borderList ul {
+  border-top: 1px solid #DEDEDE;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li,
+body#notice .contentWarp .noticeList .borderList ul li,
+body#event .contentWarp .noticeList .borderList ul li,
+body#faq .contentWarp .noticeList .borderList ul li {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #DEDEDE;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li a,
+body#notice .contentWarp .noticeList .borderList ul li a,
+body#event .contentWarp .noticeList .borderList ul li a,
+body#faq .contentWarp .noticeList .borderList ul li a {
+  displaY: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: 0.3s all;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li a div .date,
+body#notice .contentWarp .noticeList .borderList ul li a div .date,
+body#event .contentWarp .noticeList .borderList ul li a div .date,
+body#faq .contentWarp .noticeList .borderList ul li a div .date {
+  font-size: 1.4rem;
+  color: #05141F;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li a div p,
+body#notice .contentWarp .noticeList .borderList ul li a div p,
+body#event .contentWarp .noticeList .borderList ul li a div p,
+body#faq .contentWarp .noticeList .borderList ul li a div p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  color: #000000;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li a div p img,
+body#notice .contentWarp .noticeList .borderList ul li a div p img,
+body#event .contentWarp .noticeList .borderList ul li a div p img,
+body#faq .contentWarp .noticeList .borderList ul li a div p img {
+  margin-right: 1rem;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li a > p,
+body#notice .contentWarp .noticeList .borderList ul li a > p,
+body#event .contentWarp .noticeList .borderList ul li a > p,
+body#faq .contentWarp .noticeList .borderList ul li a > p {
+  color: #9EA1A2;
+  font-size: 1.6rem;
+}
+body#serviceinfo .contentWarp .noticeList .borderList ul li.point::after,
+body#notice .contentWarp .noticeList .borderList ul li.point::after,
+body#event .contentWarp .noticeList .borderList ul li.point::after,
+body#faq .contentWarp .noticeList .borderList ul li.point::after {
+  content: "";
+  displaY: block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(/kr/assets/images/common/icon-point.svg);
+  background-size: contain;
+  background-repeat: repeat;
+}
+body#serviceinfo .contentWarp .noticeList .noList,
+body#notice .contentWarp .noticeList .noList,
+body#event .contentWarp .noticeList .noList,
+body#faq .contentWarp .noticeList .noList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  margin-top: 3rem;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  color: #9EA1A2;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .noticeList .noList,
+body#notice .contentWarp .noticeList .noList,
+body#event .contentWarp .noticeList .noList,
+body#faq .contentWarp .noticeList .noList {
+    font-size: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp,
+body#notice .contentWarp .faqWarp,
+body#event .contentWarp .faqWarp,
+body#faq .contentWarp .faqWarp {
+  width: 100%;
+  displaY: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex-direction: column-reverse;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp,
+body#notice .contentWarp .faqWarp,
+body#event .contentWarp .faqWarp,
+body#faq .contentWarp .faqWarp {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: end;
+  }
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .faqWarp,
+body#notice .contentWarp .faqWarp,
+body#event .contentWarp .faqWarp,
+body#faq .contentWarp .faqWarp {
+    max-width: 120rem;
+  }
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp .faqWarp,
+body#notice .contentWarp .faqWarp,
+body#event .contentWarp .faqWarp,
+body#faq .contentWarp .faqWarp {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab,
+body#notice .contentWarp .faqWarp .faqTab,
+body#event .contentWarp .faqWarp .faqTab,
+body#faq .contentWarp .faqWarp .faqTab {
+  margin-top: 3rem;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab,
+body#notice .contentWarp .faqWarp .faqTab,
+body#event .contentWarp .faqWarp .faqTab,
+body#faq .contentWarp .faqWarp .faqTab {
+    margin-top: 0;
+    width: auto;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1.5rem;
+  bordeR: 1px solid #DEDEDE;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate::after,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate::after,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate::after,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate::after {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 40%;
+  transform: translate(-50%, 0);
+  transform: rotate(-180deg);
+  width: 1.4rem;
+  height: 0.8rem;
+  displaY: block;
+  background: url("/kr/assets/images/common/icon-notice.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate {
+    displaY: none;
+    height: auto;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate.on,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate.on,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate.on,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate.on {
+  font-size: 1.4rem;
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate.on::after,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate.on::after,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate.on::after,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate.on::after {
+  transform: rotate(0deg);
+  background-position-x: right;
+  right: 2rem;
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab .mSelectCate.on + ul,
+body#notice .contentWarp .faqWarp .faqTab .mSelectCate.on + ul,
+body#event .contentWarp .faqWarp .faqTab .mSelectCate.on + ul,
+body#faq .contentWarp .faqWarp .faqTab .mSelectCate.on + ul {
+  displaY: block;
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul,
+body#notice .contentWarp .faqWarp .faqTab ul,
+body#event .contentWarp .faqWarp .faqTab ul,
+body#faq .contentWarp .faqWarp .faqTab ul {
+  display: none;
+  bordeR: 1px solid #DEDEDE;
+  border-top: 0;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul,
+body#notice .contentWarp .faqWarp .faqTab ul,
+body#event .contentWarp .faqWarp .faqTab ul,
+body#faq .contentWarp .faqWarp .faqTab ul {
+    displaY: flex;
+    border: none;
+    align-items: center;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li,
+body#notice .contentWarp .faqWarp .faqTab ul li,
+body#event .contentWarp .faqWarp .faqTab ul li,
+body#faq .contentWarp .faqWarp .faqTab ul li {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li,
+body#notice .contentWarp .faqWarp .faqTab ul li,
+body#event .contentWarp .faqWarp .faqTab ul li,
+body#faq .contentWarp .faqWarp .faqTab ul li {
+    display: block;
+    padding: inherit;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li a,
+body#notice .contentWarp .faqWarp .faqTab ul li a,
+body#event .contentWarp .faqWarp .faqTab ul li a,
+body#faq .contentWarp .faqWarp .faqTab ul li a {
+  color: #9EA1A2;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rbga(0, 0, 0, 0);
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li a,
+body#notice .contentWarp .faqWarp .faqTab ul li a,
+body#event .contentWarp .faqWarp .faqTab ul li a,
+body#faq .contentWarp .faqWarp .faqTab ul li a {
+    font-size: 1.6rem;
+    padding-bottom: 0.8rem;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li a:hover,
+body#notice .contentWarp .faqWarp .faqTab ul li a:hover,
+body#event .contentWarp .faqWarp .faqTab ul li a:hover,
+body#faq .contentWarp .faqWarp .faqTab ul li a:hover {
+  color: #000;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li a:hover,
+body#notice .contentWarp .faqWarp .faqTab ul li a:hover,
+body#event .contentWarp .faqWarp .faqTab ul li a:hover,
+body#faq .contentWarp .faqWarp .faqTab ul li a:hover {
+    border-bottom: 1px solid #000;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li:last-child,
+body#notice .contentWarp .faqWarp .faqTab ul li:last-child,
+body#event .contentWarp .faqWarp .faqTab ul li:last-child,
+body#faq .contentWarp .faqWarp .faqTab ul li:last-child {
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li:last-child,
+body#notice .contentWarp .faqWarp .faqTab ul li:last-child,
+body#event .contentWarp .faqWarp .faqTab ul li:last-child,
+body#faq .contentWarp .faqWarp .faqTab ul li:last-child {
+    padding-bottom: 0rem;
+  }
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li.on,
+body#notice .contentWarp .faqWarp .faqTab ul li.on,
+body#event .contentWarp .faqWarp .faqTab ul li.on,
+body#faq .contentWarp .faqWarp .faqTab ul li.on {
+  display: block;
+}
+body#serviceinfo .contentWarp .faqWarp .faqTab ul li.on a,
+body#notice .contentWarp .faqWarp .faqTab ul li.on a,
+body#event .contentWarp .faqWarp .faqTab ul li.on a,
+body#faq .contentWarp .faqWarp .faqTab ul li.on a {
+  color: #000;
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li.on a,
+body#notice .contentWarp .faqWarp .faqTab ul li.on a,
+body#event .contentWarp .faqWarp .faqTab ul li.on a,
+body#faq .contentWarp .faqWarp .faqTab ul li.on a {
+    border-bottom: 1px solid #000;
+  }
+}
+@media (min-width: 1000px) {
+  body#serviceinfo .contentWarp .faqWarp .faqTab ul li + li,
+body#notice .contentWarp .faqWarp .faqTab ul li + li,
+body#event .contentWarp .faqWarp .faqTab ul li + li,
+body#faq .contentWarp .faqWarp .faqTab ul li + li {
+    margin-left: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList,
+body#notice .contentWarp .faqList,
+body#event .contentWarp .faqList,
+body#faq .contentWarp .faqList {
+  width: 100%;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .faqList,
+body#notice .contentWarp .faqList,
+body#event .contentWarp .faqList,
+body#faq .contentWarp .faqList {
+    max-width: 120rem;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp .faqList,
+body#notice .contentWarp .faqList,
+body#event .contentWarp .faqList,
+body#faq .contentWarp .faqList {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl,
+body#event .contentWarp .faqList .faqAccodion .accordion dl,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl {
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  position: relative;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl:hover,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl:hover,
+body#event .contentWarp .faqList .faqAccodion .accordion dl:hover,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl:hover {
+  border-color: #05141F;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl,
+body#event .contentWarp .faqList .faqAccodion .accordion dl,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl {
+    padding: 2.5rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt {
+    font-size: 1.8rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt p,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt p,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt p,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt p {
+  position: relative;
+  width: 93%;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt p span,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt p span,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt p span,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt p span {
+  line-height: 2.6rem;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt p .subTitle,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt p .subTitle,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt p .subTitle,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt p .subTitle {
+  displaY: block;
+  color: #9EA1A2;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt:hover,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt:hover,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt:hover,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt:hover {
+  color: var(--unnamed-color-00aad2);
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt::after {
+  content: "";
+  position: absolute;
+  right: 0rem;
+  top: 65%;
+  transform: translate(-50%, 0);
+  transform: rotate(-180deg);
+  width: 1.4rem;
+  height: 0.8rem;
+  displaY: block;
+  background: url("/kr/assets/images/common/icon-notice.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt::after,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt::after {
+    top: 40%;
+    right: 1rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt.active::after {
+  transform: rotate(0deg);
+  background-position-x: right;
+  right: 0rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt.active::after,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt.active::after {
+    right: 1rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dt.active + dd,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dt.active + dd,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dt.active + dd,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dt.active + dd {
+  displaY: block;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dd,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dd,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dd,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dd {
+  display: none;
+  margin-top: 2rem;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dd p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #6A6A6A;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#event .contentWarp .faqList .faqAccodion .accordion dl dd p,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl dd p {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl > .dd-padding,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl > .dd-padding,
+body#event .contentWarp .faqList .faqAccodion .accordion dl > .dd-padding,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl > .dd-padding {
+  padding-left: 6.5rem;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl.active,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl.active,
+body#event .contentWarp .faqList .faqAccodion .accordion dl.active,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl.active {
+  border-color: #000;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .accordion dl + dl,
+body#notice .contentWarp .faqList .faqAccodion .accordion dl + dl,
+body#event .contentWarp .faqList .faqAccodion .accordion dl + dl,
+body#faq .contentWarp .faqList .faqAccodion .accordion dl + dl {
+  margin-top: 1rem;
+}
+body#serviceinfo .contentWarp .faqList .faqAccodion .noList,
+body#notice .contentWarp .faqList .faqAccodion .noList,
+body#event .contentWarp .faqList .faqAccodion .noList,
+body#faq .contentWarp .faqList .faqAccodion .noList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  color: #9EA1A2;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .faqList .faqAccodion .noList,
+body#notice .contentWarp .faqList .faqAccodion .noList,
+body#event .contentWarp .faqList .faqAccodion .noList,
+body#faq .contentWarp .faqList .faqAccodion .noList {
+    font-size: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp,
+body#notice .contentWarp .csWarp,
+body#event .contentWarp .csWarp,
+body#faq .contentWarp .csWarp {
+  margin-top: 0rem;
+  border: 1px solid #DEDEDE;
+  margin-top: 5rem;
+  padding: 5rem 20rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp,
+body#notice .contentWarp .csWarp,
+body#event .contentWarp .csWarp,
+body#faq .contentWarp .csWarp {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  body#serviceinfo .contentWarp .csWarp,
+body#notice .contentWarp .csWarp,
+body#event .contentWarp .csWarp,
+body#faq .contentWarp .csWarp {
+    border: none;
+    margin-top: 5rem;
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl.important dt,
+body#notice .contentWarp .csWarp dl.important dt,
+body#event .contentWarp .csWarp dl.important dt,
+body#faq .contentWarp .csWarp dl.important dt {
+  display: flex;
+  align-items: center;
+}
+body#serviceinfo .contentWarp .csWarp dl.important dt::after,
+body#notice .contentWarp .csWarp dl.important dt::after,
+body#event .contentWarp .csWarp dl.important dt::after,
+body#faq .contentWarp .csWarp dl.important dt::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  border-radius: 50%;
+  margin-left: 0.4rem;
+  background-color: #EA0029;
+  margin-top: -0.7rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl.important dt::after,
+body#notice .contentWarp .csWarp dl.important dt::after,
+body#event .contentWarp .csWarp dl.important dt::after,
+body#faq .contentWarp .csWarp dl.important dt::after {
+    margin-left: 0.4rem;
+    margin-top: -1rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl,
+body#notice .contentWarp .csWarp dl,
+body#event .contentWarp .csWarp dl,
+body#faq .contentWarp .csWarp dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl,
+body#notice .contentWarp .csWarp dl,
+body#event .contentWarp .csWarp dl,
+body#faq .contentWarp .csWarp dl {
+    flex-wrap: nowrap;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dt,
+body#notice .contentWarp .csWarp dl dt,
+body#event .contentWarp .csWarp dl dt,
+body#faq .contentWarp .csWarp dl dt {
+  position: relative;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #676767;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dt,
+body#notice .contentWarp .csWarp dl dt,
+body#event .contentWarp .csWarp dl dt,
+body#faq .contentWarp .csWarp dl dt {
+    max-width: 14rem;
+  }
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dt,
+body#notice .contentWarp .csWarp dl dt,
+body#event .contentWarp .csWarp dl dt,
+body#faq .contentWarp .csWarp dl dt {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd,
+body#notice .contentWarp .csWarp dl dd,
+body#event .contentWarp .csWarp dl dd,
+body#faq .contentWarp .csWarp dl dd {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd,
+body#notice .contentWarp .csWarp dl dd,
+body#event .contentWarp .csWarp dl dd,
+body#faq .contentWarp .csWarp dl dd {
+    margin-top: 0;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd input[type=text],
+body#notice .contentWarp .csWarp dl dd input[type=text],
+body#event .contentWarp .csWarp dl dd input[type=text],
+body#faq .contentWarp .csWarp dl dd input[type=text] {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 1.7rem;
+  border: 1px solid #DEDEDE;
+  height: 4.5rem;
+  font-size: 1.4rem;
+  color: #000;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd input[type=text],
+body#notice .contentWarp .csWarp dl dd input[type=text],
+body#event .contentWarp .csWarp dl dd input[type=text],
+body#faq .contentWarp .csWarp dl dd input[type=text] {
+    font-size: 1.6rem;
+    height: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div,
+body#notice .contentWarp .csWarp dl dd > div,
+body#event .contentWarp .csWarp dl dd > div,
+body#faq .contentWarp .csWarp dl dd > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd > div,
+body#notice .contentWarp .csWarp dl dd > div,
+body#event .contentWarp .csWarp dl dd > div,
+body#faq .contentWarp .csWarp dl dd > div {
+    flex-wrap: nowrap;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div input[type=text],
+body#notice .contentWarp .csWarp dl dd > div input[type=text],
+body#event .contentWarp .csWarp dl dd > div input[type=text],
+body#faq .contentWarp .csWarp dl dd > div input[type=text] {
+  width: 33.3333333333%;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd > div input[type=text],
+body#notice .contentWarp .csWarp dl dd > div input[type=text],
+body#event .contentWarp .csWarp dl dd > div input[type=text],
+body#faq .contentWarp .csWarp dl dd > div input[type=text] {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div input[type=text] + input[type=text],
+body#notice .contentWarp .csWarp dl dd > div input[type=text] + input[type=text],
+body#event .contentWarp .csWarp dl dd > div input[type=text] + input[type=text],
+body#faq .contentWarp .csWarp dl dd > div input[type=text] + input[type=text] {
+  margin-left: 1rem;
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#notice .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#event .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#faq .contentWarp .csWarp dl dd > div input[type=text] + select {
+  width: 100%;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#notice .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#event .contentWarp .csWarp dl dd > div input[type=text] + select,
+body#faq .contentWarp .csWarp dl dd > div input[type=text] + select {
+    margin-top: 0;
+    margin-left: 1rem;
+    width: 33.3333333333%;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div span,
+body#notice .contentWarp .csWarp dl dd > div span,
+body#event .contentWarp .csWarp dl dd > div span,
+body#faq .contentWarp .csWarp dl dd > div span {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div.phone,
+body#notice .contentWarp .csWarp dl dd > div.phone,
+body#event .contentWarp .csWarp dl dd > div.phone,
+body#faq .contentWarp .csWarp dl dd > div.phone {
+  flex-wrap: nowrap;
+}
+body#serviceinfo .contentWarp .csWarp dl dd > div.mail input,
+body#notice .contentWarp .csWarp dl dd > div.mail input,
+body#event .contentWarp .csWarp dl dd > div.mail input,
+body#faq .contentWarp .csWarp dl dd > div.mail input {
+  width: 45.5%;
+}
+body#serviceinfo .contentWarp .csWarp dl dd select,
+body#notice .contentWarp .csWarp dl dd select,
+body#event .contentWarp .csWarp dl dd select,
+body#faq .contentWarp .csWarp dl dd select {
+  width: 100%;
+  height: 4.5rem;
+  border: 1px solid #DEDEDE;
+  outline: 0 none;
+  border-radius: 0;
+  padding-left: 1.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd select,
+body#notice .contentWarp .csWarp dl dd select,
+body#event .contentWarp .csWarp dl dd select,
+body#faq .contentWarp .csWarp dl dd select {
+    font-size: 1.6rem;
+    height: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd select option,
+body#notice .contentWarp .csWarp dl dd select option,
+body#event .contentWarp .csWarp dl dd select option,
+body#faq .contentWarp .csWarp dl dd select option {
+  height: 4.5rem;
+  display: flex;
+  padding-left: 1.7rem;
+  align-items: center;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp .csWarp dl dd select option,
+body#notice .contentWarp .csWarp dl dd select option,
+body#event .contentWarp .csWarp dl dd select option,
+body#faq .contentWarp .csWarp dl dd select option {
+    height: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd textarea,
+body#notice .contentWarp .csWarp dl dd textarea,
+body#event .contentWarp .csWarp dl dd textarea,
+body#faq .contentWarp .csWarp dl dd textarea {
+  width: 100%;
+  border: 1px solid #DEDEDE;
+  outline: 0 none;
+  border-radius: 0;
+  padding: 1.5rem 1.7rem;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd textarea,
+body#notice .contentWarp .csWarp dl dd textarea,
+body#event .contentWarp .csWarp dl dd textarea,
+body#faq .contentWarp .csWarp dl dd textarea {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp,
+body#notice .contentWarp .csWarp dl dd.flieWarp,
+body#event .contentWarp .csWarp dl dd.flieWarp,
+body#faq .contentWarp .csWarp dl dd.flieWarp {
+  display: block;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList {
+  display: flex;
+  flex-wrap: wrap;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul {
+  width: 100%;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p {
+  display: flex;
+  width: 100%;
+  border: 1px solid #DEDEDE;
+  height: 4.5rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p {
+    height: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span {
+  padding: 1.5rem 1.7rem;
+  width: 100%;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after {
+  content: "";
+  width: 4.5rem;
+  display: block;
+  background-image: url(/kr/assets/images/common/icon-clip.svg);
+  background-size: contain;
+  height: 4.5rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li p::after {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li button,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li button,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li button,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li button {
+  margin-left: 1rem;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i {
+  width: 4.5rem;
+  display: block;
+  background-image: url(/kr/assets/images/common/icon-file-close.svg);
+  background-size: contain;
+  height: 4.5rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li button i {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList ul li + li,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList ul li + li,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList ul li + li,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList ul li + li {
+  margin-top: 1rem;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileList .textInfo,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileList .textInfo,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileList .textInfo,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileList .textInfo {
+  font-size: 1.4rem;
+  color: #9EA1A2;
+  margin-top: 1.5rem;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn {
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button,
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label {
+  displaY: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  bordeR: 1px solid #DEDEDE;
+  cursor: pointer;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span {
+  font-weight: 600;
+  font-family: "KiaSignature";
+  color: #676767;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button span,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-reset,
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-reset,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-reset,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-reset,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-reset,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-reset,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-reset,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-reset {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(/kr/assets/images/common/icon-reset.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-plus,
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-plus,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-plus,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-plus,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-plus,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-plus,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button .icon-plus,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn label .icon-plus {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(/kr/assets/images/common/icon-bplus.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body#serviceinfo .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button + label,
+body#notice .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button + label,
+body#event .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button + label,
+body#faq .contentWarp .csWarp dl dd.flieWarp .fileAddBtn button + label {
+  margin-left: 1rem;
+}
+body#serviceinfo .contentWarp .csWarp dl.insertFile,
+body#notice .contentWarp .csWarp dl.insertFile,
+body#event .contentWarp .csWarp dl.insertFile,
+body#faq .contentWarp .csWarp dl.insertFile {
+  align-items: flex-start;
+}
+body#serviceinfo .contentWarp .csWarp dl.insertFile dt,
+body#notice .contentWarp .csWarp dl.insertFile dt,
+body#event .contentWarp .csWarp dl.insertFile dt,
+body#faq .contentWarp .csWarp dl.insertFile dt {
+  margin-top: 0rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csWarp dl.insertFile dt,
+body#notice .contentWarp .csWarp dl.insertFile dt,
+body#event .contentWarp .csWarp dl.insertFile dt,
+body#faq .contentWarp .csWarp dl.insertFile dt {
+    margin-top: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp dl + dl,
+body#notice .contentWarp .csWarp dl + dl,
+body#event .contentWarp .csWarp dl + dl,
+body#faq .contentWarp .csWarp dl + dl {
+  margin-top: 3rem;
+}
+body#serviceinfo .contentWarp .csWarp .csComplete,
+body#notice .contentWarp .csWarp .csComplete,
+body#event .contentWarp .csWarp .csComplete,
+body#faq .contentWarp .csWarp .csComplete {
+  text-align: center;
+  border: 1px solid #DEDEDE;
+  width: 100%;
+  padding: 3rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp .csComplete,
+body#notice .contentWarp .csWarp .csComplete,
+body#event .contentWarp .csWarp .csComplete,
+body#faq .contentWarp .csWarp .csComplete {
+    border: none;
+  }
+}
+body#serviceinfo .contentWarp .csWarp .csComplete p strong,
+body#notice .contentWarp .csWarp .csComplete p strong,
+body#event .contentWarp .csWarp .csComplete p strong,
+body#faq .contentWarp .csWarp .csComplete p strong {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp .csComplete p strong,
+body#notice .contentWarp .csWarp .csComplete p strong,
+body#event .contentWarp .csWarp .csComplete p strong,
+body#faq .contentWarp .csWarp .csComplete p strong {
+    font-size: 2.4rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp .csComplete p span,
+body#notice .contentWarp .csWarp .csComplete p span,
+body#event .contentWarp .csWarp .csComplete p span,
+body#faq .contentWarp .csWarp .csComplete p span {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp .csWarp .csComplete p span,
+body#notice .contentWarp .csWarp .csComplete p span,
+body#event .contentWarp .csWarp .csComplete p span,
+body#faq .contentWarp .csWarp .csComplete p span {
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp .csWarp .csComplete p + p,
+body#notice .contentWarp .csWarp .csComplete p + p,
+body#event .contentWarp .csWarp .csComplete p + p,
+body#faq .contentWarp .csWarp .csComplete p + p {
+  margin-top: 2rem;
+}
+body#serviceinfo .contentWarp .csBtn,
+body#notice .contentWarp .csBtn,
+body#event .contentWarp .csBtn,
+body#faq .contentWarp .csBtn {
+  margin-top: 4rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csBtn,
+body#notice .contentWarp .csBtn,
+body#event .contentWarp .csBtn,
+body#faq .contentWarp .csBtn {
+    width: 37rem;
+    margin-top: 5rem;
+  }
+}
+body#serviceinfo .contentWarp .csBtn .oneButton,
+body#notice .contentWarp .csBtn .oneButton,
+body#event .contentWarp .csBtn .oneButton,
+body#faq .contentWarp .csBtn .oneButton {
+  width: 16rem;
+  margin: 0 auto;
+}
+body#serviceinfo .contentWarp .csBtn .towButton,
+body#notice .contentWarp .csBtn .towButton,
+body#event .contentWarp .csBtn .towButton,
+body#faq .contentWarp .csBtn .towButton {
+  displaY: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csBtn .towButton,
+body#notice .contentWarp .csBtn .towButton,
+body#event .contentWarp .csBtn .towButton,
+body#faq .contentWarp .csBtn .towButton {
+    flex-wrap: nowrap;
+  }
+}
+body#serviceinfo .contentWarp .csBtn .towButton button + button,
+body#notice .contentWarp .csBtn .towButton button + button,
+body#event .contentWarp .csBtn .towButton button + button,
+body#faq .contentWarp .csBtn .towButton button + button {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .csBtn .towButton button + button,
+body#notice .contentWarp .csBtn .towButton button + button,
+body#event .contentWarp .csBtn .towButton button + button,
+body#faq .contentWarp .csBtn .towButton button + button {
+    margin-lefT: 1rem;
+    margin-top: 0;
+  }
+}
+body#serviceinfo .contentWarp .eventList,
+body#notice .contentWarp .eventList,
+body#event .contentWarp .eventList,
+body#faq .contentWarp .eventList {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp .eventList,
+body#notice .contentWarp .eventList,
+body#event .contentWarp .eventList,
+body#faq .contentWarp .eventList {
+    width: 120rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderTop,
+body#notice .contentWarp .eventList .borderTop,
+body#event .contentWarp .eventList .borderTop,
+body#faq .contentWarp .eventList .borderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .borderTop,
+body#notice .contentWarp .eventList .borderTop,
+body#event .contentWarp .eventList .borderTop,
+body#faq .contentWarp .eventList .borderTop {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderTop .tabWarp,
+body#notice .contentWarp .eventList .borderTop .tabWarp,
+body#event .contentWarp .eventList .borderTop .tabWarp,
+body#faq .contentWarp .eventList .borderTop .tabWarp {
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .borderTop .searchBoxWarp,
+body#notice .contentWarp .eventList .borderTop .searchBoxWarp,
+body#event .contentWarp .eventList .borderTop .searchBoxWarp,
+body#faq .contentWarp .eventList .borderTop .searchBoxWarp {
+    margin-top: 3rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderTop .searchBoxWarp .searchTextBox,
+body#notice .contentWarp .eventList .borderTop .searchBoxWarp .searchTextBox,
+body#event .contentWarp .eventList .borderTop .searchBoxWarp .searchTextBox,
+body#faq .contentWarp .eventList .borderTop .searchBoxWarp .searchTextBox {
+  border: 1px solid #dedede;
+}
+body#serviceinfo .contentWarp .eventList .borderList,
+body#notice .contentWarp .eventList .borderList,
+body#event .contentWarp .eventList .borderList,
+body#faq .contentWarp .eventList .borderList {
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul,
+body#notice .contentWarp .eventList .borderList ul,
+body#event .contentWarp .eventList .borderList ul,
+body#faq .contentWarp .eventList .borderList ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li,
+body#notice .contentWarp .eventList .borderList ul li,
+body#event .contentWarp .eventList .borderList ul li,
+body#faq .contentWarp .eventList .borderList ul li {
+  width: calc((100% - 2rem) / 2);
+  margin-bottom: 9rem;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li,
+body#notice .contentWarp .eventList .borderList ul li,
+body#event .contentWarp .eventList .borderList ul li,
+body#faq .contentWarp .eventList .borderList ul li {
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li,
+body#notice .contentWarp .eventList .borderList ul li,
+body#event .contentWarp .eventList .borderList ul li,
+body#faq .contentWarp .eventList .borderList ul li {
+    width: 100%;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap {
+  position: relative;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea .thumb,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea .thumb,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea .thumb,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .imageArea .thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 15rem;
+  background-color: #05141F;
+  opacity: 0.9;
+  border-radius: 7.5rem;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img {
+  width: 3.2rem;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span {
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+@media (max-width: 500px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 5.5rem;
+  }
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon img {
+    width: 2.4rem;
+  }
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent .endIcon span {
+    margin-top: 1.1rem;
+    font-size: 1.2rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent2,
+body#notice .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent2,
+body#event .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent2,
+body#faq .contentWarp .eventList .borderList ul li a .item .imageWrap .endEvent2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.4;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea {
+  margin-top: 3rem;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea {
+    margin-top: 2.5rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #676767;
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  padding: 5px 8px;
+  border: 1px solid #000000;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span span,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span span {
+    font-size: 1.1rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span img {
+  margin-right: 1.5rem;
+  padding-bottom: 0.3rem;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span {
+    font-size: 1.4rem;
+  }
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea span img,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea span img {
+    width: 1.7rem;
+    margin-right: 1.2rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea p {
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#notice .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#event .contentWarp .eventList .borderList ul li a .item .textArea p,
+body#faq .contentWarp .eventList .borderList ul li a .item .textArea p {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner,
+body#notice .contentWarp .eventList .borderListWinner,
+body#event .contentWarp .eventList .borderListWinner,
+body#faq .contentWarp .eventList .borderListWinner {
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul,
+body#notice .contentWarp .eventList .borderListWinner ul,
+body#event .contentWarp .eventList .borderListWinner ul,
+body#faq .contentWarp .eventList .borderListWinner ul {
+  border-top: 1px solid #DEDEDE;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li,
+body#notice .contentWarp .eventList .borderListWinner ul li,
+body#event .contentWarp .eventList .borderListWinner ul li,
+body#faq .contentWarp .eventList .borderListWinner ul li {
+  border-bottom: 1px solid #DEDEDE;
+  padding: 2rem 0;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item,
+body#event .contentWarp .eventList .borderListWinner ul li a .item,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .imageWrap {
+  position: relative;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea {
+  position: relative;
+  width: 20rem;
+  height: 0;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea .thumb,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea .thumb,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea .thumb,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .imageWrap .imageArea .thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .imageWrap,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .imageWrap {
+    display: none;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea {
+  width: calc(100% - 23rem);
+  margin-left: 3rem;
+}
+@media (max-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #676767;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea span,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea span {
+    font-size: 1.4rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#notice .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#event .contentWarp .eventList .borderListWinner ul li a .item .textArea p,
+body#faq .contentWarp .eventList .borderListWinner ul li a .item .textArea p {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+body#serviceinfo .contentWarp .eventList .noList,
+body#notice .contentWarp .eventList .noList,
+body#event .contentWarp .eventList .noList,
+body#faq .contentWarp .eventList .noList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  margin-top: 3rem;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  color: #9EA1A2;
+}
+@media (min-width: 768px) {
+  body#serviceinfo .contentWarp .eventList .noList,
+body#notice .contentWarp .eventList .noList,
+body#event .contentWarp .eventList .noList,
+body#faq .contentWarp .eventList .noList {
+    font-size: 2rem;
+  }
+}
+body#serviceinfo .contentWarp.listView,
+body#notice .contentWarp.listView,
+body#event .contentWarp.listView,
+body#faq .contentWarp.listView {
+  margin-bottom: 0;
+}
+body#serviceinfo .contentWarp.listView .noticeView,
+body#notice .contentWarp.listView .noticeView,
+body#event .contentWarp.listView .noticeView,
+body#faq .contentWarp.listView .noticeView {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp.listView .noticeView,
+body#notice .contentWarp.listView .noticeView,
+body#event .contentWarp.listView .noticeView,
+body#faq .contentWarp.listView .noticeView {
+    width: 120rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle p span {
+  font-size: 1.4rem;
+  color: #EA0029;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle p span,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle p span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle p span + span {
+  font-size: 1.4rem;
+  color: #9EA1A2;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle p span + span,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle p span + span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle h1 {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle h1,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle h1 {
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle h1 img {
+  width: 2.4rem;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#notice .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#event .contentWarp.listView .noticeView .viewInner .viewTitle h1 img,
+body#faq .contentWarp.listView .noticeView .viewInner .viewTitle h1 img {
+    width: 3.5rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .cmsWarp,
+body#notice .contentWarp.listView .noticeView .viewInner .cmsWarp,
+body#event .contentWarp.listView .noticeView .viewInner .cmsWarp,
+body#faq .contentWarp.listView .noticeView .viewInner .cmsWarp {
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#notice .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#event .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#faq .contentWarp.listView .noticeView .viewInner .cmsWarp p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #000;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#notice .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#event .contentWarp.listView .noticeView .viewInner .cmsWarp p,
+body#faq .contentWarp.listView .noticeView .viewInner .cmsWarp p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .cmsWarp img,
+body#notice .contentWarp.listView .noticeView .viewInner .cmsWarp img,
+body#event .contentWarp.listView .noticeView .viewInner .cmsWarp img,
+body#faq .contentWarp.listView .noticeView .viewInner .cmsWarp img {
+  max-width: 100%;
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .fileBox,
+body#notice .contentWarp.listView .noticeView .viewInner .fileBox,
+body#event .contentWarp.listView .noticeView .viewInner .fileBox,
+body#faq .contentWarp.listView .noticeView .viewInner .fileBox {
+  margin-top: 2rem;
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .viewInner .fileBox,
+body#notice .contentWarp.listView .noticeView .viewInner .fileBox,
+body#event .contentWarp.listView .noticeView .viewInner .fileBox,
+body#faq .contentWarp.listView .noticeView .viewInner .fileBox {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 3rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .fileBox p,
+body#notice .contentWarp.listView .noticeView .viewInner .fileBox p,
+body#event .contentWarp.listView .noticeView .viewInner .fileBox p,
+body#faq .contentWarp.listView .noticeView .viewInner .fileBox p {
+  color: #000;
+  font-size: 1.6rem;
+}
+body#serviceinfo .contentWarp.listView .noticeView .viewInner .fileBox::after,
+body#notice .contentWarp.listView .noticeView .viewInner .fileBox::after,
+body#event .contentWarp.listView .noticeView .viewInner .fileBox::after,
+body#faq .contentWarp.listView .noticeView .viewInner .fileBox::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background-image: url(/kr/assets/images/common/icon-file.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 1rem;
+}
+body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp,
+body#notice .contentWarp.listView .noticeView .listbtnWarp,
+body#event .contentWarp.listView .noticeView .listbtnWarp,
+body#faq .contentWarp.listView .noticeView .listbtnWarp {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp,
+body#notice .contentWarp.listView .noticeView .listbtnWarp,
+body#event .contentWarp.listView .noticeView .listbtnWarp,
+body#faq .contentWarp.listView .noticeView .listbtnWarp {
+    width: 16rem;
+    margin-top: 7rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#notice .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#notice .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#event .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#event .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#faq .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#faq .contentWarp.listView .noticeView .listbtnWarp a::after {
+  width: 3.2rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#serviceinfo .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#notice .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#notice .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#event .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#event .contentWarp.listView .noticeView .listbtnWarp a::after,
+body#faq .contentWarp.listView .noticeView .listbtnWarp a::before,
+body#faq .contentWarp.listView .noticeView .listbtnWarp a::after {
+    width: 3.2rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView,
+body#notice .contentWarp.listView .eventView,
+body#event .contentWarp.listView .eventView,
+body#faq .contentWarp.listView .eventView {
+  width: 100%;
+  margin-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 9rem;
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .contentWarp.listView .eventView,
+body#notice .contentWarp.listView .eventView,
+body#event .contentWarp.listView .eventView,
+body#faq .contentWarp.listView .eventView {
+    width: 120rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 15rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle .endBadge,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle .endBadge,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle .endBadge,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle .endBadge {
+  display: inline-block;
+  margin-bottom: 1.3rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #676767;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #676767;
+  line-height: 1;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span {
+  font-size: 1.8rem !important;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span .badge {
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  margin-top: -0.3rem;
+  margin-right: 1rem;
+  padding: 5px 8px;
+  border: 1px solid #000000;
+}
+@media (max-width: 1024px) {
+  body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span .badge,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span .badge {
+    font-size: 1.1rem !important;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle h1 {
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle h1,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle h1 {
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+    line-height: 4.3rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #676767;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .viewTitle p span img,
+body#notice .contentWarp.listView .eventView .viewInner .viewTitle p span img,
+body#event .contentWarp.listView .eventView .viewInner .viewTitle p span img,
+body#faq .contentWarp.listView .eventView .viewInner .viewTitle p span img {
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .cmsWarp,
+body#notice .contentWarp.listView .eventView .viewInner .cmsWarp,
+body#event .contentWarp.listView .eventView .viewInner .cmsWarp,
+body#faq .contentWarp.listView .eventView .viewInner .cmsWarp {
+  margin-top: 4rem;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#notice .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#event .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#faq .contentWarp.listView .eventView .viewInner .cmsWarp p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #000;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#notice .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#event .contentWarp.listView .eventView .viewInner .cmsWarp p,
+body#faq .contentWarp.listView .eventView .viewInner .cmsWarp p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .cmsWarp img,
+body#notice .contentWarp.listView .eventView .viewInner .cmsWarp img,
+body#event .contentWarp.listView .eventView .viewInner .cmsWarp img,
+body#faq .contentWarp.listView .eventView .viewInner .cmsWarp img {
+  max-width: 100%;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .fileBox,
+body#notice .contentWarp.listView .eventView .viewInner .fileBox,
+body#event .contentWarp.listView .eventView .viewInner .fileBox,
+body#faq .contentWarp.listView .eventView .viewInner .fileBox {
+  margin-top: 2rem;
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .viewInner .fileBox,
+body#notice .contentWarp.listView .eventView .viewInner .fileBox,
+body#event .contentWarp.listView .eventView .viewInner .fileBox,
+body#faq .contentWarp.listView .eventView .viewInner .fileBox {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 3rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .fileBox p,
+body#notice .contentWarp.listView .eventView .viewInner .fileBox p,
+body#event .contentWarp.listView .eventView .viewInner .fileBox p,
+body#faq .contentWarp.listView .eventView .viewInner .fileBox p {
+  color: #000;
+  font-size: 1.6rem;
+}
+body#serviceinfo .contentWarp.listView .eventView .viewInner .fileBox::after,
+body#notice .contentWarp.listView .eventView .viewInner .fileBox::after,
+body#event .contentWarp.listView .eventView .viewInner .fileBox::after,
+body#faq .contentWarp.listView .eventView .viewInner .fileBox::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background-image: url(/kr/assets/images/common/icon-file.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 1rem;
+}
+body#serviceinfo .contentWarp.listView .eventView .listbtnWarp,
+body#notice .contentWarp.listView .eventView .listbtnWarp,
+body#event .contentWarp.listView .eventView .listbtnWarp,
+body#faq .contentWarp.listView .eventView .listbtnWarp {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .listbtnWarp,
+body#notice .contentWarp.listView .eventView .listbtnWarp,
+body#event .contentWarp.listView .eventView .listbtnWarp,
+body#faq .contentWarp.listView .eventView .listbtnWarp {
+    width: 16rem;
+    margin-top: 7rem;
+  }
+}
+body#serviceinfo .contentWarp.listView .eventView .listbtnWarp a::before,
+body#serviceinfo .contentWarp.listView .eventView .listbtnWarp a::after,
+body#notice .contentWarp.listView .eventView .listbtnWarp a::before,
+body#notice .contentWarp.listView .eventView .listbtnWarp a::after,
+body#event .contentWarp.listView .eventView .listbtnWarp a::before,
+body#event .contentWarp.listView .eventView .listbtnWarp a::after,
+body#faq .contentWarp.listView .eventView .listbtnWarp a::before,
+body#faq .contentWarp.listView .eventView .listbtnWarp a::after {
+  width: 3rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .contentWarp.listView .eventView .listbtnWarp a::before,
+body#serviceinfo .contentWarp.listView .eventView .listbtnWarp a::after,
+body#notice .contentWarp.listView .eventView .listbtnWarp a::before,
+body#notice .contentWarp.listView .eventView .listbtnWarp a::after,
+body#event .contentWarp.listView .eventView .listbtnWarp a::before,
+body#event .contentWarp.listView .eventView .listbtnWarp a::after,
+body#faq .contentWarp.listView .eventView .listbtnWarp a::before,
+body#faq .contentWarp.listView .eventView .listbtnWarp a::after {
+    width: 3.2rem;
+  }
+}
+body#serviceinfo .btnNextPre,
+body#notice .btnNextPre,
+body#event .btnNextPre,
+body#faq .btnNextPre {
+  position: relative;
+  width: 100%;
+  background-color: #f3f3f3;
+  border-top: 1px solid #DEDEDE;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  margin-top: 4rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre,
+body#notice .btnNextPre,
+body#event .btnNextPre,
+body#faq .btnNextPre {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner,
+body#notice .btnNextPre .btnInner,
+body#event .btnNextPre .btnInner,
+body#faq .btnNextPre .btnInner {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner,
+body#notice .btnNextPre .btnInner,
+body#event .btnNextPre .btnInner,
+body#faq .btnNextPre .btnInner {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1240px) {
+  body#serviceinfo .btnNextPre .btnInner,
+body#notice .btnNextPre .btnInner,
+body#event .btnNextPre .btnInner,
+body#faq .btnNextPre .btnInner {
+    width: 120rem;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner::after,
+body#notice .btnNextPre .btnInner::after,
+body#event .btnNextPre .btnInner::after,
+body#faq .btnNextPre .btnInner::after {
+  content: "";
+  display: none;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner::after,
+body#notice .btnNextPre .btnInner::after,
+body#event .btnNextPre .btnInner::after,
+body#faq .btnNextPre .btnInner::after {
+    position: absolute;
+    width: 1px;
+    background-color: #DEDEDE;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    display: block;
+    height: 100%;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner .btnArea,
+body#notice .btnNextPre .btnInner .btnArea,
+body#event .btnNextPre .btnInner .btnArea,
+body#faq .btnNextPre .btnInner .btnArea {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #DEDEDE;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner .btnArea,
+body#notice .btnNextPre .btnInner .btnArea,
+body#event .btnNextPre .btnInner .btnArea,
+body#faq .btnNextPre .btnInner .btnArea {
+    padding-right: 8.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    border-bottom: 0;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner > div,
+body#notice .btnNextPre .btnInner > div,
+body#event .btnNextPre .btnInner > div,
+body#faq .btnNextPre .btnInner > div {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #DEDEDE;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner > div,
+body#notice .btnNextPre .btnInner > div,
+body#event .btnNextPre .btnInner > div,
+body#faq .btnNextPre .btnInner > div {
+    width: 50%;
+    padding-right: 7rem;
+    padding-left: 0rem;
+    padding-bottom: 0rem;
+    border-bottom: 0;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner > div > p,
+body#notice .btnNextPre .btnInner > div > p,
+body#event .btnNextPre .btnInner > div > p,
+body#faq .btnNextPre .btnInner > div > p {
+  displaY: flex;
+  align-items: center;
+}
+body#serviceinfo .btnNextPre .btnInner > div > p span,
+body#notice .btnNextPre .btnInner > div > p span,
+body#event .btnNextPre .btnInner > div > p span,
+body#faq .btnNextPre .btnInner > div > p span {
+  font-size: 1.4rem;
+  color: #676767;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner > div > p span,
+body#notice .btnNextPre .btnInner > div > p span,
+body#event .btnNextPre .btnInner > div > p span,
+body#faq .btnNextPre .btnInner > div > p span {
+    font-size: 1.6rem;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner > div > p::before,
+body#notice .btnNextPre .btnInner > div > p::before,
+body#event .btnNextPre .btnInner > div > p::before,
+body#faq .btnNextPre .btnInner > div > p::before {
+  content: "";
+  display: none;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner > div > p::before,
+body#notice .btnNextPre .btnInner > div > p::before,
+body#event .btnNextPre .btnInner > div > p::before,
+body#faq .btnNextPre .btnInner > div > p::before {
+    display: block;
+    width: 1.8rem;
+    height: 1.2rem;
+    margin-right: 1rem;
+    background-image: url(/kr/assets/images/common/icon-np.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner > div > div,
+body#notice .btnNextPre .btnInner > div > div,
+body#event .btnNextPre .btnInner > div > div,
+body#faq .btnNextPre .btnInner > div > div {
+  margin-top: 2rem;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner > div > div,
+body#notice .btnNextPre .btnInner > div > div,
+body#event .btnNextPre .btnInner > div > div,
+body#faq .btnNextPre .btnInner > div > div {
+    margin-top: 2.8rem;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner > div > div span,
+body#notice .btnNextPre .btnInner > div > div span,
+body#event .btnNextPre .btnInner > div > div span,
+body#faq .btnNextPre .btnInner > div > div span {
+  color: #05141F;
+}
+body#serviceinfo .btnNextPre .btnInner > div > div a,
+body#notice .btnNextPre .btnInner > div > div a,
+body#event .btnNextPre .btnInner > div > div a,
+body#faq .btnNextPre .btnInner > div > div a {
+  display: block;
+  margin-top: 0.5rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #000000;
+}
+body#serviceinfo .btnNextPre .btnInner > div > div a:hover,
+body#notice .btnNextPre .btnInner > div > div a:hover,
+body#event .btnNextPre .btnInner > div > div a:hover,
+body#faq .btnNextPre .btnInner > div > div a:hover {
+  text-decoration: underline;
+}
+body#serviceinfo .btnNextPre .btnInner > div > div p,
+body#notice .btnNextPre .btnInner > div > div p,
+body#event .btnNextPre .btnInner > div > div p,
+body#faq .btnNextPre .btnInner > div > div p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #676767;
+}
+body#serviceinfo .btnNextPre .btnInner div + div,
+body#notice .btnNextPre .btnInner div + div,
+body#event .btnNextPre .btnInner div + div,
+body#faq .btnNextPre .btnInner div + div {
+  width: 100%;
+  margin-top: 2rem;
+  border-bottom: 0;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div,
+body#notice .btnNextPre .btnInner div + div,
+body#event .btnNextPre .btnInner div + div,
+body#faq .btnNextPre .btnInner div + div {
+    width: 50%;
+    margin-top: 0;
+    padding-left: 7rem;
+    padding-right: 0;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > p,
+body#notice .btnNextPre .btnInner div + div > p,
+body#event .btnNextPre .btnInner div + div > p,
+body#faq .btnNextPre .btnInner div + div > p {
+  justify-content: flex-start;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > p,
+body#notice .btnNextPre .btnInner div + div > p,
+body#event .btnNextPre .btnInner div + div > p,
+body#faq .btnNextPre .btnInner div + div > p {
+    justify-content: flex-end;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > p::before,
+body#notice .btnNextPre .btnInner div + div > p::before,
+body#event .btnNextPre .btnInner div + div > p::before,
+body#faq .btnNextPre .btnInner div + div > p::before {
+  display: none;
+}
+body#serviceinfo .btnNextPre .btnInner div + div > p::after,
+body#notice .btnNextPre .btnInner div + div > p::after,
+body#event .btnNextPre .btnInner div + div > p::after,
+body#faq .btnNextPre .btnInner div + div > p::after {
+  content: "";
+  display: none;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > p::after,
+body#notice .btnNextPre .btnInner div + div > p::after,
+body#event .btnNextPre .btnInner div + div > p::after,
+body#faq .btnNextPre .btnInner div + div > p::after {
+    display: block;
+    width: 1.8rem;
+    height: 1.2rem;
+    margin-left: 1rem;
+    background-image: url(/kr/assets/images/common/icon-np.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > div,
+body#notice .btnNextPre .btnInner div + div > div,
+body#event .btnNextPre .btnInner div + div > div,
+body#faq .btnNextPre .btnInner div + div > div {
+  displaY: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > div,
+body#notice .btnNextPre .btnInner div + div > div,
+body#event .btnNextPre .btnInner div + div > div,
+body#faq .btnNextPre .btnInner div + div > div {
+    justify-content: flex-end;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > div span,
+body#notice .btnNextPre .btnInner div + div > div span,
+body#event .btnNextPre .btnInner div + div > div span,
+body#faq .btnNextPre .btnInner div + div > div span {
+  color: #EA0029;
+  text-align: left;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > div span,
+body#notice .btnNextPre .btnInner div + div > div span,
+body#event .btnNextPre .btnInner div + div > div span,
+body#faq .btnNextPre .btnInner div + div > div span {
+    text-align: right;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > div a,
+body#notice .btnNextPre .btnInner div + div > div a,
+body#event .btnNextPre .btnInner div + div > div a,
+body#faq .btnNextPre .btnInner div + div > div a {
+  display: block;
+  margin-top: 0.5rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+  text-align: left;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > div a,
+body#notice .btnNextPre .btnInner div + div > div a,
+body#event .btnNextPre .btnInner div + div > div a,
+body#faq .btnNextPre .btnInner div + div > div a {
+    text-align: right;
+  }
+}
+body#serviceinfo .btnNextPre .btnInner div + div > div a:hover,
+body#notice .btnNextPre .btnInner div + div > div a:hover,
+body#event .btnNextPre .btnInner div + div > div a:hover,
+body#faq .btnNextPre .btnInner div + div > div a:hover {
+  text-decoration: underline;
+}
+body#serviceinfo .btnNextPre .btnInner div + div > div p,
+body#notice .btnNextPre .btnInner div + div > div p,
+body#event .btnNextPre .btnInner div + div > div p,
+body#faq .btnNextPre .btnInner div + div > div p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #676767;
+  text-align: left;
+}
+@media (min-width: 1025px) {
+  body#serviceinfo .btnNextPre .btnInner div + div > div p,
+body#notice .btnNextPre .btnInner div + div > div p,
+body#event .btnNextPre .btnInner div + div > div p,
+body#faq .btnNextPre .btnInner div + div > div p {
+    text-align: right;
+  }
+}
+
+body#notice .contentWarp {
+  margin-top: 10.2rem;
+}
+@media (min-width: 768px) {
+  body#notice .contentWarp {
+    margin-top: 13.4rem;
+  }
+}
+
+.qnaTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  padding: 4rem;
+}
+@media (max-width: 768px) {
+  .qnaTop {
+    display: block;
+    padding: 2rem;
+  }
+}
+.qnaTop .info .title {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .qnaTop .info .title {
+    padding-right: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.qnaTop .info .text {
+  margin-top: 2rem;
+  padding-right: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .qnaTop .info .text {
+    margin-top: 1.2rem;
+    padding-right: 0;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .qnaTop .qnaBtn {
+    margin-top: 3rem;
+  }
+}
+
+.qnaSupport {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 2.8rem;
+  background-color: #F3F3F3;
+  padding: 2.5rem 4rem;
+}
+.qnaSupport .noticeText {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+.qnaSupport .kiaInquiryLink {
+  position: relative;
+  display: inline;
+  border-bottom: 1px solid #676767;
+  margin-right: 2rem;
+  color: #676767;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.qnaSupport .kiaInquiryLink:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -2rem;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/kr/assets/images/kia/svg/icon-link-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 0.6rem 1.2rem;
+  margin-left: 1rem;
+  background-position: center;
+}
+@media (max-width: 1025px) {
+  .qnaSupport {
+    flex-direction: column;
+    padding: 2.4rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .qnaSupport {
+    gap: 3rem;
+  }
+}
+
+.qnaArea {
+  margin-top: 7rem;
+}
+@media (max-width: 768px) {
+  .qnaArea {
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.qnaArea .qnaInner .titleArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .qnaArea .qnaInner .titleArea {
+    display: block;
+  }
+}
+.qnaArea .qnaInner .titleArea h2 {
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .qnaArea .qnaInner .titleArea h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .qnaArea .qnaInner .titleArea .searchBoxWarp {
+    margin-top: 4rem;
+  }
+}
+.qnaArea .qnaInner .qnaList {
+  margin-top: 4rem;
+}
+@media (max-width: 768px) {
+  .qnaArea .qnaInner .qnaList {
+    margin-top: 3rem;
+  }
+}
+.qnaArea .qnaInner .qnaList {
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (min-width: 1025px) {
+  .qnaArea .qnaInner .qnaList {
+    max-width: 120rem;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1240px) {
+  .qnaArea .qnaInner .qnaList {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl {
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  position: relative;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl:hover {
+  border-color: #05141F;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl {
+    padding: 2.5rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt {
+    font-size: 1.8rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p {
+  position: relative;
+  width: 93%;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p .subTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #9EA1A2;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p .subTitle .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  margin-right: 1rem;
+  padding: 0 0.8rem;
+  border: 0.1rem solid #DEDEDE;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p .subTitle .badge.an {
+  color: #9EA1A2;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p .subTitle .badge.ay {
+  color: #000000;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt > p span {
+  font-weight: 600;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt:hover {
+  color: var(--unnamed-color-00aad2);
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt::after {
+  content: "";
+  position: absolute;
+  right: 0rem;
+  top: 65%;
+  transform: translate(-50%, 0);
+  transform: rotate(-180deg);
+  width: 1.4rem;
+  height: 0.8rem;
+  displaY: block;
+  background: url("/kr/assets/images/common/icon-notice.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt::after {
+    top: 40%;
+    right: 1rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt.active::after {
+  transform: rotate(0deg);
+  background-position-x: right;
+  right: 0rem;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt.active::after {
+    right: 1rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dt.active + dd {
+  displaY: block;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd {
+  display: none;
+  margin-top: 3rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #000000;
+}
+@media (min-width: 1025px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd p {
+    font-size: 1.6rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .imageArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .imageArea .item {
+  width: calc((100% - 4rem) / 3);
+  border: 0.1rem solid #DEDEDE;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .imageArea .item:last-child {
+  margin-right: 0;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .imageArea .item .box {
+  position: relative;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  border-top: 0.1rem solid #DEDEDE;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .subTitle {
+  color: #9EA1A2;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .answer {
+  margin-top: 1.5rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .downloadArea {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .downloadArea .downloadItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 0.7rem 1rem;
+  background-color: #F3F3F3;
+  color: #000000;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .downloadArea .downloadItem:hover {
+  text-decoration: underline;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .adminAnswer .downloadArea .downloadItem .icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/kr/assets/images/common/icon-download.svg");
+  background-repeat: repeat;
+  margin-left: 0.8rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn {
+    width: 37rem;
+    margin-top: 5rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .oneButton {
+  width: 16rem;
+  margin: 0 auto;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton {
+  displaY: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton {
+    flex-wrap: nowrap;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton .leftBtn {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton .leftBtn {
+    margin-right: 0.5rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton .rightBtn {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton .rightBtn {
+    margin-left: 0.5rem;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton button + button {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl dd .csBtn .towButton button + button {
+    margin-lefT: 1rem;
+    margin-top: 0;
+  }
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl > .dd-padding {
+  padding-left: 6.5rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl.active {
+  border-color: #000;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .accordion dl + dl {
+  margin-top: 1rem;
+}
+.qnaArea .qnaInner .qnaList .qnaAccodion .noList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  color: #9EA1A2;
+}
+@media (min-width: 768px) {
+  .qnaArea .qnaInner .qnaList .qnaAccodion .noList {
+    font-size: 2rem;
+  }
+}
+
+.inquiryEdit .inquiryType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  background-color: #F3F3F3;
+  padding: 3rem 2rem;
+}
+@media (max-width: 768px) {
+  .inquiryEdit .inquiryType {
+    margin-top: 0;
+  }
+}
+.inquiryEdit .inquiryType .radioArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inquiryEdit .inquiryType .radioArea label {
+  font-size: 20px;
+  line-height: 2rem;
+  padding: 0.2em 0.4em;
+}
+.inquiryEdit .inquiryType .radioArea span {
+  vertical-align: middle;
+  font-size: 1.6rem;
+}
+.inquiryEdit .inquiryType .radioArea [type=radio] {
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: max(1px, 0.1em) solid #05141F;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: border 0.3s ease-in-out;
+}
+.inquiryEdit .inquiryType .radioArea [type=radio]:checked {
+  border: 0.4rem solid #EA0029;
+}
+.inquiryEdit .inquiryType .radioArea [type=radio]:hover {
+  box-shadow: 0 0 0 max(2px, 0.2em) #DEDEDE;
+  cursor: pointer;
+}
+.inquiryEdit .inquiryType .radioArea [type=radio]:disabled {
+  background-color: #DEDEDE;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.inquiryEdit .inquiryType .radioArea [type=radio]:disabled + span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.inquiryEdit .inquiryType .info {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.2;
+  color: #676767;
+}
+.inquiryEdit .csWarp {
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+.inquiryEdit .csWarp .csInner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.inquiryEdit .csWarp .csInner dl.important dt {
+  display: flex;
+  align-items: center;
+}
+.inquiryEdit .csWarp .csInner dl.important dt::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  border-radius: 50%;
+  margin-left: 0.4rem;
+  background-color: #EA0029;
+  margin-top: -0.7rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl.important dt::after {
+    margin-left: 0.4rem;
+    margin-top: -1rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl {
+    flex-wrap: nowrap;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dt {
+  position: relative;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #676767;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl dt {
+    max-width: 14rem;
+  }
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dt {
+    font-size: 1.6rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl dd {
+    margin-top: 0;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd input[type=text] {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 1.7rem;
+  border: 1px solid #DEDEDE;
+  height: 4.5rem;
+  font-size: 1.4rem;
+  color: #000;
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dd input[type=text] {
+    font-size: 1.6rem;
+    height: 5rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl dd > div {
+    flex-wrap: nowrap;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd > div input[type=text] {
+  width: 33.3333333333%;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dd > div input[type=text] {
+    font-size: 1.6rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd > div input[type=text] + input[type=text] {
+  margin-left: 1rem;
+}
+.inquiryEdit .csWarp .csInner dl dd > div input[type=text] + select {
+  width: 100%;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl dd > div input[type=text] + select {
+    margin-top: 0;
+    margin-left: 1rem;
+    width: 33.3333333333%;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd > div span {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.inquiryEdit .csWarp .csInner dl dd > div.phone {
+  flex-wrap: nowrap;
+}
+.inquiryEdit .csWarp .csInner dl dd > div.mail input {
+  width: 45.5%;
+}
+.inquiryEdit .csWarp .csInner dl dd select {
+  width: 100%;
+  height: 4.5rem;
+  border: 1px solid #DEDEDE;
+  outline: 0 none;
+  border-radius: 0;
+  padding-left: 1.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dd select {
+    font-size: 1.6rem;
+    height: 5rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd select option {
+  height: 4.5rem;
+  display: flex;
+  padding-left: 1.7rem;
+  align-items: center;
+}
+@media (min-width: 1240px) {
+  .inquiryEdit .csWarp .csInner dl dd select option {
+    height: 5rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd textarea {
+  width: auto !important;
+  border: 1px solid #DEDEDE;
+  outline: 0 none;
+  border-radius: 0;
+  padding: 1.5rem 1.7rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dd textarea {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd.contentsWrap {
+  flex-direction: column;
+}
+.inquiryEdit .csWarp .csInner dl dd.contentsWrap .wordCounter {
+  justify-content: flex-end;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #676767;
+  text-align: right;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp {
+  display: block;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem {
+  position: relative;
+  width: calc((100% - 30px) / 3) !important;
+  margin-top: 0 !important;
+  border: 1px solid #DEDEDE;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem .itemWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem .itemWrap .imgInput {
+  display: none;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem .itemWrap .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem .itemWrap .contents img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileList ul .imgItem .delImg {
+  position: absolute;
+  display: none;
+  top: 1.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .textInfo {
+  font-size: 1.4rem;
+  color: #9EA1A2;
+  margin-top: 1.5rem;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn {
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button,
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn label {
+  displaY: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  bordeR: 1px solid #DEDEDE;
+  cursor: pointer;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button span,
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn label span {
+  font-weight: 600;
+  font-family: "KiaSignature";
+  color: #676767;
+  font-size: 1.4rem;
+}
+@media (min-width: 1025px) {
+  .inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button span,
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn label span {
+    font-size: 1.6rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button .icon-reset,
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn label .icon-reset {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(/kr/assets/images/common/icon-reset.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button .icon-plus,
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn label .icon-plus {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(/kr/assets/images/common/icon-bplus.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.inquiryEdit .csWarp .csInner dl dd.flieWarp .fileAddBtn button + label {
+  margin-left: 1rem;
+}
+.inquiryEdit .csWarp .csInner dl.insertFile {
+  align-items: flex-start;
+}
+.inquiryEdit .csWarp .csInner dl.insertFile dt {
+  margin-top: 0rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .csWarp .csInner dl.insertFile dt {
+    margin-top: 2rem;
+  }
+}
+.inquiryEdit .csWarp .csInner dl + dl {
+  margin-top: 3rem;
+}
+.inquiryEdit .carswBtn {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .carswBtn {
+    margin-top: 5rem;
+    width: 37rem;
+  }
+}
+.inquiryEdit .carswBtn .towButton {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+.inquiryEdit .carswBtn .towButton .leftBtn {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .carswBtn .towButton .leftBtn {
+    margin-right: 0.5rem;
+  }
+}
+.inquiryEdit .carswBtn .towButton .rightBtn {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .carswBtn .towButton .rightBtn {
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .inquiryEdit .carswBtn .towButton {
+    flex-wrap: nowrap;
+  }
+}
+.inquiryEdit .carswBtn .towButton a + a {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .inquiryEdit .carswBtn .towButton a + a {
+    margin-top: 0;
+  }
+}
+
+.csFinish {
+  text-align: center;
+  border: 1px solid #DEDEDE;
+  border-radius: 0.6rem;
+  width: 100%;
+  margin-top: 5rem;
+  padding: 5rem;
+}
+@media (max-width: 768px) {
+  .csFinish {
+    padding: 3rem;
+    margin-top: 0;
+  }
+}
+.csFinish p strong {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .csFinish p strong {
+    font-size: 1.8rem;
+  }
+}
+.csFinish p span {
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+  .csFinish p span {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+.csFinish p + p {
+  margin-top: 2rem;
+}
+
+.csFinishBtn {
+  margin-top: 5rem;
+}
+@media (max-width: 768px) {
+  .csFinishBtn {
+    margin-top: 4rem;
+  }
+}
+.csFinishBtn .towButton {
+  margin: 0 auto;
+}
+
+.comp_1x_b_n_n_e1 {
+  margin-top: 5rem;
+}
+.comp_1x_b_n_n_e1 .comp_body {
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .comp_1x_b_n_n_e1 {
+    margin-top: 5rem;
+  }
+}
+.comp_1x_b_n_n_e1 h5 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: left;
+  color: #000000;
+}
+.comp_1x_b_n_n_e1 .youtubeArea {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 비율인 경우 */
+  /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+  padding-top: 25px;
+  height: 0;
+}
+.comp_1x_b_n_n_e1 .youtubeArea iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.comp_1x_b_n_n_e1 .youtubeArea object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=service.css.map */
