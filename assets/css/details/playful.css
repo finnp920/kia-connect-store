@@ -50,6 +50,7 @@ section.playful.theme-landscape {
   font-weight: 600;
   text-align: center;
   letter-spacing: -0.96px;
+  line-height: normal;
   align-self: center;
   position: relative;
   padding-bottom: 28px;
@@ -266,6 +267,7 @@ section.playful.theme-landscape {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  line-height: normal;
 }
 
 .feature-text p {

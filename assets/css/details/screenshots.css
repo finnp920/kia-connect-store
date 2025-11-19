@@ -10,8 +10,8 @@ section.screenshots {
   position: relative;
   width: 100%;
   padding-top: 194px;
-  margin-bottom: -194px;
-  transform: translateY(-194px);
+  margin-bottom: -198px;
+  transform: translateY(-197px);
 }
 
 .theme-header-wrapper::before {
@@ -141,7 +141,13 @@ section.screenshots {
     grid-template-columns: 32.5% 32% 32.5%;
   }
 }
-
+@media screen and (max-width: 1050px) { 
+  .theme-header-wrapper {
+    margin-bottom: -215px;
+    transform: translateY(-215px);
+    padding-top: 215px;
+  }
+}
 @media screen and (max-width: 769px) {
   .theme-header-wrapper::before {
     background-position: center bottom;
@@ -181,10 +187,5 @@ section.screenshots {
   }
   .preview-item img {
     aspect-ratio: 533 / 332 !important;
-  }
-
-  .theme-header-wrapper.theme-space-wonders::before {
-    top: -135px;
-    height: calc(100% + 135px);
   }
 }
