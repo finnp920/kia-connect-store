@@ -1,0 +1,192 @@
+/* ========================================
+   Detail Section > KV (Key Visual)
+   ======================================== */
+section.kv {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.swiper {
+  position: relative;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  max-width: 1920px;
+}
+.kv-image {
+  aspect-ratio: 160 / 73;
+}
+.kv-logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 170px;
+  height: 50px;
+  background-image: url('../../../images/natgeo/logo-national-geographic_black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+.kv-copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 12px;
+  color: #d4d4d4;
+  letter-spacing: -0.2px;
+}
+.kv-title {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+.kv-main-title {
+  margin-bottom: 20px;
+  color: #05141f;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+}
+.kv-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #05141f;
+  letter-spacing: -0.32px;
+  max-width: 866px;
+  margin: 0 auto;
+}
+/* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
+.swiper-slide[data-theme='theme-sw'] .kv-main-title,
+.swiper-slide[data-theme='theme-sw'] .kv-subtitle {
+  color: #ffffff;
+}
+
+.swiper-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 32px;
+}
+.swiper-pagination-bullet {
+  width: 56px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  border-radius: 0;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
+section.kv .view-pc {
+  display: block;
+}
+section.kv .view-mo {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .kv-main-title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.kv .view-pc {
+    display: none;
+  }
+  section.kv .view-mo {
+    display: block;
+  }
+  .swiper-slide img.kv-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 36 / 53;
+    object-fit: cover;
+  }
+
+  .swiper-pagination {
+    bottom: 28px;
+  }
+  .kv-title {
+    top: 100px;
+  }
+  .kv-logo {
+    top: 35px;
+    right: 35px;
+    width: 100px;
+    height: 30px;
+  }
+  .kv-copyright {
+    bottom: 12px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .kv-main-title {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .kv-main-title {
+    font-size: 30px;
+  }
+  .kv-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .swiper-navigation {
+    display: none;
+  }
+  .kv-logo {
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 18px;
+  }
+}

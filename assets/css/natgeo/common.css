@@ -1,0 +1,138 @@
+/* ========================================
+   CSS Reset & Base Styles
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /*font-size: 16px;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family:
+    'KiaSignature',
+    'Kia Signature',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+main section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+}
+main section > .section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================
+   youtube-container
+   ======================================== */
+.youtube-container {
+  position: relative;
+  /* 16:9 비율 (9 / 16 * 100 = 56.25) */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================
+   floating_menu
+   ======================================== */
+.floating_menu {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+.floating_menu.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========================================
+   Section > Go to the List
+   ======================================== */
+section.go-to-list {
+  background-color: #f3f3f3;
+  width: 100vw;
+  height: 100px;
+}
+
+section.go-to-list .section-inner {
+  height: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.go-to-list a.go-to-list-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+section.go-to-list a.go-to-list-link:hover {
+  text-decoration: underline;
+}
