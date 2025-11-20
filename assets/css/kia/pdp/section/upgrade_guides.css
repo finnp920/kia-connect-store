@@ -30,9 +30,6 @@ section.upgrade-guides .section-inner {
   min-width: auto;
   margin: 0 auto;
 }
-.upgrade-guides-link .cut-corner-btn-inner {
-  width: auto;
-}
 
 @media screen and (max-width: 769px) {
   section.upgrade-guides {
@@ -44,7 +41,7 @@ section.upgrade-guides .section-inner {
 }
 
 @media screen and (max-width: 640px) {
-  section.upgrade-guides  {
+  section.upgrade-guides {
     padding: 0 20px 60px;
     border-top: none;
   }
