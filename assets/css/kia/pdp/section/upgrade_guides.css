@@ -1,0 +1,73 @@
+/* ========================================
+   Section > Upgrade Guides
+   ======================================== */
+section.upgrade-guides {
+  position: relative;
+  background-color: #ffffff;
+  border-top: 1px solid #dedede;
+  padding: 100px 0;
+}
+
+section.upgrade-guides .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.upgrade-guides-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.upgrade-guides-video {
+  margin-bottom: 10px;
+}
+
+.upgrade-guides-link {
+  width: 160px;
+  min-width: auto;
+  margin: 0 auto;
+}
+.upgrade-guides-link .cut-corner-btn-inner {
+  width: auto;
+}
+
+@media screen and (max-width: 769px) {
+  section.upgrade-guides {
+    padding: 60px 0 90px;
+  }
+  .upgrade-guides-title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section.upgrade-guides  {
+    padding: 0 20px 60px;
+    border-top: none;
+  }
+  section.upgrade-guides .section-inner {
+    padding: 0;
+    gap: 0;
+  }
+  .upgrade-guides-title,
+  .upgrade-guides-video {
+    display: none;
+  }
+  .upgrade-guides-link {
+    width: 100%;
+  }
+  .upgrade-guides-link .cut-corner-btn-inner {
+    width: 100%;
+  }
+}
+
+/* Mobile Styles (<= 360px) */
+@media screen and (max-width: 360px) {
+  .upgrade-guides-title,
+  .upgrade-guides-video {
+    display: none;
+  }
+}

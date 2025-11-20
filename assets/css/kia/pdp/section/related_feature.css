@@ -1,0 +1,173 @@
+/* ========================================
+   Section > Related Feature
+   ======================================== */
+section.related-feature {
+  position: relative;
+  background-color: #ffffff;
+  border-top: 1px solid #dedede;
+  padding: 100px 0 160px;
+}
+
+section.related-feature .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.related-feature-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  transition: border-color var(--transition-base);
+}
+
+.feature-item:hover {
+  border-color: #94a3b8;
+}
+
+.feature-item > .feature-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.feature-content .thumbnail {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.feature-content .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-content .feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px 0;
+}
+
+.feature-text > .title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.feature-text > .description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #676767;
+  margin: 0;
+}
+
+.feature-item > .feature-price {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.feature-price > .label {
+  font-size: 16px;
+  line-height: 17px;
+  color: #676767;
+}
+
+.feature-price > .value {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--color-black);
+}
+
+/* Medium Mobile Styles (<= 769px) */
+@media screen and (max-width: 769px) {
+  /*  TODO 모바일 디자인 대응 */
+  section.related-feature {
+    padding: 60px 0 90px;
+  }
+  .related-feature-title {
+    font-size: 25px;
+  }
+  .feature-item {
+    height: auto;
+    flex-direction: column;
+    gap: 5.556vw;
+    padding: 4.167vw 4.167vw 5.556vw;
+    border-radius: 6px;
+  }
+  .feature-item > .feature-content {
+    width: 100%;
+    gap: 4.17vw;
+  }
+  .feature-content .thumbnail {
+    width: 20.833vw;
+    height: 20.833vw;
+    border-radius: 6px;
+  }
+  .feature-content .feature-text {
+    gap: 10px;
+    padding: 0;
+  }
+  .feature-item > .feature-price {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .related-feature-title {
+    font-size: 18px;
+  }
+  .feature-item {
+    gap: 30px;
+    padding: 20px 20px 30px;
+  }
+  .feature-text > .title {
+    font-size: 18px;
+    line-height: 19px;
+  }
+  .feature-text > .description {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .feature-price > .label {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .feature-price > .value {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}

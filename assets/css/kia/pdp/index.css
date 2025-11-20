@@ -1,6 +1,11 @@
+@import url('variables.css');
 @import url('info-sticky.css');
 @import url('go_to_list.css');
-@import url('variables.css');
+@import url('product-view.css');
+@import url('section/info.css');
+@import url('section/upgrade_guides.css');
+@import url('section/disclaimer.css');
+@import url('section/related_feature.css');
 
 * {
   margin: 0;

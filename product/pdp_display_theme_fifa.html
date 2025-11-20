@@ -30,10 +30,19 @@
     <link rel="icon" href="../assets/images/kia/favicon-16x16.png" />
 
     <!--  Stylesheet  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../assets/css/index.css" type="text/css" />
     <link
       rel="stylesheet"
       href="../assets/css/kia/pdp/index.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/kia/pdp/fifa/index.css"
       type="text/css"
     />
   </head>
@@ -334,8 +343,7 @@
         <div class="info-sticky-left">
           <p>
             <strong
-              >National Geographic<br />
-              Display Themes</strong
+              >FIFA World Cup 26™<br class="view-mo" />Display Themes</strong
             >
           </p>
         </div>
@@ -349,9 +357,9 @@
     </div>
     <!-- Sticky Information -->
 
-    <main>
-      <!-- Detail Section > Product -->
-      <section class="product">
+    <main data-current-theme="01">
+      <!-- Product View START -->
+      <section class="product-view">
         <div class="section-inner">
           <!-- Product Thumbnail -->
           <div class="product-thumbnail">
@@ -366,37 +374,59 @@
             <div class="product-info">
               <div class="product-header">
                 <h2 class="product-name" id="productName">
-                  National Geographic Display Themes
+                  FIFA<br />World Cup 26™<br />Display Themes
                 </h2>
                 <button class="btn-like" id="btnLike" aria-label="좋아요">
-                  <img src="assets/icons/icon-heart.svg" alt="Like" />
+                  <img src="../assets/icons/icon-heart.svg" alt="Like" />
                 </button>
               </div>
               <p class="product-description" id="productDescription">
-                National Geographic Display Themes turns every drive into an
-                adventure
+                Feel the roar of the crowd. Drive with pride and cheer for your
+                team with FIFA World Cup 26™ Themes.
               </p>
             </div>
 
             <!-- Option List -->
             <div class="option-list-section">
-              <h3 class="option-list-title">Select product option you want.</h3>
+              <h3 class="option-list-title">
+                Select Your team and let the spirit of FIFA World Cup 26™ drive
+                with you.
+              </h3>
               <div class="option-list" id="optionList">
-                <!-- Baby Animals Option -->
-                <div class="option-item selected" data-theme="baby-animals">
+                <div class="option-item" data-theme="01">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-baby-animals-thumbnail.png"
-                      alt="Baby Animals"
+                      src="../assets/images/pdp/fifa/details/thumb_01.png"
+                      alt="Option 1 - Global"
                     />
                   </div>
                   <div class="option-info">
                     <span class="option-name"
-                      >National Geographic Baby Animals</span
+                      >FIFA World Cup 26™<br />Global</span
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
+                        alt="check icon"
+                        loading="lazy"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div class="option-item" data-theme="02">
+                  <div class="option-thumbnail">
+                    <img
+                      src="../assets/images/pdp/fifa/details/thumb_02.png"
+                      alt="Option 2 - Canada"
+                    />
+                  </div>
+                  <div class="option-info">
+                    <span class="option-name"
+                      >FIFA World Cup 26™<br />Canada</span
+                    >
+                    <span class="option-check" aria-hidden="true">
+                      <img
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
@@ -404,43 +434,60 @@
                   </div>
                 </div>
 
-                <!-- Space Wonders Option -->
-                <div class="option-item" data-theme="space-wonders">
+                <div class="option-item" data-theme="03">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-space-wonders-thumbnail.png"
-                      alt="Space Wonders"
+                      src="../assets/images/pdp/fifa/details/thumb_03.png"
+                      alt="Option 3 - Mexico"
                     />
                   </div>
                   <div class="option-info">
                     <span class="option-name"
-                      >National Geographic Space Wonders</span
+                      >FIFA World Cup 26™<br />Mexico</span
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
                     </span>
                   </div>
                 </div>
-
-                <!-- Landscape Option -->
-                <div class="option-item" data-theme="landscape">
+                <div class="option-item" data-theme="04">
                   <div class="option-thumbnail">
                     <img
-                      src="assets/images/natgeo/details/theme-landscape-thumbnail.png"
-                      alt="Landscape"
+                      src="../assets/images/pdp/fifa/details/thumb_04.png"
+                      alt="Option 1 - USA"
                     />
                   </div>
                   <div class="option-info">
                     <span class="option-name"
-                      >National Geographic Landscape</span
+                      >FIFA World Cup 26™<br />USA</span
                     >
                     <span class="option-check" aria-hidden="true">
                       <img
-                        src="assets/icons/icon-checked.svg"
+                        src="../assets/icons/icon-checked.svg"
+                        alt="check icon"
+                        loading="lazy"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div class="option-item" data-theme="05">
+                  <div class="option-thumbnail">
+                    <img
+                      src="../assets/images/pdp/fifa/details/thumb_05.png"
+                      alt="Option 5 - Korea Republic"
+                    />
+                  </div>
+                  <div class="option-info">
+                    <span class="option-name"
+                      >FIFA World Cup 26™<br />Korea Republic</span
+                    >
+                    <span class="option-check" aria-hidden="true">
+                      <img
+                        src="../assets/icons/icon-checked.svg"
                         alt="check icon"
                         loading="lazy"
                       />
@@ -483,7 +530,373 @@
           </div>
         </div>
       </section>
-      <!-- Detail Section > Product -->
+      <!-- Product View END -->
+
+      <!-- KV (Key Visual) START -->
+      <section class="kv">
+        <div class="swiper kv-content">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide kv-slide" data-theme="01">
+              <picture>
+                <!-- 화면 너비가 768px 이하일 때 사용할 모바일용 이미지 -->
+                <source
+                  media="(max-width: 768px)"
+                  srcset="../assets/images/pdp/fifa/details/mo_hero_theme01.png"
+                />
+                <!-- 기본 이미지 -->
+                <img
+                  src="../assets/images/pdp/fifa/details/img_hero_theme01.png"
+                  alt="Key Visual Image 1"
+                  style="width: 100%; height: auto"
+                />
+              </picture>
+              <img
+                class="kv-logo view-mo"
+                src="../assets/images/pdp/fifa/details/mo_hero_logo.png"
+                alt="fifa logo"
+              />
+              <div class="kv-title">
+                <h2 class="kv-main-title">
+                  Dive into the Excitement of<br />FIFA World Cup 26™ in Your
+                  Kia!
+                </h2>
+                <p class="kv-subtitle">
+                  <span
+                    >Every drive becomes part of<br class="view-mo" />the FIFA
+                    World Cup 26™ celebration.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="02">
+              <picture>
+                <!-- 화면 너비가 768px 이하일 때 사용할 모바일용 이미지 -->
+                <source
+                  media="(max-width: 768px)"
+                  srcset="../assets/images/pdp/fifa/details/mo_hero_theme02.png"
+                />
+                <!-- 기본 이미지 -->
+                <img
+                  src="../assets/images/pdp/fifa/details/img_hero_theme02.png"
+                  alt="Key Visual Image 2"
+                  style="width: 100%; height: auto"
+                />
+              </picture>
+              <img
+                class="kv-logo view-mo"
+                src="../assets/images/pdp/fifa/details/mo_hero_logo_white.png"
+                alt="fifa logo"
+              />
+              <div class="kv-title white">
+                <h2 class="kv-main-title">
+                  Dive into the Excitement of<br />FIFA World Cup 26™ in Your
+                  Kia!
+                </h2>
+                <p class="kv-subtitle">
+                  <span
+                    >Every drive becomes part of<br class="view-mo" />the FIFA
+                    World Cup 26™ celebration.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="03">
+              <picture>
+                <!-- 화면 너비가 768px 이하일 때 사용할 모바일용 이미지 -->
+                <source
+                  media="(max-width: 768px)"
+                  srcset="../assets/images/pdp/fifa/details/mo_hero_theme03.png"
+                />
+                <!-- 기본 이미지 -->
+                <img
+                  src="../assets/images/pdp/fifa/details/img_hero_theme03.png"
+                  alt="Key Visual Image 3"
+                  style="width: 100%; height: auto"
+                />
+              </picture>
+              <img
+                class="kv-logo view-mo"
+                src="../assets/images/pdp/fifa/details/mo_hero_logo.png"
+                alt="fifa logo"
+              />
+              <div class="kv-title">
+                <h2 class="kv-main-title">
+                  Dive into the Excitement of<br />FIFA World Cup 26™ in Your
+                  Kia!
+                </h2>
+                <p class="kv-subtitle">
+                  <span
+                    >Every drive becomes part of<br class="view-mo" />the FIFA
+                    World Cup 26™ celebration.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="04">
+              <picture>
+                <!-- 화면 너비가 768px 이하일 때 사용할 모바일용 이미지 -->
+                <source
+                  media="(max-width: 768px)"
+                  srcset="../assets/images/pdp/fifa/details/mo_hero_theme04.png"
+                />
+                <!-- 기본 이미지 -->
+                <img
+                  src="../assets/images/pdp/fifa/details/img_hero_theme04.png"
+                  alt="Key Visual Image 4"
+                  style="width: 100%; height: auto"
+                />
+              </picture>
+              <img
+                class="kv-logo view-mo"
+                src="../assets/images/pdp/fifa/details/mo_hero_logo_white.png"
+                alt="fifa logo"
+              />
+              <div class="kv-title white">
+                <h2 class="kv-main-title">
+                  Dive into the Excitement of<br />FIFA World Cup 26™ in Your
+                  Kia!
+                </h2>
+                <p class="kv-subtitle">
+                  <span
+                    >Every drive becomes part of<br class="view-mo" />the FIFA
+                    World Cup 26™ celebration.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="05">
+              <picture>
+                <!-- 화면 너비가 768px 이하일 때 사용할 모바일용 이미지 -->
+                <source
+                  media="(max-width: 768px)"
+                  srcset="../assets/images/pdp/fifa/details/mo_hero_theme05.png"
+                />
+                <!-- 기본 이미지 -->
+                <img
+                  src="../assets/images/pdp/fifa/details/img_hero_theme05.png"
+                  alt="Key Visual Image 5"
+                  style="width: 100%; height: auto"
+                />
+              </picture>
+              <img
+                class="kv-logo view-mo"
+                src="../assets/images/pdp/fifa/details/mo_hero_logo_white.png"
+                alt="fifa logo"
+              />
+              <div class="kv-title white">
+                <h2 class="kv-main-title">
+                  Dive into the Excitement of<br />FIFA World Cup 26™ in Your
+                  Kia!
+                </h2>
+                <p class="kv-subtitle">
+                  <span
+                    >Every drive becomes part of<br class="view-mo" />the FIFA
+                    World Cup 26™ celebration.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 네비게이션 화살표 (이전/다음) -->
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <!-- KV (Key Visual) END -->
+
+      <!-- Sticky Wrapper START -->
+      <div>
+        <!-- Section > Info START -->
+        <section class="info">
+          <div class="section-inner">
+            <!-- Info Item 1 -->
+            <div class="info-item">
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/icon-ccnc-vehicles.svg"
+                  alt="ccNC vehicles icon"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info-text">
+                <h3 class="info-title">Available only for ccNC vehicles</h3>
+                <p class="info-description">
+                  Only vehicles with 12.3-inch clusters can be selected from Kia
+                  ccNC infotainment platforms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Info Item 2 -->
+            <div class="info-item">
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/icon-personal-customizing.svg"
+                  alt="Personal Customizing icon"
+                  loading="lazy"
+                />
+              </div>
+              <div class="info-text">
+                <h3 class="info-title">Personal Customizing</h3>
+                <p class="info-description">
+                  You can purchase multiple themes and set them differently for
+                  each driver.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section > Info END-->
+
+        <!-- Section > Upgrade Guides -->
+        <section class="upgrade-guides">
+          <div class="section-inner">
+            <h2 class="upgrade-guides-title">Upgrade Guides</h2>
+
+            <div class="upgrade-guides-video youtube-container">
+              <div
+                class="youtubeArea youtubeArea_pdp"
+                data-value="lNuSUuf7hYU"
+              ></div>
+            </div>
+
+            <a href="" class="upgrade-guides-link cut-corner-btn">
+              <span class="cut-corner-btn-inner">Upgrade Guides</span>
+            </a>
+          </div>
+        </section>
+        <!-- Section > Upgrade Guides -->
+      </div>
+      <!-- Sticky Wrapper END -->
+
+      <!-- Disclaimer START -->
+      <section class="disclaimer">
+        <div class="section-inner">
+          <h2 class="disclaimer-title">Disclaimer</h2>
+
+          <ul class="disclaimer-list">
+            <li>
+              <p class="disclaimer-text">
+                It is only available for Kia Connect service users.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                Available only for vehicles with Kia ccNC infotainment platform.
+                (Not applicable for vehicles with 4-inch clusters.)
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                Kia Connect service must be maintained for normal use.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                It may fail to use due to a temporary communication failure.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                There may be restrictions on use in communication shaded areas.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                If you choose to use it for a lifetime, you can use it without a
+                period limit.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                However, the service will be automatically terminated when Kia
+                Connect is terminated.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                The item belongs to the vehicle, not the account.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                Lifetime use can be canceled within 7 days of payment.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                The cancellation of the purchase will take place after the
+                product installed in the vehicle is deleted.
+              </p>
+            </li>
+            <li>
+              <p class="disclaimer-text">
+                Repeated purchases and cancellations may be restricted.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Disclaimer END -->
+
+      <!-- Related Feature START -->
+      <section class="related-feature">
+        <div class="section-inner">
+          <h2 class="related-feature-title">Related Feature</h2>
+
+          <div class="feature-list">
+            <a href="#" class="feature-item">
+              <div class="feature-content">
+                <div class="thumbnail">
+                  <img
+                    src="../assets/images/pdp/fifa/details/feature_disney.png"
+                    alt="Disney Display Themes"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="feature-text">
+                  <h3 class="title">Disney Display Themes</h3>
+                  <p class="description">
+                    A special theme that adds style to driving
+                  </p>
+                </div>
+              </div>
+              <div class="feature-price">
+                <p class="label">Lifetime pass</p>
+                <p class="value">₩29,900</p>
+              </div>
+            </a>
+            <a href="#" class="feature-item">
+              <div class="feature-content">
+                <div class="thumbnail">
+                  <img
+                    src="../assets/images/pdp/fifa/details/feature_pixar.png"
+                    alt="Pixar Toy Story Display Theme"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="feature-text">
+                  <h3 class="title">Pixar Toy Story Display Theme</h3>
+                  <p class="description">
+                    A special theme that adds style to driving
+                  </p>
+                </div>
+              </div>
+              <div class="feature-price">
+                <p class="label">Lifetime pass</p>
+                <p class="value">₩29,900</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Related Feature END -->
     </main>
 
     <!-- floating 메뉴-->
@@ -633,6 +1046,10 @@
     <!--//footer-->
 
     <!-- JavaScript -->
+    <script>
+      const _themeList = ['01', '02', '03', '04', '05'];
+      const _currentTheme = '01';
+    </script>
     <script
       type="text/javascript"
       charset="UTF-8"
@@ -643,11 +1060,7 @@
       charset="UTF-8"
       src="../assets/js/library/jquery-ui.min.js?v1"
     ></script>
-    <script
-      type="text/javascript"
-      charset="UTF-8"
-      src="../assets/js/library/swiper-bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
       charset="UTF-8"
@@ -656,5 +1069,6 @@
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/youtube.js"></script>
     <script src="../assets/js/floating_menu.js"></script>
+    <script src="../assets/js/pdp/set-detail.js"></script>
   </body>
 </html>

@@ -1,0 +1,79 @@
+/* ========================================
+   Section > Disclaimer
+   ======================================== */
+section.disclaimer {
+  position: relative;
+  background-color: #ffffff;
+  border-top: 1px solid #dedede;
+  padding: 100px 0;
+}
+
+section.disclaimer .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.disclaimer-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+
+ul.disclaimer-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dedede;
+  padding: 20px 0 20px 22px;
+  list-style: none;
+}
+
+ul.disclaimer-list > li {
+  display: flex;
+  gap: 4px;
+  justify-content: start;
+  align-items: center;
+}
+
+ul.disclaimer-list > li::before {
+  content: '∙';
+  font-size: 20px;
+  color: #676767;
+}
+
+.disclaimer-text {
+  flex: 1;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #676767;
+}
+
+/* Medium Mobile Styles (<= 769px) */
+@media screen and (max-width: 769px) {
+  /*  TODO 모바일 디자인 대응 */
+  section.disclaimer {
+    padding: 60px 0;
+  }
+  section.disclaimer .section-inner {
+    gap: 30px;
+  }
+  .disclaimer-title {
+    font-size: 25px;
+    line-height: 1;
+  }
+  ul.disclaimer-list {
+    padding: 20px 0 0 0;
+  }
+  .disclaimer-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) { 
+  .disclaimer-title {
+    font-size: 20px;
+  }
+}
+
