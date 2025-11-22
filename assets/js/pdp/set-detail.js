@@ -56,6 +56,24 @@ function setupEventListeners() {
     );
   });
 
+  const themeSelectors = document.querySelector('.theme-selector-wrapper');
+  if (themeSelectors) {
+    const stickyTop = parseInt(getComputedStyle(themeSelectors).top, 10) || 0;
+    function checkThemeSelectorsSticky() {
+      const rect = themeSelectors.getBoundingClientRect();
+      if (rect.top <= stickyTop) {
+        themeSelectors.classList.add('is-sticky');
+      } else {
+        themeSelectors.classList.remove('is-sticky');
+      }
+    }
+    window.addEventListener('scroll', checkThemeSelectorsSticky, {
+      passive: true,
+    });
+    window.addEventListener('resize', checkThemeSelectorsSticky);
+    checkThemeSelectorsSticky();
+  }
+
   // MO용 테마 선택 Dropdown
   const dropdownBox = document.querySelector('.theme-selector.dropdown');
   const dropdownButton = document.getElementById('theme-selector-dropdown');
