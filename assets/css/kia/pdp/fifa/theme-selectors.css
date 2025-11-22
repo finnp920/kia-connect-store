@@ -1,0 +1,193 @@
+/* 트랙 내부 레이아웃 */
+.theme-selector-wrapper {
+  position: sticky;
+  top: 59px;
+
+  width: 100%;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+.theme-selector-wrapper.is-sticky {
+  backdrop-filter: blur(3px);
+}
+
+.theme-selector {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.theme-selector.buttons {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-selector.buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #05141f;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  background-color: #f2f4f6;
+  border: 1px solid #d0d0d0;
+  pointer-events: auto;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.theme-selector.buttons button::before {
+  flex: none;
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../../images/pdp/fifa/icons/icon_unchecked.svg);
+}
+
+[data-current-theme='01'] .theme-selector.buttons button[data-theme='01'] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+}
+[data-current-theme='02'] .theme-selector.buttons button[data-theme='02'] {
+  background-color: #ff3d00;
+  border-color: #ff3d00;
+  color: white;
+}
+[data-current-theme='03'] .theme-selector.buttons button[data-theme='03'] {
+  background-color: #00c852;
+  border-color: #00c852;
+  color: white;
+}
+[data-current-theme='04'] .theme-selector.buttons button[data-theme='04'] {
+  background-color: #304ffe;
+  border-color: #304ffe;
+  color: white;
+}
+[data-current-theme='05'] .theme-selector.buttons button[data-theme='05'] {
+  background-color: #d0303c;
+  border-color: #d0303c;
+  color: white;
+}
+[data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01']::before,
+[data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02']::before,
+[data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03']::before,
+[data-current-theme='04']
+  .theme-selector.buttons
+  button[data-theme='04']::before,
+[data-current-theme='05']
+  .theme-selector.buttons
+  button[data-theme='05']::before {
+  background-image: url(../../../../images/pdp/fifa/icons/icon_checked.svg);
+}
+
+.theme-selector.dropdown {
+  display: none;
+  top: 59px;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 769px) {
+  .theme-selector-wrapper {
+    top: 56px;
+  }
+  .theme-selector.buttons {
+    display: none;
+  }
+  .theme-selector.dropdown {
+    display: block;
+    pointer-events: auto;
+  }
+  .theme-selector.dropdown .theme-text {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    color: #05141f;
+    border: 1.4px solid #dedede;
+    border-radius: 4px;
+    background-color: #f2f4f6;
+    cursor: pointer;
+    text-align: left;
+    padding-right: 48px;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .theme-selector.dropdown .theme-text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    height: 6px;
+    margin: auto 0;
+    background-image: url('../../../../icons/icon-angle-down.svg');
+    background-size: 12px 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateX(0deg);
+    transition: transform 0.3s;
+    pointer-events: none;
+  }
+  .theme-selector.dropdown .theme-text:focus {
+    outline: none;
+  }
+  .theme-selector.dropdown .theme-list {
+    position: absolute;
+    top: calc(100% - 17px);
+    left: 20px;
+    right: 20px;
+    list-style: none;
+    max-height: 0;
+    border: 1.4px solid transparent;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .theme-selector.dropdown.active .theme-list {
+    max-height: 300px;
+    border: 1.4px solid #dedede;
+    background-color: #f2f4f6;
+  }
+  .theme-selector.dropdown .theme-list li {
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #05141f;
+    cursor: pointer;
+    background-color: #f2f4f6;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .theme-selector.dropdown .theme-list li:first-child {
+    border-radius: 4px 4px 0 0;
+    border-top: none;
+  }
+
+  .theme-selector.dropdown .theme-list li:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .theme-selector.dropdown .theme-list li:hover {
+    background-color: #e8e8e8;
+  }
+}

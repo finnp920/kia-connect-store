@@ -1,5 +1,5 @@
 /* ========================================
-   Detail Section > KV (Key Visual)
+   KV (Key Visual)
    ======================================== */
 section.kv {
   position: relative;
@@ -25,26 +25,7 @@ section.kv {
 .kv-image {
   aspect-ratio: 160 / 73;
 }
-.kv-logo {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 170px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-}
-.kv-copyright {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 12px;
-  color: #d4d4d4;
-  letter-spacing: -0.2px;
-}
-.kv-title {
+.kv-contents {
   position: absolute;
   top: 90px;
   left: 50%;
@@ -55,10 +36,17 @@ section.kv {
   padding: 0 20px;
   z-index: 10;
 }
-.kv-title.white > * {
+.kv-contents.white > * {
   color: #ffffff !important;
 }
-.kv-main-title {
+.kv-logo {
+  width: 16.11%;
+  height: auto;
+  margin: 0 auto 16px;
+  pointer-events: none;
+  aspect-ratio: 116 / 180;
+}
+.kv-title {
   margin-bottom: 20px;
   color: #05141f;
   text-align: center;
@@ -74,11 +62,6 @@ section.kv {
   letter-spacing: -0.32px;
   max-width: 866px;
   margin: 0 auto;
-}
-/* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
-.swiper-slide[data-theme='theme-sw'] .kv-main-title,
-.swiper-slide[data-theme='theme-sw'] .kv-subtitle {
-  color: #ffffff;
 }
 
 .swiper-navigation {
@@ -133,7 +116,7 @@ section.kv .view-mo {
 }
 
 @media screen and (max-width: 1240px) {
-  .kv-main-title {
+  .kv-title {
     font-size: 42px;
   }
 }
@@ -154,42 +137,29 @@ section.kv .view-mo {
   .swiper-pagination {
     --swiper-pagination-bottom: 28px;
   }
-  .kv-title {
-    top: 100px;
-  }
-  .kv-logo {
-    top: 35px;
-    right: 35px;
-    width: 100px;
-    height: 30px;
-  }
-  .kv-copyright {
-    bottom: 12px;
-    font-size: 10px;
+  .kv-contents {
+    top: 6.2%;
   }
 }
 @media screen and (max-width: 900px) {
-  .kv-main-title {
+  .kv-title {
     font-size: 38px;
   }
 }
 @media screen and (max-width: 769px) {
-  .kv-main-title {
-    font-size: 30px;
+  .kv-title {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
   }
   .kv-subtitle {
     font-size: 14px;
+    letter-spacing: -0.28px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .swiper-navigation {
     display: none;
-  }
-  .kv-logo {
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 18px;
   }
 }

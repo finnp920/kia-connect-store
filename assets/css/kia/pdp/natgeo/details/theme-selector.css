@@ -160,33 +160,33 @@
     background-color: #e8e8e8;
   }
 
-  .mobile-theme-dropdown[data-theme='space-wonders'] .theme-text {
-    border-color: rgba(255, 255, 255, 0.2);
-    background-color: #171717;
-    color: #d1d1d1;
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders'] .theme-text {*/
+  /*  border-color: rgba(255, 255, 255, 0.2);*/
+  /*  background-color: #171717;*/
+  /*  color: #d1d1d1;*/
+  /*}*/
 
-  .mobile-theme-dropdown[data-theme='space-wonders'] .theme-text::before {
-    background-image: url('../../../../../icons/icon-angle-down_white.svg');
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders'] .theme-text::before {*/
+  /*  background-image: url('../../../../../icons/icon-angle-down_white.svg');*/
+  /*}*/
 
-  .mobile-theme-dropdown[data-theme='space-wonders'].active .theme-list {
-    background-color: #171717;
-    border-color: rgba(255, 255, 255, 0.2);
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders'].active .theme-list {*/
+  /*  background-color: #171717;*/
+  /*  border-color: rgba(255, 255, 255, 0.2);*/
+  /*}*/
 
-  .mobile-theme-dropdown[data-theme='space-wonders'] .theme-list li {
-    background-color: #171717;
-    color: #d1d1d1;
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders'] .theme-list li {*/
+  /*  background-color: #171717;*/
+  /*  color: #d1d1d1;*/
+  /*}*/
 
-  .mobile-theme-dropdown[data-theme='space-wonders']
-    .theme-list
-    li:first-child {
-    border-top: none;
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders']*/
+  /*  .theme-list*/
+  /*  li:first-child {*/
+  /*  border-top: none;*/
+  /*}*/
 
-  .mobile-theme-dropdown[data-theme='space-wonders'] .theme-list li:hover {
-    background-color: #222;
-  }
+  /*.mobile-theme-dropdown[data-theme='space-wonders'] .theme-list li:hover {*/
+  /*  background-color: #222;*/
+  /*}*/
 }

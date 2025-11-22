@@ -203,7 +203,8 @@ section.product-view .section-inner {
   font-weight: 600;
 }
 .price-option-box {
-  padding: 34px 20px 34px 25px;
+  height: 90px;
+  padding: 0 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,6 +244,7 @@ section.product-view .section-inner {
   font-weight: 600;
 }
 .total-price-value {
+  flex: none;
   color: #000;
   text-align: right;
   font-size: 30px;
@@ -288,22 +290,20 @@ section.product-view .section-inner {
   }
   .option-list-title {
     font-size: 16px;
-    line-height: 17px;
   }
   .price-options-title {
     margin-bottom: 15px;
     font-size: 16px;
-    line-height: 17px;
   }
   .price-option-box {
-    padding: 31px 20px 30px 20px;
+    height: 80px;
+    padding: 0 20px;
   }
   .total-price {
     margin-top: 30px;
   }
   .total-price-label {
     font-size: 14px;
-    line-height: 15px;
   }
   .btn-buy {
     margin-top: 30px;
@@ -333,11 +333,9 @@ section.product-view .section-inner {
   }
   .price-option-box .price-option-label {
     font-size: 14px;
-    line-height: 15px;
   }
   .price-option-box .price-option-value {
     font-size: 16px;
-    line-height: 17px;
   }
   .total-price {
     align-items: flex-start;
@@ -347,7 +345,6 @@ section.product-view .section-inner {
     margin-bottom: 15px;
   }
   .total-price-value {
-    font-size: 30px;
     line-height: 25px;
   }
 }

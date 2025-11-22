@@ -1,0 +1,300 @@
+/* ========================================
+   Themes
+   ======================================== */
+section.themes {
+}
+section.themes .view-pc {
+  display: block;
+}
+section.themes .view-mo {
+  display: none;
+}
+section.themes .themes-header {
+  position: relative;
+  max-width: 1900px;
+  margin: 0 auto -46px;
+  padding: 64px 0 100px;
+  text-align: center;
+  background-image: url('../../../../images/pdp/fifa/details/themes-header_bg.png');
+  background-position: top center;
+  z-index: 1;
+}
+.themes-title {
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+.themes-subtitle {
+  margin-top: 24px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+}
+
+.themes-cards-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 132px 20px;
+  background-image: url('../../../../images/pdp/fifa/details/img_sec02_bg.png');
+}
+
+.themes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+
+  max-width: 1588px;
+  margin: 0 auto;
+  list-style: none;
+}
+.card {
+  position: relative; /* 자식 요소(이미지, 텍스트, 뱃지)의 기준점 */
+  width: 100%;
+  max-width: 258px;
+  cursor: pointer;
+
+  /* [Desktop Ratio] Active 이미지 기준 비율 고정 */
+  aspect-ratio: 258 / 447;
+
+  /* 이미지 전환 시 깜빡임 방지 및 레이어 격리 */
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+.card-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 정중앙 배치 */
+  display: block;
+
+  /* 부드러운 전환 효과 */
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s;
+}
+.card-layer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 비율 유지 */
+}
+.layer-active {
+  width: 100%; /* 꽉 채움 */
+  height: 100%;
+  z-index: 1; /* 위 */
+
+  /* 기본 상태: 숨김 */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* --- Layer B: Inactive (Small) --- */
+.layer-inactive {
+  /* 테두리 두께만큼 축소하여 렌더링 (Visual Jump 방지) */
+  width: 100%;
+  height: auto;
+  z-index: 0; /* 아래 */
+
+  /* 기본 상태: 보임 */
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* 이미지보다 위 */
+
+  padding: 20px 19px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  container-type: inline-size;
+  container-name: title-box;
+}
+.card-title {
+  width: 100%;
+  font-size: clamp(12px, 9.5cqw, 20px);
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2;
+}
+.card-tags {
+  width: 100%;
+  margin-top: 5.5%;
+  font-size: clamp(12px, 7.55cqw, 16px);
+  color: #888;
+  line-height: 1.5;
+}
+
+.card.pick .card-layer {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.card.pick .pick-icon-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 47.8%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+}
+.pick-icon {
+  width: 17.1%;
+  height: auto;
+  flex-shrink: 0;
+  aspect-ratio: 44/53;
+}
+
+.card.pick .card-content {
+  position: relative;
+  padding-top: 15.5%;
+}
+.card.pick .card-title {
+  width: 100%;
+  color: #b2b8bd;
+  text-align: center;
+  font-size: clamp(14px, 11.32cqw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.48px;
+}
+.card.pick .card-tags {
+  width: 100%;
+  margin-top: 6.8%;
+  color: #b2b8bd;
+  text-align: center;
+  font-size: clamp(12px, 7.55cqw, 16px);
+  letter-spacing: -0.32px;
+}
+
+[data-current-theme='01'] .card[data-theme='01'] .layer-active,
+[data-current-theme='02'] .card[data-theme='02'] .layer-active,
+[data-current-theme='03'] .card[data-theme='03'] .layer-active,
+[data-current-theme='04'] .card[data-theme='04'] .layer-active,
+[data-current-theme='05'] .card[data-theme='05'] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-current-theme='01'] .card[data-theme='01'] .layer-inactive,
+[data-current-theme='02'] .card[data-theme='02'] .layer-inactive,
+[data-current-theme='03'] .card[data-theme='03'] .layer-inactive,
+[data-current-theme='04'] .card[data-theme='04'] .layer-inactive,
+[data-current-theme='05'] .card[data-theme='05'] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 체크 뱃지 */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 8.6%;
+  z-index: 10; /* 최상단 */
+
+  width: 22px;
+  height: 22px;
+  background-image: url(../../../../images/pdp/fifa/icons/icon_card_selected.png);
+  background-position: center center;
+  background-size: contain;
+
+  /* Animation Init */
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.2s,
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none; /* 클릭 통과 */
+}
+[data-current-theme='01'] .card[data-theme='01']::after,
+[data-current-theme='02'] .card[data-theme='02']::after,
+[data-current-theme='03'] .card[data-theme='03']::after,
+[data-current-theme='04'] .card[data-theme='04']::after,
+[data-current-theme='05'] .card[data-theme='05']::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 화면이 좀 작아지면 (Tablet): 3x2 구조 */
+@media (max-width: 1200px) {
+  .themes-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 한 줄에 3개 */
+    max-width: 790px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  section.themes .view-pc {
+    display: none;
+  }
+  section.themes .view-mo {
+    display: block;
+  }
+  section.themes .themes-header {
+    position: relative;
+    max-width: 1900px;
+    margin: 0 auto -41px;
+    padding: 35px 0 80px;
+    text-align: center;
+    background-size: cover;
+  }
+  .themes-title {
+    color: #000;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
+  .themes-subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  .themes-cards-wrapper {
+    padding: 36px 20px;
+  }
+  .themes-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+  .card {
+    max-width: 100%;
+    aspect-ratio: 176 / 204;
+  }
+
+  .card-title {
+    text-align: center;
+  }
+  .card-tags {
+    text-align: center;
+  }
+
+  .card.pick .pick-icon-wrapper {
+    padding-top: 21.7%;
+    aspect-ratio: 156 / 92;
+  }
+  .pick-icon {
+    width: 24px;
+    aspect-ratio: 24 / 29;
+  }
+  .card.pick .card-content {
+    padding-top: 0;
+  }
+}

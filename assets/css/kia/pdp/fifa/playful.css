@@ -1,0 +1,180 @@
+/* ========================================
+   Playful
+   ======================================== */
+.playful-background {
+  width: 100%; /* 기본적으로 꽉 채우려 노력함 */
+  max-width: 1920px; /* 단, 1200px을 넘지 않음 */
+  justify-self: center;
+  transition: background-image 0.5s ease-in-out;
+  background-size: cover;
+}
+[data-current-theme='01'] .playful-background {
+  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_01.png');
+}
+[data-current-theme='02'] .playful-background {
+  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_02.png');
+}
+[data-current-theme='03'] .playful-background {
+  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_03.png');
+}
+[data-current-theme='04'] .playful-background {
+  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_04.png');
+}
+[data-current-theme='05'] .playful-background {
+  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_05.png');
+}
+
+section.playful {
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+section.playful .view-pc {
+  display: block;
+}
+section.playful .view-mo {
+  display: none;
+}
+section.playful.playful-header {
+  padding-top: 164px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+.playful-title {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+.playful-subtitle {
+  margin: 24px 0 0 0;
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+section.playful.playful-content {
+  padding-top: 156px;
+  padding-bottom: 133px;
+}
+
+.playful-banner {
+  width: 100%;
+}
+.playful-banner img {
+  aspect-ratio: 100 / 17;
+}
+
+.playful-contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 80px;
+  margin-top: 100px;
+}
+.playful-content-item {
+  width: 100%;
+}
+/* Item > Title */
+.playful-content-item > h3 {
+  color: #05141f;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+/* Item > Video */
+.playful-content-item > .playful-videos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  align-self: center;
+}
+.playful-video-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 160px;
+  padding: 20px 22px 25px;
+  aspect-ratio: 300 / 59;
+  background-image: url('../../../../images/pdp/fifa/details/img_disc_video.png');
+  background-size: contain;
+}
+.playful-video-player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height var(--transition-base);
+  background-color: black;
+}
+
+/* Item > Image */
+.playful-content-item > .image-wrapper {
+}
+.playful-content-item > .image-wrapper img {
+  border-radius: 8px;
+}
+
+/* Item > description */
+.playful-content-item > p {
+  margin: 24px 0 0 0;
+  color: #05141f;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  section.playful.playful-content {
+    padding-top: 210px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  section.playful .view-pc {
+    display: none;
+  }
+  section.playful .view-mo {
+    display: block;
+  }
+  section.playful.playful-header {
+    padding-top: 48px;
+    padding-bottom: 4px;
+  }
+  .playful-title {
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
+  .playful-subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  section.playful.playful-content {
+    padding-top: 83px;
+  }
+  .playful-banner img {
+    aspect-ratio: 640 / 480;
+  }
+
+  .playful-contents-wrapper {
+    margin-top: 20px;
+    gap: 60px;
+  }
+  .playful-content-item > h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .playful-content-item > p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}

@@ -63,7 +63,6 @@ button {
 main section {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
 }
 main section > .section-inner {
   max-width: 1240px;
@@ -107,4 +106,35 @@ main section > .section-inner {
 .floating_menu.is-visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* ========================================
+   Fade
+   ======================================== */
+.xfade-stage {
+  display: grid;
+  /* Grid를 써서 자식들을 한 칸(stack)에 몰아넣음.
+     absolute를 안 써도 되므로 부모 높이가 자식 높이에 맞춰 자동 조절됨 */
+  grid-template-areas: 'stack';
+  position: relative;
+  isolation: isolate; /* z-index 스코프 격리 (다른 요소 간섭 방지) */
+  overflow: hidden; /* 넘치는 이미지 정리 */
+}
+.xfade-item {
+  grid-area: stack; /* 모든 아이템을 "stack"이라는 같은 칸에 배치 -> 겹쳐짐 */
+  width: 100%;
+  height: auto; /* 혹은 100%, 상황에 따라 조절 */
+
+  /* 기본 상태: 숨김 */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+
+  /* 부드러운 전환 효과 (하드웨어 가속 포함) */
+  transform: scale(1.05);
+  will-change: opacity, transform;
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s 0.6s; /* 사라질 때 delay */
 }

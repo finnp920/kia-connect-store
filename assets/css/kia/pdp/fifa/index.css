@@ -1,1 +1,61 @@
 @import url('key_visual.css');
+@import url('themes.css');
+@import url('playful.css');
+@import url('theme-selectors.css');
+@import url('experience.css');
+
+[data-current-theme='01'] .xfade-item[data-theme='01'],
+[data-current-theme='02'] .xfade-item[data-theme='02'],
+[data-current-theme='03'] .xfade-item[data-theme='03'],
+[data-current-theme='04'] .xfade-item[data-theme='04'],
+[data-current-theme='05'] .xfade-item[data-theme='05'] {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transform: scale(1);
+  transition-delay: 0s; /* visibility delay 제거 */
+}
+
+/* sticky 처리 */
+.sticky-layout {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  width: 100%;
+  position: relative;
+}
+.sticky-track {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1; /* 여기서부터 끝까지 살아남음 */
+
+  z-index: 10; /* 컨텐츠보다 위 */
+  pointer-events: none; /* 중요: 트랙 영역이 넓어도 클릭은 뒤로 통과시킴 */
+
+  height: 100%;
+}
+.playful-background {
+  grid-column: 1 / -1;
+  grid-row: 1 / 4;
+  z-index: 0;
+}
+section.playful {
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+section.playful.playful-header {
+  grid-row: 1;
+}
+section.playful.playful-content {
+  grid-row: 3; /* Row 2는 버튼 자리이므로 비워둠 */
+}
+section.experience {
+  grid-row: 4;
+  grid-column: 1 / -1;
+}
+section.info {
+  grid-row: 5;
+  grid-column: 1 / -1;
+}
+section.upgrade-guides {
+  grid-row: 6;
+  grid-column: 1 / -1;
+}

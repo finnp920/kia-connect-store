@@ -1,0 +1,35 @@
+/* ========================================
+   Experience
+   ======================================== */
+section.experience {
+  position: relative;
+  padding: 146px 0;
+}
+
+.experience-title {
+  color: #05141f;
+  text-align: center;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.experience-image {
+  width: 100%;
+  margin-top: 74px;
+  aspect-ratio: 1200 / 571;
+}
+
+@media screen and (max-width: 769px) {
+  section.experience {
+    padding: 52px 0;
+  }
+
+  .experience-title {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+
+  .experience-image {
+    margin-top: 20px;
+  }
+}
