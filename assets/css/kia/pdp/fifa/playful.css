@@ -5,8 +5,9 @@
   width: 100%; /* 기본적으로 꽉 채우려 노력함 */
   max-width: 1920px; /* 단, 1200px을 넘지 않음 */
   justify-self: center;
-  transition: background-image 0.5s ease-in-out;
   background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
 }
 [data-current-theme='01'] .playful-background {
   background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_01.png');
@@ -101,11 +102,12 @@ section.playful.playful-content {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  gap: 160px;
-  padding: 20px 22px 25px;
+  gap: 13.34%;
+  padding: 1.67% 1.83% 2.08%;
   aspect-ratio: 300 / 59;
   background-image: url('../../../../images/pdp/fifa/details/img_disc_video.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .playful-video-player {
   position: relative;
@@ -176,5 +178,23 @@ section.playful.playful-content {
   .playful-content-item > p {
     margin-top: 16px;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  [data-current-theme='01'] .playful-background {
+    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_01.png');
+  }
+  [data-current-theme='02'] .playful-background {
+    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_02.png');
+  }
+  [data-current-theme='03'] .playful-background {
+    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_03.png');
+  }
+  [data-current-theme='04'] .playful-background {
+    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_04.png');
+  }
+  [data-current-theme='05'] .playful-background {
+    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_05.png');
   }
 }

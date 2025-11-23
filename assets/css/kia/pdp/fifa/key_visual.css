@@ -5,6 +5,12 @@ section.kv {
   position: relative;
   background-color: #ffffff;
 }
+section.kv .view-pc {
+  display: block;
+}
+section.kv .view-mo {
+  display: none;
+}
 
 .swiper {
   position: relative;
@@ -27,7 +33,7 @@ section.kv {
 }
 .kv-contents {
   position: absolute;
-  top: 90px;
+  top: 6.48%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -40,9 +46,10 @@ section.kv {
   color: #ffffff !important;
 }
 .kv-logo {
+  display: none;
   width: 16.11%;
   height: auto;
-  margin: 0 auto 16px;
+  margin: 0 auto 5%;
   pointer-events: none;
   aspect-ratio: 116 / 180;
 }
@@ -92,7 +99,7 @@ section.kv {
 }
 
 .swiper-pagination {
-  --swiper-pagination-bottom: 32px;
+  --swiper-pagination-bottom: 30px;
 }
 .swiper-pagination-bullet {
   width: 56px;
@@ -108,25 +115,15 @@ section.kv {
   background-color: #ffffff;
 }
 
-section.kv .view-pc {
-  display: block;
-}
-section.kv .view-mo {
-  display: none;
-}
-
 @media screen and (max-width: 1240px) {
+  .kv-contents {
+    top: 6.2%;
+  }
   .kv-title {
     font-size: 42px;
   }
 }
 @media screen and (max-width: 1024px) {
-  section.kv .view-pc {
-    display: none;
-  }
-  section.kv .view-mo {
-    display: block;
-  }
   .swiper-slide img.kv-image {
     width: 100%;
     height: auto;
@@ -137,20 +134,33 @@ section.kv .view-mo {
   .swiper-pagination {
     --swiper-pagination-bottom: 28px;
   }
-  .kv-contents {
-    top: 6.2%;
-  }
 }
 @media screen and (max-width: 900px) {
+  .kv-contents {
+    top: 7%;
+  }
   .kv-title {
-    font-size: 38px;
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+  .kv-subtitle {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 769px) {
+  section.kv .view-pc {
+    display: none;
+  }
+  section.kv .view-mo {
+    display: block;
+  }
+  .swiper-navigation {
+    display: none;
+  }
   .kv-title {
     font-size: 20px;
     letter-spacing: -0.4px;
-    margin-bottom: 4px;
+    margin-bottom: 1.2%;
   }
   .kv-subtitle {
     font-size: 14px;
@@ -159,7 +169,4 @@ section.kv .view-mo {
 }
 
 @media screen and (max-width: 360px) {
-  .swiper-navigation {
-    display: none;
-  }
 }
