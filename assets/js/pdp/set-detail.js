@@ -50,11 +50,14 @@ function setupEventListeners() {
   });
 
   // PC용 테마 선택 버튼
-  document.querySelectorAll('.theme-selector button').forEach((selector) => {
-    selector.addEventListener('click', () =>
-      setCurrentTheme(selector.dataset.theme)
-    );
-  });
+  document
+    .querySelectorAll('.theme-selector.buttons button')
+    .forEach((selector) => {
+      selector.addEventListener('click', () => {
+        setCurrentTheme(selector.dataset.theme);
+        scrollToSelector('.sticky-layout');
+      });
+    });
 
   const themeSelectors = document.querySelector('.theme-selector-wrapper');
   if (themeSelectors) {
@@ -98,6 +101,7 @@ function setupEventListeners() {
           dropdownBox.setAttribute('data-theme', themeValue);
         }
         setCurrentTheme(themeValue);
+        scrollToSelector('.sticky-layout');
       });
     });
   }
@@ -158,4 +162,20 @@ function handleLikeClick() {
 function handleBuyClick() {
   console.log('Buy');
   alert(`Proceeding to checkout\nTheme: ${currentTheme}`);
+}
+function scrollToSelector(selector) {
+  const el = document.querySelector(selector);
+
+  if (el) {
+    const infoStickyEl = document.querySelector('.info-sticky');
+    const offset = infoStickyEl?.clientHeight || 0;
+
+    // 요소의 top 위치로 smooth 스크롤
+    const elementPosition =
+      el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth',
+    });
+  }
 }
