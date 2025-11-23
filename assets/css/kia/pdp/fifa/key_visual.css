@@ -33,7 +33,7 @@ section.kv .view-mo {
 }
 .kv-contents {
   position: absolute;
-  top: 6.48%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -57,7 +57,7 @@ section.kv .view-mo {
   margin-bottom: 20px;
   color: #05141f;
   text-align: center;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 600;
   letter-spacing: -0.96px;
   line-height: 1.2;
