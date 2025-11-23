@@ -7,6 +7,7 @@
   justify-self: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
   transition: background-image 0.5s ease-in-out;
 }
 [data-current-theme='01'] .playful-background {
@@ -181,7 +182,7 @@ section.playful.playful-content {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 769px) {
   [data-current-theme='01'] .playful-background {
     background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_01.png');
   }
