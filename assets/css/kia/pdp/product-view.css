@@ -9,7 +9,7 @@ section.product-view .section-inner {
   gap: 100px;
   align-items: flex-start;
 }
-/* Product Thumbnail */
+
 .product-thumbnail {
   position: sticky;
   top: 80px;
@@ -21,7 +21,7 @@ section.product-view .section-inner {
   height: 600px;
   border-radius: 6px;
   overflow: hidden;
-  background-color: #05141f;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
