@@ -44,7 +44,7 @@ function setDetailEventListeners() {
   // 상품 옵션 클릭 시
   const optionItems = document.querySelectorAll('.option-item');
   optionItems.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
       // disabled 일 때
       if (item.classList.contains('disabled')) {
         e.preventDefault(); // 태그가 a나 button일 경우 기본 동작 차단
