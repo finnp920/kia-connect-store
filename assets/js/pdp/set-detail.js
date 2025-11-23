@@ -41,12 +41,32 @@ function setDetailCurrentTheme(newTheme) {
 // Event Binding
 // ----------------------------------------
 function setDetailEventListeners() {
-  document.querySelectorAll('.option-item').forEach((item) => {
-    item.addEventListener('click', () =>
-      setDetailCurrentTheme(item.dataset.theme)
-    );
+  // 상품 옵션 클릭 시
+  const optionItems = document.querySelectorAll('.option-item');
+  optionItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      // disabled 일 때
+      if (item.classList.contains('disabled')) {
+        e.preventDefault(); // 태그가 a나 button일 경우 기본 동작 차단
+        alert('로그인이 필요한 서비스입니다.');
+        return;
+      }
+
+      // disabled 아닐 때
+      // 기존 선택 해제
+      const prevSelected = document.querySelector('.option-item.selected');
+      if (prevSelected) {
+        prevSelected.classList.remove('selected');
+        prevSelected.setAttribute('aria-selected', 'false');
+      }
+
+      // 신규 선택
+      item.classList.add('selected');
+      item.setAttribute('aria-selected', 'true');
+    });
   });
 
+  // 테마 카드 클릭 시 테마 변경
   document.querySelectorAll('.themes-cards-grid .card').forEach((selector) => {
     selector.addEventListener('click', () =>
       setDetailCurrentTheme(selector.dataset.theme)
