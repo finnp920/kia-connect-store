@@ -67,6 +67,8 @@ section.playful.playful-content {
 .playful-banner img {
   width: 100%;
   aspect-ratio: 100 / 17;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .playful-contents-wrapper {
@@ -119,6 +121,8 @@ section.playful.playful-content {
   cursor: pointer;
   transition: height var(--transition-base);
   background-color: black;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 /* Item > Image */
@@ -126,6 +130,8 @@ section.playful.playful-content {
 }
 .playful-content-item > .image-wrapper img {
   border-radius: 8px;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 /* Item > description */

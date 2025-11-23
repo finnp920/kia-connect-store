@@ -17,6 +17,8 @@ section.experience {
   width: 100%;
   margin-top: 74px;
   aspect-ratio: 1200 / 571;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 769px) {

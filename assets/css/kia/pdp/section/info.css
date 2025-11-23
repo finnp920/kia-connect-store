@@ -29,6 +29,8 @@ section.info .section-inner {
   flex-shrink: 0;
   width: 100px;
   height: 100px;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .info-icon img {
