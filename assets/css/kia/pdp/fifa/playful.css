@@ -65,6 +65,7 @@ section.playful.playful-content {
   width: 100%;
 }
 .playful-banner img {
+  width: 100%;
   aspect-ratio: 100 / 17;
 }
 
