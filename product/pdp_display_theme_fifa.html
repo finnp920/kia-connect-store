@@ -364,7 +364,13 @@
           <!-- Product Thumbnail -->
           <div class="product-thumbnail">
             <div class="thumbnail-wrapper is-loading">
-              <img id="productThumbnail" src="" alt="Product Thumbnail" />
+              <img
+                id="productThumbnail"
+                src=""
+                alt="FIFA World Cup 26™ 테마 썸네일"
+                width="600"
+                height="600"
+              />
             </div>
           </div>
 
@@ -373,9 +379,9 @@
             <!-- Product Info -->
             <div class="product-info">
               <div class="product-header">
-                <h2 class="product-name" id="productName">
+                <h1 class="product-name" id="productName">
                   FIFA<br />World Cup 26™<br />Display Themes
-                </h2>
+                </h1>
                 <button class="btn-like" id="btnLike" aria-label="좋아요">
                   <img src="../assets/icons/icon-heart.svg" alt="Like" />
                 </button>
@@ -392,8 +398,13 @@
                 Select Your team and let the spirit of FIFA World Cup 26™ drive
                 with you.
               </h3>
-              <div class="option-list" id="optionList">
-                <div class="option-item" data-theme="01">
+              <div
+                class="option-list"
+                id="optionList"
+                role="radiogroup"
+                aria-labelledby="option-list-title"
+              >
+                <div class="option-item" data-theme="01" role="radio">
                   <div class="option-thumbnail">
                     <img
                       src="../assets/images/pdp/fifa/details/thumb_01.png"
@@ -413,7 +424,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="option-item" data-theme="02">
+                <div class="option-item" data-theme="02" role="radio">
                   <div class="option-thumbnail">
                     <img
                       src="../assets/images/pdp/fifa/details/thumb_02.png"
@@ -434,7 +445,7 @@
                   </div>
                 </div>
 
-                <div class="option-item" data-theme="03">
+                <div class="option-item" data-theme="03" role="radio">
                   <div class="option-thumbnail">
                     <img
                       src="../assets/images/pdp/fifa/details/thumb_03.png"
@@ -454,7 +465,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="option-item" data-theme="04">
+                <div class="option-item" data-theme="04" role="radio">
                   <div class="option-thumbnail">
                     <img
                       src="../assets/images/pdp/fifa/details/thumb_04.png"
@@ -474,7 +485,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="option-item" data-theme="05">
+                <div class="option-item" data-theme="05" role="radio">
                   <div class="option-thumbnail">
                     <img
                       src="../assets/images/pdp/fifa/details/thumb_05.png"
@@ -927,9 +938,9 @@
         <div class="playful-background"></div>
         <section class="playful playful-header">
           <div class="section-inner">
-            <h1 class="playful-title">
+            <h2 class="playful-title">
               Discover <br class="view-mo" />Playful designs!
-            </h1>
+            </h2>
             <p class="playful-subtitle">
               Experience designs that capture the spirit
               <br class="view-mo" />of the FIFA World Cup 26™.
@@ -1232,9 +1243,9 @@
         <!-- Experience START -->
         <section class="experience">
           <div class="section-inner">
-            <h1 class="experience-title">
+            <h2 class="experience-title">
               When Driving Becomes<br />a New Experience
-            </h1>
+            </h2>
             <img
               src="../assets/images/pdp/fifa/details/img_3reasons_common.png"
               alt="New Experience Image"
@@ -1427,6 +1438,8 @@
                     src="../assets/images/pdp/fifa/details/feature_disney.png"
                     alt="Disney Display Themes"
                     loading="lazy"
+                    width="200"
+                    height="200"
                   />
                 </div>
                 <div class="feature-text">
@@ -1448,6 +1461,8 @@
                     src="../assets/images/pdp/fifa/details/feature_pixar.png"
                     alt="Pixar Toy Story Display Theme"
                     loading="lazy"
+                    width="200"
+                    height="200"
                   />
                 </div>
                 <div class="feature-text">
