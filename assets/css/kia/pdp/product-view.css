@@ -15,29 +15,92 @@ section.product-view .section-inner {
   top: 80px;
   flex: 1;
 }
-.thumbnail-wrapper {
+.thumbnail-swiper {
   position: relative;
   width: 600px;
   height: 600px;
   border-radius: 6px;
   overflow: hidden;
   background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 1 / 1;
 }
-.thumbnail-wrapper.is-loading img {
+.thumbnail-swiper .thumbnail-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.thumbnail-swiper .thumbnail-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2; /* 비디오보다 위 */
+
+  /* 부드러운 전환 효과 */
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+.thumbnail-swiper .thumbnail-slide.with-video::after {
+  content: '마우스를 올려보세요.';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10; /* 이미지보다 위에 떠야 함 */
+
+  /* 2. Design (Badge Style) */
+  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 20px; /* 둥근 캡슐 모양 */
+  backdrop-filter: blur(4px); /* 배경 블러 처리로 고급스럽게 */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* 3. Interaction */
+  pointer-events: none; /* 중요: 이 배지가 마우스 이벤트를 가로채지 않게 통과시킴 */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.thumbnail-swiper .thumbnail-slide.with-video:hover img {
   opacity: 0;
 }
-.thumbnail-wrapper img {
-  position: relative;
+.swiper-slide.with-video:hover::after {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.thumbnail-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+.thumbnail-swiper #thumbnail-swiper-pagination {
+  --swiper-pagination-bottom: 10px;
+}
+.thumbnail-swiper .swiper-pagination-bullet {
+  width: 56px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  border-radius: 0;
   opacity: 1;
-  transition: opacity var(--transition-base);
-  aspect-ratio: 1 / 1;
+}
+.thumbnail-swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff;
 }
 
 /* Product Options */
@@ -258,7 +321,7 @@ section.product-view .section-inner {
   section.product-view .section-inner {
     gap: calc((100% - 40px) / 12);
   }
-  .thumbnail-wrapper {
+  .thumbnail-swiper {
     width: 100%;
     height: auto;
   }

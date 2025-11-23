@@ -32,7 +32,7 @@
     <!--  Stylesheet  -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../assets/css/index.css" type="text/css" />
     <link
@@ -363,14 +363,59 @@
         <div class="section-inner">
           <!-- Product Thumbnail -->
           <div class="product-thumbnail">
-            <div class="thumbnail-wrapper is-loading">
-              <img
-                id="productThumbnail"
-                src=""
-                alt="FIFA World Cup 26™ 테마 썸네일"
-                width="600"
-                height="600"
-              />
+            <div class="swiper thumbnail-swiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide thumbnail-slide with-video"
+                  data-theme="01"
+                >
+                  <img
+                    src="../assets/images/pdp/fifa/details/product_thumb_01.png"
+                    alt="FIFA World Cup 26™ Global thumbnail image"
+                  />
+                  <video
+                    class="thumbnail-video"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source
+                      src="../assets/videos/pdp/fifa/product_thumb.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="swiper-slide thumbnail-slide" data-theme="02">
+                  <img
+                    src="../assets/images/pdp/fifa/details/product_thumb_02.png"
+                    alt="FIFA World Cup 26™ Canada thumbnail image"
+                  />
+                </div>
+                <div class="swiper-slide thumbnail-slide" data-theme="03">
+                  <img
+                    src="../assets/images/pdp/fifa/details/product_thumb_03.png"
+                    alt="FIFA World Cup 26™ Mexico thumbnail image"
+                  />
+                </div>
+                <div class="swiper-slide thumbnail-slide" data-theme="04">
+                  <img
+                    src="../assets/images/pdp/fifa/details/product_thumb_04.png"
+                    alt="FIFA World Cup 26™ USA thumbnail image"
+                  />
+                </div>
+                <div class="swiper-slide thumbnail-slide" data-theme="05">
+                  <img
+                    src="../assets/images/pdp/fifa/details/product_thumb_05.png"
+                    alt="FIFA World Cup 26™ Korea Republic thumbnail image"
+                  />
+                </div>
+              </div>
+              <!-- 페이지네이션 -->
+              <div
+                class="swiper-pagination"
+                id="thumbnail-swiper-pagination"
+              ></div>
             </div>
           </div>
 
@@ -444,7 +489,6 @@
                     </span>
                   </div>
                 </div>
-
                 <div class="option-item" data-theme="03" role="radio">
                   <div class="option-thumbnail">
                     <img
@@ -545,7 +589,7 @@
 
       <!-- KV (Key Visual) START -->
       <section class="kv">
-        <div class="swiper kv-content">
+        <div class="swiper kv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide kv-slide" data-theme="01">
               <picture>
@@ -700,7 +744,7 @@
           </div>
 
           <!-- 페이지네이션 -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" id="kv-swiper-pagination"></div>
 
           <!-- 네비게이션 화살표 (이전/다음) -->
           <div class="swiper-navigation">
@@ -1644,7 +1688,7 @@
       charset="UTF-8"
       src="../assets/js/library/jquery-ui.min.js?v1"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../assets/js/library/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
       charset="UTF-8"

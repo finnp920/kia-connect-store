@@ -8,6 +8,8 @@
 const themeList = _themeList || ['01', '02', '03', '04', '05'];
 let currentTheme = _currentTheme || '01';
 let isLiked = false;
+let thumbnail_swiper = null;
+let kv_swiper = null;
 
 // ----------------------------------------
 // Initialization
@@ -15,14 +17,14 @@ let isLiked = false;
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const urlTheme = getQueryParam('theme');
-    setCurrentTheme(urlTheme);
+    setDetailCurrentTheme(urlTheme);
 
-    setupEventListeners();
-    initSwiper();
+    setDetailEventListeners();
+    initDetailSwiper();
   } catch (e) {}
 });
 
-function setCurrentTheme(newTheme) {
+function setDetailCurrentTheme(newTheme) {
   if (newTheme && themeList.includes(newTheme)) {
     currentTheme = newTheme;
   }
@@ -38,14 +40,16 @@ function setCurrentTheme(newTheme) {
 // ----------------------------------------
 // Event Binding
 // ----------------------------------------
-function setupEventListeners() {
+function setDetailEventListeners() {
   document.querySelectorAll('.option-item').forEach((item) => {
-    item.addEventListener('click', () => setCurrentTheme(item.dataset.theme));
+    item.addEventListener('click', () =>
+      setDetailCurrentTheme(item.dataset.theme)
+    );
   });
 
   document.querySelectorAll('.themes-cards-grid .card').forEach((selector) => {
     selector.addEventListener('click', () =>
-      setCurrentTheme(selector.dataset.theme)
+      setDetailCurrentTheme(selector.dataset.theme)
     );
   });
 
@@ -54,7 +58,7 @@ function setupEventListeners() {
     .querySelectorAll('.theme-selector.buttons button')
     .forEach((selector) => {
       selector.addEventListener('click', () => {
-        setCurrentTheme(selector.dataset.theme);
+        setDetailCurrentTheme(selector.dataset.theme);
         scrollToSelector('.sticky-layout');
       });
     });
@@ -100,7 +104,7 @@ function setupEventListeners() {
         if (dropdownBox) {
           dropdownBox.setAttribute('data-theme', themeValue);
         }
-        setCurrentTheme(themeValue);
+        setDetailCurrentTheme(themeValue);
         scrollToSelector('.sticky-layout');
       });
     });
@@ -124,8 +128,45 @@ function setupEventListeners() {
 // ----------------------------------------
 // Swiper
 // ----------------------------------------
-function initSwiper() {
-  natgeo_swiper = new Swiper('.swiper', {
+function initDetailSwiper() {
+  // 상품 썸네일 swiper
+  thumbnail_swiper = new Swiper('.thumbnail-swiper', {
+    loop: false,
+    pagination: {
+      el: '#thumbnail-swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  // 상품 썸네일 > video 있는 슬라이드 마우스 Hover 처리
+  const videoSlides = document.querySelectorAll(
+    '.thumbnail-swiper .thumbnail-slide.with-video'
+  );
+  videoSlides.forEach((slide) => {
+    const video = slide.querySelector('video');
+
+    if (!video) return;
+
+    // 1. Mouse Enter: 재생
+    slide.addEventListener('mouseenter', () => {
+      // Promise 처리: 재생 중 에러 방지 (Interrupted by pause error 해결)
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log('Auto-play was prevented:', error);
+        });
+      }
+    });
+
+    // 2. Mouse Leave: 정지 & 초기화
+    slide.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
+  // Key Visual swiper
+  kv_swiper = new Swiper('.kv-swiper', {
     loop: true,
     // autoplay: {
     //   delay: 3000, // 3초마다 슬라이드 전환
@@ -133,7 +174,7 @@ function initSwiper() {
     //   pauseOnMouseEnter: true, // 마우스를 올리면 일시 정지 (핵심 옵션)
     // },
     pagination: {
-      el: '.swiper-pagination',
+      el: '#kv-swiper-pagination',
       clickable: true,
     },
     navigation: {
