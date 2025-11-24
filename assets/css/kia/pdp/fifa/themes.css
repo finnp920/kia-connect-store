@@ -52,27 +52,39 @@ section.themes .themes-header {
   list-style: none;
 }
 .card {
-  position: relative; /* 자식 요소(이미지, 텍스트, 뱃지)의 기준점 */
+  position: relative;
   width: 100%;
   max-width: 258px;
   cursor: pointer;
-
-  /* [Desktop Ratio] Active 이미지 기준 비율 고정 */
   aspect-ratio: 258 / 447;
-
-  /* 이미지 전환 시 깜빡임 방지 및 레이어 격리 */
   isolation: isolate;
   transform: translateZ(0);
   transition: transform 0.3s ease;
 }
-@media (hover: hover) {
+
+/* ★ 핵심 수정 사항 ★
+   (hover: hover) AND (pointer: fine)
+   해석: "호버도 할 줄 알고, 입력 장치도 마우스처럼 정교한 놈만 들어와라."
+*/
+@media (hover: hover) and (pointer: fine) {
   .card:not(.pick):hover {
     transform: translateY(-4px);
   }
 }
-@media (hover: none) {
+
+/* 모바일 대응 (터치 디바이스)
+   (hover: none) OR (pointer: coarse)
+   해석: "호버를 못하거나, 손가락처럼 뭉툭한 입력 장치라면 이쪽으로."
+*/
+@media (hover: none), (pointer: coarse) {
+  /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
+  .card:not(.pick):hover {
+    transform: none;
+  }
+
+  /* 눌렀을 때 쫀득한 효과 (Active) */
   .card:not(.pick):active {
-    transform: scale(0.98); /* 살짝 축소 */
+    transform: scale(0.98);
     transition: transform 0.1s;
   }
 }
