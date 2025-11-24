@@ -220,6 +220,7 @@ section.product-view .section-inner {
   font-size: 16px;
   font-weight: 600;
 }
+
 .option-check {
   flex: none;
   width: 20px;
@@ -254,6 +255,30 @@ section.product-view .section-inner {
 }
 .option-item.disabled .option-name {
   color: #ced0d0;
+}
+
+.option-item.purchased .option-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.option-item.purchased .option-name::after {
+  content: '구매완료';
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+  height: 2.4rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #bdc0c3;
+  border-radius: 1.2rem;
+  padding: 5.5px 6px 4px;
+}
+.option-item.purchased .option-check {
+  display: none;
 }
 
 /* Payment Section */
