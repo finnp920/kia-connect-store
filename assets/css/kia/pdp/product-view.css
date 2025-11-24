@@ -56,14 +56,10 @@ section.product-view .section-inner {
   z-index: 10; /* 이미지보다 위에 떠야 함 */
 
   /* 2. Design (Badge Style) */
-  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
   color: #fff;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 20px; /* 둥근 캡슐 모양 */
-  backdrop-filter: blur(4px); /* 배경 블러 처리로 고급스럽게 */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px #333;
 
   /* 3. Interaction */
   pointer-events: none; /* 중요: 이 배지가 마우스 이벤트를 가로채지 않게 통과시킴 */
