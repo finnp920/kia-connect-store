@@ -63,10 +63,18 @@ section.themes .themes-header {
   /* 이미지 전환 시 깜빡임 방지 및 레이어 격리 */
   isolation: isolate;
   transform: translateZ(0);
-}
-.card:hover {
-  transform: translateY(-4px);
   transition: transform 0.3s ease;
+}
+@media (hover: hover) {
+  .card:not(.pick):hover {
+    transform: translateY(-4px);
+  }
+}
+@media (hover: none) {
+  .card:not(.pick):active {
+    transform: scale(0.98); /* 살짝 축소 */
+    transition: transform 0.1s;
+  }
 }
 
 .card-layer {
@@ -327,12 +335,5 @@ section.themes .themes-header {
   }
   .card-content {
     padding-top: 4.5%;
-  }
-}
-
-/* 마우스 유무로 추론하여 hover 애니메이션 없앰 */
-@media (hover: none) and (pointer: coarse) {
-  .card:hover {
-    transform: none;
   }
 }
