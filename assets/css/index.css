@@ -3,8 +3,10 @@
 @import url('library/aos.css');
 
 /* 2. 공통/기본 스타일 */
-@import url('fonts.css');
 @import url('basic.css');
 @import url('common.css');
+@import url('contents.css');
+@import url('popup.css');
 @import url('kia/kia.css');
+@import url('kia/kia-font.css');
 @import url('buttons.css');

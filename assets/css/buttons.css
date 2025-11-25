@@ -9,7 +9,7 @@
   display: block;
   width: 32px;
   height: 56px;
-  background-image: url(../icons/cut-corner-btn-left.svg);
+  background-image: url(../icons/cut-corner-btn-left.svg) !important;
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center left;
@@ -19,7 +19,7 @@
   display: block;
   width: 32px;
   height: 56px;
-  background-image: url(../icons/cut-corner-btn-right.svg);
+  background-image: url(../icons/cut-corner-btn-right.svg) !important;
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center right;

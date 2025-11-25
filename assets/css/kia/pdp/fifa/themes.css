@@ -40,6 +40,7 @@ section.themes .themes-header {
   margin: 0 auto;
   padding: 132px 20px;
   background-image: url('../../../../images/pdp/fifa/details/img_sec02_bg.png');
+  background-size: cover;
 }
 
 .themes-cards-grid {
@@ -67,7 +68,7 @@ section.themes .themes-header {
    해석: "호버도 할 줄 알고, 입력 장치도 마우스처럼 정교한 놈만 들어와라."
 */
 @media (hover: hover) and (pointer: fine) {
-  .card:not(.pick):hover {
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
     transform: translateY(-4px);
   }
 }
@@ -78,12 +79,12 @@ section.themes .themes-header {
 */
 @media (hover: none), (pointer: coarse) {
   /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
-  .card:not(.pick):hover {
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
     transform: none;
   }
 
   /* 눌렀을 때 쫀득한 효과 (Active) */
-  .card:not(.pick):active {
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):active {
     transform: scale(0.98);
     transition: transform 0.1s;
   }
@@ -232,7 +233,7 @@ section.themes .themes-header {
 }
 
 /* 체크 뱃지 */
-.card::after {
+.themes-cards-grid[data-clickable='true'] .card::after {
   content: '';
   position: absolute;
   top: 5%;

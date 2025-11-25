@@ -7,7 +7,6 @@
 // html
 const themeList = _themeList || ['01', '02', '03', '04', '05'];
 let currentTheme = _currentTheme || '01';
-let isLiked = false;
 let thumbnail_swiper = null;
 let kv_swiper = null;
 
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const urlTheme = getQueryParam('theme');
     setDetailCurrentTheme(urlTheme);
-
     setDetailEventListeners();
     initDetailSwiper();
   } catch (e) {}
@@ -67,21 +65,33 @@ function setDetailEventListeners() {
   });
 
   // 테마 카드 클릭 시 테마 변경
-  document.querySelectorAll('.themes-cards-grid .card').forEach((selector) => {
-    selector.addEventListener('click', () =>
-      setDetailCurrentTheme(selector.dataset.theme)
-    );
-  });
+  const themeCardGridEl = document.querySelectorAll('.themes-cards-grid');
+  if (
+    themeCardGridEl &&
+    themeCardGridEl.length > 0 &&
+    themeCardGridEl[0].dataset.clickable === 'true'
+  ) {
+    document
+      .querySelectorAll('.themes-cards-grid .card')
+      .forEach((selector) => {
+        selector.addEventListener('click', () =>
+          setDetailCurrentTheme(selector.dataset.theme)
+        );
+      });
+  }
 
   // PC용 테마 선택 버튼
-  document
-    .querySelectorAll('.theme-selector.buttons button')
-    .forEach((selector) => {
+  const themeSelectorButtons = document.querySelectorAll(
+    '.theme-selector.buttons button'
+  );
+  if (themeSelectorButtons) {
+    themeSelectorButtons.forEach((selector) => {
       selector.addEventListener('click', () => {
         setDetailCurrentTheme(selector.dataset.theme);
         scrollToSelector('.sticky-layout');
       });
     });
+  }
 
   const themeSelectors = document.querySelector('.theme-selector-wrapper');
   if (themeSelectors) {
@@ -129,20 +139,15 @@ function setDetailEventListeners() {
       });
     });
   }
+
   // 외부 클릭 시 Dropdown 닫기
-  document.addEventListener('click', (e) => {
-    if (dropdownBox && !e.target.closest('.theme-selector.dropdown')) {
-      dropdownBox.classList.remove('active');
-    }
-  });
-
-  // 좋아요 버튼
-  const btnLike = document.getElementById('btnLike');
-  if (btnLike) btnLike.addEventListener('click', handleLikeClick);
-
-  // 구매 버튼
-  const btnBuy = document.getElementById('btnBuy');
-  if (btnBuy) btnBuy.addEventListener('click', handleBuyClick);
+  if (dropdownBox) {
+    document.addEventListener('click', (e) => {
+      if (dropdownBox && !e.target.closest('.theme-selector.dropdown')) {
+        dropdownBox.classList.remove('active');
+      }
+    });
+  }
 }
 
 // ----------------------------------------
@@ -212,18 +217,6 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-function handleLikeClick() {
-  const btnLike = document.getElementById('btnLike');
-  if (!btnLike) return;
-
-  isLiked = !isLiked;
-  btnLike.classList.toggle('active', isLiked);
-}
-
-function handleBuyClick() {
-  console.log('Buy');
-  alert(`Proceeding to checkout\nTheme: ${currentTheme}`);
-}
 function scrollToSelector(selector) {
   const el = document.querySelector(selector);
 

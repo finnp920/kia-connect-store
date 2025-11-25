@@ -10,12 +10,12 @@ section.product-view .section-inner {
   align-items: flex-start;
 }
 
-.product-thumbnail {
+section.product-view .product-thumbnail {
   position: sticky;
   top: 80px;
   flex: 1;
 }
-.thumbnail-swiper {
+section.product-view .product-thumbnail .thumbnail-swiper {
   position: relative;
   width: 100%;
   max-width: 600px;
@@ -25,16 +25,23 @@ section.product-view .section-inner {
   background-color: #f2f2f2;
   aspect-ratio: 1 / 1;
 }
-.thumbnail-swiper .thumbnail-slide {
+.contentWarp
+  section.product-view
+  .product-thumbnail
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide {
   position: relative;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   opacity: 1;
   pointer-events: auto;
+  background-color: #f2f2f2;
+  line-height: normal;
 }
 
-.thumbnail-swiper .thumbnail-slide img {
+section.product-view .product-thumbnail .thumbnail-swiper .thumbnail-slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +55,10 @@ section.product-view .section-inner {
   opacity: 1;
 }
 
-.thumbnail-swiper .thumbnail-slide.with-video::after {
+section.product-view
+  .product-thumbnail
+  .thumbnail-swiper
+  .thumbnail-slide.with-video::after {
   content: '마우스를 올려보세요.';
   position: absolute;
   top: 12px;
@@ -110,20 +120,18 @@ section.product-view .section-inner {
 }
 
 /* Product Info */
-.product-info {
-}
-.product-info .product-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.product-info .product-name {
+/*.product-header {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+.product-header .product-name {
   flex: 1;
   font-size: 45px;
   font-weight: 600;
   line-height: 50px;
-  max-width: 350px;
+  /*max-width: 350px;*/
 }
 .btn-like {
   width: 30px;
@@ -338,9 +346,6 @@ section.product-view .section-inner {
   font-size: 30px;
   font-weight: 600;
 }
-.btn-buy {
-  margin-top: 32px;
-}
 
 @media screen and (max-width: 1240px) {
   section.product-view .section-inner {
@@ -393,9 +398,6 @@ section.product-view .section-inner {
   }
   .total-price-label {
     font-size: 14px;
-  }
-  .btn-buy {
-    margin-top: 30px;
   }
 }
 @media screen and (max-width: 480px) {

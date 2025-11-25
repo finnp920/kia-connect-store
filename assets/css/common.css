@@ -2915,9 +2915,7 @@ video::-webkit-media-controls {
   .itemInner
   .itemLeft
   .img {
-  flex-grow: 16rem;
-  flex-shrink: 1;
-  flex-basis: 0;
+  flex: none;
   border-radius: 0.6rem;
 }
 @media (min-width: 768px) {

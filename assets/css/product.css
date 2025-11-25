@@ -1,0 +1,1048 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*css 디폴트는 모바일이 기준*/
+/*반응형, 브라우저 크기가 300px 이하일때*/
+/*반응형, 브라우저 크기가 800px 이상일때*/
+/*@media (min-width: $mobile ) and (max-width: $tablet){*/
+/*반응형, 브라우저 크기가 1025px 이상일때*/
+/*반응형, 브라우저 크기가 1204px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+/*변수파일 import*/
+.contentWarp .productView {
+  display: block;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView {
+    width: 100%;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView {
+    width: 120rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+.contentWarp .productView .productLeft {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productLeft {
+    width: 50%;
+    margin-right: 2rem;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productLeft {
+    width: 60rem;
+  }
+}
+.contentWarp .productView .productLeft .productImg {
+  border-radius: 0.6rem;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7.5rem;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productLeft .productImg .productSwiper {
+    width: 100%;
+  }
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide {
+  position: relative;
+  background-color: #666;
+  height: auto;
+  line-height: 0;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide .productSmallVideo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide .productSmallVideo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide .productSmallVideo video {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-slide .movie_info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  z-index: 1;
+  line-height: 1;
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-pagination {
+  bottom: 2rem;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productLeft .productImg .productSwiper .swiper-pagination {
+    bottom: 2.5rem;
+  }
+}
+.contentWarp .productView .productLeft .productImg .productSwiper .swiper-pagination span {
+  width: 5.6rem;
+  height: 0.4rem;
+  border-radius: 0;
+  background-color: #fff;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productLeft .productImg {
+    width: 60rem;
+    height: 60rem;
+  }
+}
+.contentWarp .productView .productRight {
+  width: 100%;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight {
+    width: 50%;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight {
+    width: 50rem;
+    margin-top: 0;
+  }
+}
+.contentWarp .productView .productRight .musicBtn {
+  margin-top: 4rem;
+}
+.contentWarp .productView .productRight .optionWarp .producTitle h1 {
+  position: relative;
+  padding-right: 4rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producTitle h1 {
+    font-size: 4.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producTitle h1 .btn-wish {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: url(../images/kia/pdp/display_theme_disney/Icon_heart.png) no-repeat center/100% auto;
+}
+.contentWarp .productView .productRight .optionWarp .producTitle span {
+  color: #676767;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producTitle span {
+    font-size: 1.4rem;
+    line-height: initial;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producTitle .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contentWarp .productView .productRight .optionWarp .producTitle .title h1 {
+  width: calc(100% - 3rem);
+  padding-right: 2rem;
+  color: #000;
+  font-size: 3rem;
+  font-weight: 600;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producTitle .title h1 {
+    font-size: 4.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producTitle .title a {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("/kr/assets/images/common/icon-wishlist-d.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contentWarp .productView .productRight .optionWarp .producTitle .title a.active {
+  background-image: url("/kr/assets/images/common/icon-wishlist-s.svg");
+}
+.contentWarp .productView .productRight .optionWarp .producTitle > p {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 2.3rem;
+  line-height: 2.4rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp {
+  margin-top: 5rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp h2 {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producInfoWarp h2 {
+    font-size: 1.8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogOut {
+  margin-top: 2rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogOut > p {
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogOut > p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogOut > span {
+  display: block;
+  color: #676767;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogOut > span {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn {
+  margin-top: 2rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn > p {
+  color: #000;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn > p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn > span {
+  display: block;
+  color: #676767;
+  font-size: 1.4em;
+  margin-top: 1.5rem;
+  line-height: 2.2rem;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn > span {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio] {
+  visibility: hidden;
+  position: absolute;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label {
+  background-color: #05141f;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dt,
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dd {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dt p,
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dt strong,
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dd p,
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li input[type=radio]:checked + label dd strong {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label {
+  display: block;
+  padding: 2.5rem;
+  border: 1px solid #dedede;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label dl dt {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label dl dd {
+  margin-top: 1rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label dl dd p {
+  color: #676767;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label dl dd strong {
+  display: block;
+  color: #676767;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label dl dd:last-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li label:hover {
+  border: 1px solid #000;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn ul li + li {
+  margin-top: 1rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn .disabledBtn label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn .disabledBtn label dt {
+  color: #9ea1a2 !important;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn .disabledBtn label dd {
+  color: #9ea1a2 !important;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .producInfoLogIn .disabledBtn:hover label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK {
+  margin-top: 3rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK > a {
+  display: flex;
+  font-size: 1.4rem;
+  color: #676767;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK > a span {
+  border-bottom: 1px solid #676767;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK > a::after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  margin-left: 0.8rem;
+  background-image: url("/kr/assets/images/common/icon-mMarrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK > label {
+  display: flex;
+  margin-top: 2rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .termsOK > label span {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  line-height: 2.2rem;
+  display: block;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .noStreaming {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background-color: #f3f3f3;
+  border-radius: 0.6rem;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .noStreaming P {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #000000;
+}
+.contentWarp .productView .productRight .optionWarp .producInfoWarp .noStreaming span {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #676767;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption {
+  margin-top: 5rem;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption h2 {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption h2 {
+    font-size: 1.8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList {
+  margin-top: 2rem;
+  padding: 2.5rem;
+  border: 1px solid #dedede;
+  border-radius: 0.6rem;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList {
+    padding: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .productSmallVideo {
+  min-width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .productSmallVideo {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .productSmallVideo {
+    min-width: 9rem;
+    max-width: 9rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .productSmallVideo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0.6rem;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .productSmallVideo video {
+  position: absolute;
+  height: 9rem;
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  border-radius: 0.6rem;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem {
+  display: flex;
+  width: 100%;
+  height: 9rem;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2.5rem;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 2.5rem;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText {
+    padding-left: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p {
+  width: 100%;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p span,
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p span,
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong {
+  font-weight: 600;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p span {
+  font-weight: 400;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong + span {
+  margin-top: 1rem;
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem:first-child {
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem {
+    margin-top: 2rem;
+  }
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem:first-child {
+    margin-top: 0;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0.6rem;
+}
+.contentWarp .productView .productRight .optionWarp .producOption {
+  margin-top: 5rem;
+}
+.contentWarp .productView .productRight .optionWarp .producOption h2 {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producOption h2 {
+    font-size: 1.8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList {
+  overflow: auto;
+  max-height: 642px;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList {
+    max-height: 44.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn label {
+  display: flex;
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn label {
+    height: 8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn label p img {
+  width: 12rem;
+  height: 12rem;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn label p img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .productSmallVideo {
+  min-width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .productSmallVideo {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .productSmallVideo {
+    min-width: 12rem;
+    max-width: 12rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .productSmallVideo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .productSmallVideo video {
+  position: absolute;
+  height: 12rem;
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label {
+  background-color: #05141f;
+  border: 1px solid #05141f;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label::before {
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/kr/assets/images/common/icon_select.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label::before {
+    width: 2rem;
+    height: 2rem;
+    right: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label div p span,
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn input[type=checkbox]:checked + label div p strong {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn:hover label {
+  border: 1px solid #000;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 2rem;
+  width: 100%;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText {
+    padding-left: 3rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p {
+  position: relative;
+  width: 100%;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p span,
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  width: 75%;
+  line-height: 1.2;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p span,
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
+    font-size: 1.4rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong em {
+  display: block;
+  font-size: 1.2rem;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p span {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong + span {
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong + span {
+    margin-top: 0.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p .badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 2.4rem;
+  width: 6rem;
+  height: 2.4rem;
+  padding-top: 0.25rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: rgba(5, 20, 31, 0.6);
+  border-radius: 1.2rem;
+  line-height: 0;
+}
+@media (max-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
+    font-size: 1.4rem;
+  }
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong em {
+    font-size: 1rem;
+  }
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p span {
+    font-size: 1rem;
+  }
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p .badge {
+    right: 1.2rem;
+    width: 5rem;
+    height: 2rem;
+    padding-top: 0.15rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .disabledBtn label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .disabledBtn label span,
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .disabledBtn label strong {
+  color: #9ea1a2;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .disabledBtn label p {
+  opacity: 0.5;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .disabledBtn:hover label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn + .checkBtn {
+  margin-top: 1rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption {
+  margin-top: 5rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption h2 {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceOption h2 {
+    font-size: 1.8rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList {
+  margin-top: 2rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2.5rem;
+  height: 9rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.6rem;
+  border: 1px solid #dedede;
+}
+@media (max-width: 1024px) {
+  .contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label {
+    height: 8rem;
+    padding: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #000;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label span {
+    font-size: 1.6rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label strong {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: right;
+  color: #000;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label strong {
+    font-size: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label strong span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  text-align: right;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label .discount {
+  display: block;
+  font-size: 1.4rem;
+  color: #9ea1a2;
+  text-align: right;
+}
+@media (max-width: 1024px) {
+  .contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label .discount {
+    width: 100%;
+    margin: 0.2rem 0 0;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label .discount b {
+  font-weight: 600;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label .discount i {
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn label .dc {
+  margin-right: 0.8rem;
+  color: #ea0029;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio] {
+  visibility: hidden;
+  position: absolute;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label {
+  background-color: #05141f;
+  border: 1px solid #05141f;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label span,
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label strong {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label span .title {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label span .info {
+  color: #fff;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label .discount {
+  color: #9ea1a2;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn input[type=radio]:checked + label .dc {
+  color: #f3c300;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn:hover label {
+  border: 1px solid #000;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn.coupon {
+  background-color: #f3f3f3;
+  border-radius: 0.6rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn.coupon label .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000000;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn.coupon label .title::after {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.3rem;
+  background-image: url(/kr/assets/images/common/coupon_star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn.coupon label .info {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #676767;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn label span,
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn label strong {
+  color: #9ea1a2;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn label span .title {
+  color: #9ea1a2 !important;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn label span .info {
+  color: #9ea1a2 !important;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .disabledBtn:hover label {
+  border: 1px solid #dedede;
+}
+.contentWarp .productView .productRight .optionWarp .priceOption .priceList .radioBtn + .radioBtn {
+  margin-top: 1rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal {
+  margin-top: 4rem;
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .total {
+  display: block;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .total dt {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #666;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .total dt {
+    font-size: 1.6rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .total dd {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: 1.5rem;
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .total dd {
+    margin-top: 0;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton {
+  display: block;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: initial;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton {
+    display: flex;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .cartBtn,
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .PurchaseBtn {
+  width: 100%;
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .cartBtn {
+  margin-right: 0rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .cartBtn {
+    margin-right: 0.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .cartBtn {
+    margin-right: 0.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .PurchaseBtn {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .PurchaseBtn {
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton .PurchaseBtn {
+    margin-left: 0.5rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton button + button {
+  margin-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton button + button {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 1240px) {
+  .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton button + button {
+    margin-top: 0;
+  }
+}
+
+.pdpListBtn {
+  width: 100%;
+  height: 7.4rem;
+  background-color: #f3f3f3;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .pdpListBtn {
+    height: 10rem;
+    padding: 0;
+  }
+}
+.pdpListBtn .inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 7.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .pdpListBtn .inner {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 10rem;
+    font-size: 1.6rem;
+    color: #000000;
+  }
+}
+@media (max-width: 1240px) {
+  .pdpListBtn .inner {
+    padding: 0 2rem;
+  }
+}
+.pdpListBtn .inner a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pdpListBtn .inner a span {
+  margin-left: 1rem;
+  color: #000000;
+}
+.pdpListBtn .inner a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=product.css.map */

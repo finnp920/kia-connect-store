@@ -57,7 +57,9 @@ section.playful.playful-header {
 }
 
 section.playful.playful-content {
-  padding-top: 156px;
+  /* 테마 셀렉터 추가 시 활성화 */
+  /*padding-top: 156px;*/
+  padding-top: 60px;
   padding-bottom: 133px;
 }
 
@@ -141,11 +143,12 @@ section.playful.playful-content {
   font-size: 16px;
 }
 
-@media screen and (max-width: 900px) {
-  section.playful.playful-content {
-    padding-top: 210px;
-  }
-}
+/* 테마 셀렉터 추가 시 활성화 - 테마 셀렉터 3줄 높이 = 182px */
+/*@media screen and (max-width: 900px) {*/
+/*  section.playful.playful-content {*/
+/*    padding-top: 210px;*/
+/*  }*/
+/*}*/
 
 @media screen and (max-width: 769px) {
   section.playful .view-pc {
@@ -169,7 +172,9 @@ section.playful.playful-content {
   }
 
   section.playful.playful-content {
-    padding-top: 83px;
+    /* 테마 셀렉터 추가 시 활성화 */
+    /*padding-top: 83px;*/
+    padding-top: 20px;
   }
   .playful-banner img {
     aspect-ratio: 640 / 480;

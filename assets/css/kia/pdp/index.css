@@ -1,7 +1,7 @@
 @import url('variables.css');
 @import url('info-sticky.css');
 @import url('go_to_list.css');
-@import url('product-view.css');
+@import url('product-view-override.css');
 @import url('section/info.css');
 @import url('section/upgrade_guides.css');
 @import url('section/disclaimer.css');
@@ -87,25 +87,6 @@ main section > .section-inner {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* ========================================
-   floating_menu
-   ======================================== */
-.floating_menu {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.4s ease,
-    visibility 0.4s ease;
-}
-.floating_menu.is-visible {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* ========================================

@@ -1,0 +1,36 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'KiaSignature';
+  src: url('../../font/kia/KiaSignatureBold.ttf') format('truetype');
+  /*url('../../font/kia/KiaSignatureBold.woff2') format('woff2'),*/
+  /*url('../../font/kia/KiaSignatureBold.woff') format('woff'),*/
+  /*url('../../font/kia/KiaSignatureBold.eof') format('eof'),*/
+  /*url('../../font/kia/KiaSignatureBold.svg') format('svg');*/
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KiaSignature';
+  src: url('../../font/kia/KiaSignatureRegular.ttf') format('truetype');
+  /*url('../../font/kia/KiaSignatureRegular.woff2') format('woff2'),*/
+  /*url('../../font/kia/KiaSignatureRegular.woff') format('woff'),*/
+  /*url('../../font/kia/KiaSignatureRegular.eof') format('eof'),*/
+  /*url('../../font/kia/KiaSignatureRegular.svg') format('svg');*/
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KiaSignature';
+  src: url('../../font/kia/KiaSignatureLight.ttf') format('truetype');
+  /*url('../../font/kia/KiaSignatureLight.woff2') format('woff2'),*/
+  /*url('../../font/kia/KiaSignatureLight.woff') format('woff'),*/
+  /*url('../../font/kia/KiaSignatureLight.eof') format('eof'),*/
+  /*url('../../font/kia/KiaSignatureLight.svg') format('svg');*/
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
