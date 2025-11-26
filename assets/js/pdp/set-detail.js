@@ -165,7 +165,7 @@ function initDetailSwiper() {
 
   // 상품 썸네일 > video 있는 슬라이드 마우스 Hover 처리
   const videoSlides = document.querySelectorAll(
-    '.thumbnail-swiper .thumbnail-slide.with-video'
+    '.thumbnail-swiper .thumbnail-slide.withVideo'
   );
   videoSlides.forEach((slide) => {
     const video = slide.querySelector('video');

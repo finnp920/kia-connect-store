@@ -1,3 +1,239 @@
 /* ========================================
    Product View Override
    ======================================== */
+/* Thumbnail Swiper s*/
+.contentWarp .productView .productLeft .productImg .thumbnail-swiper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  aspect-ratio: 1 / 1;
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide {
+  background-color: #f2f2f2;
+  line-height: normal;
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide
+  img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2; /* 비디오보다 위 */
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide.withVideo::after {
+  content: '마우스를 올려보세요.';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10; /* 이미지보다 위에 떠야 함 */
+
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px #333;
+
+  pointer-events: none; /* 중요: 이 배지가 마우스 이벤트를 가로채지 않게 통과시킴 */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide.withVideo:hover
+  img {
+  opacity: 0;
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide.withVideo:hover::after {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.contentWarp
+  .productView
+  .productLeft
+  .productImg
+  .thumbnail-swiper
+  .thumbnail-slide.withVideo
+  video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 상품명 */
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producTitle
+  h1.product-name {
+  line-height: normal;
+}
+
+/* 옵션 */
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  label {
+  gap: 2rem;
+}
+@media (min-width: 1240px) {
+  .contentWarp
+    .productView
+    .productRight
+    .optionWarp
+    .producOption
+    .optionList
+    .checkBtn
+    label {
+    gap: 3rem;
+  }
+}
+
+/* 옵션 */
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  .optionText {
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  label
+  p
+  img {
+  aspect-ratio: 1 / 1;
+}
+
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  input[type='checkbox']:checked
+  + label {
+  color: #fff;
+}
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  input[type='checkbox']:checked
+  + label::before {
+  background-image: url('../../../icons/icon-checked.svg');
+}
+
+/* 옵션 - disabledBtn */
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn.disabledBtn
+  label {
+  cursor: not-allowed;
+}
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn.disabledBtn
+  label
+  img {
+  filter: contrast(70%) opacity(0.5);
+  opacity: 0.6;
+}
+
+/* 옵션 - purchaseBtn */
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn.purchaseBtn
+  label {
+  cursor: not-allowed;
+}
+.contentWarp
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn.purchaseBtn
+  .optionText::after {
+  content: '구매완료';
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+  height: 2.4rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #bdc0c3;
+  border-radius: 1.2rem;
+  padding: 5.5px 6px 4px;
+}

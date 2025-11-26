@@ -56,11 +56,13 @@ section.themes .themes-header {
   position: relative;
   width: 100%;
   max-width: 258px;
-  cursor: pointer;
   aspect-ratio: 258 / 447;
   isolation: isolate;
   transform: translateZ(0);
   transition: transform 0.3s ease;
+}
+.themes-cards-grid[data-clickable='true'] .card:not(.pick) {
+  cursor: pointer;
 }
 
 /* ★ 핵심 수정 사항 ★
@@ -123,80 +125,11 @@ section.themes .themes-header {
   visibility: visible;
 }
 
-.card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  padding: 20px 19px 6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  container-type: inline-size;
-  container-name: title-box;
-}
-.card-title {
-  width: 100%;
-  font-size: clamp(12px, 9.5cqw, 20px);
-  font-weight: 600;
-  color: #999;
-  line-height: 1.2;
-}
-.card-tags {
-  width: 100%;
-  margin-top: 5.5%;
-  font-size: clamp(12px, 7.55cqw, 16px);
-  color: #cfcfcf;
-  line-height: 1.5;
-}
-
 .card.pick .card-layer {
   width: 100%;
   height: auto;
   opacity: 1;
   visibility: visible;
-}
-.card.pick .pick-icon-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 46%;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  aspect-ratio: 1 / 1;
-  z-index: 1;
-}
-.pick-icon {
-  width: 17.1%;
-  height: auto;
-  flex-shrink: 0;
-  aspect-ratio: 44 / 53;
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-.card.pick .card-content {
-  padding-top: 15.5%;
-  justify-content: start;
-  aspect-ratio: 250 / 189;
-}
-.card.pick .card-title {
-  width: 100%;
-  color: #b2b8bd;
-  text-align: center;
-  font-size: clamp(14px, 11.32cqw, 24px);
-  font-weight: 600;
-  letter-spacing: -0.48px;
-}
-.card.pick .card-tags {
-  width: 100%;
-  margin-top: 15%;
-  color: #b2b8bd;
-  text-align: center;
-  font-size: clamp(12px, 7.55cqw, 16px);
-  letter-spacing: -0.32px;
 }
 
 [data-current-theme='01'] .card[data-theme='01'] .layer-active,
@@ -215,21 +148,6 @@ section.themes .themes-header {
 [data-current-theme='05'] .card[data-theme='05'] .layer-inactive {
   opacity: 0;
   visibility: hidden;
-}
-
-[data-current-theme='01'] .card[data-theme='01'] .card-title,
-[data-current-theme='02'] .card[data-theme='02'] .card-title,
-[data-current-theme='03'] .card[data-theme='03'] .card-title,
-[data-current-theme='04'] .card[data-theme='04'] .card-title,
-[data-current-theme='05'] .card[data-theme='05'] .card-title {
-  color: #000;
-}
-[data-current-theme='01'] .card[data-theme='01'] .card-tags,
-[data-current-theme='02'] .card[data-theme='02'] .card-tags,
-[data-current-theme='03'] .card[data-theme='03'] .card-tags,
-[data-current-theme='04'] .card[data-theme='04'] .card-tags,
-[data-current-theme='05'] .card[data-theme='05'] .card-tags {
-  color: #888;
 }
 
 /* 체크 뱃지 */
@@ -306,47 +224,11 @@ section.themes .themes-header {
     max-width: 100%;
     aspect-ratio: 156 / 184;
   }
-
-  .card-content {
-    height: 50%;
-    padding: 7.7% 7.7% 4.5%;
-    display: flex;
-    justify-content: center;
-  }
-  .card-title {
-    text-align: center;
-    font-size: clamp(12px, 9.1cqw, 16px);
-  }
-  .card-tags {
-    margin-top: 1.5%;
-    text-align: center;
-    line-height: 1.4;
-    font-size: clamp(10px, 8cqw, 12px);
-  }
-
-  .card.pick .pick-icon-wrapper {
-    padding-top: 21.7%;
-    aspect-ratio: 156 / 92;
-  }
-  .pick-icon {
-    width: 24px;
-    aspect-ratio: 24 / 29;
-  }
-  .card.pick .card-content {
-    padding-top: 7.7%;
-  }
-  .card.pick .card-tags {
-    margin-top: 8%;
-    font-size: clamp(10px, 8cqw, 12px);
-  }
 }
 
 @media screen and (max-width: 540px) {
   .themes-cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-  }
-  .card-content {
-    padding-top: 4.5%;
   }
 }
