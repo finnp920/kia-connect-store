@@ -58,10 +58,16 @@ section.credit {
 }
 
 .credit-text {
+  display: none;
   font-size: 14px;
   line-height: 1.4;
   color: #dedede;
   margin: 0;
+}
+[data-current-theme='theme-bc'] .credit-text[data-theme='theme-bc'],
+[data-current-theme='theme-sw'] .credit-text[data-theme='theme-sw'],
+[data-current-theme='theme-ls'] .credit-text[data-theme='theme-ls']{
+  display: block;
 }
 
 .credit-text strong {

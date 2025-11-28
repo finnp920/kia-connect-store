@@ -363,8 +363,8 @@
       <div class="infoStickyInner">
         <div class="stickyLeft">
           <p>
-            <strong>FIFA World Cup 26™ Display Themes</strong>
-            <!-- <span>30개 NBA 팀의 개성있는 디스플레이 테마로 분위기 업업~!!!</span> -->
+            <strong>National Geographic
+              Display Themes</strong>
           </p>
         </div>
         <div class="stickyRight">
@@ -387,7 +387,7 @@
                 <div class="swiper-slide thumbnail-slide withVideo">
                   <p class="productSmallVideo">
                     <img
-                      src="../assets/images/pdp/fifa/details/product_thumb_01.png"
+                      src="../assets/images/pdp/natgeo/details/theme-baby-animals-thumbnail.png"
                       alt="이미지 상품명"
                     />
                     <video loop muted playsinline preload="auto">
@@ -398,40 +398,19 @@
                     </video>
                   </p>
                 </div>
-                <!--
+
                 <div class="swiper-slide thumbnail-slide">
                   <img
-                    src="../assets/images/pdp/fifa/details/product_thumb_02.png"
-                    alt="이미지 상품명"
-                  />
-                </div>
-                <div class="swiper-slide thumbnail-slide withVideo">
-                  <p class="productSmallVideo">
-                    <img
-                      src="../assets/images/pdp/fifa/details/product_thumb_03.png"
-                      alt="이미지 상품명"
-                    />
-                    <video loop muted playsinline preload="auto">
-                      <source
-                        src="../assets/videos/pdp/fifa/product_thumb.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </p>
-                </div>
-                <div class="swiper-slide thumbnail-slide">
-                  <img
-                    src="../assets/images/pdp/fifa/details/product_thumb_04.png"
+                    src="../assets/images/pdp/natgeo/details/theme-space-wonders-thumbnail.png"
                     alt="이미지 상품명"
                   />
                 </div>
                 <div class="swiper-slide thumbnail-slide">
                   <img
-                    src="../assets/images/pdp/fifa/details/product_thumb_05.png"
+                    src="../assets/images/pdp/natgeo/details/theme-landscape-thumbnail.png"
                     alt="이미지 상품명"
                   />
                 </div>
-                -->
               </div>
               <div
                 class="swiper-pagination"
@@ -445,18 +424,17 @@
             <div class="producTitle product-header">
               <!-- <span>차량SW</span> -->
               <h1 class="product-name" id="productName">
-                FIFA<br />World Cup 26™<br />Display Themes
+                National Geographic<br />Display Themes
                 <button type="button" class="btn-wish"></button>
               </h1>
               <p class="product-description" id="productDescription">
-                Feel the roar of the crowd. Drive with pride and cheer for your
-                team with FIFA World Cup 26™ Themes.
+                National Geographic Display Themes turns every drive into an
+                adventure
               </p>
             </div>
             <div class="producOption scroll option-list-section">
               <h2 class="option-list-title">
-                Select Your team and let the spirit of FIFA World Cup 26™ drive
-                with you.
+                Select product option you want.
               </h2>
               <div class="optionList">
                 <div class="checkBtn">
@@ -464,16 +442,16 @@
                     type="checkbox"
                     name="check"
                     id="check1"
-                    value="kia"
+                    value="Baby Animals"
                     checked
                   />
                   <label for="check1">
                     <img
-                      src="../assets/images/pdp/fifa/details/thumb_01.png"
-                      alt="Option 1 - Global"
+                      src="../assets/images/pdp/natgeo/details/theme-baby-animals-thumbnail.png"
+                      alt="Option 1 - Baby Animals"
                     />
                     <span class="optionText">
-                      FIFA World Cup 26™<br />Global
+                      National Geographic Baby Animals
                     </span>
                   </label>
                 </div>
@@ -482,16 +460,16 @@
                     type="checkbox"
                     name="check"
                     id="check2"
-                    value="samsung"
+                    value="Space Wonders"
                     disabled
                   />
                   <label for="check2">
                     <img
-                      src="../assets/images/pdp/fifa/details/thumb_01.png"
-                      alt="Option 1 - Global"
+                      src="../assets/images/pdp/natgeo/details/theme-space-wonders-thumbnail.png"
+                      alt="Option 1 - Space Wonders"
                     />
                     <span class="optionText"
-                      >FIFA World Cup 26™<br />Global</span
+                      >National Geographic Space Wonders</span
                     >
                   </label>
                 </div>
@@ -499,16 +477,17 @@
                   <input
                     type="checkbox"
                     name="check"
+                    id="check3"
                     value="samsung"
                     disabled
                   />
-                  <label for="check2">
+                  <label for="check3">
                     <img
-                      src="../assets/images/pdp/fifa/details/thumb_01.png"
-                      alt="Option 1 - Global"
+                      src="../assets/images/pdp/natgeo/details/theme-landscape-thumbnail.png"
+                      alt="Option 1 - Landscape"
                     />
                     <span class="optionText"
-                      >FIFA World Cup 26™<br />Global</span
+                      >National Geographic Landscape</span
                     >
                   </label>
                 </div>
@@ -556,10 +535,10 @@
     <!--//content-warp-->
 
     <!--에디터 영역-->
-    <main data-current-theme="01">
+    <main data-current-theme="theme-bc">
       <!-- KV (Key Visual) START -->
       <section class="kv">
-        <div class="swiper kv-content">
+        <div class="swiper kv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide kv-slide" data-theme="theme-bc">
               <img
@@ -693,7 +672,7 @@
           </div>
 
           <!-- 페이지네이션 -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" id="kv-swiper-pagination"></div>
 
           <!-- 네비게이션 화살표 (이전/다음) -->
           <div class="swiper-navigation">
@@ -802,314 +781,495 @@
       <!-- Themes END -->
 
       <!-- sticky layout START -->
-      <div class="sticky-layout">
-        <!-- Playful START -->
-        <div class="playful-background"></div>
-        <section class="playful playful-header">
-          <div class="section-inner">
+      <div class="sticky-wrapper">
+        <!-- Mobile Theme Dropdown -->
+        <div class="mobile-theme-dropdown">
+          <button type="button" class="theme-text" id="mobileThemeSelect">
+            National Geographic Baby Animals
+          </button>
+          <ul class="theme-list">
+            <li value="baby-animals">National Geographic Baby Animals</li>
+            <li value="space-wonders">National Geographic Space Wonders</li>
+            <li value="landscape">National Geographic Landscape</li>
+          </ul>
+        </div>
+        <!-- Mobile Theme Dropdown -->
+        <!-- Theme Selectors (PC only) -->
+        <div class="theme-selectors">
+          <div class="theme-selector selected" data-theme="baby-animals">
+            <div class="selector-icon"></div>
+            National Geographic Baby Animals
+          </div>
+          <div class="theme-selector" data-theme="space-wonders">
+            <div class="selector-icon"></div>
+            National Geographic Space Wonders
+          </div>
+          <div class="theme-selector" data-theme="landscape">
+            <div class="selector-icon"></div>
+            National Geographic Landscape
+          </div>
+        </div>
+        <!-- Theme Selectors (PC only) -->
+
+        <!-- Detail Section > Screenshots -->
+        <section class="screenshot">
+          <div class="theme-header-wrapper theme-baby-animals">
+            <!-- Screenshot Grid -->
+            <div class="themes-preview">
+              <div class="themes-preview-grid">
+                <!-- Left Column (2 items) -->
+                <div class="preview-column preview-column-left">
+                  <div class="preview-item">
+                    <img
+                      id="previewCluster"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_01.png"
+                      alt="Cluster"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewClusterLabel">
+                      Cluster
+                    </span>
+                  </div>
+                  <div class="preview-item">
+                    <img
+                      id="previewWelcome"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_02.png"
+                      alt="Welcome Message"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewWelcomeLabel">
+                      Welcome Message
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Center Column (1 item) -->
+                <div class="preview-column preview-column-center">
+                  <div class="preview-item">
+                    <img
+                      id="previewHomecard"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_03.png"
+                      alt="Homecard"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewHomecardLabel">
+                      Homecard
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Right Column (2 items) -->
+                <div class="preview-column preview-column-right">
+                  <div class="preview-item">
+                    <img
+                      id="previewNavigation"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_04.png"
+                      alt="Navigation"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewNavigationLabel">
+                      Navigation
+                    </span>
+                  </div>
+                  <div class="preview-item">
+                    <img
+                      id="previewGoodbye"
+                      src="../assets/images/pdp/natgeo/details/img_bc_detail_05.png"
+                      alt="Navigation"
+                      loading="lazy"
+                    />
+                    <span class="preview-label" id="previewGoodbyeLabel">
+                      Goodbye Video
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detail Section > Discover Playful Designs -->
+        <section class="playful" id="playful">
+          <div class="playful-wrapper">
             <h2 class="playful-title">
-              Inspiration <br class="view-mo" />Connects us all
+              Discover <br class="mobile-br" />Playful Designs
             </h2>
-            <p class="playful-subtitle">
-              Experience designs that <br class="view-pc" />capture the spirit
-              <br class="view-mo" />of the FIFA World Cup 26™.
-            </p>
-          </div>
-        </section>
+            <div class="section-playful-inner">
+              <div class="playful-videos">
+                <!-- Welcome Video Area -->
+                <div class="playful-video-item" data-discover="welcome">
+                  <img
+                    src="../assets/images/pdp/natgeo/details/img_disc_video.png"
+                    alt="Welcome video preview"
+                    loading="lazy"
+                    class="playful-video-bg"
+                  />
+                  <div class="playful-video-grid">
+                    <!-- Welcome Cluster Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="welcome-cluster"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Welcome</span>
+                          <span class="playful-label-device">Cluster</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="../assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Welcome AVNT Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="welcome-avnt"
+                    >
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Welcome</span>
+                          <span class="playful-label-device">AVNT</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="../assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <section class="playful playful-content">
-          <div class="section-inner">
-            <div class="xfade-stage playful-banner">
-              <picture class="xfade-item" data-theme="01">
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    ../assets/images/pdp/fifa/details/mo_sec03_banner_theme_01.png
-                  "
-                />
-                <img
-                  src="../assets/images/pdp/fifa/details/img_sec03_banner_theme_01.png"
-                  alt="playful Banner - Global"
-                />
-              </picture>
-              <picture class="xfade-item" data-theme="02">
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    ../assets/images/pdp/fifa/details/mo_sec03_banner_theme_02.png
-                  "
-                />
-                <img
-                  src="../assets/images/pdp/fifa/details/img_sec03_banner_theme_02.png"
-                  alt="playful Banner - Canada"
-                />
-              </picture>
-              <picture class="xfade-item" data-theme="03">
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    ../assets/images/pdp/fifa/details/mo_sec03_banner_theme_03.png
-                  "
-                />
-                <img
-                  src="../assets/images/pdp/fifa/details/img_sec03_banner_theme_03.png"
-                  alt="playful Banner - Mexico"
-                />
-              </picture>
-              <picture class="xfade-item" data-theme="04">
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    ../assets/images/pdp/fifa/details/mo_sec03_banner_theme_04.png
-                  "
-                />
-                <img
-                  src="../assets/images/pdp/fifa/details/img_sec03_banner_theme_04.png"
-                  alt="playful Banner - USA"
-                />
-              </picture>
-              <picture class="xfade-item" data-theme="05">
-                <source
-                  media="(max-width: 768px)"
-                  srcset="
-                    ../assets/images/pdp/fifa/details/mo_sec03_banner_theme_05.png
-                  "
-                />
-                <img
-                  src="../assets/images/pdp/fifa/details/img_sec03_banner_theme_05.png"
-                  alt="playful Banner - Korea Republic"
-                />
-              </picture>
-            </div>
-            <div class="playful-contents-wrapper">
-              <div class="playful-content-item welcome">
-                <h3>Welcome & Goodbye Video</h3>
-                <div class="playful-videos-wrapper">
-                  <div class="playful-video-item welcome">
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      autoplay
-                      preload="metadata"
+                <!-- Goodbye Video Area -->
+                <div class="playful-video-item" data-discover="goodbye">
+                  <img
+                    src="../assets/images/pdp/natgeo/details/img_disc_video.png"
+                    alt="Goodbye video preview"
+                    loading="lazy"
+                    class="playful-video-bg"
+                  />
+                  <div class="playful-video-grid">
+                    <!-- Goodbye Cluster Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="goodbye-cluster"
                     >
-                      <source
-                        src="../assets/videos/pdp/fifa/cluster_welcome.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      autoplay
-                      preload="metadata"
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Goodbye</span>
+                          <span class="playful-label-device">Cluster</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="../assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Goodbye AVNT Video -->
+                    <div
+                      class="playful-video-cell"
+                      data-video-type="goodbye-avnt"
                     >
-                      <source
-                        src="../assets/videos/pdp/fifa/avnt_welcome.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                  <div class="playful-video-item goodbye">
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      autoplay
-                      preload="metadata"
-                    >
-                      <source
-                        src="../assets/videos/pdp/fifa/cluster_goodbye.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <video
-                      class="playful-video-player"
-                      muted
-                      loop
-                      playsinline
-                      autoplay
-                      preload="metadata"
-                    >
-                      <source
-                        src="../assets/videos/pdp/fifa/avnt_goodbye.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
+                      <video
+                        class="playful-video-player"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src="" type="video/mp4" />
+                      </video>
+                      <div class="playful-video-overlay">
+                        <div class="playful-video-label">
+                          <span class="playful-label-type">Goodbye</span>
+                          <span class="playful-label-device">AVNT</span>
+                        </div>
+                        <div class="playful-video-play">
+                          <img
+                            src="../assets/icons/icon-play-button.png"
+                            alt="Play button"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p>
-                  FIFA World Cup 26™ themed motion graphics play once at
-                  start-up (from sleep mode) and shutdown.
-                </p>
-              </div>
-              <div class="playful-content-item cluster">
-                <h3>Cluster</h3>
-                <div class="xfade-stage image-wrapper">
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme01_01.png"
-                    alt="Cluster - Global"
-                    class="xfade-item"
-                    data-theme="01"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme02_01.png"
-                    alt="Cluster - Canada"
-                    class="xfade-item"
-                    data-theme="02"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme03_01.png"
-                    alt="Cluster - Mexico"
-                    class="xfade-item"
-                    data-theme="03"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme04_01.png"
-                    alt="Cluster - USA"
-                    class="xfade-item"
-                    data-theme="04"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme05_01.png"
-                    alt="Cluster - Korea Republic"
-                    class="xfade-item"
-                    data-theme="05"
-                  />
+
+                <div class="playful-text-block">
+                  <h3>Welcome &amp; Goodbye Video</h3>
+                  <p>
+                    National Geographic themed motion graphics play once at
+                    start-up (from sleep mode) and shutdown.
+                  </p>
                 </div>
-                <p>
-                  The selected FIFA World Cup 26™ theme appears on the cluster
-                  with dynamic graphics and sporty gauges.
-                </p>
               </div>
-              <div class="playful-content-item navigation">
-                <h3>Navigation</h3>
-                <div class="xfade-stage image-wrapper">
+
+              <figure class="playful-feature">
+                <div class="feature-media">
                   <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme01_02.png"
-                    alt="Navigation - Global"
-                    class="xfade-item"
-                    data-theme="01"
+                    src="../assets/images/pdp/natgeo/details/discover-cluster.png"
+                    alt="Cluster preview"
+                    loading="lazy"
                   />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme02_02.png"
-                    alt="Navigation - Canada"
-                    class="xfade-item"
-                    data-theme="02"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme03_02.png"
-                    alt="Navigation - Mexico"
-                    class="xfade-item"
-                    data-theme="03"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme04_02.png"
-                    alt="Navigation - USA"
-                    class="xfade-item"
-                    data-theme="04"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme05_02.png"
-                    alt="Navigation - Korea Republic"
-                    class="xfade-item"
-                    data-theme="05"
-                  />
+                  <div class="feature-text">
+                    <h3>Cluster</h3>
+                    <p>
+                      The selected National Geographic theme appears on the
+                      cluster with themed graphics and gauges.
+                    </p>
+                    <p class="feature-note">
+                      &#x203B; Depending on the vehicle model, the cluster
+                      screen design may differ from the image above.
+                    </p>
+                  </div>
                 </div>
-                <p>
-                  FIFA World Cup 26™ artwork highlights your current location
-                  during navigation.
-                </p>
-              </div>
-              <div class="playful-content-item homecard">
-                <h3>Homecard</h3>
-                <div class="xfade-stage image-wrapper">
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
                   <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme01_03.png"
-                    alt="Homecard - Global"
-                    class="xfade-item"
-                    data-theme="01"
+                    src="../assets/images/pdp/natgeo/details/img_bc_disc_02.png"
+                    alt="Navigation preview"
+                    loading="lazy"
                   />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme02_03.png"
-                    alt="Homecard - Canada"
-                    class="xfade-item"
-                    data-theme="02"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme03_03.png"
-                    alt="Homecard - Mexico"
-                    class="xfade-item"
-                    data-theme="03"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme04_03.png"
-                    alt="Homecard - USA"
-                    class="xfade-item"
-                    data-theme="04"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme05_03.png"
-                    alt="Homecard - Korea Republic"
-                    class="xfade-item"
-                    data-theme="05"
-                  />
+                  <div class="feature-text">
+                    <h3>Navigation</h3>
+                    <p>
+                      National Geographic photography highlights your current
+                      location during navigation.
+                    </p>
+                  </div>
                 </div>
-                <p>
-                  FIFA World Cup 26™ visuals appear across various menu
-                  screens, inspired by the world of football.
-                </p>
-              </div>
-              <div class="playful-content-item profile">
-                <h3>Profile</h3>
-                <div class="xfade-stage image-wrapper">
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
                   <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme01_04.png"
-                    alt="Profile - Global"
-                    class="xfade-item"
-                    data-theme="01"
+                    src="../assets/images/pdp/natgeo/details/discover-homecard_1.png"
+                    alt="Homecard preview"
+                    loading="lazy"
                   />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme02_04.png"
-                    alt="Profile - Canada"
-                    class="xfade-item"
-                    data-theme="02"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme03_04.png"
-                    alt="Profile - Mexico"
-                    class="xfade-item"
-                    data-theme="03"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme04_04.png"
-                    alt="Profile - USA"
-                    class="xfade-item"
-                    data-theme="04"
-                  />
-                  <img
-                    src="../assets/images/pdp/fifa/details/img_disc_theme05_04.png"
-                    alt="Profile - Korea Republic"
-                    class="xfade-item"
-                    data-theme="05"
-                  />
+                  <div class="feature-text">
+                    <h3>Homecard</h3>
+                    <p>
+                      National Geographic photographs appear across various menu
+                      screens.
+                    </p>
+                  </div>
                 </div>
-                <p>
-                  Choose from FIFA World Cup 26™ themed profile images inspired
-                  by the passion and energy of the World Cup, and personalize
-                  your drive.
-                </p>
-              </div>
+              </figure>
+
+              <figure class="playful-feature">
+                <div class="feature-media">
+                  <img
+                    src="../assets/images/pdp/natgeo/details/discover-profile_1.png"
+                    alt="Profile image selection"
+                    loading="lazy"
+                  />
+                  <div class="feature-text">
+                    <h3>Profile</h3>
+                    <p>
+                      Choose from National Geographic-themed profile
+                      images&mdash;choose a unique one for each driver.
+                    </p>
+                  </div>
+                </div>
+              </figure>
             </div>
           </div>
         </section>
-        <!-- Playful END -->
+        <!-- Detail Section > Discover Playful Designs -->
 
-        <!-- Credit START -->
+        <!-- Detail Section > The Reasons Why You Can't Miss Out -->
+        <section class="reasons">
+          <div class="section-reasons-inner">
+            <!-- Section Title -->
+            <div class="reasons-header">
+              <h2 class="reasons-title">
+                The Reasons<br />
+                Why You Can’t Miss Out
+              </h2>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="reasons-cards">
+              <!-- Card 1 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage1"
+                    src="../assets/images/pdp/natgeo/details/reasons-babycreatures.png"
+                    alt="Baby Animals theme preview"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">1</div>
+                    <h3 class="reason-title">
+                      The Delight of Baby<br class="v-pc" />
+                      Animals<br class="v-mo" />
+                      in Every Drive
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Baby Animals theme<br class="v-mo" />
+                    turns every drive into an <br class="v-pc" />adventure.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">2</div>
+                    <h3 class="reason-title">
+                      The Wonders of<br />
+                      the Expanding Universe
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Space Wonders<br class="v-mo" />
+                    theme turns every <br class="v-pc" />drive into a cosmic<br
+                    class="v-mo"
+                  />
+                    journey filled with awe and discovery.
+                  </p>
+                </div>
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage2"
+                    src="../assets/images/pdp/natgeo/details/reasons-space-wonders.png"
+                    alt="Space Wonders theme preview"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage3"
+                    src="../assets/images/pdp/natgeo/details/reasons-landscape.png"
+                    alt="Landscape theme preview"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">3</div>
+                    <h3 class="reason-title">
+                      The Splendor of<br />
+                      Earth's Natural Landscapes
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    National Geographic's Landscape theme<br class="v-mo" />
+                    captures <br class="v-pc" />the awe-inspiring beauty of
+                    our<br class="v-mo" />
+                    planet's most iconic sceneries.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="reason-card reason-card-left">
+                <div class="reason-content">
+                  <div class="reason-header">
+                    <div class="reason-number">4</div>
+                    <h3 class="reason-title">
+                      Explore the World<br />
+                      Through Every Drive
+                    </h3>
+                  </div>
+                  <p class="reason-description">
+                    With National Geographic display themes,<br
+                    class="v-pc v-mo"
+                  />every moment behind the wheel becomes<br class="v-mo" />
+                    a window to wonder.
+                  </p>
+                </div>
+                <div class="reason-image">
+                  <img
+                    id="reasonCardImage4"
+                    src="../assets/images/pdp/natgeo/details/reasons-car-display.png"
+                    alt="Car with National Geographic display"
+                    loading="lazy"
+                    class="v-pc"
+                  />
+                  <img
+                    id="reasonCardImage4_mo"
+                    src="../assets/images/pdp/natgeo/details/m_reasons-car-display.png"
+                    alt="Car with National Geographic display"
+                    loading="lazy"
+                    class="v-mo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="reasons-bottom">
+              <div class="reasons-video-container">
+                <img
+                  id="reasonsBannerImage"
+                  src="../assets/images/pdp/natgeo/details/kv-banner-reasons.png"
+                  alt="National Geographic Display Themes Preview"
+                  loading="lazy"
+                  class="reasons-video-image"
+                />
+              </div>
+              <div class="reasons-final-message">
+                <p>
+                  Experience inspiring drives<br />
+                  with the National Geographic<br class="v-mo" />
+                  Display Themes
+                </p>
+              </div>
+            </div>
+
+            <!-- Copyright -->
+            <p class="reasons-copyright">© National Geographic</p>
+          </div>
+        </section>
+        <!-- Detail Section > The Reasons Why You Can't Miss Out -->
+
+        <!-- Detail Section > Credit -->
         <section class="credit">
           <div class="section-credit-inner">
             <!-- Section Title -->
@@ -1123,9 +1283,9 @@
             </div>
           </div>
         </section>
-        <!-- Credit START -->
+        <!-- Detail Section > Credit -->
 
-        <!-- Info START -->
+        <!-- Section > Info -->
         <section class="info">
           <div class="section-inner">
             <!-- Info Item 1 -->
@@ -1138,9 +1298,7 @@
                 />
               </div>
               <div class="info-text">
-                <h3 class="info-title">
-                  Available only <br class="view-mo" />for ccNC vehicles
-                </h3>
+                <h3 class="info-title">Available only for ccNC vehicles</h3>
                 <p class="info-description">
                   Only vehicles with 12.3-inch clusters can be selected from Kia
                   ccNC infotainment platforms.
@@ -1167,9 +1325,9 @@
             </div>
           </div>
         </section>
-        <!-- Info END -->
+        <!-- Section > Info -->
 
-        <!-- Upgrade Guides START -->
+        <!-- Section > Upgrade Guides -->
         <section class="upgrade-guides">
           <div class="section-inner">
             <h2 class="upgrade-guides-title">Upgrade Guides</h2>
@@ -1186,41 +1344,7 @@
             </a>
           </div>
         </section>
-        <!-- Upgrade Guides END -->
-
-        <!-- sticky track START -->
-        <!-- Global만 오픈 예정 - 나머지는 다음에 추가 -->
-        <!-- <div class="sticky-track">
-          <div class="theme-selector-wrapper">
-            <div class="theme-selector buttons">
-              <button data-theme="01">FIFA World Cup 26™ Global</button>
-              <button data-theme="02">FIFA World Cup 26™ Canada</button>
-              <button data-theme="03">FIFA World Cup 26™ Mexico</button>
-              <button data-theme="04">FIFA World Cup 26™ USA</button>
-              <button data-theme="05">
-                FIFA World Cup 26™ Korea Republic
-              </button>
-            </div>
-
-            <div class="theme-selector dropdown">
-              <button
-                type="button"
-                class="theme-text"
-                id="theme-selector-dropdown"
-              >
-                FIFA World Cup 26™ Global
-              </button>
-              <ul class="theme-list">
-                <li value="01">FIFA World Cup 26™ Global</li>
-                <li value="02">FIFA World Cup 26™ Canada</li>
-                <li value="03">FIFA World Cup 26™ Mexico</li>
-                <li value="04">FIFA World Cup 26™ USA</li>
-                <li value="05">FIFA World Cup 26™ Korea Republic</li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
-        <!-- sticky track END -->
+        <!-- Section > Upgrade Guides -->
       </div>
       <!-- sticky layout END -->
 
@@ -1754,8 +1878,8 @@
     <script type="text/javascript" src="../assets/js/common.js?v2"></script>
     <script>
       AOS.init();
-      const _themeList = ['01', '02', '03', '04', '05'];
-      const _currentTheme = '01';
+      const _themeList = ['theme-bc', 'theme-sw', 'theme-ls'];
+      const _currentTheme = 'theme-bc';
     </script>
     <script src="../assets/js/youtube.js"></script>
     <script src="../assets/js/pdp/set-detail.js"></script>
