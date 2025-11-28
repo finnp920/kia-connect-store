@@ -275,6 +275,10 @@ section.playful.playful-content {
   color: #05141f;
   font-size: 16px;
 }
+.playful-content-item > p.warning {
+  margin: 8px 0 0 0;
+  color: #888;
+}
 
 /* 테마 셀렉터 추가 시 활성화 - 테마 셀렉터 3줄 높이 = 182px */
 /*@media screen and (max-width: 900px) {*/
