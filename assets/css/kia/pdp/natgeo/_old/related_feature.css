@@ -28,14 +28,14 @@ section.related-feature .section-inner {
 }
 
 .feature-item {
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   height: 200px;
   border: 1px solid #dedede;
   border-radius: 6px;
-  transition: border-color var(--transition-base);
+  transition: border-color 250ms ease-in-out;
 }
 
 .feature-item:hover {
@@ -76,7 +76,7 @@ section.related-feature .section-inner {
   font-weight: 600;
   line-height: 25px;
   letter-spacing: 0;
-  color: var(--color-black);
+  color: #000000;
   margin: 0;
 }
 
@@ -106,7 +106,7 @@ section.related-feature .section-inner {
   font-size: 16px;
   font-weight: 600;
   line-height: 17px;
-  color: var(--color-black);
+  color: #000000;
 }
 
 /* Medium Mobile Styles (<= 769px) */
@@ -170,5 +170,5 @@ section.related-feature .section-inner {
     font-size: 14px;
     line-height: 15px;
   }
-  
+
 }

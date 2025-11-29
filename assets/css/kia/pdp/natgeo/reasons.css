@@ -5,7 +5,7 @@
 section.reasons {
   position: relative;
   background-color: #272727;
-  color: var(--color-white);
+  color: #ffffff;
   padding: 151px 0 120px;
 }
 
@@ -32,7 +32,7 @@ section.reasons {
   line-height: normal;
   text-align: center;
   letter-spacing: -0.96px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 .reasons-title::after {
   content: '';
@@ -148,7 +148,7 @@ section.reasons {
   font-weight: 600;
   line-height: 45px;
   letter-spacing: -0.48px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 .reason-title br.v-pc {
   display: block;

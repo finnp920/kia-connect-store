@@ -3,7 +3,7 @@
    ======================================== */
 section.playful {
   position: relative;
-  color: var(--color-white);
+  color: #ffffff;
 }
 section.playful.theme-baby-animals {
   background-color: #213125;
@@ -142,7 +142,7 @@ section.playful.theme-landscape {
   height: 100%;
   overflow: hidden;
   cursor: pointer;
-  transition: height var(--transition-base);
+  transition: height 250ms ease-in-out;
   background-color: black;
 }
 
@@ -155,7 +155,7 @@ section.playful.theme-landscape {
   object-fit: cover;
   z-index: 1;
   opacity: 0;
-  transition: opacity var(--transition-base);
+  transition: opacity 250ms ease-in-out;
   pointer-events: none;
 }
 .playful-video-cell.playing .playful-video-player {
@@ -178,7 +178,7 @@ section.playful.theme-landscape {
 .playful-label-type {
   font-size: 32px;
   font-weight: 700;
-  color: var(--color-white);
+  color: #ffffff;
   letter-spacing: -0.64px;
   line-height: normal;
 }
@@ -186,7 +186,7 @@ section.playful.theme-landscape {
 .playful-label-device {
   font-size: 32px;
   font-weight: 700;
-  color: var(--color-white);
+  color: #ffffff;
   letter-spacing: -0.64px;
   line-height: normal;
 }
@@ -198,7 +198,7 @@ section.playful.theme-landscape {
   align-items: center;
   justify-content: center;
   margin-top: 8px;
-  transition: transform var(--transition-base);
+  transition: transform 250ms ease-in-out;
 }
 
 .playful-video-cell:hover .playful-video-play {

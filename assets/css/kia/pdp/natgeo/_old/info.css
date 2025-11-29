@@ -43,7 +43,7 @@ section.info .section-inner {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.02em;
-  color: var(--color-black);
+  color: #000000;
   margin: 0;
 }
 

@@ -221,7 +221,7 @@ function scrollToSelector(selector) {
   const el = document.querySelector(selector);
 
   if (el) {
-    const infoStickyEl = document.querySelector('.info-sticky');
+    const infoStickyEl = document.querySelector('#info-sticky');
     const offset = infoStickyEl?.clientHeight || 0;
 
     // 요소의 top 위치로 smooth 스크롤

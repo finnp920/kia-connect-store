@@ -2,7 +2,7 @@
    Detail Section > Screenshots
    ======================================== */
 section.screenshots {
-  background-color: var(--color-white);
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
 }
 

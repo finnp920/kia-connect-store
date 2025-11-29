@@ -41,7 +41,7 @@ section.product .section-inner {
   object-fit: cover;
   z-index: 1;
   opacity: 1;
-  transition: opacity var(--transition-base);
+  transition: opacity 250ms ease-in-out;
   aspect-ratio: 1 / 1;
 }
 
@@ -82,7 +82,7 @@ section.product .section-inner {
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: opacity var(--transition-base);
+  transition: opacity 250ms ease-in-out;
 }
 .btn-like:hover {
   transform: scale(1.1);
@@ -130,17 +130,17 @@ section.product .section-inner {
   align-items: center;
   width: 100%;
   height: 120px;
-  background-color: var(--color-white);
+  background-color: #ffffff;
   border: 1px solid #dedede;
   border-left: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: all 250ms ease-in-out;
 }
 
 .option-item:hover {
-  border-color: var(--color-black);
-  box-shadow: var(--shadow-md);
+  border-color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .option-item.selected {
@@ -175,7 +175,7 @@ section.product .section-inner {
 }
 
 .option-item.selected .option-name {
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 .option-check {
@@ -183,7 +183,7 @@ section.product .section-inner {
   width: 20px;
   height: 20px;
   opacity: 0 !important;
-  transition: opacity var(--transition-base);
+  transition: opacity 250ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,7 +2,7 @@
    Detail Section > Display Themes List
    ======================================== */
 section.themes {
-  background-color: var(--color-white);
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
 }
 
@@ -100,7 +100,7 @@ section.themes {
   gap: 16px;
   padding: 20px 16px;
   background-color: #ffffff;
-  color: var(--color-black);
+  color: #000000;
 }
 .theme-card-body br {
   display: none;

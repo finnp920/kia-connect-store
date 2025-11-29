@@ -4,7 +4,7 @@
 section.credit {
   position: relative;
   background-color: black;
-  color: var(--color-white);
+  color: #ffffff;
   padding: 100px 0;
 }
 
@@ -31,7 +31,7 @@ section.credit {
   line-height: normal;
   text-align: center;
   letter-spacing: -0.96px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 .credit-title::after {
   content: '';
@@ -71,7 +71,7 @@ section.credit {
 }
 
 .credit-text strong {
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 700;
 }
 

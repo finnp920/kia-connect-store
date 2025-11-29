@@ -254,7 +254,7 @@ section.playful.playful-content {
   height: 100%;
   overflow: hidden;
   cursor: pointer;
-  transition: height var(--transition-base);
+  transition: height 250ms ease-in-out;
   background-color: black;
   -webkit-user-drag: none;
   user-select: none;
