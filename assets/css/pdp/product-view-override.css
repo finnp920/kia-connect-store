@@ -178,7 +178,7 @@
   .checkBtn
   input[type='checkbox']:checked
   + label::before {
-  background-image: url('../../../icons/icon-checked.svg');
+  background-image: url('../../icons/icon-checked.svg');
 }
 
 /* 옵션 - disabledBtn */

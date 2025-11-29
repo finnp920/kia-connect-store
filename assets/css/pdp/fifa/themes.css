@@ -15,7 +15,7 @@ section.themes .themes-header {
   margin: 0 auto -46px;
   padding: 64px 0 100px;
   text-align: center;
-  background-image: url('../../../../images/pdp/fifa/details/themes-header_bg.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/themes-header_bg.png');
   background-position: top center;
   z-index: 1;
 }
@@ -39,7 +39,7 @@ section.themes .themes-header {
   max-width: 1920px;
   margin: 0 auto;
   padding: 132px 20px;
-  background-image: url('../../../../images/pdp/fifa/details/img_sec02_bg.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec02_bg.png');
   background-size: cover;
 }
 
@@ -212,7 +212,7 @@ section.themes .themes-header {
 
   width: 22px;
   height: 22px;
-  background-image: url(../../../../images/pdp/fifa/icons/icon_card_selected.png);
+  background-image: url(../../../images/kia/pdp/fifa/icons/icon_card_selected.png);
   background-position: center center;
   background-size: contain;
 

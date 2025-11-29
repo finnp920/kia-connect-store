@@ -11,19 +11,19 @@
   transition: background-image 0.5s ease-in-out;
 }
 [data-current-theme='01'] .playful-background {
-  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_01.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_01.png');
 }
 [data-current-theme='02'] .playful-background {
-  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_02.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_02.png');
 }
 [data-current-theme='03'] .playful-background {
-  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_03.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_03.png');
 }
 [data-current-theme='04'] .playful-background {
-  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_04.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_04.png');
 }
 [data-current-theme='05'] .playful-background {
-  background-image: url('../../../../images/pdp/fifa/details/img_sec03_bg_theme_05.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_05.png');
 }
 
 section.playful {
@@ -244,7 +244,7 @@ section.playful.playful-content {
   gap: 13.34%;
   padding: 1.67% 1.83% 2.08%;
   aspect-ratio: 300 / 59;
-  background-image: url('../../../../images/pdp/fifa/details/img_disc_video.png');
+  background-image: url('../../../images/kia/pdp/fifa/details/img_disc_video.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -347,18 +347,18 @@ section.playful.playful-content {
 
 @media screen and (max-width: 769px) {
   [data-current-theme='01'] .playful-background {
-    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_01.png');
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_01.png');
   }
   [data-current-theme='02'] .playful-background {
-    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_02.png');
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_02.png');
   }
   [data-current-theme='03'] .playful-background {
-    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_03.png');
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_03.png');
   }
   [data-current-theme='04'] .playful-background {
-    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_04.png');
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_04.png');
   }
   [data-current-theme='05'] .playful-background {
-    background-image: url('../../../../images/pdp/fifa/details/mo_sec03_bg_theme_05.png');
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_05.png');
   }
 }

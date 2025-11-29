@@ -52,7 +52,7 @@
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url(../../../../images/pdp/fifa/icons/icon_unchecked.svg);
+  background-image: url(../../../images/kia/pdp/fifa/icons/icon_unchecked.svg);
 }
 
 [data-current-theme='01'] .theme-selector.buttons button[data-theme='01'] {
@@ -94,7 +94,7 @@
 [data-current-theme='05']
   .theme-selector.buttons
   button[data-theme='05']::before {
-  background-image: url(../../../../images/pdp/fifa/icons/icon_checked.svg);
+  background-image: url(../../../images/kia/pdp/fifa/icons/icon_checked.svg);
 }
 
 .theme-selector.dropdown {
@@ -140,7 +140,7 @@
     width: 12px;
     height: 6px;
     margin: auto 0;
-    background-image: url('../../../../icons/icon-angle-down.svg');
+    background-image: url('../../../icons/icon-angle-down.svg');
     background-size: 12px 6px;
     background-repeat: no-repeat;
     background-position: center;
