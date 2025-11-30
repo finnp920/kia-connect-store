@@ -414,18 +414,18 @@ function updateReasonImages(theme) {
   const reasonImages = [
     {
       id: 'reasonCardImage1',
-      pc: '/assets/images/pdp/natgeo/details/reasons-babycreatures.png',
-      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-1.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-1.png',
+      mobile: '/assets/images/pdp/natgeo/details/reason-1-mo.png',
     },
     {
       id: 'reasonCardImage2',
-      pc: '/assets/images/pdp/natgeo/details/reasons-space-wonders.png',
-      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-2.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-2.png',
+      mobile: '/assets/images/pdp/natgeo/details/reasons-2-mo.png',
     },
     {
       id: 'reasonCardImage3',
-      pc: '/assets/images/pdp/natgeo/details/reasons-landscape.png',
-      mobile: '/assets/images/pdp/natgeo/details/mobile-reason-3.png',
+      pc: '/assets/images/pdp/natgeo/details/reasons-3.png',
+      mobile: '/assets/images/pdp/natgeo/details/reasons-3-mo.png',
     },
     {
       id: 'reasonCardImage4',
@@ -445,11 +445,11 @@ function updateReasonImages(theme) {
   const reasonsBannerImage = document.getElementById('reasonsBannerImage');
   if (reasonsBannerImage) {
     const themeId = theme.id;
-    let bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons.png'; // PC 기본
+    let bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons-1.png'; // PC 기본
 
     //  테마별 배너 사용
     if (themeId === 'baby-animals') {
-      bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons.png';
+      bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons-1.png';
     } else if (themeId === 'space-wonders') {
       bannerSrc = '/assets/images/pdp/natgeo/details/kv-banner-reasons-2.png';
     } else if (themeId === 'landscape') {

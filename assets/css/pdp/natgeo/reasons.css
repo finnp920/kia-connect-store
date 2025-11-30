@@ -193,6 +193,11 @@ section.reasons {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+}
+[data-current-theme='theme-bc'] .reasons-video-image[data-theme='theme-bc'],
+[data-current-theme='theme-sw'] .reasons-video-image[data-theme='theme-sw'],
+[data-current-theme='theme-ls'] .reasons-video-image[data-theme='theme-ls'] {
   display: block;
 }
 
