@@ -1,0 +1,182 @@
+.sticky-wrapper {
+  position: relative;
+  padding-top: 91px;
+}
+
+/* 트랙 내부 레이아웃 */
+.theme-selector-wrapper {
+  position: sticky;
+  top: 59px;
+
+  width: 100%;
+  max-width: 1634px;
+  z-index: 3;
+  margin: 0 auto 28px;
+  padding: 16px 20px;
+}
+
+.theme-selector-wrapper.is-sticky {
+  backdrop-filter: blur(3px);
+}
+
+.theme-selector {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.theme-selector.buttons {
+  width: 100%;
+  max-width: 1634px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-selector.buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  background-color: #f2f4f6;
+  pointer-events: auto;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.theme-selector.buttons button::before {
+  flex: none;
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url(../../../icons/icon_circle_unchecked.svg);
+}
+[data-current-theme='theme-bc']
+.theme-selector.buttons
+button[data-theme='theme-bc'],
+[data-current-theme='theme-sw']
+.theme-selector.buttons
+button[data-theme='theme-sw'],
+[data-current-theme='theme-ls']
+.theme-selector.buttons
+button[data-theme='theme-ls'] {
+  background-color: #ffcc00;
+  color: #05141f;
+}
+[data-current-theme='theme-bc']
+  .theme-selector.buttons
+  button[data-theme='theme-bc']::before,
+[data-current-theme='theme-sw']
+  .theme-selector.buttons
+  button[data-theme='theme-sw']::before,
+[data-current-theme='theme-ls']
+  .theme-selector.buttons
+  button[data-theme='theme-ls']::before {
+  background-image: url(../../../icons/icon_circle_checked.svg);
+}
+
+.theme-selector.dropdown {
+  display: none;
+  top: 59px;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 769px) {
+  .sticky-wrapper {
+    padding-top: 32px;
+  }
+
+  .theme-selector-wrapper {
+    top: 56px;
+  }
+  .theme-selector.buttons {
+    display: none;
+  }
+  .theme-selector.dropdown {
+    display: block;
+    pointer-events: auto;
+  }
+  .theme-selector.dropdown .theme-text {
+    position: relative;
+    width: 100%;
+    padding: 14px 48px 14px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    color: #05141f;
+    border: 1.4px solid #dedede;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .theme-selector.dropdown .theme-text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    height: 6px;
+    margin: auto 0;
+    background-image: url('../../../icons/icon-angle-down.svg');
+    background-size: 12px 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateX(0deg);
+    transition: transform 0.3s;
+    pointer-events: none;
+  }
+  .theme-selector.dropdown .theme-text:focus {
+    outline: none;
+  }
+  .theme-selector.dropdown .theme-list {
+    position: absolute;
+    top: calc(100% - 17px);
+    left: 20px;
+    right: 20px;
+    list-style: none;
+    max-height: 0;
+    border: 1.4px solid transparent;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .theme-selector.dropdown.active .theme-list {
+    max-height: 300px;
+    border: 1.4px solid #dedede;
+    background-color: #f2f4f6;
+  }
+  .theme-selector.dropdown .theme-list li {
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #05141f;
+    cursor: pointer;
+    background-color: #f2f4f6;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .theme-selector.dropdown .theme-list li:first-child {
+    border-radius: 4px 4px 0 0;
+    border-top: none;
+  }
+
+  .theme-selector.dropdown .theme-list li:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .theme-selector.dropdown .theme-list li:hover {
+    background-color: #e8e8e8;
+  }
+}

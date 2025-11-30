@@ -62,13 +62,13 @@ section.themes {
   width: fit-content;
 }
 
-.themes-cards {
+.themes-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.theme-card {
+.card {
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -116,7 +116,7 @@ section.themes {
   color: #888888;
 }
 
-.theme-card-cta {
+.card.pick {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,9 +127,10 @@ section.themes {
   gap: 8px;
   padding: 24px 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: default;
 }
 
-.theme-card-cta .theme-card-body {
+.card.pick .theme-card-body {
   height: auto;
   padding: 0;
   color: #b2b8bd;
@@ -138,7 +139,7 @@ section.themes {
   background-color: transparent;
 }
 
-.theme-card-cta .theme-card-title {
+.card.pick .theme-card-title {
   color: #b2b8bd;
   text-align: center;
   font-size: 24px;
@@ -146,13 +147,13 @@ section.themes {
   letter-spacing: -0.48px;
 }
 
-.theme-card-cta .theme-card-copy {
+.card.pick .theme-card-copy {
   color: #b2b8bd;
   text-align: center;
   font-size: 16px;
   letter-spacing: -0.32px;
 }
-.theme-card-cta .theme-card-copy br {
+.card.pick .theme-card-copy br {
   display: block;
 }
 .theme-card-icon img {
@@ -167,7 +168,7 @@ section.themes {
 }
 
 @media screen and (max-width: 1240px) {
-  .themes-cards {
+  .themes-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -189,11 +190,11 @@ section.themes {
   .themes-subtitle br {
     display: block;
   }
-  .themes-cards {
+  .themes-cards-grid {
     column-gap: 8px;
     row-gap: 10px;
   }
-  .theme-card {
+  .card {
     min-height: auto;
     border-radius: 8px;
     border-width: 1px;
@@ -218,14 +219,14 @@ section.themes {
     font-size: 10px;
     letter-spacing: -0.2px;
   }
-  .theme-card-cta .theme-card-icon img {
+  .card.pick .theme-card-icon img {
     width: 16px;
   }
 
-  .theme-card-cta .theme-card-title {
+  .card.pick .theme-card-title {
     font-size: 14px;
   }
-  .theme-card-cta .theme-card-copy {
+  .card.pick .theme-card-copy {
     font-size: 10px;
     letter-spacing: -0.2px;
   }

@@ -53,12 +53,8 @@
     <!--  기존 css: 라이브러리, basic, common, contents, popup, kia, buttons  -->
     <link href="../assets/css/index.css" rel="stylesheet" type="text/css" />
     <!--  상세 기본 css  -->
-    <link
-      href="../assets/css/pdp/index.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!--  fifa 테마 css -->
+    <link href="../assets/css/pdp/index.css" rel="stylesheet" type="text/css" />
+    <!-- natgeo 테마 css -->
     <link
       href="../assets/css/pdp/natgeo/index.css"
       rel="stylesheet"
@@ -363,8 +359,7 @@
       <div class="infoStickyInner">
         <div class="stickyLeft">
           <p>
-            <strong>National Geographic
-              Display Themes</strong>
+            <strong>National Geographic Display Themes</strong>
           </p>
         </div>
         <div class="stickyRight">
@@ -388,7 +383,7 @@
                   <p class="productSmallVideo">
                     <img
                       alt="이미지 상품명"
-                      src="../assets/images/kia/pdp/natgeo/details/theme-baby-animals-thumbnail.png"
+                      src="../assets/images/kia/pdp/natgeo/details/productThumbnail01.png"
                     />
                     <video loop muted playsinline preload="auto">
                       <source
@@ -402,13 +397,13 @@
                 <div class="swiper-slide thumbnail-slide">
                   <img
                     alt="이미지 상품명"
-                    src="../assets/images/kia/pdp/natgeo/details/theme-space-wonders-thumbnail.png"
+                    src="../assets/images/kia/pdp/natgeo/details/productThumbnail02.png"
                   />
                 </div>
                 <div class="swiper-slide thumbnail-slide">
                   <img
                     alt="이미지 상품명"
-                    src="../assets/images/kia/pdp/natgeo/details/theme-landscape-thumbnail.png"
+                    src="../assets/images/kia/pdp/natgeo/details/productThumbnail03.png"
                   />
                 </div>
               </div>
@@ -433,9 +428,7 @@
               </p>
             </div>
             <div class="producOption scroll option-list-section">
-              <h2 class="option-list-title">
-                Select product option you want.
-              </h2>
+              <h2 class="option-list-title">Select product option you want.</h2>
               <div class="optionList">
                 <div class="checkBtn">
                   <input
@@ -556,7 +549,7 @@
               <img
                 alt="national-geographic"
                 class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/logo-national-geographic_black.png"
+                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
               />
               <div class="kv-title">
                 <h2 class="kv-main-title">
@@ -581,7 +574,6 @@
                   </span>
                 </p>
               </div>
-              <p class="kv-copyright">© National Geographic</p>
             </div>
             <div class="swiper-slide kv-slide" data-theme="theme-sw">
               <img
@@ -599,7 +591,7 @@
               <img
                 alt="national-geographic"
                 class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/logo-national-geographic.png"
+                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic.png"
               />
               <div class="kv-title">
                 <h2 class="kv-main-title">
@@ -624,7 +616,6 @@
                   </span>
                 </p>
               </div>
-              <p class="kv-copyright">© National Geographic</p>
             </div>
             <div class="swiper-slide kv-slide" data-theme="theme-ls">
               <img
@@ -642,7 +633,7 @@
               <img
                 alt="national-geographic"
                 class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/logo-national-geographic_black.png"
+                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
               />
               <div class="kv-title">
                 <h2 class="kv-main-title">
@@ -667,7 +658,6 @@
                   </span>
                 </p>
               </div>
-              <p class="kv-copyright">© National Geographic</p>
             </div>
           </div>
 
@@ -694,8 +684,8 @@
         </div>
         <div class="themes-stage">
           <div class="themes-stage-inner">
-            <div class="themes-cards">
-              <div class="theme-card is-active" data-theme="baby-animals">
+            <div class="themes-cards-grid" data-clickable="true">
+              <div class="card is-active" data-theme="theme-bc">
                 <div class="theme-card-thumb">
                   <img
                     alt="National Geographic Baby Animals thumbnail"
@@ -717,7 +707,7 @@
                 </div>
               </div>
 
-              <div class="theme-card" data-theme="space-wonders">
+              <div class="card" data-theme="theme-sw">
                 <div class="theme-card-thumb">
                   <img
                     alt="National Geographic Space Wonders thumbnail"
@@ -738,7 +728,7 @@
                 </div>
               </div>
 
-              <div class="theme-card" data-theme="landscape">
+              <div class="card" data-theme="theme-ls">
                 <div class="theme-card-thumb">
                   <img
                     alt="National Geographic Landscape thumbnail"
@@ -759,7 +749,7 @@
                 </div>
               </div>
 
-              <div class="theme-card theme-card-cta">
+              <div class="card pick">
                 <div class="theme-card-icon">
                   <img
                     alt="Theme selection icon"
@@ -782,105 +772,268 @@
 
       <!-- sticky layout START -->
       <div class="sticky-wrapper">
-        <!-- Mobile Theme Dropdown -->
-        <div class="mobile-theme-dropdown">
-          <button class="theme-text" id="mobileThemeSelect" type="button">
-            National Geographic Baby Animals
-          </button>
-          <ul class="theme-list">
-            <li value="baby-animals">National Geographic Baby Animals</li>
-            <li value="space-wonders">National Geographic Space Wonders</li>
-            <li value="landscape">National Geographic Landscape</li>
-          </ul>
+        <div class="theme-selector-wrapper">
+          <div class="theme-selector buttons">
+            <button data-theme="theme-bc">
+              National Geographic Baby Animals
+            </button>
+            <button data-theme="theme-sw">
+              National Geographic Space Wonders
+            </button>
+            <button data-theme="theme-ls">National Geographic Landscape</button>
+          </div>
+
+          <div class="theme-selector dropdown">
+            <button
+              class="theme-text"
+              id="theme-selector-dropdown"
+              type="button"
+            >
+              National Geographic Baby Animals
+            </button>
+            <ul class="theme-list">
+              <li value="theme-bc">National Geographic Baby Animals</li>
+              <li value="theme-sw">National Geographic Space Wonders</li>
+              <li value="theme-ls">National Geographic Landscape</li>
+            </ul>
+          </div>
         </div>
-        <!-- Mobile Theme Dropdown -->
-        <!-- Theme Selectors (PC only) -->
-        <div class="theme-selectors">
-          <div class="theme-selector selected" data-theme="baby-animals">
-            <div class="selector-icon"></div>
-            National Geographic Baby Animals
-          </div>
-          <div class="theme-selector" data-theme="space-wonders">
-            <div class="selector-icon"></div>
-            National Geographic Space Wonders
-          </div>
-          <div class="theme-selector" data-theme="landscape">
-            <div class="selector-icon"></div>
-            National Geographic Landscape
-          </div>
-        </div>
-        <!-- Theme Selectors (PC only) -->
 
         <!-- Detail Section > Screenshots -->
         <section class="screenshot">
-          <div class="theme-header-wrapper theme-baby-animals">
+          <div class="theme-header-wrapper">
             <!-- Screenshot Grid -->
             <div class="themes-preview">
               <div class="themes-preview-grid">
                 <!-- Left Column (2 items) -->
                 <div class="preview-column preview-column-left">
                   <div class="preview-item">
-                    <img
-                      alt="Cluster"
-                      id="previewCluster"
-                      loading="lazy"
-                      src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_01.png"
-                    />
-                    <span class="preview-label" id="previewClusterLabel">
-                      Cluster
-                    </span>
+                    <div class="xfade-stage">
+                      <picture class="xfade-item" data-theme="theme-bc">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_bc_detail_01_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_01.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-sw">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_sw_detail_01_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_sw_detail_01.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-ls">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_ls_detail_01_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_ls_detail_01.png"
+                        />
+                      </picture>
+                    </div>
+                    <span class="preview-label"> Cluster </span>
                   </div>
                   <div class="preview-item">
-                    <img
-                      alt="Welcome Message"
-                      id="previewWelcome"
-                      loading="lazy"
-                      src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_02.png"
-                    />
-                    <span class="preview-label" id="previewWelcomeLabel">
-                      Welcome Message
-                    </span>
+                    <div class="xfade-stage">
+                      <picture class="xfade-item" data-theme="theme-bc">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_bc_detail_02_mo.png
+                          "
+                        />
+                        <img
+                          alt="Welcome Message"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_02.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-sw">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_sw_detail_02_mo.png
+                          "
+                        />
+                        <img
+                          alt="Welcome Message"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_sw_detail_02.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-ls">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_ls_detail_02_mo.png
+                          "
+                        />
+                        <img
+                          alt="Welcome Message"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_ls_detail_02.png"
+                        />
+                      </picture>
+                    </div>
+                    <span class="preview-label"> Welcome Message </span>
                   </div>
                 </div>
 
                 <!-- Center Column (1 item) -->
                 <div class="preview-column preview-column-center">
                   <div class="preview-item">
-                    <img
-                      alt="Homecard"
-                      id="previewHomecard"
-                      loading="lazy"
-                      src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_03.png"
-                    />
-                    <span class="preview-label" id="previewHomecardLabel">
-                      Homecard
-                    </span>
+                    <div class="xfade-stage">
+                      <picture class="xfade-item" data-theme="theme-bc">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_bc_detail_03_mo.png
+                          "
+                        />
+                        <img
+                          alt="Homecard"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_03.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-sw">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_sw_detail_03_mo.png
+                          "
+                        />
+                        <img
+                          alt="Homecard"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_sw_detail_03.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-ls">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_ls_detail_03_mo.png
+                          "
+                        />
+                        <img
+                          alt="Homecard"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_ls_detail_03.png"
+                        />
+                      </picture>
+                    </div>
+                    <span class="preview-label"> Homecard </span>
                   </div>
                 </div>
 
                 <!-- Right Column (2 items) -->
                 <div class="preview-column preview-column-right">
                   <div class="preview-item">
-                    <img
-                      alt="Navigation"
-                      id="previewNavigation"
-                      loading="lazy"
-                      src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_04.png"
-                    />
-                    <span class="preview-label" id="previewNavigationLabel">
-                      Navigation
-                    </span>
+                    <div class="xfade-stage">
+                      <picture class="xfade-item" data-theme="theme-bc">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_bc_detail_04_mo.png
+                          "
+                        />
+                        <img
+                          alt="Navigation"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_04.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-sw">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_sw_detail_04_mo.png
+                          "
+                        />
+                        <img
+                          alt="Navigation"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_sw_detail_04.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-ls">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_ls_detail_04_mo.png
+                          "
+                        />
+                        <img
+                          alt="Navigation"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_ls_detail_04.png"
+                        />
+                      </picture>
+                    </div>
+                    <span class="preview-label"> Navigation </span>
                   </div>
                   <div class="preview-item">
-                    <img
-                      alt="Navigation"
-                      id="previewGoodbye"
-                      loading="lazy"
-                      src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_05.png"
-                    />
-                    <span class="preview-label" id="previewGoodbyeLabel">
-                      Goodbye Video
-                    </span>
+                    <div class="xfade-stage">
+                      <picture class="xfade-item" data-theme="theme-bc">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_bc_detail_05_mo.png
+                          "
+                        />
+                        <img
+                          alt="Goodbye Video"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_bc_detail_05.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-sw">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_sw_detail_05_mo.png
+                          "
+                        />
+                        <img
+                          alt="Goodbye Video"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_sw_detail_05.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="theme-ls">
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="
+                            ../assets/images/kia/pdp/natgeo/details/img_ls_detail_05_mo.png
+                          "
+                        />
+                        <img
+                          alt="Goodbye Video"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/natgeo/details/img_ls_detail_05.png"
+                        />
+                      </picture>
+                    </div>
+                    <span class="preview-label"> Goodbye Video </span>
                   </div>
                 </div>
               </div>
@@ -895,136 +1048,179 @@
               Discover <br class="mobile-br" />Playful Designs
             </h2>
             <div class="section-playful-inner">
-              <div class="playful-videos">
-                <!-- Welcome Video Area -->
-                <div class="playful-video-item" data-discover="welcome">
-                  <img
-                    alt="Welcome video preview"
-                    class="playful-video-bg"
-                    loading="lazy"
-                    src="../assets/images/kia/pdp/natgeo/details/img_disc_video.png"
-                  />
-                  <div class="playful-video-grid">
-                    <!-- Welcome Cluster Video -->
-                    <div
-                      class="playful-video-cell"
-                      data-video-type="welcome-cluster"
+              <div class="playful-feature">
+                <div class="playful-videos-wrapper">
+                  <div class="playful-video-item welcome">
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-bc"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
                     >
-                      <video
-                        class="playful-video-player"
-                        loop
-                        muted
-                        playsinline
-                        preload="metadata"
-                      >
-                        <source src="" type="video/mp4" />
-                      </video>
-                      <div class="playful-video-overlay">
-                        <div class="playful-video-label">
-                          <span class="playful-label-type">Welcome</span>
-                          <span class="playful-label-device">Cluster</span>
-                        </div>
-                        <div class="playful-video-play">
-                          <img
-                            alt="Play button"
-                            src="../assets/icons/icon-play-button.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Welcome AVNT Video -->
-                    <div
-                      class="playful-video-cell"
-                      data-video-type="welcome-avnt"
+                      <source
+                        src="../assets/videos/pdp/natgeo/baby-animals/cluster_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-bc"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
                     >
-                      <video
-                        class="playful-video-player"
-                        loop
-                        muted
-                        playsinline
-                        preload="metadata"
-                      >
-                        <source src="" type="video/mp4" />
-                      </video>
-                      <div class="playful-video-overlay">
-                        <div class="playful-video-label">
-                          <span class="playful-label-type">Welcome</span>
-                          <span class="playful-label-device">AVNT</span>
-                        </div>
-                        <div class="playful-video-play">
-                          <img
-                            alt="Play button"
-                            src="../assets/icons/icon-play-button.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                      <source
+                        src="../assets/videos/pdp/natgeo/baby-animals/avnt_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-sw"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/space-wonders/cluster_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-sw"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/space-wonders/avnt_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-ls"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/landscape/cluster_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-ls"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/landscape/avnt_welcome.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
                   </div>
-                </div>
-
-                <!-- Goodbye Video Area -->
-                <div class="playful-video-item" data-discover="goodbye">
-                  <img
-                    alt="Goodbye video preview"
-                    class="playful-video-bg"
-                    loading="lazy"
-                    src="../assets/images/kia/pdp/natgeo/details/img_disc_video.png"
-                  />
-                  <div class="playful-video-grid">
-                    <!-- Goodbye Cluster Video -->
-                    <div
-                      class="playful-video-cell"
-                      data-video-type="goodbye-cluster"
+                  <div class="playful-video-item goodbye">
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-bc"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
                     >
-                      <video
-                        class="playful-video-player"
-                        loop
-                        muted
-                        playsinline
-                        preload="metadata"
-                      >
-                        <source src="" type="video/mp4" />
-                      </video>
-                      <div class="playful-video-overlay">
-                        <div class="playful-video-label">
-                          <span class="playful-label-type">Goodbye</span>
-                          <span class="playful-label-device">Cluster</span>
-                        </div>
-                        <div class="playful-video-play">
-                          <img
-                            alt="Play button"
-                            src="../assets/icons/icon-play-button.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Goodbye AVNT Video -->
-                    <div
-                      class="playful-video-cell"
-                      data-video-type="goodbye-avnt"
+                      <source
+                        src="../assets/videos/pdp/natgeo/baby-animals/cluster_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-bc"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
                     >
-                      <video
-                        class="playful-video-player"
-                        loop
-                        muted
-                        playsinline
-                        preload="metadata"
-                      >
-                        <source src="" type="video/mp4" />
-                      </video>
-                      <div class="playful-video-overlay">
-                        <div class="playful-video-label">
-                          <span class="playful-label-type">Goodbye</span>
-                          <span class="playful-label-device">AVNT</span>
-                        </div>
-                        <div class="playful-video-play">
-                          <img
-                            alt="Play button"
-                            src="../assets/icons/icon-play-button.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                      <source
+                        src="../assets/videos/pdp/natgeo/baby-animals/avnt_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-sw"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/space-wonders/cluster_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-sw"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/space-wonders/avnt_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-ls"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/landscape/cluster_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="theme-ls"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/natgeo/landscape/avnt_goodbye.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
                   </div>
                 </div>
 
@@ -1038,74 +1234,142 @@
               </div>
 
               <figure class="playful-feature">
-                <div class="feature-media">
+                <div class="xfade-stage">
                   <img
-                    alt="Cluster preview"
-                    loading="lazy"
-                    src="../assets/images/kia/pdp/natgeo/details/discover-cluster.png"
+                    alt="Cluster - Baby Animals"
+                    class="xfade-item"
+                    data-theme="theme-bc"
+                    src="../assets/images/kia/pdp/natgeo/details/img_bc_disc_01.png"
                   />
-                  <div class="feature-text">
-                    <h3>Cluster</h3>
-                    <p>
-                      The selected National Geographic theme appears on the
-                      cluster with themed graphics and gauges.
-                    </p>
-                    <p class="feature-note">
-                      &#x203B; Depending on the vehicle model, the cluster
-                      screen design may differ from the image above.
-                    </p>
-                  </div>
+                  <img
+                    alt="Cluster - Space Wonders"
+                    class="xfade-item"
+                    data-theme="theme-sw"
+                    src="../assets/images/kia/pdp/natgeo/details/img_sw_disc_01.png"
+                  />
+                  <img
+                    alt="Cluster - Land Scape"
+                    class="xfade-item"
+                    data-theme="theme-ls"
+                    src="../assets/images/kia/pdp/natgeo/details/img_ls_disc_01.png"
+                  />
+                </div>
+                <div class="feature-text">
+                  <h3>Cluster</h3>
+                  <p>
+                    The selected National Geographic theme appears on the
+                    cluster with themed graphics and gauges.
+                  </p>
+                  <p class="feature-note">
+                    &#x203B; Depending on the vehicle model, the cluster screen
+                    design may differ from the image above.
+                  </p>
                 </div>
               </figure>
 
-              <figure class="playful-feature">
-                <div class="feature-media">
+              <figure class="playful-feature navigation">
+                <div class="xfade-stage">
                   <img
-                    alt="Navigation preview"
-                    loading="lazy"
+                    alt="Navigation - Baby Animals"
+                    class="xfade-item"
+                    data-theme="theme-bc"
                     src="../assets/images/kia/pdp/natgeo/details/img_bc_disc_02.png"
                   />
-                  <div class="feature-text">
-                    <h3>Navigation</h3>
-                    <p>
-                      National Geographic photography highlights your current
-                      location during navigation.
-                    </p>
-                  </div>
+                  <img
+                    alt="Navigation - Space Wonders"
+                    class="xfade-item"
+                    data-theme="theme-sw"
+                    src="../assets/images/kia/pdp/natgeo/details/img_sw_disc_02.png"
+                  />
+                  <img
+                    alt="Navigation - Land Scape"
+                    class="xfade-item"
+                    data-theme="theme-ls"
+                    src="../assets/images/kia/pdp/natgeo/details/img_ls_disc_02.png"
+                  />
+                </div>
+                <div class="feature-text">
+                  <h3>Navigation</h3>
+                  <p data-theme="theme-bc">
+                    National Geographic photography highlights your current
+                    location during navigation.
+                  </p>
+                  <p data-theme="theme-sw">
+                    National Geographic artwork highlights your current location
+                    during navigation.
+                  </p>
+                  <p data-theme="theme-ls">
+                    National Geographic artwork highlights your current location
+                    during navigation.
+                  </p>
+                </div>
+              </figure>
+
+              <figure class="playful-feature homecard">
+                <div class="xfade-stage">
+                  <img
+                    alt="Homecard - Baby Animals"
+                    class="xfade-item"
+                    data-theme="theme-bc"
+                    src="../assets/images/kia/pdp/natgeo/details/img_bc_disc_03.png"
+                  />
+                  <img
+                    alt="Homecard - Space Wonders"
+                    class="xfade-item"
+                    data-theme="theme-sw"
+                    src="../assets/images/kia/pdp/natgeo/details/img_sw_disc_03.png"
+                  />
+                  <img
+                    alt="Homecard - Land Scape"
+                    class="xfade-item"
+                    data-theme="theme-ls"
+                    src="../assets/images/kia/pdp/natgeo/details/img_ls_disc_03.png"
+                  />
+                </div>
+                <div class="feature-text">
+                  <h3>Homecard</h3>
+                  <p data-theme="theme-bc">
+                    National Geographic photographs appear across various menu
+                    screens.
+                  </p>
+                  <p data-theme="theme-sw">
+                    Artwork of National Geographic graphics and logos appear
+                    across various menu screens.
+                  </p>
+                  <p data-theme="theme-ls">
+                    Artwork of National Geographic graphics and logos appear
+                    across various menu screens.
+                  </p>
                 </div>
               </figure>
 
               <figure class="playful-feature">
-                <div class="feature-media">
+                <div class="xfade-stage">
                   <img
-                    alt="Homecard preview"
-                    loading="lazy"
-                    src="../assets/images/kia/pdp/natgeo/details/discover-homecard_1.png"
+                    alt="Profile - Baby Animals"
+                    class="xfade-item"
+                    data-theme="theme-bc"
+                    src="../assets/images/kia/pdp/natgeo/details/img_bc_disc_04.png"
                   />
-                  <div class="feature-text">
-                    <h3>Homecard</h3>
-                    <p>
-                      National Geographic photographs appear across various menu
-                      screens.
-                    </p>
-                  </div>
+                  <img
+                    alt="Profile - Space Wonders"
+                    class="xfade-item"
+                    data-theme="theme-sw"
+                    src="../assets/images/kia/pdp/natgeo/details/img_sw_disc_04.png"
+                  />
+                  <img
+                    alt="Profile - Land Scape"
+                    class="xfade-item"
+                    data-theme="theme-ls"
+                    src="../assets/images/kia/pdp/natgeo/details/img_ls_disc_04.png"
+                  />
                 </div>
-              </figure>
-
-              <figure class="playful-feature">
-                <div class="feature-media">
-                  <img
-                    alt="Profile image selection"
-                    loading="lazy"
-                    src="../assets/images/kia/pdp/natgeo/details/discover-profile_1.png"
-                  />
-                  <div class="feature-text">
-                    <h3>Profile</h3>
-                    <p>
-                      Choose from National Geographic-themed profile
-                      images&mdash;choose a unique one for each driver.
-                    </p>
-                  </div>
+                <div class="feature-text">
+                  <h3>Profile</h3>
+                  <p>
+                    Choose from National Geographic-themed profile
+                    images&mdash;choose a unique one for each driver.
+                  </p>
                 </div>
               </figure>
             </div>
@@ -1165,8 +1429,8 @@
                   <p class="reason-description">
                     National Geographic's Space Wonders<br class="v-mo" />
                     theme turns every <br class="v-pc" />drive into a cosmic<br
-                    class="v-mo"
-                  />
+                      class="v-mo"
+                    />
                     journey filled with awe and discovery.
                   </p>
                 </div>
@@ -1219,8 +1483,8 @@
                   </div>
                   <p class="reason-description">
                     With National Geographic display themes,<br
-                    class="v-pc v-mo"
-                  />every moment behind the wheel becomes<br class="v-mo" />
+                      class="v-pc v-mo"
+                    />every moment behind the wheel becomes<br class="v-mo" />
                     a window to wonder.
                   </p>
                 </div>
@@ -1279,7 +1543,127 @@
 
             <!-- Credit List -->
             <div class="credit-content">
-              <p class="credit-text" id="credit-text"></p>
+              <p class="credit-text" data-theme="theme-bc">
+                ⓒ National Geographic Partners LLC. All rights reserved.<br />NATIONAL
+                GEOGRAPHIC and Yellow Border Design are trademarks of National
+                Geographic Society, used under license.<br /><br />Option
+                Thumbnail : (Baby Animals)Saranga/National Geographic Kids
+                Cutest Animals Photo Pool, (Space Wonders)DAVID A.
+                AGUILAR/National Geographic Kids Space Illustration Pool,
+                (Landscape) JAMES P. BLAIR/National Geographic Ocean Landscape
+                Photography Asset Pack; Banner : (BG)
+                twi001t978822/ClipartKorea, twi001t867452/ClipartKorea,
+                tic288a0184/clipartkorea; Cluster : (BG) TIM LAMAN/National
+                Geographic Photographer’s Collection Amazon Rainforest; Welcome
+                Message: (BG) 130882403/Shutterstock/Little Kids First Big Book
+                of Animals Pool Art, (Profile) Coulanges/Shutterstock/National
+                Geographic Kids Cutest Animals Photo Pool; Homecard : (BG)
+                130882403/Shutterstock/Little Kids First Big Book of Animals
+                Pool Art, (Card) Hung Chung Chih/Shutterstock/National
+                Geographic Kids Cutest Animals Photo Pool,
+                003b_978DPWYRPB308/National Geographic Kids Cutest Animals Photo
+                Pool, WIRESTOCK CREATORS/Shutterstock/National Geographic Kids
+                Cutest Animals Photo Pool, WASUWAT
+                LIMSUPARHAT/Shutterstock/National Geographic Kids Cutest Animals
+                Photo Pool, Rita_Kochmarjova/Shutterstock/National Geographic
+                Kids Cutest Animals Photo Pool, MARTIN
+                MECNAROWSKI/Shutterstock/National Geographic Kids Cutest Animals
+                Photo Pool; Navigation : (My Car Icon) Beverly Joubert;
+                Welcome&Goodbye Video : (Welcome) Kamonrat/Shutterstock, Steve
+                Byland/Shutterstock, Apiguide/Shutterstock,
+                Nvphoto/Shutterstock, Rita_Kochmarjova/Shutterstock, Alexey
+                Seafarer/Shutterstock, Dulova Olga/Shutterstock, Nils
+                Jacobi/Shutterstock, Dennis W Donohue/Shutterstock,
+                Wildlifeworld/Shutterstock/National Geographic Kids Cutest
+                Animals Photo Pool, (Goodbye) Manuel Balesteri/Shutterstock,
+                Gudkov Andrey/Shutterstock, Stu Porter/Shutterstock, Kevin
+                Lings/Shutterstock, Trossjones/Shutterstock, Roger Clark Arps
+                Bpe1/Shutterstock, Menno Schaefer/Shutterstock,
+                Vkilikov/Shutterstock, Arcalu/Shutterstock,
+                Evaurban/Shutterstock, Maggy Meyer/Shutterstock/National
+                Geographic Kids Cutest Animals Photo Pool; Profile : (Profile)
+                Nine_Tomorrows/Shutterstock/National Geographic Kids Cutest
+                Animals Photo Pool, Coulanges/Shutterstock/National Geographic
+                Kids Cutest Animals Photo Pool, Damian
+                Lugowski/Shutterstock/National Geographic Kids Cutest Animals
+                Photo Pool, Hung Chung Chih/Shutterstock/National Geographic
+                Kids Cutest Animals Photo Pool, Anurak
+                Pongpatimet/Shutterstock/National Geographic Kids Cutest Animals
+                Photo Pool, Andreanita/Shutterstock/National Geographic Kids
+                Cutest Animals Photo Pool, Jim Cumming/Shutterstock/National
+                Geographic Kids Cutest Animals Photo Pool, Volodymyr
+                Burdiak/Shutterstock/National Geographic Kids Cutest Animals
+                Photo Pool, Slowmotiongli/Shutterstock/National Geographic Kids
+                Cutest Animals Photo Pool, Roger Clark Arps
+                Bpe1/Shutterstock/National Geographic Kids Cutest Animals Photo
+                Pool, Miroslav Hlavko/Shutterstock/National Geographic Kids
+                Cutest Animals Photo Pool; BG : (BG)
+                twi001t3405953/ClipartKorea, (leaves) 777280:designed by
+                freepik/Freepik
+              </p>
+              <p class="credit-text" data-theme="theme-sw">
+                ⓒ National Geographic Partners LLC. All rights reserved.
+                <br />NATIONAL GEOGRAPHIC and Yellow Border Design are
+                trademarks of National Geographic Society, used under license.
+                <br /><br />Option Thumbnail : (Baby Animals) Saranga/National
+                Geographic Kids Cutest Animals Photo Pool, (Space Wonders) DAVID
+                A. AGUILAR/National Geographic Kids Space Illustration Pool,
+                (Landscape) JAMES P. BLAIR/National Geographic Ocean Landscape
+                Photography Asset Pack; Banner : (Sky) Adam Mescher/Unsplash,
+                (Tree) Michael/Unsplash, (Sky) Ethan Soh/Unsplash; Cluster :
+                (BG) DAVID A. AGUILAR/National Geographic Kids Space
+                Illustration Pool; Welcome Message: (BG) DAVID A.
+                AGUILAR/National Geographic Kids Space Illustration Pool,
+                (Profile) NATGNA001040/National Geographic Space Adult Asset
+                Pack, (Icon) NATGNA001061, NATGNA001063, NATGNA001065,
+                NATGNA001066, NATGNA001088/National Geographic Space Adult Asset
+                Pack; Homecard : (BG) DAVID A. AGUILAR/National Geographic Kids
+                Space Illustration Pool, Home : (BG) DAVID A. AGUILAR/National
+                Geographic Kids Space Illustration Pool, (Card)
+                NATGNA001013_1195826, NATGNA001075_103316, NATGNA001074_2693543,
+                NATGNA001080_2693543/National Geographic Space Adult Asset Pack,
+                2323371/NASA, DAVID A. AGUILAR/National Geographic Kids Space
+                Illustration Pool; Welcome & Goodbye Video : (Welcome) DAVID A.
+                AGUILAR/National Geographic Kids Space Illustration Pool,
+                (Goodbye) DAVID A. AGUILAR/National Geographic Kids Space
+                Illustration Pool; Profile : (Profile) NATGNA001044,
+                NATGNA001040, NATGNA001045, NATGNA001041, NATGNA001043,
+                NATGNA001078, NATGNA001081, NATGNA001087, NATGNA001088,
+                NATGNA001090, NATGNA001085/National Geographic Space Adult Asset
+                Pack; BG : (Illustration) NATGNA001060, NATGNA001081_2,
+                NATGNA001041
+              </p>
+              <p class="credit-text" data-theme="theme-ls">
+                ⓒ National Geographic Partners LLC. All rights reserved.<br />NATIONAL
+                GEOGRAPHIC and Yellow Border Design are trademarks of National
+                Geographic Society, used under license.<br /><br />Option
+                Thumbnail : (Baby Animals) Saranga/National Geographic Kids
+                Cutest Animals Photo Pool, (Space Wonders) DAVID A.
+                AGUILAR/National Geographic Kids Space Illustration Pool,
+                (Landscape) JAMES P. BLAIR/National Geographic Ocean Landscape
+                Photography Asset Pack; Banner : (BG)
+                td0492t020704/ClipartKorea, td0492t020711/ClipartKorea; Cluster
+                : (BG) BABAK TAFRESHI/National Geographic Photographer’s
+                Collection Dark Sky Matters; Welcome Message: (Profile) BABAK
+                TAFRESHI/National Geographic Photographer’s Collection Dark Sky
+                Matters; Homecard : (Card) ORSOLYA HAARBERG/National Geographic
+                Photographer’s Collection Nordic Romance, BABAK
+                TAFRESHI/National Geographic Photographer’s Collection Dark Sky
+                Matters, JAMES P. BLAIR/National Geographic Ocean Landscape
+                Photography Asset Pack, CORAL KEEGAN/National Geographic
+                Above&Below Rainforest Landscapes; Welcome & Goodbye Video :
+                (Welcome) EDSON VANDEIRA/National Geographic Above&Below
+                Rainforest Landscapes, ORSOLYA HAARBERG/National Geographic
+                Photographer’s Collection Nordic Romance, (Goodbye) BABAK
+                TAFRESHI/National Geographic Photographer’s Collection Dark Sky
+                Matters; Profile : (Profile) JAMES P. BLAIR/National Geographic
+                Ocean Landscape Photography Asset Pack, BABAK TAFRESHI/National
+                Geographic Photographer’s Collection Dark Sky Matters, ORSOLYA
+                HAARBERG/National Geographic Photographer’s Collection Nordic
+                Romance; BG : (Contour lines) psxtg0000632/ClipartKorea, (Paper
+                texture) yaytg300470/ClipartKorea, (Compass)
+                psxtg0004230/ClipartKorea, (Sand) Thanh Le/Unsplash
+              </p>
             </div>
           </div>
         </section>

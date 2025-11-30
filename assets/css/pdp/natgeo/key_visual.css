@@ -31,19 +31,11 @@ section.kv {
   right: 40px;
   width: 170px;
   height: 50px;
-  background-image: url('../../../images/kia/pdp/natgeo/logo-national-geographic_black.png');
+  background-image: url('../../../images/kia/pdp/natgeo/details/logo-national-geographic_black.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: none;
-}
-.kv-copyright {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 12px;
-  color: #d4d4d4;
-  letter-spacing: -0.2px;
 }
 .kv-title {
   position: absolute;
@@ -159,10 +151,6 @@ section.kv .view-mo {
     right: 35px;
     width: 100px;
     height: 30px;
-  }
-  .kv-copyright {
-    bottom: 12px;
-    font-size: 10px;
   }
 }
 @media screen and (max-width: 900px) {

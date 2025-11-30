@@ -239,7 +239,7 @@ section.reasons {
   }
 }
 @media screen and (max-width: 1000px) {
-  .section-reasons {
+  section.reasons {
     padding: 100px 0 80px;
   }
   .reason-card {
@@ -316,7 +316,7 @@ section.reasons {
   }
 }
 @media screen and (max-width: 769px) {
-  .section-reasons {
+  section.reasons {
     padding: 40px 0;
   }
   .reasons-header {
@@ -356,9 +356,6 @@ section.reasons {
   }
 }
 @media screen and (max-width: 640px) {
-  .section-reasons {
-    padding-top: 72px;
-  }
   .reasons-header {
     margin-bottom: 60px;
   }
