@@ -55,7 +55,7 @@ section.playful {
   color: #fff;
 }
 
-.playful-title .mobile-br {
+.playful-title .view-mo {
   display: none;
 }
 .playful-title::after {
@@ -266,7 +266,7 @@ section.playful {
     width: 35px;
     height: 3px;
   }
-  .playful-title .mobile-br {
+  .playful-title .view-mo {
     display: inline;
   }
 

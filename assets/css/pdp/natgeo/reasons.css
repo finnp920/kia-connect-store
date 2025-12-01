@@ -86,12 +86,6 @@ section.reasons {
   order: 2;
 }
 
-.reason-card:nth-child(4) .reason-image .v-pc {
-  display: block;
-}
-.reason-card:nth-child(4) .reason-image .v-mo {
-  display: none;
-}
 .reason-image {
   flex-shrink: 0;
   width: 570px;
@@ -152,16 +146,16 @@ section.reasons {
   letter-spacing: -0.48px;
   color: #ffffff;
 }
-.reason-title br.v-pc {
+.reason-title br.view-pc {
   display: block;
 }
-.reason-title br.v-mo {
+.reason-title br.view-mo {
   display: none;
 }
-.reason-description br.v-pc {
+.reason-description br.view-pc {
   display: block;
 }
-.reason-description br.v-mo {
+.reason-description br.view-mo {
   display: none;
 }
 .reason-description {
@@ -206,7 +200,7 @@ section.reasons {
   color: #b2b8bd;
   white-space: nowrap;
 }
-.reasons-final-message p br.v-mo {
+.reasons-final-message p br.view-mo {
   display: none;
 }
 .reasons-copyright {
@@ -250,13 +244,13 @@ section.reasons {
     width: 50%;
     height: fit-content;
   }
-  .reason-description br.v-pc {
+  .reason-description br.view-pc {
     display: none;
   }
-  .reason-description br.v-mo {
+  .reason-description br.view-mo {
     display: block;
   }
-  .reason-card:nth-child(1) .reason-description br.v-mo {
+  .reason-card:nth-child(1) .reason-description br.view-mo {
     display: block;
   }
   .reasons-final-message p {
@@ -292,24 +286,17 @@ section.reasons {
     width: 88%;
     height: fit-content;
   }
-  .reason-card:nth-child(4) .reason-image .v-pc {
+
+  .reason-title br.view-pc {
     display: none;
   }
-  .reason-card:nth-child(4) .reason-image .v-mo {
-    /* display: none; */
-    display: block;
-    clip-path: none;
-  }
-  .reason-title br.v-pc {
-    display: none;
-  }
-  .reason-title br.v-mo {
+  .reason-title br.view-mo {
     display: block;
   }
   .reasons-bottom {
     padding: 0 20px;
   }
-  .reasons-final-message p br.v-mo {
+  .reasons-final-message p br.view-mo {
     display: block;
   }
 }
@@ -386,7 +373,7 @@ section.reasons {
   }
 }
 @media screen and (max-width: 360px) {
-  .reason-description br.v-mo {
+  .reason-description br.view-mo {
     display: none !important;
   }
 }
