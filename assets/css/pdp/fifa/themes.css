@@ -203,7 +203,7 @@ section.themes .themes-header {
 }
 
 /* 체크 뱃지 */
-.themes-cards-grid[data-clickable='true'] .card::after {
+.themes-cards-grid .card::after {
   content: '';
   position: absolute;
   top: 5%;
@@ -285,14 +285,22 @@ section.themes .themes-header {
   }
   .card .card-contents h3 {
     text-align: center;
-    font-size: clamp(12px, 2.6cqw, 20px);
+    font-size: clamp(14px, 2.6cqw, 20px);
   }
   .card .card-contents p {
     text-align: center;
     font-size: clamp(10px, 2.0cqw, 16px);
+    line-height: 1.4;
   }
   .card.pick .card-contents {
     gap: 8%;
+  }
+
+  .themes-cards-grid .card::after {
+    width: 14px;
+    height: 14px;
+    top: 5.5%;
+    right: 7%;
   }
 }
 
