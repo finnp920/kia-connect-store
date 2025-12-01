@@ -152,12 +152,6 @@ section.reasons {
 .reason-title br.view-mo {
   display: none;
 }
-.reason-description br.view-pc {
-  display: block;
-}
-.reason-description br.view-mo {
-  display: none;
-}
 .reason-description {
   font-size: 14px;
   font-weight: 400;
@@ -165,6 +159,12 @@ section.reasons {
   letter-spacing: -0.28px;
   color: #d0d5db;
   padding-left: 52px;
+}
+.reason-description .view-pc {
+  display: inline;
+}
+.reason-description .view-mo {
+  display: none;
 }
 
 /* Bottom Section */
@@ -225,11 +225,6 @@ section.reasons {
     height: 273px;
   }
 }
-@media screen and (max-width: 1065px) {
-  .reason-card:nth-child(1) .reason-description br {
-    display: none;
-  }
-}
 @media screen and (max-width: 1000px) {
   section.reasons {
     padding: 100px 0 80px;
@@ -243,15 +238,6 @@ section.reasons {
   .reason-card-left .reason-image {
     width: 50%;
     height: fit-content;
-  }
-  .reason-description br.view-pc {
-    display: none;
-  }
-  .reason-description br.view-mo {
-    display: block;
-  }
-  .reason-card:nth-child(1) .reason-description br.view-mo {
-    display: block;
   }
   .reasons-final-message p {
     font-size: 26px;
@@ -296,9 +282,6 @@ section.reasons {
   .reasons-bottom {
     padding: 0 20px;
   }
-  .reasons-final-message p br.view-mo {
-    display: block;
-  }
 }
 @media screen and (max-width: 769px) {
   section.reasons {
@@ -324,6 +307,12 @@ section.reasons {
   .reasons-cards {
     gap: 60px;
     margin-bottom: 60px;
+  }
+  .reason-description .view-pc {
+    display: none;
+  }
+  .reason-description .view-mo {
+    display: inline;
   }
 
   .reasons-bottom {
@@ -370,10 +359,5 @@ section.reasons {
 
   .reason-description {
     padding-left: 36px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .reason-description br.view-mo {
-    display: none !important;
   }
 }

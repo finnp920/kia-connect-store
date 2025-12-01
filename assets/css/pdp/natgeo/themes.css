@@ -119,7 +119,7 @@ section.themes {
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 16px;
+  padding: 18px 16px;
   background-color: #ffffff;
   color: #000000;
 }
@@ -130,6 +130,7 @@ section.themes {
   font-weight: 600;
   font-size: 24px;
   color: #000000;
+  line-height: 1.3;
 }
 
 .theme-card-tags {

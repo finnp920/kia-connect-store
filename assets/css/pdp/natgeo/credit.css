@@ -69,10 +69,15 @@ section.credit {
 [data-current-theme='theme-ls'] .credit-text[data-theme='theme-ls']{
   display: block;
 }
-
 .credit-text strong {
   color: #ffffff;
   font-weight: 700;
+}
+.credit-text .view-pc {
+  display: inline;
+}
+.credit-text .view-mo {
+  display: none;
 }
 
 @media screen and (max-width: 769px) {
@@ -94,5 +99,11 @@ section.credit {
   }
   .credit-text {
     font-size: 12px;
+  }
+  .credit-text .view-pc {
+    display: none;
+  }
+  .credit-text .view-mo {
+    display: inline;
   }
 }
