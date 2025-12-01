@@ -166,6 +166,3 @@ section.kv .view-mo {
     letter-spacing: -0.28px;
   }
 }
-
-@media screen and (max-width: 360px) {
-}

@@ -299,6 +299,7 @@ section.playful {
     font-size: 14px;
   }
   .feature-text p.feature-note {
+    margin-top: 2px;
     font-size: 10px;
   }
 }

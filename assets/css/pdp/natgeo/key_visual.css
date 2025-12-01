@@ -5,15 +5,20 @@ section.kv {
   position: relative;
   background-color: #ffffff;
 }
+section.kv .view-pc {
+  display: block;
+}
+section.kv .view-mo {
+  display: none;
+}
 
-.swiper {
+.kv-swiper {
   position: relative;
   height: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
-
-.swiper-slide {
+.kv-slide {
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -22,24 +27,13 @@ section.kv {
   pointer-events: auto;
   max-width: 1920px;
 }
-.kv-image {
+.kv-slide .kv-image img {
   aspect-ratio: 160 / 73;
 }
-.kv-logo {
+
+.kv-contents {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 170px;
-  height: 50px;
-  background-image: url('../../../images/kia/pdp/natgeo/details/logo-national-geographic_black.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-}
-.kv-title {
-  position: absolute;
-  top: 90px;
+  top: clamp(20px, 3.125vw, 60px);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -48,25 +42,30 @@ section.kv {
   padding: 0 20px;
   z-index: 10;
 }
-.kv-main-title {
-  margin-bottom: 20px;
+.kv-logo {
+  width: clamp(120px, 8.854vw, 170px);
+  height: auto;
+  aspect-ratio: 170 / 50;
+}
+.kv-title {
+  margin-top: clamp(8px, 1.25vw, 24px);
   color: #05141f;
   text-align: center;
-  font-size: 48px;
+  font-size: clamp(24px, 2.5vw, 48px);
   font-weight: 600;
   letter-spacing: -0.96px;
-  line-height: 1.2;
+  line-height: normal;
 }
 .kv-subtitle {
-  font-size: 16px;
+  margin-top: clamp(6px, 0.625vw, 12px);
+  text-align: center;
+  font-size: clamp(12px, 0.833vw, 16px);
   font-weight: 400;
   color: #05141f;
   letter-spacing: -0.32px;
-  max-width: 866px;
-  margin: 0 auto;
 }
 /* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
-.swiper-slide[data-theme='theme-sw'] .kv-main-title,
+.swiper-slide[data-theme='theme-sw'] .kv-title,
 .swiper-slide[data-theme='theme-sw'] .kv-subtitle {
   color: #ffffff;
 }
@@ -98,9 +97,8 @@ section.kv {
   right: 10px;
 }
 
-.swiper-pagination {
-  position: absolute;
-  bottom: 32px;
+.kv-swiper #kv-swiper-pagination {
+  --swiper-pagination-bottom: 30px;
 }
 .swiper-pagination-bullet {
   width: 56px;
@@ -114,67 +112,36 @@ section.kv {
   background-color: #ffffff;
 }
 
-section.kv .view-pc {
-  display: block;
-}
-section.kv .view-mo {
-  display: none;
-}
-
-@media screen and (max-width: 1240px) {
-  .kv-main-title {
-    font-size: 42px;
-  }
-}
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 769px) {
   section.kv .view-pc {
     display: none;
   }
   section.kv .view-mo {
     display: block;
   }
-  .swiper-slide img.kv-image {
-    width: 100%;
-    height: auto;
+
+  .kv-slide .kv-image img {
     aspect-ratio: 36 / 53;
-    object-fit: cover;
   }
-
-  .swiper-pagination {
-    bottom: 28px;
+  .kv-swiper #kv-swiper-pagination {
+    --swiper-pagination-bottom: 28px;
   }
-  .kv-title {
-    top: 100px;
-  }
-  .kv-logo {
-    top: 35px;
-    right: 35px;
-    width: 100px;
-    height: 30px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .kv-main-title {
-    font-size: 38px;
-  }
-}
-@media screen and (max-width: 769px) {
-  .kv-main-title {
-    font-size: 30px;
-  }
-  .kv-subtitle {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .swiper-navigation {
+  .kv-swiper .swiper-navigation {
     display: none;
   }
+
+  .kv-contents {
+    top: clamp(40px, 19.444vw, 120px);
+  }
   .kv-logo {
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 18px;
+    width: clamp(86px, 23.888vw, 344px);
+  }
+  .kv-title {
+    margin-top: clamp(16px, 8.333vw, 48px);
+    font-size: clamp(18px, 8.333vw, 48px);
+  }
+  .kv-subtitle {
+    margin-top: clamp(8px, 3.333vw, 24px);
+    font-size: clamp(12px, 3.889vw, 22px);
   }
 }

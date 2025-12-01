@@ -1,4 +1,4 @@
-.sticky-wrapper {
+.sticky-layout {
   position: relative;
   padding-top: 91px;
 }
@@ -91,7 +91,7 @@ button[data-theme='theme-ls'] {
 }
 
 @media screen and (max-width: 769px) {
-  .sticky-wrapper {
+  .sticky-layout {
     padding-top: 32px;
   }
 

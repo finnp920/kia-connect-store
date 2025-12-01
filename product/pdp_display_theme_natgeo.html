@@ -534,67 +534,56 @@
         <div class="swiper kv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide kv-slide" data-theme="theme-bc">
-              <img
-                alt="KV Image 1"
-                class="kv-image view-pc"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_bc_hero.png"
-              />
-              <img
-                alt="KV Image 1"
-                class="kv-image view-mo"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_bc_hero_mo.png"
-              />
-              <img
-                alt="national-geographic"
-                class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
-              />
-              <div class="kv-title">
-                <h2 class="kv-main-title">
-                  <span class="view-pc"
-                    >Dive into Wonder<br />
-                    with National Geographic in your Kia!</span
-                  >
-                  <span class="view-mo"
-                    >Dive into Wonder with<br />
-                    National Geographic<br />
-                    in your Kia!</span
-                  >
+              <picture class="kv-image">
+                <source
+                  media="(max-width: 769px)"
+                  srcset="
+                    ../assets/images/kia/pdp/natgeo/details/img_bc_hero_mo.png
+                  "
+                />
+                <img
+                  alt="KV Image 1"
+                  src="../assets/images/kia/pdp/natgeo/details/img_bc_hero.png"
+                />
+              </picture>
+              <div class="kv-contents">
+                <img
+                  alt="national-geographic"
+                  class="kv-logo"
+                  src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
+                />
+                <h2 class="kv-title">
+                  Dive into Wonder<br class="view-pc" />
+                  with <br class="view-mo" />National Geographic
+                  <br class="view-mo" />in your Kia!
                 </h2>
                 <p class="kv-subtitle">
-                  <span class="view-pc"
-                    >Personalize your dashboard with National Geographic themes
-                    that will inspire your drive.</span
-                  >
-                  <span class="view-mo">
-                    Personalize your dashboard with National<br />
-                    Geographic themes that will inspire your drive.
-                  </span>
+                  Personalize your dashboard with National
+                  <br class="view-mo" />Geographic themes that will inspire your
+                  drive.
                 </p>
               </div>
             </div>
             <div class="swiper-slide kv-slide" data-theme="theme-sw">
-              <img
-                alt="KV Image 2"
-                class="kv-image view-pc"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_sw_hero.png"
-              />
-              <img
-                alt="KV Image 2"
-                class="kv-image view-mo"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_sw_hero_mo.png"
-              />
-              <img
-                alt="national-geographic"
-                class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic.png"
-              />
-              <div class="kv-title">
-                <h2 class="kv-main-title">
+              <picture class="kv-image">
+                <source
+                  media="(max-width: 769px)"
+                  srcset="
+                    ../assets/images/kia/pdp/natgeo/details/img_sw_hero_mo.png
+                  "
+                />
+                <img
+                  alt="KV Image 1"
+                  src="../assets/images/kia/pdp/natgeo/details/img_sw_hero.png"
+                />
+              </picture>
+              <div class="kv-contents">
+                <img
+                  alt="national-geographic"
+                  class="kv-logo"
+                  src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic.png"
+                />
+                <h2 class="kv-title">
                   <span class="view-pc"
                     >Dive into Wonder<br />
                     with National Geographic in your Kia!</span
@@ -618,25 +607,25 @@
               </div>
             </div>
             <div class="swiper-slide kv-slide" data-theme="theme-ls">
-              <img
-                alt="KV Image 3"
-                class="kv-image view-pc"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_ls_hero.png"
-              />
-              <img
-                alt="KV Image 3"
-                class="kv-image view-mo"
-                data-role="kv-shot"
-                src="../assets/images/kia/pdp/natgeo/details/img_ls_hero_mo.png"
-              />
-              <img
-                alt="national-geographic"
-                class="kv-logo"
-                src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
-              />
-              <div class="kv-title">
-                <h2 class="kv-main-title">
+              <picture class="kv-image">
+                <source
+                  media="(max-width: 769px)"
+                  srcset="
+                    ../assets/images/kia/pdp/natgeo/details/img_ls_hero_mo.png
+                  "
+                />
+                <img
+                  alt="KV Image 1"
+                  src="../assets/images/kia/pdp/natgeo/details/img_ls_hero.png"
+                />
+              </picture>
+              <div class="kv-contents">
+                <img
+                  alt="national-geographic"
+                  class="kv-logo"
+                  src="../assets/images/kia/pdp/natgeo/details/logo-national-geographic_black.png"
+                />
+                <h2 class="kv-title">
                   <span class="view-pc"
                     >Dive into Wonder<br />
                     with National Geographic in your Kia!</span
@@ -771,7 +760,7 @@
       <!-- Themes END -->
 
       <!-- sticky layout START -->
-      <div class="sticky-wrapper">
+      <div class="sticky-layout">
         <div class="theme-selector-wrapper">
           <div class="theme-selector buttons">
             <button data-theme="theme-bc">
@@ -811,7 +800,7 @@
                     <div class="xfade-stage">
                       <picture class="xfade-item" data-theme="theme-bc">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_bc_detail_01_mo.png
                           "
@@ -824,7 +813,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-sw">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_sw_detail_01_mo.png
                           "
@@ -837,7 +826,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-ls">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_ls_detail_01_mo.png
                           "
@@ -855,7 +844,7 @@
                     <div class="xfade-stage">
                       <picture class="xfade-item" data-theme="theme-bc">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_bc_detail_02_mo.png
                           "
@@ -868,7 +857,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-sw">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_sw_detail_02_mo.png
                           "
@@ -881,7 +870,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-ls">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_ls_detail_02_mo.png
                           "
@@ -903,7 +892,7 @@
                     <div class="xfade-stage">
                       <picture class="xfade-item" data-theme="theme-bc">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_bc_detail_03_mo.png
                           "
@@ -916,7 +905,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-sw">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_sw_detail_03_mo.png
                           "
@@ -929,7 +918,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-ls">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_ls_detail_03_mo.png
                           "
@@ -951,7 +940,7 @@
                     <div class="xfade-stage">
                       <picture class="xfade-item" data-theme="theme-bc">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_bc_detail_04_mo.png
                           "
@@ -964,7 +953,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-sw">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_sw_detail_04_mo.png
                           "
@@ -977,7 +966,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-ls">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_ls_detail_04_mo.png
                           "
@@ -995,7 +984,7 @@
                     <div class="xfade-stage">
                       <picture class="xfade-item" data-theme="theme-bc">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_bc_detail_05_mo.png
                           "
@@ -1008,7 +997,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-sw">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_sw_detail_05_mo.png
                           "
@@ -1021,7 +1010,7 @@
                       </picture>
                       <picture class="xfade-item" data-theme="theme-ls">
                         <source
-                          media="(max-width: 768px)"
+                          media="(max-width: 769px)"
                           srcset="
                             ../assets/images/kia/pdp/natgeo/details/img_ls_detail_05_mo.png
                           "
@@ -1395,8 +1384,10 @@
                 <div class="reason-image">
                   <picture>
                     <source
-                      media="(max-width: 768px)"
-                      srcset="../assets/images/kia/pdp/natgeo/details/reasons-1-mo.png"
+                      media="(max-width: 769px)"
+                      srcset="
+                        ../assets/images/kia/pdp/natgeo/details/reasons-1-mo.png
+                      "
                     />
                     <img
                       alt="Baby Animals theme preview"
@@ -1442,8 +1433,10 @@
                 <div class="reason-image">
                   <picture>
                     <source
-                      media="(max-width: 768px)"
-                      srcset="../assets/images/kia/pdp/natgeo/details/reasons-2-mo.png"
+                      media="(max-width: 769px)"
+                      srcset="
+                        ../assets/images/kia/pdp/natgeo/details/reasons-2-mo.png
+                      "
                     />
                     <img
                       alt="Space Wonders theme preview"
@@ -1459,8 +1452,10 @@
                 <div class="reason-image">
                   <picture>
                     <source
-                      media="(max-width: 768px)"
-                      srcset="../assets/images/kia/pdp/natgeo/details/reasons-3-mo.png"
+                      media="(max-width: 769px)"
+                      srcset="
+                        ../assets/images/kia/pdp/natgeo/details/reasons-3-mo.png
+                      "
                     />
                     <img
                       alt="Landscape theme preview"
@@ -1524,24 +1519,24 @@
 
             <!-- Bottom Section -->
             <div class="reasons-bottom">
-              <div class="reasons-video-container">
+              <div class="xfade-stage">
                 <img
                   alt="National Geographic Display Themes Preview"
-                  class="reasons-video-image"
+                  class="xfade-item"
                   data-theme="theme-bc"
                   loading="lazy"
                   src="../assets/images/kia/pdp/natgeo/details/kv-banner-reasons-1.png"
                 />
                 <img
                   alt="National Geographic Display Themes Preview"
-                  class="reasons-video-image"
+                  class="xfade-item"
                   data-theme="theme-sw"
                   loading="lazy"
                   src="../assets/images/kia/pdp/natgeo/details/kv-banner-reasons-2.png"
                 />
                 <img
                   alt="National Geographic Display Themes Preview"
-                  class="reasons-video-image"
+                  class="xfade-item"
                   data-theme="theme-ls"
                   loading="lazy"
                   src="../assets/images/kia/pdp/natgeo/details/kv-banner-reasons-3.png"
@@ -1573,11 +1568,11 @@
             <!-- Credit List -->
             <div class="credit-content">
               <p class="credit-text" data-theme="theme-bc">
-                ⓒ National Geographic Partners LLC. All rights reserved.<br />NATIONAL
-                GEOGRAPHIC and Yellow Border Design are trademarks of National
-                Geographic Society, used under license.<br /><br />Option
-                Thumbnail : (Baby Animals)Saranga/National Geographic Kids
-                Cutest Animals Photo Pool, (Space Wonders)DAVID A.
+                ⓒ National Geographic Partners LLC. All rights reserved.<br />
+                NATIONAL GEOGRAPHIC and Yellow Border Design are trademarks of
+                National Geographic Society, used under license.<br /><br />
+                Option Thumbnail : (Baby Animals) Saranga/National Geographic
+                Kids Cutest Animals Photo Pool, (Space Wonders) DAVID A.
                 AGUILAR/National Geographic Kids Space Illustration Pool,
                 (Landscape) JAMES P. BLAIR/National Geographic Ocean Landscape
                 Photography Asset Pack; Banner : (BG)
@@ -1597,9 +1592,10 @@
                 Photo Pool, Rita_Kochmarjova/Shutterstock/National Geographic
                 Kids Cutest Animals Photo Pool, MARTIN
                 MECNAROWSKI/Shutterstock/National Geographic Kids Cutest Animals
-                Photo Pool; Navigation : (My Car Icon) Beverly Joubert;
-                Welcome&Goodbye Video : (Welcome) Kamonrat/Shutterstock, Steve
-                Byland/Shutterstock, Apiguide/Shutterstock,
+                Photo Pool; Navigation : (My Car Icon) Eric
+                Isselee/Shutterstock/Little Kids First Big Book of Animals Pool
+                Art; Welcome & Goodbye Video : (Welcome) Kamonrat/Shutterstock,
+                Steve Byland/Shutterstock, Apiguide/Shutterstock,
                 Nvphoto/Shutterstock, Rita_Kochmarjova/Shutterstock, Alexey
                 Seafarer/Shutterstock, Dulova Olga/Shutterstock, Nils
                 Jacobi/Shutterstock, Dennis W Donohue/Shutterstock,
@@ -1631,36 +1627,36 @@
                 freepik/Freepik
               </p>
               <p class="credit-text" data-theme="theme-sw">
-                ⓒ National Geographic Partners LLC. All rights reserved.
-                <br />NATIONAL GEOGRAPHIC and Yellow Border Design are
-                trademarks of National Geographic Society, used under license.
-                <br /><br />Option Thumbnail : (Baby Animals) Saranga/National
-                Geographic Kids Cutest Animals Photo Pool, (Space Wonders) DAVID
-                A. AGUILAR/National Geographic Kids Space Illustration Pool,
+                ⓒ National Geographic Partners LLC. All rights reserved.<br />NATIONAL
+                GEOGRAPHIC and Yellow Border Design are trademarks of National
+                Geographic Society, used under license.<br /><br />
+                Option Thumbnail : (Baby Animals)Saranga/National Geographic
+                Kids Cutest Animals Photo Pool, (Space Wonders)DAVID A.
+                AGUILAR/National Geographic Kids Space Illustration Pool,
                 (Landscape) JAMES P. BLAIR/National Geographic Ocean Landscape
                 Photography Asset Pack; Banner : (Sky) Adam Mescher/Unsplash,
-                (Tree) Michael/Unsplash, (Sky) Ethan Soh/Unsplash; Cluster :
+                (tree) Michael/Unsplash, (sky) Ethan Soh/unsplash; Cluster :
                 (BG) DAVID A. AGUILAR/National Geographic Kids Space
-                Illustration Pool; Welcome Message: (BG) DAVID A.
+                Illustration Poo; Welcome Message: (BG) DAVID A.
                 AGUILAR/National Geographic Kids Space Illustration Pool,
                 (Profile) NATGNA001040/National Geographic Space Adult Asset
-                Pack, (Icon) NATGNA001061, NATGNA001063, NATGNA001065,
+                Pack, (Icon)NATGNA001061, NATGNA001063, NATGNA001065,
                 NATGNA001066, NATGNA001088/National Geographic Space Adult Asset
                 Pack; Homecard : (BG) DAVID A. AGUILAR/National Geographic Kids
                 Space Illustration Pool, Home : (BG) DAVID A. AGUILAR/National
                 Geographic Kids Space Illustration Pool, (Card)
                 NATGNA001013_1195826, NATGNA001075_103316, NATGNA001074_2693543,
                 NATGNA001080_2693543/National Geographic Space Adult Asset Pack,
-                2323371/NASA, DAVID A. AGUILAR/National Geographic Kids Space
-                Illustration Pool; Welcome & Goodbye Video : (Welcome) DAVID A.
-                AGUILAR/National Geographic Kids Space Illustration Pool,
-                (Goodbye) DAVID A. AGUILAR/National Geographic Kids Space
-                Illustration Pool; Profile : (Profile) NATGNA001044,
-                NATGNA001040, NATGNA001045, NATGNA001041, NATGNA001043,
-                NATGNA001078, NATGNA001081, NATGNA001087, NATGNA001088,
-                NATGNA001090, NATGNA001085/National Geographic Space Adult Asset
-                Pack; BG : (Illustration) NATGNA001060, NATGNA001081_2,
-                NATGNA001041
+                2323371/NASA, DAVID A. AGUILAR/DAVID A. AGUILAR/National
+                Geographic Kids Space Illustration Pool; Wecoem&Goodbye Video :
+                (Welcome) DAVID A. AGUILAR/National Geographic Kids Space
+                Illustration Pool, (Goodbye) DAVID A. AGUILAR/National
+                Geographic Kids Space Illustration Pool; Profile : (Profile)
+                NATGNA001044, NATGNA001040, NATGNA001045, NATGNA001041,
+                NATGNA001043, NATGNA001078, NATGNA001081, NATGNA001087,
+                NATGNA001088, NATGNA001090, NATGNA001085/National Geographic
+                Space Adult Asset Pack; BG : (Illustration)NATGNA001060,
+                NATGNA001081_2, NATGNA001041, (Sky) narae kim/Unsplash
               </p>
               <p class="credit-text" data-theme="theme-ls">
                 ⓒ National Geographic Partners LLC. All rights reserved.<br />NATIONAL
@@ -2042,17 +2038,17 @@
 
     <!--//footer-->
     <div class="floating_menu">
-      <a class="floating_faq" href="/kr/service/faq.html"
+      <a class="floating_faq" href="/kr/service/faq"
         ><img
           alt="자주하는 질문"
-          src="../assets/images/common/floating_inquiry.png"
+          src="../assets/images/common/floating_faq.png"
       /></a>
-      <a class="floating_inquiry" href="/kr/service/inquiry-list.html"
-        ><img alt="문의하기" src="../assets/images/common/floating_faq.png"
+      <a class="floating_inquiry" href="/kr/service/inquiry-list"
+        ><img alt="문의하기" src="../assets/images/common/floating_inquiry.png"
       /></a>
-      <button class="floating_top">
-        <img alt="top" src="../assets/icons/floating_top.png" />
-      </button>
+      <a class="floating_top" href="javascript:"
+        ><img alt="top" src="../assets/icons/floating_top.png"
+      /></a>
     </div>
     <!--  Go to the List START -->
     <section class="go-to-list">
