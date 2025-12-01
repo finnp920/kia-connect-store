@@ -111,6 +111,8 @@ section.reasons {
     0 100%,
     0 20px
   );
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .reason-content {
@@ -177,6 +179,10 @@ section.reasons {
   flex-direction: column;
   align-items: center;
   gap: 80px;
+}
+.reasons-bottom img.xfade-item{
+  -webkit-user-drag: none;
+  user-select: none;
 }
 [data-current-theme='theme-bc'] .reasons-bottom .xfade-item[data-theme='theme-bc'],
 [data-current-theme='theme-sw'] .reasons-bottom .xfade-item[data-theme='theme-sw'],

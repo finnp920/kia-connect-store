@@ -159,6 +159,9 @@ section.playful {
   display: block;
   border-radius: 8px;
   border: 2px solid #3b3b3b;
+
+  -webkit-user-drag: none;
+  user-select: none;
 }
 [data-current-theme='theme-bc'] .playful-feature img[data-theme='theme-bc'],
 [data-current-theme='theme-sw'] .playful-feature img[data-theme='theme-sw'],

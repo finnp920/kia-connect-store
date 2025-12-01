@@ -115,6 +115,8 @@ section.screenshots {
   position: relative;
   object-fit: cover;
   z-index: 0;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .preview-label {

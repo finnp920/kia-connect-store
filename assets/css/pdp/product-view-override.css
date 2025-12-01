@@ -37,6 +37,9 @@
   z-index: 2; /* 비디오보다 위 */
   transition: opacity 0.4s ease;
   opacity: 1;
+
+  -webkit-user-drag: none;
+  user-select: none;
 }
 .contentWarp
   .productView
@@ -146,16 +149,15 @@
   line-height: normal;
 }
 .contentWarp
-  .productView
-  .productRight
-  .optionWarp
-  .producOption
-  .optionList
-  .checkBtn
-  label
-  p
-  img {
-  aspect-ratio: 1 / 1;
+.productView
+.productRight
+.optionWarp
+.producOption
+.optionList
+.checkBtn
+label img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .contentWarp
