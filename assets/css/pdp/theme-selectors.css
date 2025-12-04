@@ -1,3 +1,7 @@
+/* ========================================
+   Theme Selectors
+   ======================================== */
+
 /* 트랙 내부 레이아웃 */
 .theme-selector-wrapper {
   position: sticky;
@@ -8,7 +12,6 @@
   margin: 0 auto;
   padding: 16px 20px;
 }
-
 .theme-selector-wrapper.is-sticky {
   backdrop-filter: blur(3px);
 }
@@ -20,9 +23,9 @@
 
 .theme-selector.buttons {
   width: 100%;
-  max-width: 900px;
+  max-width: 1634px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
@@ -33,14 +36,13 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 12px;
+  padding: 12px 16px;
   border-radius: 999px;
-  color: #05141f;
+  color: #666666;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.32px;
   background-color: #f2f4f6;
-  border: 1px solid #d0d0d0;
   pointer-events: auto;
   transition:
     transform 0.3s ease,
@@ -50,60 +52,135 @@
   flex: none;
   content: '';
   display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../../../images/kia/pdp/fifa/icons/icon_unchecked.svg);
+  width: 22px;
+  height: 22px;
+  background-image: url(../../icons/icon_circle_unchecked.svg);
 }
 
-[data-current-theme='01'] .theme-selector.buttons button[data-theme='01'] {
+/* ========================================
+   Product NatGeo
+   ======================================== */
+[data-product='natgeo'] .theme-selector-wrapper {
+  max-width: 1634px;
+  margin: 0 auto 28px;
+}
+[data-product='natgeo']
+  [data-current-theme='theme-bc']
+  .theme-selector.buttons
+  button[data-theme='theme-bc'],
+[data-product='natgeo']
+  [data-current-theme='theme-sw']
+  .theme-selector.buttons
+  button[data-theme='theme-sw'],
+[data-product='natgeo']
+  [data-current-theme='theme-ls']
+  .theme-selector.buttons
+  button[data-theme='theme-ls'] {
+  background-color: #ffcc00;
+  color: #05141f;
+}
+[data-product='natgeo']
+  [data-current-theme='theme-bc']
+  .theme-selector.buttons
+  button[data-theme='theme-bc']::before,
+[data-product='natgeo']
+  [data-current-theme='theme-sw']
+  .theme-selector.buttons
+  button[data-theme='theme-sw']::before,
+[data-product='natgeo']
+  [data-current-theme='theme-ls']
+  .theme-selector.buttons
+  button[data-theme='theme-ls']::before {
+  background-image: url(../../icons/icon_circle_checked.svg);
+}
+
+/* ========================================
+   Product FIFA
+   ======================================== */
+[data-product='fifa'] .theme-selector.buttons {
+  max-width: 900px;
+  justify-content: center;
+}
+[data-product='fifa'] .theme-selector.buttons button {
+  padding: 8px 12px;
+  color: #05141f;
+  border: 1px solid #d0d0d0;
+}
+[data-product='fifa'] .theme-selector.buttons button::before {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../images/kia/pdp/fifa/icons/icon_unchecked.svg);
+}
+
+[data-product='fifa']
+  [data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01'] {
   background-color: #eeff42;
   border-color: #eeff42;
 }
-[data-current-theme='02'] .theme-selector.buttons button[data-theme='02'] {
+[data-product='fifa']
+  [data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02'] {
   background-color: #ff3d00;
   border-color: #ff3d00;
   color: white;
 }
-[data-current-theme='03'] .theme-selector.buttons button[data-theme='03'] {
+[data-product='fifa']
+  [data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03'] {
   background-color: #00c852;
   border-color: #00c852;
   color: white;
 }
-[data-current-theme='04'] .theme-selector.buttons button[data-theme='04'] {
+[data-product='fifa']
+  [data-current-theme='04']
+  .theme-selector.buttons
+  button[data-theme='04'] {
   background-color: #304ffe;
   border-color: #304ffe;
   color: white;
 }
-[data-current-theme='05'] .theme-selector.buttons button[data-theme='05'] {
+[data-product='fifa']
+  [data-current-theme='05']
+  .theme-selector.buttons
+  button[data-theme='05'] {
   background-color: #d0303c;
   border-color: #d0303c;
   color: white;
 }
-[data-current-theme='01']
+[data-product='fifa']
+  [data-current-theme='01']
   .theme-selector.buttons
   button[data-theme='01']::before,
-[data-current-theme='02']
+[data-product='fifa']
+  [data-current-theme='02']
   .theme-selector.buttons
   button[data-theme='02']::before,
-[data-current-theme='03']
+[data-product='fifa']
+  [data-current-theme='03']
   .theme-selector.buttons
   button[data-theme='03']::before,
-[data-current-theme='04']
+[data-product='fifa']
+  [data-current-theme='04']
   .theme-selector.buttons
   button[data-theme='04']::before,
-[data-current-theme='05']
+[data-product='fifa']
+  [data-current-theme='05']
   .theme-selector.buttons
   button[data-theme='05']::before {
-  background-image: url(../../../images/kia/pdp/fifa/icons/icon_checked.svg);
+  background-image: url(../../images/kia/pdp/fifa/icons/icon_checked.svg);
 }
 
+/* 모바일용 dropdown */
 .theme-selector.dropdown {
   display: none;
   top: 59px;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-
 @media screen and (max-width: 769px) {
   .theme-selector-wrapper {
     top: 56px;
@@ -140,7 +217,7 @@
     width: 12px;
     height: 6px;
     margin: auto 0;
-    background-image: url('../../../icons/icon-angle-down.svg');
+    background-image: url('../../icons/icon-angle-down.svg');
     background-size: 12px 6px;
     background-repeat: no-repeat;
     background-position: center;

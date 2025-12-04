@@ -1,0 +1,537 @@
+/* ========================================
+   Themes
+   ======================================== */
+section.themes {
+}
+section.themes .view-pc {
+  display: block;
+}
+section.themes .view-mo {
+  display: none;
+}
+
+/* themes-header */
+.themes-header {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 64px 20px 68px;
+  text-align: center;
+}
+.themes-header .themes-title {
+  margin-bottom: 16px;
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+.themes-header .themes-subtitle {
+  color: #05141f;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+}
+
+/* themes cards */
+.card {
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+.themes-cards-grid[data-clickable='true'] .card:not(.pick) {
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
+    transform: none;
+  }
+
+  /* 눌렀을 때 쫀득한 효과 (Active) */
+  .themes-cards-grid[data-clickable='true'] .card:not(.pick):active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  section.themes .view-pc {
+    display: none;
+  }
+  section.themes .view-mo {
+    display: block;
+  }
+
+  .themes-header {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .themes-header .themes-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+  .themes-header .themes-subtitle {
+    letter-spacing: -0.28px;
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+
+/* ========================================
+   Product NatGeo
+   ======================================== */
+[data-product="natgeo"] .themes-stage {
+  position: relative;
+  padding: 68px 0 79px;
+  background: linear-gradient(174deg, #3f3e3e -1.07%, #111 96.73%);
+  border-top: 6px solid #ffcc00;
+  margin-bottom: 0;
+  z-index: 1;
+}
+[data-product="natgeo"] .themes-stage::after {
+  content: '';
+  position: absolute;
+  width: 101px;
+  height: 52px;
+  left: calc(50% - 101px / 2);
+  bottom: -52px;
+  background-image: url('../../icons/theme-stage-after.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+[data-product="natgeo"] .themes-stage-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: fit-content;
+}
+
+[data-product="natgeo"] .themes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+[data-product="natgeo"] .card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 276px;
+  max-width: 289px;
+}
+
+[data-product="natgeo"] .theme-card-thumb {
+  position: relative;
+  height: 156px;
+  overflow: hidden;
+  border-bottom: none;
+}
+[data-product="natgeo"] .theme-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-product="natgeo"] .theme-card-body {
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 16px;
+  background-color: #ffffff;
+  color: #000000;
+}
+[data-product="natgeo"] .theme-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.3;
+}
+[data-product="natgeo"] .theme-card-tags {
+  font-size: 16px;
+  color: #888888;
+}
+
+[data-product="natgeo"] .card.pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #ffcc00;
+  background: #272727;
+  gap: 8px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+[data-product="natgeo"] .card.pick .theme-card-body {
+  height: auto;
+  padding: 0;
+  color: #b2b8bd;
+  gap: 16px;
+  justify-content: center;
+  background-color: transparent;
+}
+[data-product="natgeo"] .card.pick .theme-card-title {
+  color: #b2b8bd;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+}
+[data-product="natgeo"] .card.pick .theme-card-copy {
+  color: #b2b8bd;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+}
+[data-product="natgeo"] .theme-card-icon img {
+  width: 32px;
+  height: auto;
+}
+[data-product="natgeo"] .theme-card-copy {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 1240px) {
+  [data-product="natgeo"] .themes-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product="natgeo"] .themes-cards-grid {
+    column-gap: 8px;
+    row-gap: 10px;
+  }
+  [data-product="natgeo"] .card {
+    min-height: auto;
+    border-radius: 8px;
+    border-width: 1px;
+  }
+  [data-product="natgeo"] .theme-card-thumb {
+    height: 92px;
+  }
+  [data-product="natgeo"] .theme-card-body {
+    height: 126px;
+    padding: 10px;
+    gap: 10px;
+  }
+  [data-product="natgeo"] .theme-card-title {
+    font-size: 14px;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: -0.28px;
+  }
+  [data-product="natgeo"] .theme-card-tags {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+  [data-product="natgeo"] .card.pick .theme-card-icon img {
+    width: 16px;
+  }
+
+  [data-product="natgeo"] .card.pick .theme-card-title {
+    font-size: 14px;
+  }
+  [data-product="natgeo"] .card.pick .theme-card-copy {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+
+  [data-product="natgeo"] .themes-stage {
+    padding: 50px 0;
+    border-width: 4px;
+  }
+  [data-product="natgeo"] .themes-stage::after {
+    z-index: 1;
+    width: 48px;
+    height: 24px;
+    left: calc(50% - 48px / 2);
+    bottom: -24px;
+    background-image: url('../../icons/theme-stage-after-mobile.svg');
+  }
+}
+
+
+/* ========================================
+   Product FIFA
+   ======================================== */
+[data-product="fifa"] section.themes .themes-header {
+  position: relative;
+  max-width: 1900px;
+  margin: 0 auto -46px;
+  padding: 64px 0 100px;
+  text-align: center;
+  background-image: url('../../images/kia/pdp/fifa/details/themes-header_bg.png');
+  background-position: top center;
+  z-index: 1;
+}
+[data-product="fifa"] .themes-title {
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+[data-product="fifa"] .themes-subtitle {
+  margin-top: 24px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+}
+[data-product="fifa"] .themes-cards-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 132px 20px;
+  background-image: url('../../images/kia/pdp/fifa/details/img_sec02_bg.png');
+  background-size: cover;
+}
+[data-product="fifa"] .themes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+
+  max-width: 1588px;
+  margin: 0 auto;
+  list-style: none;
+}
+[data-product="fifa"] .card {
+  position: relative;
+  width: 100%;
+  max-width: 258px;
+  aspect-ratio: 258 / 447;
+  isolation: isolate;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+[data-product="fifa"] .card-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s;
+}
+[data-product="fifa"] .card-layer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-product="fifa"] .layer-active {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product="fifa"] .layer-inactive {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  opacity: 1;
+  visibility: visible;
+}
+[data-product="fifa"] .card.pick .card-layer {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+[data-product="fifa"] [data-current-theme='01'] .card[data-theme='01'] .layer-active,
+[data-product="fifa"] [data-current-theme='02'] .card[data-theme='02'] .layer-active,
+[data-product="fifa"] [data-current-theme='03'] .card[data-theme='03'] .layer-active,
+[data-product="fifa"] [data-current-theme='04'] .card[data-theme='04'] .layer-active,
+[data-product="fifa"] [data-current-theme='05'] .card[data-theme='05'] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+[data-product="fifa"] [data-current-theme='01'] .card[data-theme='01'] .layer-inactive,
+[data-product="fifa"] [data-current-theme='02'] .card[data-theme='02'] .layer-inactive,
+[data-product="fifa"] [data-current-theme='03'] .card[data-theme='03'] .layer-inactive,
+[data-product="fifa"] [data-current-theme='04'] .card[data-theme='04'] .layer-inactive,
+[data-product="fifa"] [data-current-theme='05'] .card[data-theme='05'] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[data-product="fifa"] .card .card-contents {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  aspect-ratio: 258 / 193;
+  padding: clamp(12px, 10.36%, 20px) clamp(14px, 9.30%, 24px) clamp(14px, 9.43%, 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+[data-product="fifa"] .card .card-contents h3 {
+  width: 100%;
+  color: #666;
+  font-size: clamp(20px, 1.5cqw, 24px);
+  font-style: normal;
+  font-weight: 600;
+}
+[data-product="fifa"] .card .card-contents p {
+  width: 100%;
+  color: #B8B8B8;
+  font-size: clamp(14px, 1cqw, 16px);
+}
+[data-product="fifa"] [data-current-theme='01'] .card[data-theme='01'] .card-contents h3,
+[data-product="fifa"] [data-current-theme='02'] .card[data-theme='02'] .card-contents h3,
+[data-product="fifa"] [data-current-theme='03'] .card[data-theme='03'] .card-contents h3,
+[data-product="fifa"] [data-current-theme='04'] .card[data-theme='04'] .card-contents h3,
+[data-product="fifa"] [data-current-theme='05'] .card[data-theme='05'] .card-contents h3 {
+  color: #000;
+}
+[data-product="fifa"] [data-current-theme='01'] .card[data-theme='01'] .card-contents p,
+[data-product="fifa"] [data-current-theme='02'] .card[data-theme='02'] .card-contents p,
+[data-product="fifa"] [data-current-theme='03'] .card[data-theme='03'] .card-contents p,
+[data-product="fifa"] [data-current-theme='04'] .card[data-theme='04'] .card-contents p,
+[data-product="fifa"] [data-current-theme='05'] .card[data-theme='05'] .card-contents p {
+  color: #888;
+}
+[data-product="fifa"] .card.pick .card-contents {
+  justify-content: center;
+  gap: 23%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+[data-product="fifa"] .card.pick .card-contents h3 {
+  text-align: center;
+  color: #B2B8BD;
+}
+[data-product="fifa"] .card.pick .card-contents p {
+  text-align: center;
+  color: #B2B8BD;
+}
+
+/* 체크 뱃지 */
+[data-product="fifa"] .themes-cards-grid .card::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 8.6%;
+  z-index: 10; /* 최상단 */
+
+  width: 22px;
+  height: 22px;
+  background-image: url(../../images/kia/pdp/fifa/icons/icon_card_selected.png);
+  background-position: center center;
+  background-size: contain;
+
+  /* Animation Init */
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.2s,
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none; /* 클릭 통과 */
+}
+[data-product="fifa"] [data-current-theme='01'] .card[data-theme='01']::after,
+[data-product="fifa"] [data-current-theme='02'] .card[data-theme='02']::after,
+[data-product="fifa"] [data-current-theme='03'] .card[data-theme='03']::after,
+[data-product="fifa"] [data-current-theme='04'] .card[data-theme='04']::after,
+[data-product="fifa"] [data-current-theme='05'] .card[data-theme='05']::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 화면이 좀 작아지면 (Tablet): 3x2 구조 */
+@media (max-width: 1200px) {
+  [data-product="fifa"] .themes-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 한 줄에 3개 */
+    max-width: 790px;
+  }
+}
+@media screen and (max-width: 769px) {
+  [data-product="fifa"] section.themes .themes-header {
+    position: relative;
+    max-width: 1900px;
+    margin: 0 auto -41px;
+    padding: 35px 0 80px;
+    text-align: center;
+    background-size: cover;
+  }
+  [data-product="fifa"] .themes-title {
+    color: #000;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
+  [data-product="fifa"] .themes-subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  [data-product="fifa"] .themes-cards-wrapper {
+    padding: 36px 20px;
+  }
+  [data-product="fifa"] .themes-cards-grid {
+    gap: 12px;
+  }
+  [data-product="fifa"] .card {
+    max-width: 100%;
+    aspect-ratio: 156 / 184;
+  }
+  [data-product="fifa"] .card .card-contents {
+    aspect-ratio: 156 / 92;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  [data-product="fifa"] .card .card-contents h3 {
+    text-align: center;
+    font-size: clamp(14px, 2.6cqw, 20px);
+  }
+  [data-product="fifa"] .card .card-contents p {
+    text-align: center;
+    font-size: clamp(10px, 2.0cqw, 16px);
+    line-height: 1.4;
+  }
+  [data-product="fifa"] .card.pick .card-contents {
+    gap: 8%;
+  }
+
+  [data-product="fifa"] .themes-cards-grid .card::after {
+    width: 14px;
+    height: 14px;
+    top: 5.5%;
+    right: 7%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  [data-product="fifa"] .themes-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+}

@@ -16,10 +16,8 @@ root
 │   ├── index.css                      # [CSS] 공통 스타일
 │   ├── buttons.css                    # [CSS] 버튼 컴포넌트 스타일 (Cut-corner 등)
 │   └── pdp/                           # [CSS] 제품 상세 전용 스타일 폴더
-│       ├── index.css                  #    - PDP 공통 레이아웃
+│       ├── index.css                  #    - PDP CSS
 │       ├── product-view-override.css  #    - 상단 상품 정보 영역 오버라이딩
-│       ├── section/                   #    - 공통 섹션별 스타일 (Info, Disclaimer 등)
-│       └── natgeo/                    #    - 냇지오 테마 전용 스타일 (KV, Themes 등 분리)
 │
 ├── js/
 │   └── pdp/                           # [JS] 제품 상세 전용 스크립트
