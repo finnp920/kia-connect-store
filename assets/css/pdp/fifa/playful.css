@@ -1,0 +1,367 @@
+/* ========================================
+   Playful
+   ======================================== */
+.playful-background {
+  width: 100%; /* 기본적으로 꽉 채우려 노력함 */
+  max-width: 1920px; /* 단, 1200px을 넘지 않음 */
+  justify-self: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  transition: background-image 0.5s ease-in-out;
+}
+[data-current-theme='01'] .playful-background {
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_01.png');
+}
+[data-current-theme='02'] .playful-background {
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_02.png');
+}
+[data-current-theme='03'] .playful-background {
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_03.png');
+}
+[data-current-theme='04'] .playful-background {
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_04.png');
+}
+[data-current-theme='05'] .playful-background {
+  background-image: url('../../../images/kia/pdp/fifa/details/img_sec03_bg_theme_05.png');
+}
+
+section.playful {
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+section.playful .view-pc {
+  display: block;
+}
+section.playful .view-mo {
+  display: none;
+}
+section.playful.playful-header {
+  padding-top: 164px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+.playful-title {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+.playful-subtitle {
+  margin: 24px 0 0 0;
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+section.playful.playful-content {
+  /* 테마 셀렉터 추가 시 활성화 */
+  /*padding-top: 156px;*/
+  padding-bottom: 133px;
+}
+
+.playful-banner {
+  width: 100%;
+}
+.playful-banner .banner-item {
+  position: relative;
+}
+.playful-banner .banner-item .banner-img img {
+  width: 100%;
+  aspect-ratio: 100 / 17;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.banner-contents {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.banner-contents h3{
+  color: #fff;
+  text-align: center;
+  font-size: clamp(16px, 2.33vw, 28px);
+  font-weight: 600;
+  line-height: 120%;
+}
+.banner-contents p{
+  margin-top: 6px;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(14px, 1.83vw, 22px);
+  font-weight: 600;
+  line-height: 120%;
+}
+.banner-item[data-theme="01"] .banner-contents h3 {
+  color: #05141F;
+}
+.banner-item[data-theme="01"] .banner-contents p {
+  color: #05141F;
+}
+
+.banner-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: clamp(8px, 7.84%, 16px);
+}
+.banner-badges [class*="badge-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 18px;
+
+  line-height: normal;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.10);
+  border: 0.8px solid white;
+}
+.banner-badges [class*="badge-"] img{
+  width: 14px;
+  height: 14px;
+}
+
+.banner-item[data-theme="01"] .badge-1{
+  border-color: #FF3D00;
+  background-color: #FF3D00;
+  color: #EEFF42;
+}
+.banner-item[data-theme="01"] .badge-2{
+  border-color: #667DFF;
+  background-color: #304FFE;
+  color: #B4D0FF;
+}
+.banner-item[data-theme="01"] .badge-3{
+  border-color: #FF5900;
+  background-color: #FFF;
+  color: #FF5900;
+}
+.banner-item[data-theme="02"] .badge-1{
+  border-color: #FF3D00;
+  background-color: #D50101;
+  color: #FF8F6B;
+}
+.banner-item[data-theme="02"] .badge-2{
+  border-color: #FF3D00;
+  background-color: #FFF;
+  color: #FF8F6B;
+}
+.banner-item[data-theme="02"] .badge-3{
+  border-color: #BA5849;
+  background-color: #FF6E3F;
+  color: #fff;
+}
+.banner-item[data-theme="03"] .badge-1{
+  border-color: #AFEA00;
+  background-color: #00C852;
+  color: #D2FF4D;
+}
+.banner-item[data-theme="03"] .badge-2{
+  border-color: #AFEA00;
+  background-color: #187F1B;
+  color: #AFEA00;
+}
+.banner-item[data-theme="03"] .badge-3{
+  border-color: #AFEA00;
+  background-color: #F4FF81;
+  color: #004D3F;
+}
+.banner-item[data-theme="04"] .badge-1{
+  border-color: #304FFE;
+  background-color: #83B1FF;
+  color: #304FFE;
+}
+.banner-item[data-theme="04"] .badge-2{
+  border-color: #83B1FF;
+  background-color: #304FFE;
+  color: #83B1FF;
+}
+.banner-item[data-theme="04"] .badge-3{
+  border-color: #A7FFEB;
+  background-color: #10164F;
+  color: #A7FFEB;
+}
+.banner-item[data-theme="05"] .badge-1{
+  border-color: #FF8282;
+  background-color: #FF5252;
+  color: #fff;
+}
+.banner-item[data-theme="05"] .badge-2{
+  border-color: #83B1FF;
+  background-color: #10164F;
+  color: #83B1FF;
+}
+.banner-item[data-theme="05"] .badge-3{
+  border-color: #304FFE;
+  background-color: #FFF;
+  color: #304FFE;
+}
+
+.playful-contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 80px;
+  margin-top: 100px;
+}
+.playful-content-item {
+  width: 100%;
+}
+/* Item > Title */
+.playful-content-item > h3 {
+  color: #05141f;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+/* Item > Video */
+.playful-content-item > .playful-videos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  align-self: center;
+}
+.playful-video-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 13.34%;
+  padding: 1.67% 1.83% 2.08%;
+  aspect-ratio: 300 / 59;
+  background-image: url('../../../images/kia/pdp/fifa/details/img_disc_video.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.playful-video-player {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 250ms ease-in-out;
+  background-color: black;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Item > Image */
+.playful-content-item > .image-wrapper {
+}
+.playful-content-item > .image-wrapper img {
+  border-radius: 8px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Item > description */
+.playful-content-item > p {
+  margin: 24px 0 0 0;
+  color: #05141f;
+  font-size: 16px;
+}
+.playful-content-item > p.warning {
+  margin: 8px 0 0 0;
+  color: #888;
+}
+
+/* 테마 셀렉터 추가 시 활성화 - 테마 셀렉터 3줄 높이 = 182px */
+/*@media screen and (max-width: 900px) {*/
+/*  section.playful.playful-content {*/
+/*    padding-top: 210px;*/
+/*  }*/
+/*}*/
+
+@media screen and (max-width: 769px) {
+  section.playful .view-pc {
+    display: none;
+  }
+  section.playful .view-mo {
+    display: block;
+  }
+  section.playful.playful-header {
+    padding-top: 48px;
+    padding-bottom: 4px;
+  }
+  .playful-title {
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
+  .playful-subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  section.playful.playful-content {
+    /* 테마 셀렉터 추가 시 활성화 */
+    /*padding-top: 83px;*/
+    padding-top: 20px;
+  }
+  .playful-banner .banner-item .banner-img img {
+    aspect-ratio: 640 / 480;
+  }
+  .banner-contents h3{
+    font-size: clamp(12px, 5vw, 16px);
+    line-height: 1.5;
+  }
+  .banner-contents p{
+    margin-top: clamp(10px, 6.67%, 16px);
+    font-size: clamp(10px, 4.375vw, 14px);
+    line-height: 1.4;
+  }
+  .banner-badges {
+    margin-top: clamp(12px, 8.33%, 20px);
+    gap: 6px;
+  }
+
+
+  .playful-contents-wrapper {
+    margin-top: 20px;
+    gap: 60px;
+  }
+  .playful-content-item > h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .playful-content-item > p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .playful-content-item > p.warning {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-current-theme='01'] .playful-background {
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_01.png');
+  }
+  [data-current-theme='02'] .playful-background {
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_02.png');
+  }
+  [data-current-theme='03'] .playful-background {
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_03.png');
+  }
+  [data-current-theme='04'] .playful-background {
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_04.png');
+  }
+  [data-current-theme='05'] .playful-background {
+    background-image: url('../../../images/kia/pdp/fifa/details/mo_sec03_bg_theme_05.png');
+  }
+}

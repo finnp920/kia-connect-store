@@ -1,19 +1,9 @@
 @import url('go_to_list.css');
 @import url('product-view-override.css');
-@import url('info.css');
-@import url('upgrade_guides.css');
-@import url('disclaimer.css');
-@import url('related_feature.css');
-
-@import url('key_visual.css');
-@import url('themes.css');
-@import url('theme-selectors.css');
-@import url('screenshots.css');
-@import url('playful.css');
-@import url('experience.css');
-@import url('reasons.css');
-@import url('credit.css');
-
+@import url('section/info.css');
+@import url('section/upgrade_guides.css');
+@import url('section/disclaimer.css');
+@import url('section/related_feature.css');
 
 * {
   margin: 0;
@@ -125,86 +115,4 @@ main section > .section-inner {
     opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     visibility 0s 0.6s; /* 사라질 때 delay */
-}
-
-/* ========================================
-   Product FIFA
-   ======================================== */
-[data-product="fifa"] [data-current-theme='01'] .xfade-item[data-theme='01'],
-[data-product="fifa"] [data-current-theme='02'] .xfade-item[data-theme='02'],
-[data-product="fifa"] [data-current-theme='03'] .xfade-item[data-theme='03'],
-[data-product="fifa"] [data-current-theme='04'] .xfade-item[data-theme='04'],
-[data-product="fifa"] [data-current-theme='05'] .xfade-item[data-theme='05'] {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-  transform: scale(1);
-  transition-delay: 0s; /* visibility delay 제거 */
-}
-
-/* sticky 처리 */
-[data-product="fifa"] .sticky-layout {
-  display: grid;
-  grid-template-rows: auto auto auto auto auto auto;
-  width: 100%;
-  position: relative;
-}
-[data-product="fifa"] .sticky-track {
-  grid-column: 1 / -1;
-  grid-row: 2 / -1; /* 여기서부터 끝까지 살아남음 */
-
-  z-index: 10; /* 컨텐츠보다 위 */
-  pointer-events: none; /* 중요: 트랙 영역이 넓어도 클릭은 뒤로 통과시킴 */
-
-  height: 100%;
-}
-[data-product="fifa"] .playful-background {
-  grid-column: 1 / -1;
-  grid-row: 1 / 4;
-  z-index: 0;
-}
-[data-product="fifa"] section.playful {
-  grid-column: 1 / -1;
-  z-index: 1;
-}
-[data-product="fifa"] section.playful.playful-header {
-  grid-row: 1;
-}
-[data-product="fifa"] section.playful.playful-content {
-  grid-row: 3; /* Row 2는 버튼 자리이므로 비워둠 */
-}
-[data-product="fifa"] section.experience {
-  grid-row: 4;
-  grid-column: 1 / -1;
-}
-[data-product="fifa"] section.info {
-  grid-row: 5;
-  grid-column: 1 / -1;
-}
-[data-product="fifa"] section.upgrade-guides {
-  grid-row: 6;
-  grid-column: 1 / -1;
-}
-
-/* ========================================
-   Product NatGeo
-   ======================================== */
-[data-product="natgeo"] [data-current-theme='theme-bc'] .xfade-item[data-theme='theme-bc'],
-[data-product="natgeo"] [data-current-theme='theme-sw'] .xfade-item[data-theme='theme-sw'],
-[data-product="natgeo"] [data-current-theme='theme-ls'] .xfade-item[data-theme='theme-ls'] {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-  transform: scale(1);
-  transition-delay: 0s;
-}
-
-[data-product="natgeo"] .sticky-layout {
-  position: relative;
-  padding-top: 91px;
-}
-@media screen and (max-width: 769px) {
-  [data-product="natgeo"] .sticky-layout {
-    padding-top: 32px;
-  }
 }
