@@ -74,9 +74,6 @@ section.kv .view-mo {
   pointer-events: auto;
   max-width: 1920px;
 }
-.kv-image img {
-  width: 100%;
-}
 
 /* kv-image */
 [data-product="fifa"] .kv-image img {
