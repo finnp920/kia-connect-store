@@ -1,18 +1,11 @@
 /* ========================================
-   Detail Section > Discover Playful Designs
+   Discover Playful Designs - Starwars
    ======================================== */
-section.playful {
-  position: relative;
-  color: #ffffff;
+[data-product='starwars'][data-current-theme='01'] section.playful {
+  background-color: #060a14;
 }
-[data-current-theme='theme-bc'] section.playful {
-  background-color: #213125;
-}
-[data-current-theme='theme-sw'] section.playful {
-  background-color: #222220;
-}
-[data-current-theme='theme-ls'] section.playful {
-  background-color: #5a4231;
+[data-product='starwars'][data-current-theme='02'] section.playful {
+  background-color: #0c0606;
 }
 
 .playful-wrapper {
@@ -32,14 +25,11 @@ section.playful {
   pointer-events: none;
   transition: background-image 0.5s ease-in-out;
 }
-[data-current-theme='theme-bc'] .playful-wrapper::before {
-  background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bg_bc_02.png');
+[data-current-theme='01'] .playful-wrapper::before {
+  background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01.png');
 }
-[data-current-theme='theme-sw'] .playful-wrapper::before {
-  background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bg_sw_02.png');
-}
-[data-current-theme='theme-ls'] .playful-wrapper::before {
-  background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bg_ls_02.png');
+[data-current-theme='02'] .playful-wrapper::before {
+  background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02.png');
 }
 
 .playful-title {
@@ -57,18 +47,6 @@ section.playful {
 
 .playful-title .view-mo {
   display: none;
-}
-.playful-title::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 73px;
-  height: 4px;
-  background-color: #ffcc00;
 }
 
 .section-playful-inner {
@@ -91,21 +69,6 @@ section.playful {
   align-self: center;
   margin-top: 0;
 }
-.playful-video-item {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 13.34%;
-  padding: 1.67% 1.83% 2.08%;
-  aspect-ratio: 300 / 59;
-  background-image: url('../../../images/kia/pdp/natgeo/details/img_disc_video.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 .playful-video-player {
   position: relative;
   width: 100%;
@@ -117,9 +80,9 @@ section.playful {
   user-select: none;
   display: none;
 }
-[data-current-theme='theme-bc'] .playful-video-player[data-theme='theme-bc'],
-[data-current-theme='theme-sw'] .playful-video-player[data-theme='theme-sw'],
-[data-current-theme='theme-ls'] .playful-video-player[data-theme='theme-ls'] {
+[data-current-theme='01'] .playful-video-player[data-theme='01'],
+[data-current-theme='02'] .playful-video-player[data-theme='02'],
+[data-current-theme='03'] .playful-video-player[data-theme='03'] {
   display: block;
 }
 
@@ -162,9 +125,9 @@ section.playful {
   -webkit-user-drag: none;
   user-select: none;
 }
-[data-current-theme='theme-bc'] .playful-feature img[data-theme='theme-bc'],
-[data-current-theme='theme-sw'] .playful-feature img[data-theme='theme-sw'],
-[data-current-theme='theme-ls'] .playful-feature img[data-theme='theme-ls'] {
+[data-current-theme='01'] .playful-feature img[data-theme='01'],
+[data-current-theme='02'] .playful-feature img[data-theme='02'],
+[data-current-theme='03'] .playful-feature img[data-theme='03'] {
   opacity: 1;
   visibility: visible;
   z-index: 1;
@@ -200,24 +163,12 @@ section.playful {
 .playful-feature.homecard .feature-text p {
   display: none;
 }
-[data-current-theme='theme-bc']
-  .playful-feature.navigation
-  p[data-theme='theme-bc'],
-[data-current-theme='theme-sw']
-  .playful-feature.navigation
-  p[data-theme='theme-sw'],
-[data-current-theme='theme-ls']
-  .playful-feature.navigation
-  p[data-theme='theme-ls'],
-[data-current-theme='theme-bc']
-  .playful-feature.homecard
-  p[data-theme='theme-bc'],
-[data-current-theme='theme-sw']
-  .playful-feature.homecard
-  p[data-theme='theme-sw'],
-[data-current-theme='theme-ls']
-  .playful-feature.homecard
-  p[data-theme='theme-ls'] {
+[data-current-theme='01'] .playful-feature.navigation p[data-theme='01'],
+[data-current-theme='02'] .playful-feature.navigation p[data-theme='02'],
+[data-current-theme='03'] .playful-feature.navigation p[data-theme='03'],
+[data-current-theme='01'] .playful-feature.homecard p[data-theme='01'],
+[data-current-theme='02'] .playful-feature.homecard p[data-theme='02'],
+[data-current-theme='03'] .playful-feature.homecard p[data-theme='03'] {
   display: block;
 }
 
@@ -244,13 +195,13 @@ section.playful {
     background-position: center top;
     background-size: cover;
   }
-  [data-current-theme='theme-bc'] .playful-wrapper::before {
+  [data-current-theme='01'] .playful-wrapper::before {
     background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bc_disc_bg_mo.png');
   }
-  [data-current-theme='theme-sw'] .playful-wrapper::before {
+  [data-current-theme='02'] .playful-wrapper::before {
     background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_sw_disc_bg_mo.png');
   }
-  [data-current-theme='theme-ls'] .playful-wrapper::before {
+  [data-current-theme='03'] .playful-wrapper::before {
     background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_ls_disc_bg_mo.png');
   }
 

@@ -1,0 +1,94 @@
+/* ========================================
+   KV (Key Visual)
+   ======================================== */
+section.kv {
+  position: relative;
+  background-color: #ffffff;
+}
+section.kv .view-pc {
+  display: block;
+}
+section.kv .view-mo {
+  display: none;
+}
+
+[data-product] .kv-swiper {
+  position: relative;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* swiper-navigation */
+.kv-swiper .swiper-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.kv-swiper .swiper-button-prev,
+.kv-swiper .swiper-button-next {
+  color: #ffffff;
+}
+.kv-swiper .swiper-button-prev {
+  left: 10px;
+}
+.kv-swiper .swiper-button-next {
+  right: 10px;
+}
+
+/* swiper-pagination */
+.kv-swiper #kv-swiper-pagination {
+  --swiper-pagination-bottom: 30px;
+}
+.kv-swiper .swiper-pagination-bullet {
+  width: 56px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+  border-radius: 0;
+  opacity: 1;
+}
+.kv-swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
+/* kv-slide */
+.kv-swiper .kv-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  max-width: 1920px;
+}
+.kv-image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+  section.kv .view-pc {
+    display: none;
+  }
+  section.kv .view-mo {
+    display: block;
+  }
+  .kv-swiper #kv-swiper-pagination {
+    --swiper-pagination-bottom: 28px;
+  }
+  .kv-swiper .swiper-navigation {
+    display: none;
+  }
+}

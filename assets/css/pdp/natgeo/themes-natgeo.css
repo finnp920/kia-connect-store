@@ -1,0 +1,196 @@
+/* ========================================
+   Themes - NatGeo
+   ======================================== */
+[data-product='natgeo'] .themes-stage {
+  position: relative;
+  padding: 68px 0 79px;
+  background: linear-gradient(174deg, #3f3e3e -1.07%, #111 96.73%);
+  border-top: 6px solid #ffcc00;
+  margin-bottom: 0;
+  z-index: 1;
+}
+[data-product='natgeo'] .themes-stage::after {
+  content: '';
+  position: absolute;
+  width: 101px;
+  height: 52px;
+  left: calc(50% - 101px / 2);
+  bottom: -52px;
+  background-image: url('../../../icons/theme-stage-after.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+[data-product='natgeo'] .themes-stage-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: fit-content;
+}
+
+[data-product='natgeo'] .themes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+[data-product='natgeo'] .card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 276px;
+  max-width: 289px;
+}
+
+[data-product='natgeo'] .theme-card-thumb {
+  position: relative;
+  height: 156px;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+[data-product='natgeo'] .theme-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+[data-product='natgeo'] .theme-card-body {
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 16px;
+  background-color: #ffffff;
+  color: #000000;
+}
+[data-product='natgeo'] .theme-card-body br {
+  display: none;
+}
+[data-product='natgeo'] .theme-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.3;
+}
+
+[data-product='natgeo'] .theme-card-tags {
+  font-size: 16px;
+  color: #888888;
+}
+
+[data-product='natgeo'] .card.pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #ffcc00;
+  background: #272727;
+  gap: 8px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-product='natgeo'] .card.pick .theme-card-body {
+  height: auto;
+  padding: 0;
+  color: #b2b8bd;
+  gap: 16px;
+  justify-content: center;
+  background-color: transparent;
+}
+
+[data-product='natgeo'] .card.pick .theme-card-title {
+  color: #b2b8bd;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+}
+
+[data-product='natgeo'] .card.pick .theme-card-copy {
+  color: #b2b8bd;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+}
+[data-product='natgeo'] .card.pick .theme-card-copy br {
+  display: block;
+}
+[data-product='natgeo'] .theme-card-icon img {
+  width: 32px;
+  height: auto;
+}
+
+[data-product='natgeo'] .theme-card-copy {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 1240px) {
+  [data-product='natgeo'] .themes-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='natgeo'] .themes-stage {
+    padding: 50px 0;
+    border-width: 4px;
+  }
+  [data-product='natgeo'] .themes-stage::after {
+    z-index: 1;
+    width: 48px;
+    height: 24px;
+    left: calc(50% - 48px / 2);
+    bottom: -24px;
+    background-image: url('../../../icons/theme-stage-after-mobile.svg');
+  }
+
+  [data-product='natgeo'] .themes-cards-grid {
+    column-gap: 8px;
+    row-gap: 10px;
+  }
+  [data-product='natgeo'] .card {
+    min-height: auto;
+    border-radius: 8px;
+    border-width: 1px;
+  }
+  [data-product='natgeo'] .theme-card-thumb {
+    height: 92px;
+  }
+  [data-product='natgeo'] .theme-card-body {
+    height: 126px;
+    padding: 10px;
+    gap: 10px;
+  }
+  [data-product='natgeo'] .theme-card-body br {
+    display: block;
+  }
+  [data-product='natgeo'] .theme-card-title {
+    font-size: 14px;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: -0.28px;
+  }
+  [data-product='natgeo'] .theme-card-tags {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+  [data-product='natgeo'] .card.pick .theme-card-icon img {
+    width: 16px;
+  }
+
+  [data-product='natgeo'] .card.pick .theme-card-title {
+    font-size: 14px;
+  }
+  [data-product='natgeo'] .card.pick .theme-card-copy {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+}

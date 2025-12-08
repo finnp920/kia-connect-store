@@ -1,0 +1,173 @@
+/* ========================================
+   Discover Playful Designs
+   ======================================== */
+[data-product] section.playful {
+  position: relative;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+[data-product] section.playful .view-pc {
+  display: block;
+}
+[data-product] section.playful .view-mo {
+  display: none;
+}
+
+[data-product] .playful-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 156px 0 151px;
+}
+[data-product] .playful-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+  transition: background-image 0.5s ease-in-out;
+}
+
+[data-product] .playful-title {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.96px;
+  line-height: normal;
+  align-self: center;
+  position: relative;
+  padding-bottom: 28px;
+  margin-bottom: 62px;
+  color: #05141f;
+}
+
+[data-product] .playful-contents-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 64px;
+  margin-top: 100px;
+  z-index: 1;
+}
+[data-product] .playful-content-item {
+  width: 100%;
+}
+/* Item > Title */
+[data-product] .playful-content-item > h3 {
+  color: #05141f;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+/* Item > Video */
+[data-product] .playful-videos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  align-self: center;
+}
+[data-product] .playful-video-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 13.34%;
+  padding: 1.67% 1.83% 2.08%;
+  aspect-ratio: 300 / 59;
+  background-image: url('../../../images/kia/pdp/img_disc_video.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+[data-product] .playful-video-player {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 250ms ease-in-out;
+  background-color: black;
+  -webkit-user-drag: none;
+  user-select: none;
+  display: none;
+}
+[data-product][data-current-theme='01'] .playful-video-player[data-theme='01'],
+[data-product][data-current-theme='02'] .playful-video-player[data-theme='02'],
+[data-product][data-current-theme='03'] .playful-video-player[data-theme='03'],
+[data-product][data-current-theme='04'] .playful-video-player[data-theme='04'],
+[data-product][data-current-theme='05'] .playful-video-player[data-theme='05']{
+  display: block;
+}
+
+/* Item > Image */
+[data-product] .playful-content-item > .image-wrapper {
+}
+[data-product] .playful-content-item > .image-wrapper img {
+  border-radius: 8px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Item > description */
+[data-product] .playful-content-item > p {
+  margin: 20px 0 0 0;
+  color: #05141f;
+  font-size: 16px;
+}
+[data-product] .playful-content-item > p.warning {
+  margin: 8px 0 0 0;
+  color: #ACACAC;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product] section.playful .view-pc {
+    display: none;
+  }
+  [data-product] section.playful .view-mo {
+    display: block;
+  }
+
+  [data-product] .playful-wrapper {
+    padding: 100px 0 78px;
+  }
+  [data-product] .playful-wrapper::before {
+    background-position: center top;
+    background-size: cover;
+  }
+
+  [data-product] .playful-title {
+    padding-bottom: 19px;
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+
+  [data-product] .playful-contents-wrapper {
+    margin-top: 20px;
+    gap: 60px;
+  }
+  [data-product] .playful-content-item > h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  [data-product] .playful-videos-wrapper {
+    gap: 8px;
+  }
+  [data-product] .playful-content-item > p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  [data-product] .playful-content-item > p.warning {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+}

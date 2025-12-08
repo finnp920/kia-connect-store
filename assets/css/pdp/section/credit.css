@@ -1,5 +1,5 @@
 /* ========================================
-   Detail Section > Credit
+   Credit
    ======================================== */
 section.credit {
   position: relative;
@@ -58,15 +58,15 @@ section.credit {
 }
 
 .credit-text {
-  display: none;
+  display: block;
   font-size: 14px;
   line-height: 1.4;
   color: #dedede;
   margin: 0;
 }
-[data-current-theme='theme-bc'] .credit-text[data-theme='theme-bc'],
-[data-current-theme='theme-sw'] .credit-text[data-theme='theme-sw'],
-[data-current-theme='theme-ls'] .credit-text[data-theme='theme-ls']{
+[data-current-theme='01'] .credit-text[data-theme='01'],
+[data-current-theme='02'] .credit-text[data-theme='02'],
+[data-current-theme='03'] .credit-text[data-theme='03']{
   display: block;
 }
 .credit-text strong {

@@ -1,0 +1,90 @@
+/* ========================================
+   Themes
+   ======================================== */
+[data-product] section.themes {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+[data-product] section.themes .view-pc {
+  display: block;
+}
+[data-product] section.themes .view-mo {
+  display: none;
+}
+
+[data-product] .themes-header {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 64px 20px 68px;
+  text-align: center;
+}
+
+[data-product] .themes-header .themes-title {
+  margin-bottom: 16px;
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+
+[data-product] .themes-header .themes-subtitle {
+  color: #05141f;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+}
+
+[data-product] .card {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  [data-product] .card:not(.pick):hover {
+    transform: translateY(-4px);
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
+  [data-product] .card:not(.pick):hover {
+    transform: none;
+  }
+
+  /* 눌렀을 때 쫀득한 효과 (Active) */
+  [data-product] .card:not(.pick):active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+}
+
+[data-product] .card.pick {
+  cursor: default;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product] section.themes .view-pc {
+    display: none;
+  }
+  [data-product] section.themes .view-mo {
+    display: block;
+  }
+
+  [data-product] .themes-header {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  [data-product] .themes-header .themes-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+  [data-product] .themes-header .themes-subtitle {
+    letter-spacing: -0.28px;
+    font-size: 14px;
+    color: #000;
+  }
+}

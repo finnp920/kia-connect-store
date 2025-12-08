@@ -1,0 +1,66 @@
+/* ========================================
+   KV (Key Visual) - NatGeo
+   ======================================== */
+[data-product='natgeo'] .kv-slide .kv-image img {
+  aspect-ratio: 160 / 73;
+}
+
+[data-product='natgeo'] .kv-contents {
+  position: absolute;
+  top: clamp(20px, 3.125vw, 60px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+[data-product='natgeo'] .kv-contents .kv-logo {
+  width: clamp(120px, 8.854vw, 170px);
+  height: auto;
+  aspect-ratio: 170 / 50;
+}
+[data-product='natgeo'] .kv-contents .kv-title {
+  margin-top: clamp(8px, 1.25vw, 24px);
+  color: #05141f;
+  text-align: center;
+  font-size: clamp(24px, 2.5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: normal;
+}
+[data-product='natgeo'] .kv-contents .kv-subtitle {
+  margin-top: clamp(6px, 0.625vw, 12px);
+  text-align: center;
+  font-size: clamp(12px, 0.833vw, 16px);
+  font-weight: 400;
+  color: #05141f;
+  letter-spacing: -0.32px;
+}
+/* Space Wonders 테마일 때 KV 타이틀 텍스트 색상을 하얀색으로 변경 */
+[data-product='natgeo'] .kv-slide[data-theme='02'] .kv-contents .kv-title,
+[data-product='natgeo'] .kv-slide[data-theme='02'] .kv-contents .kv-subtitle {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='natgeo'] .kv-slide .kv-image img {
+    aspect-ratio: 36 / 53;
+  }
+
+  [data-product='natgeo'] .kv-contents .kv-contents {
+    top: clamp(40px, 19.444vw, 120px);
+  }
+  [data-product='natgeo'] .kv-contents .kv-logo {
+    width: clamp(86px, 23.888vw, 344px);
+  }
+  [data-product='natgeo'] .kv-contents .kv-title {
+    margin-top: clamp(16px, 8.333vw, 48px);
+    font-size: clamp(18px, 8.333vw, 48px);
+  }
+  [data-product='natgeo'] .kv-contents .kv-subtitle {
+    margin-top: clamp(8px, 3.333vw, 24px);
+    font-size: clamp(12px, 3.889vw, 22px);
+  }
+}
