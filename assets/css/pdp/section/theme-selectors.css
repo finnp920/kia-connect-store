@@ -70,6 +70,7 @@
 @media screen and (max-width: 769px) {
   .theme-selector-wrapper {
     top: 56px;
+    margin-bottom: 8px;
   }
   .theme-selector.buttons {
     display: none;
@@ -88,7 +89,7 @@
     color: #05141f;
     border: 1.4px solid #dedede;
     border-radius: 4px;
-    background-color: white;
+    background-color: #F2F4F6;
     cursor: pointer;
     text-align: left;
     -webkit-tap-highlight-color: transparent;

@@ -147,7 +147,7 @@
   [data-product='natgeo'] .themes-stage::after {
     z-index: 1;
     width: 48px;
-    height: 24px;
+    height: 26px;
     left: calc(50% - 48px / 2);
     bottom: -24px;
     background-image: url('../../../icons/theme-stage-after-mobile.svg');

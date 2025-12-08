@@ -140,9 +140,9 @@ section.screenshots {
     background-size: cover;
   }
   .theme-header-wrapper {
-    padding-top: 134px;
-    margin-bottom: -134px;
-    transform: translateY(-134px);
+    padding-top: 0;
+    margin-bottom: 0;
+    transform: translateY(0);
   }
 
   .themes-preview {

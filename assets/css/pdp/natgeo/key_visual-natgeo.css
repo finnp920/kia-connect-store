@@ -7,7 +7,7 @@
 
 [data-product='natgeo'] .kv-contents {
   position: absolute;
-  top: clamp(20px, 3.125vw, 60px);
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
