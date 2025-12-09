@@ -1,0 +1,20 @@
+/* ========================================
+   The Reasons Why You Can't Miss Out - Starwars
+   ======================================== */
+[data-product='starwars'][data-current-theme='01'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_01.png');
+}
+[data-product='starwars'][data-current-theme='02'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02.png');
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='starwars'][data-current-theme='01']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_01_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='02']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02_mo.png');
+  }
+}

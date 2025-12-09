@@ -13,10 +13,13 @@
 
 [data-product='starwars'][data-current-theme='01']
   .theme-selector.buttons
-  button[data-theme='01']::before,
-[data-product='starwars'][data-current-theme='02']
-  .theme-selector.buttons
-  button[data-theme='02']::before {
+  button[data-theme='01']::before {
   background-color: #3d7ca0;
+  background-image: url(../../../icons/icon_check.svg);
+}
+[data-product='starwars'][data-current-theme='02']
+.theme-selector.buttons
+button[data-theme='02']::before {
+  background-color: #BD1010;
   background-image: url(../../../icons/icon_check.svg);
 }

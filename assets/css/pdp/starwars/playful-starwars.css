@@ -8,259 +8,55 @@
   background-color: #0c0606;
 }
 
-.playful-wrapper {
-  position: relative;
-  width: 100%;
-  padding: 156px 0 151px;
+[data-product='starwars'] .playful-wrapper {
+  padding: 188px 0 231px;
 }
-.playful-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-position: top right;
-  background-repeat: no-repeat;
-  z-index: 0;
-  pointer-events: none;
-  transition: background-image 0.5s ease-in-out;
+[data-product='starwars'] .playful-wrapper::before {
+  background-size: cover;
 }
-[data-current-theme='01'] .playful-wrapper::before {
+[data-product='starwars'][data-current-theme='01'] .playful-wrapper::before {
   background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01.png');
 }
-[data-current-theme='02'] .playful-wrapper::before {
+[data-product='starwars'][data-current-theme='02'] .playful-wrapper::before {
   background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02.png');
 }
 
-.playful-title {
-  font-size: 48px;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: -0.96px;
-  line-height: normal;
-  align-self: center;
-  position: relative;
-  padding-bottom: 28px;
-  margin-bottom: 62px;
-  color: #fff;
+[data-product='starwars'] section.playful .playful-title {
+  color: #ffffff;
 }
 
-.playful-title .view-mo {
+[data-product='starwars'] section.playful .playful-content-item > h3 {
+  color: #ffffff;
+}
+[data-product='starwars']
+  section.playful
+  .playful-content-item
+  > p:not(.warning) {
+  color: #ffffff;
+}
+
+[data-product='starwars'] section.playful p[data-theme] {
   display: none;
 }
 
-.section-playful-inner {
-  position: relative;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 64px;
-}
-
-.playful-videos-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  align-self: center;
-  margin-top: 0;
-}
-.playful-video-player {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: pointer;
-  transition: height 250ms ease-in-out;
-  background-color: black;
-  -webkit-user-drag: none;
-  user-select: none;
-  display: none;
-}
-[data-current-theme='01'] .playful-video-player[data-theme='01'],
-[data-current-theme='02'] .playful-video-player[data-theme='02'],
-[data-current-theme='03'] .playful-video-player[data-theme='03'] {
+[data-product='starwars'][data-current-theme='01']
+  section.playful
+  p[data-theme='01'],
+[data-product='starwars'][data-current-theme='02']
+  section.playful
+  p[data-theme='02'] {
   display: block;
-}
-
-.playful-text-block {
-  width: 100%;
-  max-width: 780px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  color: #ffffff;
-  align-self: flex-start;
-  z-index: 10;
-}
-.playful-text-block h3 {
-  font-size: 24px;
-  font-weight: 600;
-}
-.playful-text-block p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.playful-feature {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.playful-feature img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  border: 2px solid #3b3b3b;
-
-  -webkit-user-drag: none;
-  user-select: none;
-}
-[data-current-theme='01'] .playful-feature img[data-theme='01'],
-[data-current-theme='02'] .playful-feature img[data-theme='02'],
-[data-current-theme='03'] .playful-feature img[data-theme='03'] {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-  transform: scale(1);
-  transition-delay: 0s; /* visibility delay 제거 */
-}
-
-.feature-text {
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-}
-.feature-text h3 {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: normal;
-}
-.feature-text p {
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
-}
-.feature-text p.feature-note {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #acacac;
-  letter-spacing: -0.32px;
-}
-
-.playful-feature.navigation .feature-text p,
-.playful-feature.homecard .feature-text p {
-  display: none;
-}
-[data-current-theme='01'] .playful-feature.navigation p[data-theme='01'],
-[data-current-theme='02'] .playful-feature.navigation p[data-theme='02'],
-[data-current-theme='03'] .playful-feature.navigation p[data-theme='03'],
-[data-current-theme='01'] .playful-feature.homecard p[data-theme='01'],
-[data-current-theme='02'] .playful-feature.homecard p[data-theme='02'],
-[data-current-theme='03'] .playful-feature.homecard p[data-theme='03'] {
-  display: block;
-}
-
-@media screen and (min-width: 1920px) {
-  .playful-wrapper::before {
-    background-size: cover;
-  }
-}
-
-@media screen and (max-width: 1240px) {
-  .playful-video-grid {
-    gap: calc(100% * 164 / 1200);
-  }
-  .playful-video-item {
-    padding: 1.75cqw 2cqw 2cqw;
-  }
 }
 
 @media screen and (max-width: 769px) {
-  .playful-wrapper {
-    padding: 40px 0 50px;
+  [data-product='starwars'][data-current-theme='01']
+    section.playful
+    .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01_mo.png');
   }
-  .playful-wrapper::before {
-    background-position: center top;
-    background-size: cover;
-  }
-  [data-current-theme='01'] .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bc_disc_bg_mo.png');
-  }
-  [data-current-theme='02'] .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_sw_disc_bg_mo.png');
-  }
-  [data-current-theme='03'] .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_ls_disc_bg_mo.png');
-  }
-
-  .playful-title {
-    padding-bottom: 19px;
-    font-size: 30px;
-    letter-spacing: -0.6px;
-    line-height: normal;
-    margin-bottom: 40px;
-  }
-  .playful-title::after {
-    width: 35px;
-    height: 3px;
-  }
-  .playful-title .view-mo {
-    display: inline;
-  }
-
-  .section-playful-inner {
-    gap: 40px;
-  }
-
-  .playful-videos-wrapper {
-    gap: 8px;
-  }
-  .playful-text-block {
-    margin-top: 8px;
-    gap: 2px;
-  }
-  .playful-text-block h3 {
-    font-size: 18px;
-  }
-  .playful-text-block p {
-    font-size: 14px;
-  }
-
-  .playful-feature {
-    gap: 16px;
-  }
-  .playful-feature img {
-    border-radius: 4px;
-  }
-  .feature-text h3 {
-    font-size: 18px;
-  }
-  .feature-text p {
-    margin-top: 2px;
-    font-size: 14px;
-  }
-  .feature-text p.feature-note {
-    margin-top: 2px;
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 649px) {
-  .playful-wrapper {
-    padding-top: 72px;
-  }
-  .playful-title {
-    margin-bottom: 60px;
+  [data-product='starwars'][data-current-theme='02']
+    section.playful
+    .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02_mo.png');
   }
 }

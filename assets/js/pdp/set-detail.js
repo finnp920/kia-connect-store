@@ -5,8 +5,11 @@
 // Global State
 // ----------------------------------------
 // html
-const themeList = _themeList || ['01', '02', '03', '04', '05'];
-let currentTheme = _currentTheme || '01';
+const themeList =
+  typeof _themeList !== 'undefined'
+    ? _themeList
+    : ['01', '02', '03', '04', '05'];
+let currentTheme = typeof _currentTheme !== 'undefined' ? _currentTheme : '01';
 let thumbnail_swiper = null;
 let kv_swiper = null;
 
