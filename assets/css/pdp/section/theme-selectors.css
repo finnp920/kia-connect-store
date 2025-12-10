@@ -2,23 +2,23 @@
    Theme Selectors
    ======================================== */
 /* 트랙 내부 레이아웃 */
-.theme-selector-wrapper {
+[data-product] .theme-selector-wrapper {
   position: sticky;
   top: 59px;
   width: 100%;
   z-index: 3;
 }
-.theme-selector-wrapper.is-sticky {
+[data-product] .theme-selector-wrapper.is-sticky {
   backdrop-filter: blur(3px);
 }
-.theme-selector {
+[data-product] .theme-selector {
   max-width: 1634px;
   margin: 0 auto;
   padding: 16px 20px;
 }
 
 /* PC용 buttons*/
-.theme-selector.buttons {
+[data-product] .theme-selector.buttons {
   width: 100%;
   display: flex;
   justify-content: start;
@@ -27,7 +27,7 @@
   gap: 12px;
   -webkit-tap-highlight-color: transparent;
 }
-.theme-selector.buttons button {
+[data-product] .theme-selector.buttons button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,7 @@
       transform 0.3s ease,
       background-color 0.3s ease;
 }
-.theme-selector.buttons button::before {
+[data-product] .theme-selector.buttons button::before {
   flex: none;
   content: '';
   display: block;
@@ -58,25 +58,25 @@
 }
 
 /* MO용 dropdown */
-.theme-selector.dropdown {
+[data-product] .theme-selector.dropdown {
   display: none;
   top: 59px;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-width: 769px) {
-  .theme-selector-wrapper {
+  [data-product] .theme-selector-wrapper {
     top: 56px;
     margin-bottom: 8px;
   }
-  .theme-selector.buttons {
+  [data-product] .theme-selector.buttons {
     display: none;
   }
-  .theme-selector.dropdown {
+  [data-product] .theme-selector.dropdown {
     display: block;
     pointer-events: auto;
   }
-  .theme-selector.dropdown .theme-text {
+  [data-product] .theme-selector.dropdown .theme-text {
     position: relative;
     width: 100%;
     padding: 14px 48px 14px 18px;
@@ -91,7 +91,7 @@
     text-align: left;
     -webkit-tap-highlight-color: transparent;
   }
-  .theme-selector.dropdown .theme-text::before {
+  [data-product] .theme-selector.dropdown .theme-text::before {
     content: '';
     display: block;
     position: absolute;
@@ -109,10 +109,10 @@
     transition: transform 0.3s;
     pointer-events: none;
   }
-  .theme-selector.dropdown .theme-text:focus {
+  [data-product] .theme-selector.dropdown .theme-text:focus {
     outline: none;
   }
-  .theme-selector.dropdown .theme-list {
+  [data-product] .theme-selector.dropdown .theme-list {
     position: absolute;
     top: calc(100% - 17px);
     left: 20px;
@@ -125,12 +125,12 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .theme-selector.dropdown.active .theme-list {
+  [data-product] .theme-selector.dropdown.active .theme-list {
     max-height: 300px;
     border: 1.4px solid #dedede;
     background-color: #f2f4f6;
   }
-  .theme-selector.dropdown .theme-list li {
+  [data-product] .theme-selector.dropdown .theme-list li {
     padding: 12px 18px;
     font-size: 14px;
     color: #05141f;
@@ -138,16 +138,16 @@
     background-color: #f2f4f6;
     -webkit-tap-highlight-color: transparent;
   }
-  .theme-selector.dropdown .theme-list li:first-child {
+  [data-product] .theme-selector.dropdown .theme-list li:first-child {
     border-radius: 4px 4px 0 0;
     border-top: none;
   }
 
-  .theme-selector.dropdown .theme-list li:last-child {
+  [data-product] .theme-selector.dropdown .theme-list li:last-child {
     border-radius: 0 0 4px 4px;
   }
 
-  .theme-selector.dropdown .theme-list li:hover {
+  [data-product] .theme-selector.dropdown .theme-list li:hover {
     background-color: #e8e8e8;
   }
 }

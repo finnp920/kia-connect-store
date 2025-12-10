@@ -1,31 +1,31 @@
 /* ========================================
    Info
    ======================================== */
-section.info {
+[data-product] section.info {
   position: relative;
   padding: 100px 0;
 }
-section.info .view-pc {
+[data-product] section.info .view-pc {
   display: block;
 }
-section.info .view-mo {
+[data-product] section.info .view-mo {
   display: none;
 }
 
-section.info .section-inner {
+[data-product] section.info .section-inner {
   display: flex;
   flex-direction: row;
   gap: 70px;
 }
 
-.info-item {
+[data-product] .info-item {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   flex: 1;
 }
 
-.info-icon {
+[data-product] .info-icon {
   flex-shrink: 0;
   width: 100px;
   height: 100px;
@@ -33,20 +33,20 @@ section.info .section-inner {
   user-select: none;
 }
 
-.info-icon img {
+[data-product] .info-icon img {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.info-text {
+[data-product] .info-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.info-title {
+[data-product] .info-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -55,42 +55,42 @@ section.info .section-inner {
   margin: 0;
 }
 
-.info-description {
+[data-product] .info-description {
   font-size: 14px;
   line-height: 22px;
   color: #000;
 }
 
 @media screen and (max-width: 769px) {
-  section.info {
+  [data-product] section.info {
     padding: 60px 0;
   }
-  section.info .section-inner {
+  [data-product] section.info .section-inner {
     flex-direction: column;
     gap: 60px;
     max-width: none;
   }
-  .info-item {
+  [data-product] .info-item {
     gap: 15px;
   }
-  .info-icon {
+  [data-product] .info-icon {
     width: 75px;
     height: 75px;
   }
-  .info-text {
+  [data-product] .info-text {
     gap: 15px;
   }
-  .info-title {
+  [data-product] .info-title {
     font-size: 20px;
     line-height: 28px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  section.info .view-pc {
+  [data-product] section.info .view-pc {
     display: none;
   }
-  section.info .view-mo {
+  [data-product] section.info .view-mo {
     display: block;
   }
 }

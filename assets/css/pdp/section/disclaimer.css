@@ -1,27 +1,27 @@
 /* ========================================
-   Section > Disclaimer
+   Disclaimer
    ======================================== */
-section.disclaimer {
+[data-product] section.disclaimer {
   position: relative;
   background-color: #ffffff;
   border-top: 1px solid #dedede;
   padding: 100px 0;
 }
 
-section.disclaimer .section-inner {
+[data-product] section.disclaimer .section-inner {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.disclaimer-title {
+[data-product] .disclaimer-title {
   margin: 0;
   font-size: 30px;
   font-weight: 600;
   color: #000000;
 }
 
-ul.disclaimer-list {
+[data-product] ul.disclaimer-list {
   display: flex;
   flex-direction: column;
   border-top: 1px solid #dedede;
@@ -29,20 +29,20 @@ ul.disclaimer-list {
   list-style: none;
 }
 
-ul.disclaimer-list > li {
+[data-product] ul.disclaimer-list > li {
   display: flex;
   gap: 4px;
   justify-content: start;
   align-items: center;
 }
 
-ul.disclaimer-list > li::before {
+[data-product] ul.disclaimer-list > li::before {
   content: '∙';
   font-size: 20px;
   color: #676767;
 }
 
-.disclaimer-text {
+[data-product] .disclaimer-text {
   flex: 1;
   line-height: 24px;
   font-weight: 400;
@@ -50,29 +50,27 @@ ul.disclaimer-list > li::before {
   color: #676767;
 }
 
-/* Medium Mobile Styles (<= 769px) */
 @media screen and (max-width: 769px) {
-  /*  TODO 모바일 디자인 대응 */
-  section.disclaimer {
+  [data-product] section.disclaimer {
     padding: 60px 0;
   }
-  section.disclaimer .section-inner {
+  [data-product] section.disclaimer .section-inner {
     gap: 30px;
   }
-  .disclaimer-title {
+  [data-product] .disclaimer-title {
     font-size: 25px;
     line-height: 1;
   }
-  ul.disclaimer-list {
+  [data-product] ul.disclaimer-list {
     padding: 20px 0 0 0;
   }
-  .disclaimer-text {
+  [data-product] .disclaimer-text {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 480px) { 
-  .disclaimer-title {
+@media screen and (max-width: 480px) {
+  [data-product] .disclaimer-title {
     font-size: 20px;
   }
 }

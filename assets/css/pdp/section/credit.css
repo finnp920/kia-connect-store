@@ -1,21 +1,21 @@
 /* ========================================
    Credit
    ======================================== */
-section.credit {
+[data-product] section.credit {
   position: relative;
   background-color: black;
   color: #ffffff;
   padding: 100px 0;
 }
 
-.section-credit-inner {
+[data-product] .section-credit-inner {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* Header */
-.credit-header {
+[data-product] .credit-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@ section.credit {
   margin-bottom: 60px;
 }
 
-.credit-title {
+[data-product] .credit-title {
   position: relative;
   padding-bottom: 28px;
   font-size: 48px;
@@ -33,7 +33,7 @@ section.credit {
   letter-spacing: -0.96px;
   color: #ffffff;
 }
-.credit-title::after {
+[data-product] .credit-title::after {
   content: '';
   display: block;
   position: absolute;
@@ -47,7 +47,7 @@ section.credit {
 }
 
 /* Credit Content */
-.credit-content {
+[data-product] .credit-content {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -57,53 +57,53 @@ section.credit {
   margin: 0 auto;
 }
 
-.credit-text {
+[data-product] .credit-text {
   display: block;
   font-size: 14px;
   line-height: 1.4;
   color: #dedede;
   margin: 0;
 }
-[data-current-theme='01'] .credit-text[data-theme='01'],
-[data-current-theme='02'] .credit-text[data-theme='02'],
-[data-current-theme='03'] .credit-text[data-theme='03']{
+[data-product][data-current-theme='01'] .credit-text[data-theme='01'],
+[data-product][data-current-theme='02'] .credit-text[data-theme='02'],
+[data-product][data-current-theme='03'] .credit-text[data-theme='03']{
   display: block;
 }
-.credit-text strong {
+[data-product] .credit-text strong {
   color: #ffffff;
   font-weight: 700;
 }
-.credit-text .view-pc {
+[data-product] .credit-text .view-pc {
   display: inline;
 }
-.credit-text .view-mo {
+[data-product] .credit-text .view-mo {
   display: none;
 }
 
 @media screen and (max-width: 769px) {
-  .section-credit {
+  [data-product] .section-credit {
     padding: 60px 0 80px;
   }
-  .credit-header {
+  [data-product] .credit-header {
     margin-bottom: 32px;
   }
-  .credit-title {
+  [data-product] .credit-title {
     padding-bottom: 23px;
     font-size: 24px;
     line-height: normal;
     letter-spacing: -0.48px;
   }
-  .credit-title::after {
+  [data-product] .credit-title::after {
     width: 35px;
     height: 3px;
   }
-  .credit-text {
+  [data-product] .credit-text {
     font-size: 12px;
   }
-  .credit-text .view-pc {
+  [data-product] .credit-text .view-pc {
     display: none;
   }
-  .credit-text .view-mo {
+  [data-product] .credit-text .view-mo {
     display: inline;
   }
 }
