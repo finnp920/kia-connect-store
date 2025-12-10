@@ -1,11 +1,22 @@
 /* ========================================
    The Reasons Why You Can't Miss Out - Starwars
    ======================================== */
+[data-product='starwars'] section.reasons {
+  background-color: #0d0808;
+}
 [data-product='starwars'][data-current-theme='01'] section.reasons {
   background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_01.png');
 }
 [data-product='starwars'][data-current-theme='02'] section.reasons {
   background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02.png');
+}
+
+[data-product] .reason-card:nth-child(1) .reason-title {
+  letter-spacing: -1.8px;
+}
+
+[data-product] .reasons-final-message p {
+  color: #FFF;
 }
 
 @media screen and (max-width: 769px) {
@@ -16,5 +27,13 @@
   [data-product='starwars'][data-current-theme='02']
   section.reasons {
     background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02_mo.png');
+  }
+
+  [data-product] .reason-card:nth-child(1) .reason-title {
+    letter-spacing: -0.36px;
+  }
+
+  [data-product] .reasons-bottom img {
+    width: 124px;
   }
 }

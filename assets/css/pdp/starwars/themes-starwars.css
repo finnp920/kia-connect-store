@@ -5,31 +5,17 @@
   position: relative;
   margin-bottom: 0;
   padding: 66px 0;
-  background-image: url("../../../images/kia/pdp/starwars/details/starwarsth01_cardbg.png");
+  background-image: url("../../../images/kia/pdp/starwars/details/cardbg.png");
   background-size: cover;
 }
 [data-product='starwars'] .themes-stage::after {
-  content: '';
-  position: absolute;
-  width: 101px;
-  height: 52px;
-  left: calc(50% - 101px / 2);
-  bottom: -52px;
-  background-image: url('../../../icons/theme-stage-after.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
+  background-color: #030403;
 }
-[data-product='starwars'] .themes-stage-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 [data-product='starwars'] .themes-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-
   max-width: 999px;
   margin: 0 auto;
   list-style: none;
@@ -106,7 +92,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  padding: 16px 32px 23px 32px;
+  padding: 5.1% 10% 7.5% 10%;
 }
 [data-product='starwars'] .card .card-contents h3 {
   width: 100%;
@@ -114,11 +100,12 @@
   font-size: clamp(20px, 1.5cqw, 24px);
   font-style: normal;
   font-weight: 600;
+  line-height: 1.3;
 }
 [data-product='starwars'] .card .card-contents p {
   width: 100%;
   color: #000;
-  font-size: clamp(14px, 1cqw, 16px);
+  font-size: clamp(13px, 1.2cqw, 16px);
 }
 [data-product='starwars'][data-current-theme='01'] .card[data-theme='01'] .card-contents p,
 [data-product='starwars'][data-current-theme='02'] .card[data-theme='02'] .card-contents p{
@@ -140,9 +127,14 @@
 [data-product='starwars'][data-current-theme='02'] .card.pick .card-contents [data-theme='02']{
   display: block;
 }
+[data-product='starwars'] .card.pick .card-contents picture {
+  width: 89px;
+  height: 25px;
+  aspect-ratio: 89 / 25;
+}
 [data-product='starwars'] .card.pick .card-contents img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 [data-product='starwars'] .card.pick .card-contents h3 {
   text-align: center;
@@ -152,4 +144,67 @@
   margin-top: 8px;
   text-align: center;
   color: #B2B8BD;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='starwars'] .themes-stage {
+    padding: 92px 0;
+    background-image: url("../../../images/kia/pdp/starwars/details/cardbg_mo.png");
+    background-size: cover;
+  }
+
+  [data-product='starwars'] .themes-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 8px;
+  }
+
+  [data-product='starwars'] .card {
+    max-width: 624px;
+    /* 312 × 386 */
+    min-width: 156px;
+    min-height: 193px;
+    aspect-ratio: 312 / 386;
+  }
+  [data-product='starwars'] .card .card-contents {
+    aspect-ratio: 312 / 224;
+    padding: 5.2% 10% 9% 10%;
+  }
+  [data-product='starwars'] .card .card-contents h3 {
+    font-size: clamp(14px, 2.6cqw, 20px);
+  }
+  [data-product='starwars'] .card .card-contents p {
+    font-size: clamp(10px, 1.8cqw, 16px);
+    letter-spacing: -0.2px;
+  }
+
+  [data-product='starwars'] .card.pick {
+    grid-column: 1 / span 2;  /* 두 컬럼 전체 차지 */
+    justify-self: center;     /* 가운데 정렬 */
+    max-width: 632px;
+    min-height: auto;
+    /* 640 × 293 */
+    aspect-ratio: 640 / 293;
+  }
+  [data-product='starwars'] .card.pick .card-contents picture {
+    aspect-ratio: 89 / 25;
+    width: 44.5px;
+    height: 12.5px;
+  }
+  [data-product='starwars'] .card.pick .card-contents {
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  [data-product='starwars'] .card.pick .card-contents h3 {
+    margin-top: 4px;
+  }
+  [data-product='starwars'] .card.pick .card-contents p {
+    margin-top: 0;
+  }
 }

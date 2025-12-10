@@ -355,7 +355,7 @@
     <!--//header-->
 
     <!--//sticky-->
-    <div class="infoSticky">
+    <div class="infoSticky" id="info-sticky">
       <div class="infoStickyInner">
         <div class="stickyLeft">
           <p>
@@ -369,7 +369,7 @@
           </dl>
         </div>
       </div>
-    </div>
+    </div >
     <!--//sticky-->
 
     <!--//content-warp-->
@@ -521,7 +521,7 @@
     <!--//content-warp-->
 
     <!--에디터 영역-->
-    <main data-current-theme="01" data-product="starwars">
+    <main data-current-theme="01" data-product="starwars" data-theme-list='["01", "02"]'>
       <!-- KV (Key Visual) START -->
       <section class="kv">
         <div class="swiper kv-swiper">
@@ -531,7 +531,7 @@
                 <source
                   media="(max-width: 769px)"
                   srcset="
-                    ../assets/images/kia/pdp/starwars/details/img_bc_hero_mo.png
+                    ../assets/images/kia/pdp/starwars/details/starwarsth01_hero_mo.png
                   "
                 />
                 <img
@@ -554,7 +554,7 @@
                 <source
                   media="(max-width: 769px)"
                   srcset="
-                    ../assets/images/kia/pdp/starwars/details/img_sw_hero_mo.png
+                    ../assets/images/kia/pdp/starwars/details/starwarsth02_hero_mo.png
                   "
                 />
                 <img
@@ -678,32 +678,34 @@
                   />
                 </picture>
                 <div class="card-contents">
-                  <picture data-theme="01">
-                  <source
-                    media="(max-width: 769px)"
-                    srcset="
+                  <div>
+                    <picture data-theme="01">
+                      <source
+                        media="(max-width: 769px)"
+                        srcset="
                     ../assets/images/kia/pdp/starwars/details/card_03_gauge01.png
                   "
-                  />
-                  <img
-                    alt="Progress icon"
-                    src="../assets/images/kia/pdp/starwars/details/card_03_gauge01_mo.png"
-                  />
-                  </picture>
-                  <picture data-theme="02">
-                    <source
-                      media="(max-width: 769px)"
-                      srcset="
+                      />
+                      <img
+                        alt="Progress icon"
+                        src="../assets/images/kia/pdp/starwars/details/card_03_gauge01_mo.png"
+                      />
+                    </picture>
+                    <picture data-theme="02">
+                      <source
+                        media="(max-width: 769px)"
+                        srcset="
                     ../assets/images/kia/pdp/starwars/details/card_03_gauge02.png
                   "
-                    />
-                    <img
-                      alt="Progress icon"
-                      src="../assets/images/kia/pdp/starwars/details/card_03_gauge02_mo.png"
-                    />
-                  </picture>
+                      />
+                      <img
+                        alt="Progress icon"
+                        src="../assets/images/kia/pdp/starwars/details/card_03_gauge02_mo.png"
+                      />
+                    </picture>
+                  </div>
                   <h3>Stay Tuned!</h3>
-                  <p>This is just<br />the beginning.</p>
+                  <p>This is just <br class="view-pc" />the beginning.</p>
                 </div>
               </li>
             </ul>
@@ -940,7 +942,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/baby-animals/cluster_welcome.mp4"
+                        src="../assets/videos/pdp/starwars/01/avnt_welcome.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -954,7 +956,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/baby-animals/avnt_welcome.mp4"
+                        src="../assets/videos/pdp/starwars/01/cluster_welcome.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -968,7 +970,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/space-wonders/cluster_welcome.mp4"
+                        src="../assets/videos/pdp/starwars/02/avnt_welcome.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -982,7 +984,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/space-wonders/avnt_welcome.mp4"
+                        src="../assets/videos/pdp/starwars/02/cluster_welcome.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -998,7 +1000,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/baby-animals/cluster_goodbye.mp4"
+                        src="../assets/videos/pdp/starwars/01/avnt_goodbye.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -1012,7 +1014,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/baby-animals/avnt_goodbye.mp4"
+                        src="../assets/videos/pdp/starwars/01/cluster_goodbye.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -1026,7 +1028,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/space-wonders/cluster_goodbye.mp4"
+                        src="../assets/videos/pdp/starwars/02/avnt_goodbye.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -1040,7 +1042,7 @@
                       preload="metadata"
                     >
                       <source
-                        src="../assets/videos/pdp/starwars/space-wonders/avnt_goodbye.mp4"
+                        src="../assets/videos/pdp/starwars/02/cluster_goodbye.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -1337,13 +1339,11 @@
                   src="../assets/images/kia/pdp/starwars/details/reasons-logo.png"
                 />
               </div>
-              <div class="reasons-final-message">
-                <p>
+              <p class="reasons-final-message">
                   Experience inspiring drives<br />
                   with the National Geographic <br class="view-mo" />
                   Display Themes
-                </p>
-              </div>
+              </p>
             </div>
 
             <!-- Copyright -->
@@ -1943,11 +1943,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js?v2" type="text/javascript"></script>
-    <script>
-      AOS.init();
-      const _themeList = ['01', '02'];
-      const _currentTheme = '01';
-    </script>
     <script src="../assets/js/pdp/youtube.js"></script>
     <script src="../assets/js/pdp/set-detail.js"></script>
   </body>

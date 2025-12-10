@@ -27,9 +27,6 @@
   background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bg_ls_02.png');
 }
 
-[data-product='natgeo'] section.playful .playful-title {
-  color: #fff;
-}
 [data-product='natgeo'] section.playful .playful-title::after {
   content: '';
   display: block;
@@ -44,61 +41,7 @@
 }
 
 [data-product='natgeo'] section.playful .playful-content-item > h3 {
-  color: #ffffff;
   margin-bottom: 12px;
-}
-[data-product='natgeo']
-  section.playful
-  .playful-content-item
-  > p:not(.warning) {
-  color: #ffffff;
-}
-
-[data-product='natgeo'] section.playful .navigation p,
-[data-product='natgeo'] section.playful .homecard p {
-  display: none;
-}
-
-[data-product='natgeo'][data-current-theme='01']
-  section.playful
-  .navigation
-  p[data-theme='01'],
-[data-product='natgeo'][data-current-theme='02']
-  section.playful
-  .navigation
-  p[data-theme='02'],
-[data-product='natgeo'][data-current-theme='03']
-  section.playful
-  .navigation
-  p[data-theme='03'],
-[data-product='natgeo'][data-current-theme='01']
-  section.playful
-  .homecard
-  p[data-theme='01'],
-[data-product='natgeo'][data-current-theme='02']
-  section.playful
-  .homecard
-  p[data-theme='02'],
-[data-product='natgeo'][data-current-theme='03']
-  section.playful
-  .homecard
-  p[data-theme='03'] {
-  display: block;
-}
-
-@media screen and (min-width: 1920px) {
-  .playful-wrapper::before {
-    background-size: cover;
-  }
-}
-
-@media screen and (max-width: 1240px) {
-  .playful-video-grid {
-    gap: calc(100% * 164 / 1200);
-  }
-  .playful-video-item {
-    padding: 1.75cqw 2cqw 2cqw;
-  }
 }
 
 @media screen and (max-width: 769px) {

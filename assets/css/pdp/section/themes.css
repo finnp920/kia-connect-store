@@ -37,6 +37,43 @@
   letter-spacing: -0.32px;
 }
 
+[data-product] .themes-stage {
+  position: relative;
+  margin-bottom: 0;
+  padding: 66px 0;
+  background-size: cover;
+}
+[data-product] .themes-stage::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 44px;
+  left: calc(50% - 100px / 2);
+  bottom: -43px;
+
+  /* 1. 배경색이 곧 아이콘의 색상이 됨 (fill 역할) */
+  background-color: #111111;
+
+  /* 2. SVG를 마스크로 사용하여 모양을 따냄 */
+  -webkit-mask-image: url('../../../icons/theme-stage-after.svg');
+  mask-image: url('../../../icons/theme-stage-after.svg');
+
+  /* 3. 마스크 반복 및 위치 설정 (background랑 똑같음) */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+[data-product] .themes-stage-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 [data-product] .card {
   overflow: hidden;
   cursor: pointer;
@@ -86,5 +123,23 @@
     letter-spacing: -0.28px;
     font-size: 14px;
     color: #000;
+  }
+
+  [data-product] .themes-stage {
+    padding: 50px 0;
+    border-width: 4px;
+  }
+  [data-product] .themes-stage::after {
+    width: 48px;
+    height: 26px;
+    left: calc(50% - 48px / 2);
+    bottom: -23px;
+
+    -webkit-mask-image: url('../../../icons/theme-stage-after-mobile.svg');
+    mask-image: url('../../../icons/theme-stage-after-mobile.svg');
+  }
+
+  [data-product] .themes-stage-inner {
+    width: fit-content;
   }
 }

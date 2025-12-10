@@ -5,24 +5,21 @@
 .theme-selector-wrapper {
   position: sticky;
   top: 59px;
-
   width: 100%;
   z-index: 3;
-  margin: 0 auto;
-  padding: 16px 20px;
 }
 .theme-selector-wrapper.is-sticky {
   backdrop-filter: blur(3px);
 }
 .theme-selector {
-  max-width: 1240px;
+  max-width: 1634px;
   margin: 0 auto;
+  padding: 16px 20px;
 }
 
 /* PC용 buttons*/
 .theme-selector.buttons {
   width: 100%;
-  max-width: 1634px;
   display: flex;
   justify-content: start;
   align-items: center;

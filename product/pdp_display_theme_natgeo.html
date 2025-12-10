@@ -355,7 +355,7 @@
     <!--//header-->
 
     <!--//sticky-->
-    <div class="infoSticky">
+    <div class="infoSticky" id="info-sticky">
       <div class="infoStickyInner">
         <div class="stickyLeft">
           <p>
@@ -528,7 +528,7 @@
     <!--//content-warp-->
 
     <!--에디터 영역-->
-    <main data-current-theme="01" data-product="natgeo">
+    <main data-current-theme="01" data-product="natgeo"  data-theme-list='["01", "02", "03"]'>
       <!-- KV (Key Visual) START -->
       <section class="kv">
         <div class="swiper kv-swiper">
@@ -1493,13 +1493,11 @@
                   src="../assets/images/kia/pdp/natgeo/details/kv-banner-reasons-3.png"
                 />
               </div>
-              <div class="reasons-final-message">
-                <p>
+              <p class="reasons-final-message">
                   Experience inspiring drives<br />
                   with the National Geographic <br class="view-mo" />
                   Display Themes
-                </p>
-              </div>
+              </p>
             </div>
 
             <!-- Copyright -->
@@ -2244,11 +2242,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="../assets/js/common.js?v2" type="text/javascript"></script>
-    <script>
-      AOS.init();
-      const _themeList = ['01', '02', '03'];
-      const _currentTheme = '01';
-    </script>
     <script src="../assets/js/pdp/youtube.js"></script>
     <script src="../assets/js/pdp/set-detail.js"></script>
   </body>

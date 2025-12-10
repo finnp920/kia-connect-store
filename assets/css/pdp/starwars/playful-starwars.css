@@ -8,9 +8,6 @@
   background-color: #0c0606;
 }
 
-[data-product='starwars'] .playful-wrapper {
-  padding: 188px 0 231px;
-}
 [data-product='starwars'] .playful-wrapper::before {
   background-size: cover;
 }
@@ -19,33 +16,6 @@
 }
 [data-product='starwars'][data-current-theme='02'] .playful-wrapper::before {
   background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02.png');
-}
-
-[data-product='starwars'] section.playful .playful-title {
-  color: #ffffff;
-}
-
-[data-product='starwars'] section.playful .playful-content-item > h3 {
-  color: #ffffff;
-}
-[data-product='starwars']
-  section.playful
-  .playful-content-item
-  > p:not(.warning) {
-  color: #ffffff;
-}
-
-[data-product='starwars'] section.playful p[data-theme] {
-  display: none;
-}
-
-[data-product='starwars'][data-current-theme='01']
-  section.playful
-  p[data-theme='01'],
-[data-product='starwars'][data-current-theme='02']
-  section.playful
-  p[data-theme='02'] {
-  display: block;
 }
 
 @media screen and (max-width: 769px) {

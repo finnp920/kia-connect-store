@@ -14,9 +14,17 @@
   background-color: #ffcc00;
 }
 
+[data-product='natgeo'] .reasons-copyright {
+  margin-top: 76px;
+}
+
 @media screen and (max-width: 769px) {
   [data-product='natgeo'] section.reasons .reasons-title::after {
     width: 35px;
     height: 3px;
+  }
+
+  [data-product='natgeo'] .reasons-copyright {
+    margin-top: 50px;
   }
 }

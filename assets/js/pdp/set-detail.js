@@ -4,25 +4,45 @@
 // ----------------------------------------
 // Global State
 // ----------------------------------------
-// html
-const themeList =
-  typeof _themeList !== 'undefined'
-    ? _themeList
-    : ['01', '02', '03', '04', '05'];
-let currentTheme = typeof _currentTheme !== 'undefined' ? _currentTheme : '01';
+let themeList = [];
+let currentTheme = '01';
 let thumbnail_swiper = null;
 let kv_swiper = null;
 
 // ----------------------------------------
 // Initialization
 // ----------------------------------------
+function initThemeDetailElements() {
+  const mainElement = document.querySelector('main');
+  // dataset 값 가져오기
+  if (mainElement) {
+    // (1) Theme List 가져오기 (JSON 문자열 -> 배열 변환)
+    const themeListAttr = mainElement.dataset.themeList;
+    if (themeListAttr) {
+      try {
+        // JSON.parse를 사용하여 문자열을 진짜 배열로 변환
+        themeList = JSON.parse(themeListAttr);
+      } catch (e) {
+        console.warn('HTML data-theme-list 파싱 실패. 기본값을 사용합니다.', e);
+      }
+    }
+
+    // (2) Current Theme 가져오기
+    const currentThemeAttr = mainElement.dataset.currentTheme;
+    if (currentThemeAttr) {
+      currentTheme = currentThemeAttr;
+    }
+  }
+
+  const urlTheme = getQueryParam('theme');
+  setDetailCurrentTheme(urlTheme);
+
+  setDetailEventListeners();
+  initDetailSwiper();
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const urlTheme = getQueryParam('theme');
-    setDetailCurrentTheme(urlTheme);
-    setDetailEventListeners();
-    initDetailSwiper();
-  } catch (e) {}
+  initThemeDetailElements();
 });
 
 function setDetailCurrentTheme(newTheme) {
@@ -42,31 +62,6 @@ function setDetailCurrentTheme(newTheme) {
 // Event Binding
 // ----------------------------------------
 function setDetailEventListeners() {
-  // 상품 옵션 클릭 시
-  const optionItems = document.querySelectorAll('.option-item');
-  optionItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      // disabled 일 때
-      if (item.classList.contains('disabled')) {
-        e.preventDefault(); // 태그가 a나 button일 경우 기본 동작 차단
-        alert('로그인이 필요한 서비스입니다.');
-        return;
-      }
-
-      // disabled 아닐 때
-      // 기존 선택 해제
-      const prevSelected = document.querySelector('.option-item.selected');
-      if (prevSelected) {
-        prevSelected.classList.remove('selected');
-        prevSelected.setAttribute('aria-selected', 'false');
-      }
-
-      // 신규 선택
-      item.classList.add('selected');
-      item.setAttribute('aria-selected', 'true');
-    });
-  });
-
   // 테마 카드 클릭 시 테마 변경
   const themeCardGridEl = document.querySelectorAll('.themes-cards-grid');
   if (
@@ -224,7 +219,10 @@ function scrollToSelector(selector) {
   const el = document.querySelector(selector);
 
   if (el) {
-    const infoStickyEl = document.querySelector('#info-sticky');
+    let infoStickyEl = document.querySelector('#info-sticky');
+    if (!infoStickyEl) {
+      infoStickyEl = document.querySelector('.infoSticky');
+    }
     const offset = infoStickyEl?.clientHeight || 0;
 
     // 요소의 top 위치로 smooth 스크롤

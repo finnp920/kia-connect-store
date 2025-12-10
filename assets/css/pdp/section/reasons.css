@@ -1,20 +1,20 @@
 /* ========================================
    The Reasons Why You Can't Miss Out
    ======================================== */
-section.reasons {
+[data-product] section.reasons {
   position: relative;
   background-color: #272727;
   color: #ffffff;
-  padding: 150px 0 40px;
+  padding: 150px 0 60px;
 }
-section.reasons .view-pc {
+[data-product] section.reasons .view-pc {
   display: block;
 }
-section.reasons .view-mo {
+[data-product] section.reasons .view-mo {
   display: none;
 }
 
-.section-reasons-inner {
+[data-product] .section-reasons-inner {
   position: relative;
   max-width: 1240px;
   margin: 0 auto;
@@ -22,14 +22,14 @@ section.reasons .view-mo {
 }
 
 /* Header */
-.reasons-header {
+[data-product] .reasons-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 121px;
 }
 
-.reasons-title {
+[data-product] .reasons-title {
   position: relative;
   padding-bottom: 28px;
   font-size: 48px;
@@ -41,14 +41,13 @@ section.reasons .view-mo {
 }
 
 /* Feature Cards */
-.reasons-cards {
+[data-product] .reasons-cards {
   display: flex;
   flex-direction: column;
   gap: 80px;
   margin-bottom: 118px;
 }
-
-.reason-card {
+[data-product] .reason-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,37 +56,45 @@ section.reasons .view-mo {
   margin: 0 auto;
 }
 
-.reason-card-left {
+[data-product] .reason-card-left {
   flex-direction: row;
 }
 
-.reason-card-left .reason-content {
+[data-product] .reason-card-left .reason-content {
   order: 2;
 }
 
-.reason-card-left .reason-image {
+[data-product] .reason-card-left .reason-image {
   order: 1;
 }
 
 /* 카드 2, 4번: 좌측 텍스트 + 우측 이미지 */
-.reason-card:nth-child(2) .reason-content,
-.reason-card:nth-child(4) .reason-content {
+[data-product] .reason-card:nth-child(2) .reason-content,
+[data-product] .reason-card:nth-child(4) .reason-content {
   order: 1;
 }
-
-.reason-card:nth-child(2) .reason-image,
-.reason-card:nth-child(4) .reason-image {
+[data-product] .reason-card:nth-child(2) .reason-image,
+[data-product] .reason-card:nth-child(4) .reason-image {
   order: 2;
 }
 
-.reason-image {
+[data-product] .reason-image {
   flex-shrink: 0;
   width: 570px;
   height: 324px;
   overflow: hidden;
 }
-
-.reason-image img {
+[data-product] .reason-image picture[data-theme] {
+  display: none;
+}
+[data-product][data-current-theme='01'] .reason-image picture[data-theme='01'],
+[data-product][data-current-theme='02'] .reason-image picture[data-theme='02'],
+[data-product][data-current-theme='03'] .reason-image picture[data-theme='03'],
+[data-product][data-current-theme='04'] .reason-image picture[data-theme='04'],
+[data-product][data-current-theme='05'] .reason-image picture[data-theme='05']{
+  display: block;
+}
+[data-product] .reason-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -103,20 +110,19 @@ section.reasons .view-mo {
   user-select: none;
 }
 
-.reason-content {
+[data-product] .reason-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.reason-header {
+[data-product] .reason-header {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
-
-.reason-number {
+[data-product] .reason-number {
   margin-top: 0;
   flex-shrink: 0;
   width: 32px;
@@ -132,16 +138,16 @@ section.reasons .view-mo {
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
 }
-
-.reason-title {
+[data-product] .reason-title {
   font-size: 36px;
   font-weight: 600;
-  line-height: 45px;
+  line-height: 1.25;
   letter-spacing: -0.48px;
   color: #ffffff;
 }
-.reason-description {
-  font-size: 14px;
+
+[data-product] .reason-description {
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.28px;
@@ -150,30 +156,28 @@ section.reasons .view-mo {
 }
 
 /* Bottom Section */
-.reasons-bottom {
+[data-product] .reasons-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 80px;
 }
-.reasons-bottom img {
+[data-product] .reasons-bottom img {
   -webkit-user-drag: none;
   user-select: none;
 }
 
-.reasons-final-message {
+[data-product] .reasons-final-message {
   text-align: center;
-  margin-bottom: 76px;
-}
-
-.reasons-final-message p {
   font-size: 36px;
   font-weight: 600;
   line-height: normal;
   color: #b2b8bd;
   white-space: nowrap;
 }
-.reasons-copyright {
+
+[data-product] .reasons-copyright {
+  margin-top: 142px;
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
@@ -183,133 +187,132 @@ section.reasons .view-mo {
 }
 
 @media screen and (max-width: 1200px) {
-  .section-reasons-inner {
+  [data-product] .section-reasons-inner {
     width: auto;
     padding: 0 20px;
   }
-  .reason-card {
+  [data-product] .reason-card {
     gap: 55px;
   }
-  .reason-image {
+  [data-product] .reason-image {
     width: 480px;
     height: 273px;
   }
 }
 @media screen and (max-width: 1000px) {
-  section.reasons {
+  [data-product] section.reasons {
     padding: 100px 0 80px;
   }
-  .reason-card {
+  [data-product] .reason-card {
     gap: 30px;
   }
-  .reason-title {
+  [data-product] .reason-title {
     font-size: 30px;
   }
-  .reason-card-left .reason-image {
+  [data-product] .reason-card-left .reason-image {
     width: 50%;
     height: fit-content;
   }
-  .reasons-final-message p {
+  [data-product] .reasons-final-message {
     font-size: 26px;
   }
 }
 @media screen and (max-width: 800px) {
-  .section-reasons-inner {
+  [data-product] .section-reasons-inner {
     padding: 0;
   }
-  .reason-card {
+  [data-product] .reason-card {
     flex-direction: column;
     width: 100%;
     padding: 0 20px;
   }
-  .reason-card-left .reason-content {
+  [data-product] .reason-card-left .reason-content {
     order: 1;
     width: 100%;
   }
-  .reason-card-left .reason-image {
+  [data-product] .reason-card-left .reason-image {
     order: 2;
     width: 100%;
     height: fit-content;
   }
-  .reason-card:nth-child(4) {
+  [data-product] .reason-card:nth-child(4) {
     align-items: end;
     padding: 0;
   }
-  .reason-card:nth-child(4) .reason-content {
+  [data-product] .reason-card:nth-child(4) .reason-content {
     padding: 0 20px;
   }
-  .reason-card:nth-child(4) .reason-image {
+  [data-product] .reason-card:nth-child(4) .reason-image {
     width: 88%;
     height: fit-content;
   }
 
-  .reasons-bottom {
+  [data-product] .reasons-bottom {
     padding: 0 20px;
   }
 }
 @media screen and (max-width: 769px) {
-  section.reasons {
-    padding: 100px 0 20px;
+  [data-product] section.reasons {
+    padding: 100px 0 52px;
   }
-  section.reasons .view-pc {
+  [data-product] section.reasons .view-pc {
     display: none;
   }
-  section.reasons .view-mo {
+  [data-product] section.reasons .view-mo {
     display: block;
   }
 
-  .reasons-header {
+  [data-product] .reasons-header {
     margin-bottom: 40px;
   }
-  .reasons-title {
+  [data-product] .reasons-title {
     padding-bottom: 19px;
     font-size: 24px;
     letter-spacing: -0.48px;
   }
-  .reason-title {
+  [data-product] .reason-title {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.36px;
   }
-  .reasons-cards {
+  [data-product] .reasons-cards {
     gap: 60px;
     margin-bottom: 40px;
   }
 
-  .reasons-bottom {
+  [data-product] .reasons-bottom {
     gap: 38px;
   }
-  .reasons-final-message {
+  [data-product] .reasons-final-message {
     margin-bottom: 50px;
-  }
-  .reasons-final-message p {
     padding: 0 30px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.36px;
     white-space: normal;
   }
-  .reasons-copyright {
+  [data-product] .reasons-copyright {
+    margin-top: 74px;
     font-size: 10px;
     letter-spacing: -0.2px;
   }
 }
 @media screen and (max-width: 640px) {
-  .reasons-header {
+  [data-product] .reasons-header {
     margin-bottom: 60px;
   }
-  .reason-card {
+  [data-product] .reason-card {
     flex-direction: column;
     width: 100%;
     gap: 20px;
   }
-  .reason-card-left .reason-content {
+  [data-product] .reason-card-left .reason-content {
     gap: 8px;
   }
-  .reason-header {
+  [data-product] .reason-header {
     gap: 12px;
   }
-  .reason-number {
+  [data-product] .reason-header .reason-number {
     width: 24px;
     height: 24px;
     font-size: 16px;
@@ -318,7 +321,7 @@ section.reasons .view-mo {
     margin-top: -1px;
   }
 
-  .reason-description {
+  [data-product] .reason-description {
     padding-left: 36px;
   }
 }
