@@ -27,6 +27,7 @@
   font-size: 48px;
   font-weight: 600;
   letter-spacing: -0.96px;
+  line-height: normal;
 }
 
 [data-product] .themes-header .themes-subtitle {
@@ -74,27 +75,28 @@
   width: fit-content;
 }
 
-
 [data-product] .card {
   overflow: hidden;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transform: translateZ(0);
   transition: transform 0.3s ease;
 }
+[data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick) {
+  cursor: pointer;
+}
 @media (hover: hover) and (pointer: fine) {
-  [data-product] .card:not(.pick):hover {
+  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
     transform: translateY(-4px);
   }
 }
 @media (hover: none), (pointer: coarse) {
   /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
-  [data-product] .card:not(.pick):hover {
+  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
     transform: none;
   }
 
   /* 눌렀을 때 쫀득한 효과 (Active) */
-  [data-product] .card:not(.pick):active {
+  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):active {
     transform: scale(0.98);
     transition: transform 0.1s;
   }
