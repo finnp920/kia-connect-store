@@ -154,6 +154,16 @@
   color: #d0d5db;
   padding-left: 52px;
 }
+[data-product] .reason-description[data-theme] {
+  display: none;
+}
+[data-product][data-current-theme='01'] .reason-description[data-theme='01'],
+[data-product][data-current-theme='02'] .reason-description[data-theme='02'],
+[data-product][data-current-theme='03'] .reason-description[data-theme='03'],
+[data-product][data-current-theme='04'] .reason-description[data-theme='04'],
+[data-product][data-current-theme='05'] .reason-description[data-theme='05']{
+  display: block;
+}
 
 /* Bottom Section */
 [data-product] .reasons-bottom {
@@ -278,6 +288,10 @@
   [data-product] .reasons-cards {
     gap: 60px;
     margin-bottom: 40px;
+  }
+
+  [data-product] .reason-description {
+    font-size: 14px;
   }
 
   [data-product] .reasons-bottom {
