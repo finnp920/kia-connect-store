@@ -1,6 +1,10 @@
 /* ========================================
    The Reasons Why You Can't Miss Out - NatGeo
    ======================================== */
+[data-product='natgeo'] section.reasons {
+  padding: 150px 0 120px;
+}
+
 [data-product='natgeo'] section.reasons .reasons-title::after {
   content: '';
   display: block;
@@ -19,6 +23,10 @@
 }
 
 @media screen and (max-width: 769px) {
+  [data-product='natgeo'] section.reasons {
+    padding: 40px 0;
+  }
+
   [data-product='natgeo'] section.reasons .reasons-title::after {
     width: 35px;
     height: 3px;

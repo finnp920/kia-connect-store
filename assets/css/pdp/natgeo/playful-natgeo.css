@@ -45,6 +45,10 @@
 }
 
 @media screen and (max-width: 769px) {
+  [data-product='natgeo'] .playful-wrapper {
+    padding: 40px 0 50px;
+  }
+
   [data-product='natgeo'][data-current-theme='01']
     section.playful
     .playful-wrapper::before {

@@ -144,6 +144,6 @@ main section .section-inner {
 }
 @media screen and (max-width: 769px) {
   [data-product] .sticky-layout {
-    padding-top: 9px;
+    padding-top: 24px;
   }
 }

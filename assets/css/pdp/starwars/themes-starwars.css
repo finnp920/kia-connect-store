@@ -12,6 +12,10 @@
   background-color: #030403;
 }
 
+[data-product='starwars'] .themes-stage-inner {
+  width: 100%;
+}
+
 [data-product='starwars'] .themes-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -23,8 +27,8 @@
 [data-product='starwars'] .card {
   position: relative;
   width: 100%;
-  max-width: 317px;
-  aspect-ratio: 317 / 351;
+  max-width: 312px;
+  aspect-ratio: 312 / 346;
   isolation: isolate;
   transform: translateZ(0);
   transition: transform 0.3s ease;

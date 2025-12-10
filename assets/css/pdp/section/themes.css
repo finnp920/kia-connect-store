@@ -71,6 +71,7 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+  width: fit-content;
 }
 
 
@@ -137,9 +138,5 @@
 
     -webkit-mask-image: url('../../../icons/theme-stage-after-mobile.svg');
     mask-image: url('../../../icons/theme-stage-after-mobile.svg');
-  }
-
-  [data-product] .themes-stage-inner {
-    width: fit-content;
   }
 }

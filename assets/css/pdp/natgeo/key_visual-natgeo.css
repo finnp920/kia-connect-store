@@ -58,8 +58,8 @@
     width: clamp(86px, 23.888vw, 344px);
   }
   [data-product='natgeo'] .kv-contents .kv-title {
-    margin-top: clamp(16px, 8.333vw, 48px);
-    font-size: clamp(18px, 8.333vw, 48px);
+    margin-top: clamp(16px, 8vw, 48px);
+    font-size: clamp(18px, 8vw, 48px);
   }
   [data-product='natgeo'] .kv-contents .kv-subtitle {
     margin-top: clamp(8px, 3.333vw, 24px);

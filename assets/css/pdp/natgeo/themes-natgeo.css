@@ -2,16 +2,12 @@
    Themes - NatGeo
    ======================================== */
 [data-product='natgeo'] .themes-stage {
-  position: relative;
   padding: 68px 0 79px;
   background: linear-gradient(174deg, #3f3e3e -1.07%, #111 96.73%);
   border-top: 6px solid #ffcc00;
-  margin-bottom: 0;
-  z-index: 1;
 }
 [data-product='natgeo'] .themes-stage::after {
   background-color: #252525;
-  z-index: 1;
 }
 
 [data-product='natgeo'] .themes-cards-grid {

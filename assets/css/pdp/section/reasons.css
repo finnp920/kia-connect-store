@@ -201,7 +201,7 @@
 }
 @media screen and (max-width: 1000px) {
   [data-product] section.reasons {
-    padding: 100px 0 80px;
+    padding: 120px 0 80px;
   }
   [data-product] .reason-card {
     gap: 30px;
@@ -284,7 +284,6 @@
     gap: 38px;
   }
   [data-product] .reasons-final-message {
-    margin-bottom: 50px;
     padding: 0 30px;
     font-size: 18px;
     line-height: 24px;
