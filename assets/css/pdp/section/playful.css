@@ -16,7 +16,7 @@
 [data-product] .playful-wrapper {
   position: relative;
   width: 100%;
-  padding: 188px 0 231px;
+  padding: 188px 0 130px;
 }
 [data-product] .playful-wrapper::before {
   content: '';

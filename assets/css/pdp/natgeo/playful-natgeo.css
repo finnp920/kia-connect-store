@@ -27,6 +27,10 @@
   background-image: url('../../../images/kia/pdp/natgeo/pattern-bg/img_bg_ls_02.png');
 }
 
+[data-product='natgeo'] .playful-wrapper {
+  padding: 156px 0 130px;
+}
+
 [data-product='natgeo'] section.playful .playful-title::after {
   content: '';
   display: block;
