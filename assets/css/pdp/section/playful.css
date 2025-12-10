@@ -150,6 +150,12 @@ p[data-theme='05']{
   color: #ACACAC;
 }
 
+@media screen and (min-width: 1940px) {
+  [data-product] .playful-wrapper::before {
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 769px) {
   [data-product] section.playful .view-pc {
     display: none;

@@ -8,9 +8,6 @@
   background-color: #0c0606;
 }
 
-[data-product='starwars'] .playful-wrapper::before {
-  background-size: cover;
-}
 [data-product='starwars'][data-current-theme='01'] .playful-wrapper::before {
   background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01.png');
 }
