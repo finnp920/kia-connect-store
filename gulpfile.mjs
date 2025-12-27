@@ -75,28 +75,41 @@ function copyCommon() {
 
 // (3) 선택된 테마 리소스 복사
 function copyThemeResources() {
-  const theme = argv.theme;
+  const theme = argv.theme || 'all';
 
-  if (!theme) {
-    console.error(
-      '❌ 에러: 테마 이름을 입력해주세요. 예: npm run build -- --theme=fifa'
-    );
-    return Promise.reject(new Error('Theme name missing'));
+  console.log(`✨ [${theme.toUpperCase()}] 모드로 빌드를 시작합니다...`);
+
+  let filesToCopy = [];
+
+  // [CASE 1] 모든 테마 빌드 (Vercel 배포용)
+  if (theme === 'all') {
+    filesToCopy = [
+      `product/*.html`, // 모든 HTML
+
+      // CSS (모든 PDP 스타일 포함)
+      `assets/css/*.css`, // 루트 CSS (common, index, basic...)
+      `assets/css/pdp/**/*`, // PDP 폴더 전체 (fifa, starwars, natgeo 등 모두 포함)
+
+      // JS (모든 JS 포함)
+      `assets/js/pdp/**/*`,
+
+      // Images & Videos (모든 테마 리소스)
+      `assets/images/kia/pdp/**/*`,
+      `assets/videos/pdp/**/*`,
+    ];
+  } else {
+    filesToCopy = [
+      `product/pdp_display_theme_${theme}.html`,
+      'assets/css/pdp/index.css',
+      'assets/css/pdp/go_to_list.css',
+      'assets/css/pdp/product-view-override.css',
+      'assets/css/pdp/section/**/*',
+      `assets/css/pdp/${theme}/**/*`,
+      `assets/images/kia/pdp/img_disc_video.png`,
+      `assets/images/kia/pdp/${theme}/**/*`,
+      `assets/videos/pdp/${theme}/**/*`,
+    ];
   }
-
-  console.log(`✨ [${theme}] 테마 빌드를 시작합니다...`);
-
-  const filesToCopy = [
-    `product/pdp_display_theme_${theme}.html`,
-    'assets/css/pdp/index.css',
-    'assets/css/pdp/go_to_list.css',
-    'assets/css/pdp/product-view-override.css',
-    'assets/css/pdp/section/**/*',
-    `assets/css/pdp/${theme}/**/*`,
-    `assets/images/kia/pdp/img_disc_video.png`,
-    `assets/images/kia/pdp/${theme}/**/*`,
-    `assets/videos/pdp/${theme}/**/*`,
-  ];
 
   return src(filesToCopy, { base: '.', encoding: false }).pipe(
     dest(paths.build.dest)
