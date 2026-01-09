@@ -1,0 +1,11 @@
+@import url("key_visual-marvel.css");
+@import url("themes-marvel.css");
+@import url("theme-selectors-marvel.css");
+@import url("screenshots-marvel.css");
+@import url("playful-marvel.css");
+
+@media screen and (max-width: 769px) {
+  [data-product='marvel'] .sticky-layout {
+    padding-top: 56px;
+  }
+}

@@ -1,0 +1,33 @@
+/* ========================================
+   Discover Playful Designs - Marvel
+   ======================================== */
+[data-product=marvel][data-current-theme="01"] section.playful {
+  background-color: #1a2729;
+}
+[data-product=marvel][data-current-theme="01"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_01.png");
+}
+[data-product=marvel][data-current-theme="02"] section.playful {
+  background-color: #1a2729;
+}
+[data-product=marvel][data-current-theme="02"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_02.png");
+}
+[data-product=marvel][data-current-theme="03"] section.playful {
+  background-color: #1a2729;
+}
+[data-product=marvel][data-current-theme="03"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_03.png");
+}
+
+@media screen and (max-width: 769px) {
+  [data-product=marvel][data-current-theme="01"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_01_mo.png");
+  }
+  [data-product=marvel][data-current-theme="02"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_02_mo.png");
+  }
+  [data-product=marvel][data-current-theme="03"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/marvel/img_disc_bg_03_mo.png");
+  }
+}

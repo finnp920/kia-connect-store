@@ -1,7 +1,7 @@
 /* ========================================
-   KV (Key Visual) - Starwars
+   KV (Key Visual) - Marvel
    ======================================== */
-[data-product="starwars"] .kv-slide {
+[data-product="marvel"] .kv-slide {
   .kv-image img {
     /* 1920 × 876 */
     aspect-ratio: 160 / 73;
@@ -36,7 +36,7 @@
 }
 
 @media screen and (max-width: 769px) {
-  [data-product="starwars"] .kv-slide {
+  [data-product="marvel"] .kv-slide {
     .kv-image img {
       /* 720 × 1060 */
       aspect-ratio: 36 / 53;

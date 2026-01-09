@@ -1,0 +1,20 @@
+/* ========================================
+   Theme Selectors - Marvel
+   ======================================== */
+[data-product=marvel] .theme-selector.buttons button {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #2c2c2c;
+  color: #666666;
+}
+[data-product=marvel] .theme-selector.buttons button::before {
+  background-image: url(../../../icons/icon_circle_unchecked_666.svg);
+}
+[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"], [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"], [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"] {
+  border: none;
+  background: linear-gradient(90deg, #ED1C24 0%, #B51016 100%);
+  backdrop-filter: blur(3px);
+  color: #ffffff;
+}
+[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before, [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before, [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before {
+  background-image: url(../../../icons/icon_circle_checked_fff.svg);
+}

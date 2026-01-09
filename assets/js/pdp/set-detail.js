@@ -228,9 +228,9 @@ function scrollToSelector(selector) {
     // 요소의 top 위치로 smooth 스크롤
     const elementPosition =
       el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({
-      top: elementPosition,
-      behavior: 'smooth',
-    });
+    // window.scrollTo({
+    //   top: elementPosition,
+    //   behavior: 'smooth',
+    // });
   }
 }

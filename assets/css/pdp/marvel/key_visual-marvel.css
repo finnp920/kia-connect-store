@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* ========================================
-   KV (Key Visual) - Starwars
+   KV (Key Visual) - Marvel
    ======================================== */
-[data-product=starwars] .kv-slide .kv-image img {
+[data-product=marvel] .kv-slide .kv-image img {
   /* 1920 × 876 */
   aspect-ratio: 160/73;
 }
-[data-product=starwars] .kv-slide .kv-contents {
+[data-product=marvel] .kv-slide .kv-contents {
   position: absolute;
   top: clamp(20px, 4.7vw, 90px);
   left: 50%;
@@ -17,7 +17,7 @@
   padding: 0 20px;
   z-index: 10;
 }
-[data-product=starwars] .kv-slide .kv-title {
+[data-product=marvel] .kv-slide .kv-title {
   color: #ffffff;
   text-align: center;
   font-size: clamp(24px, 2.5vw, 48px);
@@ -25,7 +25,7 @@
   letter-spacing: -0.96px;
   line-height: normal;
 }
-[data-product=starwars] .kv-slide .kv-subtitle {
+[data-product=marvel] .kv-slide .kv-subtitle {
   margin-top: clamp(10px, 1.3vw, 24px);
   text-align: center;
   font-size: clamp(12px, 0.833vw, 16px);
@@ -35,17 +35,17 @@
 }
 
 @media screen and (max-width: 769px) {
-  [data-product=starwars] .kv-slide .kv-image img {
+  [data-product=marvel] .kv-slide .kv-image img {
     /* 720 × 1060 */
     aspect-ratio: 36/53;
   }
-  [data-product=starwars] .kv-slide .kv-contents {
+  [data-product=marvel] .kv-slide .kv-contents {
     top: clamp(60px, 28vw, 140px);
   }
-  [data-product=starwars] .kv-slide .kv-title {
+  [data-product=marvel] .kv-slide .kv-title {
     font-size: clamp(18px, 8.333vw, 48px);
   }
-  [data-product=starwars] .kv-slide .kv-subtitle {
+  [data-product=marvel] .kv-slide .kv-subtitle {
     margin-top: clamp(8px, 5.5vw, 26px);
     font-size: clamp(12px, 3.889vw, 22px);
   }
