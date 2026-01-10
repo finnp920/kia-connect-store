@@ -127,11 +127,12 @@ function setDetailEventListeners() {
     themeItems.forEach((item) => {
       item.addEventListener('click', () => {
         const themeValue = item.getAttribute('value');
-        dropdownButton.textContent = item.textContent;
-        dropdownBox.classList.remove('active');
-        if (dropdownBox) {
-          dropdownBox.setAttribute('data-theme', themeValue);
+
+        if (dropdownButton.children[0].tagName !== 'SPAN') {
+          dropdownButton.textContent = item.textContent;
         }
+
+        dropdownBox.classList.remove('active');
         setDetailCurrentTheme(themeValue);
         scrollToSelector('.sticky-layout');
       });
