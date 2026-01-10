@@ -3,6 +3,7 @@
 @import url("theme-selectors-marvel.css");
 @import url("screenshots-marvel.css");
 @import url("playful-marvel.css");
+@import url("reasons-n-marvel.css");
 
 @media screen and (max-width: 769px) {
   [data-product='marvel'] .sticky-layout {
