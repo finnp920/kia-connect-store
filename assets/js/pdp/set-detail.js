@@ -128,7 +128,10 @@ function setDetailEventListeners() {
       item.addEventListener('click', () => {
         const themeValue = item.getAttribute('value');
 
-        if (dropdownButton.children[0].tagName !== 'SPAN') {
+        if (
+          dropdownButton.children.length === 0 ||
+          dropdownButton.children[0].tagName !== 'SPAN'
+        ) {
           dropdownButton.textContent = item.textContent;
         }
 
