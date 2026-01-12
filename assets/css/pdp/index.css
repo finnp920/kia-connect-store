@@ -165,12 +165,12 @@ main section .section-inner {
 /* ========================================
    Another
    ======================================== */
-[data-product] .sticky-layout {
+[data-product]:not([data-product="fifa"]) .sticky-layout {
   position: relative;
   padding-top: 91px;
 }
 @media screen and (max-width: 769px) {
-  [data-product] .sticky-layout {
+  [data-product]:not([data-product="fifa"]) .sticky-layout {
     padding-top: 24px;
   }
 }
