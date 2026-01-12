@@ -6,14 +6,44 @@
     "sass:build": "sass assets/css:assets/css --style compressed",
     "sass:watch": "sass --watch assets/css:assets/css",
     "start": "npx http-server -p 8000 -c-1",
-    "dev": "npx http-server -p 8000 -c-1 -o",
-    "build": "npm run sass:build && echo 'SCSS compilation complete for Vercel'"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
-  "keywords": [ "kia", "connect", "store" ],
+  "keywords": [
+    "kia",
+    "connect",
+    "store"
+  ],
   "author": "Kia Connect Store",
   "license": "UNLICENSED",
   "devDependencies": {
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
     "prettier": "^3.6.2",
-    "sass": "^1.94.1"
-  }
+    "sass": "^1.97.1",
+    "yargs": "^18.0.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "braces": "^3.0.3",
+    "chokidar": "^4.0.3",
+    "detect-libc": "^1.0.3",
+    "fill-range": "^7.1.1",
+    "immutable": "^5.1.4",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "micromatch": "^4.0.8",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^2.3.1",
+    "readdirp": "^4.1.2",
+    "source-map-js": "^1.2.1",
+    "to-regex-range": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@finnp920-github:finnp920/kia-connect-store.git"
+  },
+  "type": "commonjs"
 }

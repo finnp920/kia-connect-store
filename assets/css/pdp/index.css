@@ -93,6 +93,32 @@ main section .section-inner {
 }
 
 /* ========================================
+   Contents data-theme
+   ======================================== */
+[data-product][data-current-theme]
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme] {
+  display: none;
+}
+[data-product][data-current-theme='01']
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme='01'],
+[data-product][data-current-theme='02']
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme='02'],
+[data-product][data-current-theme='03']
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme='03'],
+[data-product][data-current-theme='04']
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme='04'],
+[data-product][data-current-theme='05']
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector, .xfade-stage)
+  > [data-theme='05'] {
+  display: block;
+}
+
+/* ========================================
    Fade
    ======================================== */
 .xfade-stage {

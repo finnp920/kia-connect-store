@@ -1,0 +1,28 @@
+/* ========================================
+   Discover Playful Designs - Starwars
+   ======================================== */
+[data-product='starwars'][data-current-theme='01'] section.playful {
+  background-color: #060a14;
+  .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01.png');
+  }
+}
+[data-product='starwars'][data-current-theme='02'] section.playful {
+  background-color: #0c0606;
+  .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02.png');
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='starwars'][data-current-theme='01']
+    section.playful
+    .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_01_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='02']
+    section.playful
+    .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/starwars/details/img_disc_bg_02_mo.png');
+  }
+}

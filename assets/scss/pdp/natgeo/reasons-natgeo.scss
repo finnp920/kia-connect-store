@@ -1,0 +1,36 @@
+/* ========================================
+   The Reasons Why You Can't Miss Out - NatGeo
+   ======================================== */
+[data-product='natgeo'] section.reasons {
+  padding: 150px 0 120px;
+  .reasons-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 73px;
+    height: 4px;
+    background-color: #ffcc00;
+  }
+  .reasons-copyright {
+    margin-top: 76px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='natgeo'] section.reasons {
+    padding: 40px 0;
+
+    .reasons-title::after {
+      width: 35px;
+      height: 3px;
+    }
+
+    .reasons-copyright {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,13 +1,12 @@
-@charset "UTF-8";
 /* ========================================
    KV (Key Visual) - Starwars
    ======================================== */
-[data-product=starwars] .kv-slide .kv-image img {
+[data-product="starwars"] .kv-slide .kv-image img {
   /* 1920 × 876 */
-  aspect-ratio: 160/73;
+  aspect-ratio: 160 / 73;
 }
 
-[data-product=starwars] .kv-contents {
+[data-product="starwars"] .kv-contents {
   position: absolute;
   top: clamp(20px, 4.7vw, 90px);
   left: 50%;
@@ -18,8 +17,7 @@
   padding: 0 20px;
   z-index: 10;
 }
-
-[data-product=starwars] .kv-title {
+[data-product="starwars"] .kv-title {
   color: #ffffff;
   text-align: center;
   font-size: clamp(24px, 2.5vw, 48px);
@@ -27,8 +25,7 @@
   letter-spacing: -0.96px;
   line-height: normal;
 }
-
-[data-product=starwars] .kv-subtitle {
+[data-product="starwars"] .kv-subtitle {
   /*24*/
   margin-top: clamp(10px, 1.3vw, 24px);
   text-align: center;
@@ -37,19 +34,19 @@
   color: #ffffff;
   letter-spacing: -0.32px;
 }
-
 @media screen and (max-width: 769px) {
-  [data-product=starwars] .kv-slide .kv-image img {
+  [data-product="starwars"] .kv-slide .kv-image img {
     /* 720 × 1060 */
-    aspect-ratio: 36/53;
+    aspect-ratio: 36 / 53;
   }
-  [data-product=starwars] .kv-contents {
+
+  [data-product="starwars"] .kv-contents {
     top: clamp(60px, 28vw, 140px);
   }
-  [data-product=starwars] .kv-title {
+  [data-product="starwars"] .kv-title {
     font-size: clamp(18px, 8.333vw, 48px);
   }
-  [data-product=starwars] .kv-subtitle {
+  [data-product="starwars"] .kv-subtitle {
     margin-top: clamp(8px, 5.5vw, 26px);
     font-size: clamp(12px, 3.889vw, 22px);
   }

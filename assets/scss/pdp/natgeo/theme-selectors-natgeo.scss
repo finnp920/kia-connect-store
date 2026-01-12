@@ -1,0 +1,28 @@
+/* ========================================
+   Theme Selectors - Starwars
+   ======================================== */
+[data-product='natgeo'][data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01'],
+[data-product='natgeo'][data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02'],
+[data-product='natgeo'][data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03'] {
+  background-color: #fdc503;
+  color: #05141f;
+}
+
+[data-product='natgeo'][data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01']::before,
+[data-product='natgeo'][data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02']::before,
+[data-product='natgeo'][data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03']::before {
+  background-color: #05141f;
+  background-image: url(../../../icons/icon_check.svg);
+}

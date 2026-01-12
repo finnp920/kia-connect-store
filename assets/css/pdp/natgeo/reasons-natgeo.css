@@ -1,12 +1,11 @@
 /* ========================================
    The Reasons Why You Can't Miss Out - NatGeo
    ======================================== */
-[data-product='natgeo'] section.reasons {
+[data-product=natgeo] section.reasons {
   padding: 150px 0 120px;
 }
-
-[data-product='natgeo'] section.reasons .reasons-title::after {
-  content: '';
+[data-product=natgeo] section.reasons .reasons-title::after {
+  content: "";
   display: block;
   position: absolute;
   right: 0;
@@ -17,22 +16,19 @@
   height: 4px;
   background-color: #ffcc00;
 }
-
-[data-product='natgeo'] .reasons-copyright {
+[data-product=natgeo] section.reasons .reasons-copyright {
   margin-top: 76px;
 }
 
 @media screen and (max-width: 769px) {
-  [data-product='natgeo'] section.reasons {
+  [data-product=natgeo] section.reasons {
     padding: 40px 0;
   }
-
-  [data-product='natgeo'] section.reasons .reasons-title::after {
+  [data-product=natgeo] section.reasons .reasons-title::after {
     width: 35px;
     height: 3px;
   }
-
-  [data-product='natgeo'] .reasons-copyright {
+  [data-product=natgeo] section.reasons .reasons-copyright {
     margin-top: 50px;
   }
 }

@@ -1,0 +1,80 @@
+/* ========================================
+   Theme Selectors - FIFA
+   ======================================== */
+[data-product='fifa'] .theme-selector {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+[data-product='fifa'] .theme-selector.buttons {
+  max-width: 900px;
+  justify-content: center;
+}
+[data-product='fifa'] .theme-selector.buttons button {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #05141f;
+  border: 1px solid #d0d0d0;
+}
+[data-product='fifa'] .theme-selector.buttons button::before {
+  flex: none;
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../images/kia/pdp/fifa/icons/icon_unchecked.svg);
+}
+
+[data-product='fifa'][data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01'] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+}
+[data-product='fifa'][data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02'] {
+  background-color: #ff3d00;
+  border-color: #ff3d00;
+  color: white;
+}
+[data-product='fifa'][data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03'] {
+  background-color: #00c852;
+  border-color: #00c852;
+  color: white;
+}
+[data-product='fifa'][data-current-theme='04']
+  .theme-selector.buttons
+  button[data-theme='04'] {
+  background-color: #304ffe;
+  border-color: #304ffe;
+  color: white;
+}
+[data-product='fifa'][data-current-theme='05']
+  .theme-selector.buttons
+  button[data-theme='05'] {
+  background-color: #d0303c;
+  border-color: #d0303c;
+  color: white;
+}
+[data-product='fifa'][data-current-theme='01']
+  .theme-selector.buttons
+  button[data-theme='01']::before,
+[data-product='fifa'][data-current-theme='02']
+  .theme-selector.buttons
+  button[data-theme='02']::before,
+[data-product='fifa'][data-current-theme='03']
+  .theme-selector.buttons
+  button[data-theme='03']::before,
+[data-product='fifa'][data-current-theme='04']
+  .theme-selector.buttons
+  button[data-theme='04']::before,
+[data-product='fifa'][data-current-theme='05']
+  .theme-selector.buttons
+  button[data-theme='05']::before {
+  background-image: url(../../../images/kia/pdp/fifa/icons/icon_checked.svg);
+}
+@media screen and (max-width: 769px) {
+}
