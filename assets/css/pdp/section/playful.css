@@ -51,8 +51,10 @@
   justify-content: start;
   align-items: start;
   gap: 64px;
-  margin-top: 100px;
   z-index: 1;
+}
+[data-product='fifa'] .playful-contents-wrapper {
+  margin-top: 100px;
 }
 [data-product] .playful-content-item {
   width: 100%;

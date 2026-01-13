@@ -1,0 +1,18 @@
+/* ========================================
+   Theme Selectors - Disney
+   ======================================== */
+[data-product=disney] .theme-selector.buttons button {
+  background-color: #b2b8bd;
+  color: #F2F4F6;
+}
+[data-product=disney] .theme-selector.buttons button::before {
+  background-image: url(../../../icons/icon_circle_checked_fff.svg);
+}
+[data-product=disney][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"], [data-product=disney][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"] {
+  background: linear-gradient(90deg, #1C5EED 0%, #1031B5 100%);
+  color: #ffffff;
+}
+[data-product=disney][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"] {
+  background: linear-gradient(90deg, #84c44e 0%, #1eb57d 50%, #00b39f 100%);
+  backdrop-filter: blur(3px);
+}

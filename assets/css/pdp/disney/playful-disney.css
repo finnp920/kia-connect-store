@@ -1,0 +1,24 @@
+/* ========================================
+   Discover Playful Designs - Disney
+   ======================================== */
+[data-product=disney][data-current-theme="01"] section.playful, [data-product=disney][data-current-theme="02"] section.playful {
+  background-color: #283e66;
+}
+[data-product=disney][data-current-theme="01"] section.playful .playful-wrapper::before, [data-product=disney][data-current-theme="02"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/disney/disneyth02_disc_bg.png");
+}
+[data-product=disney][data-current-theme="03"] section.playful {
+  background-color: #1c394b;
+}
+[data-product=disney][data-current-theme="03"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/disney/disneyth03_disc_bg.png");
+}
+
+@media screen and (max-width: 769px) {
+  [data-product=disney][data-current-theme="01"] section.playful .playful-wrapper::before, [data-product=disney][data-current-theme="02"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/disney/disneyth02_disc_bg_mo.png");
+  }
+  [data-product=disney][data-current-theme="03"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/disney/disneyth03_disc_bg_mo.png");
+  }
+}

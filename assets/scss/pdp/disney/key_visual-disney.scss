@@ -1,0 +1,71 @@
+/* ========================================
+   KV (Key Visual) - Disney
+   ======================================== */
+[data-product='disney'] .kv-slide {
+  .kv-image img {
+    /* 1920 × 876 */
+    aspect-ratio: 160 / 73;
+  }
+  .kv-contents {
+    position: absolute;
+    top: 5.708%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1240px;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 10;
+  }
+  .kv-logo {
+    width: auto;
+    height: clamp(36px, 3.75cqw, 72px);
+  }
+  .kv-title {
+    margin-top: clamp(10px, 1.3vw, 24px);
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(24px, 2.5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -0.96px;
+    line-height: normal;
+  }
+  .kv-subtitle {
+    margin-top: clamp(10px, 1.3vw, 24px);
+    text-align: center;
+    font-size: clamp(12px, 0.833vw, 16px);
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.32px;
+  }
+
+  &[data-theme='01'] {
+    .kv-title,
+    .kv-subtitle {
+      color: #000000;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='disney'] .kv-slide {
+    .kv-image img {
+      /* 720 × 1060 */
+      aspect-ratio: 36 / 53;
+    }
+    .kv-contents {
+      top: 19.13%;
+    }
+    .kv-logo {
+      height: clamp(36px, 10cqw, 60px);
+    }
+    .kv-title {
+      margin-top: 2.27%;
+      font-size: clamp(30px, 8cqw, 40px);
+    }
+    .kv-subtitle {
+      margin-top: 2.27%;
+      font-size: clamp(14px, 3.5cqw, 20px);
+    }
+  }
+}

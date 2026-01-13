@@ -1,0 +1,11 @@
+@import url("key_visual-disney.css");
+@import url("themes-disney.css");
+@import url("theme-selectors-disney.css");
+@import url("playful-disney.css");
+@import url("reasons-n-disney.css");
+
+@media screen and (max-width: 769px) {
+  [data-product='disney'] .sticky-layout {
+    padding-top: 56px;
+  }
+}

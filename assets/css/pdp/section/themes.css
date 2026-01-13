@@ -81,22 +81,30 @@
   transform: translateZ(0);
   transition: transform 0.3s ease;
 }
-[data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick) {
+[data-product]
+  .themes-cards-grid[data-clickable='true']
+  .card:not(.pick, .coming_soon) {
   cursor: pointer;
 }
 @media (hover: hover) and (pointer: fine) {
-  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
+  [data-product]
+    .themes-cards-grid[data-clickable='true']
+    .card:not(.pick, .coming_soon):hover {
     transform: translateY(-4px);
   }
 }
 @media (hover: none), (pointer: coarse) {
   /* 혹시라도 물려있을 호버 상태 강제 해제 (방어 코드) */
-  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):hover {
+  [data-product]
+    .themes-cards-grid[data-clickable='true']
+    .card:not(.pick, .coming_soon):hover {
     transform: none;
   }
 
   /* 눌렀을 때 쫀득한 효과 (Active) */
-  [data-product] .themes-cards-grid[data-clickable='true'] .card:not(.pick):active {
+  [data-product]
+    .themes-cards-grid[data-clickable='true']
+    .card:not(.pick, .coming_soon):active {
     transform: scale(0.98);
     transition: transform 0.1s;
   }
