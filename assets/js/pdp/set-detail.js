@@ -56,6 +56,15 @@ function setDetailCurrentTheme(newTheme) {
   }
 
   mainElements[0].dataset.currentTheme = currentTheme;
+
+  // 카드 선택시 드롭다운 선택자도 변경
+  const dropdownButton = document.getElementById('theme-selector-dropdown');
+  const foundItem = Array.from(
+    document.querySelectorAll('.theme-selector.dropdown .theme-list li')
+  ).find((item) => item.getAttribute('value') === currentTheme);
+  if (foundItem) {
+    dropdownButton.textContent = foundItem.textContent;
+  }
 }
 
 // ----------------------------------------
@@ -127,15 +136,12 @@ function setDetailEventListeners() {
     themeItems.forEach((item) => {
       item.addEventListener('click', () => {
         const themeValue = item.getAttribute('value');
-
-        if (
-          dropdownButton.children.length === 0 ||
-          dropdownButton.children[0].tagName !== 'SPAN'
-        ) {
-          dropdownButton.textContent = item.textContent;
+        dropdownButton.textContent = item.textContent;
+        dropdownBox.classList.remove('active');
+        if (dropdownBox) {
+          dropdownBox.setAttribute('data-theme', themeValue);
         }
 
-        dropdownBox.classList.remove('active');
         setDetailCurrentTheme(themeValue);
         scrollToSelector('.sticky-layout');
       });
