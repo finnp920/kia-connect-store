@@ -86,9 +86,6 @@
   }
 
   .card.coming_soon {
-    h3 {
-      color: #797979;
-    }
     p {
       width: fit-content;
       padding: 2px 8px;
@@ -125,8 +122,7 @@
 
 [data-product="disney"][data-current-theme='01'] .card[data-theme='01'],
 [data-product="disney"][data-current-theme='02'] .card[data-theme='02'],
-[data-product="disney"][data-current-theme='03'] .card[data-theme='03'],
-[data-product="disney"] .card.coming_soon {
+[data-product="disney"][data-current-theme='03'] .card[data-theme='03'] {
   .card-layer img {
     opacity: 1;
   }
