@@ -16,13 +16,14 @@
 
   .themes-stage-inner {
     width: 100%;
+    max-width: 1492px;
   }
 
   .themes-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)) 0.8fr;
     gap: 24px;
-    max-width: 1200px;
+    max-width: 1452px;
     margin: 0 auto;
     list-style: none;
   }
@@ -32,7 +33,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 282px;
+    max-width: 289px;
     isolation: isolate;
     transform: translateZ(0);
     transition: transform 0.3s ease;
@@ -52,7 +53,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         -webkit-user-drag: none;
         user-select: none;
         opacity: 0.3;
@@ -67,7 +68,7 @@
       justify-content: space-between;
       align-items: start;
       gap: 24px;
-      padding: 7.1% 8.5%;
+      padding: 7% 8.8%;
       h3 {
         width: 100%;
         color: #999999;
@@ -85,6 +86,9 @@
   }
 
   .card.coming_soon {
+    h3 {
+      color: #797979;
+    }
     p {
       width: fit-content;
       padding: 2px 8px;
@@ -154,7 +158,7 @@
       }
 
       .card-contents {
-        padding: 5.5% 10%;
+        padding: 6.5% 7.8%;
         gap: 16px;
         h3 {
           font-size: clamp(14px, 2.6cqw, 20px);
@@ -163,6 +167,13 @@
           font-size: clamp(10px, 1.8cqw, 16px);
           letter-spacing: -0.2px;
         }
+      }
+    }
+
+    .card.coming_soon {
+      p {
+        padding: 2px 6px;
+        font-size: 10px;
       }
     }
 

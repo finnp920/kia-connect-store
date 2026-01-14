@@ -6,6 +6,6 @@
 
 @media screen and (max-width: 769px) {
   [data-product='disney'] .sticky-layout {
-    padding-top: 56px;
+    padding-top: 56px !important;
   }
 }
