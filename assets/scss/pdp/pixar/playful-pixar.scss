@@ -1,0 +1,46 @@
+/* ========================================
+   Discover Playful Designs - Pixar
+   ======================================== */
+[data-product='pixar'] {
+  &[data-current-theme='01'] {
+    section.playful {
+      background-color: #b4e1fe;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/pixar/pixarth01_disc_bg.png');
+      }
+    }
+
+    .playful-title, .playful-content-item > h3, .playful-content-item > p:not(.warning) {
+      color: #000000;
+    }
+  }
+
+  &[data-current-theme='02'] {
+    section.playful {
+      background-color: #050615;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/pixar/pixarth02_disc_bg.png');
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='pixar'] {
+    &[data-current-theme='01'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/pixar/pixarth01_disc_bg_mo.png');
+        }
+      }
+    }
+
+    &[data-current-theme='02'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/pixar/pixarth02_disc_bg_mo.png');
+        }
+      }
+    }
+  }
+}

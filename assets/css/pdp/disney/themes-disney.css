@@ -76,14 +76,14 @@
 }
 [data-product=disney] .themes-stage .card .card-contents p {
   width: 100%;
-  color: #CCCCCC;
+  color: #cccccc;
   font-size: clamp(12px, 1.2cqw, 16px);
 }
 [data-product=disney] .themes-stage .card.coming_soon p {
   width: fit-content;
   padding: 2px 8px;
-  border: 1px solid #05141F;
-  color: #05141F;
+  border: 1px solid #05141f;
+  color: #05141f;
   font-size: 14px;
   font-weight: 400;
 }
@@ -91,7 +91,7 @@
   max-width: 200px;
   align-items: center;
   justify-content: center;
-  background-color: #F2F4F6;
+  background-color: #f2f4f6;
 }
 [data-product=disney] .themes-stage .card.pick .card-contents {
   justify-content: center;
@@ -169,7 +169,7 @@
   }
   [data-product=disney] .themes-stage .card.pick .card-contents h3 {
     width: fit-content;
-    color: #05141F;
+    color: #05141f;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.24px;

@@ -1,0 +1,6 @@
+/* ========================================
+   Screenshots - Pixar
+   ======================================== */
+[data-product=pixar][data-current-theme="03"] section.screenshots .theme-header-wrapper::before {
+  background-image: url("../../../images/kia/pdp/pixar/sec02_detail_bg.png");
+}

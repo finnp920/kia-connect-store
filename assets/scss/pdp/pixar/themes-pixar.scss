@@ -1,11 +1,11 @@
 /* ========================================
-   Themes - Disney
+   Themes - Pixar
    ======================================== */
-[data-product='disney'] .themes-stage {
+[data-product='pixar'] .themes-stage {
   position: relative;
   margin-bottom: -45px;
   padding: 70px 0 116px;
-  background-image: url('../../../images/kia/pdp/marvel/sec02_cardlist_bg.png');
+  background-image: url('../../../images/kia/pdp/pixar/sec02_cardlist_bg.png');
   background-position: center bottom;
   background-size: cover;
   background-repeat: repeat;
@@ -14,16 +14,15 @@
     display: none;
   }
 
-  .themes-stage-inner {
-    width: 100%;
-    max-width: 1492px;
-  }
+  //.themes-stage-inner {
+  //  width: 100%;
+  //}
 
   .themes-cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) 0.8fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) 0.7fr;
     gap: 24px;
-    max-width: 1452px;
+    max-width: 1200px;
     margin: 0 auto;
     list-style: none;
   }
@@ -48,12 +47,11 @@
         visibility 0.3s;
       width: 100%;
       height: auto;
-      aspect-ratio: 282 / 156;
+      aspect-ratio: 289 / 156;
       img {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
         -webkit-user-drag: none;
         user-select: none;
         opacity: 0.3;
@@ -68,7 +66,7 @@
       justify-content: space-between;
       align-items: start;
       gap: 24px;
-      padding: 7% 8.8%;
+      padding: 7.1% 8.5%;
       h3 {
         width: 100%;
         color: #999999;
@@ -79,28 +77,16 @@
       }
       p {
         width: 100%;
-        color: #cccccc;
+        color: #CCCCCC;
         font-size: clamp(12px, 1.2cqw, 16px);
       }
     }
   }
 
-  .card.coming_soon {
-    p {
-      width: fit-content;
-      padding: 2px 8px;
-      border: 1px solid #05141f;
-      color: #05141f;
-      font-size: 14px;
-      font-weight: 400;
-    }
-  }
-
   .card.pick {
-    max-width: 200px;
     align-items: center;
     justify-content: center;
-    background-color: #f2f4f6;
+    background-color: #F2F4F6;
     .card-contents {
       justify-content: center;
       align-items: center;
@@ -120,9 +106,9 @@
   }
 }
 
-[data-product='disney'][data-current-theme='01'] .card[data-theme='01'],
-[data-product='disney'][data-current-theme='02'] .card[data-theme='02'],
-[data-product='disney'][data-current-theme='03'] .card[data-theme='03'] {
+[data-product='pixar'][data-current-theme='01'] .card[data-theme='01'],
+[data-product='pixar'][data-current-theme='02'] .card[data-theme='02'],
+[data-product='pixar'][data-current-theme='03'] .card[data-theme='03'] {
   .card-layer img {
     opacity: 1;
   }
@@ -131,15 +117,15 @@
       color: #000000;
     }
     p {
-      color: #000000;
+      color: #888888;
     }
   }
 }
 
 @media screen and (max-width: 769px) {
-  [data-product='disney'] .themes-stage {
+  [data-product='pixar'] .themes-stage {
     padding: 31px 0 53px;
-    background-image: url('../../../images/kia/pdp/marvel/sec02_cardlist_bg_mo.png');
+    background-image: url('../../../images/kia/pdp/pixar/sec02_cardlist_bg_mo.png');
 
     .themes-cards-grid {
       width: fit-content;
@@ -154,7 +140,7 @@
       }
 
       .card-contents {
-        padding: 6.5% 7.8%;
+        padding: 5.5% 10%;
         gap: 16px;
         h3 {
           font-size: clamp(14px, 2.6cqw, 20px);
@@ -163,13 +149,6 @@
           font-size: clamp(10px, 1.8cqw, 16px);
           letter-spacing: -0.2px;
         }
-      }
-    }
-
-    .card.coming_soon {
-      p {
-        padding: 2px 6px;
-        font-size: 10px;
       }
     }
 

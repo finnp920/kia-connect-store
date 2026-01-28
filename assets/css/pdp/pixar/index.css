@@ -1,0 +1,12 @@
+@import url("key_visual-pixar.css");
+@import url("themes-pixar.css");
+@import url("theme-selectors-pixar.css");
+@import url("screenshots-pixar.css");
+@import url("playful-pixar.css");
+@import url("reasons-n-pixar.css");
+
+@media screen and (max-width: 769px) {
+  [data-product='pixar'] .sticky-layout {
+    padding-top: 56px !important;
+  }
+}

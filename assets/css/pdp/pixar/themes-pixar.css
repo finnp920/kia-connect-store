@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* ========================================
+   Themes - Pixar
+   ======================================== */
+[data-product=pixar] .themes-stage {
+  position: relative;
+  margin-bottom: -45px;
+  padding: 70px 0 116px;
+  background-image: url("../../../images/kia/pdp/pixar/sec02_cardlist_bg.png");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: repeat;
+  z-index: 1;
+}
+[data-product=pixar] .themes-stage::after {
+  display: none;
+}
+[data-product=pixar] .themes-stage .themes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) 0.7fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+}
+[data-product=pixar] .themes-stage .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 289px;
+  isolation: isolate;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+}
+[data-product=pixar] .themes-stage .card .card-layer {
+  display: block;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 289/156;
+}
+[data-product=pixar] .themes-stage .card .card-layer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
+  opacity: 0.3;
+}
+[data-product=pixar] .themes-stage .card .card-contents {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  padding: 7.1% 8.5%;
+}
+[data-product=pixar] .themes-stage .card .card-contents h3 {
+  width: 100%;
+  color: #999999;
+  font-size: clamp(18px, 1.5cqw, 24px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+}
+[data-product=pixar] .themes-stage .card .card-contents p {
+  width: 100%;
+  color: #CCCCCC;
+  font-size: clamp(12px, 1.2cqw, 16px);
+}
+[data-product=pixar] .themes-stage .card.pick {
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F4F6;
+}
+[data-product=pixar] .themes-stage .card.pick .card-contents {
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+[data-product=pixar] .themes-stage .card.pick .card-contents img {
+  width: auto;
+  height: auto;
+}
+[data-product=pixar] .themes-stage .card.pick .card-contents h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  color: #b2b8bd;
+}
+
+[data-product=pixar][data-current-theme="01"] .card[data-theme="01"] .card-layer img,
+[data-product=pixar][data-current-theme="02"] .card[data-theme="02"] .card-layer img,
+[data-product=pixar][data-current-theme="03"] .card[data-theme="03"] .card-layer img {
+  opacity: 1;
+}
+[data-product=pixar][data-current-theme="01"] .card[data-theme="01"] .card-contents h3,
+[data-product=pixar][data-current-theme="02"] .card[data-theme="02"] .card-contents h3,
+[data-product=pixar][data-current-theme="03"] .card[data-theme="03"] .card-contents h3 {
+  color: #000000;
+}
+[data-product=pixar][data-current-theme="01"] .card[data-theme="01"] .card-contents p,
+[data-product=pixar][data-current-theme="02"] .card[data-theme="02"] .card-contents p,
+[data-product=pixar][data-current-theme="03"] .card[data-theme="03"] .card-contents p {
+  color: #888888;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product=pixar] .themes-stage {
+    padding: 31px 0 53px;
+    background-image: url("../../../images/kia/pdp/pixar/sec02_cardlist_bg_mo.png");
+  }
+  [data-product=pixar] .themes-stage .themes-cards-grid {
+    width: fit-content;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: clamp(8px, 2cqw, 24px);
+  }
+  [data-product=pixar] .themes-stage .card .card-layer {
+    aspect-ratio: 312/184;
+  }
+  [data-product=pixar] .themes-stage .card .card-contents {
+    padding: 5.5% 10%;
+    gap: 16px;
+  }
+  [data-product=pixar] .themes-stage .card .card-contents h3 {
+    font-size: clamp(14px, 2.6cqw, 20px);
+  }
+  [data-product=pixar] .themes-stage .card .card-contents p {
+    font-size: clamp(10px, 1.8cqw, 16px);
+    letter-spacing: -0.2px;
+  }
+  [data-product=pixar] .themes-stage .card.pick {
+    max-width: none;
+    grid-column: 1/span 2; /* 두 컬럼 전체 차지 */
+    height: 48px;
+    padding: 0;
+  }
+  [data-product=pixar] .themes-stage .card.pick .card-contents {
+    flex-direction: row;
+  }
+  [data-product=pixar] .themes-stage .card.pick .card-contents img {
+    width: 18px;
+  }
+  [data-product=pixar] .themes-stage .card.pick .card-contents h3 {
+    width: fit-content;
+    color: #05141f;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.24px;
+  }
+}

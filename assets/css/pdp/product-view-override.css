@@ -118,18 +118,6 @@
   label {
   gap: 2rem;
 }
-@media (min-width: 1240px) {
-  .contentWarp
-    .productView
-    .productRight
-    .optionWarp
-    .producOption
-    .optionList
-    .checkBtn
-    label {
-    gap: 3rem;
-  }
-}
 
 /* 옵션 */
 .contentWarp
@@ -182,6 +170,7 @@ label img {
   input[type='checkbox']:checked
   + label::before {
   background-image: url('../../icons/icon-checked.svg');
+  transform: translateY(-50%);
 }
 
 /* 옵션 - disabledBtn */

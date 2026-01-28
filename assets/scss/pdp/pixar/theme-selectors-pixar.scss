@@ -1,0 +1,30 @@
+/* ========================================
+   Theme Selectors - Pixar
+   ======================================== */
+[data-product='pixar'] {
+  .theme-selector.buttons {
+    button {
+      background-color: #B2B8BD;
+      color: #ffffff;
+    }
+    button::before {
+      background-image: url(../../../icons/icon_circle_checked_f2f.svg);
+    }
+  }
+
+  &[data-current-theme='01'] .theme-selector.buttons button[data-theme='01'] {
+    background: linear-gradient(90deg, #1C5EED 0%, #1031B5 100%);
+    backdrop-filter: blur(3px);
+    &::before {
+      background-image: url(../../../icons/icon_circle_checked_fff.svg);
+    }
+  }
+
+  &[data-current-theme='02'] .theme-selector.buttons button[data-theme='02'] {
+    background: linear-gradient(90deg, #991CED 0%, #1031B5 100%);
+    backdrop-filter: blur(3px);
+    &::before {
+      background-image: url(../../../icons/icon_circle_checked_fff.svg);
+    }
+  }
+}

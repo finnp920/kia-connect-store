@@ -1,0 +1,16 @@
+/* ========================================
+   N Reasons Why you can’t miss out - Pixar
+   ======================================== */
+
+@media screen and (max-width: 769px) {
+  [data-product="pixar"] section.reasons-n {
+    ul.reasons {
+      li.reason-item:nth-child(1),
+      li.reason-item:nth-child(2),{
+        .reason-image picture img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
