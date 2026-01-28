@@ -13,6 +13,8 @@ root
 │   ├── pdp_display_theme_fifa.html      # FIFA 테마
 │   ├── pdp_display_theme_natgeo.html    # National Geographic 테마
 │   └── pdp_display_theme_starwars.html  # Star Wars 테마
+│   └── pdp_display_theme_disney.html    # 디즈니 테마
+│   └── pdp_display_theme_pixar.html     # 픽사 테마
 │
 └── assets/
     ├── css/                       # [Style] 스타일시트
@@ -35,15 +37,7 @@ root
     │       │   ├── disclaimer.css
     │       │   └── ...
     │       │
-    │       ├── fifa/              # [Theme] FIFA 테마 전용 스타일
-    │       │   ├── index.css
-    │       │   └── ...
-    │       │
-    │       ├── starwars/          # [Theme] Star Wars 테마 전용 스타일
-    │       │   ├── index.css
-    │       │   └── ...
-    │       │
-    │       └── natgeo/            # [Theme] NatGeo 테마 전용 스타일
+    │       └── [disney, pixar...] # 테마 전용 스타일
     │           ├── index.css
     │           └── ...
     │
