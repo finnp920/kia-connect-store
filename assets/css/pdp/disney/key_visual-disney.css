@@ -61,4 +61,7 @@
     margin-top: 2.27%;
     font-size: clamp(14px, 3.5cqw, 20px);
   }
+  [data-product=disney] .kv-slide[data-theme="01"] .kv-logo {
+    margin-top: 20px;
+  }
 }
