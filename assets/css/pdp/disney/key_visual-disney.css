@@ -8,7 +8,7 @@
 }
 [data-product=disney] .kv-slide .kv-contents {
   position: absolute;
-  top: 5.708%;
+  top: 3.4%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -19,10 +19,10 @@
 }
 [data-product=disney] .kv-slide .kv-logo {
   width: auto;
-  height: clamp(36px, 3.75cqw, 72px);
+  height: clamp(36px, 5.72cqw, 110px);
 }
 [data-product=disney] .kv-slide .kv-title {
-  margin-top: clamp(10px, 1.3vw, 24px);
+  margin-top: -7px;
   color: #ffffff;
   text-align: center;
   font-size: clamp(24px, 2.5vw, 48px);
@@ -49,13 +49,12 @@
     aspect-ratio: 36/53;
   }
   [data-product=disney] .kv-slide .kv-contents {
-    top: 19.13%;
+    top: 14%;
   }
   [data-product=disney] .kv-slide .kv-logo {
-    height: clamp(36px, 10cqw, 60px);
+    height: clamp(36px, 15cqw, 60px);
   }
   [data-product=disney] .kv-slide .kv-title {
-    margin-top: 2.27%;
     font-size: clamp(30px, 8cqw, 40px);
   }
   [data-product=disney] .kv-slide .kv-subtitle {

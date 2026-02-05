@@ -17,6 +17,10 @@
       .playful-wrapper::before {
         background-image: url('../../../images/kia/pdp/disney/disneyth03_disc_bg.png');
       }
+
+      .playful-title, h3, p:not(.warning) {
+        color: black;
+      }
     }
   }
 }

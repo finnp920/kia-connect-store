@@ -13,6 +13,9 @@
 [data-product=disney][data-current-theme="03"] section.playful .playful-wrapper::before {
   background-image: url("../../../images/kia/pdp/disney/disneyth03_disc_bg.png");
 }
+[data-product=disney][data-current-theme="03"] section.playful .playful-title, [data-product=disney][data-current-theme="03"] section.playful h3, [data-product=disney][data-current-theme="03"] section.playful p:not(.warning) {
+  color: black;
+}
 
 @media screen and (max-width: 769px) {
   [data-product=disney][data-current-theme="01"] section.playful .playful-wrapper::before, [data-product=disney][data-current-theme="02"] section.playful .playful-wrapper::before {
