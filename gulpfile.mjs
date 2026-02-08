@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import gulpSass from 'gulp-sass';
 import * as dartSass from 'sass'; // Sass 컴파일러 로드 방식 변경
+import sourcemaps from 'gulp-sourcemaps'; // Source Map 생성
 import { deleteAsync } from 'del'; // del v7+ 방식 (deleteAsync 사용)
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
@@ -32,7 +33,9 @@ const paths = {
 // --------------------------------------------------------
 function styles() {
   return src(paths.scss.src)
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.scss.dest));
 }
 

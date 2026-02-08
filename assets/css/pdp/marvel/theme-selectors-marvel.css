@@ -18,3 +18,4 @@
 [data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before, [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before, [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before {
   background-image: url(../../../icons/icon_circle_checked_fff.svg);
 }
+/*# sourceMappingURL=theme-selectors-marvel.css.map */
