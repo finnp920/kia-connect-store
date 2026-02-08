@@ -19,7 +19,7 @@ const argv = yargs(hideBin(process.argv)).argv;
 // --------------------------------------------------------
 const paths = {
   scss: {
-    src: 'assets/scss/**/*.scss',
+    src: 'assets/css/**/*.scss',
     dest: 'assets/css',
   },
   build: {
@@ -129,3 +129,5 @@ export const build = series(
 
 // 기본(default) 태스크 설정 (선택 사항)
 export default dev;
+
+// gulp build --theme=pixar
