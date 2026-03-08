@@ -4,8 +4,8 @@
 [data-product=fifa] section.themes .themes-header {
   position: relative;
   width: 100%;
-  max-width: 1900px;
-  margin: 0 auto -46px;
+  max-width: 1920px;
+  margin: 0 auto -31px;
   padding: 64px 0 100px;
   text-align: center;
   background-image: url("../../../images/kia/pdp/fifa/themes-header_bg.png");
