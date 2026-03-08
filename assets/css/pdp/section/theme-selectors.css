@@ -1,7 +1,10 @@
+@charset "UTF-8";
 /* ========================================
    Theme Selectors
    ======================================== */
-/* 트랙 내부 레이아웃 */
+[data-product] {
+  /* 트랙 내부 레이아웃 */
+}
 [data-product] .theme-selector-wrapper {
   position: sticky;
   top: 59px;
@@ -11,13 +14,18 @@
 [data-product] .theme-selector-wrapper.is-sticky {
   backdrop-filter: blur(3px);
 }
+@media screen and (max-width: 769px) {
+  [data-product] .theme-selector-wrapper {
+    top: 56px;
+    margin-bottom: 8px;
+  }
+}
 [data-product] .theme-selector {
   max-width: 1634px;
   margin: 0 auto;
   padding: 16px 20px;
+  /* PC용 buttons */
 }
-
-/* PC용 buttons*/
 [data-product] .theme-selector.buttons {
   width: 100%;
   display: flex;
@@ -41,23 +49,27 @@
   letter-spacing: -0.32px;
   background-color: #f2f4f6;
   pointer-events: auto;
-  transition:
-      transform 0.3s ease,
-      background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 [data-product] .theme-selector.buttons button::before {
   flex: none;
-  content: '';
+  content: "";
   display: block;
   width: 22px;
   height: 22px;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 100%;
-  background-image: url(../../../icons/icon_circle_unchecked.svg);
+  background-image: url("../../../icons/icon_circle_unchecked.svg");
 }
-
-/* MO용 dropdown */
+@media screen and (max-width: 769px) {
+  [data-product] .theme-selector.buttons {
+    display: none;
+  }
+}
+[data-product] .theme-selector {
+  /* MO용 dropdown */
+}
 [data-product] .theme-selector.dropdown {
   display: none;
   top: 59px;
@@ -65,13 +77,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-width: 769px) {
-  [data-product] .theme-selector-wrapper {
-    top: 56px;
-    margin-bottom: 8px;
-  }
-  [data-product] .theme-selector.buttons {
-    display: none;
-  }
   [data-product] .theme-selector.dropdown {
     display: block;
     pointer-events: auto;
@@ -91,8 +96,8 @@
     text-align: left;
     -webkit-tap-highlight-color: transparent;
   }
-  [data-product] .theme-selector.dropdown .theme-text::before {
-    content: '';
+  [data-product] .theme-selector.dropdown .theme-text::after {
+    content: "";
     display: block;
     position: absolute;
     right: 18px;
@@ -101,7 +106,7 @@
     width: 12px;
     height: 6px;
     margin: auto 0;
-    background-image: url('../../../icons/icon-angle-down.svg');
+    background-image: url("../../../icons/icon-angle-down.svg");
     background-size: 12px 6px;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,11 +130,6 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  [data-product] .theme-selector.dropdown.active .theme-list {
-    max-height: 300px;
-    border: 1.4px solid #dedede;
-    background-color: #f2f4f6;
-  }
   [data-product] .theme-selector.dropdown .theme-list li {
     padding: 12px 18px;
     font-size: 14px;
@@ -142,12 +142,19 @@
     border-radius: 4px 4px 0 0;
     border-top: none;
   }
-
   [data-product] .theme-selector.dropdown .theme-list li:last-child {
     border-radius: 0 0 4px 4px;
   }
-
   [data-product] .theme-selector.dropdown .theme-list li:hover {
     background-color: #e8e8e8;
   }
+  [data-product] .theme-selector.dropdown {
+    /* 드롭다운 활성화 상태 */
+  }
+  [data-product] .theme-selector.dropdown.active .theme-list {
+    max-height: 300px;
+    border: 1.4px solid #dedede;
+    background-color: #f2f4f6;
+  }
 }
+/*# sourceMappingURL=theme-selectors.css.map */

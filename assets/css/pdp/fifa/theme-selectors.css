@@ -5,62 +5,292 @@
   max-width: 1240px;
   margin: 0 auto;
 }
-
 [data-product=fifa] .theme-selector.buttons {
-  max-width: 900px;
   justify-content: center;
 }
-
 [data-product=fifa] .theme-selector.buttons button {
   padding: 8px 12px;
   border-radius: 999px;
-  color: #05141f;
-  border: 1px solid #d0d0d0;
+  color: #979797;
+  border: 1px solid #E9E9E9;
+  background-color: #F4F4F4;
 }
-
 [data-product=fifa] .theme-selector.buttons button::before {
   flex: none;
   content: "";
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url(../../../images/kia/pdp/fifa/icons/icon_unchecked.svg);
+  background-size: contain;
 }
-
+[data-product=fifa] .theme-selector.buttons button[data-theme="01"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_01.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="02"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_02.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="03"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_03.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="04"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_04.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="05"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_05.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="06"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_06.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="07"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_07.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="08"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_08.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="09"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_09.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="10"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_10.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="11"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_11.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="12"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_12.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="13"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_13.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="14"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_14.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="15"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_15.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="16"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_16.png");
+}
+[data-product=fifa] .theme-selector.buttons button[data-theme="17"]::before {
+  background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_17.png");
+}
 [data-product=fifa][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"] {
   background-color: #eeff42;
   border-color: #eeff42;
+  color: #05141f;
 }
-
 [data-product=fifa][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"] {
-  background-color: #ff3d00;
-  border-color: #ff3d00;
-  color: white;
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
 }
-
 [data-product=fifa][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"] {
-  background-color: #00c852;
-  border-color: #00c852;
-  color: white;
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
 }
-
 [data-product=fifa][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"] {
-  background-color: #304ffe;
-  border-color: #304ffe;
-  color: white;
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
 }
-
 [data-product=fifa][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"] {
-  background-color: #d0303c;
-  border-color: #d0303c;
-  color: white;
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
 }
-
-[data-product=fifa][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before,
-[data-product=fifa][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before,
-[data-product=fifa][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before,
-[data-product=fifa][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"]::before,
-[data-product=fifa][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"]::before {
-  background-image: url(../../../images/kia/pdp/fifa/icons/icon_checked.svg);
+[data-product=fifa][data-current-theme="06"] .theme-selector.buttons button[data-theme="06"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="07"] .theme-selector.buttons button[data-theme="07"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="08"] .theme-selector.buttons button[data-theme="08"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="09"] .theme-selector.buttons button[data-theme="09"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="10"] .theme-selector.buttons button[data-theme="10"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="11"] .theme-selector.buttons button[data-theme="11"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="12"] .theme-selector.buttons button[data-theme="12"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="13"] .theme-selector.buttons button[data-theme="13"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="14"] .theme-selector.buttons button[data-theme="14"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="15"] .theme-selector.buttons button[data-theme="15"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="16"] .theme-selector.buttons button[data-theme="16"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+[data-product=fifa][data-current-theme="17"] .theme-selector.buttons button[data-theme="17"] {
+  background-color: #eeff42;
+  border-color: #eeff42;
+  color: #05141f;
+}
+@media screen and (max-width: 769px) {
+  [data-product=fifa] .theme-selector.dropdown button {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+  }
+  [data-product=fifa] .theme-selector.dropdown button::before {
+    flex: none;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li::before {
+    flex: none;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="01"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_01.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="02"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_02.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="03"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_03.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="04"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_04.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="05"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_05.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="06"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_06.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="07"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_07.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="08"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_08.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="09"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_09.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="10"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_10.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="11"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_11.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="12"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_12.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="13"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_13.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="14"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_14.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="15"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_15.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="16"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_16.png");
+  }
+  [data-product=fifa] .theme-selector.dropdown .theme-list li[value="17"]::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_17.png");
+  }
+  [data-product=fifa][data-current-theme="01"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_01.png");
+  }
+  [data-product=fifa][data-current-theme="02"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_02.png");
+  }
+  [data-product=fifa][data-current-theme="03"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_03.png");
+  }
+  [data-product=fifa][data-current-theme="04"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_04.png");
+  }
+  [data-product=fifa][data-current-theme="05"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_05.png");
+  }
+  [data-product=fifa][data-current-theme="06"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_06.png");
+  }
+  [data-product=fifa][data-current-theme="07"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_07.png");
+  }
+  [data-product=fifa][data-current-theme="08"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_08.png");
+  }
+  [data-product=fifa][data-current-theme="09"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_09.png");
+  }
+  [data-product=fifa][data-current-theme="10"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_10.png");
+  }
+  [data-product=fifa][data-current-theme="11"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_11.png");
+  }
+  [data-product=fifa][data-current-theme="12"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_12.png");
+  }
+  [data-product=fifa][data-current-theme="13"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_13.png");
+  }
+  [data-product=fifa][data-current-theme="14"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_14.png");
+  }
+  [data-product=fifa][data-current-theme="15"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_15.png");
+  }
+  [data-product=fifa][data-current-theme="16"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_16.png");
+  }
+  [data-product=fifa][data-current-theme="17"] .theme-selector.dropdown button::before {
+    background-image: url("../../../images/kia/pdp/fifa/sec03_chipicon_17.png");
+  }
 }
 /*# sourceMappingURL=theme-selectors.css.map */

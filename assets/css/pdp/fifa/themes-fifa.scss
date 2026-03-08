@@ -1,258 +1,138 @@
 /* ========================================
    Themes - FIFA
    ======================================== */
-[data-product='fifa'] .themes-header {
-  position: relative;
-  width: 100%;
-  max-width: 1900px;
-  margin: 0 auto -46px;
-  padding: 64px 0 100px;
-  text-align: center;
-  background-image: url('../../../images/kia/pdp/fifa/details/themes-header_bg.png');
-  background-position: top center;
-  z-index: 1;
-}
-[data-product='fifa'] .themes-header .themes-title {
-  margin-bottom: 24px;
-}
-[data-product='fifa'] .themes-header .themes-subtitle {
-  color: #000;
-}
+[data-product='fifa'] {
 
-[data-product='fifa'] .themes-cards-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 132px 20px;
-  background-image: url('../../../images/kia/pdp/fifa/details/img_sec02_bg.png');
-  background-size: cover;
-}
+  // 1. Theme Header
+  section.themes {
+    .themes-header {
+      position: relative;
+      width: 100%;
+      max-width: 1900px;
+      margin: 0 auto -46px;
+      padding: 64px 0 100px;
+      text-align: center;
+      background-image: url('../../../images/kia/pdp/fifa/themes-header_bg.png');
+      background-position: top center;
+      z-index: 1;
 
-[data-product='fifa'] .themes-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
+      .themes-title {
+        margin-bottom: 24px;
+      }
 
-  max-width: 1588px;
-  margin: 0 auto;
-  list-style: none;
-}
-[data-product='fifa'] .card {
-  position: relative;
-  width: 100%;
-  max-width: 258px;
-  aspect-ratio: 258 / 447;
-  isolation: isolate;
-}
+      .themes-subtitle {
+        color: #000;
+      }
 
-[data-product='fifa'] .card-layer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s;
-}
-[data-product='fifa'] .card-layer img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  -webkit-user-drag: none;
-  user-select: none;
-}
-[data-product='fifa'] .layer-active {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-}
-[data-product='fifa'] .layer-inactive {
-  width: 100%;
-  height: auto;
-  z-index: 0;
-  opacity: 1;
-  visibility: visible;
-}
-[data-product='fifa'] .card.pick .card-layer {
-  width: 100%;
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-}
-[data-product='fifa'][data-current-theme='01'] .card[data-theme='01'] .layer-active,
-[data-product='fifa'][data-current-theme='02'] .card[data-theme='02'] .layer-active,
-[data-product='fifa'][data-current-theme='03'] .card[data-theme='03'] .layer-active,
-[data-product='fifa'][data-current-theme='04'] .card[data-theme='04'] .layer-active,
-[data-product='fifa'][data-current-theme='05'] .card[data-theme='05'] .layer-active {
-  opacity: 1;
-  visibility: visible;
-}
-[data-product='fifa'][data-current-theme='01'] .card[data-theme='01'] .layer-inactive,
-[data-product='fifa'][data-current-theme='02'] .card[data-theme='02'] .layer-inactive,
-[data-product='fifa'][data-current-theme='03'] .card[data-theme='03'] .layer-inactive,
-[data-product='fifa'][data-current-theme='04'] .card[data-theme='04'] .layer-inactive,
-[data-product='fifa'][data-current-theme='05'] .card[data-theme='05'] .layer-inactive {
-  opacity: 0;
-  visibility: hidden;
-}
-
-[data-product='fifa'] .card .card-contents {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1;
-  aspect-ratio: 258 / 193;
-  padding: clamp(12px, 10.36%, 20px) clamp(14px, 9.30%, 24px) clamp(14px, 9.43%, 24px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-}
-[data-product='fifa'] .card .card-contents h3 {
-  width: 100%;
-  color: #666;
-  font-size: clamp(20px, 1.5cqw, 24px);
-  font-style: normal;
-  font-weight: 600;
-}
-[data-product='fifa'] .card .card-contents p {
-  width: 100%;
-  color: #B8B8B8;
-  font-size: clamp(14px, 1cqw, 16px);
-}
-[data-product='fifa'][data-current-theme='01'] .card[data-theme='01'] .card-contents h3,
-[data-product='fifa'][data-current-theme='02'] .card[data-theme='02'] .card-contents h3,
-[data-product='fifa'][data-current-theme='03'] .card[data-theme='03'] .card-contents h3,
-[data-product='fifa'][data-current-theme='04'] .card[data-theme='04'] .card-contents h3,
-[data-product='fifa'][data-current-theme='05'] .card[data-theme='05'] .card-contents h3 {
-  color: #000;
-}
-[data-product='fifa'][data-current-theme='01'] .card[data-theme='01'] .card-contents p,
-[data-product='fifa'][data-current-theme='02'] .card[data-theme='02'] .card-contents p,
-[data-product='fifa'][data-current-theme='03'] .card[data-theme='03'] .card-contents p,
-[data-product='fifa'][data-current-theme='04'] .card[data-theme='04'] .card-contents p,
-[data-product='fifa'][data-current-theme='05'] .card[data-theme='05'] .card-contents p {
-  color: #888;
-}
-[data-product='fifa'] .card.pick .card-contents {
-  justify-content: center;
-  gap: 23%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-[data-product='fifa'] .card.pick .card-contents h3 {
-  text-align: center;
-  color: #B2B8BD;
-}
-[data-product='fifa'] .card.pick .card-contents p {
-  text-align: center;
-  color: #B2B8BD;
-}
-
-/* 체크 뱃지 */
-[data-product='fifa'] .themes-cards-grid .card::after {
-  content: '';
-  position: absolute;
-  top: 5%;
-  right: 8.6%;
-  z-index: 10; /* 최상단 */
-
-  width: 22px;
-  height: 22px;
-  background-image: url(../../../images/kia/pdp/fifa/icons/icon_card_selected.png);
-  background-position: center center;
-  background-size: contain;
-
-  /* Animation Init */
-  opacity: 0;
-  transform: scale(0.5);
-  transition:
-    opacity 0.2s,
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  pointer-events: none; /* 클릭 통과 */
-}
-[data-product='fifa'][data-current-theme='01'] .card[data-theme='01']::after,
-[data-product='fifa'][data-current-theme='02'] .card[data-theme='02']::after,
-[data-product='fifa'][data-current-theme='03'] .card[data-theme='03']::after,
-[data-product='fifa'][data-current-theme='04'] .card[data-theme='04']::after,
-[data-product='fifa'][data-current-theme='05'] .card[data-theme='05']::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* 화면이 좀 작아지면 (Tablet): 3x2 구조 */
-@media (max-width: 1200px) {
-  [data-product='fifa'] .themes-cards-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 한 줄에 3개 */
-    max-width: 790px;
+      // 모바일 미디어 쿼리
+      @media screen and (max-width: 769px) {
+        margin: 0 auto -41px;
+        padding: 35px 0 80px;
+        background-size: cover;
+      }
+    }
   }
-}
-@media screen and (max-width: 769px) {
-  [data-product='fifa'] section.themes .themes-header {
-    position: relative;
-    max-width: 1900px;
-    margin: 0 auto -41px;
-    padding: 35px 0 80px;
-    text-align: center;
+
+  // 2. Theme Cards Wrapper
+  .themes-cards-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 132px 20px;
+    background-image: url('../../../images/kia/pdp/fifa/sec02_bg.png');
     background-size: cover;
-  }
-  [data-product='fifa'] .themes-title {
-    color: #000;
-    font-size: 24px;
-    letter-spacing: -0.48px;
-  }
-  [data-product='fifa'] .themes-subtitle {
-    margin-top: 8px;
-    font-size: 14px;
-    letter-spacing: -0.28px;
+
+    @media screen and (max-width: 769px) {
+      padding: 40px 20px 16px;
+      background-image: url('../../../images/kia/pdp/fifa/sec02_bg_mo.png');
+      background-position: bottom center;
+    }
   }
 
-  [data-product='fifa'] .themes-cards-wrapper {
-    padding: 36px 20px;
-  }
-  [data-product='fifa'] .themes-cards-grid {
-    gap: 12px;
-  }
-  [data-product='fifa'] .card {
-    max-width: 100%;
-    aspect-ratio: 156 / 184;
-  }
-  [data-product='fifa'] .card .card-contents {
-    aspect-ratio: 156 / 92;
-    padding: 0;
+  // 3. Theme Cards Grid
+  .themes-cards-grid {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-  }
-  [data-product='fifa'] .card .card-contents h3 {
-    text-align: center;
-    font-size: clamp(14px, 2.6cqw, 20px);
-  }
-  [data-product='fifa'] .card .card-contents p {
-    text-align: center;
-    font-size: clamp(10px, 2.0cqw, 16px);
-    line-height: 1.4;
-  }
-  [data-product='fifa'] .card.pick .card-contents {
-    gap: 8%;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1430px;
+    margin: 0 auto;
+    list-style: none;
+
+    @media (max-width: 1460px) {
+      max-width: 1024px;
+    }
+
+    @media (max-width: 980px) {
+      gap: 12px;
+    }
+
+    @media screen and (max-width: 366px) {
+      gap: 10px;
+    }
+
+    // 개별 카드 아이템
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      width: 140px;
+      padding: 16px 12px;
+      border-radius: 12px;
+      isolation: isolate;
+
+      &:hover {
+        background-color: #2F2F2F;
+      }
+
+      @media screen and (max-width: 769px) {
+        width: 100px;
+        padding: 12px 0;
+      }
+
+      img {
+        width: 80px;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        -webkit-user-drag: none;
+        user-select: none;
+
+        @media (max-width: 980px) { width: 60px; }
+        @media screen and (max-width: 769px) { width: 40px; }
+      }
+
+      .card-contents {
+        h3 {
+          color: #979797;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.32px;
+          text-align: center;
+
+          @media (max-width: 980px) { font-size: 14px; }
+          @media screen and (max-width: 769px) { letter-spacing: -0.5px; }
+        }
+      }
+    }
   }
 
-  [data-product='fifa'] .themes-cards-grid .card::after {
-    width: 14px;
-    height: 14px;
-    top: 5.5%;
-    right: 7%;
+  // 4. 선택된 활성 카드 테마 자동 생성 로직 (01 ~ 17)
+  $active-theme-selectors: ();
+  @for $i from 1 through 17 {
+    $theme: if($i < 10, '0#{$i}', '#{$i}');
+    // ex) &[data-current-theme='01'] .card[data-theme='01']
+    $sel: unquote("&[data-current-theme='#{$theme}'] .card[data-theme='#{$theme}']");
+    $active-theme-selectors: append($active-theme-selectors, $sel, comma);
   }
-}
 
-@media screen and (max-width: 540px) {
-  [data-product='fifa'] .themes-cards-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+  #{$active-theme-selectors} {
+    background-color: #EEFF42;
+
+    .card-contents h3 {
+      color: #05141F;
+    }
   }
 }

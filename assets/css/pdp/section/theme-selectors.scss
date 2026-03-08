@@ -1,0 +1,171 @@
+/* ========================================
+   Theme Selectors
+   ======================================== */
+[data-product] {
+
+  /* 트랙 내부 레이아웃 */
+  .theme-selector-wrapper {
+    position: sticky;
+    top: 59px;
+    width: 100%;
+    z-index: 3;
+
+    &.is-sticky {
+      backdrop-filter: blur(3px);
+    }
+
+    // 모바일 대응
+    @media screen and (max-width: 769px) {
+      top: 56px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .theme-selector {
+    max-width: 1634px;
+    margin: 0 auto;
+    padding: 16px 20px;
+
+    /* PC용 buttons */
+    &.buttons {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      -webkit-tap-highlight-color: transparent;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        height: 43px;
+        padding: 0 16px;
+        border-radius: 999px;
+        color: #666666;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.32px;
+        background-color: #f2f4f6;
+        pointer-events: auto;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &::before {
+          flex: none;
+          content: '';
+          display: block;
+          width: 22px;
+          height: 22px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          border-radius: 100%;
+          background-image: url('../../../icons/icon_circle_unchecked.svg');
+        }
+      }
+
+      // 모바일 대응 (숨김 처리)
+      @media screen and (max-width: 769px) {
+        display: none;
+      }
+    }
+
+    /* MO용 dropdown */
+    &.dropdown {
+      display: none;
+      top: 59px;
+      width: 100%;
+      -webkit-tap-highlight-color: transparent;
+
+      @media screen and (max-width: 769px) {
+        display: block;
+        pointer-events: auto;
+
+        .theme-text {
+          position: relative;
+          width: 100%;
+          padding: 14px 48px 14px 18px;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: -0.28px;
+          color: #05141f;
+          border: 1.4px solid #dedede;
+          border-radius: 4px;
+          background-color: #F2F4F6;
+          cursor: pointer;
+          text-align: left;
+          -webkit-tap-highlight-color: transparent;
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 18px;
+            top: 0;
+            bottom: 0;
+            width: 12px;
+            height: 6px;
+            margin: auto 0;
+            background-image: url('../../../icons/icon-angle-down.svg');
+            background-size: 12px 6px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotateX(0deg);
+            transition: transform 0.3s;
+            pointer-events: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .theme-list {
+          position: absolute;
+          top: calc(100% - 17px);
+          left: 20px;
+          right: 20px;
+          list-style: none;
+          max-height: 0;
+          border: 1.4px solid transparent;
+          border-radius: 0 0 4px 4px;
+          z-index: 10;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+
+          li {
+            padding: 12px 18px;
+            font-size: 14px;
+            color: #05141f;
+            cursor: pointer;
+            background-color: #f2f4f6;
+            -webkit-tap-highlight-color: transparent;
+
+            &:first-child {
+              border-radius: 4px 4px 0 0;
+              border-top: none;
+            }
+
+            &:last-child {
+              border-radius: 0 0 4px 4px;
+            }
+
+            &:hover {
+              background-color: #e8e8e8;
+            }
+          }
+        }
+
+        /* 드롭다운 활성화 상태 */
+        &.active {
+          .theme-list {
+            max-height: 300px;
+            border: 1.4px solid #dedede;
+            background-color: #f2f4f6;
+          }
+        }
+      }
+    }
+  }
+}
