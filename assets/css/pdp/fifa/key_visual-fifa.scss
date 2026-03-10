@@ -1,66 +1,88 @@
 /* ========================================
    KV (Key Visual) - FIFA
    ======================================== */
-[data-product='fifa'] .kv-slide .kv-image img {
-  /* 1920 x 1420 */
-  aspect-ratio: 96 / 71;
-}
-[data-product='fifa'] .kv-contents {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1240px;
-  text-align: center;
-  padding: 0 20px;
-  z-index: 10;
-}
-[data-product='fifa'] .kv-contents.white > * {
-  color: #ffffff !important;
-}
-[data-product='fifa'] .kv-contents .kv-logo {
-  display: none;
-  width: 16.11%;
-  height: auto;
-  margin: 0 auto 5%;
-  pointer-events: none;
-  aspect-ratio: 116 / 180;
-}
-[data-product='fifa'] .kv-contents .kv-title {
-  margin-bottom: 20px;
-  color: #05141f;
-  text-align: center;
-  font-size: clamp(24px, 2.9vw, 56px);
-  font-weight: 600;
-  letter-spacing: -0.96px;
-  line-height: 1.2;
-}
-[data-product='fifa'] .kv-contents .kv-subtitle {
-  font-size: clamp(12px, 1.1vw, 20px);
-  font-weight: 400;
-  color: #05141f;
-  letter-spacing: -0.32px;
-  max-width: 866px;
-  margin: 0 auto;
-}
+[data-product='fifa'] section.kv {
+  .kv-swiper {
+    .kv-slide {
+      aspect-ratio: 96 / 71;
+      .kv-image {
+        img {
+          /* 1920 x 1420 */
+          aspect-ratio: 96 / 71;
+        }
+      }
+      .kv-contents {
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1240px;
+        text-align: center;
+        padding: 0 20px;
+        z-index: 10;
+        &.white > * {
+          color: #ffffff !important;
+        }
 
-@media screen and (max-width: 769px) {
-  [data-product='fifa'] .kv-slide .kv-image img {
-    /* 720 x 1260 */
-    aspect-ratio: 4 / 7;
+        .kv-logo {
+          display: none;
+          width: 16.11%;
+          height: auto;
+          margin: 0 auto 5%;
+          pointer-events: none;
+          aspect-ratio: 116 / 180;
+        }
+
+        .kv-title {
+          margin-bottom: 20px;
+          color: #05141f;
+          text-align: center;
+          font-size: clamp(24px, 2.9vw, 56px);
+          font-weight: 600;
+          letter-spacing: -0.96px;
+          line-height: 1.2;
+        }
+
+        .kv-subtitle {
+          font-size: clamp(12px, 1.1vw, 20px);
+          font-weight: 400;
+          color: #05141f;
+          letter-spacing: -0.32px;
+          max-width: 866px;
+          margin: 0 auto;
+        }
+      }
+    }
+    @media screen and (max-width: 769px) {
+      .kv-slide {
+        aspect-ratio: 4 / 7;
+        .kv-image img {
+          /* 720 x 1260 */
+          aspect-ratio: 4 / 7;
+        }
+        .kv-contents {
+          .kv-logo {
+            display: block;
+          }
+
+          .kv-title {
+            font-size: clamp(14px, 5.333vw, 40px);
+            letter-spacing: -0.4px;
+            margin-bottom: 1.2%;
+          }
+
+          .kv-subtitle {
+            font-size: clamp(12px, 3.8vw, 22px);
+            letter-spacing: -0.28px;
+          }
+        }
+      }
+    }
   }
 
-  [data-product='fifa'] .kv-contents .kv-logo {
-    display: block;
-  }
-  [data-product='fifa'] .kv-contents .kv-title {
-    font-size: clamp(14px, 5.333vw, 40px);
-    letter-spacing: -0.4px;
-    margin-bottom: 1.2%;
-  }
-  [data-product='fifa'] .kv-contents .kv-subtitle {
-    font-size: clamp(12px, 3.8vw, 22px);
-    letter-spacing: -0.28px;
+  .paging-wrapper[data-type='dynamic_paging'] {
+    .swiper-pagination {
+    }
   }
 }

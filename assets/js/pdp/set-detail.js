@@ -8,6 +8,7 @@ let themeList = [];
 let currentTheme = '01';
 let thumbnail_swiper = null;
 let kv_swiper = null;
+let kv_swiper_paging_type = 'basic';
 
 // ----------------------------------------
 // Initialization
@@ -38,6 +39,10 @@ function initThemeDetailElements() {
   setDetailCurrentTheme(urlTheme);
 
   setDetailEventListeners();
+
+  kv_swiper_paging_type =
+    document.querySelector('section.kv .paging-wrapper')?.dataset.type ||
+    'basic';
   initDetailSwiper();
 }
 
@@ -199,22 +204,40 @@ function initDetailSwiper() {
   });
 
   // Key Visual swiper
-  kv_swiper = new Swiper('.kv-swiper', {
-    loop: true,
-    // autoplay: {
-    //   delay: 3000, // 3초마다 슬라이드 전환
-    //   disableOnInteraction: false, // 사용자가 조작해도 자동 재생 유지
-    //   pauseOnMouseEnter: true, // 마우스를 올리면 일시 정지 (핵심 옵션)
-    // },
-    pagination: {
-      el: '#kv-swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  if (kv_swiper_paging_type === 'dynamic_paging') {
+    kv_swiper = new Swiper('.kv-swiper', {
+      loop: true,
+      pagination: {
+        el: '#kv-swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    kv_swiper.controller.control = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '#kv-swiper-fraction',
+        type: 'fraction',
+      },
+    });
+  } else {
+    kv_swiper = new Swiper('.kv-swiper', {
+      loop: true,
+      pagination: {
+        el: '#kv-swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 }
 
 // ----------------------------------------

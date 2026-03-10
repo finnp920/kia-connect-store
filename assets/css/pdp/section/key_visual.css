@@ -11,16 +11,38 @@
 [data-product] section.kv .view-mo {
   display: none;
 }
-
-[data-product] .kv-swiper {
+@media screen and (max-width: 769px) {
+  [data-product] section.kv .view-pc {
+    display: none;
+  }
+  [data-product] section.kv .view-mo {
+    display: block;
+  }
+}
+[data-product] section.kv .kv-swiper {
   position: relative;
   height: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
-
-/* swiper-navigation */
-[data-product] .kv-swiper .swiper-navigation {
+[data-product] section.kv .kv-swiper .kv-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  max-width: 1920px;
+}
+[data-product] section.kv .kv-swiper .kv-image img {
+  width: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-product] section.kv {
+  /* swiper-navigation */
+}
+[data-product] section.kv .swiper-navigation {
   position: absolute;
   top: 50%;
   left: 0;
@@ -36,22 +58,33 @@
   align-items: center;
   z-index: 1;
 }
-[data-product] .kv-swiper .swiper-button-prev,
-[data-product] .kv-swiper .swiper-button-next {
+[data-product] section.kv .swiper-navigation .swiper-button-prev,
+[data-product] section.kv .swiper-navigation .swiper-button-next {
   color: #ffffff;
 }
-[data-product] .kv-swiper .swiper-button-prev {
+[data-product] section.kv .swiper-navigation .swiper-button-prev {
   left: 10px;
 }
-[data-product] .kv-swiper .swiper-button-next {
+[data-product] section.kv .swiper-navigation .swiper-button-next {
   right: 10px;
 }
-
-/* swiper-pagination */
-[data-product] .kv-swiper #kv-swiper-pagination {
+@media screen and (max-width: 769px) {
+  [data-product] section.kv .swiper-navigation {
+    display: none;
+  }
+}
+[data-product] section.kv {
+  /* swiper-pagination */
+}
+[data-product] section.kv .swiper-pagination:not(.swiper-pagination-bullets-dynamic) {
   --swiper-pagination-bottom: 30px;
 }
-[data-product] .kv-swiper .swiper-pagination-bullet {
+@media screen and (max-width: 769px) {
+  [data-product] section.kv .swiper-pagination:not(.swiper-pagination-bullets-dynamic) {
+    --swiper-pagination-bottom: 28px;
+  }
+}
+[data-product] section.kv .swiper-pagination:not(.swiper-pagination-bullets-dynamic) .swiper-pagination-bullet {
   width: 56px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -60,37 +93,60 @@
   border-radius: 0;
   opacity: 1;
 }
-[data-product] .kv-swiper .swiper-pagination-bullet-active {
+[data-product] section.kv .swiper-pagination:not(.swiper-pagination-bullets-dynamic) .swiper-pagination-bullet-active {
   background-color: #ffffff;
 }
-
-/* kv-slide */
-[data-product] .kv-swiper .kv-slide {
+[data-product] section.kv {
+  /* dynamic paging */
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] {
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  bottom: 3.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-navigation {
+  width: calc(100% + 80px);
+  height: 40px;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  --swiper-navigation-size: 20px;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-navigation .swiper-button-prev {
+  left: 0;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-navigation .swiper-button-next {
+  right: 0;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination {
   position: relative;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  pointer-events: auto;
-  max-width: 1920px;
+  --swiper-pagination-bottom: 0;
 }
-[data-product] .kv-image img {
-  width: 100%;
-  -webkit-user-drag: none;
-  user-select: none;
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-bullets {
+  left: 0;
+  transform: none;
 }
-
-@media screen and (max-width: 769px) {
-  [data-product] section.kv .view-pc {
-    display: none;
-  }
-  [data-product] section.kv .view-mo {
-    display: block;
-  }
-  [data-product] .kv-swiper #kv-swiper-pagination {
-    --swiper-pagination-bottom: 28px;
-  }
-  [data-product] .kv-swiper .swiper-navigation {
-    display: none;
-  }
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-bullets > .swiper-pagination-bullet {
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-size: 10px;
 }
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-fraction {
+  flex: none;
+  display: flex;
+  justify-content: right;
+  gap: 2px;
+  width: 45px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -0.32px;
+}
+/*# sourceMappingURL=key_visual.css.map */

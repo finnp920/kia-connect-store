@@ -1,0 +1,161 @@
+/* ========================================
+   KV (Key Visual)
+   ======================================== */
+[data-product] section.kv {
+  position: relative;
+  background-color: #ffffff;
+
+  .view-pc {
+    display: block;
+  }
+  .view-mo {
+    display: none;
+  }
+  @media screen and (max-width: 769px) {
+    .view-pc {
+      display: none;
+    }
+    .view-mo {
+      display: block;
+    }
+  }
+
+  .kv-swiper {
+    position: relative;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .kv-slide {
+      position: relative;
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      pointer-events: auto;
+      max-width: 1920px;
+    }
+    .kv-image {
+      img {
+        width: 100%;
+        -webkit-user-drag: none;
+        user-select: none;
+      }
+    }
+  }
+
+  /* swiper-navigation */
+  .swiper-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 48px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #ffffff;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    @media screen and (max-width: 769px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  /* swiper-pagination */
+  .swiper-pagination:not(.swiper-pagination-bullets-dynamic) {
+    --swiper-pagination-bottom: 30px;
+
+    @media screen and (max-width: 769px) {
+      & {
+        --swiper-pagination-bottom: 28px;
+      }
+    }
+    .swiper-pagination-bullet {
+      width: 56px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: background-color 250ms ease-in-out;
+      border-radius: 0;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #ffffff;
+    }
+  }
+
+  /* dynamic paging */
+  .paging-wrapper[data-type='dynamic_paging'] {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    bottom: 3.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    .swiper-navigation {
+      width: calc(100% + 80px);
+      height: 40px;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      --swiper-navigation-size: 20px;
+      .swiper-button-prev {
+        left: 0;
+      }
+      .swiper-button-next {
+        right: 0;
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      --swiper-pagination-bottom: 0;
+      &.swiper-pagination-bullets {
+        left: 0;
+        transform: none;
+        > .swiper-pagination-bullet {
+          --swiper-pagination-color: #ffffff;
+          --swiper-pagination-bullet-inactive-color: #ffffff;
+          --swiper-pagination-bullet-size: 10px;
+        }
+      }
+
+      &.swiper-pagination-fraction {
+        flex: none;
+        display: flex;
+        justify-content: right;
+        gap: 2px;
+        width: 45px;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        letter-spacing: -0.32px;
+      }
+    }
+  }
+}

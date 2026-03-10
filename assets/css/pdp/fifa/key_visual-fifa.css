@@ -1,12 +1,14 @@
 /* ========================================
    KV (Key Visual) - FIFA
    ======================================== */
-[data-product=fifa] .kv-slide .kv-image img {
+[data-product=fifa] section.kv .kv-swiper .kv-slide {
+  aspect-ratio: 96/71;
+}
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-image img {
   /* 1920 x 1420 */
   aspect-ratio: 96/71;
 }
-
-[data-product=fifa] .kv-contents {
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents {
   position: absolute;
   top: 8%;
   left: 50%;
@@ -17,12 +19,10 @@
   padding: 0 20px;
   z-index: 10;
 }
-
-[data-product=fifa] .kv-contents.white > * {
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents.white > * {
   color: #ffffff !important;
 }
-
-[data-product=fifa] .kv-contents .kv-logo {
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-logo {
   display: none;
   width: 16.11%;
   height: auto;
@@ -30,8 +30,7 @@
   pointer-events: none;
   aspect-ratio: 116/180;
 }
-
-[data-product=fifa] .kv-contents .kv-title {
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
   margin-bottom: 20px;
   color: #05141f;
   text-align: center;
@@ -40,8 +39,7 @@
   letter-spacing: -0.96px;
   line-height: 1.2;
 }
-
-[data-product=fifa] .kv-contents .kv-subtitle {
+[data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
   font-size: clamp(12px, 1.1vw, 20px);
   font-weight: 400;
   color: #05141f;
@@ -49,21 +47,23 @@
   max-width: 866px;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 769px) {
-  [data-product=fifa] .kv-slide .kv-image img {
+  [data-product=fifa] section.kv .kv-swiper .kv-slide {
+    aspect-ratio: 4/7;
+  }
+  [data-product=fifa] section.kv .kv-swiper .kv-slide .kv-image img {
     /* 720 x 1260 */
     aspect-ratio: 4/7;
   }
-  [data-product=fifa] .kv-contents .kv-logo {
+  [data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-logo {
     display: block;
   }
-  [data-product=fifa] .kv-contents .kv-title {
+  [data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
     font-size: clamp(14px, 5.333vw, 40px);
     letter-spacing: -0.4px;
     margin-bottom: 1.2%;
   }
-  [data-product=fifa] .kv-contents .kv-subtitle {
+  [data-product=fifa] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
     font-size: clamp(12px, 3.8vw, 22px);
     letter-spacing: -0.28px;
   }

@@ -1,3 +1,5 @@
+@use 'sass:string';
+@use 'sass:list';
 /* ========================================
    Themes - FIFA
    ======================================== */
@@ -122,10 +124,11 @@
   // 4. 선택된 활성 카드 테마 자동 생성 로직 (01 ~ 17)
   $active-theme-selectors: ();
   @for $i from 1 through 17 {
-    $theme: if($i < 10, '0#{$i}', '#{$i}');
+    $theme: '#{$i}';
+    @if $i < 10 { $theme: '0#{$i}'; }
     // ex) &[data-current-theme='01'] .card[data-theme='01']
-    $sel: unquote("&[data-current-theme='#{$theme}'] .card[data-theme='#{$theme}']");
-    $active-theme-selectors: append($active-theme-selectors, $sel, comma);
+    $sel: string.unquote("&[data-current-theme='#{$theme}'] .card[data-theme='#{$theme}']");
+    $active-theme-selectors: list.append($active-theme-selectors, $sel, comma);
   }
 
   #{$active-theme-selectors} {

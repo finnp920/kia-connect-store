@@ -5,7 +5,8 @@
 
   // 테마별 배경 이미지 자동 생성
   @for $i from 1 through 17{
-    $theme: if($i < 10, '0#{$i}', '#{$i}');
+    $theme: '#{$i}';
+    @if $i < 10 { $theme: '0#{$i}'; }
     // 부모의 속성 참조(&)를 이용해 1~5까지 자동 렌더링
     @at-root &[data-current-theme='#{$theme}'] section.playful {
       background-image: url('../../../images/kia/pdp/fifa/sec03_bg_#{$theme}.png');

@@ -1,3 +1,5 @@
+@use 'sass:string';
+@use 'sass:list';
 @import url('go_to_list.css');
 @import url('product-view-override.css');
 @import url('section/key_visual.css');
@@ -114,9 +116,10 @@ main {
 // 반복문: 테마 01 ~ 17에 대한 속성 자동 생성 및 그룹화
 $theme-selectors: ();
 @for $i from 1 through 17 {
-  $theme: if($i < 10, '0#{$i}', '#{$i}');
-  $sel: unquote("[data-product][data-current-theme='#{$theme}'] :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage) > [data-theme='#{$theme}']");
-  $theme-selectors: append($theme-selectors, $sel, comma);
+  $theme: '#{$i}';
+  @if $i < 10 { $theme: '0#{$i}'; }
+  $sel: string.unquote("[data-product][data-current-theme='#{$theme}'] :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage) > [data-theme='#{$theme}']");
+  $theme-selectors: list.append($theme-selectors, $sel, comma);
 }
 
 #{$theme-selectors} {
@@ -153,9 +156,10 @@ $theme-selectors: ();
 // 반복문: xfade 01 ~ 17에 대한 속성 자동 생성 및 그룹화
 $xfade-selectors: ();
 @for $i from 1 through 17 {
-  $theme: if($i < 10, '0#{$i}', '#{$i}');
-  $sel: unquote("[data-current-theme='#{$theme}'] .xfade-item[data-theme='#{$theme}']");
-  $xfade-selectors: append($xfade-selectors, $sel, comma);
+  $theme: '#{$i}';
+  @if $i < 10 { $theme: '0#{$i}'; }
+  $sel: string.unquote("[data-current-theme='#{$theme}'] .xfade-item[data-theme='#{$theme}']");
+  $xfade-selectors: list.append($xfade-selectors, $sel, comma);
 }
 
 #{$xfade-selectors} {
@@ -169,14 +173,14 @@ $xfade-selectors: ();
 /* ========================================
    Another
    ======================================== */
-//[data-product]:not([data-product='fifa']) {
-//  .sticky-layout {
-//    position: relative;
-//    padding-top: 91px;
-//
-//    // SCSS 미디어 쿼리 중첩 활용
-//    @media screen and (max-width: 769px) {
-//      padding-top: 24px;
-//    }
-//  }
-//}
+[data-product]:not([data-product='fifa']) {
+  .sticky-layout {
+    position: relative;
+    padding-top: 91px;
+
+    // SCSS 미디어 쿼리 중첩 활용
+    @media screen and (max-width: 769px) {
+      padding-top: 24px;
+    }
+  }
+}
