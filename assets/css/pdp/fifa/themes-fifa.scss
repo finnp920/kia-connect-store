@@ -43,10 +43,11 @@
     background-image: url('../../../images/kia/pdp/fifa/sec02_bg.png');
     background-size: cover;
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 700px) {
       padding: 40px 20px 16px;
       background-image: url('../../../images/kia/pdp/fifa/sec02_bg_mo.png');
       background-position: bottom center;
+      background-size: auto;
     }
   }
 
