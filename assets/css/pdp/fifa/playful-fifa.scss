@@ -36,7 +36,7 @@
       text-align: center;
 
       @media screen and (max-width: 769px) {
-        padding-top: 48px;
+        padding-top: 0;
         padding-bottom: 4px;
       }
     }
@@ -126,7 +126,7 @@
       }
       &[data-theme="06"] {
         .badge-1 { border-color: #232323; background-color: #FFE400; color: #232323; }
-        .badge-2 { border-color: #232323; background-color: #232323; color: #FFFFFF; }
+        .badge-2 { border-color: #686868; background-color: #232323; color: #FFFFFF; }
         .badge-3 { border-color: #EB403E; background-color: #EB403E; color: #E0E5FF; }
       }
       &[data-theme="07"] {

@@ -9,6 +9,7 @@ let currentTheme = '01';
 let thumbnail_swiper = null;
 let kv_swiper = null;
 let kv_swiper_paging_type = 'basic';
+let kv_swiper_paging_bars = null;
 
 // ----------------------------------------
 // Initialization
@@ -205,24 +206,41 @@ function initDetailSwiper() {
 
   // Key Visual swiper
   if (kv_swiper_paging_type === 'dynamic_paging') {
+    kv_swiper_paging_bars = document.querySelector('.swiper-pagination-bars');
+
     kv_swiper = new Swiper('.kv-swiper', {
       loop: true,
       pagination: {
-        el: '#kv-swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
+        el: '#kv-swiper-fraction',
+        type: 'fraction',
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+      on: {
+        slideChange: ({ realIndex, slides }) => {
+          const total = slides.length;
+          const index = realIndex + 1;
+          let barActiveIndex = 3;
+          if (index < 3) barActiveIndex = index;
+          else if (index === total - 1) barActiveIndex = 4;
+          else if (index === total) barActiveIndex = 5;
 
-    kv_swiper.controller.control = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '#kv-swiper-fraction',
-        type: 'fraction',
+          kv_swiper_paging_bars.dataset.activeIndex = barActiveIndex;
+
+          if (index === 1 || index === 3) {
+            kv_swiper_paging_bars.classList.remove('prev');
+          } else if (index === total || index === 4) {
+            kv_swiper_paging_bars.classList.add('prev');
+          }
+
+          if (index === total || index === total - 2) {
+            kv_swiper_paging_bars.classList.remove('next');
+          } else if (index === 1 || index === total - 3) {
+            kv_swiper_paging_bars.classList.add('next');
+          }
+        },
       },
     });
   } else {

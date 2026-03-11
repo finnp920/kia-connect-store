@@ -72,6 +72,7 @@
         }
 
         .theme-list {
+          overflow-y: auto;
           li {
             display: flex;
             flex-direction: row;

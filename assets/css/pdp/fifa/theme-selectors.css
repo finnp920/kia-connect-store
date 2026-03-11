@@ -175,6 +175,9 @@
     height: 24px;
     background-size: contain;
   }
+  [data-product=fifa] .theme-selector.dropdown .theme-list {
+    overflow-y: auto;
+  }
   [data-product=fifa] .theme-selector.dropdown .theme-list li {
     display: flex;
     flex-direction: row;

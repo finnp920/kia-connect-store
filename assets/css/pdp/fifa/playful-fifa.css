@@ -173,7 +173,7 @@
 }
 @media screen and (max-width: 769px) {
   [data-product=fifa] section.playful .playful-header {
-    padding-top: 48px;
+    padding-top: 0;
     padding-bottom: 4px;
   }
 }
@@ -314,7 +314,7 @@
   color: #232323;
 }
 [data-product=fifa] .playful-banner .banner-item[data-theme="06"] .badge-2 {
-  border-color: #232323;
+  border-color: #686868;
   background-color: #232323;
   color: #FFFFFF;
 }

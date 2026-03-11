@@ -128,17 +128,6 @@
 [data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination {
   position: relative;
   --swiper-pagination-bottom: 0;
-}
-[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-bullets {
-  left: 0;
-  transform: none;
-}
-[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-bullets > .swiper-pagination-bullet {
-  --swiper-pagination-color: #ffffff;
-  --swiper-pagination-bullet-inactive-color: #ffffff;
-  --swiper-pagination-bullet-size: 10px;
-}
-[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination.swiper-pagination-fraction {
   flex: none;
   display: flex;
   justify-content: right;
@@ -148,5 +137,53 @@
   font-size: 16px;
   font-style: normal;
   letter-spacing: -0.32px;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars .paging-bar {
+  width: 32px;
+  height: 4px;
+  background-color: #ffffff;
+  opacity: 0.3;
+  transition: background-color 250ms ease-in-out;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars.prev .paging-bar:first-child {
+  background: linear-gradient(90deg, #000 0%, #D9D9D9 100%);
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars.next .paging-bar:last-child {
+  background: linear-gradient(90deg, #D9D9D9 0%, #000 100%);
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars[data-active-index="1"] .paging-bar:nth-child(1) {
+  opacity: 1;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars[data-active-index="2"] .paging-bar:nth-child(2) {
+  opacity: 1;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars[data-active-index="3"] .paging-bar:nth-child(3) {
+  opacity: 1;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars[data-active-index="4"] .paging-bar:nth-child(4) {
+  opacity: 1;
+}
+[data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars[data-active-index="5"] .paging-bar:nth-child(5) {
+  opacity: 1;
+}
+@media screen and (max-width: 769px) {
+  [data-product] section.kv .paging-wrapper[data-type=dynamic_paging] {
+    bottom: 30px;
+  }
+  [data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination {
+    width: 35px;
+    font-size: 12px;
+  }
+  [data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination-bars .paging-bar {
+    width: 30px;
+  }
 }
 /*# sourceMappingURL=key_visual.css.map */
