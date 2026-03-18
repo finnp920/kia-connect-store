@@ -14,6 +14,7 @@ root
 └── assets/
     ├── css/
     │   └── pdp/                                  # [PDP] 제품 상세 전용 스타일
+    │       ├── /section/reasons-n.scss           # [수정] reasons-n 섹션 w-full-l-mo, w-full-r-mo 추가
     │       └── kbo/                              # [추가] KBO 테마 전용 스타일
     │           ├── _variables.scss                 # 공통 변수 ($theme-name, $theme-option-count)
     │           ├── ...                      
@@ -39,3 +40,6 @@ root
 - KBO 전용 SCSS 모듈 **신규 추가** (`@use` / `@forward` 기반 구조)
 - `_variables.scss`로 공통 변수 단일 관리 (`$theme-name`, `$theme-option-count`)
 - 10개 구단 테마 셀렉터 색상 대응 (구단별 팀 컬러 적용)
+
+### `assets/css/pdp/section/reasons-n.scss`
+- `.w-full-l-mo`, `.w-full-r-mo` 셀렉터를 `.w-full-mo`와 함께 추가 (좌/우 여백 독립 제어 대응)
