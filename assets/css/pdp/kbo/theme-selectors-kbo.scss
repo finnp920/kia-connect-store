@@ -1,0 +1,181 @@
+@use './variables' as *;
+@use 'sass:list';
+
+/* ========================================
+   Theme Selectors - KBO
+   ======================================== */
+[data-product='#{$theme-name}'] {
+  .theme-selector {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &.buttons {
+      justify-content: center;
+
+      button {
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: #CFCFCF;
+        border: 1px solid #5E5E5E;
+        background-color: #3B3B3B;
+
+        &::before {
+          flex: none;
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-size: contain;
+          background-image: url("../../../icons/icon_circle_unchecked_666.svg");
+        }
+      }
+    }
+  }
+
+  &[data-current-theme='01'] button[data-theme='01'] {
+    background-color: #EA0029;
+    border-color: #EA0029;
+  }
+  &[data-current-theme='02'] button[data-theme='02'] {
+    background-color: #0032A0;
+    border-color: #0032A0;
+  }
+  &[data-current-theme='03'] button[data-theme='03'] {
+    background-color: #A50034;
+    border-color: #A50034;
+  }
+  &[data-current-theme='04'] button[data-theme='04'] {
+    background-color: #000038;
+    border-color: #000038;
+  }
+  &[data-current-theme='05'] button[data-theme='05'] {
+    background-color: #231815;
+    border-color: #231815;
+  }
+  &[data-current-theme='06'] button[data-theme='06'] {
+    background-color: #CF0022;
+    border-color: #CF0022;
+  }
+  &[data-current-theme='07'] button[data-theme='07'] {
+    background-color: #D00F31;
+    border-color: #D00F31;
+  }
+  &[data-current-theme='08'] button[data-theme='08'] {
+    background-color: #F05122;
+    border-color: #F05122;
+  }
+  &[data-current-theme='09'] button[data-theme='09'] {
+    background-color: #071D3D;
+    border-color: #071D3D;
+  }
+  &[data-current-theme='10'] button[data-theme='10'] {
+    background-color: #87001E;
+    border-color: #87001E;
+  }
+
+  @for $i from 1 through $theme-option-count {
+    $num: "#{$i}";
+    @if $i < 10 { $num: "0#{$i}"; }
+
+    &[data-current-theme='#{$num}'] {
+      .theme-selector.buttons {
+        button[data-theme='#{$num}'] {
+          color: #ffffff;
+          &::before {
+            background-image: url("../../../icons/icon_circle_checked_fff.svg");
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    .theme-selector {
+      &.dropdown {
+
+        .theme-text {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.40);
+          background-color: #171717;
+          color: #fff;
+
+          &::before {
+            flex: none;
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+          }
+
+          &::after {
+            background-image: url('../../../icons/icon-angle-down_white.svg');
+          }
+        }
+
+        .theme-list {
+          overflow-y: auto;
+          transition-property: border;
+          transition-delay: 0.1s;
+          li {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            background-color: #171717;
+
+            &:hover {
+              background-color: rgba(23, 23, 23, 0.4);
+            }
+
+            &::before {
+              flex: none;
+              content: '';
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-size: contain;
+            }
+
+            @for $i from 1 through $theme-option-count {
+              $num: "#{$i}";
+              @if $i < 10 { $num: "0#{$i}"; }
+
+              &[value='#{$num}']::before {
+                background-image: url('../../../images/kia/pdp/#{$theme-name}/sec02_imgicon_#{$num}.png');
+              }
+            }
+          }
+        }
+
+        &.active {
+          .theme-list {
+            border: 1px solid rgba(255, 255, 255, 0.40);
+            background-color: #171717;
+            transition-delay: 0s;
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through $theme-option-count {
+      $num: "#{$i}";
+      @if $i < 10 { $num: "0#{$i}"; }
+
+      &[data-current-theme='#{$num}'] {
+        .theme-selector.dropdown {
+          .theme-text::before {
+            background-image: url('../../../images/kia/pdp/#{$theme-name}/sec02_imgicon_#{$num}.png');
+          }
+        }
+      }
+    }
+  }
+}
+

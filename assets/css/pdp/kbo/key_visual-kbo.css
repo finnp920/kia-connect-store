@@ -1,0 +1,55 @@
+/* ========================================
+   KV (Key Visual) - KBO
+   ======================================== */
+[data-product=kbo] section.kv .kv-swiper .kv-slide {
+  aspect-ratio: 1920/876;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-image img {
+  aspect-ratio: 1920/876;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents {
+  position: absolute;
+  top: 16.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
+  margin-bottom: 20px;
+  color: #Ffffff;
+  text-align: center;
+  font-size: clamp(24px, 2.9vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
+  font-size: clamp(12px, 1.1vw, 20px);
+  font-weight: 400;
+  color: #Ffffff;
+  letter-spacing: -0.32px;
+  max-width: 866px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.kv .kv-swiper .kv-slide {
+    aspect-ratio: 720/940;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-image img {
+    aspect-ratio: 720/940;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
+    font-size: clamp(14px, 5.333vw, 40px);
+    letter-spacing: -0.4px;
+    margin-bottom: 1.2%;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
+    font-size: clamp(12px, 3.8vw, 22px);
+    letter-spacing: -0.28px;
+  }
+}
+/*# sourceMappingURL=key_visual-kbo.css.map */

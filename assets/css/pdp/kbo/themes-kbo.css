@@ -1,0 +1,122 @@
+/* ========================================
+   Themes - KBO
+   ======================================== */
+[data-product=kbo] section.themes .themes-header {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto -31px;
+  padding: 64px 0 100px;
+  text-align: center;
+  background-image: url("../../../images/kia/pdp/kbo/themes-header_bg.png");
+  background-position: top center;
+  z-index: 1;
+}
+[data-product=kbo] section.themes .themes-header .themes-title {
+  margin-bottom: 24px;
+}
+[data-product=kbo] section.themes .themes-header .themes-subtitle {
+  color: #000;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.themes .themes-header {
+    margin: 0 auto -41px;
+    padding: 35px 0 80px;
+    background-size: cover;
+  }
+}
+[data-product=kbo] .themes-cards-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 20px 70px;
+  background-color: #0B0B0B;
+}
+@media screen and (max-width: 700px) {
+  [data-product=kbo] .themes-cards-wrapper {
+    padding: 40px 20px 16px;
+  }
+}
+[data-product=kbo] .themes-cards-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style: none;
+}
+@media screen and (max-width: 580px) {
+  [data-product=kbo] .themes-cards-grid {
+    justify-content: start;
+    gap: 12px;
+  }
+}
+[data-product=kbo] .themes-cards-grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  isolation: isolate;
+  border: 2.73px solid #0B0B0B;
+}
+[data-product=kbo] .themes-cards-grid .card:hover {
+  background-color: #2F2F2F;
+  border-color: #2F2F2F;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card {
+    gap: 6px;
+    width: 100px;
+    padding: 16px 0;
+    border-width: 1px;
+  }
+}
+@media screen and (max-width: 580px) {
+  [data-product=kbo] .themes-cards-grid .card {
+    width: calc((100% - 24px) / 3);
+  }
+}
+[data-product=kbo] .themes-cards-grid .card img {
+  width: 110px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+@media (max-width: 980px) {
+  [data-product=kbo] .themes-cards-grid .card img {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card img {
+    width: 48px;
+  }
+}
+[data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+  color: #979797;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  text-align: center;
+}
+@media (max-width: 980px) {
+  [data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+    letter-spacing: -0.5px;
+  }
+}
+[data-product=kbo][data-current-theme="01"] .card[data-theme="01"], [data-product=kbo][data-current-theme="02"] .card[data-theme="02"], [data-product=kbo][data-current-theme="03"] .card[data-theme="03"], [data-product=kbo][data-current-theme="04"] .card[data-theme="04"], [data-product=kbo][data-current-theme="05"] .card[data-theme="05"], [data-product=kbo][data-current-theme="06"] .card[data-theme="06"], [data-product=kbo][data-current-theme="07"] .card[data-theme="07"], [data-product=kbo][data-current-theme="08"] .card[data-theme="08"], [data-product=kbo][data-current-theme="09"] .card[data-theme="09"], [data-product=kbo][data-current-theme="10"] .card[data-theme="10"] {
+  border-color: #F9D75A;
+}
+[data-product=kbo][data-current-theme="01"] .card[data-theme="01"] .card-contents h3, [data-product=kbo][data-current-theme="02"] .card[data-theme="02"] .card-contents h3, [data-product=kbo][data-current-theme="03"] .card[data-theme="03"] .card-contents h3, [data-product=kbo][data-current-theme="04"] .card[data-theme="04"] .card-contents h3, [data-product=kbo][data-current-theme="05"] .card[data-theme="05"] .card-contents h3, [data-product=kbo][data-current-theme="06"] .card[data-theme="06"] .card-contents h3, [data-product=kbo][data-current-theme="07"] .card[data-theme="07"] .card-contents h3, [data-product=kbo][data-current-theme="08"] .card[data-theme="08"] .card-contents h3, [data-product=kbo][data-current-theme="09"] .card[data-theme="09"] .card-contents h3, [data-product=kbo][data-current-theme="10"] .card[data-theme="10"] .card-contents h3 {
+  color: #ffffff;
+}
+/*# sourceMappingURL=themes-kbo.css.map */

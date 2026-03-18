@@ -1,0 +1,138 @@
+@use './variables' as *;
+@use 'sass:string';
+@use 'sass:list';
+
+/* ========================================
+   Themes - KBO
+   ======================================== */
+[data-product='#{$theme-name}'] {
+
+  // 1. Theme Header
+  section.themes {
+    .themes-header {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto -31px;
+      padding: 64px 0 100px;
+      text-align: center;
+      background-image: url('../../../images/kia/pdp/#{$theme-name}/themes-header_bg.png');
+      background-position: top center;
+      z-index: 1;
+
+      .themes-title {
+        margin-bottom: 24px;
+      }
+
+      .themes-subtitle {
+        color: #000;
+      }
+
+      // 모바일 미디어 쿼리
+      @media screen and (max-width: 769px) {
+        margin: 0 auto -41px;
+        padding: 35px 0 80px;
+        background-size: cover;
+      }
+    }
+  }
+
+  // 2. Theme Cards Wrapper
+  .themes-cards-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 100px 20px 70px;
+    background-color: #0B0B0B;
+
+    @media screen and (max-width: 700px) {
+      padding: 40px 20px 16px;
+    }
+  }
+
+  // 3. Theme Cards Grid
+  .themes-cards-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    list-style: none;
+
+    @media screen and (max-width: 580px) {
+      justify-content: start;
+      gap: 12px;
+    }
+
+    // 개별 카드 아이템
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 20px;
+      border-radius: 12px;
+      isolation: isolate;
+      border: 2.73px solid #0B0B0B;
+
+      &:hover {
+        background-color: #2F2F2F;
+        border-color: #2F2F2F;
+      }
+
+      @media screen and (max-width: 769px) {
+        gap: 6px;
+        width: 100px;
+        padding: 16px 0;
+        border-width: 1px;
+      }
+      @media screen and (max-width: 580px) {
+        width: calc((100% - 24px) / 3);
+      }
+
+      img {
+        width: 110px;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        -webkit-user-drag: none;
+        user-select: none;
+
+        @media (max-width: 980px) { width: 60px; }
+        @media screen and (max-width: 769px) { width: 48px; }
+      }
+
+      .card-contents {
+        h3 {
+          color: #979797;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.32px;
+          text-align: center;
+
+          @media (max-width: 980px) { font-size: 14px; }
+          @media screen and (max-width: 769px) { letter-spacing: -0.5px; }
+        }
+      }
+    }
+  }
+
+  // 4. 선택된 활성 카드 테마 자동 생성 로직 (01 ~ 17)
+  $active-theme-selectors: ();
+
+  @for $i from 1 through $theme-option-count {
+    $theme: '#{$i}';
+    @if $i < 10 { $theme: '0#{$i}'; }
+    // ex) &[data-current-theme='01'] .card[data-theme='01']
+    $sel: string.unquote("&[data-current-theme='#{$theme}'] .card[data-theme='#{$theme}']");
+    $active-theme-selectors: list.append($active-theme-selectors, $sel, comma);
+  }
+
+  #{$active-theme-selectors} {
+    border-color: #F9D75A;
+
+    .card-contents h3 {
+      color: #ffffff;
+    }
+  }
+}

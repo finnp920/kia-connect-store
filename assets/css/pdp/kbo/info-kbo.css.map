@@ -1,0 +1,1 @@
+{"version":3,"sources":["pdp/kbo/info-kbo.scss"],"names":[],"mappings":"AAEA;AAAA;AAAA;AAIA;EACE","sourcesContent":["@use './variables' as *;\n\n/* ========================================\n   Info - KBO\n   ======================================== */\n\n[data-product='#{$theme-name}'] section.info {\n  background-color: #ffffff;\n}"],"file":"info-kbo.css"}

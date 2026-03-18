@@ -1,0 +1,66 @@
+@use './variables' as *;
+
+/* ========================================
+   Playful - KBO
+   ======================================== */
+[data-product='#{$theme-name}'] {
+  section.playful {
+    padding-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-image: url("../../../images/kia/pdp/#{$theme-name}/sec03_bg.png");
+    transition: background-image 0.5s ease-in-out;
+
+    @media screen and (max-width: 769px) {
+      padding-top: 18px;
+      background-image: url("../../../images/kia/pdp/#{$theme-name}/sec03_bg_mo.png");
+    }
+
+    .playful-header {
+      padding-top: 102px;
+      padding-bottom: 84px;
+      text-align: center;
+
+      @media screen and (max-width: 769px) {
+        padding-top: 0;
+        padding-bottom: 12px;
+      }
+    }
+
+    .playful-content {
+      padding-bottom: 133px;
+    }
+  }
+
+  // 3. Titles & Texts
+  .playful-title {
+    margin-bottom: 24px;
+    padding-bottom: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 8px;
+      font-size: 26px;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  // 7. Content Items
+  .playful-content-item {
+    > h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    > p {
+      color: #ffffff;
+      &.warning {
+        color: #B4B4B4;
+      }
+    }
+  }
+}

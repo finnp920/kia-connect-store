@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+/* ========================================
+   N Reasons Why you can’t miss out - KBO
+   ======================================== */
+
+[data-product='#{$theme-name}'] section.reasons-n {
+  background-color: #ffffff;
+
+  .reasons-n-contents {
+    padding-top: 125px;
+    padding-bottom: 132px;
+  }
+
+  @media screen and (max-width: 769px) {
+    .reasons-n-contents {
+      padding-top: 48px;
+      padding-bottom: 65px;
+    }
+
+
+    ul.reasons {
+      li.reason-item:nth-child(1),
+      li.reason-item:nth-child(2),{
+        .reason-image picture img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

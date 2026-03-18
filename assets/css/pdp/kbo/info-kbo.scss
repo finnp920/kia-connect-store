@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+/* ========================================
+   Info - KBO
+   ======================================== */
+
+[data-product='#{$theme-name}'] section.info {
+  background-color: #ffffff;
+}

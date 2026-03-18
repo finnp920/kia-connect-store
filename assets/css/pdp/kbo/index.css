@@ -1,0 +1,514 @@
+@charset "UTF-8";
+/* ========================================
+   KV (Key Visual) - KBO
+   ======================================== */
+[data-product=kbo] section.kv .kv-swiper .kv-slide {
+  aspect-ratio: 1920/876;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-image img {
+  aspect-ratio: 1920/876;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents {
+  position: absolute;
+  top: 16.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
+  margin-bottom: 20px;
+  color: #Ffffff;
+  text-align: center;
+  font-size: clamp(24px, 2.9vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+}
+[data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
+  font-size: clamp(12px, 1.1vw, 20px);
+  font-weight: 400;
+  color: #Ffffff;
+  letter-spacing: -0.32px;
+  max-width: 866px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.kv .kv-swiper .kv-slide {
+    aspect-ratio: 720/940;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-image img {
+    aspect-ratio: 720/940;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-title {
+    font-size: clamp(14px, 5.333vw, 40px);
+    letter-spacing: -0.4px;
+    margin-bottom: 1.2%;
+  }
+  [data-product=kbo] section.kv .kv-swiper .kv-slide .kv-contents .kv-subtitle {
+    font-size: clamp(12px, 3.8vw, 22px);
+    letter-spacing: -0.28px;
+  }
+}
+
+/* ========================================
+   Themes - KBO
+   ======================================== */
+[data-product=kbo] section.themes .themes-header {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto -31px;
+  padding: 64px 0 100px;
+  text-align: center;
+  background-image: url("../../../images/kia/pdp/kbo/themes-header_bg.png");
+  background-position: top center;
+  z-index: 1;
+}
+[data-product=kbo] section.themes .themes-header .themes-title {
+  margin-bottom: 24px;
+}
+[data-product=kbo] section.themes .themes-header .themes-subtitle {
+  color: #000;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.themes .themes-header {
+    margin: 0 auto -41px;
+    padding: 35px 0 80px;
+    background-size: cover;
+  }
+}
+[data-product=kbo] .themes-cards-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 20px 70px;
+  background-color: #0B0B0B;
+}
+@media screen and (max-width: 700px) {
+  [data-product=kbo] .themes-cards-wrapper {
+    padding: 40px 20px 16px;
+  }
+}
+[data-product=kbo] .themes-cards-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style: none;
+}
+@media screen and (max-width: 580px) {
+  [data-product=kbo] .themes-cards-grid {
+    justify-content: start;
+    gap: 12px;
+  }
+}
+[data-product=kbo] .themes-cards-grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  isolation: isolate;
+  border: 2.73px solid #0B0B0B;
+}
+[data-product=kbo] .themes-cards-grid .card:hover {
+  background-color: #2F2F2F;
+  border-color: #2F2F2F;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card {
+    gap: 6px;
+    width: 100px;
+    padding: 16px 0;
+    border-width: 1px;
+  }
+}
+@media screen and (max-width: 580px) {
+  [data-product=kbo] .themes-cards-grid .card {
+    width: calc((100% - 24px) / 3);
+  }
+}
+[data-product=kbo] .themes-cards-grid .card img {
+  width: 110px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+@media (max-width: 980px) {
+  [data-product=kbo] .themes-cards-grid .card img {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card img {
+    width: 48px;
+  }
+}
+[data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+  color: #979797;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  text-align: center;
+}
+@media (max-width: 980px) {
+  [data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .themes-cards-grid .card .card-contents h3 {
+    letter-spacing: -0.5px;
+  }
+}
+[data-product=kbo][data-current-theme="01"] .card[data-theme="01"], [data-product=kbo][data-current-theme="02"] .card[data-theme="02"], [data-product=kbo][data-current-theme="03"] .card[data-theme="03"], [data-product=kbo][data-current-theme="04"] .card[data-theme="04"], [data-product=kbo][data-current-theme="05"] .card[data-theme="05"], [data-product=kbo][data-current-theme="06"] .card[data-theme="06"], [data-product=kbo][data-current-theme="07"] .card[data-theme="07"], [data-product=kbo][data-current-theme="08"] .card[data-theme="08"], [data-product=kbo][data-current-theme="09"] .card[data-theme="09"], [data-product=kbo][data-current-theme="10"] .card[data-theme="10"] {
+  border-color: #F9D75A;
+}
+[data-product=kbo][data-current-theme="01"] .card[data-theme="01"] .card-contents h3, [data-product=kbo][data-current-theme="02"] .card[data-theme="02"] .card-contents h3, [data-product=kbo][data-current-theme="03"] .card[data-theme="03"] .card-contents h3, [data-product=kbo][data-current-theme="04"] .card[data-theme="04"] .card-contents h3, [data-product=kbo][data-current-theme="05"] .card[data-theme="05"] .card-contents h3, [data-product=kbo][data-current-theme="06"] .card[data-theme="06"] .card-contents h3, [data-product=kbo][data-current-theme="07"] .card[data-theme="07"] .card-contents h3, [data-product=kbo][data-current-theme="08"] .card[data-theme="08"] .card-contents h3, [data-product=kbo][data-current-theme="09"] .card[data-theme="09"] .card-contents h3, [data-product=kbo][data-current-theme="10"] .card[data-theme="10"] .card-contents h3 {
+  color: #ffffff;
+}
+
+/* ========================================
+   Playful - KBO
+   ======================================== */
+[data-product=kbo] section.playful {
+  padding-top: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-image: url("../../../images/kia/pdp/kbo/sec03_bg.png");
+  transition: background-image 0.5s ease-in-out;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.playful {
+    padding-top: 18px;
+    background-image: url("../../../images/kia/pdp/kbo/sec03_bg_mo.png");
+  }
+}
+[data-product=kbo] section.playful .playful-header {
+  padding-top: 102px;
+  padding-bottom: 84px;
+  text-align: center;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.playful .playful-header {
+    padding-top: 0;
+    padding-bottom: 12px;
+  }
+}
+[data-product=kbo] section.playful .playful-content {
+  padding-bottom: 133px;
+}
+[data-product=kbo] .playful-title {
+  margin-bottom: 24px;
+  padding-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .playful-title {
+    margin-bottom: 8px;
+    font-size: 26px;
+    letter-spacing: -0.48px;
+  }
+}
+[data-product=kbo] .playful-content-item > h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+[data-product=kbo] .playful-content-item > p {
+  color: #ffffff;
+}
+[data-product=kbo] .playful-content-item > p.warning {
+  color: #B4B4B4;
+}
+
+/* ========================================
+   N Reasons Why you can’t miss out - KBO
+   ======================================== */
+[data-product=kbo] section.reasons-n {
+  background-color: #ffffff;
+}
+[data-product=kbo] section.reasons-n .reasons-n-contents {
+  padding-top: 125px;
+  padding-bottom: 132px;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] section.reasons-n .reasons-n-contents {
+    padding-top: 48px;
+    padding-bottom: 65px;
+  }
+  [data-product=kbo] section.reasons-n ul.reasons li.reason-item:nth-child(1) .reason-image picture img,
+  [data-product=kbo] section.reasons-n ul.reasons li.reason-item:nth-child(2) .reason-image picture img {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   Info - KBO
+   ======================================== */
+[data-product=kbo] section.info {
+  background-color: #ffffff;
+}
+
+/* ========================================
+   Theme Selectors - KBO
+   ======================================== */
+[data-product=kbo] .theme-selector {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+[data-product=kbo] .theme-selector.buttons {
+  justify-content: center;
+}
+[data-product=kbo] .theme-selector.buttons button {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #CFCFCF;
+  border: 1px solid #5E5E5E;
+  background-color: #3B3B3B;
+}
+[data-product=kbo] .theme-selector.buttons button::before {
+  flex: none;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-image: url("../../../icons/icon_circle_unchecked_666.svg");
+}
+[data-product=kbo][data-current-theme="01"] button[data-theme="01"] {
+  background-color: #EA0029;
+  border-color: #EA0029;
+}
+[data-product=kbo][data-current-theme="02"] button[data-theme="02"] {
+  background-color: #0032A0;
+  border-color: #0032A0;
+}
+[data-product=kbo][data-current-theme="03"] button[data-theme="03"] {
+  background-color: #A50034;
+  border-color: #A50034;
+}
+[data-product=kbo][data-current-theme="04"] button[data-theme="04"] {
+  background-color: #000038;
+  border-color: #000038;
+}
+[data-product=kbo][data-current-theme="05"] button[data-theme="05"] {
+  background-color: #231815;
+  border-color: #231815;
+}
+[data-product=kbo][data-current-theme="06"] button[data-theme="06"] {
+  background-color: #CF0022;
+  border-color: #CF0022;
+}
+[data-product=kbo][data-current-theme="07"] button[data-theme="07"] {
+  background-color: #D00F31;
+  border-color: #D00F31;
+}
+[data-product=kbo][data-current-theme="08"] button[data-theme="08"] {
+  background-color: #F05122;
+  border-color: #F05122;
+}
+[data-product=kbo][data-current-theme="09"] button[data-theme="09"] {
+  background-color: #071D3D;
+  border-color: #071D3D;
+}
+[data-product=kbo][data-current-theme="10"] button[data-theme="10"] {
+  background-color: #87001E;
+  border-color: #87001E;
+}
+[data-product=kbo][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="06"] .theme-selector.buttons button[data-theme="06"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="06"] .theme-selector.buttons button[data-theme="06"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="07"] .theme-selector.buttons button[data-theme="07"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="07"] .theme-selector.buttons button[data-theme="07"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="08"] .theme-selector.buttons button[data-theme="08"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="08"] .theme-selector.buttons button[data-theme="08"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="09"] .theme-selector.buttons button[data-theme="09"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="09"] .theme-selector.buttons button[data-theme="09"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+[data-product=kbo][data-current-theme="10"] .theme-selector.buttons button[data-theme="10"] {
+  color: #ffffff;
+}
+[data-product=kbo][data-current-theme="10"] .theme-selector.buttons button[data-theme="10"]::before {
+  background-image: url("../../../icons/icon_circle_checked_fff.svg");
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .theme-selector.dropdown .theme-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: #171717;
+    color: #fff;
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-text::before {
+    flex: none;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-text::after {
+    background-image: url("../../../icons/icon-angle-down_white.svg");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list {
+    overflow-y: auto;
+    transition-property: border;
+    transition-delay: 0.1s;
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    background-color: #171717;
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li:hover {
+    background-color: rgba(23, 23, 23, 0.4);
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li::before {
+    flex: none;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="01"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_01.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="02"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_02.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="03"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_03.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="04"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_04.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="05"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_05.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="06"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_06.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="07"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_07.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="08"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_08.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="09"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_09.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown .theme-list li[value="10"]::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_10.png");
+  }
+  [data-product=kbo] .theme-selector.dropdown.active .theme-list {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: #171717;
+    transition-delay: 0s;
+  }
+  [data-product=kbo][data-current-theme="01"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_01.png");
+  }
+  [data-product=kbo][data-current-theme="02"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_02.png");
+  }
+  [data-product=kbo][data-current-theme="03"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_03.png");
+  }
+  [data-product=kbo][data-current-theme="04"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_04.png");
+  }
+  [data-product=kbo][data-current-theme="05"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_05.png");
+  }
+  [data-product=kbo][data-current-theme="06"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_06.png");
+  }
+  [data-product=kbo][data-current-theme="07"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_07.png");
+  }
+  [data-product=kbo][data-current-theme="08"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_08.png");
+  }
+  [data-product=kbo][data-current-theme="09"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_09.png");
+  }
+  [data-product=kbo][data-current-theme="10"] .theme-selector.dropdown .theme-text::before {
+    background-image: url("../../../images/kia/pdp/kbo/sec02_imgicon_10.png");
+  }
+}
+
+[data-product=kbo] .sticky-layout {
+  padding-top: 20px !important;
+  background-color: #2d3240;
+}
+@media screen and (max-width: 769px) {
+  [data-product=kbo] .sticky-layout {
+    padding-top: 0 !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */

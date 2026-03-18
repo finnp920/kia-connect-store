@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@use "./variables" as *;
+@use "key_visual-kbo";
+@use "themes-kbo";
+@use "playful-kbo";
+@use "reasons-n-kbo";
+@use "info-kbo";
+@use "theme-selectors-kbo";
+
+[data-product='#{$theme-name}'] {
+  .sticky-layout {
+    padding-top: 20px !important;
+    background-color: #2d3240;
+
+    // SCSS 미디어 쿼리 중첩 활용
+    @media screen and (max-width: 769px) {
+      padding-top: 0 !important;
+    }
+  }
+}
