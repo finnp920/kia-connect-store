@@ -27,14 +27,14 @@
           margin-bottom: 20px;
           color: #Ffffff;
           text-align: center;
-          font-size: clamp(24px, 2.9vw, 56px);
+          font-size: clamp(40px, 3.11vw, 60px);
           font-weight: 600;
           letter-spacing: -0.96px;
           line-height: 1.2;
         }
 
         .kv-subtitle {
-          font-size: clamp(12px, 1.1vw, 20px);
+          font-size: clamp(16px, 1.24vw, 24px);
           font-weight: 400;
           color: #Ffffff;
           letter-spacing: -0.32px;
@@ -52,13 +52,13 @@
         .kv-contents {
 
           .kv-title {
-            font-size: clamp(14px, 5.333vw, 40px);
+            font-size: clamp(24px, 6.7vw, 48px);
             letter-spacing: -0.4px;
             margin-bottom: 1.2%;
           }
 
           .kv-subtitle {
-            font-size: clamp(12px, 3.8vw, 22px);
+            font-size: clamp(14px, 3.8vw, 22px);
             letter-spacing: -0.28px;
           }
         }

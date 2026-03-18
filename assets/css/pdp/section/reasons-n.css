@@ -111,8 +111,12 @@
 }
 
 @media screen and (max-width: 769px) {
+  .w-full-l-mo,
   .w-full-mo {
     margin-left: -20px;
+  }
+  .w-full-r-mo,
+  .w-full-mo {
     margin-right: -20px;
   }
   [data-product] section.reasons-n .reasons-n-header {

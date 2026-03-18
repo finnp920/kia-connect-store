@@ -39,13 +39,13 @@
     padding-bottom: 0;
     color: #ffffff;
     text-align: center;
-    font-size: 60px;
+    font-size: clamp(40px, 3.11vw, 60px);
     font-weight: 600;
     letter-spacing: -1.2px;
 
     @media screen and (max-width: 769px) {
       margin-bottom: 8px;
-      font-size: 26px;
+      font-size: clamp(24px, 6.7vw, 48px);
       letter-spacing: -0.48px;
     }
   }
