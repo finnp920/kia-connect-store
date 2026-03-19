@@ -14,7 +14,7 @@
       }
       .kv-contents {
         position: absolute;
-        top: 16.5%;
+        top: 16.4%;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
@@ -24,7 +24,7 @@
         z-index: 10;
 
         .kv-title {
-          margin-bottom: 20px;
+          margin-bottom: 2.1%;
           color: #Ffffff;
           text-align: center;
           font-size: clamp(40px, 3.11vw, 60px);
@@ -50,11 +50,10 @@
           aspect-ratio: 720 / 940;
         }
         .kv-contents {
-
           .kv-title {
             font-size: clamp(24px, 6.7vw, 48px);
             letter-spacing: -0.4px;
-            margin-bottom: 1.2%;
+            margin-bottom: 9.4%;
           }
 
           .kv-subtitle {
