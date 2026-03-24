@@ -133,7 +133,7 @@
     }
 
     .swiper-pagination {
-      position: relative;
+      position: static;
       --swiper-pagination-bottom: 0;
       flex: none;
       display: flex;

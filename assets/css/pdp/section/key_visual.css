@@ -126,7 +126,7 @@
   right: 0;
 }
 [data-product] section.kv .paging-wrapper[data-type=dynamic_paging] .swiper-pagination {
-  position: relative;
+  position: static;
   --swiper-pagination-bottom: 0;
   flex: none;
   display: flex;
