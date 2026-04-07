@@ -1,14 +1,15 @@
+@charset "UTF-8";
 /* 1. 라이브러리 스타일 */
-@import url('library/jquery-ui.min.css');
-@import url('library/aos.css');
-
+@import url("library/jquery-ui.min.css");
+@import url("library/aos.css");
 /* 2. 공통/기본 스타일 */
-@import url('basic.css');
-@import url('common.css');
-@import url('contents.css');
-@import url('popup.css');
-@import url('product.css');
-@import url('pdp_detail.css');
-@import url('kia/kia-font.css');
-@import url('kia/kia.css');
-@import url('buttons.css');
+@import url("basic.css");
+@import url("common.css");
+@import url("contents.css");
+@import url("popup.css");
+@import url("product.css");
+@import url("pdp_detail.css");
+@import url("kia/kia-font.css");
+@import url("kia/kia.css");
+@import url("buttons.css");
+/*# sourceMappingURL=index.css.map */

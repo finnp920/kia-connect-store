@@ -7,7 +7,7 @@
 }
 [data-product] .theme-selector-wrapper {
   position: sticky;
-  top: 59px;
+  top: 5.6rem;
   width: 100%;
   z-index: 3;
 }
@@ -16,8 +16,12 @@
 }
 @media screen and (max-width: 769px) {
   [data-product] .theme-selector-wrapper {
-    top: 56px;
     margin-bottom: 8px;
+  }
+}
+@media (min-width: 1121px) {
+  [data-product] .theme-selector-wrapper {
+    top: 8rem;
   }
 }
 [data-product] .theme-selector {

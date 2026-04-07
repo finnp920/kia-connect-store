@@ -9,13 +9,17 @@
 /*반응형, 브라우저 크기가 1204px 이상일때*/
 /*넓이, 높이 자동 계산함수*/
 .contentHeaderCase {
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-top: 10.6rem;
   width: 100%;
   height: 22rem;
   background-size: cover;
   background-position: center;
+  transition: top 0.3s ease-in-out;
+}
+@media (min-width: 1025px) {
+  .contentHeaderCase {
+    margin-top: 8rem;
+  }
 }
 @media (min-width: 1025px) {
   .contentHeaderCase {
@@ -24,21 +28,29 @@
 }
 .contentHeaderCase.case01 {
   background-image: url("/kr/assets/images/kia/contents/header01.jpg");
+  top: 10.6rem;
 }
 .contentHeaderCase.case02 {
   background-image: url("/kr/assets/images/kia/contents/header02.jpg");
+  top: 10.6rem;
 }
 .contentHeaderCase.case03 {
   background-image: url("/kr/assets/images/kia/contents/header03.jpg");
+  top: 10.6rem;
 }
 .contentHeaderCase.case04 {
   background-image: url("/kr/assets/images/kia/contents/header04.jpg");
+  top: 10.6rem;
 }
 .contentHeaderCase.case05 {
   background-image: url("/kr/assets/images/kia/contents/header05.jpg");
+  top: 10.6rem;
 }
 .contentHeaderCase.case06 {
   background-image: url("/kr/assets/images/kia/contents/header06.jpg");
+}
+.contentHeaderCase.case07 {
+  background-image: url("/kr/assets/images/kia/keybg/event-key.png");
 }
 
 .contentsTypeNew {
@@ -136,7 +148,7 @@
 .contentsTypeNew.caseAs ul.case01 li {
   position: relative;
   padding: 80px 30px 25px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   background-repeat: no-repeat;
   background-position: 30px 24px;
@@ -210,7 +222,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   font-size: 1.4rem;
   font-weight: 400;
   color: #666666;
@@ -246,7 +258,7 @@
   background-position: 40px 5px;
 }
 .contentsTypeNew.caseAs ul.case02 li + li {
-  border-left: 1px solid #DEDEDE;
+  border-left: 1px solid #dedede;
 }
 @media (max-width: 768px) {
   .contentsTypeNew.caseAs ul.case02 li {
@@ -329,7 +341,7 @@
   width: calc(50% - 10px);
   height: 120px;
   padding-left: 110px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   background: url("/kr/assets/images/kia/contents/icon06.svg") no-repeat 30px center;
   line-height: 118px;
@@ -373,12 +385,14 @@
   position: relative;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
 }
 @media (max-width: 500px) {
   .contentsTypeNew.caseServiceinfo .serviceInfoHeader {
     font-size: 14px;
   }
+}
+.contentsTypeNew.caseServiceinfo .serviceInfoHeader {
+  color: #fff;
 }
 .contentsTypeNew.caseServiceinfo .serviceInfoHeader::before {
   z-index: -1;
@@ -474,7 +488,7 @@
   width: calc(33.3333333333% - 12px);
 }
 .contentsTypeNew.caseRegist .connectStore ul li:first-child img {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 .contentsTypeNew.caseRegist .connectStore ul li img {
   display: block;
@@ -542,7 +556,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   font-size: 20px;
   line-height: 1.5;
@@ -647,8 +661,8 @@
   position: absolute;
   left: 40px;
   right: 40px;
-  border-top: 1px solid #9BA1A5;
-  border-bottom: 1px solid #9BA1A5;
+  border-top: 1px solid #9ba1a5;
+  border-bottom: 1px solid #9ba1a5;
 }
 .contentsTypeNew.caseUsageDetail .caseVideo a {
   display: block;
@@ -668,7 +682,7 @@
   top: 50px;
   width: 51px;
   height: 57px;
-  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 .contentsTypeNew.caseUsageDetail .caseFunction .functionTab {
   overflow-x: auto;
@@ -702,7 +716,7 @@
 .contentsTypeNew.caseUsageDetail .caseFunction .functionTab > ul button {
   margin-right: 20px;
   font-size: 18px;
-  color: #9EA1A2;
+  color: #9ea1a2;
   cursor: pointer;
 }
 .contentsTypeNew.caseUsageDetail .caseFunction .functionTab > ul li.active button {
@@ -739,7 +753,7 @@
 }
 .contentsTypeNew.caseUsageDetail .caseFunction .functionDetail .item img {
   max-width: 100%;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   box-sizing: border-box;
 }
@@ -804,7 +818,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #DEDEDE;
+  background: #dedede;
 }
 .contentsTypeNew.caseUsageDetail .caseStreaming > section:nth-of-type(2)::before {
   left: calc((100% - 100px) / 4);
@@ -842,7 +856,7 @@
   overflow: hidden;
 }
 .contentsTypeNew.caseUsageDetail .caseStreaming > section > div a.caseBorder {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 .contentsTypeNew.caseUsageDetail .caseStreaming > section > div a + a {
   margin-left: 15px;
@@ -870,7 +884,7 @@
     margin-top: 40px;
     margin-left: 50px;
     padding-left: 50px;
-    border-left: 1px solid #DEDEDE;
+    border-left: 1px solid #dedede;
   }
 }
 @media (max-width: 680px) {
@@ -905,21 +919,15 @@
   .contentsTypeNew.caseUsageDetail .caseStreaming > section + section {
     margin-top: 28px !important;
   }
-}
-@media (max-width: 500px) {
   .contentsTypeNew.caseUsageDetail .caseStreaming > section:last-of-type {
     margin-left: 15px;
     padding-left: 0;
     border-left: 0;
   }
-}
-@media (max-width: 500px) {
   .contentsTypeNew.caseUsageDetail .caseStreaming > section h3 {
     margin-bottom: 18px;
     width: 100% !important;
   }
-}
-@media (max-width: 500px) {
   .contentsTypeNew.caseUsageDetail .caseStreaming > section > div strong {
     margin-bottom: 8px;
   }
@@ -945,7 +953,7 @@
 }
 @media (max-width: 680px) {
   .contentsTypeNew.caseUsageDetail .caseFunction .functionDetail .itemWrap .item,
-.contentsTypeNew.caseUsageDetail .caseFunction .functionDetail .itemWrap p {
+  .contentsTypeNew.caseUsageDetail .caseFunction .functionDetail .itemWrap p {
     width: 100%;
   }
   .contentsTypeNew.caseUsageDetail .caseFunction .functionDetail .itemWrap .item + .item {
@@ -1026,7 +1034,7 @@
 .contentsTypeNew.caseRspa2 .info ul li img {
   display: block;
   width: 100%;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
 }
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -1036,7 +1044,7 @@
   .contentsTypeNew.caseRspa2 .info ul li + li + li + li {
     margin-top: 15px;
   }
-  .contentsTypeNew.caseRspa2 .info ul li:nth-of-type(3n+1) {
+  .contentsTypeNew.caseRspa2 .info ul li:nth-of-type(3n + 1) {
     margin-left: 0;
   }
 }
@@ -1050,7 +1058,7 @@
   .contentsTypeNew.caseRspa2 .info ul li + li + li {
     margin-top: 15px;
   }
-  .contentsTypeNew.caseRspa2 .info ul li:nth-of-type(2n+1) {
+  .contentsTypeNew.caseRspa2 .info ul li:nth-of-type(2n + 1) {
     margin-left: 0;
   }
   .contentsTypeNew.caseRspa2 .info ul li strong {
@@ -1085,7 +1093,7 @@
   position: relative;
   width: calc(33.3333333333% - 8px);
   padding: 30px 30px 110px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   background-repeat: no-repeat;
   background-position: left 30px bottom 30px;
@@ -1101,7 +1109,7 @@
 }
 .contentsTypeNew.caseRspa2 .howtobuy > div > * b:first-child {
   font-size: 14px;
-  color: #9EA1A2;
+  color: #9ea1a2;
 }
 .contentsTypeNew.caseRspa2 .howtobuy > div > * strong {
   display: block;
@@ -1177,7 +1185,7 @@
   width: calc(20% - 15px);
   height: unset;
   padding: 20px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   font-size: 16px;
 }
@@ -1295,7 +1303,7 @@
 .contentsTypeNew .storeGuideItem > header strong {
   padding: 0 0 13px 5px;
   font-size: 12px;
-  color: #FF0000;
+  color: #ff0000;
 }
 @media (max-width: 500px) {
   .contentsTypeNew .storeGuideItem > header strong {
@@ -1323,17 +1331,16 @@
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .contentsTypeNew .storeGuideItem ul li img:not(.noBorder) {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 .contentsTypeNew .storeGuideItem ul li > b {
   display: block;
   margin: 20px 0 8px;
   font-size: 14px;
-  color: #9EA1A2;
+  color: #9ea1a2;
 }
 .contentsTypeNew .storeGuideItem ul li strong {
   font-size: 16px;
@@ -1373,13 +1380,13 @@
   width: 400px;
   height: 4px;
   border-radius: 0;
-  background: #C3C6C8;
+  background: #c3c6c8;
   opacity: 1 !important;
 }
 .contentsTypeNew .storeGuideItem .swiper-horizontal > .swiper-scrollbar .swiper-scrollbar-drag,
 .contentsTypeNew .storeGuideItem .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
   border-radius: 0;
-  background: #05141F;
+  background: #05141f;
 }
 .contentsTypeNew .storeGuideItem .swiper-scrollbar-after-space {
   height: 68px;
@@ -1406,7 +1413,7 @@
 }
 @media (max-width: 1400px) {
   .contentsTypeNew .storeGuideItem .swiper-button-next,
-.contentsTypeNew .storeGuideItem .swiper-button-prev {
+  .contentsTypeNew .storeGuideItem .swiper-button-prev {
     display: none;
   }
 }
@@ -1463,7 +1470,7 @@
     width: 100%;
   }
   .contentsTypeNew .storeGuideItem .swiper-horizontal > .swiper-scrollbar,
-.contentsTypeNew .storeGuideItem .swiper-scrollbar.swiper-scrollbar-horizontal {
+  .contentsTypeNew .storeGuideItem .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: calc(100% - 40px);
   }
   .contentsTypeNew .storeGuideItem .swiper-scrollbar-after-space {
@@ -1601,7 +1608,7 @@
 }
 @media (max-width: 640px) {
   .contentsTypeNew .caseMagazineView > div,
-.contentsTypeNew .caseMagazineView img {
+  .contentsTypeNew .caseMagazineView img {
     width: 100%;
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -1646,7 +1653,7 @@
   width: 100%;
   top: 0;
   height: 1px;
-  background: #DEDEDE;
+  background: #dedede;
 }
 .contentsTypeNew .caseService header h2 {
   font-size: 16px;
@@ -1692,7 +1699,7 @@
   position: relative;
   width: calc(50% - 5px);
   padding: 120px 50px 30px 30px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 6px;
   background-repeat: no-repeat;
   background-position: 30px 30px;
@@ -1795,14 +1802,14 @@
   max-width: 192rem;
   text-align: left;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 .serviceInfoTop:first-child {
   margin-top: 0;
 }
-@media (max-width: 1025px) {
+@media (min-width: 1025px) {
   .serviceInfoTop {
-    margin-top: 4.9rem;
+    margin-top: 14rem;
   }
 }
 
@@ -1820,13 +1827,9 @@
 .comp_1x_w_v_c_e2 {
   position: relative;
 }
-.comp_1x_w_v_c_e2 .text_wrap {
-  padding-top: 6rem;
-}
 @media (max-width: 1025px) {
   .comp_1x_w_v_c_e2 .text_wrap {
     display: block;
-    padding-top: 5rem;
   }
 }
 .comp_1x_w_v_c_e2 .text_wrap .text_area {
@@ -1931,7 +1934,7 @@
   font-size: 1.4rem;
   padding: 1.4rem 2rem;
   background-color: #fff;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   cursor: pointer;
   text-align: left;
@@ -1955,7 +1958,7 @@
   transform: translate(-50%, 0);
   width: 1.4rem;
   height: 0.8rem;
-  displaY: block;
+  display: block;
   background: url("/kr/assets/images/common/icon-notice.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1968,7 +1971,7 @@
   width: 100%;
   top: 4.4rem;
   left: 0;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   background-color: #fff;
   z-index: 1;
@@ -1983,6 +1986,14 @@
   font-size: 1.6rem;
   line-height: 2;
   box-sizing: border-box;
+}
+.selectInner .cont-select .list-member li button {
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .selectInner .cont-select .list-member li button {
+    font-size: 1.6rem;
+  }
 }
 .selectInner .cont-select .list-member li a {
   display: block;
@@ -2028,7 +2039,7 @@
   font-size: 1.4rem;
   padding: 1.4rem 2rem;
   background-color: #fff;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   cursor: pointer;
   text-align: left;
@@ -2052,7 +2063,7 @@
   transform: translate(-50%, 0);
   width: 1.4rem;
   height: 0.8rem;
-  displaY: block;
+  display: block;
   background: url("/kr/assets/images/common/icon-notice.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -2065,7 +2076,7 @@
   width: 100%;
   top: 4.4rem;
   left: 0;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   background-color: #fff;
   z-index: 1;
@@ -2126,7 +2137,7 @@
   font-size: 1.4rem;
   padding: 1.4rem 2rem;
   background-color: #fff;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   cursor: pointer;
   text-align: left;
@@ -2150,7 +2161,7 @@
   transform: translate(-50%, 0);
   width: 1.4rem;
   height: 0.8rem;
-  displaY: block;
+  display: block;
   background: url("/kr/assets/images/common/icon-notice.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -2163,7 +2174,7 @@
   width: 100%;
   top: 4.4rem;
   left: 0;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-sizing: border-box;
   background-color: #fff;
   z-index: 1;
@@ -2192,5 +2203,87 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.util-area {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+@media (min-width: 768px) {
+  .util-area {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.util-area .btn-wish {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url("../images/common/icon-wishlist-d.svg") no-repeat center/100% auto;
+  background-size: contain;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.util-area .btn-wish.active {
+  background-image: url("/kr/assets/images/common/icon-wishlist-s.svg");
+}
+@media (min-width: 768px) {
+  .util-area .btn-wish {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.util-area .btn-share {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../images/common/icon_share.png) no-repeat center/100% auto;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .util-area .btn-share {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.util-area .btn-reviewCount {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  font-size: 1.8rem;
+  color: #05141f;
+  cursor: pointer;
+  border-bottom: 1px solid #05141f;
+}
+
+.utilBtnArea {
+  width: 100%;
+  padding: 4rem 0;
+}
+@media (min-width: 768px) {
+  .utilBtnArea {
+    padding: 4rem 0;
+  }
+}
+.utilBtnArea .utilBtnInner {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .utilBtnArea .utilBtnInner {
+    padding: 0;
+  }
+}
+.utilBtnArea .utilBtnInner .util-area {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=contents.css.map */

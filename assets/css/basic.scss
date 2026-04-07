@@ -2,6 +2,7 @@
    v2.0 | 20110126 3333
    License: none (public domain)
 */
+
 html,
 body,
 div,
@@ -122,24 +123,23 @@ body {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%; /* Prevent font resizing in IE and iOS */
 }
-
 html {
   font-size: 62.5%;
-}
-html button.disabledBtn,
-html a.disabledBtn {
-  pointer-events: none;
-  background: transparent;
-  opacity: 20%;
-}
 
+  button.disabledBtn,
+  a.disabledBtn {
+    pointer-events: none;
+    background: transparent;
+    opacity: 20%;
+  }
+}
 body {
   font-size: 1.6rem;
 }
-
 html,
 body {
   width: 100%;
+  // overflow-x: hidden;
   box-sizing: border-box;
   line-height: 1.2;
 }
@@ -148,31 +148,29 @@ ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
   margin: 0;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-input:disabled {
-  background-color: #f3f3f3;
+input {
+  &:disabled {
+    background-color: #f3f3f3;
+  }
 }
 
 .pdt30 {
   padding-top: 3rem !important;
 }
-/*# sourceMappingURL=basic.css.map */

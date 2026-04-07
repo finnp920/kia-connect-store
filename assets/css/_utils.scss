@@ -1,0 +1,75 @@
+@use "sass:math";
+
+/*변수*/
+$red: #fa5252;
+
+/*반응형 화면 크기*/
+$mobileSmall: 320px;
+$mobile: 501px;
+$tablet: 768px;
+$desktopMin: 1025px;
+$desktopMax: 1240px;
+
+/*css 디폴트는 모바일이 기준*/
+/*반응형, 브라우저 크기가 300px 이하일때*/
+@mixin mobileSmall {
+  @media (max-width: $mobileSmall) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+@mixin maxmobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 800px 이상일때*/
+/*@media (min-width: $mobile ) and (max-width: $tablet){*/
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin maxtablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin maxdesktop {
+  @media (max-width: $desktopMin) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1025px 이상일때*/
+@mixin desktopMin {
+  @media (min-width: $desktopMin) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1204px 이상일때*/
+@mixin desktopMax {
+  @media (min-width: $desktopMax) {
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+// 기준 화면 너비를 설정 (디자인 기준: 예: 1920px)
+$design-width: 360;
+@function vw($px, $base: $design-width) {
+  @return math.div($px, $base) * 100vw;
+}

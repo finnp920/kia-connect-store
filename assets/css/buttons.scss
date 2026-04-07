@@ -4,9 +4,8 @@
   min-width: 16rem;
   display: flex;
 }
-
 .cut-corner-btn::before {
-  content: "";
+  content: '';
   display: block;
   width: 32px;
   height: 56px;
@@ -15,9 +14,8 @@
   background-repeat: no-repeat;
   background-position: center left;
 }
-
 .cut-corner-btn::after {
-  content: "";
+  content: '';
   display: block;
   width: 32px;
   height: 56px;
@@ -26,7 +24,6 @@
   background-repeat: no-repeat;
   background-position: center right;
 }
-
 .cut-corner-btn-inner {
   height: 56px;
   width: calc(100% - 64px);
@@ -43,15 +40,12 @@
   white-space: nowrap;
   cursor: pointer;
 }
-
 .cut-corner-btn:hover::before,
 .cut-corner-btn:hover::after {
   filter: invert(100%);
 }
-
 .cut-corner-btn:hover .cut-corner-btn-inner {
   border-color: black;
   background-color: black;
   color: white;
 }
-/*# sourceMappingURL=buttons.css.map */

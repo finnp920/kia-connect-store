@@ -1,0 +1,6714 @@
+@charset "UTF-8";
+@use "./utils" as *;
+
+.comp_wide {
+  width: 100%;
+  max-width: 192rem;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 12rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+}
+
+.comp_body {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @media (max-width: 1240px) {
+    padding: 0 2rem;
+  }
+
+  .text_area {
+    margin-top: 4rem;
+    transition: 0.3s;
+
+    @include maxtablet {
+      margin-top: 3rem;
+    }
+
+    h3 {
+      transition: 0.3s;
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 4.8rem;
+
+      @include maxtablet {
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+    }
+
+    h4 {
+      transition: 0.3s;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 3.8rem;
+
+      @include maxtablet {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    h5 {
+      transition: 0.3s;
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 3.4rem;
+
+      @include maxtablet {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      transition: 0.3s;
+
+      @include maxtablet {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+      }
+    }
+
+    .sub {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #0f0b0b;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+.comp_1x_w_v_s_eS {
+  .comp_top {
+    width: 100%;
+    height: 35.5rem;
+    background-color: #000000;
+
+    @media (max-width: 1024px) {
+      height: auto;
+    }
+
+    .text_area {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10rem;
+
+      @media (max-width: 1024px) {
+        display: block;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+      }
+
+      h4 {
+        width: 50%;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 4.8rem;
+        color: #ffffff;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .info {
+        width: 50%;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        color: #ffffff;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          margin-top: 3rem;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .movieArea {
+    position: relative;
+    width: 100%;
+    height: 52rem;
+
+    @media (max-width: 1024px) {
+      height: 40rem;
+    }
+
+    @media (max-width: 768px) {
+      height: 30rem;
+    }
+
+    @media (max-width: 500px) {
+      height: 20rem;
+    }
+  }
+
+  .comp_bottom {
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    background-color: #000000;
+
+    .com_bottm_inner {
+      width: 100%;
+      max-width: 120rem;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .swiper {
+        @media (max-width: 1200px) {
+          padding-right: 2rem;
+        }
+
+        ul {
+          li {
+            width: 220px !important;
+            cursor: pointer;
+
+            @media (max-width: 500px) {
+              width: 200px !important;
+            }
+
+            &:first-child {
+              @media (max-width: 1240px) {
+                margin-left: 2rem;
+              }
+            }
+
+            img {
+              width: 100%;
+              border-radius: 0.6rem;
+            }
+
+            p {
+              margin-top: 3rem;
+              font-size: 1.8rem;
+              font-weight: 400;
+              color: #ffffff;
+              text-align: center;
+
+              @media (max-width: 768px) {
+                margin-top: 2rem;
+              }
+            }
+
+            &.active {
+              img {
+                border: 1px solid #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_s_e1 {
+  border-top: 1px solid #dedede;
+  padding-top: 10rem;
+
+  @media (max-width: 1024px) {
+    padding-top: 7rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+  }
+
+  .image_area {
+    height: 600px;
+    margin-top: 4rem;
+    overflow: hidden;
+
+    @include maxmobile {
+      height: 400px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+      object-fit: cover;
+
+      @include maxmobile {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .bottom {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: #0f0b0b;
+      background-size: 100% 50%;
+      z-index: -1;
+    }
+
+    .text_area {
+      margin-top: 0;
+      padding-top: 4rem;
+
+      h3 {
+        color: #ffffff;
+      }
+
+      p {
+        color: #ffffff;
+      }
+    }
+
+    .contents_area {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      &.reverse {
+        flex-direction: row;
+
+        .text_area {
+          padding-left: 5rem;
+          padding-right: 0;
+
+          @media (max-width: 768px) {
+            padding-left: 0;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      .image_area {
+        width: 50%;
+        height: initial !important;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        img {
+          height: initial !important;
+          border-radius: 0.6rem;
+        }
+      }
+
+      .text_area {
+        width: 50%;
+        padding-right: 4rem;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        h4 {
+          color: #000000;
+        }
+
+        p {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_s_e2 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+
+    .text_area {
+      margin-top: 0;
+    }
+
+    .icon_area {
+      @media (max-width: 900px) {
+        margin-top: 3rem;
+      }
+
+      img {
+        &:last-child {
+          margin-left: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+          width: 7rem;
+          height: 7rem;
+
+          &:last-child {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .image_area {
+    height: 520px;
+    margin-top: 4rem;
+    overflow: hidden;
+
+    @include maxmobile {
+      height: 360px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+      object-fit: cover;
+
+      @include maxmobile {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.comp_1x_b_n_n_e1 {
+  margin-top: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  border-top: 1px solid #dedede;
+
+  @media (max-width: 1024px) {
+    margin-top: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: left;
+    color: #000000;
+  }
+
+  .youtubeArea {
+    position: relative;
+    margin-top: 3.5rem;
+    padding-bottom: 56.25%;
+    /* 16:9 비율인 경우 */
+    /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+    padding-top: 25px;
+    height: 0;
+
+    @media (max-width: 1024px) {
+      margin-top: 2rem;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.comp_1x_b_n_n_e2 {
+  margin-top: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  border-top: 1px solid #dedede;
+
+  @media (max-width: 1024px) {
+    margin-top: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: left;
+    color: #000000;
+  }
+
+  .mp4area {
+    position: relative;
+    margin-top: 3.5rem;
+    padding-bottom: 56.25%;
+    /* 16:9 비율인 경우 */
+    /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+    padding-top: 25px;
+    height: 0;
+
+    @media (max-width: 1024px) {
+      margin-top: 2rem;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.comp_1x_w_v_s_b {
+  .image_area {
+    @include maxmobile {
+      height: 360px;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+
+      @include maxmobile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_c_e1 {
+  position: relative;
+
+  .image_area {
+    @include maxtablet {
+      height: 560px;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+
+      @include maxtablet {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .comp_body {
+    &.layer_up {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .text_area {
+        margin-top: 9rem;
+
+        @include maxdesktop {
+          margin-top: 6rem;
+        }
+      }
+    }
+
+    &.no_layer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10rem;
+
+      .text_area {
+        width: 38rem;
+      }
+
+      @include maxdesktop {
+        position: relative;
+        left: initial;
+        transform: initial;
+        display: block;
+
+        .text_area {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_o_b {
+  position: relative;
+
+  .image_area {
+    @include maxtablet {
+      height: 560px;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+
+      @include maxtablet {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .comp_body {
+    .text_area {
+      color: #ffffff !important;
+    }
+
+    &.layer_up {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .text_area {
+        margin-top: 9rem;
+
+        @include maxdesktop {
+          margin-top: 6rem;
+        }
+      }
+    }
+
+    &.bottom {
+      .text_area {
+        color: #000000 !important;
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_c_b {
+  position: relative;
+
+  .image_area {
+    height: 700px;
+
+    @include maxtablet {
+      height: 560px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      width: 100%;
+      transition: 0.3s;
+      object-fit: cover;
+    }
+  }
+
+  .comp_body {
+    &.layer_up {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .text_area {
+        margin-top: 9rem;
+
+        @include maxdesktop {
+          margin-top: 6rem;
+        }
+      }
+    }
+
+    &.no_layer {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin-bottom: 10rem;
+
+      .text_area {
+        width: 38rem;
+        margin-top: 25rem;
+      }
+
+      .icon_area {
+        margin-top: 3rem;
+
+        img {
+          margin-right: 2rem;
+        }
+      }
+
+      @include maxdesktop {
+        position: relative;
+        left: initial;
+        transform: initial;
+        display: block;
+
+        .text_area {
+          width: 100%;
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_b_v_s_b {
+  .image_area {
+    @include maxmobile {
+      height: 360px;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+      border-radius: 0.6rem;
+
+      @include maxmobile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.comp_1x_b_v_s_e1 {
+  .image_area {
+    img {
+      width: 100%;
+      transition: 0.3s;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .text_wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include maxdesktop {
+      display: block;
+    }
+
+    .text_area {
+      width: calc((100% - 4rem) / 2);
+
+      @include maxdesktop {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.comp_1x_w_v_c_e2 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 60rem;
+    background-color: #05141f;
+    z-index: -1;
+
+    @include maxdesktop {
+      height: 80%;
+    }
+  }
+
+  .text_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6rem;
+
+    @include maxdesktop {
+      display: block;
+      padding-top: 1rem;
+    }
+
+    .text_area {
+      width: calc((100% - 40px) / 2);
+      color: #ffffff;
+
+      @include maxdesktop {
+        width: 100%;
+      }
+    }
+  }
+
+  .image_area {
+    margin-top: 9rem;
+
+    @include maxdesktop {
+      margin-top: 4rem;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+      border-radius: 0.6rem;
+    }
+  }
+}
+
+.comp_1x_b_v_o_b {
+  .comp_body {
+    position: relative;
+
+    .image_area {
+      height: 520px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        width: 100%;
+        transition: 0.3s;
+        object-fit: cover;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .text_area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #ffffff;
+      margin-top: 7rem;
+      padding: 0 7rem;
+
+      @include maxdesktop {
+        margin-top: 4rem;
+        padding: 0 4rem;
+      }
+    }
+  }
+}
+
+.comp_1x_b_h_s_b {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .image_area {
+      width: 50%;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text_area {
+      width: 50%;
+      padding: 5rem;
+
+      @include maxtablet {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.comp_1x_b_h_s_e1 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .image_area {
+      width: 50%;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .text_area {
+      width: 50%;
+      margin-top: 0;
+
+      @include maxtablet {
+        width: 100%;
+        margin-top: 3rem;
+      }
+    }
+
+    &:nth-child(odd) {
+      .text_area {
+        padding-left: 5rem;
+
+        @include maxtablet {
+          padding-left: 0;
+        }
+      }
+    }
+
+    &:nth-child(even),
+    &.reverse {
+      flex-direction: row-reverse;
+
+      .text_area {
+        padding-right: 5rem;
+
+        @include maxtablet {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.comp_1x_b_h_s_e3 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .image_area {
+      width: 50%;
+      aspect-ratio: 1 / 1;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+
+      video {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .text_area {
+      width: 50%;
+      margin-top: 0;
+
+      @include maxtablet {
+        width: 100%;
+        margin-top: 3rem;
+      }
+    }
+
+    &:nth-child(odd) {
+      .text_area {
+        padding-left: 5rem;
+
+        @include maxtablet {
+          padding-left: 0;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .text_area {
+        padding-right: 5rem;
+
+        @include maxtablet {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.comp_1x_b_h_s_e4 {
+  border-top: 1px solid #dedede;
+  padding-top: 6rem;
+
+  @include maxtablet {
+    padding-top: 7.5rem;
+  }
+
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 5rem;
+
+      .image_area {
+        width: 20%;
+        max-width: 12rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text_area {
+        width: 80%;
+        margin-top: 0;
+        margin-left: 3rem;
+
+        p {
+          color: #676767;
+        }
+      }
+    }
+  }
+}
+
+.comp_2x_b_v_s_e1 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .half_area {
+      display: flex;
+      flex-direction: column;
+      width: calc((100% - 6rem) / 2);
+
+      @include maxtablet {
+        display: block;
+        width: 100%;
+      }
+
+      .image_area {
+        width: 100%;
+
+        img {
+          width: 100%;
+          border-radius: 0.6rem;
+        }
+      }
+
+      &:last-child {
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+
+        @include maxtablet {
+          display: block;
+        }
+      }
+
+      .text_area {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+}
+
+.comp_2x_b_v_s_b {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .half_area {
+      width: calc((100% - 2rem) / 2);
+
+      @include maxtablet {
+        width: 100%;
+        display: block;
+      }
+
+      .image_area {
+        width: 100%;
+
+        img {
+          width: 100%;
+          border-radius: 0.6rem;
+        }
+      }
+
+      &:last-child {
+        @include maxtablet {
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_b_h_s_e2 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .image_area {
+      width: 46%;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+    }
+
+    .text_area {
+      width: calc(54% - 5rem);
+      margin-top: 0;
+
+      @include maxtablet {
+        width: 100%;
+        margin-top: 3rem;
+      }
+
+      ul {
+        margin-top: 5.5rem;
+
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          p {
+            margin-top: 0;
+            margin-left: 3rem;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #676767;
+          }
+
+          &:not(:first-child) {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comp_2x_b_h_s_e2 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: calc((100% - 5rem) / 2);
+      margin-bottom: 5rem;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      .image_area {
+        width: 20%;
+        max-width: 12rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text_area {
+        width: 80%;
+        margin-top: 0;
+        margin-left: 3rem;
+
+        p {
+          color: #676767;
+        }
+      }
+    }
+  }
+}
+
+.comp_2x_b_h_s_e3 {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: calc((100% - 5rem) / 2);
+      margin-bottom: 5rem;
+
+      @include maxtablet {
+        width: 100%;
+      }
+
+      .image_area {
+        width: 20%;
+        max-width: 12rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text_area {
+        width: 80%;
+        margin-top: 0;
+        margin-left: 3rem;
+
+        p {
+          color: #676767;
+        }
+      }
+    }
+  }
+}
+
+.comp_3x_b_v_s_b {
+  .comp_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include maxtablet {
+      display: block;
+    }
+
+    .item {
+      width: calc((100% - 10rem) / 3);
+
+      @include maxtablet {
+        width: 100%;
+
+        &:not(:first-child) {
+          margin-top: 6rem;
+        }
+      }
+
+      .image_area {
+        width: 100%;
+
+        img {
+          width: 100%;
+          border-radius: 0.6rem;
+        }
+      }
+
+      .text_area {
+        margin-top: 3rem;
+
+        p {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.comp_1x_b_n_n_b {
+  margin-top: 15rem;
+  background-color: #f3f3f3;
+  padding: 4rem 0;
+
+  @media (max-width: 1024px) {
+    margin-top: 6rem;
+  }
+
+  .comp_body {
+    .title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    ul {
+      margin-top: 10px;
+
+      li {
+        position: relative;
+        padding: 0.5rem 0 0.5rem 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+
+        &::before {
+          content: "∙";
+          position: absolute;
+          top: 0.5rem;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.pdpDetail {
+  padding-bottom: 10rem;
+
+  @include maxtablet {
+    padding-bottom: 6rem;
+  }
+}
+
+.disclaimerArea {
+  padding-bottom: 10rem;
+
+  @include maxtablet {
+    padding-bottom: 6rem;
+  }
+
+  .disclaimerInner {
+    h2 {
+      width: 100%;
+      font-size: 2.4rem;
+      font-weight: 600;
+
+      @include maxtablet {
+        font-size: 1.8rem;
+      }
+    }
+
+    .disclaimerList {
+      margin-top: 4rem;
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+
+      @include maxtablet {
+        margin-top: 3rem;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        border-bottom: 1px solid #dedede;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        @include maxtablet {
+          display: block;
+        }
+
+        .title {
+          width: 15.5rem;
+          padding-right: 2rem;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: 600;
+          word-break: keep-all;
+
+          @include maxtablet {
+            width: 100%;
+            padding-right: 0;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        .bar {
+          width: 0.1rem;
+          height: 1.5rem;
+          background-color: #dedede;
+
+          @include maxtablet {
+            display: none;
+          }
+        }
+
+        .contents {
+          width: calc(100% - 15.6rem);
+          padding-left: 2rem;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          word-break: keep-all;
+          color: #676767;
+
+          @include maxtablet {
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            margin-top: 1.5rem;
+            padding-left: 0;
+          }
+
+          li {
+            position: relative;
+            padding-left: 1rem;
+
+            &::before {
+              content: "∙";
+              position: absolute;
+              top: 0;
+              left: 0;
+              line-height: 2.2rem;
+            }
+
+            a {
+              color: #676767;
+              text-decoration: none !important;
+              border-bottom: 1px solid #676767;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.reviewArea {
+  margin-top: 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  border-top: 0.1rem solid #dedede;
+  border-bottom: 0.1rem solid #dedede;
+
+  &:has(+ .qnaArea) {
+    border-bottom: none;
+  }
+
+  @include maxtablet {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .reviewInner {
+    .titleArea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include tablet {
+        flex-wrap: nowrap;
+      }
+
+      h2 {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+
+        @include maxtablet {
+          font-size: 1.8rem;
+        }
+      }
+
+      .oneButton {
+        width: 100%;
+        margin-top: 2rem;
+
+        @include tablet {
+          width: auto;
+          margin-top: 0;
+        }
+      }
+
+      .searchBox {
+        .selectInner {
+          .cont-select {
+            position: relative;
+            width: 100%;
+            height: 4.5rem;
+            min-width: 10rem;
+
+            @include tablet {
+              width: 13rem;
+            }
+
+            .btn-select {
+              position: relative;
+              width: 100%;
+              height: 4.5rem;
+              font-size: 1.4rem;
+              padding: 1.4rem 2rem;
+              background-color: #fff;
+              border: 1px solid #dedede;
+              box-sizing: border-box;
+              cursor: pointer;
+              text-align: left;
+              color: #000;
+              line-height: 1;
+              /* 말줄임 */
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+
+              @include tablet {
+                font-size: 1.6rem;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                right: 1rem;
+                top: 40%;
+                transform: translate(-50%, 0);
+                width: 1.4rem;
+                height: 0.8rem;
+                display: block;
+                background: url("/kr/assets/images/common/icon-notice.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: rotate(-180deg);
+              }
+            }
+
+            .list-member {
+              display: none;
+              position: absolute;
+              padding: 1rem 2rem;
+              width: 100%;
+              top: 4.4rem;
+              left: 0;
+              border: 1px solid #dedede;
+              box-sizing: border-box;
+              background-color: #fff;
+              z-index: 1;
+            }
+
+            .btn-select.on {
+              &::after {
+                transform: rotate(0deg);
+              }
+            }
+
+            .btn-select.on + .list-member {
+              display: block;
+            }
+
+            .list-member li {
+              font-size: 1.6rem;
+              line-height: 2;
+              box-sizing: border-box;
+            }
+
+            .list-member li button {
+              width: 100%;
+              font-size: 1.6rem;
+              border: none;
+              background-color: #fff;
+              cursor: pointer;
+              text-align: left;
+              /* 말줄임 */
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+
+    .noneReview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 7.2rem;
+      font-size: 1.4rem;
+      color: #9ea1a2;
+      background: #f3f3f3;
+      border-radius: 0.8rem;
+
+      @include tablet {
+        height: 16rem;
+        font-size: 1.6rem;
+      }
+
+      P {
+        text-align: center;
+
+        br {
+          display: block;
+
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .reviewList {
+      margin-top: 1.6rem;
+      border-top: 1px solid #999999;
+      // border-bottom: 1px solid #999999;
+
+      @include tablet {
+        margin-top: 2rem;
+      }
+
+      .item {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.4rem 0 2.8rem;
+        border-bottom: 1px solid #dedede;
+
+        @include tablet {
+          display: flex;
+          padding: 1.6rem 0;
+        }
+
+        .textArea {
+          width: calc(100% - 10rem);
+          padding-right: 5rem;
+
+          @include maxtablet {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          .title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .name {
+              font-size: 1.6rem;
+              font-weight: 600;
+            }
+
+            .date {
+              margin-left: 1rem;
+              font-size: 1.4rem;
+              color: #9ea1a2;
+            }
+          }
+
+          .info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 0.5rem;
+            flex-direction: column;
+
+            @include tablet {
+              flex-direction: row;
+              align-items: center;
+              margin-top: 1rem;
+            }
+
+            span {
+              position: relative;
+              font-size: 1.4rem;
+              color: #a6a6a6;
+              line-height: 1.5;
+
+              @include tablet {
+                font-size: 1.6rem;
+                line-height: 1;
+              }
+
+              + span {
+                @include tablet {
+                  padding-left: 1.6rem;
+                  margin-left: 1.6rem;
+                }
+
+                &::before {
+                  content: "";
+                  display: none;
+                  width: 0.1rem;
+                  height: 1.2rem;
+                  background-color: #d9d9d9;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  transform: translateY(-50%);
+
+                  @include tablet {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+          .contents {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.1;
+
+            @include tablet {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+              margin-top: 1.5rem;
+            }
+
+            @include maxtablet {
+              margin-top: 1.3rem;
+            }
+
+            &.abstracted {
+              white-space: normal;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          }
+
+          .photoArea {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 1rem;
+            gap: 1rem;
+
+            .photoItem {
+              width: 5.6rem;
+              height: 5.6rem;
+              border-radius: 0.8rem;
+              overflow: hidden;
+
+              @include tablet {
+                width: 12rem;
+                height: 12rem;
+              }
+
+              button {
+                width: 100%;
+                height: 100%;
+                border: none;
+                cursor: pointer;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .contentMoreBtn {
+            display: none;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            color: #9ea1a2;
+            cursor: pointer;
+            @include tablet {
+              font-size: 1.6rem;
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              width: 1rem;
+              height: 1rem;
+              margin-left: 0.5rem;
+              background-image: url("/kr/assets/images/common/icon-more.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+
+            &.active {
+              &::after {
+                background-image: url("/kr/assets/images/common/icon-briefly.svg");
+              }
+            }
+          }
+        }
+        .reviewBtnArea {
+          width: auto;
+        }
+
+        &.best {
+          .textArea {
+            .info {
+              &:after {
+                content: "";
+                display: block;
+                width: 7.7rem;
+                height: 2.4rem;
+                margin-left: 0;
+                margin-top: 0.8rem;
+                background: url("/kr/assets/images/kia/contents/review_best.png") no-repeat center center / contain;
+
+                @include tablet {
+                  margin-left: 1.6rem;
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .noList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 14rem;
+      margin-top: 4rem;
+      border: 1px solid #dedede;
+      border-radius: 0.6rem;
+      font-size: 1.6rem;
+      color: #9ea1a2;
+
+      @include tablet {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.reviewBtnArea {
+  // width: 10rem;
+
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 2.2rem;
+
+  .reviewBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 10rem;
+    height: 3.5rem;
+    padding: 0 1.6rem;
+    border: 1px solid #dedede;
+    border-radius: 1.75rem;
+    transition: 0.3s;
+
+    .icon-good {
+      width: 2rem;
+      height: 2rem;
+      background-image: url("/kr/assets/images/common/icon_good.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .goodNum {
+      margin-left: 0.8rem;
+      padding-top: 0.2rem;
+      color: #9ea1a2;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 2rem;
+    }
+
+    &:hover {
+      border: 1px solid #000000;
+    }
+
+    &.active {
+      .goodNum {
+        color: #000000;
+      }
+    }
+  }
+}
+
+.qnaArea {
+  margin-top: 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  border-top: 0.1rem solid #dedede;
+  border-bottom: 0.1rem solid #dedede;
+
+  @include maxtablet {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .qnaInner {
+    .titleArea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        width: 100%;
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        @include maxtablet {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .qnaList {
+      margin-top: 4rem;
+
+      @include maxtablet {
+        margin-top: 3rem;
+      }
+    }
+
+    .qnaList {
+      width: 100%;
+      margin-top: 2rem;
+
+      // padding-left:2rem;
+      // padding-right:2rem;
+      @include desktopMin {
+        max-width: 120rem;
+        margin-top: 2rem;
+      }
+
+      @include desktopMax {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .qnaAccodion {
+        .accordion {
+          dl {
+            border: 1px solid #dedede;
+            border-radius: 0.6rem;
+            padding: 2rem;
+            position: relative;
+
+            &:hover {
+              border-color: #05141f;
+            }
+
+            @include tablet {
+              padding: 2.5rem;
+            }
+
+            dt {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 1.6rem;
+              font-weight: 600;
+              position: relative;
+              cursor: pointer;
+
+              @include desktopMin {
+                font-size: 1.8rem;
+              }
+
+              > p {
+                position: relative;
+                width: 93%;
+
+                .subTitle {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  color: #9ea1a2;
+                  margin-bottom: 1.5rem;
+                  font-size: 1.4rem;
+                  font-weight: 400;
+
+                  .badge {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 2.5rem;
+                    margin-right: 1rem;
+                    padding: 0 0.8rem;
+                    border: 0.1rem solid #dedede;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+
+                    &.an {
+                      color: #9ea1a2;
+                    }
+
+                    &.ay {
+                      color: #000000;
+                    }
+                  }
+                }
+
+                span {
+                  font-weight: 600;
+                }
+              }
+
+              &:hover {
+                color: var(--unnamed-color-00aad2);
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                right: 0rem;
+                top: 65%;
+                transform: translate(-50%, 0);
+                transform: rotate(-180deg);
+                width: 1.4rem;
+                height: 0.8rem;
+                display: block;
+                background: url("/kr/assets/images/common/icon-notice.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include tablet {
+                  top: 40%;
+                  right: 1rem;
+                }
+              }
+            }
+
+            dt.active {
+              &::after {
+                transform: rotate(0deg);
+                background-position-x: right;
+                right: 0rem;
+
+                @include tablet {
+                  right: 1rem;
+                }
+              }
+            }
+
+            dt.active + dd {
+              display: block;
+            }
+
+            dd {
+              display: none;
+              margin-top: 3rem;
+
+              p {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                color: #000000;
+
+                @include desktopMin {
+                  font-size: 1.6rem;
+                }
+              }
+
+              .imageArea {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                margin-top: 3rem;
+
+                .item {
+                  width: calc((100% - 4rem) / 3);
+                  border: 0.1rem solid #dedede;
+                  overflow: hidden;
+                  margin-right: 2rem;
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  .box {
+                    position: relative;
+                    padding-top: 100%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                  }
+                }
+              }
+
+              .adminAnswer {
+                margin-top: 3.5rem;
+                padding-top: 3.5rem;
+                border-top: 0.1rem solid #dedede;
+
+                .subTitle {
+                  color: #9ea1a2;
+                  font-size: 1.4rem;
+                  font-weight: 400;
+                }
+
+                .answer {
+                  margin-top: 1.5rem;
+                }
+
+                .downloadArea {
+                  display: flex;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                  width: 100%;
+                  margin-top: 2rem;
+
+                  .downloadItem {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    padding: 0.7rem 1rem;
+                    background-color: #f3f3f3;
+                    color: #000000;
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+
+                    &:hover {
+                      text-decoration: underline;
+                    }
+
+                    .icon {
+                      width: 2rem;
+                      height: 2rem;
+                      background-image: url("/kr/assets/images/common/icon-download.svg");
+                      background-repeat: repeat;
+                      margin-left: 0.8rem;
+                    }
+                  }
+                }
+              }
+
+              .csBtn {
+                margin: 0 auto;
+                margin-top: 4rem;
+                width: 100%;
+
+                @include tablet {
+                  width: 37rem;
+                  margin-top: 5rem;
+                }
+
+                .oneButton {
+                  width: 16rem;
+                  margin: 0 auto;
+                }
+
+                .towButton {
+                  display: flex;
+                  flex-wrap: wrap;
+
+                  @include tablet {
+                    flex-wrap: nowrap;
+                  }
+
+                  .leftBtn {
+                    margin-right: 0;
+
+                    @include tablet {
+                      margin-right: 0.5rem;
+                    }
+                  }
+
+                  .rightBtn {
+                    margin-left: 0;
+
+                    @include tablet {
+                      margin-left: 0.5rem;
+                    }
+                  }
+
+                  button + button {
+                    margin-top: 1rem;
+
+                    @include tablet {
+                      margin-left: 1rem;
+                      margin-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+
+            > .dd-padding {
+              padding-left: 6.5rem;
+            }
+          }
+
+          dl.active {
+            border-color: #000;
+          }
+
+          dl.private {
+            &:hover {
+              border-color: #dedede;
+            }
+
+            dt {
+              cursor: default;
+
+              &:after {
+                content: none;
+              }
+
+              &:hover {
+              }
+
+              > p {
+                span {
+                  color: #9ea1a2;
+                }
+              }
+            }
+          }
+
+          dl + dl {
+            margin-top: 1rem;
+          }
+        }
+
+        .noList {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 14rem;
+
+          border: 1px solid #dedede;
+          border-radius: 0.6rem;
+          font-size: 1.8rem;
+          color: #9ea1a2;
+
+          @include tablet {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.listbtnWarp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include desktopMin {
+    width: 16rem;
+  }
+
+  a::before,
+  a::after {
+    width: 3.2rem;
+
+    @include desktopMin {
+      width: 3.2rem;
+    }
+  }
+}
+
+.pdpDisplayThemeSwiper {
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+}
+
+.displayTheme {
+  .visualBg {
+    position: absolute;
+    width: 100%;
+    max-width: 192rem;
+
+    @include maxdesktop {
+      overflow: hidden;
+      height: 76rem;
+    }
+
+    @media (max-width: 820px) {
+      height: 62rem;
+    }
+
+    @include maxtablet {
+      height: 76rem;
+    }
+
+    @include maxmobile {
+      height: 71rem;
+    }
+
+    img {
+      width: auto;
+      object-fit: cover;
+      object-position: center;
+
+      @include maxdesktop {
+        width: 100%;
+        object-fit: initial;
+        object-position: initial;
+      }
+
+      &.mobile {
+        display: none;
+      }
+
+      @include maxdesktop {
+        &.web {
+          display: none;
+        }
+
+        &.mobile {
+          display: block;
+          object-fit: initial;
+          height: auto;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 60%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 1) 100%);
+    }
+  }
+
+  &.comp_wide {
+    .comp_body {
+      &.layer_up {
+        .text_area {
+          margin-top: 5.2rem;
+
+          @include maxtablet {
+            margin-top: 6rem !important;
+          }
+        }
+      }
+
+      .text_area {
+        @include maxtablet {
+          margin-top: 3rem !important;
+
+          h3 {
+            font-size: 3rem;
+          }
+
+          .info {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .comp_bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      // max-height: 26rem;
+
+      @include maxdesktop {
+        // max-height: 22rem;
+        padding: 3rem 0;
+      }
+
+      @include maxtablet {
+        // max-height: 22rem;
+        padding: 2rem 0;
+      }
+
+      &.thumb-swiper {
+        overflow: hidden;
+        flex-wrap: wrap;
+        padding: 17rem 0 0;
+
+        .com_bottm_inner {
+          padding: 3.4rem 0;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @include maxtablet {
+          padding: 31.2rem 0 0;
+
+          .com_bottm_inner {
+            padding: 2.4rem 0;
+          }
+        }
+      }
+
+      .com_bottm_inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @include maxdesktop {
+          padding: 3rem 0;
+        }
+
+        @include maxtablet {
+          padding: 2.5rem 0;
+        }
+
+        .swiper {
+          overflow: visible;
+          width: 100%;
+          padding: 0 10rem;
+
+          &:before,
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -4rem;
+            bottom: -4rem;
+            left: 0;
+            z-index: 2;
+            width: 10rem;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 1) 100%);
+          }
+
+          &:after {
+            left: auto;
+            right: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 1) 100%);
+          }
+
+          @include maxtablet {
+            &:before,
+            &:after {
+              display: none;
+            }
+          }
+
+          @media (max-width: 1200px) {
+            padding-right: 2rem;
+          }
+
+          .swiper-wrapper {
+            width: 100%;
+            transition-timing-function: linear;
+
+            .swiper-slide {
+              width: 11.6rem !important;
+              padding: 6px;
+              border: 2px solid transparent;
+              cursor: pointer;
+
+              @include maxtablet {
+                width: 12rem !important;
+                padding: 0.8rem;
+              }
+
+              &:first-child {
+                @media (max-width: 1240px) {
+                  margin-left: 2rem;
+                }
+              }
+
+              img {
+                max-width: 100%;
+              }
+
+              p {
+                margin-top: 0.3rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: left;
+
+                @media (max-width: 768px) {
+                  margin-top: 0.5rem;
+                }
+              }
+
+              &.selected {
+                border: 2px dashed rgba(255, 255, 255, 0.5);
+              }
+
+              &.active {
+                border: 2px solid #f8c40c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comp_top {
+    z-index: 2;
+
+    // height: 10rem;
+    .comp_body {
+      .text_area {
+        // display: flex;
+        h3 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        .info {
+          font-size: 1.6rem;
+        }
+
+        > * {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .comp_md {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 48rem;
+    background-color: rgba(0, 0, 0, 0);
+
+    @include maxtablet {
+      height: 3rem;
+    }
+  }
+
+  &.type2 {
+    .comp_bottom {
+      background-color: transparent;
+
+      .com_bottm_inner {
+        .thumb-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.4rem 2rem;
+          width: 100%;
+          max-width: 118rem;
+          margin: 0 auto;
+
+          .dtthumb {
+            width: 13rem;
+          }
+
+          .img-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13rem;
+            height: 12rem;
+            background-color: #fff;
+            border-radius: 0.8rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  .dtlImgs {
+    position: relative;
+    padding-top: 7.2rem;
+
+    @include maxtablet {
+      padding-top: 7.2rem;
+    }
+
+    .item {
+      transition: opacity 0.2s;
+
+      .text_area {
+        margin-top: 4rem;
+
+        @include maxtablet {
+          margin-top: 2rem;
+        }
+      }
+
+      & + .item {
+        margin-top: 8rem;
+
+        @include maxtablet {
+          margin-top: 5rem;
+        }
+      }
+
+      &.change {
+        opacity: 0;
+      }
+    }
+  }
+
+  & + .comp_1x_b_v_s_b {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+
+    @include maxtablet {
+      margin-top: 4rem;
+    }
+
+    .image_area {
+      height: auto;
+    }
+  }
+
+  .comp_body .swiper-slide .text_area h5 {
+    font-size: 3rem;
+
+    @include maxtablet {
+      font-size: 2rem;
+    }
+  }
+
+  &.welcome-goodbye {
+    margin-top: 8rem;
+
+    .comp_body {
+      & + .comp_body {
+        margin-top: 10rem;
+      }
+
+      .text_area {
+        margin-bottom: 2rem;
+      }
+
+      video {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.displayThemeDtl {
+  .swiper-navigation {
+    > * {
+      top: 210px;
+      left: -65px;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center / 15px auto;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      left: auto;
+      right: -65px;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    top: 46.4rem;
+
+    // top:36.4vw;
+    @media (max-width: 1200px) {
+      top: 36.4vw;
+    }
+
+    @include maxtablet {
+      // top: 14.4rem;
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      width: 5.6rem;
+      height: 0.4rem;
+      border-radius: 0;
+      background-color: #e9e9e9;
+
+      &.swiper-pagination-bullet-active {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+.inCarGame {
+  &.comp_1x_w_v_o_b {
+    .image_area {
+      @include maxtablet {
+        overflow: hidden;
+        height: auto;
+      }
+    }
+  }
+
+  .comp_top.title-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .visualBg {
+    position: absolute;
+    width: 100%;
+    max-width: 192rem;
+
+    img {
+      width: 100%;
+
+      &.mobile {
+        display: none;
+      }
+
+      @include maxtablet {
+        &.web {
+          display: none;
+        }
+
+        &.mobile {
+          display: block;
+          object-fit: initial;
+          height: auto;
+        }
+      }
+    }
+
+    &.swiper {
+      position: relative;
+
+      .swiper-pagination {
+        bottom: 3rem;
+
+        .swiper-pagination-bullet {
+          opacity: 1;
+          width: 5.6rem;
+          height: 0.4rem;
+          border-radius: 0;
+          background-color: rgba(255, 255, 255, 0.5);
+
+          @include maxtablet {
+            width: 3rem;
+            height: 0.3rem;
+          }
+
+          &.swiper-pagination-bullet-active {
+            background-color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+      .image_area {
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    // &:after {
+    //     content:"";
+    //     display: block;
+    //     position: absolute;
+    //     bottom:0;
+    //     left:0;
+    //     z-index: 2;
+    //     width: 100%;
+    //     height: 60%;
+    //     background: rgb(255,255,255);
+    //     background: linear-gradient(180deg, rgba(255,255,255,0) 43%, rgba(255,255,255,1) 100%);
+    // }
+  }
+
+  &.comp_wide {
+    .comp_body {
+      &.layer_up {
+        .text_area {
+          margin-top: 7rem;
+
+          .info {
+            line-height: 1.5;
+
+            br {
+              display: none;
+
+              @include maxtablet {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .text_area {
+        @include maxtablet {
+          margin-top: 6rem;
+
+          h3 {
+            font-size: 3rem;
+            line-height: 4rem;
+          }
+
+          .info {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .comp_bottom {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      // max-height: 26rem;
+      padding: 4rem 0;
+      margin-top: 8rem;
+      background-color: rgba(0, 0, 0, 1);
+
+      @include maxdesktop {
+        // max-height: 22rem;
+        padding: 3rem 0;
+      }
+
+      @include maxtablet {
+        // max-height: 22rem;
+        padding: 0;
+        margin-top: 4rem;
+      }
+
+      .com_bottm_inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @include maxdesktop {
+          padding: 3rem 0;
+        }
+
+        @include maxtablet {
+          padding: 2.5rem 0;
+        }
+
+        .swiper {
+          width: 100%;
+          padding: 0 10rem;
+
+          &:before,
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 10rem;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 1) 100%);
+          }
+
+          &:after {
+            left: auto;
+            right: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 1) 100%);
+          }
+
+          @include maxtablet {
+            &:before,
+            &:after {
+              display: none;
+            }
+          }
+
+          @media (max-width: 1200px) {
+            padding-right: 2rem;
+          }
+
+          .swiper-wrapper {
+            width: 100%;
+            transition-timing-function: linear;
+
+            .swiper-slide {
+              width: 16.6rem !important;
+              padding: 6px;
+              border: 2px solid transparent;
+              cursor: pointer;
+
+              @include maxtablet {
+                width: 18rem !important;
+                padding: 0.8rem;
+              }
+
+              &:first-child {
+                @media (max-width: 1240px) {
+                  margin-left: 2rem;
+                }
+              }
+
+              img {
+                max-width: 100%;
+              }
+
+              p {
+                margin-top: 0.3rem;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: left;
+
+                @media (max-width: 768px) {
+                  margin-top: 0.5rem;
+                }
+              }
+
+              &.active {
+                border-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comp_top {
+    z-index: 2;
+    // height: 46rem;
+    // height: 340px;
+    // max-height: 529px;
+
+    // @include maxtablet {
+    //     height: 43.9rem;
+    // }
+
+    .comp_body {
+      .text_area {
+        // display: flex;
+        h3 {
+          margin-bottom: 2rem;
+        }
+
+        > * {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .comp_md {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 48rem;
+    background-color: rgba(0, 0, 0, 0);
+
+    @include maxtablet {
+      height: 3rem;
+    }
+  }
+
+  &.type2 {
+    .comp_bottom {
+      background-color: transparent;
+
+      .com_bottm_inner {
+        .thumb-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.4rem 2rem;
+          width: 100%;
+          max-width: 118rem;
+          margin: 0 auto;
+
+          .dtthumb {
+            width: 13rem;
+          }
+
+          .img-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13rem;
+            height: 12rem;
+            background-color: #fff;
+            border-radius: 0.8rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  .dtlImgs {
+    .item {
+      transition: opacity 0.2s;
+
+      .text_area {
+        margin-top: 4rem;
+
+        @include maxtablet {
+          margin-top: 2rem;
+        }
+      }
+
+      & + .item {
+        margin-top: 8rem;
+
+        @include maxtablet {
+          margin-top: 5rem;
+        }
+      }
+
+      &.change {
+        opacity: 0;
+      }
+    }
+  }
+
+  & + .comp_1x_b_v_s_b {
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+
+    @include maxtablet {
+      margin-top: 7.5rem;
+    }
+
+    .image_area {
+      height: auto;
+      border-radius: 0.8rem;
+
+      img {
+        display: block;
+        border-radius: 0.8rem;
+        overflow: hidden;
+      }
+
+      @include maxtablet {
+        video {
+          width: 100%;
+        }
+      }
+    }
+
+    @include maxtablet {
+      margin-top: 3rem;
+    }
+
+    .dtlImgs {
+      .text_area {
+        display: none;
+        margin-top: 3.2rem;
+      }
+
+      @for $i from 0 through 12 {
+        &.theme#{$i} {
+          .text_theme#{$i} {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &.comp_2x_b_h_s_e2 .comp_body .item .text_area {
+    margin-top: 0;
+  }
+
+  &.comp_wide.comp_2x_b_h_s_e2 {
+    margin-top: 20rem;
+
+    @include maxtablet {
+      margin-top: 10rem;
+    }
+  }
+
+  .comp_body .swiper-slide .text_area h5 {
+    font-size: 3rem;
+
+    @include maxtablet {
+      font-size: 2rem;
+    }
+  }
+
+  .inCarGameDtl {
+    overflow: hidden;
+    border-radius: 0.8rem;
+
+    .swiper-slide {
+      cursor: pointer;
+    }
+  }
+
+  .inCarGameDtlThumb {
+    margin-top: 0.7rem;
+
+    .swiper-slide {
+      overflow: hidden;
+      position: relative;
+      height: 14.85rem;
+      border-radius: 0.8rem;
+
+      @include maxtablet {
+        height: 4.5rem;
+        border-radius: 0.4rem;
+      }
+
+      cursor: pointer;
+
+      &.video-slideThumb {
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          transform: translate(-50%, -50%);
+          width: 60px;
+          height: 61px;
+          background: url(/kr/assets/images/kia/pdp/in_car_game/btn_play.png) no-repeat center / contain;
+
+          @include maxtablet {
+            width: 30px;
+            height: 31px;
+            opacity: 0.75;
+          }
+        }
+
+        &.theme5 {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      video {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 100%;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.8rem;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      &.swiper-slide-thumb-active {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.pdpDetail .tooltip {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -8.5rem;
+  left: 0;
+  z-index: 10;
+  width: 27.6rem;
+  height: 7.2rem;
+  padding: 0 0 0 1.6rem;
+  font-size: 1.2rem;
+  color: #05141f;
+  line-height: 2rem;
+  border: 1px solid #000;
+  border-radius: 0.4rem;
+  background-color: #fff;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.9rem;
+    left: 2.4rem;
+    width: 1.5rem;
+    height: 0.9rem;
+    background: url("/kr/assets/images/kia/pdp/display_theme/ico_edge.png") no-repeat center / contain;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("/kr/assets/images/kia/pdp/display_theme/ico_close.png") no-repeat center / contain;
+    text-indent: -9999em;
+    cursor: pointer;
+  }
+}
+
+.theme-story {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  position: absolute;
+  top: 1.4rem;
+  left: 0;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @include maxdesktop {
+    overflow-x: auto;
+    padding: 0 2rem;
+  }
+
+  @include maxtablet {
+    top: 0;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .btn-dtthumb {
+    position: relative;
+
+    &.active {
+      .dtthumb {
+        border-color: rgba(248, 196, 12, 1);
+        background-color: rgba(253, 224, 68, 0.5);
+      }
+    }
+  }
+
+  .dtthumb {
+    display: flex;
+    align-items: center;
+    width: 15.5rem;
+    height: 4.4rem;
+    padding: 0 0 0 0.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2.2rem;
+    background-color: rgba(236, 221, 193, 0.5);
+    text-align: left;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.8rem;
+      border-radius: 50%;
+    }
+
+    @include maxtablet {
+      width: 7.4rem;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .btn-remove {
+    position: absolute;
+    top: 50%;
+    right: 0.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: -1.2rem;
+    background: url("/kr/assets/images/kia/pdp/display_theme/ico_close2.png") no-repeat center / 1rem auto;
+    text-indent: -9999em;
+    cursor: pointer;
+  }
+}
+
+.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn.type2 input[type="checkbox"] + label {
+  height: auto;
+  padding: 2rem 2rem 2rem 0;
+
+  &:before {
+    display: none;
+  }
+
+  strong {
+    font-size: 1.6rem;
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  span {
+    color: #aaa !important;
+    font-size: 1.4rem;
+  }
+}
+
+.comp_wide.comp_2x_b_h_s_e2 {
+  position: relative;
+  z-index: 2;
+}
+
+.streamingPremium {
+  .mobile {
+    display: none;
+  }
+
+  @include maxtablet {
+    .web {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+      object-fit: initial;
+      height: auto;
+    }
+  }
+
+  &.comp_1x_b_v_s_b {
+    margin-top: 4rem;
+
+    @include maxmobile {
+      margin-top: 2rem;
+    }
+
+    .mt-12 {
+      margin-top: 12rem;
+
+      @include maxmobile {
+        margin-top: 6rem;
+      }
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+
+      @include maxmobile {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &.comp_1x_w_v_o_b {
+    .image_area {
+      @include maxtablet {
+        overflow: hidden;
+        height: auto;
+      }
+    }
+  }
+
+  .visualBg {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 192rem;
+    max-height: 70rem;
+
+    @include maxtablet {
+      max-height: auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.comp_wide {
+    .comp_body {
+      &.layer_up {
+        .text_area {
+          margin-top: 7rem;
+
+          .info {
+            line-height: 1.5;
+
+            br {
+              display: none;
+
+              @include maxtablet {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .text_area {
+        @include maxtablet {
+          margin-top: 3rem;
+
+          h3 {
+            font-size: 3rem;
+            line-height: 4rem;
+          }
+
+          .info {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .refund-table {
+        .text_area {
+          margin-top: 0;
+        }
+      }
+
+      .table-area {
+        margin-bottom: 12rem;
+
+        @include maxtablet {
+          margin-bottom: 5rem;
+        }
+
+        .index {
+          padding: 1.6rem 0 1rem;
+          font-size: 1.4rem;
+          color: #676767;
+          text-align: right;
+        }
+
+        table {
+          width: 100%;
+          border-top: 1px solid #999;
+
+          th {
+            height: 7.6rem;
+            padding: 0 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            vertical-align: middle;
+            text-align: center;
+
+            @include maxtablet {
+              font-size: 1.4rem;
+            }
+          }
+
+          tbody {
+            border-top: 1px solid #dedede;
+            border-bottom: 1px solid #dedede;
+
+            td {
+              padding: 1rem;
+              font-size: 1.4rem;
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.comp_1x_b_v_s_b {
+    .image_area {
+      height: auto;
+    }
+  }
+
+  .comp_top {
+    z-index: 2;
+
+    // height: 70rem;
+    // @include maxtablet{
+    //     height: 43.9rem;
+    // }
+    .comp_body {
+      .text_area {
+        // display: flex;
+        h3 {
+          margin-bottom: 2rem;
+        }
+
+        > * {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .comp_md {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 48rem;
+    background-color: rgba(0, 0, 0, 0);
+
+    @include maxtablet {
+      height: 3rem;
+    }
+  }
+
+  .spec-area {
+    padding: 6rem 0 16rem;
+
+    @include maxmobile {
+      padding: 3rem 0 8rem;
+    }
+  }
+}
+
+.comp_wide {
+  &.title-only {
+    & + .comp_wide {
+      margin-top: 4rem;
+    }
+  }
+
+  .between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.editorWarp {
+  .visualBg {
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include maxdesktop {
+        width: 100%;
+        object-fit: initial;
+        object-position: initial;
+      }
+
+      &.mobile {
+        display: none;
+      }
+
+      @include maxdesktop {
+        &.web {
+          display: none;
+        }
+
+        &.mobile {
+          display: block;
+          object-fit: initial;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .video_wrap {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 108rem;
+    // transform: translateY(-36rem);
+    padding-top: 56.25%;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    transition: all 0.3s ease;
+
+    .video-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 120rem;
+      aspect-ratio: 16/9;
+
+      .video {
+        width: 100%;
+        height: 100%;
+        background: #000;
+
+        .youtube-box {
+          width: 100%;
+          height: 100%;
+        }
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+
+        // video {
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     visibility: visible;
+
+        //     &[poster] {
+        //         height: 100%;
+        //         width: 100%;
+        //     }
+        // }
+
+        // .video-ctrl {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     gap: 4rem;
+        // }
+
+        .btn-play {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8rem;
+          height: 8rem;
+          background: url(/kr/assets/images/kia/contents/ico_play.png?v1) no-repeat center / 100% auto;
+          text-indent: -9999em;
+          cursor: pointer;
+
+          &.pause {
+            display: none;
+            background: url(/kr/assets/images/kia/contents/ico_pause.png?v1) no-repeat center / 100% auto;
+          }
+
+          &.play {
+            display: block;
+          }
+
+          @include maxmobile {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+
+        .btn-sound {
+          display: none;
+          position: absolute;
+          bottom: 3rem;
+          right: 3rem;
+          width: 4rem;
+          height: 4rem;
+          background: url(/kr/assets/images/kia/contents/ico_sound_off.png?v1) no-repeat center / 100% auto;
+          text-indent: -9999em;
+          cursor: pointer;
+
+          &.off {
+            background: url(/kr/assets/images/kia/contents/ico_sound_off.png?v1) no-repeat center / 100% auto;
+          }
+
+          &.on {
+            background: url(/kr/assets/images/kia/contents/ico_sound_on.png?v1) no-repeat center / 100% auto;
+          }
+
+          @include maxmobile {
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+
+      @include maxtablet {
+        width: 100%;
+
+        .video {
+          border: 1.5rem solid #000;
+          border-bottom-width: 1.5rem;
+        }
+      }
+    }
+
+    .btn-close {
+      position: absolute;
+      top: -4rem;
+      right: -16rem;
+      z-index: 10;
+      width: 14rem;
+      height: 14rem;
+      background-color: transparent;
+      border: none;
+      text-indent: -9999em;
+      cursor: pointer;
+
+      @media (max-width: 1024px) {
+        top: -7rem;
+        right: -12rem;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      @include maxtablet {
+        top: -7rem;
+        right: 0;
+        width: 6rem;
+        height: 6rem;
+      }
+
+      // @include maxmobile{
+      //     top:-6rem;
+      //     right:-16rem;
+      //     width: 14rem;
+      //     height: 14rem;
+      // }
+    }
+
+    .btn-close::before,
+    .btn-close::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 9.2rem;
+      height: 2px;
+      background-color: #fff;
+
+      @media (max-width: 1024px) {
+        width: 7rem;
+      }
+
+      @include maxtablet {
+        width: 4rem;
+      }
+    }
+
+    .btn-close::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .btn-close::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &.played {
+      .video {
+        .btn-sound {
+          display: block;
+        }
+
+        &:hover {
+          .video-ctrl {
+            .btn-play {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &.paused {
+      .btn-play,
+      .btn-sound {
+        display: block !important;
+      }
+
+      .video {
+        &:hover {
+          .video-ctrl {
+            .btn-play {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    // .btn-close {
+    //     position: absolute;
+    //     top: 2rem;
+    //     right: 2rem;
+    //     z-index: 1;
+    //     width: 6rem;
+    //     height: 6rem;
+    //     background: url(/kr/assets/images/kia/pdp/display_theme/btn_video_close.png) no-repeat center / contain;
+    //     cursor: pointer;
+    //     text-indent: -9999em;
+    //     @include maxtablet{
+    //         top: 1rem;
+    //         right: 1rem;
+    //         width: 4rem;
+    //         height: 4rem;
+    //     }
+    // }
+    @include maxtablet {
+      height: 56rem;
+    }
+
+    @include maxmobile {
+      height: 40rem;
+    }
+  }
+
+  .close-today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 8.2rem;
+    width: 100%;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      input {
+        margin-right: 0.4rem;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        margin-right: 0.4rem;
+      }
+    }
+
+    @media (max-width: 1780px) {
+      bottom: 4rem;
+    }
+
+    @media (max-width: 1024px) {
+      bottom: 2rem;
+    }
+
+    @include maxmobile {
+      bottom: 3.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .btn-intro {
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+    z-index: 3;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+
+    @include maxtablet {
+      top: 2rem;
+      right: 1.6rem;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 2.8rem;
+      height: 2.8rem;
+      margin-right: 0.5rem;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 50%;
+      background: #fff url("/kr/assets/images/kia/pdp/display_theme/ico_media.png") no-repeat center / 1.6rem auto;
+      text-indent: -9999em;
+      cursor: pointer;
+    }
+  }
+
+  &.playing {
+    .comp_body.layer_up,
+    .thumb-swiper,
+    .pdpInCarGameSwiper,
+    .displayThemeDtl,
+    .inCarGameDtl,
+    .srsPlus .visualBg {
+      filter: blur(2px);
+    }
+
+    .displayThemeDtl {
+      opacity: 0;
+    }
+
+    @media (max-width: 1700px) {
+      .displayThemeDtl {
+        filter: blur(0);
+      }
+    }
+  }
+
+  .srsPlus {
+    .close-today {
+      bottom: 13rem;
+    }
+
+    @media (max-width: 1920px) {
+      .close-today {
+        bottom: 2vw;
+      }
+    }
+  }
+
+  .visualBg {
+    .swiper-navigation {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      width: 100%;
+      max-width: 140rem;
+      height: 0;
+      transform: translate(-50%, -50%);
+
+      @include maxmobile {
+        max-width: 92%;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      width: 1.8rem;
+      height: 3.6rem;
+      margin: 0;
+      background: url(/kr/assets/images/common/ico_arrow_r.png) no-repeat center / contain;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      background: url(/kr/assets/images/common/ico_arrow_l.png) no-repeat center / contain;
+    }
+  }
+
+  .bu {
+    display: block;
+    padding-left: 5.4rem;
+    text-indent: -2rem;
+
+    @include maxmobile {
+      padding-left: 2rem;
+    }
+  }
+}
+
+.boost {
+  &.comp_1x_w_v_s_e1 {
+    .bottom {
+      &:before {
+        background-color: rgba(5, 20, 31, 1);
+      }
+
+      .contents_area {
+        .image_area {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .contents_area {
+      padding-top: 7rem;
+
+      @include maxmobile {
+        padding-top: 4rem;
+      }
+    }
+  }
+
+  &.comp_1x_b_h_s_e1 {
+    @include maxmobile {
+      margin-top: 6rem;
+    }
+  }
+
+  &.comp_1x_w_v_s_e2 {
+    @include maxmobile {
+      margin-top: 6rem;
+    }
+
+    .comp_body {
+      &.full {
+        flex-wrap: wrap;
+      }
+    }
+
+    .image_area {
+      max-width: 120rem;
+      height: auto;
+      padding-top: 5rem;
+      margin: 0 auto;
+
+      @include maxmobile {
+        padding-top: 3rem;
+      }
+
+      img {
+        height: auto;
+        object-fit: inherit;
+        border-radius: 0.6rem;
+      }
+    }
+  }
+}
+
+.pdpDtl {
+  .swiper-navigation {
+    > * {
+      top: 210px;
+      left: -65px;
+      width: 5rem;
+      height: 5rem;
+      border: 1px solid #d3d3d3;
+      border-radius: 50%;
+      background: rgba(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center / 15px auto;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      left: auto;
+      right: -65px;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    top: 46.4rem;
+
+    // top:36.4vw;
+    @media (max-width: 1200px) {
+      top: 36.4vw;
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      width: 5.6rem;
+      height: 0.4rem;
+      border-radius: 0;
+      background-color: #e9e9e9;
+
+      &.swiper-pagination-bullet-active {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+.scroll_area {
+  @include maxtablet {
+  }
+
+  .web {
+    display: block;
+
+    @include maxtablet {
+      display: none;
+    }
+  }
+
+  .mobile {
+    display: none;
+    position: relative;
+    padding-top: 3rem;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 16px;
+      background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_index.png") no-repeat 100% 0 / contain;
+    }
+
+    .header {
+      overflow: hidden;
+      flex: none;
+      width: 125px;
+      height: 460px;
+      background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat 0 0 / auto 100%;
+    }
+
+    .cont {
+      overflow: hidden;
+      overflow-x: auto;
+      height: 460px;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 306px;
+        height: 100%;
+        background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat -126px 0 / auto 100%;
+      }
+    }
+
+    @include maxtablet {
+      display: flex;
+    }
+  }
+
+  .themeImg {
+    @include maxtablet {
+      height: 48rem;
+    }
+  }
+}
+
+.disclaimerWrap {
+  .disclaimerList {
+    .item {
+      .contents {
+        .indent {
+          display: block;
+          padding-left: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.refund-area {
+  margin-bottom: 1.6rem;
+
+  .btn-fold {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #676767;
+    cursor: pointer;
+
+    em {
+      margin-left: 0.4rem;
+      font-size: 1rem;
+      transform: rotate(180deg);
+      transform-origin: center center;
+      transition: all 0.2s ease;
+    }
+
+    &.fold {
+      em {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .dtl {
+    display: none;
+    padding: 1rem 1.05rem;
+
+    p {
+      margin-top: 0;
+    }
+
+    .text_area {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .table-area {
+      margin-bottom: 0.5rem !important;
+    }
+
+    .tbl-dtl {
+      tr:nth-of-type(odd) {
+        td {
+          background-color: #fafafa;
+        }
+      }
+    }
+  }
+
+  .table-area {
+    margin-bottom: 12rem;
+
+    @include maxtablet {
+      margin-bottom: 5rem;
+    }
+
+    .index {
+      padding: 1.6rem 0 1rem;
+      font-size: 1.4rem;
+      color: #676767;
+      text-align: right;
+    }
+
+    table {
+      width: 100%;
+      border-top: 1px solid #999;
+
+      th {
+        height: 7.6rem;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        vertical-align: middle;
+        text-align: center;
+
+        @include maxtablet {
+          height: auto;
+          padding: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+
+      tbody {
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+
+        td {
+          padding: 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//KBO PDP
+.displayTheme-kbo.comp_wide {
+  .visualBg {
+    @include maxtablet {
+      height: 76rem;
+    }
+  }
+
+  .dtlImgs {
+    padding-top: 4rem;
+
+    @include maxtablet {
+      padding-top: 0;
+    }
+  }
+
+  .tooltip {
+    top: -6.5rem;
+  }
+
+  .swiper-info {
+    padding: 0 0 0.6rem;
+    color: #fff;
+    font-size: 1.6rem;
+
+    @include maxtablet {
+      display: none;
+    }
+  }
+
+  .swiper-slide {
+    .image_area {
+      img {
+        box-shadow: 0px 0px 20px 0px #eae5bc4d;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    top: 48.4rem;
+
+    @media (max-width: 1240px) {
+      top: 39vw;
+    }
+
+    @media (max-width: 900px) {
+      top: 39.4vw;
+    }
+
+    @media (max-width: 768px) {
+      top: 37.5vw;
+    }
+  }
+
+  .comp_top {
+    .comp_body {
+      .text_area {
+        h3 {
+          @include maxtablet {
+            letter-spacing: -0.075em;
+          }
+        }
+      }
+    }
+  }
+
+  .comp_bottom {
+    .com_bottm_inner {
+      .swiper {
+        &.pdpDisplayThemeKbo {
+          padding: 0;
+
+          @include maxtablet {
+            padding: 0 1.3rem;
+          }
+
+          .swiper-wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1180px;
+            margin: 0 auto;
+
+            @include maxtablet {
+              justify-content: flex-start;
+            }
+
+            .swiper-slide {
+              @include maxtablet {
+                width: 25% !important;
+                padding: 0.5rem;
+              }
+
+              &:first-child {
+                margin-left: 0;
+              }
+
+              p {
+                @include maxtablet {
+                  letter-spacing: -0.075em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.thumb-swiper {
+      @include maxtablet {
+        padding-top: 28.2rem;
+      }
+    }
+  }
+
+  .displayThemeKboDtl {
+    @media (max-width: 640px) {
+      .swiper-wrapper {
+        display: block;
+
+        .swiper-slide {
+          & + .swiper-slide {
+            margin-top: 5rem;
+          }
+        }
+      }
+    }
+
+    .swiper-navigation {
+      > * {
+        top: 210px;
+        left: -65px;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center / 15px auto;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .swiper-button-next {
+        left: auto;
+        right: -65px;
+        transform: rotate(180deg);
+      }
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination {
+      top: 48.4rem;
+
+      @media (max-width: 1240px) {
+        top: 47.4rem;
+      }
+
+      @media (max-width: 1200px) {
+        top: 39.4vw;
+      }
+
+      @media (max-width: 760px) {
+        top: 36.4vw;
+      }
+
+      @media (max-width: 640px) {
+        display: none;
+      }
+
+      .swiper-pagination-bullet {
+        opacity: 1;
+        width: 5.6rem;
+        height: 0.4rem;
+        border-radius: 0;
+        background-color: #e9e9e9;
+
+        &.swiper-pagination-bullet-active {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.displayThemeDesney {
+  position: relative;
+
+  .layer_up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .comp_body {
+    .text_area {
+      margin-top: 4.8rem;
+      text-align: center;
+
+      @include tablet {
+        margin-top: 8rem;
+      }
+
+      h3 {
+        margin: 1.2rem 0 2rem;
+        font-size: 3rem;
+        color: #fff;
+        letter-spacing: -0.095rem;
+        line-height: 1.3;
+
+        &.color-000 {
+          color: #000;
+        }
+
+        @include tablet {
+          margin: 1.2rem 0 3rem;
+          font-size: 4.8rem;
+        }
+      }
+
+      .info {
+        color: #f0f0f0;
+        letter-spacing: -0.075rem;
+        line-height: 1.5;
+
+        &.color-000 {
+          color: #000;
+        }
+
+        br {
+          display: none;
+
+          &.br-m {
+            display: block;
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          @include tablet {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .available-theme {
+    background-color: #f0f0f0;
+    background-image: radial-gradient(#e7e7e7 2px, transparent 4px);
+    background-size: 3.4rem 3.5rem;
+
+    // background: url(/kr/assets/images/kia/pdp/display_theme_disney/bg_pattern.png) repeat 50% 100%;
+
+    @include tablet {
+      min-height: 85.1rem;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      height: 14.8rem;
+      font-size: 2.4rem;
+      font-weight: 600;
+      padding-bottom: 3.8rem;
+      letter-spacing: -0.095rem;
+      background: url(/kr/assets/images/kia/pdp/display_theme_disney/available-h3.png) no-repeat center bottom / auto 100%;
+
+      @include tablet {
+        height: 30.6rem;
+        font-size: 4.8rem;
+        padding-bottom: 8.6rem;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        max-width: 36rem;
+        padding: 0 2rem;
+        text-align: left;
+
+        @include tablet {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+
+      em {
+        display: block;
+        width: 100%;
+        margin-top: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+
+        @include tablet {
+          margin-top: 2.4rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: center;
+      padding: 0.6rem 2rem 5.6rem;
+
+      @include mobile {
+        margin: 0 auto;
+      }
+
+      @include tablet {
+        padding-top: 4.8rem;
+      }
+
+      @media (min-width: 1240px) {
+        max-width: 100%;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem 0.8rem;
+
+        @include tablet {
+          gap: 2.4rem;
+        }
+
+        li {
+          overflow: hidden;
+          // width: 15.6rem;
+          // min-height: 19.6rem;
+          width: calc(50% - 0.4rem);
+          // min-height: vw(196);
+          aspect-ratio: 156 / 196;
+          background-color: #fff;
+          border-radius: 0.8rem;
+          box-shadow: 0px 0px 1rem 0px rgba(0, 0, 0, 0.12);
+          transition: all 0.2s ease;
+
+          @include tablet {
+            width: 28.9rem;
+            height: 36.9rem;
+            aspect-ratio: inherit;
+          }
+
+          a {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            img {
+              display: block;
+              max-width: 100%;
+            }
+
+            .txt {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding: 0.8rem 1.2rem;
+              line-height: 1.333;
+
+              @include tablet {
+                padding: 1.6rem 2rem;
+                text-align: left;
+              }
+
+              strong {
+                font-size: 1.4rem;
+                color: #000;
+
+                @include tablet {
+                  font-size: 2.4rem;
+                }
+              }
+
+              .hashs {
+                display: block;
+                margin-top: 1.5rem;
+                font-size: 1rem;
+                color: #888;
+                line-height: 1.5;
+
+                @include tablet {
+                  margin-top: 2.4rem;
+                  font-size: 1.6rem;
+                }
+
+                > * {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+
+          &.more {
+            overflow: visible;
+            position: relative;
+            // width: 32rem;
+            // height: 19.4rem;
+            width: 100%;
+            // height: vw(194);
+            aspect-ratio: 320 / 190;
+            // padding: 2.4rem 2rem;
+            margin: 0;
+            // border-radius: 2rem 0.8rem 2rem 0.8rem;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: vw(340);
+              height: vw(210);
+              background: url(/kr/assets/images/kia/pdp/display_theme_disney/box_more_m2.png) no-repeat center / auto 100%;
+
+              @include tablet {
+                width: 61rem;
+                height: 40.5rem;
+                background: url(/kr/assets/images/kia/pdp/display_theme_disney/box_more.png) no-repeat center / auto 100%;
+              }
+            }
+
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: vw(24) vw(20);
+
+              @include tablet {
+                padding: 4.8rem 4rem;
+              }
+            }
+
+            @include tablet {
+              width: 57.4rem;
+              height: 36.9rem;
+              margin: 0 0 0;
+              border-radius: 0;
+              box-shadow: none;
+              aspect-ratio: inherit;
+            }
+
+            @include desktopMin {
+              margin-left: 0;
+            }
+
+            // @include desktopMax {
+            //   margin-left: -1.8rem;
+            // }
+
+            strong {
+              display: flex;
+              align-items: center;
+              position: relative;
+              margin-bottom: 1.2rem;
+              font-size: 1.8rem;
+              color: #000;
+              font-weight: 600;
+
+              @include tablet {
+                font-size: 3rem;
+                margin-bottom: 3.6rem;
+              }
+
+              .speech-bubble {
+                display: inline-block;
+                position: absolute;
+                top: -5.5rem;
+                left: 5rem;
+                background-color: #fff;
+                border: 0.14rem solid #000;
+                padding: 0.6rem 0.9rem;
+                border-radius: 0.4rem;
+                font-size: 1.2rem;
+                color: #000;
+                line-height: 1.3;
+                font-weight: 600;
+                text-align: left;
+                white-space: nowrap;
+
+                @include tablet {
+                  top: -6.4rem;
+                  left: 50%;
+                  transform: translateX(-67%);
+                  padding: 1.2rem 1.2rem 1rem;
+                  border-radius: 0.4rem;
+                  font-size: 1.6rem;
+                }
+
+                // 말풍선 꼬리
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -0.7rem; // 꼬리가 박스 아래로 나가게
+                  left: 50%;
+                  transform: translateX(-50%);
+                  border-width: 0.7rem 0.7rem 0 0.7rem; // 아래쪽이 뾰족
+                  border-style: solid;
+                  border-color: #000 transparent transparent transparent;
+                }
+
+                // 꼬리 내부 흰색 부분 (외곽선 안쪽)
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: -0.6rem;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  border-width: 0.7rem 0.7rem 0 0.7rem;
+                  border-style: solid;
+                  border-color: #fff transparent transparent transparent;
+                  z-index: 1;
+                }
+
+                // &::after {
+                //   content: "";
+                //   display: block;
+                //   position: absolute;
+                //   bottom: -1rem;
+                //   left: 50%;
+                //   transform: translateX(-50%);
+                //   border-left: 1rem solid transparent;
+                //   border-right: 1rem solid transparent;
+                //   border-top: 1rem solid #fbc707;
+
+                //   @include tablet {}
+                // }
+              }
+            }
+
+            .arrow {
+              display: inline-block;
+              position: relative;
+              width: 2rem;
+              height: 0.2rem;
+              margin-left: 0.4rem;
+              background-color: #f5c400;
+
+              @include tablet {
+                width: 4rem;
+                height: 0.4rem;
+                margin-left: 0.8rem;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(45deg);
+                width: 1rem;
+                height: 1rem;
+                border-top: 0.2rem solid #f5c400;
+                border-right: 0.2rem solid #f5c400;
+
+                @include tablet {
+                  width: 2rem;
+                  height: 2rem;
+                  border-top: 0.4rem solid #f5c400;
+                  border-right: 0.4rem solid #f5c400;
+                }
+              }
+            }
+
+            .hashs {
+              display: block;
+              margin-top: 0.8rem;
+              font-size: 1rem;
+              color: #969696;
+              letter-spacing: -0.032rem;
+
+              @include tablet {
+                font-size: 1.6rem;
+                margin-top: 2.2rem;
+                text-align: left;
+              }
+            }
+          }
+
+          &.stay-tuned-item {
+            width: 100%;
+            height: 4.8rem;
+
+            @include tablet {
+              width: 20rem;
+              height: 100%;
+            }
+
+            .stay-tuned {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              padding: 1.2rem;
+              font-size: 1.2rem;
+              font-weight: 400;
+              background-color: #f2f4f6;
+              border-radius: 0.6rem;
+              letter-spacing: -0.05em;
+
+              span {
+                display: block;
+                width: 1.8rem;
+                height: 1.2rem;
+                margin-right: 0.6rem;
+                background: url("/kr/assets/images/kia/promotion/ico_stay_tuned.svg") no-repeat center / contain;
+              }
+
+              strong {
+                padding: 0.2rem 0 0;
+                line-height: 1;
+              }
+
+              @include tablet {
+                flex-direction: column;
+
+                span {
+                  position: relative;
+                  width: 7.2rem;
+                  height: 1.6rem;
+                  margin: 0 auto;
+                  margin-bottom: 0.8rem;
+                  background: none;
+                  border: 1px solid #b2b8bd;
+                  border-radius: 0.8rem;
+
+                  &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0.3rem;
+                    width: 4.8rem;
+                    height: 1rem;
+                    transform: translateY(-50%);
+                    background-color: #b2b8bd;
+                    border-radius: 0.5rem;
+                  }
+                }
+
+                strong {
+                  padding: 0;
+                  font-size: 1.6rem;
+                  color: #b2b8bd;
+                  line-height: 1.4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.discover-epic-design {
+    position: relative;
+    width: 100%;
+    max-width: 192rem;
+    margin: 0 auto;
+    padding: 4rem 0 7rem;
+    text-align: center;
+    background: url(/kr/assets/images/kia/pdp/display_theme_disney/bg_design_m.jpg) no-repeat center top / 100% auto;
+
+    @include tablet {
+      padding: 8rem 0 0;
+      background: url(/kr/assets/images/kia/pdp/display_theme_disney/bg_design.jpg) no-repeat center top / 192rem auto;
+    }
+
+    &.mickey {
+      padding-top: 0;
+      background: #fff;
+
+      .tab-box {
+        padding-top: 0;
+
+        display: none;
+
+        &.box2 {
+          display: block;
+        }
+
+        .discover-area {
+          position: relative;
+          padding: 4rem 0 0;
+          background: url(/kr/assets/images/kia/pdp/display_theme_mickey/bg_design_m.jpg) no-repeat center top / 100% auto;
+
+          @include tablet {
+            padding: 12rem 0;
+            background: url(/kr/assets/images/kia/pdp/display_theme_mickey/bg_design.jpg) no-repeat center top / 192rem auto;
+          }
+
+          > .comp_top {
+            padding-bottom: 0;
+
+            h3 {
+              margin-bottom: 4.8rem;
+
+              @include tablet {
+                margin-bottom: 8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.pixar {
+      padding-top: 0;
+      background: #fff;
+
+      .tab-box {
+        padding-top: 0;
+
+        .discover-area {
+          padding: 4rem 0 0;
+          background: url(/kr/assets/images/kia/pdp/display_theme_mickey/pixar/bg_design_m.jpg) no-repeat center top / 100% auto;
+
+          @include tablet {
+            padding: 12rem 0;
+            background: url(/kr/assets/images/kia/pdp/display_theme_mickey/pixar/bg_design.jpg) no-repeat center top / 192rem auto;
+          }
+
+          > .comp_top {
+            padding-bottom: 0;
+
+            h3 {
+              margin-bottom: 4.8rem;
+
+              @include tablet {
+                margin-bottom: 8rem;
+              }
+
+              &.color-000 {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .comp_top {
+      padding: 0 2rem 2.4rem;
+
+      @include tablet {
+        padding: 0 0 5.4rem;
+      }
+
+      h3 {
+        margin: 0 0 1.6rem;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.095rem;
+
+        @include tablet {
+          margin: 0 0 3rem;
+          font-size: 4.8rem;
+        }
+      }
+
+      .info {
+        font-size: 1.4rem;
+        color: #f0f0f0;
+        letter-spacing: -0.032rem;
+        line-height: 1.5;
+
+        @include tablet {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .comp_body {
+      max-width: 100%;
+      padding: 0;
+    }
+
+
+
+
+    .tab-wrap {
+
+      .tab-menu {
+        position: sticky;
+        top: 5.6rem;
+        z-index: 10;
+        padding: 1.6rem 2rem;
+        background: transparent;
+        backdrop-filter: blur(1.2rem);
+        transition: top 0.3s ease-in-out;
+
+        @include tablet {
+          padding: 1.6rem 2rem;
+        }
+        @media (min-width: 1121px) {
+          top:8rem;
+        }
+
+
+
+        // 모바일에서 스크롤 UP일 때 노출
+        // body.scroll-up & {
+        //   // top: 15.6rem;
+        //   top: 5.6rem;
+        // }
+
+        .btn-select {
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          height: 4.5rem;
+          padding: 1.4rem 3.6rem 1.4rem 1.8rem;
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #fff;
+          background-color: #383838;
+          border-radius: 0.4rem;
+          border: 0.15rem solid rgba(255, 255, 255, 0.5);
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 1.8rem;
+            width: 1.2rem;
+            height: 0.6rem;
+            transform: translateY(-50%), rotate(0deg);
+            transition: all 0.2s ease;
+            background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_arrow_down.png) no-repeat 50% / 1.2rem auto;
+          }
+
+          &.open {
+            &:after {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        ul {
+          position: absolute;
+          left: 2rem;
+          right: 2rem;
+          display: none;
+          background-color: #383838;
+          border-radius: 0 0 0.4rem 0.4rem;
+          border: 0.15rem solid rgba(255, 255, 255, 0.5);
+          border-top: 0;
+
+          @include tablet {
+            display: flex !important;
+            position: static;
+            column-gap: 0.8rem;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+          }
+
+          li {
+            width: 100%;
+
+            @include tablet {
+              width: auto;
+            }
+
+            .tab-btn {
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 4.5rem;
+              padding: 1.4rem 1.8rem;
+              font-size: 1.4rem;
+              font-weight: 600;
+              color: #666;
+              cursor: pointer;
+
+              @include tablet {
+                width: auto;
+                height: 4.3rem;
+                padding: 0 1.6rem 0 1.2rem;
+                font-size: 1.6rem;
+                background-color: #2c2c2c;
+                border-radius: 2.2rem;
+                border: 0.2rem solid rgba(255, 255, 255, 0.2);
+
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 2.2rem;
+                  height: 2.2rem;
+                  margin-right: 0.6rem;
+                  background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_tab.png) no-repeat center top / 100% auto;
+                }
+              }
+            }
+
+            &.active {
+              .tab-btn {
+                color: #fff;
+
+                @include tablet {
+                  border: 0;
+                  background: linear-gradient(90deg, #ed1c24 0%, #b51016 100%);
+                  padding: 0 1.8rem 0 1.4rem;
+
+                  &:before {
+                    background-image: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_tab_active.png);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.blue {
+          ul {
+            li {
+              .tab-btn {
+                @include tablet {
+                  &:before {
+                    background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_tab.png) no-repeat center top / auto 100%;
+                  }
+                }
+              }
+
+              &.active {
+                .tab-btn {
+                  @include tablet {
+                    background: linear-gradient(90deg, #1c5eed 0%, #1031b5 100%);
+
+                    &:before {
+                      background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_tab_active.png) no-repeat center top / auto 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .text_area {
+        margin-top: 1.6rem;
+        text-align: left;
+
+        @include tablet {
+          margin-top: 2rem;
+        }
+      }
+
+      .tab-box {
+        display: none;
+        padding-top: 2.2rem;
+
+        &.box1 {
+          display: block;
+        }
+
+        @include tablet {
+          margin-bottom: 2.4rem;
+          padding-top: 4.8rem;
+        }
+
+        .index-area {
+          padding: 0 2rem 6rem;
+
+          @include tablet {
+            padding: 0 0 10rem;
+          }
+        }
+
+        &.active {
+          display: block;
+        }
+
+        .discover {
+          position: relative;
+          padding: 0 2rem 15.5rem;
+
+          @include desktopMin {
+            padding-bottom: 40rem;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20rem;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+          }
+
+          @include desktopMax {
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        .item {
+          margin-bottom: 4rem;
+
+          @include tablet {
+            margin-bottom: 6.4rem;
+          }
+
+          &:not(.welcome-goodbye) {
+            .image_area {
+              overflow: hidden;
+              border-radius: 0.8rem;
+              border: 0.2rem solid rgba(255, 255, 255, 0.2);
+            }
+          }
+        }
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.25;
+
+        &.color-000 {
+          color: #000;
+        }
+
+        @include tablet {
+          font-size: 2.4rem;
+        }
+      }
+
+      p {
+        margin-top: 0.2rem;
+        font-size: 1.4rem;
+        color: #fff;
+        line-height: 1.55;
+        letter-spacing: -0.025em;
+
+        &.color-000 {
+          color: #000;
+        }
+
+        @include tablet {
+          margin-top: 1.4rem;
+          font-size: 1.6rem;
+        }
+
+        .add {
+          font-size: 1rem;
+          color: #969696;
+
+          @include tablet {
+            display: block;
+            font-size: 1.6rem;
+            margin-top: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.mickey {
+    .layer_up {
+      &.comp_body {
+        .text_area {
+          margin-top: 11.4rem;
+
+          @include tablet {
+            margin-top: 13.7rem;
+          }
+        }
+      }
+    }
+
+    .comp_body {
+      .text_area {
+        margin-top: 11.4rem;
+
+        @include tablet {
+          margin-top: 13.7rem;
+        }
+      }
+    }
+
+    .available-theme {
+      @include tablet {
+        min-height: auto;
+      }
+
+      .list {
+        padding: 0.6rem 2rem 5.6rem;
+
+        @include tablet {
+          padding-top: 4.8rem;
+        }
+
+        ul {
+          li {
+            aspect-ratio: 156 / 184;
+
+            @include tablet {
+              width: 28.9rem;
+              height: 31.2rem;
+              aspect-ratio: inherit;
+            }
+
+            &.more {
+              strong {
+                .speech-bubble {
+                  top: -5.4rem;
+                  transform: translateX(35%);
+
+                  @include tablet {
+                    top: -7.8rem;
+                    transform: translateX(-20%);
+                  }
+                }
+              }
+            }
+
+            &.stay-tuned-item {
+              @include tablet {
+                width: 20rem;
+                height: 100%;
+              }
+
+              strong {
+                @include tablet {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.discover-epic-design {
+      .tab-wrap {
+        @include tablet {
+          padding-top: 6.4rem;
+        }
+
+        .tab-box {
+          padding-top: 0;
+          margin-top: 0;
+
+          @include tablet {
+            margin-top: 6.4rem;
+          }
+        }
+
+        .tab-menu {
+          .btn-select {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 4.5rem;
+            padding: 1.4rem 3.6rem 1.4rem 1.8rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #05141f;
+            background-color: #f2f4f6;
+            border-radius: 0.4rem;
+            border: 0.15rem solid #dedede;
+
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 50%;
+              right: 1.8rem;
+              width: 1.2rem;
+              height: 0.6rem;
+              transform: translateY(-50%), rotate(0deg);
+              transition: all 0.2s ease;
+              background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_arrow_down_black.png) no-repeat 50% / 1.2rem auto;
+            }
+
+            &.open {
+              &:after {
+                transform: translateY(-50%) rotate(180deg);
+              }
+            }
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          ul {
+            background-color: #f2f4f6;
+
+            @include tablet {
+              background-color: transparent;
+            }
+
+            li {
+              .tab-btn {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 4.5rem;
+                padding: 1.4rem 1.8rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #666;
+                cursor: pointer;
+
+                @include tablet {
+                  width: auto;
+                  height: 4.3rem;
+                  padding: 0 1.6rem 0 1.2rem;
+                  font-size: 1.6rem;
+                  color: #fff;
+                  background-color: #b2b8bd;
+                  border-radius: 2.2rem;
+                  border: 0;
+                }
+              }
+
+              &.active {
+                .tab-btn {
+                  color: #05141f;
+
+                  @include tablet {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .text_area {
+          margin-top: 1.6rem;
+          text-align: left;
+        }
+
+        p {
+          .add {
+            color: #acacac;
+
+            @include tablet {
+              display: block;
+              font-size: 1.6rem;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .image_area {
+    position: relative;
+    max-width: 100%;
+    line-height: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+
+  .welcome-goodbye {
+    .image_area {
+      & + .image_area {
+        margin-top: 0.4rem;
+
+        @include tablet {
+          margin-top: 2rem;
+        }
+      }
+
+      video {
+        width: 100%;
+      }
+    }
+
+    .video-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 120rem;
+      // height: 19.667rem;
+      aspect-ratio: 1200 / 236;
+      padding: 1.8333333333333333vw;
+      background: url("/kr/assets/images/kia/promotion/video_frame.png") no-repeat center center / contain;
+
+      @media (min-width: 1000px) {
+        padding: 2.2rem;
+      }
+
+      & + .video-area {
+        margin-top: 1.2rem;
+
+        @include tablet {
+          margin-top: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .inner {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .three-reasons {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    background-color: #fff;
+    text-align: left;
+
+    @include tablet {
+      // padding: 9.6rem 0 0;
+    }
+
+    .inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tit-area {
+      position: relative;
+      padding: 0 2rem 4rem;
+      box-shadow: 0px 2.2rem 2rem 0px rgba(0, 0, 0, 0.25);
+
+      @include tablet {
+        padding: 0 2rem 7.2rem;
+        box-shadow: 0px 4.4rem 4rem 0px rgba(0, 0, 0, 0.25);
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20rem;
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      @include desktopMax {
+        &::after {
+          display: none;
+        }
+      }
+
+      .inner {
+        position: relative;
+        padding-left: 1.8rem;
+
+        @include tablet {
+          padding-left: 3.6rem;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0.5rem;
+          bottom: 0.5rem;
+          left: 0;
+          // transform: translateY(-50%);
+          width: 0.6rem;
+          // height: 5rem;
+          background: #ea0029;
+
+          @include tablet {
+            width: 1.2rem;
+            height: 10rem;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      h3 {
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+        font-size: 2.4rem;
+        font-weight: 600;
+        white-space: nowrap;
+
+        @include tablet {
+          height: 6.4rem;
+          padding: 0;
+          font-size: 4.8rem;
+          line-height: 6.4rem;
+        }
+      }
+
+      p {
+        font-size: 2.4rem;
+        color: #000;
+        font-weight: 600;
+
+        @include tablet {
+          font-size: 4.8rem;
+          color: #000;
+        }
+      }
+    }
+
+    .reasons {
+      padding: 3.6rem 0 4.4rem;
+      background: linear-gradient(176.68deg, #3f3e3e 23.87%, #060606 97.26%);
+
+      @include tablet {
+        height: 94rem;
+        padding: 8rem 2rem;
+      }
+
+      li {
+        @include tablet {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        & + li {
+          margin-top: 3.7rem;
+
+          @include tablet {
+            margin-top: 7.6rem;
+          }
+        }
+
+        p {
+          position: relative;
+          flex: 1;
+          padding: 1rem 2rem 0 3.6rem;
+          margin: 0 0 1.6rem 2rem;
+          font-size: 1.4rem;
+          color: #fff;
+          line-height: 1.52;
+          // background: url(/kr/assets/images/kia/pdp/display_theme_disney/number1.png) no-repeat 0 0 / 2.3rem auto;
+
+          @include tablet {
+            margin: 0;
+            padding: 0 2rem 0 4.8rem;
+            font-size: 1.6rem;
+          }
+
+          .add {
+            display: block;
+            font-size: 1rem;
+            color: #969696;
+
+            @include tablet {
+              font-size: 1.4rem;
+            }
+          }
+
+          &::before {
+            content: "1";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            padding-top: 0.2rem;
+            font-size: 1.6rem;
+            color: #05141f;
+            font-weight: 600;
+            background-color: #fff;
+            box-shadow: 0px 0px 0.4rem 0px #00000099;
+            border-radius: 0.4rem;
+
+            @include tablet {
+              top: 0.3rem;
+              width: 3.2rem;
+              height: 3.2rem;
+              font-size: 2rem;
+              box-shadow: 0px 0px 0.8rem 0px #00000099;
+              border-radius: 0.8rem;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          p {
+            @include tablet {
+              padding-bottom: 0.7rem;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          p {
+            padding: 1rem 3.6rem 0 0;
+            margin: 0 2rem 2.3rem 2rem;
+            // background: url(/kr/assets/images/kia/pdp/display_theme_disney/number2.png) no-repeat calc(100% - 0.6rem) 0 / 3.7rem auto;
+            text-align: right;
+
+            @include tablet {
+              padding: 0 2rem 0 4.8rem;
+              margin: 0;
+              background-position: 0 1.2rem;
+              background-size: 5.1rem auto;
+              text-align: left;
+            }
+
+            &::before {
+              content: "2";
+              left: auto;
+              right: 0;
+
+              @include tablet {
+                left: 0;
+                right: auto;
+              }
+            }
+          }
+
+          .img-area {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.7rem;
+
+            @include tablet {
+              padding-left: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          p {
+            margin-bottom: 2.8rem;
+            // background: url(/kr/assets/images/kia/pdp/display_theme_disney/number3.png) no-repeat 0 0 / 3.6rem auto;
+
+            @include tablet {
+              margin: 0;
+              padding: 0 2rem 0 4.8rem;
+              background-position: 0 0;
+              background-size: 4.9rem auto;
+            }
+
+            &::before {
+              content: "3";
+            }
+          }
+
+          .img-area {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 8rem;
+
+            @include tablet {
+              justify-content: center;
+              padding-left: 0;
+            }
+          }
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 0.8rem;
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: #fff;
+
+          @include tablet {
+            margin-bottom: 0.4rem;
+            font-size: 2.4rem;
+          }
+        }
+
+        .img-area {
+          width: 100%;
+
+          @include tablet {
+            width: 50%;
+            margin-left: 3.2rem;
+          }
+
+          img {
+            display: block;
+            max-width: 100%;
+
+            &.web {
+              display: none;
+            }
+
+            @include tablet {
+              &.web {
+                display: block;
+              }
+
+              &.mobile {
+                display: none;
+              }
+            }
+          }
+
+          .img-msg {
+            display: flex;
+            gap: 1rem;
+
+            @include tablet {
+              gap: 1.9rem;
+            }
+
+            img {
+              width: 50vw;
+
+              @include tablet {
+                width: 25.6rem;
+              }
+            }
+
+            .msg {
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-start;
+              flex-direction: column;
+              width: 36.11111111111111vw;
+              height: 32.5vw;
+              padding: 1.4rem;
+              font-size: 1rem;
+              font-weight: 600;
+              color: #fff;
+              line-height: 1.5;
+              background: url(/kr/assets/images/kia/pdp/display_theme_disney/img_reason_msg.png) no-repeat 0 0 / cover;
+
+              @include tablet {
+                width: 18.5rem;
+                height: 16.7rem;
+                padding: 2rem;
+                font-size: 1.4rem;
+              }
+
+              &:before {
+                content: "";
+                display: block;
+                width: 2.6rem;
+                height: 2rem;
+                margin-bottom: 0.5rem;
+                background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_megaphone.png) no-repeat 0 0 / 100% auto;
+
+                @include tablet {
+                  width: 3.37rem;
+                  height: 2.6rem;
+                  margin-bottom: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .copyright {
+        margin-top: 8.2rem;
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+
+        @include tablet {
+          margin-top: 16rem;
+        }
+      }
+    }
+  }
+
+  .coming-next {
+    padding: 7.7rem 0 5.7rem;
+    text-align: left;
+    background-color: #000;
+
+    @include tablet {
+      padding: 23.8rem 2rem 16rem;
+    }
+
+    .tit-area {
+      padding: 0 2rem;
+
+      @include tablet {
+        padding: 0;
+        margin-bottom: 5.5rem;
+      }
+
+      h3 {
+        display: inline-block;
+        position: relative;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.4;
+
+        @include tablet {
+          font-size: 4.8rem;
+        }
+
+        br {
+          display: block;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        .next {
+          @include tablet {
+            position: relative;
+          }
+        }
+      }
+
+      .speech-bubble {
+        display: inline-block;
+        position: absolute;
+        top: -1.5rem;
+        left: 77%;
+        background-color: #fbc707;
+        padding: 0.6rem 0.9rem;
+        border-radius: 0.4rem;
+        font-size: 1.2rem;
+        color: #000;
+        line-height: 1.3;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+
+        @include tablet {
+          top: -7rem;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 1rem 1.2rem;
+          border-radius: 0.4rem;
+          font-size: 1.6rem;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -1rem;
+          left: 1.65rem;
+          transform: 0;
+          border-left: 1rem solid transparent;
+          border-right: 1rem solid transparent;
+          border-top: 1rem solid #fbc707;
+
+          @include tablet {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &.comp_2x_b_h_s_e2 {
+    margin-top: 0;
+
+    @include tablet {
+      margin-top: 9.4rem;
+    }
+
+    .text_area {
+      text-align: left;
+    }
+
+    .comp_body {
+      .item {
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .btn-zoom {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(/kr/assets/images/kia/pdp/display_theme_disney/btn_zoom.png) no-repeat 0 0 / 100% auto;
+  }
+
+  &.theme-frozen {
+    .available-theme {
+      .list {
+        padding: 3rem 2rem 3.8rem;
+        background: url(/kr/assets/images/kia/pdp/display_theme_mickey/union-top.png) no-repeat center bottom / auto 1.46rem;
+
+        @include tablet {
+          padding: 7.2rem 2rem 9.9rem;
+          background-size: 100% auto;
+        }
+      }
+
+      h3 {
+        padding: 4rem 2rem;
+        background: #fff;
+        box-shadow: 0px 0px 16px 0px #0000001f;
+
+        @include tablet {
+          height: 23.4rem;
+        }
+      }
+    }
+  }
+
+  .swiper-navigation {
+    display: none !important;
+
+    @include tablet {
+      display: block !important;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute !important;
+  }
+
+  .swiper-slide-frozen {
+    .text_area {
+      margin-top: 7.2rem;
+
+      @include tablet {
+        margin-top: 14rem;
+      }
+    }
+  }
+}
+
+.visualBg.swiper {
+  position: relative;
+
+  .swiper-pagination {
+    bottom: 3rem;
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      width: 5.6rem;
+      height: 0.4rem;
+      border-radius: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      @include maxtablet {
+        width: 3rem;
+        height: 0.3rem;
+      }
+
+      &.swiper-pagination-bullet-active {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  .image_area {
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.desktop {
+  .displayThemeDesney {
+    .mobile {
+      display: none;
+    }
+  }
+}
+
+.tablet {
+  .displayThemeDesney {
+    .mobile {
+      display: none;
+    }
+  }
+}
+
+.moblie {
+  .displayThemeDesney {
+    .web {
+      display: none;
+    }
+  }
+}
+
+.pdp-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 팝업에 overflow 방지 */
+  overflow: hidden;
+}
+
+.zoom-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* 회전 + 위치 보정 */
+  // transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+.pdp-zoom img,
+.pdp-zoom video {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.btn-close-zoom {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  text-indent: -9999em;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/btn_zoom_close.png) no-repeat 0 0 / 100% auto;
+  cursor: pointer;
+}
+
+.photoReviewList {
+  border-top: 1px solid #dedede;
+  margin: 3rem 0;
+  padding: 3rem 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+
+  .btn-allPhotoReview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    // width: calc((100% - 3rem) / 4);
+    width: 7.2rem;
+    height: 7.2rem;
+    aspect-ratio: 1/1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #05141f;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    @include tablet {
+      width: 16rem;
+      height: 16rem;
+      margin-right: 1.3rem;
+      font-size: 1.4rem;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1.6rem;
+      margin-bottom: 0.2rem;
+      background: url(/kr/assets/images/common/icon_camera.png) no-repeat center center / auto 100%;
+
+      @include tablet {
+        height: 3.2rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    @include tablet {
+      gap: 1.3rem;
+    }
+
+    li {
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      // width: calc((100% - 2rem) / 3);
+      width: 7.2rem;
+      height: 7.2rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 0.8rem;
+
+      @include tablet {
+        width: 16rem;
+        height: 16rem;
+        aspect-ratio: inherit;
+      }
+
+      // 4~6 번째 숨김
+      // &:nth-child(n + 4):nth-child(-n + 7) {
+      //   display: none;
+
+      //   @include tablet {
+      //     display: block;
+      //   }
+      // }
+
+      button {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0.8rem;
+        right: 0.8rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        padding-top: 0.35rem;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #05141f;
+        font-size: 1.2rem;
+        z-index: 1;
+        line-height: 1;
+      }
+
+      // 모바일용 전체 포토리뷰 버튼 (4번째에 표시)
+      .allPhotoReview-mobile {
+        display: block;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      // PC용 전체 포토리뷰 버튼 (7번째에 표시)
+      .allPhotoReview-pc {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
+
+      // 4번째 li의 일반 버튼은 모바일에서 숨김
+      // .reviewArea &:nth-child(5) {
+      //   button:not(.photoReviewAllPopup.allPhotoReview-mobile) {
+      //     display: none;
+
+      //     @include tablet {
+      //       display: block;
+      //     }
+      //   }
+      // }
+    }
+
+    .popInner & {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.popInner {
+  .photoReviewList {
+    padding-top: 0;
+
+    ul {
+      gap: 1rem;
+
+      li {
+        width: calc((100% - 2rem) / 3);
+        height: auto;
+
+        @include tablet {
+          width: calc((100% - 5rem) / 6);
+          aspect-ratio: 1/1;
+        }
+
+        &:nth-child(7) {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sortBox {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    input[type="checkbox"]:disabled {
+      cursor: not-allowed;
+
+      & + span {
+        color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .selectInner {
+    .cont-select {
+      width: 15rem;
+    }
+  }
+}
+.bottom-sticky {
+  position: fixed;
+  left: 0;
+  top: auto;
+  bottom: -10rem;
+  width: 100%;
+  height: auto;
+  min-height:14rem;
+  padding: 1.6rem 2rem;
+  z-index: 100;
+  background: rgba(23, 23, 23, 0.95);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden; opacity: 0;
+  @include tablet {
+    bottom: 0;
+    height: auto;
+    min-height:9rem;
+  }
+  .infoStickyInner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding:0;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+    .stickyTitle {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      & + .stickyDesc {
+        padding-top: 0.8rem;
+      }
+      @include tablet {
+        font-size: 1.6rem;
+      }
+
+    }
+    .unsupported {
+      .stickyTitle strong {
+        color: #ea0029;
+      }
+
+      & ~ .stickyAction {
+        .oneButton {
+          button[disabled] {
+            cursor: default;
+            &:hover {
+              &:before {
+                background-image: url(/kr/assets/images/kia/svg/kia-btn-wleft.svg);
+              }
+              &:after {
+                background-image: url(/kr/assets/images/kia/svg/kia-btn-wright.svg);
+              }
+              p {
+                background-color: #fff;
+                border-color: #9ba1a5;
+                color: #9ea1a2;
+              }
+            }
+          }
+        }
+      }
+    }
+    .stickyDesc {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #676767;
+      line-height: 1.3;
+    }
+    .icoInfo {
+      display: block;
+      width: 1.7rem;
+      height: 1.7rem;
+      margin-right: 0.2rem;
+      background: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center / 100% auto;
+      &.red {
+        background-color: #ea0029;
+        background-image: none;
+        mask: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center / 100% auto;
+        -webkit-mask: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center / 100% auto;
+      }
+    }
+
+    .stickyAction {
+      width: 100%;
+      margin-top: 1.2rem;
+
+      @include tablet {
+        width: auto;
+        margin-top: 0;
+      }
+
+      button {
+        &[disabled] {
+          p {
+            color: #9ea1a2;
+          }
+        }
+      }
+    }
+
+    .stickyBlockWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .stickyBlock {
+        em {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #fff;
+          text-align: right;
+        }
+        strong {
+          display: block;
+          margin-top: 0.6rem;
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #fff;
+          text-align: right;
+          @include tablet {
+            font-size: 1.6rem;
+          }
+        }
+
+        &.amount {
+          @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 8rem;
+            em + strong {
+              display: flex;
+              align-items: center;
+              margin-top: 0;
+              margin-left: 1.2rem;
+              line-height: 0;
+              &:before {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 1.3rem;
+                background-color: #d9d9d9;
+                margin-right: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn-fold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid rgba(78, 78, 78, 1);
+    background-color: rgba(40, 40, 40, 0.8);
+    box-shadow: 0px 2px 1px 0px #68686840;
+    cursor: pointer;
+    &:before {
+      content: "";
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(/kr/assets/images/common/icon-wtbarrow.svg) no-repeat center center / 100% auto;
+      transition: all 0.2s ease;
+    }
+    &.fold {
+      &:before {
+        background-image: url(/kr/assets/images/common/icon__purchase.svg);
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
+.bottom-sticky-visible {
+  .bottom-sticky{
+    visibility: visible;
+    opacity: 1;
+    @include tablet {
+      bottom: 0 !important
+    }
+  }
+  .floating_menu {
+    bottom: 1rem;
+    z-index: 100;
+    transition: bottom 0.3s ease-in-out;
+    @include tablet {
+      bottom: 9rem !important;
+      transition: bottom 0.3s ease-in-out;
+    }
+  }
+}

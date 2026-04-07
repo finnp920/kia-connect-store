@@ -1,0 +1,2700 @@
+@charset "UTF-8";
+@use './utils' as *;
+
+// 컨텐츠 전용 SCSS
+.contentHeaderCase {
+  margin-top: 10.6rem;
+  width: 100%;
+  height: 22rem;
+  background-size: cover;
+  background-position: center;
+  transition: top 0.3s ease-in-out;
+  @include desktopMin {
+    margin-top: 8rem;
+  }
+
+  @media (min-width: 1025px) {
+    height: 35rem;
+  }
+
+  &.case01 {
+    background-image: url('/kr/assets/images/kia/contents/header01.jpg');
+    top: 10.6rem;
+  }
+
+  &.case02 {
+    background-image: url('/kr/assets/images/kia/contents/header02.jpg');
+    top: 10.6rem;
+  }
+
+  &.case03 {
+    background-image: url('/kr/assets/images/kia/contents/header03.jpg');
+    top: 10.6rem;
+  }
+
+  &.case04 {
+    background-image: url('/kr/assets/images/kia/contents/header04.jpg');
+    top: 10.6rem;
+  }
+
+  &.case05 {
+    background-image: url('/kr/assets/images/kia/contents/header05.jpg');
+    top: 10.6rem;
+  }
+
+  &.case06 {
+    background-image: url('/kr/assets/images/kia/contents/header06.jpg');
+  }
+
+  &.case07 {
+    background-image: url('/kr/assets/images/kia/keybg/event-key.png');
+  }
+}
+
+.contentsTypeNew {
+  width: 100%;
+  min-width: 315px;
+  padding-top: calc(100px - 5.5em);
+
+  @media (max-width: 1240px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: calc(50px - 3.5em);
+  }
+
+  .titleCase01 {
+    font-size: 30px;
+
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  .titleCase02 {
+    font-size: 24px;
+
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+
+  .titleCase03 {
+    font-size: 20px;
+
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
+
+    a {
+      display: block;
+      width: 9rem;
+      margin-top: 2rem;
+      background: url('/kr/assets/images/kia/contents/arrowRight.svg') no-repeat
+        right 4px;
+      font-size: 1.6rem;
+      color: #676767;
+    }
+  }
+
+  .titleCase04 {
+    font-size: 16px;
+  }
+
+  .txtCase01 {
+    font-size: 16px !important;
+    line-height: 24px !important;
+
+    &.respond {
+      @media (max-width: 500px) {
+        font-size: 14px !important;
+        line-height: 22px !important;
+      }
+    }
+  }
+
+  br.caseNarrow {
+    @media (min-width: 501px) {
+      display: none;
+    }
+  }
+
+  a.caseYoutube {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 66px;
+      height: 46px;
+      background: url('/kr/assets/images/kia/contents/youtube.svg') no-repeat
+        center;
+    }
+  }
+
+  //고객센터 및 AS안내
+  &.caseAs {
+    .txtCase01 {
+      margin: 20px 0 40px;
+    }
+
+    ul.case01 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 20px;
+
+      li {
+        position: relative;
+        padding: 80px 30px 25px;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-position: 30px 24px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+
+        &:nth-of-type(1) {
+          background-image: url('/kr/assets/images/kia/contents/icon01.svg');
+        }
+
+        &:nth-of-type(2) {
+          background-image: url('/kr/assets/images/kia/contents/icon02.svg');
+        }
+
+        &:nth-of-type(3) {
+          background-image: url('/kr/assets/images/kia/contents/icon03.svg');
+        }
+
+        &:not(:last-of-type)::after {
+          content: '';
+          position: absolute;
+          margin: auto;
+          width: 8px;
+          height: 16px;
+          background: url('/kr/assets/images/kia/contents/arrow.svg') no-repeat
+            center;
+        }
+
+        @media (min-width: 769px) {
+          width: calc(100% / 3 - 40px);
+
+          &::after {
+            right: -34px;
+            top: 0;
+            bottom: 0;
+          }
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+
+          & + li {
+            margin-top: 38px;
+          }
+
+          &::after {
+            right: 0;
+            left: 0;
+            bottom: -30px;
+            transform: rotate(90deg);
+          }
+        }
+
+        @media (max-width: 500px) {
+          padding: 60px 20px 20px;
+          background-size: 30px;
+          background-position: 20px 20px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .choice {
+          margin-top: 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          color: #676767;
+        }
+
+        .flow {
+          margin-top: 1rem;
+          text-align: center;
+
+          .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #eeeeee;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #666666;
+            padding: 0.5rem;
+          }
+
+          .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.4rem;
+          }
+        }
+      }
+    }
+
+    ul.case02 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-top: 50px;
+
+      li {
+        width: 50%;
+        padding-right: 20px;
+        background-repeat: no-repeat;
+
+        &:first-of-type {
+          padding-left: 100px;
+          background-image: url('/kr/assets/images/kia/contents/icon04.svg');
+          background-position: left 5px;
+        }
+
+        &:last-of-type {
+          padding-left: 140px;
+          background-image: url('/kr/assets/images/kia/contents/icon05.svg');
+          background-position: 40px 5px;
+        }
+
+        & + li {
+          border-left: 1px solid #dedede;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+          padding-top: 80px;
+          padding-right: 0;
+          padding-left: 0 !important;
+
+          & + li {
+            margin-top: 20px;
+            border-left: none;
+          }
+        }
+
+        @media (max-width: 500px) {
+          padding-top: 60px;
+          background-size: 50px;
+          background-position: left top !important;
+        }
+
+        strong,
+        p {
+          font-size: 14px;
+          line-height: 22px;
+          color: #676767;
+        }
+
+        strong {
+          display: block;
+          margin: 17px 0 6px;
+        }
+      }
+    }
+
+    .caseAsinfo {
+      overflow: hidden;
+      margin-top: 90px;
+
+      @media screen and (max-width: 500px) {
+        margin-top: 60px;
+      }
+
+      dl {
+        float: left;
+        margin-top: 53px;
+        width: calc(50% - 10px);
+
+        dt {
+          padding-bottom: 10px;
+          font-weight: bold;
+          font-size: 18px;
+
+          @media screen and (max-width: 500px) {
+            font-size: 16px;
+          }
+        }
+
+        dd {
+          padding-top: 6px;
+          font-size: 16px;
+          line-height: 1.57;
+
+          @media screen and (max-width: 500px) {
+            font-size: 14px;
+          }
+
+          & + dd {
+            color: #676767;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          float: none;
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
+
+      a {
+        position: relative;
+        float: right;
+        display: block;
+        margin-top: 30px;
+        width: calc(50% - 10px);
+        height: 120px;
+        padding-left: 110px;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+        background: url('/kr/assets/images/kia/contents/icon06.svg') no-repeat
+          30px center;
+        line-height: 118px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #000;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 30px;
+          margin: auto;
+          width: 8px;
+          height: 16px;
+          background: url('/kr/assets/images/kia/contents/arrow.svg') no-repeat
+            center;
+        }
+
+        @media screen and (max-width: 768px) {
+          float: none;
+          width: 100%;
+        }
+
+        @media (max-width: 500px) {
+          margin-top: 16px;
+          height: 80px;
+          padding-left: 70px;
+          font-size: 16px;
+          line-height: 78px;
+          background-size: 40px;
+          background-position: 20px 20px;
+
+          &::after {
+            right: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  //스토어 소개
+  &.caseServiceinfo {
+    .serviceInfoHeader {
+      margin-bottom: 70px;
+      position: relative;
+      font-size: 16px;
+      line-height: 1.5;
+
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
+
+      color: #fff;
+
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        left: -100vw;
+        right: -100vw;
+        top: -6.6rem;
+        bottom: 25%;
+        background: #000;
+
+        @media (max-width: 1145px) {
+          bottom: 23%;
+        }
+
+        @media (max-width: 976px) {
+          bottom: 20%;
+        }
+
+        @media (max-width: 971px) {
+          bottom: 17%;
+        }
+
+        @media (max-width: 615px) {
+          bottom: 13%;
+        }
+
+        @media (max-width: 500px) {
+          bottom: 15%;
+        }
+      }
+
+      strong {
+        display: block;
+        margin-top: 20px;
+        font-size: 38px;
+        line-height: 1.25;
+
+        @media (max-width: 500px) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        margin-top: 30px;
+      }
+
+      img {
+        display: block;
+        margin: 60px auto 0;
+        max-width: 100%;
+        border-radius: 6px;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 500px) {
+        margin-bottom: 20px;
+
+        strong {
+          margin-top: 15px;
+        }
+
+        p {
+          margin-top: 20px;
+        }
+
+        img {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  //스토어 가입안내
+  &.caseRegist {
+    section + section {
+      margin-top: 80px;
+
+      @media (max-width: 1024px) {
+        margin-top: 60px;
+      }
+    }
+
+    .connectStore {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        li {
+          width: calc(100% / 3 - 12px);
+
+          &:first-child img {
+            border: 1px solid #dedede;
+          }
+
+          img {
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 6px;
+          }
+
+          p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #676767;
+          }
+        }
+
+        @media (max-width: 640px) {
+          li {
+            width: 100%;
+          }
+
+          li + li {
+            margin-top: 30px;
+          }
+        }
+
+        @media (max-width: 500px) {
+          margin-top: 20px;
+
+          img {
+            margin-bottom: 15px;
+          }
+
+          p {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  //상품별 이용안내 목록
+  &.caseUsageList {
+    > section {
+      & + section {
+        margin-top: 80px;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        a {
+          width: calc(50% - 20px);
+
+          & + a + a {
+            margin-top: 40px;
+          }
+        }
+
+        &.listType01 a {
+          aspect-ratio: 16 / 9;
+          padding: 40px;
+          border-radius: 6px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          line-height: 1.4;
+          font-size: 30px;
+          color: #fff;
+        }
+
+        &.listType02 a {
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          border: 1px solid #dedede;
+          border-radius: 6px;
+          font-size: 20px;
+          line-height: 1.5;
+          color: #000;
+
+          img {
+            margin: -1px 0 -1px -1px;
+            width: 31.25%;
+            border-radius: 6px 0 0 6px;
+          }
+
+          b {
+            max-width: 305px;
+            padding: 0 30px;
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        div {
+          a {
+            width: calc(50% - 15px);
+
+            & + a + a {
+              margin-top: 30px;
+            }
+          }
+
+          &.listType01 a {
+            padding: 30px;
+          }
+
+          &.listType02 a {
+            b {
+              padding: 0 25px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        div {
+          a {
+            width: calc(50% - 10px);
+
+            & + a + a {
+              margin-top: 20px;
+            }
+          }
+
+          &.listType01 a {
+            padding: 25px;
+            font-size: 20px;
+          }
+
+          &.listType02 a b {
+            padding: 0 20px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      @media (max-width: 640px) {
+        div.listType02 a {
+          width: 100%;
+
+          & + a {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        & + section {
+          margin-top: 60px;
+        }
+
+        h2 {
+          margin-bottom: 20px;
+        }
+
+        div.listType01 a {
+          width: 100%;
+
+          & + a {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  //상품별 이용안내 상세
+  &.caseUsageDetail {
+    .titleCase01 {
+      margin-bottom: 40px;
+    }
+
+    > section + section {
+      margin-top: 90px;
+    }
+
+    .caseBtnWrap {
+      margin-top: 80px;
+      text-align: center;
+
+      a {
+        position: relative;
+        display: inline-block;
+        width: 160px;
+        height: 56px;
+        font-size: 14px;
+        line-height: 54px;
+        color: #000;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 40px;
+          background: url('/kr/assets/images/kia/contents/btnList.svg')
+            no-repeat left top;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+          transform: rotate(180deg);
+        }
+
+        b {
+          position: absolute;
+          left: 40px;
+          right: 40px;
+          border-top: 1px solid #9ba1a5;
+          border-bottom: 1px solid #9ba1a5;
+        }
+      }
+    }
+
+    .caseVideo {
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 6px;
+      }
+    }
+
+    .caseFunction {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: 50px;
+        width: 51px;
+        height: 57px;
+        background: linear-gradient(
+          270deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .functionTab {
+        overflow-x: auto;
+        margin-bottom: 15px;
+        width: 100%;
+        padding-bottom: 15px;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+
+        @media (max-width: 500px) {
+          display: none;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        > ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          white-space: nowrap;
+
+          &::after {
+            content: '';
+            width: 40px;
+          }
+
+          button {
+            margin-right: 20px;
+            font-size: 18px;
+            color: #9ea1a2;
+            cursor: pointer;
+          }
+
+          li.active button {
+            border-bottom: 1px solid #000;
+            color: #000;
+          }
+
+          li:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+
+      .functionDetail {
+        &:not(.active) {
+          display: none;
+        }
+
+        h3 {
+          display: none;
+        }
+
+        .itemWrap {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+
+          .item {
+            width: calc(100% / 3 - 12px);
+          }
+
+          p {
+            margin-top: 20px;
+          }
+        }
+
+        .item {
+          position: relative;
+
+          strong {
+            position: absolute;
+          }
+
+          img {
+            max-width: 100%;
+            border: 1px solid #dedede;
+            border-radius: 6px;
+            box-sizing: border-box;
+          }
+
+          &.single {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            strong {
+              top: 30px;
+              left: 30px;
+            }
+
+            img {
+              width: 65%;
+            }
+
+            p {
+              width: 35%;
+              padding-left: 50px;
+            }
+          }
+
+          &:not(.single) {
+            strong {
+              top: 20px;
+              left: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .caseUsage {
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    .caseStreaming {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+
+      > p {
+        margin-top: 28px;
+        color: #676767;
+      }
+
+      h2 {
+        width: 100%;
+      }
+
+      > section {
+        letter-spacing: -4px;
+
+        &:first-of-type {
+          width: 612px;
+        }
+
+        &:nth-of-type(2) {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: calc(100% - 742px);
+
+          h3 {
+            width: 100px;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #dedede;
+          }
+
+          &::before {
+            left: calc((100% - 100px) / 4);
+          }
+
+          &::after {
+            right: calc((100% - 100px) / 4);
+          }
+        }
+
+        &:last-of-type {
+          width: 130px;
+        }
+
+        h3 {
+          margin-bottom: 23px;
+          width: 100%;
+          letter-spacing: 0;
+        }
+
+        > div {
+          display: inline-block;
+
+          & + div {
+            margin-left: 40px;
+          }
+
+          strong {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0;
+            color: #676767;
+          }
+
+          a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            &.caseBorder {
+              border: 1px solid #dedede;
+            }
+
+            & + a {
+              margin-left: 15px;
+            }
+          }
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        justify-content: flex-start;
+
+        > section {
+          &:first-of-type {
+            width: 100%;
+          }
+
+          &:nth-of-type(2) {
+            display: unset;
+            margin-top: 40px;
+            width: unset;
+
+            &::before,
+            &::after {
+              display: none;
+            }
+          }
+
+          &:last-of-type {
+            margin-top: 40px;
+            margin-left: 50px;
+            padding-left: 50px;
+            border-left: 1px solid #dedede;
+          }
+        }
+      }
+
+      @media (max-width: 680px) {
+        > section {
+          > div {
+            &:first-of-type {
+              width: 100%;
+            }
+
+            &:nth-of-type(2) {
+              margin-left: 0;
+            }
+
+            &:not(:first-of-type) {
+              margin-top: 28px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        > p {
+          margin-top: 23px;
+        }
+
+        > section {
+          @media (max-width: 359px) {
+            &:first-of-type {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex-wrap: wrap;
+
+              > div {
+                display: unset;
+                margin-left: 0 !important;
+              }
+            }
+          }
+
+          & + section {
+            margin-top: 28px !important;
+          }
+
+          &:last-of-type {
+            margin-left: 15px;
+            padding-left: 0;
+            border-left: 0;
+          }
+
+          h3 {
+            margin-bottom: 18px;
+            width: 100% !important;
+          }
+
+          > div {
+            strong {
+              margin-bottom: 8px;
+            }
+
+            a {
+              width: 84px;
+              height: 84px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .caseFunction {
+        .functionDetail {
+          .itemWrap {
+            .item {
+              width: calc(50% - 10px);
+
+              & + .item + .item {
+                margin-top: 14px;
+              }
+            }
+
+            p {
+              margin-top: 0;
+              width: calc(50% - 10px);
+            }
+          }
+
+          .item {
+            &.single {
+              p {
+                padding-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 680px) {
+      .caseFunction {
+        .functionDetail {
+          .itemWrap {
+            .item,
+            p {
+              width: 100%;
+            }
+
+            .item + .item {
+              margin-top: 14px;
+            }
+
+            .item strong {
+              left: 30px;
+              top: 30px;
+            }
+
+            p {
+              margin-top: 15px;
+            }
+          }
+
+          .item {
+            &.single {
+              img {
+                width: 100%;
+              }
+
+              p {
+                width: 100%;
+                padding-left: 0;
+                padding-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      .titleCase01 {
+        margin-bottom: 20px;
+      }
+
+      > section + section {
+        margin-top: 60px;
+      }
+
+      .caseBtnWrap {
+        margin-top: 60px;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      .caseFunction {
+        .functionTab {
+          padding-top: 20px;
+        }
+
+        .functionDetail {
+          .item {
+            strong {
+              top: 15px !important;
+              left: 15px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //원격 스마트 주차 보조2 (RSPA2) 기능 소개
+  &.caseRspa2 {
+    > section + section {
+      margin-top: 90px;
+
+      @media (max-width: 500px) {
+        margin-top: 60px;
+      }
+    }
+
+    .info {
+      p {
+        margin-top: 20px;
+      }
+
+      p:last-child {
+        color: #676767;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 40px;
+
+        li {
+          position: relative;
+          width: calc(20% - 12px);
+
+          & + li {
+            margin-left: 15px;
+          }
+
+          strong {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            font-size: 16px;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            border: 1px solid #dedede;
+            border-radius: 6px;
+          }
+        }
+      }
+
+      @media (min-width: 641px) and (max-width: 1024px) {
+        ul {
+          li {
+            width: calc(100% / 3 - 10px);
+
+            & + li + li + li {
+              margin-top: 15px;
+            }
+
+            &:nth-of-type(3n + 1) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 640px) {
+        ul {
+          li {
+            width: calc(50% - 7px);
+
+            & + li {
+              margin-left: 14px;
+            }
+
+            & + li + li {
+              margin-top: 15px;
+            }
+
+            &:nth-of-type(2n + 1) {
+              margin-left: 0;
+            }
+
+            strong {
+              top: 20px;
+              left: 20px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        p:first-of-type {
+          margin-top: 15px;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            width: 100%;
+            margin-left: 0 !important;
+
+            & + li {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .howtobuy {
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        > * {
+          position: relative;
+          width: calc(100% / 3 - 8px);
+          padding: 30px 30px 110px;
+          border: 1px solid #dedede;
+          border-radius: 6px;
+          background-repeat: no-repeat;
+          background-position: left 30px bottom 30px;
+
+          &:first-of-type {
+            background-image: url('/kr/assets/images/kia/contents/rspaHowto01.svg');
+          }
+
+          &:nth-of-type(2) {
+            background-image: url('/kr/assets/images/kia/contents/rspaHowto02.svg');
+          }
+
+          &:last-of-type {
+            background-image: url('/kr/assets/images/kia/contents/rspaHowto03.svg');
+          }
+
+          b:first-child {
+            font-size: 14px;
+            color: #9ea1a2;
+          }
+
+          strong {
+            display: block;
+            margin-top: 6px;
+            color: #000;
+          }
+
+          b:last-child {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            padding-right: 12px;
+            background: url('/kr/assets/images/kia/contents/arrowRight.svg')
+              no-repeat right 1px;
+            font-size: 16px;
+            color: #676767;
+          }
+        }
+
+        @media (max-width: 768px) {
+          > * {
+            padding: 25px 25px 79px;
+            background-position: left 20px bottom 20px;
+            background-size: 40px;
+
+            b:last-child {
+              bottom: 25px;
+              right: 25px;
+            }
+          }
+        }
+
+        @media (max-width: 640px) {
+          > * {
+            width: 100%;
+
+            & + * {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        @media (max-width: 500px) {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .caseMagazineView {
+      &:first-of-type {
+        margin-top: 40px;
+      }
+
+      @media (max-width: 500px) {
+        &:first-of-type {
+          margin-top: 20px;
+        }
+
+        img {
+          margin-bottom: 20px;
+        }
+
+        > div {
+          h3 + p {
+            margin-top: 15px;
+          }
+
+          a {
+            margin-top: 30px;
+            background-position: right 3px;
+          }
+        }
+      }
+    }
+  }
+
+  //스토어가이드 탭
+  .storeguideTab {
+    margin-left: -15px;
+    padding-top: 30px;
+
+    > div {
+      align-items: stretch;
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 20px;
+      margin-left: 15px;
+      width: calc(20% - 15px);
+      height: unset;
+      padding: 20px;
+      border: 1px solid #dedede;
+      border-radius: 6px;
+      font-size: 16px;
+
+      &:hover,
+      &:focus,
+      &.current {
+        border-color: #000;
+      }
+
+      strong {
+        width: 100%;
+        margin-top: 4.8rem;
+        color: #000;
+      }
+
+      p {
+        width: 100%;
+        padding-top: 10px;
+        line-height: 1.5;
+        color: #676767;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        width: 26px;
+        height: 26px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:nth-child(1)::before {
+        background-image: url('/kr/assets/images/kia/contents/iconTab01.svg');
+      }
+
+      &:nth-child(2)::before {
+        background-image: url('/kr/assets/images/kia/contents/iconTab02.svg');
+      }
+
+      &:nth-child(3)::before {
+        background-image: url('/kr/assets/images/kia/contents/iconTab03.svg');
+      }
+
+      &:nth-child(4)::before {
+        background-image: url('/kr/assets/images/kia/contents/iconTab04.svg');
+      }
+
+      &:nth-child(5)::before {
+        background-image: url('/kr/assets/images/kia/contents/iconTab05.svg');
+      }
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: calc(-15px - 2rem);
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      a {
+        width: 228px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 0;
+      padding-right: 0;
+
+      .swiper-wrapper {
+        display: block;
+        transform: none !important;
+      }
+
+      a {
+        margin-top: 15px;
+        margin-left: 0;
+        width: 100%;
+        font-size: 14px;
+
+        strong {
+          width: unset;
+        }
+
+        p {
+          padding-top: 15px;
+        }
+
+        &::before {
+          margin-bottom: 0;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &.caseSelect {
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+  }
+
+  //가이드 swipe
+  .storeGuideItem {
+    position: relative;
+    margin-bottom: 10rem;
+
+    & + .storeGuideItem {
+      margin-top: 20px;
+    }
+
+    > header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin: 60px 0 30px;
+
+      &.case {
+        margin: 0 0 20px;
+      }
+
+      br.narrowonly {
+        display: none;
+
+        @media (max-width: 500px) {
+          display: inline;
+        }
+      }
+
+      strong {
+        padding: 0 0 13px 5px;
+        font-size: 12px;
+        color: #ff0000;
+
+        @media (max-width: 500px) {
+          padding-bottom: 9px;
+        }
+      }
+
+      .titleCase03 + strong {
+        padding-bottom: 8px !important;
+      }
+
+      p {
+        margin-top: 28px;
+        width: 100%;
+        color: #676767;
+      }
+    }
+
+    ul {
+      li {
+        width: calc(25% - 31px);
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        img {
+          display: block;
+          border-radius: 6px;
+          width: 100%;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+
+          &:not(.noBorder) {
+            border: 1px solid #dedede;
+          }
+        }
+
+        > b {
+          display: block;
+          margin: 20px 0 8px;
+          font-size: 14px;
+          color: #9ea1a2;
+        }
+
+        strong {
+          font-size: 16px;
+        }
+
+        p {
+          margin-top: 15px;
+          font-size: 14px;
+          color: #676767;
+
+          &.caseBlack {
+            margin-top: 8px;
+            color: #000;
+          }
+
+          small {
+            display: inline-block;
+            vertical-align: 3px;
+            font-size: 0.5em;
+          }
+        }
+      }
+
+      &.caseWide {
+        li {
+          width: calc(100% / 3 - 12px);
+
+          &:not(:last-child) {
+            margin-right: 18px;
+          }
+        }
+      }
+
+      &.caseWide2 {
+        li {
+          width: calc(50% - 10px);
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 400px;
+      height: 4px;
+      border-radius: 0;
+      background: #c3c6c8;
+      opacity: 1 !important;
+
+      .swiper-scrollbar-drag {
+        border-radius: 0;
+        background: #05141f;
+      }
+    }
+
+    .swiper-scrollbar-after-space {
+      height: 68px;
+    }
+
+    .swiper-scrollbar-lock + .swiper-scrollbar-after-space {
+      display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 250px;
+      margin-top: 0;
+      width: 55px;
+      height: 55px;
+      background: url('/kr/assets/images/kia/contents/arrowSwipe.svg') no-repeat
+        center;
+
+      &::after,
+      &.swiper-button-disabled {
+        display: none;
+      }
+
+      &.case {
+        top: 132px;
+      }
+
+      @media (max-width: 1400px) {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -95px;
+      transform: rotate(180deg);
+    }
+
+    .swiper-button-next {
+      right: -95px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+
+      & + .storeGuideItem {
+        margin-top: 0;
+      }
+
+      header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .swiper {
+        padding-right: 2rem;
+      }
+
+      ul {
+        li {
+          width: 252px;
+          padding-left: 24px !important;
+          margin-right: 0 !important;
+        }
+
+        &.caseWide,
+        &.caseWide2 {
+          li {
+            width: 480px;
+            padding-left: 2rem !important;
+          }
+        }
+      }
+
+      .swiper-scrollbar-after-space {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        margin-bottom: 15px;
+
+        p {
+          margin-top: 23px;
+        }
+      }
+
+      ul {
+        li {
+          width: 290px;
+          padding-left: 2rem !important;
+
+          b {
+            margin-top: 15px;
+          }
+        }
+
+        &.caseWide li,
+        &.caseWide2 li {
+          width: 100%;
+          //max-width: 340px;
+        }
+      }
+
+      .swiper-horizontal > .swiper-scrollbar,
+      .swiper-scrollbar.swiper-scrollbar-horizontal {
+        width: calc(100% - 40px);
+      }
+
+      .swiper-scrollbar-after-space {
+        height: 45px;
+      }
+    }
+  }
+
+  //안내 영역
+  .caseInfoWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    img {
+      width: 580px;
+      border-radius: 6px;
+    }
+
+    div {
+      width: calc(100% - 630px);
+
+      p {
+        margin-top: 20px;
+
+        @media (min-width: 769px) {
+          &.case {
+            max-width: 400px;
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 40px;
+        padding-right: 14px;
+        background: url('/kr/assets/images/kia/contents/arrowRight.svg')
+          no-repeat right 0;
+        font-size: 16px;
+        line-height: 1;
+        color: #676767;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      img {
+        width: 52%;
+      }
+
+      div {
+        width: calc(48% - 30px);
+
+        p {
+          margin-top: 15px;
+        }
+
+        a {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 680px) {
+      img {
+        width: 100%;
+      }
+
+      div {
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      div {
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  //Magazine view
+
+  .caseMagazineView {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+
+    > div {
+      width: 50%;
+
+      &:first-child {
+        padding-right: 50px;
+      }
+
+      h3 + p {
+        margin-top: 20px;
+      }
+
+      p + p {
+        margin-top: 10px;
+        color: #676767;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 40px;
+        padding-right: 14px;
+        background: url('/kr/assets/images/kia/contents/arrowRight.svg')
+          no-repeat right 4px;
+        color: #676767;
+      }
+    }
+
+    img {
+      width: 50%;
+      border-radius: 6px;
+
+      & + div {
+        padding-left: 50px;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      color: #676767;
+
+      @media (max-width: 500px) {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      > div:first-child {
+        padding-right: 30px;
+      }
+
+      img + div {
+        padding-left: 30px;
+      }
+
+      span {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      > div,
+      img {
+        width: 100%;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      img {
+        order: 1;
+        margin-bottom: 30px;
+      }
+
+      div {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 500px) {
+      padding-top: 40px;
+    }
+  }
+
+  //서비스
+  .caseService {
+    //overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+
+    &:not(.noBorder) {
+      padding-top: 100px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-top: 60px;
+
+      &:not(.noBorder) {
+        padding-top: 60px;
+      }
+    }
+
+    &:not(.noBorder)::before {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 1px;
+      background: #dedede;
+    }
+
+    header {
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+
+        @media screen and (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        margin-top: 8px;
+        font-size: 40px;
+        line-height: 1.25;
+
+        @media screen and (max-width: 500px) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    div {
+      width: calc(50% - 10px);
+      min-width: 476px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+
+      @media (max-width: 930px) {
+        margin-top: 30px;
+        width: 100%;
+        min-width: unset;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-top: 25px;
+      }
+
+      a {
+        position: relative;
+        width: calc(50% - 5px);
+        padding: 120px 50px 30px 30px;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-position: 30px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+
+        &:first-child {
+          background-image: url('/kr/assets/images/kia/contents/icon07.svg');
+        }
+
+        &:last-child {
+          background-image: url('/kr/assets/images/kia/contents/icon08.svg');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 30px;
+          bottom: 34px;
+          width: 8px;
+          height: 16px;
+          background: url('/kr/assets/images/kia/contents/arrow.svg') no-repeat
+            center;
+        }
+
+        &:hover,
+        &:focus {
+          border-color: #000;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          padding: 95px 25px 20px;
+          background-size: 40px;
+          background-position: 25px 25px;
+          font-size: 16px;
+
+          & + a {
+            margin-top: 10px;
+          }
+
+          &::after {
+            bottom: 23px;
+            right: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .comp_youtube {
+    margin-top: 6rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+      margin-top: 4rem;
+    }
+
+    .comp_body {
+      width: 100%;
+    }
+
+    .youtubeArea {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 비율인 경우 */
+      /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+      height: 0;
+
+      @media (max-width: 1024px) {
+        margin-top: 2rem;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.contentsBtn {
+  margin-top: 7rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 5rem;
+  }
+}
+
+.contentsBtnWarp {
+  width: 100%;
+  margin-top: 7rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 5rem;
+  }
+
+  .oneButton {
+    max-width: 16rem;
+    margin: 0 auto;
+  }
+}
+
+.serviceInfoTop {
+  width: 100%;
+  max-width: 192rem;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 8rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include desktopMin {
+    margin-top: 14rem;
+  }
+}
+
+.comp_body {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @media (max-width: 1240px) {
+    padding: 0 2rem;
+  }
+}
+
+.comp_1x_w_v_c_e2 {
+  position: relative;
+
+  .text_wrap {
+    @include maxdesktop {
+      display: block;
+    }
+
+    .text_area {
+      width: 100%;
+      color: #000000;
+
+      @include maxdesktop {
+        width: 100%;
+      }
+
+      .title_area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+
+        span {
+          width: calc(100% - 160px);
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 3.8rem;
+          margin-right: 2rem;
+
+          @include maxdesktop {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+
+          @media (max-width: 768px) {
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+
+        .oneButton {
+          width: 16rem;
+
+          @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      .text {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+
+        @include maxdesktop {
+          margin-top: 2rem;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+        }
+      }
+    }
+  }
+
+  .youtubeArea {
+    position: relative;
+    margin-top: 6rem;
+    padding-bottom: 56.25%;
+    /* 16:9 비율인 경우 */
+    /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+    padding-top: 25px;
+    height: 0;
+    border-radius: 0.6rem;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+      margin-top: 4rem;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.selectInner {
+  .cont-select {
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+    min-width: 10rem;
+
+    @include tablet {
+      width: 13rem;
+    }
+
+    .btn-select {
+      position: relative;
+      width: 100%;
+      height: 4.5rem;
+      font-size: 1.4rem;
+      padding: 1.4rem 2rem;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: left;
+      color: #000;
+      line-height: 1;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      @include tablet {
+        font-size: 1.6rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 1rem;
+        top: 40%;
+        transform: translate(-50%, 0);
+        width: 1.4rem;
+        height: 0.8rem;
+        display: block;
+        background: url('/kr/assets/images/common/icon-notice.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+      }
+    }
+
+    .list-member {
+      display: none;
+      position: absolute;
+      padding: 1rem 2rem;
+      width: 100%;
+      top: 4.4rem;
+      left: 0;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .btn-select.on {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .btn-select.on + .list-member {
+      display: block;
+    }
+
+    .list-member li {
+      font-size: 1.6rem;
+      line-height: 2;
+      box-sizing: border-box;
+
+      button {
+        font-size: 1.4rem;
+
+        @include tablet {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .list-member li a {
+      display: block;
+      width: 100%;
+      font-size: 1.4rem;
+      color: #000000;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.selectInner_new {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  display: none;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+
+  .cont-select {
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+    min-width: 10rem;
+
+    @include tablet {
+      width: 13rem;
+    }
+
+    .btn-select {
+      position: relative;
+      width: 100%;
+      height: 4.5rem;
+      font-size: 1.4rem;
+      padding: 1.4rem 2rem;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: left;
+      color: #000;
+      line-height: 1;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      @include tablet {
+        font-size: 1.6rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 1rem;
+        top: 40%;
+        transform: translate(-50%, 0);
+        width: 1.4rem;
+        height: 0.8rem;
+        display: block;
+        background: url('/kr/assets/images/common/icon-notice.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+      }
+    }
+
+    .list-member {
+      display: none;
+      position: absolute;
+      padding: 1rem 2rem;
+      width: 100%;
+      top: 4.4rem;
+      left: 0;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .btn-select.on {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .btn-select.on + .list-member {
+      display: block;
+    }
+
+    .list-member li {
+      font-size: 1.6rem;
+      line-height: 2;
+      box-sizing: border-box;
+    }
+
+    .list-member li a {
+      display: block;
+      width: 100%;
+      font-size: 1.4rem;
+      color: #000000;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.selectInner_new2 {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  display: none;
+  margin-bottom: 2rem;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+
+  .cont-select {
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+    min-width: 10rem;
+
+    @include tablet {
+      width: 13rem;
+    }
+
+    .btn-select {
+      position: relative;
+      width: 100%;
+      height: 4.5rem;
+      font-size: 1.4rem;
+      padding: 1.4rem 2rem;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: left;
+      color: #000;
+      line-height: 1;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      @include tablet {
+        font-size: 1.6rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 1rem;
+        top: 40%;
+        transform: translate(-50%, 0);
+        width: 1.4rem;
+        height: 0.8rem;
+        display: block;
+        background: url('/kr/assets/images/common/icon-notice.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+      }
+    }
+
+    .list-member {
+      display: none;
+      position: absolute;
+      padding: 1rem 2rem;
+      width: 100%;
+      top: 4.4rem;
+      left: 0;
+      border: 1px solid #dedede;
+      box-sizing: border-box;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .btn-select.on {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .btn-select.on + .list-member {
+      display: block;
+    }
+
+    .list-member li {
+      font-size: 1.6rem;
+      line-height: 2;
+      box-sizing: border-box;
+    }
+
+    .list-member li a {
+      display: block;
+      width: 100%;
+      font-size: 1.4rem;
+      color: #000000;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+      /* 말줄임 */
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.util-area {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+
+  @media (min-width: 768px) {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-wish {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url('../images/common/icon-wishlist-d.svg') no-repeat center /
+      100% auto;
+    background-size: contain;
+    text-indent: -9999px;
+    cursor: pointer;
+
+    &.active {
+      background-image: url('/kr/assets/images/common/icon-wishlist-s.svg');
+    }
+
+    @media (min-width: 768px) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .btn-share {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/common/icon_share.png) no-repeat center / 100%
+      auto;
+    text-indent: -9999px;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .btn-reviewCount {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    font-size: 1.8rem;
+    color: #05141f;
+    cursor: pointer;
+    border-bottom: 1px solid #05141f;
+  }
+}
+
+.utilBtnArea {
+  width: 100%;
+  padding: 4rem 0;
+
+  @include tablet {
+    padding: 4rem 0;
+  }
+
+  .utilBtnInner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    .util-area {
+      margin-bottom: 0;
+    }
+  }
+}

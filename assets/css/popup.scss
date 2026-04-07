@@ -1,0 +1,448 @@
+@charset "UTF-8";
+@use 'utils' as *;
+/*변수파일 import*/
+
+.popupWarp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+
+  .popInner {
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 0.6rem;
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .termsCon {
+      height: 29rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #dedede;
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px white;
+      }
+
+      p {
+        line-height: 2.4rem;
+        color: #676767;
+      }
+    }
+
+    .oneButton {
+      width: 16rem;
+      margin: 0 auto;
+      margin-top: 5rem;
+    }
+
+    .towButton {
+      margin: 0 auto;
+      margin-top: 5rem;
+      gap: 0.8rem;
+    }
+
+    @include maxtablet {
+      padding: 3rem;
+    }
+  }
+
+  .popInner {
+    position: absolute;
+    width: 92%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @include desktopMax {
+      width: fit-content;
+      width: 100%;
+    }
+  }
+
+  .termsPop {
+    max-width: 90rem;
+  }
+
+  .payInfo {
+    max-width: 54rem;
+
+    .payInfoCon {
+      p {
+        strong {
+          display: block;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          text-align: center;
+        }
+
+        span {
+          text-align: center;
+          display: block;
+          font-size: 1.6rem;
+          color: #676767;
+          margin-top: 1.5rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .marketingAgree {
+    max-width: 54rem;
+
+    .payInfoCon {
+      p {
+        text-align: center;
+
+        strong {
+          display: block;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+
+        span {
+          text-align: center;
+          display: block;
+          font-size: 1.6rem;
+          color: #676767;
+          margin-top: 1.5rem;
+          line-height: 2.4rem;
+        }
+
+        &.borderWrap {
+          margin-top: 30px;
+          padding: 24px;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+          color: #676767;
+          border-top: 1px solid #dedede;
+          border-bottom: 1px solid #dedede;
+        }
+      }
+    }
+
+    &.popInner {
+      .towButton {
+        width: 100%;
+      }
+    }
+
+    .hideAdCheck {
+      text-align: center;
+      margin-top: 5rem;
+
+      label {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #676767;
+        cursor: pointer;
+
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    @include maxtablet {
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .payInfoCon {
+        p {
+          font-size: 1.4rem;
+
+          &.borderWrap {
+            padding: 2rem 1rem;
+          }
+        }
+      }
+
+      &.popInner {
+        padding: 3rem 3rem 4rem;
+
+        .towButton {
+          margin-top: 4rem;
+          flex-wrap: wrap;
+
+          button + button {
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      .hideAdCheck {
+        margin-top: 4rem;
+
+        label {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .inquiryCaseEtc {
+    max-width: 54rem;
+
+    .inquiryCaseEtcCon {
+      p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+
+        span {
+          text-align: center;
+          display: block;
+          font-size: 1.6rem;
+          color: #676767;
+          margin-top: 1.5rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      .linkBox {
+        margin-top: 2rem;
+        padding: 2.8rem;
+        background-color: #f3f3f3;
+        text-align: center;
+
+        a {
+          position: relative;
+          display: inline;
+          border-bottom: 1px solid #676767;
+          margin-right: 2rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2;
+          color: #676767;
+
+          &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            right: -2rem;
+            bottom: 0;
+            width: 2rem;
+            height: 2rem;
+            background-image: url(/kr/assets/images/kia/svg/icon-link-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: 0.6rem 1.2rem;
+            margin-left: 1rem;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+
+  .sharePop {
+    max-width: 54rem;
+
+    .shareCon {
+      .shareUrlBox {
+        input {
+          width: 100%;
+          height: 4rem;
+          padding: 0 2.4rem;
+          border: 1px solid #dedede;
+          border-radius: 0.6rem;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .confirmPopup {
+    max-width: 32rem;
+    padding: 3rem;
+    @include tablet {
+      max-width: 47rem;
+      padding: 5rem;
+    }
+    .popContents {
+      font-size: 1.4rem;
+      text-align: center;
+      @include tablet {
+        font-size: 1.6rem;
+      }
+    }
+    .towButton {
+      margin-top: 3rem;
+      @include tablet {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
+
+//설치안내 팝업
+.payComplete {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 500;
+
+  .popInner {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    max-width: 120rem;
+    height: 90rem;
+    transform: translateX(-50%);
+    margin-top: -45rem;
+    padding: 0;
+    border-radius: 0;
+    background: url(../images/kia/contents/poup_complete.jpg) no-repeat center /
+      cover;
+
+    .popContents {
+      position: absolute;
+      bottom: 10%;
+      right: 8.333%;
+      width: 44rem;
+      height: 45.5rem;
+
+      .logo {
+        display: block;
+        height: 1.6rem;
+        margin-bottom: 1.9rem;
+        background-image: url(../images/kia/kia-logo-n.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        text-indent: -9999em;
+      }
+
+      .payInfoCon {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 44rem;
+        height: 42rem;
+        background-color: #fff;
+
+        & > p {
+          strong {
+            display: block;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+            margin-bottom: 3rem;
+            text-align: center;
+          }
+
+          span {
+            display: block;
+            font-size: 1.6rem;
+            color: #676767;
+            line-height: 2.4rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @include maxtablet {
+      max-height: 64rem;
+      width: calc(100% - 4rem);
+      background: url(../images/kia/contents/poup_complete_m.jpg) no-repeat
+        center / cover;
+
+      transform: translate(-50%, -50%);
+      margin-top: 0;
+
+      .popContents {
+        position: absolute;
+        bottom: 3rem;
+        right: auto;
+        width: 100%;
+        height: auto;
+
+        .logo {
+          display: block;
+          width: 81.25%;
+          height: 1.2rem;
+          margin: 0 auto;
+          margin-bottom: 1.2rem;
+        }
+
+        .payInfoCon {
+          width: 81.25%;
+          height: 27.7rem;
+          margin: 0 auto;
+
+          & > p {
+            padding: 0 3rem;
+
+            strong {
+              font-size: 1.8rem;
+              line-height: 2.16rem;
+              margin-bottom: 1.6rem;
+            }
+
+            span {
+              font-size: 1.4rem;
+              line-height: 1.68rem;
+
+              em {
+                display: block;
+              }
+
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .oneButton {
+          margin-top: 3rem;
+        }
+      }
+    }
+
+    @media (max-width: 320px) {
+      .popContents {
+        .payInfoCon {
+          & > p {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}

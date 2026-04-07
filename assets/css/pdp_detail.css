@@ -8,7 +8,6 @@
 /*반응형, 브라우저 크기가 1025px 이상일때*/
 /*반응형, 브라우저 크기가 1204px 이상일때*/
 /*넓이, 높이 자동 계산함수*/
-/*변수파일 import*/
 .comp_wide {
   width: 100%;
   max-width: 192rem;
@@ -18,6 +17,15 @@
 }
 .comp_wide:first-child {
   margin-top: 0;
+}
+.comp_wide .text-left {
+  text-align: left !important;
+}
+.comp_wide .text-center {
+  text-align: center !important;
+}
+.comp_wide .text-right {
+  text-align: right !important;
 }
 
 .comp_body {
@@ -248,8 +256,7 @@
   width: 100%;
   height: 100%;
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 501px) {
   .comp_1x_w_v_s_e1 .image_area img {
@@ -378,8 +385,7 @@
   width: 100%;
   height: 100%;
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 501px) {
   .comp_1x_w_v_s_e2 .image_area img {
@@ -490,8 +496,7 @@
   .comp_1x_w_v_s_b .image_area img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -511,8 +516,7 @@
   .comp_1x_w_v_c_e1 .image_area img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .comp_1x_w_v_c_e1 .comp_body.layer_up {
@@ -569,8 +573,7 @@
   .comp_1x_w_v_o_b .image_area img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .comp_1x_w_v_o_b .comp_body .text_area {
@@ -610,8 +613,7 @@
   height: 100%;
   width: 100%;
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .comp_1x_w_v_c_b .comp_body.layer_up {
   position: absolute;
@@ -671,8 +673,7 @@
   .comp_1x_b_v_s_b .image_area img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -762,8 +763,7 @@
   height: 100%;
   width: 100%;
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 0.6rem;
 }
 .comp_1x_b_v_o_b .comp_body .text_area {
@@ -1374,15 +1374,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .titleArea {
+    flex-wrap: nowrap;
+  }
 }
 .reviewArea .reviewInner .titleArea h2 {
   width: 100%;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 @media (max-width: 768px) {
   .reviewArea .reviewInner .titleArea h2 {
     font-size: 1.8rem;
+  }
+}
+.reviewArea .reviewInner .titleArea .oneButton {
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .titleArea .oneButton {
+    width: auto;
+    margin-top: 0;
   }
 }
 .reviewArea .reviewInner .titleArea .searchBox .selectInner .cont-select {
@@ -1468,26 +1484,54 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.reviewArea .reviewInner .reviewList {
-  margin-top: 3rem;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
+.reviewArea .reviewInner .noneReview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 7.2rem;
+  font-size: 1.4rem;
+  color: #9ea1a2;
+  background: #f3f3f3;
+  border-radius: 0.8rem;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .noneReview {
+    height: 16rem;
+    font-size: 1.6rem;
+  }
+}
+.reviewArea .reviewInner .noneReview P {
+  text-align: center;
+}
+.reviewArea .reviewInner .noneReview P br {
+  display: block;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .noneReview P br {
+    display: none;
+  }
+}
+.reviewArea .reviewInner .reviewList {
+  margin-top: 1.6rem;
+  border-top: 1px solid #999999;
+}
+@media (min-width: 768px) {
   .reviewArea .reviewInner .reviewList {
     margin-top: 2rem;
   }
 }
 .reviewArea .reviewInner .reviewList .item {
-  display: flex;
+  display: block;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 2rem 0;
+  align-items: center;
+  padding: 3.4rem 0 2.8rem;
   border-bottom: 1px solid #dedede;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .reviewArea .reviewInner .reviewList .item {
-    display: block;
+    display: flex;
+    padding: 1.6rem 0;
   }
 }
 .reviewArea .reviewInner .reviewList .item .textArea {
@@ -1514,10 +1558,65 @@
   font-size: 1.4rem;
   color: #9ea1a2;
 }
+.reviewArea .reviewInner .reviewList .item .textArea .info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .info {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+.reviewArea .reviewInner .reviewList .item .textArea .info span {
+  position: relative;
+  font-size: 1.4rem;
+  color: #a6a6a6;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .info span {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .info span + span {
+    padding-left: 1.6rem;
+    margin-left: 1.6rem;
+  }
+}
+.reviewArea .reviewInner .reviewList .item .textArea .info span + span::before {
+  content: "";
+  display: none;
+  width: 0.1rem;
+  height: 1.2rem;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .info span + span::before {
+    display: block;
+  }
+}
 .reviewArea .reviewInner .reviewList .item .textArea .contents {
-  margin-top: 1.5rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .contents {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 1.5rem;
+  }
 }
 @media (max-width: 768px) {
   .reviewArea .reviewInner .reviewList .item .textArea .contents {
@@ -1532,13 +1631,48 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.reviewArea .reviewInner .reviewList .item .textArea .photoArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.reviewArea .reviewInner .reviewList .item .textArea .photoArea .photoItem {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .photoArea .photoItem {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+.reviewArea .reviewInner .reviewList .item .textArea .photoArea .photoItem button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+.reviewArea .reviewInner .reviewList .item .textArea .photoArea .photoItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .reviewArea .reviewInner .reviewList .item .textArea .contentMoreBtn {
   display: none;
   align-items: center;
   margin-top: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #9ea1a2;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item .textArea .contentMoreBtn {
+    font-size: 1.6rem;
+  }
 }
 .reviewArea .reviewInner .reviewList .item .textArea .contentMoreBtn::after {
   content: "";
@@ -1555,46 +1689,22 @@
   background-image: url("/kr/assets/images/common/icon-briefly.svg");
 }
 .reviewArea .reviewInner .reviewList .item .reviewBtnArea {
-  width: 10rem;
+  width: auto;
 }
-@media (max-width: 768px) {
-  .reviewArea .reviewInner .reviewList .item .reviewBtnArea {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 1.5rem;
+.reviewArea .reviewInner .reviewList .item.best .textArea .info:after {
+  content: "";
+  display: block;
+  width: 7.7rem;
+  height: 2.4rem;
+  margin-left: 0;
+  margin-top: 0.8rem;
+  background: url("/kr/assets/images/kia/contents/review_best.png") no-repeat center center/contain;
+}
+@media (min-width: 768px) {
+  .reviewArea .reviewInner .reviewList .item.best .textArea .info:after {
+    margin-left: 1.6rem;
+    margin-top: 0;
   }
-}
-.reviewArea .reviewInner .reviewList .item .reviewBtnArea .reviewBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 3.5rem;
-  border: 1px solid #dedede;
-  border-radius: 0.6rem;
-  transition: 0.3s;
-}
-.reviewArea .reviewInner .reviewList .item .reviewBtnArea .reviewBtn .icon-good {
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/kr/assets/images/common/icon_good.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.reviewArea .reviewInner .reviewList .item .reviewBtnArea .reviewBtn .goodNum {
-  margin-left: 0.8rem;
-  padding-top: 0.2rem;
-  color: #9ea1a2;
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 2rem;
-}
-.reviewArea .reviewInner .reviewList .item .reviewBtnArea .reviewBtn:hover {
-  border: 1px solid #000000;
-}
-.reviewArea .reviewInner .reviewList .item .reviewBtnArea .reviewBtn.active .goodNum {
-  color: #000000;
 }
 .reviewArea .reviewInner .noList {
   display: flex;
@@ -1604,13 +1714,51 @@
   margin-top: 4rem;
   border: 1px solid #dedede;
   border-radius: 0.6rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #9ea1a2;
 }
 @media (min-width: 768px) {
   .reviewArea .reviewInner .noList {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
+}
+
+.reviewBtnArea {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 2.2rem;
+}
+.reviewBtnArea .reviewBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 1.6rem;
+  border: 1px solid #dedede;
+  border-radius: 1.75rem;
+  transition: 0.3s;
+}
+.reviewBtnArea .reviewBtn .icon-good {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/kr/assets/images/common/icon_good.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.reviewBtnArea .reviewBtn .goodNum {
+  margin-left: 0.8rem;
+  padding-top: 0.2rem;
+  color: #9ea1a2;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.reviewBtnArea .reviewBtn:hover {
+  border: 1px solid #000000;
+}
+.reviewBtnArea .reviewBtn.active .goodNum {
+  color: #000000;
 }
 
 .qnaArea {
@@ -1942,7 +2090,7 @@
 }
 @media (min-width: 1025px) {
   .listbtnWarp a::before,
-.listbtnWarp a::after {
+  .listbtnWarp a::after {
     width: 3.2rem;
   }
 }
@@ -1979,18 +2127,14 @@
 }
 .displayTheme .visualBg img {
   width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 @media (max-width: 1025px) {
   .displayTheme .visualBg img {
     width: 100%;
-    -o-object-fit: initial;
-       object-fit: initial;
-    -o-object-position: initial;
-       object-position: initial;
+    object-fit: initial;
+    object-position: initial;
   }
 }
 .displayTheme .visualBg img.mobile {
@@ -2002,8 +2146,7 @@
   }
   .displayTheme .visualBg img.mobile {
     display: block;
-    -o-object-fit: initial;
-       object-fit: initial;
+    object-fit: initial;
     height: auto;
   }
 }
@@ -2289,7 +2432,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: rgb(255, 255, 255) url(../images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
+  background: rgb(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
 }
 .displayThemeDtl .swiper-navigation > *:after {
   display: none;
@@ -2352,8 +2495,7 @@
   }
   .inCarGame .visualBg img.mobile {
     display: block;
-    -o-object-fit: initial;
-       object-fit: initial;
+    object-fit: initial;
     height: auto;
   }
 }
@@ -2380,8 +2522,7 @@
   background-color: rgb(255, 255, 255);
 }
 .inCarGame .visualBg.swiper .image_area img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .inCarGame.comp_wide .comp_body.layer_up .text_area {
   margin-top: 7rem;
@@ -2696,13 +2837,15 @@
   position: relative;
   height: 14.85rem;
   border-radius: 0.8rem;
-  cursor: pointer;
 }
 @media (max-width: 768px) {
   .inCarGame .inCarGameDtlThumb .swiper-slide {
     height: 4.5rem;
     border-radius: 0.4rem;
   }
+}
+.inCarGame .inCarGameDtlThumb .swiper-slide {
+  cursor: pointer;
 }
 .inCarGame .inCarGameDtlThumb .swiper-slide.video-slideThumb:before {
   content: "";
@@ -2714,7 +2857,7 @@
   transform: translate(-50%, -50%);
   width: 60px;
   height: 61px;
-  background: url(../images/kia/pdp/in_car_game/btn_play.png) no-repeat center/contain;
+  background: url(/kr/assets/images/kia/pdp/in_car_game/btn_play.png) no-repeat center/contain;
 }
 @media (max-width: 768px) {
   .inCarGame .inCarGameDtlThumb .swiper-slide.video-slideThumb:before {
@@ -2754,7 +2897,7 @@
   display: none;
 }
 
-.tooltip {
+.pdpDetail .tooltip {
   display: flex;
   align-items: center;
   position: absolute;
@@ -2771,7 +2914,7 @@
   border-radius: 0.4rem;
   background-color: #fff;
 }
-.tooltip:after {
+.pdpDetail .tooltip:after {
   content: "";
   display: block;
   position: absolute;
@@ -2779,15 +2922,15 @@
   left: 2.4rem;
   width: 1.5rem;
   height: 0.9rem;
-  background: url("../images/kia/pdp/display_theme/ico_edge.png") no-repeat center/contain;
+  background: url("/kr/assets/images/kia/pdp/display_theme/ico_edge.png") no-repeat center/contain;
 }
-.tooltip .btn-close {
+.pdpDetail .tooltip .btn-close {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
   width: 1.6rem;
   height: 1.6rem;
-  background: url("../images/kia/pdp/display_theme/ico_close.png") no-repeat center/contain;
+  background: url("/kr/assets/images/kia/pdp/display_theme/ico_close.png") no-repeat center/contain;
   text-indent: -9999em;
   cursor: pointer;
 }
@@ -2795,8 +2938,7 @@
 .theme-story {
   display: flex;
   align-items: center;
-  -moz-column-gap: 1.6rem;
-       column-gap: 1.6rem;
+  column-gap: 1.6rem;
   position: absolute;
   top: 1.4rem;
   left: 0;
@@ -2861,7 +3003,7 @@
   width: 2.4rem;
   height: 2.4rem;
   margin-top: -1.2rem;
-  background: url("../images/kia/pdp/display_theme/ico_close2.png") no-repeat center/1rem auto;
+  background: url("/kr/assets/images/kia/pdp/display_theme/ico_close2.png") no-repeat center/1rem auto;
   text-indent: -9999em;
   cursor: pointer;
 }
@@ -2898,8 +3040,7 @@
   }
   .streamingPremium .mobile {
     display: block;
-    -o-object-fit: initial;
-       object-fit: initial;
+    object-fit: initial;
     height: auto;
   }
 }
@@ -3062,18 +3203,14 @@
 
 .editorWarp .visualBg img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 @media (max-width: 1025px) {
   .editorWarp .visualBg img {
     width: 100%;
-    -o-object-fit: initial;
-       object-fit: initial;
-    -o-object-position: initial;
-       object-position: initial;
+    object-fit: initial;
+    object-position: initial;
   }
 }
 .editorWarp .visualBg img.mobile {
@@ -3085,8 +3222,7 @@
   }
   .editorWarp .visualBg img.mobile {
     display: block;
-    -o-object-fit: initial;
-       object-fit: initial;
+    object-fit: initial;
     height: auto;
   }
 }
@@ -3133,13 +3269,13 @@
   transform: translate(-50%, -50%);
   width: 8rem;
   height: 8rem;
-  background: url(../images/kia/contents/ico_play.png?v1) no-repeat center/100% auto;
+  background: url(/kr/assets/images/kia/contents/ico_play.png?v1) no-repeat center/100% auto;
   text-indent: -9999em;
   cursor: pointer;
 }
 .editorWarp .video_wrap .video-area .video .btn-play.pause {
   display: none;
-  background: url(../images/kia/contents/ico_pause.png?v1) no-repeat center/100% auto;
+  background: url(/kr/assets/images/kia/contents/ico_pause.png?v1) no-repeat center/100% auto;
 }
 .editorWarp .video_wrap .video-area .video .btn-play.play {
   display: block;
@@ -3157,15 +3293,15 @@
   right: 3rem;
   width: 4rem;
   height: 4rem;
-  background: url(../images/kia/contents/ico_sound_off.png?v1) no-repeat center/100% auto;
+  background: url(/kr/assets/images/kia/contents/ico_sound_off.png?v1) no-repeat center/100% auto;
   text-indent: -9999em;
   cursor: pointer;
 }
 .editorWarp .video_wrap .video-area .video .btn-sound.off {
-  background: url(../images/kia/contents/ico_sound_off.png?v1) no-repeat center/100% auto;
+  background: url(/kr/assets/images/kia/contents/ico_sound_off.png?v1) no-repeat center/100% auto;
 }
 .editorWarp .video_wrap .video-area .video .btn-sound.on {
-  background: url(../images/kia/contents/ico_sound_on.png?v1) no-repeat center/100% auto;
+  background: url(/kr/assets/images/kia/contents/ico_sound_on.png?v1) no-repeat center/100% auto;
 }
 @media (max-width: 501px) {
   .editorWarp .video_wrap .video-area .video .btn-sound {
@@ -3224,13 +3360,13 @@
 }
 @media (max-width: 1024px) {
   .editorWarp .video_wrap .btn-close::before,
-.editorWarp .video_wrap .btn-close::after {
+  .editorWarp .video_wrap .btn-close::after {
     width: 7rem;
   }
 }
 @media (max-width: 768px) {
   .editorWarp .video_wrap .btn-close::before,
-.editorWarp .video_wrap .btn-close::after {
+  .editorWarp .video_wrap .btn-close::after {
     width: 4rem;
   }
 }
@@ -3343,7 +3479,7 @@
   margin-right: 0.5rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
-  background: #fff url("../images/kia/pdp/display_theme/ico_media.png") no-repeat center/1.6rem auto;
+  background: #fff url("/kr/assets/images/kia/pdp/display_theme/ico_media.png") no-repeat center/1.6rem auto;
   text-indent: -9999em;
   cursor: pointer;
 }
@@ -3394,14 +3530,14 @@
   width: 1.8rem;
   height: 3.6rem;
   margin: 0;
-  background: url(../images/common/ico_arrow_r.png) no-repeat center/contain;
+  background: url(/kr/assets/images/common/ico_arrow_r.png) no-repeat center/contain;
 }
 .editorWarp .visualBg .swiper-button-next:after,
 .editorWarp .visualBg .swiper-button-prev:after {
   display: none;
 }
 .editorWarp .visualBg .swiper-button-prev {
-  background: url(../images/common/ico_arrow_l.png) no-repeat center/contain;
+  background: url(/kr/assets/images/common/ico_arrow_l.png) no-repeat center/contain;
 }
 .editorWarp .bu {
   display: block;
@@ -3454,8 +3590,7 @@
 }
 .boost.comp_1x_w_v_s_e2 .image_area img {
   height: auto;
-  -o-object-fit: inherit;
-     object-fit: inherit;
+  object-fit: inherit;
   border-radius: 0.6rem;
 }
 
@@ -3466,7 +3601,7 @@
   height: 5rem;
   border: 1px solid #d3d3d3;
   border-radius: 50%;
-  background: rgb(255, 255, 255) url(../images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
+  background: rgb(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
 }
 .pdpDtl .swiper-navigation > *:after {
   display: none;
@@ -3522,14 +3657,14 @@
   left: 0;
   width: 100%;
   height: 16px;
-  background: url("../images/kia/pdp/streaming_premium/img_spec_index.png") no-repeat 100% 0/contain;
+  background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_index.png") no-repeat 100% 0/contain;
 }
 .scroll_area .mobile .header {
   overflow: hidden;
   flex: none;
   width: 125px;
   height: 460px;
-  background: url("../images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat 0 0/auto 100%;
+  background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat 0 0/auto 100%;
 }
 .scroll_area .mobile .cont {
   overflow: hidden;
@@ -3541,7 +3676,7 @@
   display: block;
   width: 306px;
   height: 100%;
-  background: url("../images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat -126px 0/auto 100%;
+  background: url("/kr/assets/images/kia/pdp/streaming_premium/img_spec_m2.png") no-repeat -126px 0/auto 100%;
 }
 @media (max-width: 768px) {
   .scroll_area .mobile {
@@ -3746,7 +3881,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: rgb(255, 255, 255) url(../images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
+  background: rgb(255, 255, 255) url(/kr/assets/images/kia/pdp/display_theme/icon-arrow.png) no-repeat center/15px auto;
 }
 .displayTheme-kbo.comp_wide .displayThemeKboDtl .swiper-navigation > *:after {
   display: none;
@@ -3820,6 +3955,9 @@
   letter-spacing: -0.095rem;
   line-height: 1.3;
 }
+.displayThemeDesney .comp_body .text_area h3.color-000 {
+  color: #000;
+}
 @media (min-width: 768px) {
   .displayThemeDesney .comp_body .text_area h3 {
     margin: 1.2rem 0 3rem;
@@ -3830,6 +3968,9 @@
   color: #f0f0f0;
   letter-spacing: -0.075rem;
   line-height: 1.5;
+}
+.displayThemeDesney .comp_body .text_area .info.color-000 {
+  color: #000;
 }
 .displayThemeDesney .comp_body .text_area .info br {
   display: none;
@@ -3861,12 +4002,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
   height: 14.8rem;
   font-size: 2.4rem;
   font-weight: 600;
   padding-bottom: 3.8rem;
   letter-spacing: -0.095rem;
-  background: url(../images/kia/pdp/display_theme_disney/available-h3.png) no-repeat center bottom/auto 100%;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/available-h3.png) no-repeat center bottom/auto 100%;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme h3 {
@@ -3886,6 +4029,20 @@
   .displayThemeDesney .available-theme h3 span {
     max-width: 100%;
     text-align: center;
+  }
+}
+.displayThemeDesney .available-theme h3 em {
+  display: block;
+  width: 100%;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .available-theme h3 em {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
   }
 }
 .displayThemeDesney .available-theme .list {
@@ -3911,13 +4068,12 @@
 .displayThemeDesney .available-theme .list ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  gap: 5.6rem 0;
+  gap: 2rem 0.8rem;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme .list ul {
-    justify-content: center;
     gap: 2.4rem;
   }
 }
@@ -3932,7 +4088,7 @@
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme .list ul li {
-    width: 28.2rem;
+    width: 28.9rem;
     height: 36.9rem;
     aspect-ratio: inherit;
   }
@@ -3958,7 +4114,8 @@
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme .list ul li a .txt {
-    padding: 2rem 2.4rem;
+    padding: 1.6rem 2rem;
+    text-align: left;
   }
 }
 .displayThemeDesney .available-theme .list ul li a .txt strong {
@@ -3991,7 +4148,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 320/190;
-  padding: 6.6666666667vw 5.5555555556vw;
   margin: 0;
   background-color: transparent;
   border-radius: 0;
@@ -4006,20 +4162,30 @@
   transform: translate(-50%, -50%);
   width: 94.4444444444vw;
   height: 58.3333333333vw;
-  background: url(../images/kia/pdp/display_theme_disney/box_more_m2.png) no-repeat center/auto 100%;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/box_more_m2.png) no-repeat center/auto 100%;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme .list ul li.more:before {
     width: 61rem;
     height: 40.5rem;
-    background: url(../images/kia/pdp/display_theme_disney/box_more.png) no-repeat center/auto 100%;
+    background: url(/kr/assets/images/kia/pdp/display_theme_disney/box_more.png) no-repeat center/auto 100%;
+  }
+}
+.displayThemeDesney .available-theme .list ul li.more a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6.6666666667vw 5.5555555556vw;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .available-theme .list ul li.more a {
+    padding: 4.8rem 4rem;
   }
 }
 @media (min-width: 768px) {
   .displayThemeDesney .available-theme .list ul li.more {
     width: 57.4rem;
     height: 36.9rem;
-    padding: 4.8rem 4rem;
     margin: 0 0 0;
     border-radius: 0;
     box-shadow: none;
@@ -4138,6 +4304,74 @@
   .displayThemeDesney .available-theme .list ul li.more .hashs {
     font-size: 1.6rem;
     margin-top: 2.2rem;
+    text-align: left;
+  }
+}
+.displayThemeDesney .available-theme .list ul li.stay-tuned-item {
+  width: 100%;
+  height: 4.8rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .available-theme .list ul li.stay-tuned-item {
+    width: 20rem;
+    height: 100%;
+  }
+}
+.displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: #f2f4f6;
+  border-radius: 0.6rem;
+  letter-spacing: -0.05em;
+}
+.displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned span {
+  display: block;
+  width: 1.8rem;
+  height: 1.2rem;
+  margin-right: 0.6rem;
+  background: url("/kr/assets/images/kia/promotion/ico_stay_tuned.svg") no-repeat center/contain;
+}
+.displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned strong {
+  padding: 0.2rem 0 0;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned {
+    flex-direction: column;
+  }
+  .displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned span {
+    position: relative;
+    width: 7.2rem;
+    height: 1.6rem;
+    margin: 0 auto;
+    margin-bottom: 0.8rem;
+    background: none;
+    border: 1px solid #b2b8bd;
+    border-radius: 0.8rem;
+  }
+  .displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    width: 4.8rem;
+    height: 1rem;
+    transform: translateY(-50%);
+    background-color: #b2b8bd;
+    border-radius: 0.5rem;
+  }
+  .displayThemeDesney .available-theme .list ul li.stay-tuned-item .stay-tuned strong {
+    padding: 0;
+    font-size: 1.6rem;
+    color: #b2b8bd;
+    line-height: 1.4;
   }
 }
 .displayThemeDesney.discover-epic-design {
@@ -4147,13 +4381,77 @@
   margin: 0 auto;
   padding: 4rem 0 7rem;
   text-align: center;
-  background: url(../images/kia/pdp/display_theme_disney/bg_design_m.jpg) no-repeat center top/100% auto;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/bg_design_m.jpg) no-repeat center top/100% auto;
 }
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design {
-    padding: 12rem 0 0;
-    background: url(../images/kia/pdp/display_theme_disney/bg_design.jpg) no-repeat center top/192rem auto;
+    padding: 8rem 0 0;
+    background: url(/kr/assets/images/kia/pdp/display_theme_disney/bg_design.jpg) no-repeat center top/192rem auto;
   }
+}
+.displayThemeDesney.discover-epic-design.mickey {
+  padding-top: 0;
+  background: #fff;
+}
+.displayThemeDesney.discover-epic-design.mickey .tab-box {
+  padding-top: 0;
+  display: none;
+}
+.displayThemeDesney.discover-epic-design.mickey .tab-box.box2 {
+  display: block;
+}
+.displayThemeDesney.discover-epic-design.mickey .tab-box .discover-area {
+  position: relative;
+  padding: 4rem 0 0;
+  background: url(/kr/assets/images/kia/pdp/display_theme_mickey/bg_design_m.jpg) no-repeat center top/100% auto;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design.mickey .tab-box .discover-area {
+    padding: 12rem 0;
+    background: url(/kr/assets/images/kia/pdp/display_theme_mickey/bg_design.jpg) no-repeat center top/192rem auto;
+  }
+}
+.displayThemeDesney.discover-epic-design.mickey .tab-box .discover-area > .comp_top {
+  padding-bottom: 0;
+}
+.displayThemeDesney.discover-epic-design.mickey .tab-box .discover-area > .comp_top h3 {
+  margin-bottom: 4.8rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design.mickey .tab-box .discover-area > .comp_top h3 {
+    margin-bottom: 8rem;
+  }
+}
+.displayThemeDesney.discover-epic-design.pixar {
+  padding-top: 0;
+  background: #fff;
+}
+.displayThemeDesney.discover-epic-design.pixar .tab-box {
+  padding-top: 0;
+}
+.displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area {
+  padding: 4rem 0 0;
+  background: url(/kr/assets/images/kia/pdp/display_theme_mickey/pixar/bg_design_m.jpg) no-repeat center top/100% auto;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area {
+    padding: 12rem 0;
+    background: url(/kr/assets/images/kia/pdp/display_theme_mickey/pixar/bg_design.jpg) no-repeat center top/192rem auto;
+  }
+}
+.displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area > .comp_top {
+  padding-bottom: 0;
+}
+.displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area > .comp_top h3 {
+  margin-bottom: 4.8rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area > .comp_top h3 {
+    margin-bottom: 8rem;
+  }
+}
+.displayThemeDesney.discover-epic-design.pixar .tab-box .discover-area > .comp_top h3.color-000 {
+  color: #000;
 }
 .displayThemeDesney.discover-epic-design .comp_top {
   padding: 0 2rem 2.4rem;
@@ -4192,19 +4490,22 @@
   padding: 0;
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu {
-  position: -webkit-sticky;
   position: sticky;
   top: 5.6rem;
   z-index: 10;
   padding: 1.6rem 2rem;
   background: transparent;
-  -webkit-backdrop-filter: blur(1.2rem);
-          backdrop-filter: blur(1.2rem);
+  backdrop-filter: blur(1.2rem);
+  transition: top 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu {
-    top: 6rem;
     padding: 1.6rem 2rem;
+  }
+}
+@media (min-width: 1121px) {
+  .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu {
+    top: 8rem;
   }
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu .btn-select {
@@ -4232,7 +4533,7 @@
   height: 0.6rem;
   transform: translateY(-50%), rotate(0deg);
   transition: all 0.2s ease;
-  background: url(../images/kia/pdp/display_theme_disney/ico_arrow_down.png) no-repeat 50%/1.2rem auto;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_arrow_down.png) no-repeat 50%/1.2rem auto;
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu .btn-select.open:after {
   transform: translateY(-50%) rotate(180deg);
@@ -4256,8 +4557,7 @@
   .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu ul {
     display: flex !important;
     position: static;
-    -moz-column-gap: 0.8rem;
-         column-gap: 0.8rem;
+    column-gap: 0.8rem;
     border: 0;
     border-radius: 0;
     background: transparent;
@@ -4298,7 +4598,7 @@
     width: 2.2rem;
     height: 2.2rem;
     margin-right: 0.6rem;
-    background: url(../images/kia/pdp/display_theme_disney/ico_tab.png) no-repeat center top/100% auto;
+    background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_tab.png) no-repeat center top/100% auto;
   }
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu ul li.active .tab-btn {
@@ -4311,7 +4611,20 @@
     padding: 0 1.8rem 0 1.4rem;
   }
   .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu ul li.active .tab-btn:before {
-    background-image: url(../images/kia/pdp/display_theme_disney/ico_tab_active.png);
+    background-image: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_tab_active.png);
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu.blue ul li .tab-btn:before {
+    background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_tab.png) no-repeat center top/auto 100%;
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu.blue ul li.active .tab-btn {
+    background: linear-gradient(90deg, #1c5eed 0%, #1031b5 100%);
+  }
+  .displayThemeDesney.discover-epic-design .tab-wrap .tab-menu.blue ul li.active .tab-btn:before {
+    background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_tab_active.png) no-repeat center top/auto 100%;
   }
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .text_area {
@@ -4327,13 +4640,24 @@
   display: none;
   padding-top: 2.2rem;
 }
+.displayThemeDesney.discover-epic-design .tab-wrap .tab-box.box1 {
+  display: block;
+}
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design .tab-wrap .tab-box {
     margin-bottom: 2.4rem;
-    padding-top: 3.2rem;
+    padding-top: 4.8rem;
   }
 }
-.displayThemeDesney.discover-epic-design .tab-wrap .tab-box.box1 {
+.displayThemeDesney.discover-epic-design .tab-wrap .tab-box .index-area {
+  padding: 0 2rem 6rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.discover-epic-design .tab-wrap .tab-box .index-area {
+    padding: 0 0 10rem;
+  }
+}
+.displayThemeDesney.discover-epic-design .tab-wrap .tab-box.active {
   display: block;
 }
 .displayThemeDesney.discover-epic-design .tab-wrap .tab-box .discover {
@@ -4379,6 +4703,9 @@
   color: #fff;
   line-height: 1.25;
 }
+.displayThemeDesney.discover-epic-design .tab-wrap h4.color-000 {
+  color: #000;
+}
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design .tab-wrap h4 {
     font-size: 2.4rem;
@@ -4390,6 +4717,9 @@
   color: #fff;
   line-height: 1.55;
   letter-spacing: -0.025em;
+}
+.displayThemeDesney.discover-epic-design .tab-wrap p.color-000 {
+  color: #000;
 }
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design .tab-wrap p {
@@ -4403,6 +4733,168 @@
 }
 @media (min-width: 768px) {
   .displayThemeDesney.discover-epic-design .tab-wrap p .add {
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 0.4rem;
+  }
+}
+.displayThemeDesney.mickey .layer_up.comp_body .text_area {
+  margin-top: 11.4rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .layer_up.comp_body .text_area {
+    margin-top: 13.7rem;
+  }
+}
+.displayThemeDesney.mickey .comp_body .text_area {
+  margin-top: 11.4rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .comp_body .text_area {
+    margin-top: 13.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme {
+    min-height: auto;
+  }
+}
+.displayThemeDesney.mickey .available-theme .list {
+  padding: 0.6rem 2rem 5.6rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme .list {
+    padding-top: 4.8rem;
+  }
+}
+.displayThemeDesney.mickey .available-theme .list ul li {
+  aspect-ratio: 156/184;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme .list ul li {
+    width: 28.9rem;
+    height: 31.2rem;
+    aspect-ratio: inherit;
+  }
+}
+.displayThemeDesney.mickey .available-theme .list ul li.more strong .speech-bubble {
+  top: -5.4rem;
+  transform: translateX(35%);
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme .list ul li.more strong .speech-bubble {
+    top: -7.8rem;
+    transform: translateX(-20%);
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme .list ul li.stay-tuned-item {
+    width: 20rem;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey .available-theme .list ul li.stay-tuned-item strong {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap {
+    padding-top: 6.4rem;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-box {
+  padding-top: 0;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-box {
+    margin-top: 6.4rem;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu .btn-select {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1.4rem 3.6rem 1.4rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #05141f;
+  background-color: #f2f4f6;
+  border-radius: 0.4rem;
+  border: 0.15rem solid #dedede;
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu .btn-select:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 1.8rem;
+  width: 1.2rem;
+  height: 0.6rem;
+  transform: translateY(-50%), rotate(0deg);
+  transition: all 0.2s ease;
+  background: url(/kr/assets/images/kia/pdp/display_theme_mickey/ico_arrow_down_black.png) no-repeat 50%/1.2rem auto;
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu .btn-select.open:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu .btn-select {
+    display: none;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul {
+  background-color: #f2f4f6;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul {
+    background-color: transparent;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul li .tab-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1.4rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul li .tab-btn {
+    width: auto;
+    height: 4.3rem;
+    padding: 0 1.6rem 0 1.2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #b2b8bd;
+    border-radius: 2.2rem;
+    border: 0;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul li.active .tab-btn {
+  color: #05141f;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap .tab-menu ul li.active .tab-btn {
+    color: #fff;
+  }
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap .text_area {
+  margin-top: 1.6rem;
+  text-align: left;
+}
+.displayThemeDesney.mickey.discover-epic-design .tab-wrap p .add {
+  color: #acacac;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.mickey.discover-epic-design .tab-wrap p .add {
     display: block;
     font-size: 1.6rem;
     margin-top: 0.4rem;
@@ -4426,6 +4918,29 @@
 }
 .displayThemeDesney .welcome-goodbye .image_area video {
   width: 100%;
+}
+.displayThemeDesney .welcome-goodbye .video-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 120rem;
+  aspect-ratio: 1200/236;
+  padding: 1.8333333333vw;
+  background: url("/kr/assets/images/kia/promotion/video_frame.png") no-repeat center center/contain;
+}
+@media (min-width: 1000px) {
+  .displayThemeDesney .welcome-goodbye .video-area {
+    padding: 2.2rem;
+  }
+}
+.displayThemeDesney .welcome-goodbye .video-area + .video-area {
+  margin-top: 1.2rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .welcome-goodbye .video-area + .video-area {
+    margin-top: 1.6rem;
+  }
 }
 .displayThemeDesney .inner {
   max-width: 120rem;
@@ -4481,17 +4996,19 @@
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 0.5rem;
+  bottom: 0.5rem;
   left: 0;
-  transform: translateY(-50%);
   width: 0.6rem;
-  height: 5rem;
   background: #ea0029;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .three-reasons .tit-area .inner:before {
     width: 1.2rem;
     height: 10rem;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
   }
 }
 .displayThemeDesney .three-reasons .tit-area h3 {
@@ -4505,7 +5022,7 @@
 @media (min-width: 768px) {
   .displayThemeDesney .three-reasons .tit-area h3 {
     height: 6.4rem;
-    padding: 0 0.8rem;
+    padding: 0;
     font-size: 4.8rem;
     line-height: 6.4rem;
   }
@@ -4732,7 +5249,7 @@
   font-weight: 600;
   color: #fff;
   line-height: 1.5;
-  background: url(../images/kia/pdp/display_theme_disney/img_reason_msg.png) no-repeat 0 0/cover;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/img_reason_msg.png) no-repeat 0 0/cover;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .three-reasons .reasons li .img-area .img-msg .msg {
@@ -4748,7 +5265,7 @@
   width: 2.6rem;
   height: 2rem;
   margin-bottom: 0.5rem;
-  background: url(../images/kia/pdp/display_theme_disney/ico_megaphone.png) no-repeat 0 0/100% auto;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/ico_megaphone.png) no-repeat 0 0/100% auto;
 }
 @media (min-width: 768px) {
   .displayThemeDesney .three-reasons .reasons li .img-area .img-msg .msg:before {
@@ -4878,7 +5395,73 @@
   right: 0;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../images/kia/pdp/display_theme_disney/btn_zoom.png) no-repeat 0 0/100% auto;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/btn_zoom.png) no-repeat 0 0/100% auto;
+}
+.displayThemeDesney.theme-frozen .available-theme .list {
+  padding: 3rem 2rem 3.8rem;
+  background: url(/kr/assets/images/kia/pdp/display_theme_mickey/union-top.png) no-repeat center bottom/auto 1.46rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.theme-frozen .available-theme .list {
+    padding: 7.2rem 2rem 9.9rem;
+    background-size: 100% auto;
+  }
+}
+.displayThemeDesney.theme-frozen .available-theme h3 {
+  padding: 4rem 2rem;
+  background: #fff;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1215686275);
+}
+@media (min-width: 768px) {
+  .displayThemeDesney.theme-frozen .available-theme h3 {
+    height: 23.4rem;
+  }
+}
+.displayThemeDesney .swiper-navigation {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .swiper-navigation {
+    display: block !important;
+  }
+}
+.displayThemeDesney .swiper-button-next,
+.displayThemeDesney .swiper-button-prev {
+  position: absolute !important;
+}
+.displayThemeDesney .swiper-slide-frozen .text_area {
+  margin-top: 7.2rem;
+}
+@media (min-width: 768px) {
+  .displayThemeDesney .swiper-slide-frozen .text_area {
+    margin-top: 14rem;
+  }
+}
+
+.visualBg.swiper {
+  position: relative;
+}
+.visualBg.swiper .swiper-pagination {
+  bottom: 3rem;
+}
+.visualBg.swiper .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  width: 5.6rem;
+  height: 0.4rem;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 768px) {
+  .visualBg.swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 3rem;
+    height: 0.3rem;
+  }
+}
+.visualBg.swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: rgb(255, 255, 255);
+}
+.visualBg.swiper .image_area img {
+  object-fit: cover;
 }
 
 .desktop .displayThemeDesney .mobile {
@@ -4923,8 +5506,7 @@
   width: 100%;
   height: auto;
   max-width: none;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .btn-close-zoom {
@@ -4935,7 +5517,374 @@
   width: 2.4rem;
   height: 2.4rem;
   text-indent: -9999em;
-  background: url(../images/kia/pdp/display_theme_disney/btn_zoom_close.png) no-repeat 0 0/100% auto;
+  background: url(/kr/assets/images/kia/pdp/display_theme_disney/btn_zoom_close.png) no-repeat 0 0/100% auto;
   cursor: pointer;
+}
+
+.photoReviewList {
+  border-top: 1px solid #dedede;
+  margin: 3rem 0;
+  padding: 3rem 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.photoReviewList .btn-allPhotoReview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 7.2rem;
+  height: 7.2rem;
+  aspect-ratio: 1/1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #05141f;
+  border-radius: 0.8rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .photoReviewList .btn-allPhotoReview {
+    width: 16rem;
+    height: 16rem;
+    margin-right: 1.3rem;
+    font-size: 1.4rem;
+  }
+}
+.photoReviewList .btn-allPhotoReview:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.6rem;
+  margin-bottom: 0.2rem;
+  background: url(/kr/assets/images/common/icon_camera.png) no-repeat center center/auto 100%;
+}
+@media (min-width: 768px) {
+  .photoReviewList .btn-allPhotoReview:before {
+    height: 3.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+.photoReviewList ul {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px) {
+  .photoReviewList ul {
+    gap: 1.3rem;
+  }
+}
+.photoReviewList ul li {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 7.2rem;
+  height: 7.2rem;
+  aspect-ratio: 1/1;
+  border-radius: 0.8rem;
+}
+@media (min-width: 768px) {
+  .photoReviewList ul li {
+    width: 16rem;
+    height: 16rem;
+    aspect-ratio: inherit;
+  }
+}
+.photoReviewList ul li button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.photoReviewList ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photoReviewList ul li .count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding-top: 0.35rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #05141f;
+  font-size: 1.2rem;
+  z-index: 1;
+  line-height: 1;
+}
+.photoReviewList ul li .allPhotoReview-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .photoReviewList ul li .allPhotoReview-mobile {
+    display: none;
+  }
+}
+.photoReviewList ul li .allPhotoReview-pc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .photoReviewList ul li .allPhotoReview-pc {
+    display: block;
+  }
+}
+.popInner .photoReviewList ul {
+  flex-wrap: wrap;
+}
+
+.popInner .photoReviewList {
+  padding-top: 0;
+}
+.popInner .photoReviewList ul {
+  gap: 1rem;
+}
+.popInner .photoReviewList ul li {
+  width: calc((100% - 2rem) / 3);
+  height: auto;
+}
+@media (min-width: 768px) {
+  .popInner .photoReviewList ul li {
+    width: calc((100% - 5rem) / 6);
+    aspect-ratio: 1/1;
+  }
+}
+.popInner .photoReviewList ul li:nth-child(7):before {
+  display: none;
+}
+
+.sortBox {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.sortBox label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.sortBox label input[type=checkbox]:disabled {
+  cursor: not-allowed;
+}
+.sortBox label input[type=checkbox]:disabled + span {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.sortBox .selectInner .cont-select {
+  width: 15rem;
+}
+
+.bottom-sticky {
+  position: fixed;
+  left: 0;
+  top: auto;
+  bottom: -10rem;
+  width: 100%;
+  height: auto;
+  min-height: 14rem;
+  padding: 1.6rem 2rem;
+  z-index: 100;
+  background: rgba(23, 23, 23, 0.95);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+@media (min-width: 768px) {
+  .bottom-sticky {
+    bottom: 0;
+    height: auto;
+    min-height: 9rem;
+  }
+}
+.bottom-sticky .infoStickyInner {
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .bottom-sticky .infoStickyInner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.bottom-sticky .infoStickyInner .stickyTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.bottom-sticky .infoStickyInner .stickyTitle + .stickyDesc {
+  padding-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .bottom-sticky .infoStickyInner .stickyTitle {
+    font-size: 1.6rem;
+  }
+}
+.bottom-sticky .infoStickyInner .unsupported .stickyTitle strong {
+  color: #ea0029;
+}
+.bottom-sticky .infoStickyInner .unsupported ~ .stickyAction .oneButton button[disabled] {
+  cursor: default;
+}
+.bottom-sticky .infoStickyInner .unsupported ~ .stickyAction .oneButton button[disabled]:hover:before {
+  background-image: url(/kr/assets/images/kia/svg/kia-btn-wleft.svg);
+}
+.bottom-sticky .infoStickyInner .unsupported ~ .stickyAction .oneButton button[disabled]:hover:after {
+  background-image: url(/kr/assets/images/kia/svg/kia-btn-wright.svg);
+}
+.bottom-sticky .infoStickyInner .unsupported ~ .stickyAction .oneButton button[disabled]:hover p {
+  background-color: #fff;
+  border-color: #9ba1a5;
+  color: #9ea1a2;
+}
+.bottom-sticky .infoStickyInner .stickyDesc {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #676767;
+  line-height: 1.3;
+}
+.bottom-sticky .infoStickyInner .icoInfo {
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 0.2rem;
+  background: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center/100% auto;
+}
+.bottom-sticky .infoStickyInner .icoInfo.red {
+  background-color: #ea0029;
+  background-image: none;
+  mask: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center/100% auto;
+  -webkit-mask: url(/kr/assets/images/common/ico_info_w.svg) no-repeat center center/100% auto;
+}
+.bottom-sticky .infoStickyInner .stickyAction {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+@media (min-width: 768px) {
+  .bottom-sticky .infoStickyInner .stickyAction {
+    width: auto;
+    margin-top: 0;
+  }
+}
+.bottom-sticky .infoStickyInner .stickyAction button[disabled] p {
+  color: #9ea1a2;
+}
+.bottom-sticky .infoStickyInner .stickyBlockWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock em {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: right;
+}
+.bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock strong {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock strong {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock.amount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 8rem;
+  }
+  .bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock.amount em + strong {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 1.2rem;
+    line-height: 0;
+  }
+  .bottom-sticky .infoStickyInner .stickyBlockWrap .stickyBlock.amount em + strong:before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1.3rem;
+    background-color: #d9d9d9;
+    margin-right: 1.2rem;
+  }
+}
+.bottom-sticky .btn-fold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgb(78, 78, 78);
+  background-color: rgba(40, 40, 40, 0.8);
+  box-shadow: 0px 2px 1px 0px rgba(104, 104, 104, 0.2509803922);
+  cursor: pointer;
+}
+.bottom-sticky .btn-fold:before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(/kr/assets/images/common/icon-wtbarrow.svg) no-repeat center center/100% auto;
+  transition: all 0.2s ease;
+}
+.bottom-sticky .btn-fold.fold:before {
+  background-image: url(/kr/assets/images/common/icon__purchase.svg);
+}
+@media (min-width: 768px) {
+  .bottom-sticky .btn-fold {
+    display: none;
+  }
+}
+
+.bottom-sticky-visible .bottom-sticky {
+  visibility: visible;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .bottom-sticky-visible .bottom-sticky {
+    bottom: 0 !important;
+  }
+}
+.bottom-sticky-visible .floating_menu {
+  bottom: 1rem;
+  z-index: 100;
+  transition: bottom 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .bottom-sticky-visible .floating_menu {
+    bottom: 9rem !important;
+    transition: bottom 0.3s ease-in-out;
+  }
 }
 /*# sourceMappingURL=pdp_detail.css.map */

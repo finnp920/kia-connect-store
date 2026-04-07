@@ -138,13 +138,14 @@
   flex-wrap: nowrap;
 }
 .contentWarp
-.productView
-.productRight
-.optionWarp
-.producOption
-.optionList
-.checkBtn
-label img {
+  .productView
+  .productRight
+  .optionWarp
+  .producOption
+  .optionList
+  .checkBtn
+  label
+  img {
   -webkit-user-drag: none;
   user-select: none;
   aspect-ratio: 1 / 1;

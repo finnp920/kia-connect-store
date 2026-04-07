@@ -112,8 +112,10 @@ function setDetailEventListeners() {
     function checkThemeSelectorsSticky() {
       const rect = themeSelectors.getBoundingClientRect();
       if (rect.top <= stickyTop) {
+        document.body.classList.add('tab-sticky');
         themeSelectors.classList.add('is-sticky');
       } else {
+        document.body.classList.remove('tab-sticky');
         themeSelectors.classList.remove('is-sticky');
       }
     }
@@ -270,18 +272,40 @@ function scrollToSelector(selector) {
   const el = document.querySelector(selector);
 
   if (el) {
-    let infoStickyEl = document.querySelector('#info-sticky');
-    if (!infoStickyEl) {
-      infoStickyEl = document.querySelector('.infoSticky');
-    }
-    const offset = infoStickyEl?.clientHeight || 0;
+    const themeSelectors = document.querySelector('.theme-selector-wrapper');
+    let offset = 0;
 
-    // 요소의 top 위치로 smooth 스크롤
-    const elementPosition =
-      el.getBoundingClientRect().top + window.scrollY - offset;
+    if (themeSelectors) {
+      offset = parseInt(getComputedStyle(themeSelectors).top, 10) || 0;
+    } else {
+      let infoStickyEl =
+        document.querySelector('#info-sticky') ||
+        document.querySelector('.infoSticky');
+      offset = infoStickyEl?.clientHeight || 0;
+    }
+
+    const layout = document.querySelector('.sticky-layout') || el;
+    const absoluteTop = layout.getBoundingClientRect().top + window.scrollY;
+    const targetY = Math.ceil(absoluteTop - offset) + 1;
+
+    // smooth 스크롤 실행
     window.scrollTo({
-      top: elementPosition,
+      top: targetY,
       behavior: 'smooth',
     });
+
+    // [추가] 스크롤이 끝나는 시점에 강제로 sticky 체크 로직 실행 (클래스 부여 보장)
+    // iOS 등 일부 브라우저에서 smooth 스크롤 시 이벤트를 놓치는 경우 대응
+    setTimeout(() => {
+      if (typeof checkThemeSelectorsSticky === 'function') {
+        checkThemeSelectorsSticky();
+      } else {
+        // 전역 함수가 아닐 경우 직접 클래스 부여
+        if (targetY >= absoluteTop - offset) {
+          document.body.classList.add('tab-sticky');
+          if (themeSelectors) themeSelectors.classList.add('is-sticky');
+        }
+      }
+    }, 100); // 애니메이션 예상 시간 후 실행
   }
 }

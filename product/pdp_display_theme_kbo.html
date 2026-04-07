@@ -37,11 +37,7 @@
     <!--  기존 css: 라이브러리, basic, common, contents, popup, product, pdp_detail, kia, buttons  -->
     <link href="../assets/css/index.css" rel="stylesheet" type="text/css" />
     <!--  상세 기본 css  -->
-    <link
-      href="../assets/css/pdp/index.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="../assets/css/pdp/index.css" rel="stylesheet" type="text/css" />
     <!--  kbo 테마 css -->
     <link
       href="../assets/css/pdp/kbo/index.css"
@@ -51,16 +47,14 @@
   </head>
   <body>
     <!--//header-->
-    <div class="hederWarp_n noBoder">
+    <div class="hederWarp_n">
       <div class="headerInner">
         <div class="gnb">
           <!-- GNB 로고 영역입니다. -->
           <div class="logoWrap">
             <a href="/kr/kia.html">
               <i class="logoImg"></i>
-              <!-- <span>
-                                Connect Store
-                            </span> -->
+              <!-- <span>Connect Store</span> -->
             </a>
           </div>
           <div class="menuWarp">
@@ -69,9 +63,7 @@
               <div class="mobileLogoWrap">
                 <a href="">
                   <i class="logoImg"></i>
-                  <!-- <span>
-                                        Connect store
-                                    </span> -->
+                  <!-- <span>Connect store</span> -->
                 </a>
               </div>
               <span class="closeBtn" id="closeBtn">
@@ -84,42 +76,21 @@
                 <span>마이페이지</span>
                 <!--<span>로그인</span>-->
               </button>
-              <!-- <button>
-
-                                <span>장바구니</span>
-
-                            </button> -->
+              <!-- <button><span>장바구니</span></button> -->
             </div>
             <!-- 모바일 전용 차량 선택 UI입니다. -->
             <div class="mobileCarlist">
-              <a class="mobilecarItem" href="javascript:void(0)">
+              <div class="mobilecarItem">
                 <div class="item">
-                  <span>MV</span>
-                  <span>161어 1660</span>
+                  <strong>쏘렌토(MQ4) 하이브리드-플러그인 상품성개선</strong>
+                  <span>KMTKEXXBPMU000081</span>
+                  <button
+                    class="btn-select"
+                    onclick="open_layer_popup('carListPopup')"
+                  >
+                    차량 선택하기 >
+                  </button>
                 </div>
-                <div class="arrow"></div>
-              </a>
-              <div class="carlistItem">
-                <ul>
-                  <li>
-                    <a href="javascript:void(0)">
-                      <span>MV</span>
-                      <span>KMTKEXXBPMU000081</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)">
-                      <span>SX</span>
-                      <span>161어 1660</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)">
-                      <span>MV</span>
-                      <span>452허 1234</span>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
             <!-- PC 모바일 공통 메뉴 영역입니다. -->
@@ -134,59 +105,70 @@
                   </h3>
                   <ul>
                     <li class="menuDepth2">
-                      <a href="/kr/product/pdp_display_theme_disney.html"
-                        >디즈니 디스플레이 테마</a
-                      >
+                      <a href="#">FIFA 월드컵 2026™ 디스플레이 테마</a>
                     </li>
                     <li class="menuDepth2">
-                      <a href="/kr/product/pdp_display_theme_kbo.html"
-                        >KBO 디스플레이 테마</a
-                      >
+                      <a href="#">원격 스마트 주차 보조 2(RSPA 2)</a>
                     </li>
                     <li class="menuDepth2">
-                      <a href="/kr/product/pdp_display_theme.html"
-                        >NBA 디스플레이 테마</a
-                      >
+                      <a href="#">NBA 디스플레이 테마</a>
+                    </li>
+                    <li class="menuDepth2"><a href="#">아케이드 게임</a></li>
+                    <li class="menuDepth2">
+                      <a href="#">원격 스마트 주차 보조(RSPA 2)</a>
                     </li>
                     <li class="menuDepth2">
-                      <a href="/kr/product/pdp_in_car_game.html"
-                        >아케이드 게임</a
-                      >
+                      <a href="#">부스트(The 2025 EV9)</a>
+                    </li>
+                    <li class="menuDepth2"><a href="#">라이팅 패턴</a></li>
+                    <li class="menuDepth2">
+                      <a href="#">스마트 회생 시스템 플러스</a>
                     </li>
                     <li class="menuDepth2">
-                      <a href="/kr/product/pdp_rspa2.html"
-                        >원격 스마트 주차 보조(RSPA 2)</a
-                      >
+                      <a href="#">스트리밍 프리미엄</a>
                     </li>
-                    <li class="menuDepth2">
-                      <a href="/kr/product/pdp_rspa2_ev9.html"
-                        >부스트(The 2025 EV9)</a
-                      >
-                    </li>
-                    <li class="menuDepth2">
-                      <a href="/kr/product/pdp_lighting_pattern.html"
-                        >라이팅 패턴</a
-                      >
-                    </li>
-                    <li class="menuDepth2">
-                      <a href="/kr/product/pdp_srs_plus.html"
-                        >스마트 회생 시스템 플러스</a
-                      >
-                    </li>
-                    <li class="menuDepth2">
-                      <a href="/kr/product/pdp_streaming_premium.html"
-                        >스트리밍 프리미엄</a
-                      >
-                    </li>
-                    <li class="menuDepth2">
-                      <a href="/kr/product/pdp_streaming_plus.html"
-                        >스트리밍 플러스</a
-                      >
-                    </li>
+                    <li class="menuDepth2"><a href="#">스트리밍 플러스</a></li>
                   </ul>
                 </div>
               </li>
               <li class="menuDepth1Wrap">
+                <a
+                  class="menuDepth1 lower"
+                  data-url="/kr/info/product-usage-guide.html"
+                  href="/kr/info/product-usage-guide.html"
+                  >디즈니 테마</a
+                >
+                <div class="menuDepth2Wrap info">
+                  <h3>
+                    <a href="/kr/kia.html#mainProductList">디즈니 테마</a>
+                  </h3>
+                  <ul>
+                    <li class="menuDepth2">
+                      <a href="/kr/promotion/disney_promotion_new.html"
+                        >디즈니 컬렉션</a
+                      >
+                    </li>
+                    <li class="menuDepth2">
+                      <a href="/kr/product/pdp_display.html"
+                        >디즈니 디스플레이 테마</a
+                      >
+                    </li>
+                    <li class="menuDepth2">
+                      <a href="#">픽사 디스플레이 테마</a>
+                    </li>
+                    <li class="menuDepth2">
+                      <a href="#">마블 디스플레이 테마</a>
+                    </li>
+                    <li class="menuDepth2">
+                      <a href="#">스타워즈 디스플레이 테마</a>
+                    </li>
+                    <li class="menuDepth2">
+                      <a href="#">내셔널 지오그래픽 디스플레이 테마</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menuDepth1Wrap hiddenMenuDepth1Wrap">
                 <a
                   class="menuDepth1"
                   data-url="/kr/info/product-usage-guide.html"
@@ -267,52 +249,13 @@
             </div>
             <!-- 모바일 전용 로그아웃 버튼입니다. -->
             <!-- <div class="loginBtn oneButton">
-                            <button><p>로그아웃</p></button>
-                        </div> -->
+                        <button>
+                            <p>로그아웃</p>
+                        </button>
+                    </div> -->
           </div>
         </div>
         <div class="func">
-          <!-- PC 전용 차량 선택 UI입니다. -->
-          <div class="carlist">
-            <a class="carItem" href="javascript:void(0)">
-              <span>MV</span>
-              <span>161어 1660</span>
-            </a>
-            <div class="carlistItem">
-              <svg
-                class="boxBullet"
-                fill="none"
-                height="10"
-                viewBox="0 0 14 10"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 1L1 10H13L7 1Z" fill="white" />
-                <path d="M1 9L7 1L13 9" stroke="#DEDEDE" />
-              </svg>
-              <ul>
-                <li>
-                  <a href="javascript:void(0)">
-                    <span>MV</span>
-                    <span>KMTKEXXBPMU000081</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">
-                    <span>SX</span>
-                    <span>161어 1660</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">
-                    <span>MV</span>
-                    <span>452허 1234</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
           <!-- PC 전용 로그인 버튼입니다. -->
           <div class="userLogin">
             <a href="#">로그인/가입</a>
@@ -325,11 +268,6 @@
             ></a>
           </div>
 
-          <!-- PC 모바일 공통 장바구니 버튼입니다. -->
-          <!-- <div class="cart">
-                        <a href="" class="login-alrt"><i class="icon-cart"></i></a>
-                    </div> -->
-
           <!-- 모바일 전용 햄버거 메뉴 버튼입니다. -->
           <div class="moblieMenu burgurBtn">
             <span class="burgur" id="burgur">
@@ -338,8 +276,30 @@
             </span>
           </div>
         </div>
+        <div class="mobileOpenMenu">
+          <ul class="menu">
+            <li class="menuDepth1Wrap active">
+              <a href="/kr/kia.html#mainProductList">디지털 사양</a>
+            </li>
+            <li class="menuDepth1Wrap">
+              <a href="/kr/promotion/disney_promotion_new.html"
+                >디즈니 컬렉션</a
+              >
+            </li>
+            <li class="menuDepth1Wrap">
+              <a href="/kr/service/event-list.html">이벤트</a>
+            </li>
+            <li class="menuDepth1Wrap">
+              <a href="/kr/info/product-usage-guide.html">사양별 이용 안내</a>
+            </li>
+            <li class="menuDepth1Wrap">
+              <a href="/kr/info/as-guide.html">고객지원</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+
     <!--//header-->
 
     <!--//sticky-->
@@ -405,13 +365,12 @@
                 <button class="btn-wish" type="button"></button>
               </h1>
               <p class="product-description" id="productDescription">
-                KBO 경기의 열기를 담은 드라이빙 테마로 차 안에서도 경기장의 감동을 경험해보세요.
+                KBO 경기의 열기를 담은 드라이빙 테마로 차 안에서도 경기장의
+                감동을 경험해보세요.
               </p>
             </div>
             <div class="producOption scroll option-list-section">
-              <h2 class="option-list-title">
-                Select product option you want.
-              </h2>
+              <h2 class="option-list-title">Select product option you want.</h2>
               <div class="optionList">
                 <div class="checkBtn">
                   <input
@@ -426,9 +385,7 @@
                       alt="Option 1 - 기아 타이거즈"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_01.png"
                     />
-                    <span class="optionText">
-                      기아 타이거즈
-                    </span>
+                    <span class="optionText"> 기아 타이거즈 </span>
                   </label>
                 </div>
                 <div class="checkBtn disabledBtn">
@@ -444,9 +401,7 @@
                       alt="Option 2 - 삼성 라이온즈"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_02.png"
                     />
-                    <span class="optionText"
-                      >삼성 라이온즈</span
-                    >
+                    <span class="optionText">삼성 라이온즈</span>
                   </label>
                 </div>
                 <div class="checkBtn disabledBtn purchaseBtn">
@@ -462,9 +417,7 @@
                       alt="Option 3 - LG 트윈스"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_03.png"
                     />
-                    <span class="optionText"
-                      >LG 트윈스</span
-                    >
+                    <span class="optionText">LG 트윈스</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -480,9 +433,7 @@
                       alt="Option 4 - 두산 베어스"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_04.png"
                     />
-                    <span class="optionText"
-                    >두산 베어스</span
-                    >
+                    <span class="optionText">두산 베어스</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -498,9 +449,7 @@
                       alt="Option 5 - KT 위즈"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_05.png"
                     />
-                    <span class="optionText"
-                    >KT 위즈</span
-                    >
+                    <span class="optionText">KT 위즈</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -516,9 +465,7 @@
                       alt="Option 6 - SSG 랜더스"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_06.png"
                     />
-                    <span class="optionText"
-                    >SSG 랜더스</span
-                    >
+                    <span class="optionText">SSG 랜더스</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -534,9 +481,7 @@
                       alt="Option 7 - 롯데 자이언츠"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_07.png"
                     />
-                    <span class="optionText"
-                    >롯데 자이언츠</span
-                    >
+                    <span class="optionText">롯데 자이언츠</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -552,9 +497,7 @@
                       alt="Option 8 - 한화 이글스"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_08.png"
                     />
-                    <span class="optionText"
-                    >한화 이글스</span
-                    >
+                    <span class="optionText">한화 이글스</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -570,9 +513,7 @@
                       alt="Option 9 - NC 다이노스"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_09.png"
                     />
-                    <span class="optionText"
-                    >NC 다이노스</span
-                    >
+                    <span class="optionText">NC 다이노스</span>
                   </label>
                 </div>
                 <div class="checkBtn">
@@ -588,9 +529,7 @@
                       alt="Option 10 - 키움 히어로즈"
                       src="../assets/images/kia/pdp/kbo/product_thumbnail_10.png"
                     />
-                    <span class="optionText"
-                    >키움 히어로즈</span
-                    >
+                    <span class="optionText">키움 히어로즈</span>
                   </label>
                 </div>
               </div>
@@ -637,7 +576,11 @@
     <!--//content-warp-->
 
     <!--에디터 영역-->
-    <main data-current-theme="01" data-product="kbo" data-theme-list='["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]'>
+    <main
+      data-current-theme="01"
+      data-product="kbo"
+      data-theme-list='["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]'
+    >
       <!-- KV (Key Visual) START -->
       <section class="kv">
         <div class="swiper kv-swiper">
@@ -661,7 +604,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -682,7 +627,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -703,7 +650,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -724,7 +673,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -745,7 +696,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -766,7 +719,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -787,7 +742,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -808,7 +765,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -829,7 +788,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -850,7 +811,9 @@
                   야구장은 지금, <br class="view-mo" />당신의 디스플레이 위에
                 </h2>
                 <p class="kv-subtitle">
-                  KBO 경기의 열기를 담은 드라이빙 테마로 <br class="view-mo" />차 안에서도 경기장의 감동을 경험해보세요.
+                  KBO 경기의 열기를 담은 드라이빙 테마로
+                  <br class="view-mo" />차 안에서도 경기장의 감동을
+                  경험해보세요.
                 </p>
               </div>
             </div>
@@ -880,71 +843,100 @@
       <!-- Themes START -->
       <section class="themes">
         <div class="themes-header">
-          <h2 class="themes-title">
-            어떤 팀과 함께 할까요?
-          </h2>
+          <h2 class="themes-title">어떤 팀과 함께 할까요?</h2>
           <p class="themes-subtitle">
-            KBO 10개 구단 중 응원하는 팀을 선택해 <br class="view-mo" />아래 화면에서 테마를 둘러보세요.
+            KBO 10개 구단 중 응원하는 팀을 선택해 <br class="view-mo" />아래
+            화면에서 테마를 둘러보세요.
           </p>
         </div>
         <div class="themes-cards-wrapper">
           <ul class="themes-cards-grid" data-clickable="true">
             <li class="card" data-theme="01">
-              <img alt="기아 타이거즈 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_01.png" />
+              <img
+                alt="기아 타이거즈 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_01.png"
+              />
               <div class="card-contents">
                 <h3>기아 타이거즈</h3>
               </div>
             </li>
             <li class="card" data-theme="02">
-              <img alt="삼성 라이온즈 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_02.png" />
+              <img
+                alt="삼성 라이온즈 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_02.png"
+              />
               <div class="card-contents">
                 <h3>삼성 라이온즈</h3>
               </div>
             </li>
             <li class="card" data-theme="03">
-              <img alt="LG 트윈스 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_03.png" />
+              <img
+                alt="LG 트윈스 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_03.png"
+              />
               <div class="card-contents">
                 <h3>LG 트윈스</h3>
               </div>
             </li>
             <li class="card" data-theme="04">
-              <img alt="두산 베어스 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_04.png" />
+              <img
+                alt="두산 베어스 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_04.png"
+              />
               <div class="card-contents">
                 <h3>두산 베어스</h3>
               </div>
             </li>
             <li class="card" data-theme="05">
-              <img alt="KT 위즈 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_05.png" />
+              <img
+                alt="KT 위즈 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_05.png"
+              />
               <div class="card-contents">
                 <h3>KT 위즈</h3>
               </div>
             </li>
             <li class="card" data-theme="06">
-              <img alt="SSG 랜더스 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_06.png" />
+              <img
+                alt="SSG 랜더스 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_06.png"
+              />
               <div class="card-contents">
                 <h3>SSG 랜더스</h3>
               </div>
             </li>
             <li class="card" data-theme="07">
-              <img alt="롯데 자이언츠 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_07.png" />
+              <img
+                alt="롯데 자이언츠 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_07.png"
+              />
               <div class="card-contents">
                 <h3>롯데 자이언츠</h3>
               </div>
             </li>
             <li class="card" data-theme="08">
-              <img alt="한화 이글스 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_08.png" />
+              <img
+                alt="한화 이글스 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_08.png"
+              />
               <div class="card-contents">
                 <h3>한화 이글스</h3>
               </div>
             </li>
             <li class="card" data-theme="09">
-              <img alt="NC 다이노스 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_09.png" />
+              <img
+                alt="NC 다이노스 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_09.png"
+              />
               <div class="card-contents">
                 <h3>NC 다이노스</h3>
               </div>
             </li>
             <li class="card" data-theme="10">
-              <img alt="키움 히어로즈 Icon" src="../assets/images/kia/pdp/kbo/sec02_imgicon_10.png" />
+              <img
+                alt="키움 히어로즈 Icon"
+                src="../assets/images/kia/pdp/kbo/sec02_imgicon_10.png"
+              />
               <div class="card-contents">
                 <h3>키움 히어로즈</h3>
               </div>
@@ -1584,82 +1576,288 @@
                     </div>
                   </div>
                   <p>
-                    차량 시동 시(슬립 모드 해제 시)와 종료 시 KBO 테마 모션 그래픽이 한 번씩 재생됩니다.
+                    차량 시동 시(슬립 모드 해제 시)와 종료 시 KBO 테마 모션
+                    그래픽이 한 번씩 재생됩니다.
                   </p>
                 </div>
                 <div class="playful-content-item cluster">
                   <h3>Cluster</h3>
                   <div class="xfade-stage image-wrapper">
-                    <img alt="Cluster - 기아 타이거즈" class="xfade-item" data-theme="01" src="../assets/images/kia/pdp/kbo/sec03_disc_th01_01.png" />
-                    <img alt="Cluster - 삼성 라이온즈" class="xfade-item" data-theme="02" src="../assets/images/kia/pdp/kbo/sec03_disc_th02_01.png" />
-                    <img alt="Cluster - LG 트윈스" class="xfade-item" data-theme="03" src="../assets/images/kia/pdp/kbo/sec03_disc_th03_01.png" />
-                    <img alt="Cluster - 두산 베어스" class="xfade-item" data-theme="04" src="../assets/images/kia/pdp/kbo/sec03_disc_th04_01.png" />
-                    <img alt="Cluster - KT 위즈" class="xfade-item" data-theme="05" src="../assets/images/kia/pdp/kbo/sec03_disc_th05_01.png" />
-                    <img alt="Cluster - SSG 랜더스" class="xfade-item" data-theme="06" src="../assets/images/kia/pdp/kbo/sec03_disc_th06_01.png" />
-                    <img alt="Cluster - 롯데 자이언츠" class="xfade-item" data-theme="07" src="../assets/images/kia/pdp/kbo/sec03_disc_th07_01.png" />
-                    <img alt="Cluster - 한화 이글스" class="xfade-item" data-theme="08" src="../assets/images/kia/pdp/kbo/sec03_disc_th08_01.png" />
-                    <img alt="Cluster - NC 다이노스" class="xfade-item" data-theme="09" src="../assets/images/kia/pdp/kbo/sec03_disc_th09_01.png" />
-                    <img alt="Cluster - 키움 히어로즈" class="xfade-item" data-theme="10" src="../assets/images/kia/pdp/kbo/sec03_disc_th10_01.png" />
+                    <img
+                      alt="Cluster - 기아 타이거즈"
+                      class="xfade-item"
+                      data-theme="01"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th01_01.png"
+                    />
+                    <img
+                      alt="Cluster - 삼성 라이온즈"
+                      class="xfade-item"
+                      data-theme="02"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th02_01.png"
+                    />
+                    <img
+                      alt="Cluster - LG 트윈스"
+                      class="xfade-item"
+                      data-theme="03"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th03_01.png"
+                    />
+                    <img
+                      alt="Cluster - 두산 베어스"
+                      class="xfade-item"
+                      data-theme="04"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th04_01.png"
+                    />
+                    <img
+                      alt="Cluster - KT 위즈"
+                      class="xfade-item"
+                      data-theme="05"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th05_01.png"
+                    />
+                    <img
+                      alt="Cluster - SSG 랜더스"
+                      class="xfade-item"
+                      data-theme="06"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th06_01.png"
+                    />
+                    <img
+                      alt="Cluster - 롯데 자이언츠"
+                      class="xfade-item"
+                      data-theme="07"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th07_01.png"
+                    />
+                    <img
+                      alt="Cluster - 한화 이글스"
+                      class="xfade-item"
+                      data-theme="08"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th08_01.png"
+                    />
+                    <img
+                      alt="Cluster - NC 다이노스"
+                      class="xfade-item"
+                      data-theme="09"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th09_01.png"
+                    />
+                    <img
+                      alt="Cluster - 키움 히어로즈"
+                      class="xfade-item"
+                      data-theme="10"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th10_01.png"
+                    />
                   </div>
                   <p>
-                    선택한 KBO 테마가 역동적인 그래픽과 스포티한 게이지 디자인으로 클러스터 화면에 적용됩니다.
+                    선택한 KBO 테마가 역동적인 그래픽과 스포티한 게이지
+                    디자인으로 클러스터 화면에 적용됩니다.
                   </p>
                   <p class="warning">
-                    ※ 차량 모델에 따라 클러스터 화면 디자인은 위 이미지와 다를 수 있습니다.
+                    ※ 차량 모델에 따라 클러스터 화면 디자인은 위 이미지와 다를
+                    수 있습니다.
                   </p>
                 </div>
                 <div class="playful-content-item navigation">
                   <h3>Navigation</h3>
                   <div class="xfade-stage image-wrapper">
-                    <img alt="Navigation - 기아 타이거즈" class="xfade-item" data-theme="01" src="../assets/images/kia/pdp/kbo/sec03_disc_th01_02.png" />
-                    <img alt="Navigation - 삼성 라이온즈" class="xfade-item" data-theme="02" src="../assets/images/kia/pdp/kbo/sec03_disc_th02_02.png" />
-                    <img alt="Navigation - LG 트윈스" class="xfade-item" data-theme="03" src="../assets/images/kia/pdp/kbo/sec03_disc_th03_02.png" />
-                    <img alt="Navigation - 두산 베어스" class="xfade-item" data-theme="04" src="../assets/images/kia/pdp/kbo/sec03_disc_th04_02.png" />
-                    <img alt="Navigation - KT 위즈" class="xfade-item" data-theme="05" src="../assets/images/kia/pdp/kbo/sec03_disc_th05_02.png" />
-                    <img alt="Navigation - SSG 랜더스" class="xfade-item" data-theme="06" src="../assets/images/kia/pdp/kbo/sec03_disc_th06_02.png" />
-                    <img alt="Navigation - 롯데 자이언츠" class="xfade-item" data-theme="07" src="../assets/images/kia/pdp/kbo/sec03_disc_th07_02.png" />
-                    <img alt="Navigation - 한화 이글스" class="xfade-item" data-theme="08" src="../assets/images/kia/pdp/kbo/sec03_disc_th08_02.png" />
-                    <img alt="Navigation - NC 다이노스" class="xfade-item" data-theme="09" src="../assets/images/kia/pdp/kbo/sec03_disc_th09_02.png" />
-                    <img alt="Navigation - 키움 히어로즈" class="xfade-item" data-theme="10" src="../assets/images/kia/pdp/kbo/sec03_disc_th10_02.png" />
+                    <img
+                      alt="Navigation - 기아 타이거즈"
+                      class="xfade-item"
+                      data-theme="01"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th01_02.png"
+                    />
+                    <img
+                      alt="Navigation - 삼성 라이온즈"
+                      class="xfade-item"
+                      data-theme="02"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th02_02.png"
+                    />
+                    <img
+                      alt="Navigation - LG 트윈스"
+                      class="xfade-item"
+                      data-theme="03"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th03_02.png"
+                    />
+                    <img
+                      alt="Navigation - 두산 베어스"
+                      class="xfade-item"
+                      data-theme="04"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th04_02.png"
+                    />
+                    <img
+                      alt="Navigation - KT 위즈"
+                      class="xfade-item"
+                      data-theme="05"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th05_02.png"
+                    />
+                    <img
+                      alt="Navigation - SSG 랜더스"
+                      class="xfade-item"
+                      data-theme="06"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th06_02.png"
+                    />
+                    <img
+                      alt="Navigation - 롯데 자이언츠"
+                      class="xfade-item"
+                      data-theme="07"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th07_02.png"
+                    />
+                    <img
+                      alt="Navigation - 한화 이글스"
+                      class="xfade-item"
+                      data-theme="08"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th08_02.png"
+                    />
+                    <img
+                      alt="Navigation - NC 다이노스"
+                      class="xfade-item"
+                      data-theme="09"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th09_02.png"
+                    />
+                    <img
+                      alt="Navigation - 키움 히어로즈"
+                      class="xfade-item"
+                      data-theme="10"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th10_02.png"
+                    />
                   </div>
                   <p>
-                    내비게이션 사용 시 구단 앰블럼이 적용되어 현재 위치를 더욱 돋보이게 보여줍니다.
+                    내비게이션 사용 시 구단 앰블럼이 적용되어 현재 위치를 더욱
+                    돋보이게 보여줍니다.
                   </p>
                 </div>
                 <div class="playful-content-item homecard">
                   <h3>Homecard</h3>
                   <div class="xfade-stage image-wrapper">
-                    <img alt="Homecard - 기아 타이거즈" class="xfade-item" data-theme="01" src="../assets/images/kia/pdp/kbo/sec03_disc_th01_03.png" />
-                    <img alt="Homecard - 삼성 라이온즈" class="xfade-item" data-theme="02" src="../assets/images/kia/pdp/kbo/sec03_disc_th02_03.png" />
-                    <img alt="Homecard - LG 트윈스" class="xfade-item" data-theme="03" src="../assets/images/kia/pdp/kbo/sec03_disc_th03_03.png" />
-                    <img alt="Homecard - 두산 베어스" class="xfade-item" data-theme="04" src="../assets/images/kia/pdp/kbo/sec03_disc_th04_03.png" />
-                    <img alt="Homecard - KT 위즈" class="xfade-item" data-theme="05" src="../assets/images/kia/pdp/kbo/sec03_disc_th05_03.png" />
-                    <img alt="Homecard - SSG 랜더스" class="xfade-item" data-theme="06" src="../assets/images/kia/pdp/kbo/sec03_disc_th06_03.png" />
-                    <img alt="Homecard - 롯데 자이언츠" class="xfade-item" data-theme="07" src="../assets/images/kia/pdp/kbo/sec03_disc_th07_03.png" />
-                    <img alt="Homecard - 한화 이글스" class="xfade-item" data-theme="08" src="../assets/images/kia/pdp/kbo/sec03_disc_th08_03.png" />
-                    <img alt="Homecard - NC 다이노스" class="xfade-item" data-theme="09" src="../assets/images/kia/pdp/kbo/sec03_disc_th09_03.png" />
-                    <img alt="Homecard - 키움 히어로즈" class="xfade-item" data-theme="10" src="../assets/images/kia/pdp/kbo/sec03_disc_th10_03.png" />
+                    <img
+                      alt="Homecard - 기아 타이거즈"
+                      class="xfade-item"
+                      data-theme="01"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th01_03.png"
+                    />
+                    <img
+                      alt="Homecard - 삼성 라이온즈"
+                      class="xfade-item"
+                      data-theme="02"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th02_03.png"
+                    />
+                    <img
+                      alt="Homecard - LG 트윈스"
+                      class="xfade-item"
+                      data-theme="03"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th03_03.png"
+                    />
+                    <img
+                      alt="Homecard - 두산 베어스"
+                      class="xfade-item"
+                      data-theme="04"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th04_03.png"
+                    />
+                    <img
+                      alt="Homecard - KT 위즈"
+                      class="xfade-item"
+                      data-theme="05"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th05_03.png"
+                    />
+                    <img
+                      alt="Homecard - SSG 랜더스"
+                      class="xfade-item"
+                      data-theme="06"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th06_03.png"
+                    />
+                    <img
+                      alt="Homecard - 롯데 자이언츠"
+                      class="xfade-item"
+                      data-theme="07"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th07_03.png"
+                    />
+                    <img
+                      alt="Homecard - 한화 이글스"
+                      class="xfade-item"
+                      data-theme="08"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th08_03.png"
+                    />
+                    <img
+                      alt="Homecard - NC 다이노스"
+                      class="xfade-item"
+                      data-theme="09"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th09_03.png"
+                    />
+                    <img
+                      alt="Homecard - 키움 히어로즈"
+                      class="xfade-item"
+                      data-theme="10"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th10_03.png"
+                    />
                   </div>
                   <p>
-                    메뉴 화면에서 구단의 특색을 담은 그래픽 아트웍을 만나볼 수 있습니다.
+                    메뉴 화면에서 구단의 특색을 담은 그래픽 아트웍을 만나볼 수
+                    있습니다.
                   </p>
                 </div>
                 <div class="playful-content-item profile">
                   <h3>Profile</h3>
                   <div class="xfade-stage image-wrapper">
-                    <img alt="Profile - 기아 타이거즈" class="xfade-item" data-theme="01" src="../assets/images/kia/pdp/kbo/sec03_disc_th01_04.png" />
-                    <img alt="Profile - 삼성 라이온즈" class="xfade-item" data-theme="02" src="../assets/images/kia/pdp/kbo/sec03_disc_th02_04.png" />
-                    <img alt="Profile - LG 트윈스" class="xfade-item" data-theme="03" src="../assets/images/kia/pdp/kbo/sec03_disc_th03_04.png" />
-                    <img alt="Profile - 두산 베어스" class="xfade-item" data-theme="04" src="../assets/images/kia/pdp/kbo/sec03_disc_th04_04.png" />
-                    <img alt="Profile - KT 위즈" class="xfade-item" data-theme="05" src="../assets/images/kia/pdp/kbo/sec03_disc_th05_04.png" />
-                    <img alt="Profile - SSG 랜더스" class="xfade-item" data-theme="06" src="../assets/images/kia/pdp/kbo/sec03_disc_th06_04.png" />
-                    <img alt="Profile - 롯데 자이언츠" class="xfade-item" data-theme="07" src="../assets/images/kia/pdp/kbo/sec03_disc_th07_04.png" />
-                    <img alt="Profile - 한화 이글스" class="xfade-item" data-theme="08" src="../assets/images/kia/pdp/kbo/sec03_disc_th08_04.png" />
-                    <img alt="Profile - NC 다이노스" class="xfade-item" data-theme="09" src="../assets/images/kia/pdp/kbo/sec03_disc_th09_04.png" />
-                    <img alt="Profile - 키움 히어로즈" class="xfade-item" data-theme="10" src="../assets/images/kia/pdp/kbo/sec03_disc_th10_04.png" />
+                    <img
+                      alt="Profile - 기아 타이거즈"
+                      class="xfade-item"
+                      data-theme="01"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th01_04.png"
+                    />
+                    <img
+                      alt="Profile - 삼성 라이온즈"
+                      class="xfade-item"
+                      data-theme="02"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th02_04.png"
+                    />
+                    <img
+                      alt="Profile - LG 트윈스"
+                      class="xfade-item"
+                      data-theme="03"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th03_04.png"
+                    />
+                    <img
+                      alt="Profile - 두산 베어스"
+                      class="xfade-item"
+                      data-theme="04"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th04_04.png"
+                    />
+                    <img
+                      alt="Profile - KT 위즈"
+                      class="xfade-item"
+                      data-theme="05"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th05_04.png"
+                    />
+                    <img
+                      alt="Profile - SSG 랜더스"
+                      class="xfade-item"
+                      data-theme="06"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th06_04.png"
+                    />
+                    <img
+                      alt="Profile - 롯데 자이언츠"
+                      class="xfade-item"
+                      data-theme="07"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th07_04.png"
+                    />
+                    <img
+                      alt="Profile - 한화 이글스"
+                      class="xfade-item"
+                      data-theme="08"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th08_04.png"
+                    />
+                    <img
+                      alt="Profile - NC 다이노스"
+                      class="xfade-item"
+                      data-theme="09"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th09_04.png"
+                    />
+                    <img
+                      alt="Profile - 키움 히어로즈"
+                      class="xfade-item"
+                      data-theme="10"
+                      src="../assets/images/kia/pdp/kbo/sec03_disc_th10_04.png"
+                    />
                   </div>
                   <p>
-                    구단의 특징과 마스코트를 담은 그래픽 이미지를 프로필로 선택해 운전자별로 개성 있는 프로필을 만들어보세요.
+                    구단의 특징과 마스코트를 담은 그래픽 이미지를 프로필로
+                    선택해 운전자별로 개성 있는 프로필을 만들어보세요.
                   </p>
                 </div>
               </div>
@@ -1674,7 +1872,7 @@
             <!-- Section Title -->
             <div class="reasons-n-header">
               <h2 class="reasons-n-title">
-                KBO 테마를 놓치기 아쉬운 <br/>세 가지 이유
+                KBO 테마를 놓치기 아쉬운 <br />세 가지 이유
               </h2>
             </div>
           </div>
@@ -1688,7 +1886,8 @@
                       경기장을 그대로 담은 클러스터 디자인
                     </h3>
                     <p class="reason-n-description">
-                      팀 컬러와 역동적인 그래픽이 적용된 클러스터 디자인으로 차 안에서도 경기장의 분위기를 느껴보세요.
+                      팀 컬러와 역동적인 그래픽이 적용된 클러스터 디자인으로 차
+                      안에서도 경기장의 분위기를 느껴보세요.
                     </p>
                   </div>
                 </div>
@@ -1696,9 +1895,7 @@
                   <picture data-theme="01">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th01_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th01_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1709,9 +1906,7 @@
                   <picture data-theme="02">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th02_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th02_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1722,9 +1917,7 @@
                   <picture data-theme="03">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th03_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th03_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1735,9 +1928,7 @@
                   <picture data-theme="04">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th04_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th04_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1748,9 +1939,7 @@
                   <picture data-theme="05">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th05_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th05_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1761,9 +1950,7 @@
                   <picture data-theme="06">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th06_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th06_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1774,9 +1961,7 @@
                   <picture data-theme="07">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th07_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th07_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1787,9 +1972,7 @@
                   <picture data-theme="08">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th08_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th08_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1800,9 +1983,7 @@
                   <picture data-theme="09">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th09_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th09_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1813,9 +1994,7 @@
                   <picture data-theme="10">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_01_th10_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_01_th10_mo.png"
                     />
                     <img
                       alt="Reason 1"
@@ -1828,9 +2007,13 @@
               <li class="reason-n-item">
                 <div class="reason-n-content-wrapper">
                   <div class="reason-n-content">
-                    <h3 class="reason-n-title">우리 구단의 특징을 담은 그래픽 아트웍</h3>
+                    <h3 class="reason-n-title">
+                      우리 구단의 특징을 담은 그래픽 아트웍
+                    </h3>
                     <p class="reason-n-description">
-                      각 구단의 특징과 마스코트를 담은 그래픽 아트웍으로 좋아하는 팀의 개성을 디스플레이 곳곳에서 만나볼 수 있습니다.
+                      각 구단의 특징과 마스코트를 담은 그래픽 아트웍으로
+                      좋아하는 팀의 개성을 디스플레이 곳곳에서 만나볼 수
+                      있습니다.
                     </p>
                   </div>
                 </div>
@@ -1838,9 +2021,7 @@
                   <picture>
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_02_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_02_mo.png"
                     />
                     <img
                       alt="Reason 2"
@@ -1857,7 +2038,8 @@
                       캐치프레이즈 깃발과 함께 뜨거운 응원을!
                     </h3>
                     <p class="reason-n-description">
-                      구단의 캐치프레이즈를 담은 깃발 그래픽이 적용되어 차 안에서도 응원의 순간을 더욱 특별하게 만들어줍니다.
+                      구단의 캐치프레이즈를 담은 깃발 그래픽이 적용되어 차
+                      안에서도 응원의 순간을 더욱 특별하게 만들어줍니다.
                     </p>
                   </div>
                 </div>
@@ -1865,9 +2047,7 @@
                   <picture data-theme="01">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th01_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th01_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1878,9 +2058,7 @@
                   <picture data-theme="02">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th02_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th02_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1891,9 +2069,7 @@
                   <picture data-theme="03">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th03_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th03_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1904,9 +2080,7 @@
                   <picture data-theme="04">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th04_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th04_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1917,9 +2091,7 @@
                   <picture data-theme="05">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th05_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th05_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1930,9 +2102,7 @@
                   <picture data-theme="06">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th06_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th06_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1943,9 +2113,7 @@
                   <picture data-theme="07">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th07_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th07_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1956,9 +2124,7 @@
                   <picture data-theme="08">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th08_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th08_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1969,9 +2135,7 @@
                   <picture data-theme="09">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th09_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th09_mo.png"
                     />
                     <img
                       alt="Reason 3"
@@ -1982,9 +2146,7 @@
                   <picture data-theme="10">
                     <source
                       media="(max-width: 769px)"
-                      srcset="
-                        ../assets/images/kia/pdp/kbo/sec04_03_th10_mo.png
-                      "
+                      srcset="../assets/images/kia/pdp/kbo/sec04_03_th10_mo.png"
                     />
                     <img
                       alt="Reason 3"

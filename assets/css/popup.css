@@ -39,7 +39,7 @@
   width: 8px;
 }
 .popupWarp .popInner .termsCon::-webkit-scrollbar-thumb {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
@@ -61,6 +61,7 @@
 .popupWarp .popInner .towButton {
   margin: 0 auto;
   margin-top: 5rem;
+  gap: 0.8rem;
 }
 @media (max-width: 768px) {
   .popupWarp .popInner {
@@ -76,8 +77,6 @@
 }
 @media (min-width: 1240px) {
   .popupWarp .popInner {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     width: 100%;
   }
@@ -127,8 +126,8 @@
   font-size: 1.4rem;
   line-height: 2.2rem;
   color: #676767;
-  border-top: 1px solid #DEDEDE;
-  border-bottom: 1px solid #DEDEDE;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
 }
 .popupWarp .marketingAgree.popInner .towButton {
   width: 100%;
@@ -197,7 +196,7 @@
 .popupWarp .inquiryCaseEtc .inquiryCaseEtcCon .linkBox {
   margin-top: 2rem;
   padding: 2.8rem;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   text-align: center;
 }
 .popupWarp .inquiryCaseEtc .inquiryCaseEtcCon .linkBox a {
@@ -223,6 +222,46 @@
   background-size: 0.6rem 1.2rem;
   margin-left: 1rem;
   background-position: center;
+}
+.popupWarp .sharePop {
+  max-width: 54rem;
+}
+.popupWarp .sharePop .shareCon .shareUrlBox input {
+  width: 100%;
+  height: 4rem;
+  padding: 0 2.4rem;
+  border: 1px solid #dedede;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #000;
+}
+.popupWarp .confirmPopup {
+  max-width: 32rem;
+  padding: 3rem;
+}
+@media (min-width: 768px) {
+  .popupWarp .confirmPopup {
+    max-width: 47rem;
+    padding: 5rem;
+  }
+}
+.popupWarp .confirmPopup .popContents {
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .popupWarp .confirmPopup .popContents {
+    font-size: 1.6rem;
+  }
+}
+.popupWarp .confirmPopup .towButton {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .popupWarp .confirmPopup .towButton {
+    margin-top: 5rem;
+  }
 }
 
 .payComplete {

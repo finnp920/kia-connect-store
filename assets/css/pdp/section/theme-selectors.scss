@@ -6,7 +6,7 @@
   /* 트랙 내부 레이아웃 */
   .theme-selector-wrapper {
     position: sticky;
-    top: 59px;
+    top: 5.6rem;
     width: 100%;
     z-index: 3;
 
@@ -16,8 +16,12 @@
 
     // 모바일 대응
     @media screen and (max-width: 769px) {
-      top: 56px;
       margin-bottom: 8px;
+    }
+
+    // PC Header height 대응
+    @media (min-width: 1121px) {
+      top: 8rem;
     }
   }
 

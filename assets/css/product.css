@@ -52,7 +52,6 @@
 .contentWarp .productView .productLeft .productImg {
   border-radius: 0.6rem;
   overflow: hidden;
-  position: -webkit-sticky;
   position: sticky;
   top: 7.5rem;
 }
@@ -91,8 +90,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
   left: 0;
   top: 0;
@@ -156,15 +154,6 @@
   .contentWarp .productView .productRight .optionWarp .producTitle h1 {
     font-size: 4.5rem;
   }
-}
-.contentWarp .productView .productRight .optionWarp .producTitle h1 .btn-wish {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 3rem;
-  height: 3rem;
-  background: url(../images/kia/pdp/display_theme_disney/Icon_heart.png) no-repeat center/100% auto;
 }
 .contentWarp .productView .productRight .optionWarp .producTitle span {
   color: #676767;
@@ -497,7 +486,7 @@
 }
 @media (min-width: 1240px) {
   .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p span,
-.contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong {
+  .contentWarp .productView .productRight .optionWarp .packageOption .optionList .optionItem .optionText p strong {
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -669,7 +658,7 @@
 }
 @media (min-width: 1240px) {
   .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p span,
-.contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
+  .contentWarp .productView .productRight .optionWarp .producOption .optionList .checkBtn .optionText p strong {
     font-size: 1.4rem;
   }
 }
@@ -995,6 +984,43 @@
   .contentWarp .productView .productRight .optionWarp .priceTotal .paymentButton button + button {
     margin-top: 0;
   }
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock {
+  margin-top: 3.2rem;
+}
+@media (min-width: 768px) {
+  .contentWarp .productView .productRight .optionWarp .infoBlock {
+    margin-top: 2rem;
+  }
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock.unsupported .textTitle {
+  color: #ea0029;
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock.unsupported .textTitle::before {
+  background-image: url(../images/common/ico_caution_r.png);
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock .textTitle {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock .textTitle::before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.2rem;
+  background: url(../images/common/ico_caution.png) no-repeat 50% 50%/auto 100%;
+}
+.contentWarp .productView .productRight .optionWarp .infoBlock .textDesc {
+  margin-top: 0.8rem;
+  color: #05141f;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: -0.015rem;
 }
 
 .pdpListBtn {
