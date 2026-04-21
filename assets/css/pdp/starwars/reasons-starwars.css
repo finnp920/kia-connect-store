@@ -9,6 +9,22 @@
   background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02.png");
 }
 
+[data-product=starwars][data-current-theme="03"] section.reasons {
+  background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_01.png");
+}
+
+[data-product=starwars][data-current-theme="04"] section.reasons {
+  background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02.png");
+}
+
+[data-product=starwars][data-current-theme="05"] section.reasons {
+  background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_01.png");
+}
+
+[data-product=starwars][data-current-theme="06"] section.reasons {
+  background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02.png");
+}
+
 [data-product=starwars] section.reasons {
   background-color: #0d0808;
 }
@@ -24,6 +40,18 @@
     background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png");
   }
   [data-product=starwars][data-current-theme="02"] section.reasons {
+    background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png");
+  }
+  [data-product=starwars][data-current-theme="03"] section.reasons {
+    background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png");
+  }
+  [data-product=starwars][data-current-theme="04"] section.reasons {
+    background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png");
+  }
+  [data-product=starwars][data-current-theme="05"] section.reasons {
+    background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png");
+  }
+  [data-product=starwars][data-current-theme="06"] section.reasons {
     background-image: url("../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png");
   }
   [data-product=starwars] section.reasons .reason-card:nth-child(1) .reason-title {

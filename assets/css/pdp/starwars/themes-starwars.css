@@ -77,72 +77,86 @@
   color: #000;
   font-size: clamp(13px, 1.2cqw, 16px);
 }
-[data-product=starwars] .themes-stage .card.pick .card-layer {
-  width: 100%;
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-}
-[data-product=starwars] .themes-stage .card.pick .card-contents {
-  top: 50%;
-  transform: translateY(-50%);
-  aspect-ratio: auto;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-[data-product=starwars] .themes-stage .card.pick .card-contents picture {
-  width: 89px;
-  height: 25px;
-  aspect-ratio: 89/25;
-}
-[data-product=starwars] .themes-stage .card.pick .card-contents img {
-  width: 100%;
-  height: 100%;
-}
-[data-product=starwars] .themes-stage .card.pick .card-contents h3 {
-  text-align: center;
-  color: #b2b8bd;
-}
-[data-product=starwars] .themes-stage .card.pick .card-contents p {
-  margin-top: 8px;
-  text-align: center;
-  color: #b2b8bd;
-}
 
-[data-product=starwars][data-current-theme="01"] .card[data-theme="01"] .layer-active,
-[data-product=starwars][data-current-theme="01"] .card[data-theme="02"] .layer-inactive {
+[data-product=starwars][data-current-theme="01"] .card[data-theme="01"] .layer-active {
   opacity: 1;
   visibility: visible;
 }
-[data-product=starwars][data-current-theme="01"] .card[data-theme="01"] .layer-inactive,
-[data-product=starwars][data-current-theme="01"] .card[data-theme="02"] .layer-active {
+[data-product=starwars][data-current-theme="01"] .card[data-theme="01"] .layer-inactive {
   opacity: 0;
   visibility: hidden;
 }
 [data-product=starwars][data-current-theme="01"] .card[data-theme="01"] .card-contents p {
   color: #888888;
 }
-[data-product=starwars][data-current-theme="01"] .card.pick .card-contents [data-theme="01"] {
-  display: block;
-}
 
-[data-product=starwars][data-current-theme="02"] .card[data-theme="02"] .layer-active,
-[data-product=starwars][data-current-theme="02"] .card[data-theme="01"] .layer-inactive {
+[data-product=starwars][data-current-theme="02"] .card[data-theme="02"] .layer-active {
   opacity: 1;
   visibility: visible;
 }
-[data-product=starwars][data-current-theme="02"] .card[data-theme="02"] .layer-inactive,
-[data-product=starwars][data-current-theme="02"] .card[data-theme="01"] .layer-active {
+[data-product=starwars][data-current-theme="02"] .card[data-theme="02"] .layer-inactive {
   opacity: 0;
   visibility: hidden;
 }
 [data-product=starwars][data-current-theme="02"] .card[data-theme="02"] .card-contents p {
   color: #888888;
 }
-[data-product=starwars][data-current-theme="02"] .card.pick .card-contents [data-theme="02"] {
-  display: block;
+
+[data-product=starwars][data-current-theme="03"] .card[data-theme="03"] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+[data-product=starwars][data-current-theme="03"] .card[data-theme="03"] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product=starwars][data-current-theme="03"] .card[data-theme="03"] .card-contents p {
+  color: #888888;
+}
+
+[data-product=starwars][data-current-theme="04"] .card[data-theme="04"] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+[data-product=starwars][data-current-theme="04"] .card[data-theme="04"] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product=starwars][data-current-theme="04"] .card[data-theme="04"] .card-contents p {
+  color: #888888;
+}
+
+[data-product=starwars][data-current-theme="05"] .card[data-theme="05"] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+[data-product=starwars][data-current-theme="05"] .card[data-theme="05"] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product=starwars][data-current-theme="05"] .card[data-theme="05"] .card-contents p {
+  color: #888888;
+}
+
+[data-product=starwars][data-current-theme="06"] .card[data-theme="06"] .layer-active {
+  opacity: 1;
+  visibility: visible;
+}
+[data-product=starwars][data-current-theme="06"] .card[data-theme="06"] .layer-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product=starwars][data-current-theme="06"] .card[data-theme="06"] .card-contents p {
+  color: #888888;
+}
+
+[data-product=starwars] .card .layer-active {
+  opacity: 0;
+  visibility: hidden;
+}
+[data-product=starwars] .card .layer-inactive {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media screen and (max-width: 769px) {
@@ -174,34 +188,6 @@
   [data-product=starwars] .themes-stage .card .card-contents p {
     font-size: clamp(10px, 1.8cqw, 16px);
     letter-spacing: -0.2px;
-  }
-  [data-product=starwars] .themes-stage .card.pick {
-    grid-column: 1/span 2; /* 두 컬럼 전체 차지 */
-    justify-self: center; /* 가운데 정렬 */
-    max-width: 632px;
-    min-height: auto;
-    /* 640 × 293 */
-    aspect-ratio: 640/293;
-  }
-  [data-product=starwars] .themes-stage .card.pick .card-contents {
-    top: 50%;
-    transform: translateY(-50%);
-    aspect-ratio: auto;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-  }
-  [data-product=starwars] .themes-stage .card.pick .card-contents picture {
-    aspect-ratio: 89/25;
-    width: 44.5px;
-    height: 12.5px;
-  }
-  [data-product=starwars] .themes-stage .card.pick .card-contents h3 {
-    margin-top: 4px;
-  }
-  [data-product=starwars] .themes-stage .card.pick .card-contents p {
-    margin-top: 0;
   }
 }
 /*# sourceMappingURL=themes-starwars.css.map */

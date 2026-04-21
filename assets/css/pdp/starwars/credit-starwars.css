@@ -1,9 +1,15 @@
 @import url("../section/credit.css");
-
-[data-product='starwars'] section.credit {
+[data-product=starwars] section.credit {
   display: none;
+  padding: 100px 0 120px;
 }
 
-[data-product='starwars'][data-current-theme='03'] section.credit {
+@media screen and (max-width: 769px) {
+  [data-product=starwars] section.credit {
+    padding: 60px 0 80px;
+  }
+}
+[data-product=starwars][data-current-theme="03"] section.credit {
   display: block;
 }
+/*# sourceMappingURL=credit-starwars.css.map */
