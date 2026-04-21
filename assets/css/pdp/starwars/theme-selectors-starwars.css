@@ -24,7 +24,7 @@
   color: #ffffff;
 }
 [data-product=starwars][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before {
-  background-color: #3d7ca0;
+  background-color: #3D7CA0;
   background-image: url(../../../icons/icon_check.svg);
 }
 
@@ -33,7 +33,7 @@
   color: #ffffff;
 }
 [data-product=starwars][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"]::before {
-  background-color: #BD1010;
+  background-color: #8F7C4A;
   background-image: url(../../../icons/icon_check.svg);
 }
 
@@ -42,7 +42,7 @@
   color: #ffffff;
 }
 [data-product=starwars][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"]::before {
-  background-color: #3d7ca0;
+  background-color: #878E58;
   background-image: url(../../../icons/icon_check.svg);
 }
 
@@ -51,7 +51,7 @@
   color: #ffffff;
 }
 [data-product=starwars][data-current-theme="06"] .theme-selector.buttons button[data-theme="06"]::before {
-  background-color: #BD1010;
+  background-color: #CD6324;
   background-image: url(../../../icons/icon_check.svg);
 }
 /*# sourceMappingURL=theme-selectors-starwars.css.map */

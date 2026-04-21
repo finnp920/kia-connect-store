@@ -6,10 +6,10 @@
 $starwars-themes: (
   '01': #3d7ca0,
   '02': #BD1010,
-  '03': #3d7ca0, // TODO: 알맞은 컬러로 변경
-  '04': #BD1010, // TODO: 알맞은 컬러로 변경
-  '05': #3d7ca0, // TODO: 알맞은 컬러로 변경
-  '06': #BD1010  // TODO: 알맞은 컬러로 변경
+  '03': #3D7CA0,
+  '04': #8F7C4A,
+  '05': #878E58,
+  '06': #CD6324
 );
 
 @each $theme, $color in $starwars-themes {
