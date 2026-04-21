@@ -2,10 +2,22 @@
    The Reasons Why You Can't Miss Out - Starwars
    ======================================== */
 [data-product='starwars'][data-current-theme='01'] section.reasons {
-  background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_01.png');
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01.png');
 }
 [data-product='starwars'][data-current-theme='02'] section.reasons {
-  background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02.png');
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02.png');
+}
+[data-product='starwars'][data-current-theme='03'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01.png');
+}
+[data-product='starwars'][data-current-theme='04'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02.png');
+}
+[data-product='starwars'][data-current-theme='05'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01.png');
+}
+[data-product='starwars'][data-current-theme='06'] section.reasons {
+  background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02.png');
 }
 
 [data-product='starwars'] section.reasons {
@@ -21,11 +33,27 @@
 @media screen and (max-width: 769px) {
   [data-product='starwars'][data-current-theme='01']
   section.reasons {
-    background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_01_mo.png');
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png');
   }
   [data-product='starwars'][data-current-theme='02']
   section.reasons {
-    background-image: url('../../../images/kia/pdp/starwars/details/img_reasons_bg_02_mo.png');
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='03']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='04']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='05']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_01_mo.png');
+  }
+  [data-product='starwars'][data-current-theme='06']
+  section.reasons {
+    background-image: url('../../../images/kia/pdp/starwars/img_reasons_bg_02_mo.png');
   }
   [data-product='starwars'] section.reasons {
     .reason-card:nth-child(1) .reason-title {

@@ -6,7 +6,7 @@
   position: relative;
   margin-bottom: 0;
   padding: 66px 0;
-  background-image: url("../../../images/kia/pdp/starwars/details/cardbg.png");
+  background-image: url("../../../images/kia/pdp/starwars/cardbg.png");
   background-size: cover;
 }
 [data-product=starwars] .themes-stage::after {
@@ -148,7 +148,7 @@
 @media screen and (max-width: 769px) {
   [data-product=starwars] .themes-stage {
     padding: 92px 0;
-    background-image: url("../../../images/kia/pdp/starwars/details/cardbg_mo.png");
+    background-image: url("../../../images/kia/pdp/starwars/cardbg_mo.png");
     background-size: cover;
   }
   [data-product=starwars] .themes-stage .themes-cards-grid {

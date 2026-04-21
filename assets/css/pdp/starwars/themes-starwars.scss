@@ -5,7 +5,7 @@
   position: relative;
   margin-bottom: 0;
   padding: 66px 0;
-  background-image: url('../../../images/kia/pdp/starwars/details/cardbg.png');
+  background-image: url('../../../images/kia/pdp/starwars/cardbg.png');
   background-size: cover;
   &::after {
     background-color: #030403;
@@ -122,53 +122,48 @@
 }
 
 [data-product='starwars'][data-current-theme='01'] {
-  .card[data-theme='01'] .layer-active,
-  .card[data-theme='02'] .layer-inactive {
-    opacity: 1;
-    visibility: visible;
-  }
-  .card[data-theme='01'] .layer-inactive,
-  .card[data-theme='02'] .layer-active {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .card[data-theme='01'] .card-contents {
-    p {
-      color: #888888;
-    }
-  }
-  .card.pick .card-contents [data-theme='01'] {
-    display: block;
-  }
+  .card[data-theme='01'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='01'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='01'] .card-contents p { color: #888888; }
+  .card.pick .card-contents [data-theme='01'] { display: block; }
+}
+[data-product='starwars'][data-current-theme='02'] {
+  .card[data-theme='02'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='02'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='02'] .card-contents p { color: #888888; }
+  .card.pick .card-contents [data-theme='02'] { display: block; }
+}
+[data-product='starwars'][data-current-theme='03'] {
+  .card[data-theme='03'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='03'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='03'] .card-contents p { color: #888888; }
+}
+[data-product='starwars'][data-current-theme='04'] {
+  .card[data-theme='04'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='04'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='04'] .card-contents p { color: #888888; }
+}
+[data-product='starwars'][data-current-theme='05'] {
+  .card[data-theme='05'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='05'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='05'] .card-contents p { color: #888888; }
+}
+[data-product='starwars'][data-current-theme='06'] {
+  .card[data-theme='06'] .layer-active { opacity: 1; visibility: visible; }
+  .card[data-theme='06'] .layer-inactive { opacity: 0; visibility: hidden; }
+  .card[data-theme='06'] .card-contents p { color: #888888; }
 }
 
-[data-product='starwars'][data-current-theme='02'] {
-  .card[data-theme='02'] .layer-active,
-  .card[data-theme='01'] .layer-inactive {
-    opacity: 1;
-    visibility: visible;
-  }
-  .card[data-theme='02'] .layer-inactive,
-  .card[data-theme='01'] .layer-active {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .card[data-theme='02'] .card-contents {
-    p {
-      color: #888888;
-    }
-  }
-  .card.pick .card-contents [data-theme='02'] {
-    display: block;
-  }
+[data-product='starwars'] {
+  .card .layer-active { opacity: 0; visibility: hidden; }
+  .card .layer-inactive { opacity: 1; visibility: visible; }
+  .card.pick .card-contents picture { display: none; }
 }
 
 @media screen and (max-width: 769px) {
   [data-product='starwars'] .themes-stage {
     padding: 92px 0;
-    background-image: url('../../../images/kia/pdp/starwars/details/cardbg_mo.png');
+    background-image: url('../../../images/kia/pdp/starwars/cardbg_mo.png');
     background-size: cover;
 
     .themes-cards-grid {

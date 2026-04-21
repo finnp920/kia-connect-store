@@ -1,0 +1,9 @@
+@import url("../section/credit.css");
+
+[data-product='starwars'] section.credit {
+  display: none;
+}
+
+[data-product='starwars'][data-current-theme='03'] section.credit {
+  display: block;
+}
