@@ -1,25 +1,28 @@
 /* ========================================
    Theme Selectors - Starwars
    ======================================== */
-[data-product='starwars'][data-current-theme='01']
-  .theme-selector.buttons
-  button[data-theme='01'],
-[data-product='starwars'][data-current-theme='02']
-  .theme-selector.buttons
-  button[data-theme='02'] {
-  background-color: #16181f;
-  color: #ffffff;
+
+// 테마 번호별 컬러값 맵핑
+$starwars-themes: (
+  '01': #3d7ca0,
+  '02': #BD1010,
+  '03': #3d7ca0, // TODO: 알맞은 컬러로 변경
+  '04': #BD1010, // TODO: 알맞은 컬러로 변경
+  '05': #3d7ca0, // TODO: 알맞은 컬러로 변경
+  '06': #BD1010  // TODO: 알맞은 컬러로 변경
+);
+
+@each $theme, $color in $starwars-themes {
+  [data-product='starwars'][data-current-theme='#{$theme}'] {
+    .theme-selector.buttons button[data-theme='#{$theme}'] {
+      background-color: #16181f;
+      color: #ffffff;
+
+      &::before {
+        background-color: $color;
+        background-image: url(../../../icons/icon_check.svg);
+      }
+    }
+  }
 }
 
-[data-product='starwars'][data-current-theme='01']
-  .theme-selector.buttons
-  button[data-theme='01']::before {
-  background-color: #3d7ca0;
-  background-image: url(../../../icons/icon_check.svg);
-}
-[data-product='starwars'][data-current-theme='02']
-.theme-selector.buttons
-button[data-theme='02']::before {
-  background-color: #BD1010;
-  background-image: url(../../../icons/icon_check.svg);
-}

@@ -101,6 +101,9 @@
   flex: 1;
   text-align: right;
 }
+[data-product] section.reasons-n[data-product=starwars] ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image {
+  display: none;
+}
 [data-product] section.reasons-n .reasons-n-copyright {
   margin-top: 108px;
   text-align: center;
@@ -166,6 +169,9 @@
   }
   [data-product] section.reasons-n .reasons-n-copyright {
     margin-top: 45px;
+  }
+  [data-product=starwars] section.reasons-n ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image {
+    display: block;
   }
 }
 /*# sourceMappingURL=reasons-n.css.map */

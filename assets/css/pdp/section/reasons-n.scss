@@ -113,6 +113,12 @@
     }
   }
 
+  &[data-product="starwars"] {
+    ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image {
+      display: none;
+    }
+  }
+
   .reasons-n-copyright {
     margin-top: 108px;
     text-align: center;
@@ -193,6 +199,12 @@
     }
     .reasons-n-copyright {
       margin-top: 45px;
+    }
+  }
+
+  [data-product="starwars"] section.reasons-n {
+    ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image {
+      display: block;
     }
   }
 }
