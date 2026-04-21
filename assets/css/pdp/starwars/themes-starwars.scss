@@ -17,10 +17,11 @@
 
   .themes-cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 24px;
-    max-width: 999px;
+    max-width: 1992px; /* 6 cards: 6*312 + 5*24 = 1992 */
     margin: 0 auto;
+    padding: 0 24px;
     list-style: none;
   }
 
@@ -86,35 +87,15 @@
 
 }
 
-[data-product='starwars'][data-current-theme='01'] {
-  .card[data-theme='01'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='01'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='01'] .card-contents p { color: #888888; }
-}
-[data-product='starwars'][data-current-theme='02'] {
-  .card[data-theme='02'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='02'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='02'] .card-contents p { color: #888888; }
-}
-[data-product='starwars'][data-current-theme='03'] {
-  .card[data-theme='03'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='03'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='03'] .card-contents p { color: #888888; }
-}
-[data-product='starwars'][data-current-theme='04'] {
-  .card[data-theme='04'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='04'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='04'] .card-contents p { color: #888888; }
-}
-[data-product='starwars'][data-current-theme='05'] {
-  .card[data-theme='05'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='05'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='05'] .card-contents p { color: #888888; }
-}
-[data-product='starwars'][data-current-theme='06'] {
-  .card[data-theme='06'] .layer-active { opacity: 1; visibility: visible; }
-  .card[data-theme='06'] .layer-inactive { opacity: 0; visibility: hidden; }
-  .card[data-theme='06'] .card-contents p { color: #888888; }
+@for $i from 1 through 6 {
+  $theme: "0" + $i;
+  [data-product='starwars'][data-current-theme='#{$theme}'] {
+    .card[data-theme='#{$theme}'] {
+      .layer-active { opacity: 1; visibility: visible; }
+      .layer-inactive { opacity: 0; visibility: hidden; }
+      .card-contents p { color: #888888; }
+    }
+  }
 }
 
 [data-product='starwars'] {
