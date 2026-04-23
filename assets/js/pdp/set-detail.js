@@ -71,6 +71,9 @@ function setDetailCurrentTheme(newTheme) {
   if (foundItem) {
     dropdownButton.textContent = foundItem.textContent;
   }
+
+  // Foldable List 카드 active 상태 동기화
+  syncFoldableListActive(currentTheme);
 }
 
 // ----------------------------------------
@@ -92,6 +95,33 @@ function setDetailEventListeners() {
         );
       });
   }
+
+  // Foldable List 카드 hover 시 아코디언 토글
+  const foldableContainers = document.querySelectorAll('.foldable-list .foldable-cards');
+  foldableContainers.forEach((container) => {
+    const cards = container.querySelectorAll('.foldable-card');
+
+    // 카드에 마우스 진입 시 해당 카드만 active
+    cards.forEach((card) => {
+      card.addEventListener('mouseenter', () => {
+        cards.forEach((c) => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+
+      // 카드 클릭 시 테마 변경 + sticky-layout으로 스크롤
+      card.addEventListener('click', () => {
+        setDetailCurrentTheme(card.dataset.theme);
+        scrollToSelector('.sticky-layout');
+      });
+    });
+
+    // 컨테이너에서 마우스 빠지면 선택된 테마 카드로 복귀
+    container.addEventListener('mouseleave', () => {
+      cards.forEach((c) => c.classList.remove('active'));
+      const themeCard = container.querySelector(`.foldable-card[data-theme="${currentTheme}"]`);
+      if (themeCard) themeCard.classList.add('active');
+    });
+  });
 
   // PC용 테마 선택 버튼
   const themeSelectorButtons = document.querySelectorAll(
@@ -308,4 +338,17 @@ function scrollToSelector(selector) {
       }
     }, 100); // 애니메이션 예상 시간 후 실행
   }
+}
+
+function syncFoldableListActive(theme) {
+  const foldableCards = document.querySelectorAll('.foldable-list .foldable-card');
+  if (!foldableCards.length) return;
+
+  foldableCards.forEach((card) => {
+    if (card.dataset.theme === theme) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
 }

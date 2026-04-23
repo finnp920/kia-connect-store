@@ -6,10 +6,10 @@
   [data-product="marvel"] section.reasons-n {
     ul.reasons {
       li.reason-item:nth-child(1),
-      li.reason-item:nth-child(2),{
+      li.reason-item:nth-child(2) {
         .reason-image picture img {
           width: 100%;
-        }
+        } 
       }
     }
   }

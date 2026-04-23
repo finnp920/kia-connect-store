@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* ========================================
+   N Reasons Why you can’t miss out - Starwars
+   ======================================== */
+[data-product=starwars] section.reasons-n .reason-n-item:nth-child(2) .reason-n-image .foldable-list {
+  display: block;
+}
+[data-product=starwars] section.reasons-n .reason-n-item:nth-child(2) .reason-n-image > img {
+  display: none;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product=starwars] section.reasons-n .reason-n-item:nth-child(2) .reason-n-image .foldable-list {
+    display: none;
+  }
+  [data-product=starwars] section.reasons-n .reason-n-item:nth-child(2) .reason-n-image > img {
+    display: block;
+  }
+}
+/*# sourceMappingURL=reasons-n-starwars.css.map */

@@ -56,7 +56,8 @@
       counter-increment: my-counter;
 
       .reason-n-content-wrapper {
-        flex: 1;
+        flex: 1 1 0;
+        min-width: 0;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -107,7 +108,8 @@
       }
 
       .reason-n-image {
-        flex: 1;
+        flex: 1 1 0;
+        min-width: 0;
         text-align: right;
       }
     }

@@ -106,7 +106,7 @@ main {
    Contents data-theme
    ======================================== */
 [data-product][data-current-theme] {
-  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage) {
+  :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage, .foldable-cards) {
     > [data-theme] {
       display: none;
     }
@@ -118,7 +118,7 @@ $theme-selectors: ();
 @for $i from 1 through 17 {
   $theme: '#{$i}';
   @if $i < 10 { $theme: '0#{$i}'; }
-  $sel: string.unquote("[data-product][data-current-theme='#{$theme}'] :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage) > [data-theme='#{$theme}']");
+  $sel: string.unquote("[data-product][data-current-theme='#{$theme}'] :not(.swiper-wrapper, .themes-cards-grid, .theme-selector-wrapper, .theme-selector, .xfade-stage, .foldable-cards) > [data-theme='#{$theme}']");
   $theme-selectors: list.append($theme-selectors, $sel, comma);
 }
 
