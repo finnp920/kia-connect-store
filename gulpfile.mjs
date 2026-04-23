@@ -78,7 +78,8 @@ function copyCommon() {
 
 // (3) 선택된 테마 리소스 복사
 function copyThemeResources() {
-  const theme = argv.theme || 'all';
+  // 우선순위: gulp --theme=xxx (argv.theme) → npm run build --theme=xxx (npm_config_theme) → 기본 'all'
+  const theme = argv.theme || process.env.npm_config_theme || 'all';
 
   console.log(`✨ [${theme.toUpperCase()}] 모드로 빌드를 시작합니다...`);
 
@@ -133,4 +134,8 @@ export const build = series(
 // 기본(default) 태스크 설정 (선택 사항)
 export default dev;
 
-// gulp build --theme=pixar
+// 사용 예:
+//   npm run build                        → 전체 테마 빌드
+//   npm run build --theme=starwars       → starwars 테마만 빌드 (npm_config_theme 전달)
+//   npm run build -- --theme=starwars    → 동일 (yargs 인자 전달)
+//   gulp build --theme=pixar             → gulp 직접 실행
