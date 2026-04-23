@@ -164,6 +164,12 @@
   visibility: visible;
 }
 
+@media screen and (max-width: 1400px) {
+  [data-product=starwars] .themes-stage .themes-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 259px));
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 769px) {
   [data-product=starwars] .themes-stage {
     padding: 92px 0;
@@ -195,4 +201,5 @@
     letter-spacing: -0.2px;
   }
 }
+
 /*# sourceMappingURL=themes-starwars.css.map */
