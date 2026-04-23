@@ -29,24 +29,24 @@
 [data-product=starwars] .foldable-list .foldable-cards {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   max-width: 445px;
+  max-height: 200px;
+  aspect-ratio: 445/200;
   margin: 0 0 0 auto;
   padding: 0;
-  gap: 12px;
+  gap: 2.6966292135%;
 }
 [data-product=starwars] .foldable-list .foldable-card {
   position: relative;
   flex: 49 1 0;
   min-width: 0;
   max-width: 49px;
-  max-height: 200px;
-  aspect-ratio: 49/200;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: flex-grow 0.55s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.55s cubic-bezier(0.4, 0, 0.2, 1), aspect-ratio 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: flex-grow 0.55s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 [data-product=starwars] .foldable-list .foldable-card::after {
   content: "";
@@ -154,8 +154,6 @@
 [data-product=starwars] .foldable-list .foldable-card.active {
   flex-grow: 140;
   max-width: 140px;
-  max-height: 200px;
-  aspect-ratio: 140/200;
 }
 [data-product=starwars] .foldable-list .foldable-card.active::after {
   background: transparent;
@@ -242,4 +240,5 @@
     height: 72px;
   }
 }
+
 /*# sourceMappingURL=foldable-list-starwars.css.map */

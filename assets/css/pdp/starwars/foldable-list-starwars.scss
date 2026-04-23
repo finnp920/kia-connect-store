@@ -31,12 +31,15 @@
   .foldable-cards {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
     max-width: 445px;
+    max-height: 200px;
+    aspect-ratio: 445 / 200;
     margin: 0 0 0 auto;
     padding: 0;
-    gap: 12px;
+    // gap 12px at max (445) → proportional at smaller widths so the 140:200 / 49:200 ratio stays exact
+    gap: calc(100% * 12 / 445);
   }
 
   .foldable-card {
@@ -44,15 +47,12 @@
     flex: 49 1 0;
     min-width: 0;
     max-width: 49px;
-    max-height: 200px;
-    aspect-ratio: 49 / 200;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     transition:
       flex-grow 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-      max-width 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-      aspect-ratio 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      max-width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 
     &::after {
       content: '';
@@ -183,8 +183,6 @@
     &.active {
       flex-grow: 140;
       max-width: 140px;
-      max-height: 200px;
-      aspect-ratio: 140 / 200;
 
       &::after {
         background: transparent;
