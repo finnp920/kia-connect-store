@@ -13,6 +13,9 @@
 # Mac/Windows system files
 .DS_Store
 Thumbs.db
+
+# Editor/IDE settings
 .idea
+.vscode
 
 /_legacy
