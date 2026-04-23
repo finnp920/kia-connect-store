@@ -12,14 +12,13 @@
 [data-product] section.playful .view-mo {
   display: none;
 }
-
 [data-product] .playful-wrapper {
   position: relative;
   width: 100%;
   padding: 188px 0 130px;
 }
 [data-product] .playful-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   width: 100%;
@@ -30,7 +29,6 @@
   pointer-events: none;
   transition: background-image 0.5s ease-in-out;
 }
-
 [data-product] .playful-title {
   font-size: 48px;
   font-weight: 600;
@@ -43,7 +41,6 @@
   margin-bottom: 62px;
   color: #ffffff;
 }
-
 [data-product] .playful-contents-wrapper {
   position: relative;
   display: flex;
@@ -53,20 +50,32 @@
   gap: 64px;
   z-index: 1;
 }
-[data-product='fifa'] .playful-contents-wrapper {
-  margin-top: 100px;
-}
 [data-product] .playful-content-item {
   width: 100%;
 }
-/* Item > Title */
 [data-product] .playful-content-item > h3 {
   color: #ffffff;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 28px;
 }
-/* Item > Video */
+[data-product] .playful-content-item > .image-wrapper img {
+  border-radius: 8px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-product] .playful-content-item > p {
+  margin: 20px 0 0 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+[data-product] .playful-content-item > p.warning {
+  margin: 8px 0 0 0;
+  color: #acacac;
+}
+[data-product] .playful-content-item p[data-theme] {
+  display: none;
+}
 [data-product] .playful-videos-wrapper {
   display: flex;
   flex-direction: column;
@@ -85,8 +94,8 @@
   align-items: stretch;
   gap: 13.34%;
   padding: 1.67% 1.83% 2.08%;
-  aspect-ratio: 300 / 59;
-  background-image: url('../../../images/kia/pdp/img_disc_video.png');
+  aspect-ratio: 300/59;
+  background-image: url("../../../images/kia/pdp/img_disc_video.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -103,53 +112,17 @@
 [data-product] .playful-video-player[data-theme] {
   display: none;
 }
-[data-product][data-current-theme='01'] .playful-video-player[data-theme='01'],
-[data-product][data-current-theme='02'] .playful-video-player[data-theme='02'],
-[data-product][data-current-theme='03'] .playful-video-player[data-theme='03'],
-[data-product][data-current-theme='04'] .playful-video-player[data-theme='04'],
-[data-product][data-current-theme='05'] .playful-video-player[data-theme='05']{
+
+[data-product=fifa] .playful-contents-wrapper {
+  margin-top: 100px;
+}
+
+[data-product][data-current-theme="01"] .playful-video-player[data-theme="01"], [data-product][data-current-theme="02"] .playful-video-player[data-theme="02"], [data-product][data-current-theme="03"] .playful-video-player[data-theme="03"], [data-product][data-current-theme="04"] .playful-video-player[data-theme="04"], [data-product][data-current-theme="05"] .playful-video-player[data-theme="05"], [data-product][data-current-theme="06"] .playful-video-player[data-theme="06"], [data-product][data-current-theme="07"] .playful-video-player[data-theme="07"], [data-product][data-current-theme="08"] .playful-video-player[data-theme="08"], [data-product][data-current-theme="09"] .playful-video-player[data-theme="09"], [data-product][data-current-theme="10"] .playful-video-player[data-theme="10"], [data-product][data-current-theme="11"] .playful-video-player[data-theme="11"], [data-product][data-current-theme="12"] .playful-video-player[data-theme="12"], [data-product][data-current-theme="13"] .playful-video-player[data-theme="13"], [data-product][data-current-theme="14"] .playful-video-player[data-theme="14"], [data-product][data-current-theme="15"] .playful-video-player[data-theme="15"], [data-product][data-current-theme="16"] .playful-video-player[data-theme="16"], [data-product][data-current-theme="17"] .playful-video-player[data-theme="17"] {
   display: block;
 }
 
-/* Item > Image */
-[data-product] .playful-content-item > .image-wrapper {
-}
-[data-product] .playful-content-item > .image-wrapper img {
-  border-radius: 8px;
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-/* Item > description */
-[data-product] .playful-content-item > p {
-  margin: 20px 0 0 0;
-  color: #ffffff;
-  font-size: 16px;
-}
-[data-product] .playful-content-item p[data-theme] {
-  display: none;
-}
-[data-product][data-current-theme='01']
-.playful-content-item
-p[data-theme='01'],
-[data-product][data-current-theme='02']
-.playful-content-item
-p[data-theme='02'],
-[data-product][data-current-theme='03']
-.playful-content-item
-p[data-theme='03'],
-[data-product][data-current-theme='04']
-.playful-content-item
-p[data-theme='04'],
-[data-product][data-current-theme='05']
-.playful-content-item
-p[data-theme='05']{
+[data-product][data-current-theme="01"] .playful-content-item p[data-theme="01"], [data-product][data-current-theme="02"] .playful-content-item p[data-theme="02"], [data-product][data-current-theme="03"] .playful-content-item p[data-theme="03"], [data-product][data-current-theme="04"] .playful-content-item p[data-theme="04"], [data-product][data-current-theme="05"] .playful-content-item p[data-theme="05"], [data-product][data-current-theme="06"] .playful-content-item p[data-theme="06"], [data-product][data-current-theme="07"] .playful-content-item p[data-theme="07"], [data-product][data-current-theme="08"] .playful-content-item p[data-theme="08"], [data-product][data-current-theme="09"] .playful-content-item p[data-theme="09"], [data-product][data-current-theme="10"] .playful-content-item p[data-theme="10"], [data-product][data-current-theme="11"] .playful-content-item p[data-theme="11"], [data-product][data-current-theme="12"] .playful-content-item p[data-theme="12"], [data-product][data-current-theme="13"] .playful-content-item p[data-theme="13"], [data-product][data-current-theme="14"] .playful-content-item p[data-theme="14"], [data-product][data-current-theme="15"] .playful-content-item p[data-theme="15"], [data-product][data-current-theme="16"] .playful-content-item p[data-theme="16"], [data-product][data-current-theme="17"] .playful-content-item p[data-theme="17"] {
   display: block;
-}
-
-[data-product] .playful-content-item > p.warning {
-  margin: 8px 0 0 0;
-  color: #ACACAC;
 }
 
 @media screen and (min-width: 1940px) {
@@ -157,7 +130,6 @@ p[data-theme='05']{
     background-size: cover;
   }
 }
-
 @media screen and (max-width: 769px) {
   [data-product] section.playful .view-pc {
     display: none;
@@ -165,7 +137,6 @@ p[data-theme='05']{
   [data-product] section.playful .view-mo {
     display: block;
   }
-
   [data-product] .playful-wrapper {
     padding: 100px 0 78px;
   }
@@ -173,7 +144,6 @@ p[data-theme='05']{
     background-position: center top;
     background-size: cover;
   }
-
   [data-product] .playful-title {
     padding-bottom: 19px;
     font-size: 30px;
@@ -181,7 +151,6 @@ p[data-theme='05']{
     line-height: normal;
     margin-bottom: 40px;
   }
-
   [data-product] .playful-contents-wrapper {
     margin-top: 20px;
     gap: 60px;
@@ -191,9 +160,6 @@ p[data-theme='05']{
     font-size: 18px;
     font-weight: 600;
   }
-  [data-product] .playful-videos-wrapper {
-    gap: 8px;
-  }
   [data-product] .playful-content-item > p {
     margin-top: 16px;
     font-size: 14px;
@@ -202,4 +168,9 @@ p[data-theme='05']{
     margin-top: 2px;
     font-size: 10px;
   }
+  [data-product] .playful-videos-wrapper {
+    gap: 8px;
+  }
 }
+
+/*# sourceMappingURL=playful.css.map */

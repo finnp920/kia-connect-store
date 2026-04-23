@@ -1,0 +1,237 @@
+@use 'sass:string';
+@use 'sass:list';
+
+/* ========================================
+   Discover Playful Designs
+   ======================================== */
+[data-product] {
+  section.playful {
+    position: relative;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+
+    .view-pc {
+      display: block;
+    }
+    .view-mo {
+      display: none;
+    }
+  }
+
+  .playful-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 188px 0 130px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-position: top right;
+      background-repeat: no-repeat;
+      z-index: 0;
+      pointer-events: none;
+      transition: background-image 0.5s ease-in-out;
+    }
+  }
+
+  .playful-title {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.96px;
+    line-height: normal;
+    align-self: center;
+    position: relative;
+    padding-bottom: 28px;
+    margin-bottom: 62px;
+    color: #ffffff;
+  }
+
+  .playful-contents-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 64px;
+    z-index: 1;
+  }
+
+  .playful-content-item {
+    width: 100%;
+
+    // Item > Title
+    > h3 {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    // Item > Image
+    > .image-wrapper img {
+      border-radius: 8px;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    // Item > description
+    > p {
+      margin: 20px 0 0 0;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    > p.warning {
+      margin: 8px 0 0 0;
+      color: #acacac;
+    }
+
+    p[data-theme] {
+      display: none;
+    }
+  }
+
+  // Item > Video
+  .playful-videos-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    align-self: center;
+  }
+
+  .playful-video-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 13.34%;
+    padding: 1.67% 1.83% 2.08%;
+    aspect-ratio: 300 / 59;
+    background-image: url('../../../images/kia/pdp/img_disc_video.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .playful-video-player {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 250ms ease-in-out;
+    background-color: black;
+    -webkit-user-drag: none;
+    user-select: none;
+
+    &[data-theme] {
+      display: none;
+    }
+  }
+}
+
+[data-product='fifa'] .playful-contents-wrapper {
+  margin-top: 100px;
+}
+
+// 테마별 video / description 표시 토글 (01 ~ 17)
+$video-selectors: ();
+$desc-selectors: ();
+@for $i from 1 through 17 {
+  $theme: '#{$i}';
+  @if $i < 10 {
+    $theme: '0#{$i}';
+  }
+  $video-selectors: list.append(
+    $video-selectors,
+    string.unquote(
+      "[data-product][data-current-theme='#{$theme}'] .playful-video-player[data-theme='#{$theme}']"
+    ),
+    comma
+  );
+  $desc-selectors: list.append(
+    $desc-selectors,
+    string.unquote(
+      "[data-product][data-current-theme='#{$theme}'] .playful-content-item p[data-theme='#{$theme}']"
+    ),
+    comma
+  );
+}
+
+#{$video-selectors} {
+  display: block;
+}
+
+#{$desc-selectors} {
+  display: block;
+}
+
+@media screen and (min-width: 1940px) {
+  [data-product] .playful-wrapper::before {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product] {
+    section.playful {
+      .view-pc {
+        display: none;
+      }
+      .view-mo {
+        display: block;
+      }
+    }
+
+    .playful-wrapper {
+      padding: 100px 0 78px;
+
+      &::before {
+        background-position: center top;
+        background-size: cover;
+      }
+    }
+
+    .playful-title {
+      padding-bottom: 19px;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      line-height: normal;
+      margin-bottom: 40px;
+    }
+
+    .playful-contents-wrapper {
+      margin-top: 20px;
+      gap: 60px;
+    }
+
+    .playful-content-item {
+      > h3 {
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      > p {
+        margin-top: 16px;
+        font-size: 14px;
+      }
+
+      > p.warning {
+        margin-top: 2px;
+        font-size: 10px;
+      }
+    }
+
+    .playful-videos-wrapper {
+      gap: 8px;
+    }
+  }
+}
