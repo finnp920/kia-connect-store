@@ -1,0 +1,27 @@
+/* ========================================
+   Theme Selectors - Brand
+   ======================================== */
+
+// 테마 번호별 컬러값 맵핑
+$brand-themes: (
+  '01': #3d7ca0,
+  '02': #BD1010,
+  '03': #3D7CA0,
+  '04': #8F7C4A,
+  '05': #878E58,
+  '06': #CD6324
+);
+
+@each $theme, $color in $brand-themes {
+  [data-product='brand'][data-current-theme='#{$theme}'] {
+    .theme-selector.buttons button[data-theme='#{$theme}'] {
+      background-color: #16181f;
+      color: #ffffff;
+
+      &::before {
+        background-color: $color;
+        background-image: url(../../../icons/icon_check.svg);
+      }
+    }
+  }
+}

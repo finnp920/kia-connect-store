@@ -1,0 +1,61 @@
+/* ========================================
+   KV (Key Visual) - Brand
+   ======================================== */
+[data-product="brand"] .kv-slide {
+  .kv-image img {
+    /* 1920 × 876 */
+    aspect-ratio: 160 / 73;
+  }
+  .kv-contents {
+    position: absolute;
+    top: clamp(20px, 4.7vw, 90px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1240px;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 10;
+  }
+  .kv-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(24px, 2.5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -0.96px;
+    line-height: normal;
+  }
+  .kv-subtitle {
+    margin-top: clamp(10px, 1.3vw, 24px);
+    text-align: center;
+    font-size: clamp(12px, 0.833vw, 16px);
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.32px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  [data-product="brand"] .kv-slide {
+    .kv-image img {
+      /* 720 × 1060 */
+      aspect-ratio: 36 / 53;
+    }
+    .kv-contents {
+      top: clamp(60px, 28vw, 140px);
+    }
+    .kv-title {
+      font-size: clamp(18px, 8.333vw, 48px);
+    }
+    .kv-subtitle {
+      margin-top: clamp(8px, 5.5vw, 26px);
+      font-size: clamp(12px, 3.889vw, 22px);
+    }
+  }
+
+  [data-product="brand"] section.kv
+    .swiper-pagination:not(.swiper-pagination-bullets-dynamic)
+    .swiper-pagination-bullet {
+    width: min(56px, calc((100% - 48px) / 6));
+  }
+}

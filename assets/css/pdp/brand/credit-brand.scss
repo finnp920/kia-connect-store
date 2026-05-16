@@ -1,0 +1,15 @@
+@import url("../section/credit.css");
+
+[data-product='brand'] section.credit {
+  display: none;
+  padding: 100px 0 120px;
+}
+@media screen and (max-width: 769px) {
+  [data-product='brand'] section.credit {
+    padding: 60px 0 80px;
+  }
+}
+
+[data-product='brand'][data-current-theme='03'] section.credit {
+  display: block;
+}
