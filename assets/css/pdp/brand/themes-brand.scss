@@ -13,12 +13,12 @@
 
   .themes-stage-inner {
     width: 100%;
-    max-width: 1694px; /* 6 cards: 6*259 + 5*20 + 40 = 1694 */
+    max-width: 299px; /* 1 card: 259 + 40 padding */
   }
 
   .themes-cards-grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 20px;
     margin: 0 auto;
     list-style: none;
@@ -87,29 +87,17 @@
   }
 }
 
-@for $i from 1 through 6 {
-  $theme: "0" + $i;
-  [data-product='brand'][data-current-theme='#{$theme}'] {
-    .card[data-theme='#{$theme}'] {
-      .layer-active { opacity: 1; visibility: visible; }
-      .layer-inactive { opacity: 0; visibility: hidden; }
-      .card-contents p { color: #888888; }
-    }
+[data-product='brand'][data-current-theme='01'] {
+  .card[data-theme='01'] {
+    .layer-active { opacity: 1; visibility: visible; }
+    .layer-inactive { opacity: 0; visibility: hidden; }
+    .card-contents p { color: #888888; }
   }
 }
 
 [data-product='brand'] {
   .card .layer-active { opacity: 0; visibility: hidden; }
   .card .layer-inactive { opacity: 1; visibility: visible; }
-}
-
-@media screen and (max-width: 1400px) {
-  [data-product='brand'] .themes-stage {
-    .themes-cards-grid {
-      grid-template-columns: repeat(3, minmax(0, 259px));
-      justify-content: center;
-    }
-  }
 }
 
 @media screen and (max-width: 769px) {
@@ -120,7 +108,7 @@
 
     .themes-cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-auto-rows: auto;
       gap: 8px;
     }

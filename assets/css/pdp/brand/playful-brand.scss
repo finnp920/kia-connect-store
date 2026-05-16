@@ -7,66 +7,11 @@
     background-image: url('../../../images/kia/pdp/brand/img_disc_bg_01.png');
   }
 }
-[data-product='brand'][data-current-theme='02'] section.playful {
-  background-color: #0c0606;
-  .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_02.png');
-  }
-}
-[data-product='brand'][data-current-theme='03'] section.playful {
-  background-color: #0a0a0a;
-  .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_03.png');
-  }
-}
-[data-product='brand'][data-current-theme='04'] section.playful {
-  background-color: #0f0b08;
-  .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_04.png');
-  }
-}
-[data-product='brand'][data-current-theme='05'] section.playful {
-  background-color: #050a05;
-  .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_05.png');
-  }
-}
-[data-product='brand'][data-current-theme='06'] section.playful {
-  background-color: #0d0d0d;
-  .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_06.png');
-  }
-}
 
 @media screen and (max-width: 769px) {
   [data-product='brand'][data-current-theme='01']
     section.playful
     .playful-wrapper::before {
     background-image: url('../../../images/kia/pdp/brand/img_disc_bg_01_mo.png');
-  }
-  [data-product='brand'][data-current-theme='02']
-    section.playful
-    .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_02_mo.png');
-  }
-  [data-product='brand'][data-current-theme='03']
-    section.playful
-    .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_03_mo.png');
-  }
-  [data-product='brand'][data-current-theme='04']
-    section.playful
-    .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_04_mo.png');
-  }
-  [data-product='brand'][data-current-theme='05']
-    section.playful
-    .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_05_mo.png');
-  }
-  [data-product='brand'][data-current-theme='06']
-    section.playful
-    .playful-wrapper::before {
-    background-image: url('../../../images/kia/pdp/brand/img_disc_bg_06_mo.png');
   }
 }

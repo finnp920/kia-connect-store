@@ -2,14 +2,8 @@
    Theme Selectors - Brand
    ======================================== */
 
-// 테마 번호별 컬러값 맵핑
 $brand-themes: (
   '01': #3d7ca0,
-  '02': #BD1010,
-  '03': #3D7CA0,
-  '04': #8F7C4A,
-  '05': #878E58,
-  '06': #CD6324
 );
 
 @each $theme, $color in $brand-themes {
