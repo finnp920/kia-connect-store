@@ -1,0 +1,15 @@
+/* ========================================
+   Info - Brand
+   Figma node 272:5824 (Section04_Info)
+
+   공통 section/info.css 대비 brand 차이점:
+   - info-description 색상: 공통 #000 → Figma #676767
+   - section.info에 하단 구분선: 공통 없음 → Figma 1px solid #dedede
+   ======================================== */
+[data-product='brand'] section.info {
+  border-bottom: 1px solid #dedede;
+}
+
+[data-product='brand'] .info-description {
+  color: #676767;
+}

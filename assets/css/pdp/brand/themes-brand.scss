@@ -206,20 +206,21 @@
     }
 
     .card {
-      flex: 0 1 200px;
+      flex: 0 1 auto;
       width: auto;
       height: auto;
-      aspect-ratio: 289 / 312;
-      max-width: 60%;
+      aspect-ratio: 156 / 184;
 
       .card-thumb {
-        height: 50%;
-        aspect-ratio: 289 / 156;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 156 / 92;
       }
 
       .card-contents {
-        height: 50%;
-        padding: 12px 16px;
+        height: auto;
+        padding: 10px 12px;
+        aspect-ratio: 156 / 92;
 
         h3 {
           font-size: clamp(16px, 4.7vw, 22px);
@@ -233,10 +234,14 @@
       }
 
       &.card-stay-tuned {
-        flex: 0 1 116px;
+        flex: 0 1 auto;
         max-width: 35%;
-        aspect-ratio: 169 / 312;
+        height: auto;
+        aspect-ratio: 100 / 184;
         padding: 0 16px;
+        .stay-tuned-label {
+          font-size: 10px;
+        }
       }
     }
   }
