@@ -17,5 +17,6 @@ Thumbs.db
 # Editor/IDE settings
 .idea
 .vscode
+.claude
 
 /_legacy
