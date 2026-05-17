@@ -1,0 +1,16 @@
+/* ========================================
+   Discover Playful Designs - Brand
+   ======================================== */
+[data-product=brand][data-current-theme="01"] section.playful {
+  background-color: #060a14;
+}
+[data-product=brand][data-current-theme="01"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/brand/img_disc_bg_01.png");
+}
+
+@media screen and (max-width: 769px) {
+  [data-product=brand][data-current-theme="01"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/brand/img_disc_bg_01_mo.png");
+  }
+}
+/*# sourceMappingURL=playful-brand.css.map */
