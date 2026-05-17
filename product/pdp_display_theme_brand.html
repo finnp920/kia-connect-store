@@ -370,7 +370,7 @@
                     id="check1"
                     name="check"
                     type="checkbox"
-                    value="Rebels"
+                    value="Opposites"
                   />
                   <label for="check1">
                     <img
@@ -469,7 +469,7 @@
       <!-- Themes START -->
       <section class="themes">
         <div class="themes-header">
-          <h2 class="themes-title">내 드라이빙에 더 어울리는 brand 테마는?</h2>
+          <h2 class="themes-title">내 드라이빙에 더 어울리는 테마는?</h2>
           <p class="themes-subtitle">
             옵션을 선택하고 테마에 따라 달라지는 차량 분위기를 경험해 보세요
           </p>
@@ -478,31 +478,35 @@
           <div class="themes-stage-inner">
             <ul class="themes-cards-grid" data-clickable="true">
               <li class="card" data-theme="01">
-                <picture class="card-layer layer-inactive">
-                  <source
-                    media="(max-width: 769px)"
-                    srcset="../assets/images/kia/pdp/brand/card01_mo_dimed.png"
-                  />
-                  <img
-                    alt="KIA 시그니처 Rebels - Off"
-                    src="../assets/images/kia/pdp/brand/card01_dimed.png"
-                  />
-                </picture>
-                <picture class="card-layer layer-active">
+                <picture class="card-thumb">
                   <source
                     media="(max-width: 769px)"
                     srcset="
-                      ../assets/images/kia/pdp/brand/card01_mo_default.png
+                      ../assets/images/kia/pdp/brand/sec02_card_thumb01.png
                     "
                   />
                   <img
-                    alt="KIA 시그니처 Rebels - On"
-                    src="../assets/images/kia/pdp/brand/card01_default.png"
+                    alt="Opposites united"
+                    src="../assets/images/kia/pdp/brand/sec02_card_thumb01.png"
                   />
                 </picture>
                 <div class="card-contents">
-                  <h3>brand<br />레벨즈</h3>
-                  <p>#반란군 #자유 #정의 #루크 #레이아 #한</p>
+                  <h3>Opposites united</h3>
+                  <p>#Kia #Technology #Art</p>
+                </div>
+              </li>
+              <li class="card card-stay-tuned" aria-disabled="true">
+                <div class="stay-tuned-inner">
+                  <div
+                    class="stay-tuned-progress"
+                    role="progressbar"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="stay-tuned-bar"></span>
+                  </div>
+                  <span class="stay-tuned-label">STAY TUNED</span>
                 </div>
               </li>
             </ul>
@@ -513,145 +517,11 @@
 
       <!-- sticky layout START -->
       <div class="sticky-layout">
-        <!-- Theme Selector START -->
-        <div class="theme-selector-wrapper">
-          <div class="theme-selector buttons">
-            <button data-theme="01">brand 레벨즈</button>
-          </div>
-
-          <div class="theme-selector dropdown">
-            <button
-              class="theme-text"
-              id="theme-selector-dropdown"
-              type="button"
-            >
-              brand 레벨즈
-            </button>
-            <ul class="theme-list">
-              <li value="01">brand 레벨즈</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Theme Selector END -->
-
-        <!-- Screenshots START -->
-        <section class="screenshots">
-          <div class="theme-header-wrapper">
-            <!-- Screenshot Grid -->
-            <div class="themes-preview">
-              <div class="themes-preview-grid">
-                <!-- Left Column (2 items) -->
-                <div class="preview-column preview-column-left">
-                  <div class="preview-item">
-                    <div class="xfade-stage">
-                      <picture class="xfade-item" data-theme="01">
-                        <source
-                          media="(max-width: 769px)"
-                          srcset="
-                            ../assets/images/kia/pdp/brand/brandth01_detail_mo_01.png
-                          "
-                        />
-                        <img
-                          alt="Cluster"
-                          loading="lazy"
-                          src="../assets/images/kia/pdp/brand/brandth01_detail_01.png"
-                        />
-                      </picture>
-                    </div>
-                    <span class="preview-label">Cluster</span>
-                  </div>
-                  <div class="preview-item">
-                    <div class="xfade-stage">
-                      <picture class="xfade-item" data-theme="01">
-                        <source
-                          media="(max-width: 769px)"
-                          srcset="
-                            ../assets/images/kia/pdp/brand/brandth01_detail_mo_02.png
-                          "
-                        />
-                        <img
-                          alt="Welcome Message"
-                          loading="lazy"
-                          src="../assets/images/kia/pdp/brand/brandth01_detail_02.png"
-                        />
-                      </picture>
-                    </div>
-                    <span class="preview-label">Welcome Message</span>
-                  </div>
-                </div>
-
-                <!-- Center Column (1 item) -->
-                <div class="preview-column preview-column-center">
-                  <div class="preview-item">
-                    <div class="xfade-stage">
-                      <picture class="xfade-item" data-theme="01">
-                        <source
-                          media="(max-width: 769px)"
-                          srcset="
-                            ../assets/images/kia/pdp/brand/brandth01_detail_mo_03.png
-                          "
-                        />
-                        <img
-                          alt="Homecard"
-                          loading="lazy"
-                          src="../assets/images/kia/pdp/brand/brandth01_detail_03.png"
-                        />
-                      </picture>
-                    </div>
-                    <span class="preview-label">Homecard</span>
-                  </div>
-                </div>
-
-                <!-- Right Column (2 items) -->
-                <div class="preview-column preview-column-right">
-                  <div class="preview-item">
-                    <div class="xfade-stage">
-                      <picture class="xfade-item" data-theme="01">
-                        <source
-                          media="(max-width: 769px)"
-                          srcset="
-                            ../assets/images/kia/pdp/brand/brandth01_detail_mo_04.png
-                          "
-                        />
-                        <img
-                          alt="Navigation"
-                          loading="lazy"
-                          src="../assets/images/kia/pdp/brand/brandth01_detail_04.png"
-                        />
-                      </picture>
-                    </div>
-                    <span class="preview-label">Navigation</span>
-                  </div>
-                  <div class="preview-item">
-                    <div class="xfade-stage">
-                      <picture class="xfade-item" data-theme="01">
-                        <source
-                          media="(max-width: 769px)"
-                          srcset="
-                            ../assets/images/kia/pdp/brand/brandth01_detail_mo_05.png
-                          "
-                        />
-                        <img
-                          alt="Goodbye Video"
-                          loading="lazy"
-                          src="../assets/images/kia/pdp/brand/brandth01_detail_05.png"
-                        />
-                      </picture>
-                    </div>
-                    <span class="preview-label">Goodbye Video</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Screenshots END -->
-
         <!-- Discover Playful Designs START -->
         <section class="playful" id="playful">
           <div class="playful-wrapper">
             <h2 class="playful-title">
-              brand 테마, <br class="view-mo" />직접 확인해보세요!
+              KIA 시그니처 테마, <br class="view-mo" />직접 확인해보세요!
             </h2>
             <div class="section-inner playful-contents-wrapper">
               <div class="playful-content-item welcome">
@@ -719,23 +589,23 @@
                   </div>
                 </div>
                 <p>
-                  brand 컨셉의 모션 그래픽 Video가 차량 Sleep 모드 동작 이후
-                  차량을 켤 때, 끌 때 적용 됩니다.
+                  KIA 시그니처 컨셉의 모션 그래픽 Video가 차량 Sleep 모드 동작
+                  이후 차량을 켤 때, 끌 때 적용 됩니다.
                 </p>
               </div>
               <div class="playful-content-item cluster">
                 <h3>Cluster</h3>
                 <div class="xfade-stage image-wrapper">
                   <img
-                    alt="Cluster - Rebels"
+                    alt="Cluster - KIA 시그니처"
                     class="xfade-item"
                     data-theme="01"
-                    src="../assets/images/kia/pdp/brand/brandth01_disc01.png"
+                    src="../assets/images/kia/pdp/brand/brand01_disc01.png"
                   />
                 </div>
                 <p>
-                  brand 테마가 클러스터 화면에 적용됩니다. brand만의 매력적인
-                  그래픽과 게이지 디자인을 확인해 보세요.
+                  KIA 시그니처 테마가 클러스터 화면에 적용됩니다. KIA
+                  시그니처만의 매력적인 그래픽과 게이지 디자인을 확인해 보세요.
                 </p>
                 <p class="warning">
                   ※ 차종에 따라 클러스터 화면 디자인이 상기 이미지와 다를 수
@@ -746,44 +616,45 @@
                 <h3>Navigation</h3>
                 <div class="xfade-stage image-wrapper">
                   <img
-                    alt="Navigation - Rebels"
+                    alt="Navigation - KIA 시그니처"
                     class="xfade-item"
                     data-theme="01"
-                    src="../assets/images/kia/pdp/brand/brandth01_disc02.png"
+                    src="../assets/images/kia/pdp/brand/brand01_disc02.png"
                   />
                 </div>
                 <p>
-                  목적지까지의 길 안내 기능을 이용할 떄마다 brand의 특별한
-                  이미지가 현재 위치를 표시해줍니다.
+                  목적지까지의 길 안내 기능을 이용할 때마다 KIA 시그니처의
+                  특별한 이미지가 현재 위치를 표시해줍니다.
                 </p>
               </div>
               <div class="playful-content-item homecard">
                 <h3>Homecard</h3>
                 <div class="xfade-stage image-wrapper">
                   <img
-                    alt="Homecard - Rebels"
+                    alt="Homecard - KIA 시그니처"
                     class="xfade-item"
                     data-theme="01"
-                    src="../assets/images/kia/pdp/brand/brandth01_disc03.png"
+                    src="../assets/images/kia/pdp/brand/brand01_disc03.png"
                   />
                 </div>
                 <p>
-                  각 메뉴 화면을 넘길 때마다 brand의 다양한 이미지가 나타납니다.
+                  각 메뉴 화면을 넘길 때마다 KIA 시그니처의 다양한 이미지가
+                  나타납니다.
                 </p>
               </div>
               <div class="playful-content-item profile">
                 <h3>Profile</h3>
                 <div class="xfade-stage image-wrapper">
                   <img
-                    alt="Profile - Rebels"
+                    alt="Profile - KIA 시그니처"
                     class="xfade-item"
                     data-theme="01"
-                    src="../assets/images/kia/pdp/brand/brandth01_disc04.png"
+                    src="../assets/images/kia/pdp/brand/brand01_disc04.png"
                   />
                 </div>
                 <p>
-                  brand 컨셉의 다양한 프로필 이미지를 선택할 수 있습니다.
-                  운전자마다 다른 이미지를 설정해 보세요.
+                  KIA 시그니처 컨셉의 다양한 프로필 이미지를 선택할 수 있습니다.
+                  운전자마다의 개성을 담은 프로필 이미지를 설정해 보세요.
                 </p>
               </div>
             </div>

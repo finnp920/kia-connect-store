@@ -1,135 +1,242 @@
 /* ========================================
    Themes - Brand
    ======================================== */
+
+/* 헤더 */
+[data-product='brand'] section.themes {
+  .themes-header {
+    background-color: #ffffff;
+    padding: clamp(32px, 4.7vw, 64px) 20px 0;
+    text-align: center;
+
+    .themes-title {
+      color: #000;
+      font-size: clamp(24px, 2.5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.96px;
+      line-height: 1.2;
+    }
+
+    .themes-subtitle {
+      margin-top: clamp(10px, 1.25vw, 24px);
+      color: #05141f; /* Kia Black */
+      font-size: clamp(12px, 0.833vw, 16px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+    }
+  }
+}
+
+/* 카드 영역 */
 [data-product='brand'] .themes-stage {
   position: relative;
   margin-bottom: 0;
-  padding: 66px 0;
-  background-image: url('../../../images/kia/pdp/brand/cardbg.png');
+  padding: clamp(40px, 4.4vw, 84px) 20px;
+  background-color: #000;
+  background-image: url('../../../images/kia/pdp/brand/sec02_bg.png');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 공통 section/themes.css의 [data-product] .themes-stage::after
+     화살표 아이콘(SVG mask)을 brand에서는 사용하지 않으므로 무효화 */
   &::after {
-    background-color: #030403;
+    content: none;
   }
 
   .themes-stage-inner {
     width: 100%;
-    max-width: 299px; /* 1 card: 259 + 40 padding */
+    max-width: 482px; /* 289 + 24 + 169 */
+    margin: 0 auto;
   }
 
   .themes-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
     margin: 0 auto;
     list-style: none;
   }
 
+  /* 일반 옵션 카드 */
   .card {
     position: relative;
-    width: 100%;
-    max-width: 259px;
-    aspect-ratio: 264 / 292;
+    width: 289px;
+    height: 312px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease;
     isolation: isolate;
     transform: translateZ(0);
-    transition: transform 0.3s ease;
 
-    .card-layer {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .card-thumb {
       display: block;
-      transition:
-        opacity 0.3s ease,
-        visibility 0.3s;
       width: 100%;
-      height: auto;
+      height: 156px;
+      background-color: #131313;
+      overflow: hidden;
+
       img {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         -webkit-user-drag: none;
         user-select: none;
       }
     }
 
     .card-contents {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      z-index: 1;
-      aspect-ratio: 317 / 188;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: start;
-      padding: 5.1% 10% 7.5% 10%;
+      align-items: flex-start;
+      width: 100%;
+      height: 156px;
+      padding: 16px 20px;
+
       h3 {
         width: 100%;
         color: #000;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.3;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0;
       }
+
       p {
         width: 100%;
-        color: #000;
-        font-size: 14px;
-        @media screen and (max-width: 1528px) {
-          font-size: 12px;
-        }
+        color: #888;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
       }
     }
   }
-}
 
-[data-product='brand'][data-current-theme='01'] {
-  .card[data-theme='01'] {
-    .layer-active { opacity: 1; visibility: visible; }
-    .layer-inactive { opacity: 0; visibility: hidden; }
-    .card-contents p { color: #888888; }
-  }
-}
+  /* STAY TUNED 카드 */
+  .card.card-stay-tuned {
+    width: 169px;
+    height: 312px;
+    background-color: rgba(247, 247, 247, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
 
-[data-product='brand'] {
-  .card .layer-active { opacity: 0; visibility: hidden; }
-  .card .layer-inactive { opacity: 1; visibility: visible; }
-}
-
-@media screen and (max-width: 769px) {
-  [data-product='brand'] .themes-stage {
-    padding: 92px 0;
-    background-image: url('../../../images/kia/pdp/brand/cardbg_mo.png');
-    background-size: cover;
-
-    .themes-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-auto-rows: auto;
+    .stay-tuned-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 8px;
     }
 
+    .stay-tuned-progress {
+      position: relative;
+      width: 43px;
+      height: 9px;
+      border: 1px solid #8d8d8d;
+      border-radius: 999px;
+      overflow: hidden;
+
+      .stay-tuned-bar {
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 22px;
+        height: 5px;
+        background-color: #8d8d8d;
+        border-radius: 499.5px;
+      }
+    }
+
+    .stay-tuned-label {
+      color: #8d8d8d;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.28px;
+      text-align: center;
+      line-height: normal;
+    }
+  }
+}
+
+/* ========================================
+   Sticky Layout Override - Brand
+   공통 pdp/index.css의
+     [data-product]:not([data-product=fifa]) .sticky-layout { padding-top: 91px / 24px }
+   가 명시도 (0,3,0)으로 brand보다 강해서 !important 필요
+   ======================================== */
+[data-product='brand'] .sticky-layout {
+  padding-top: 0 !important;
+}
+
+/* ========================================
+   모바일 (max-width: 769px)
+   ======================================== */
+@media screen and (max-width: 769px) {
+  [data-product='brand'] section.themes {
+    .themes-header {
+      padding: 32px 16px 0;
+    }
+  }
+
+  [data-product='brand'] .themes-stage {
+    padding: 40px 16px;
+    background-image: url('../../../images/kia/pdp/brand/sec02_bg_mo.png');
+
+    .themes-stage-inner {
+      max-width: 100%;
+    }
+
+    .themes-cards-grid {
+      gap: 12px;
+    }
+
     .card {
-      max-width: 624px;
-      /* 312 × 386 */
-      min-width: 156px;
-      min-height: 193px;
-      aspect-ratio: 312 / 386;
+      flex: 0 1 200px;
+      width: auto;
+      height: auto;
+      aspect-ratio: 289 / 312;
+      max-width: 60%;
+
+      .card-thumb {
+        height: 50%;
+        aspect-ratio: 289 / 156;
+      }
 
       .card-contents {
-        aspect-ratio: 312 / 224;
-        padding: 5.2% 10% 9% 10%;
+        height: 50%;
+        padding: 12px 16px;
+
         h3 {
-          font-size: clamp(14px, 2.6cqw, 20px);
+          font-size: clamp(16px, 4.7vw, 22px);
+          line-height: 1.3;
         }
+
         p {
-          font-size: clamp(10px, 1.8cqw, 16px);
-          letter-spacing: -0.2px;
+          font-size: clamp(12px, 3.3vw, 16px);
+          line-height: 1.4;
         }
+      }
+
+      &.card-stay-tuned {
+        flex: 0 1 116px;
+        max-width: 35%;
+        aspect-ratio: 169 / 312;
+        padding: 0 16px;
       }
     }
   }
