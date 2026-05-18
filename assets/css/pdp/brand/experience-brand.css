@@ -17,6 +17,11 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+[data-product=brand] section.experience picture {
+  display: block;
+  max-width: 1200px;
+  margin-inline: auto;
+}
 
 [data-product=brand] .experience-title {
   color: #000;
@@ -53,4 +58,5 @@
     border-radius: 8px;
   }
 }
+
 /*# sourceMappingURL=experience-brand.css.map */
