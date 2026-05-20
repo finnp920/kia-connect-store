@@ -13,13 +13,26 @@
 
   &[data-current-theme='03'] {
     section.playful {
-      background-color: #1c394b;
+      background-color: #f3eceb;
       .playful-wrapper::before {
         background-image: url('../../../images/kia/pdp/disney/disneyth03_disc_bg.png');
       }
 
       .playful-title, h3, p:not(.warning) {
         color: black;
+      }
+    }
+  }
+
+  &[data-current-theme='04'] {
+    section.playful {
+      background-color: #223b5f;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/disney/disneyth04_disc_bg.png');
+      }
+
+      .playful-title, h3, p:not(.warning) {
+        color: white;
       }
     }
   }
@@ -40,6 +53,14 @@
       section.playful {
         .playful-wrapper::before {
           background-image: url('../../../images/kia/pdp/disney/disneyth03_disc_bg_mo.png');
+        }
+      }
+    }
+
+    &[data-current-theme='04'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/disney/disneyth04_disc_bg_mo.png');
         }
       }
     }

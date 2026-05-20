@@ -8,13 +8,22 @@
   background-image: url("../../../images/kia/pdp/disney/disneyth02_disc_bg.png");
 }
 [data-product=disney][data-current-theme="03"] section.playful {
-  background-color: #1c394b;
+  background-color: #f3eceb;
 }
 [data-product=disney][data-current-theme="03"] section.playful .playful-wrapper::before {
   background-image: url("../../../images/kia/pdp/disney/disneyth03_disc_bg.png");
 }
 [data-product=disney][data-current-theme="03"] section.playful .playful-title, [data-product=disney][data-current-theme="03"] section.playful h3, [data-product=disney][data-current-theme="03"] section.playful p:not(.warning) {
   color: black;
+}
+[data-product=disney][data-current-theme="04"] section.playful {
+  background-color: #223b5f;
+}
+[data-product=disney][data-current-theme="04"] section.playful .playful-wrapper::before {
+  background-image: url("../../../images/kia/pdp/disney/disneyth04_disc_bg.png");
+}
+[data-product=disney][data-current-theme="04"] section.playful .playful-title, [data-product=disney][data-current-theme="04"] section.playful h3, [data-product=disney][data-current-theme="04"] section.playful p:not(.warning) {
+  color: white;
 }
 
 @media screen and (max-width: 769px) {
@@ -23,6 +32,9 @@
   }
   [data-product=disney][data-current-theme="03"] section.playful .playful-wrapper::before {
     background-image: url("../../../images/kia/pdp/disney/disneyth03_disc_bg_mo.png");
+  }
+  [data-product=disney][data-current-theme="04"] section.playful .playful-wrapper::before {
+    background-image: url("../../../images/kia/pdp/disney/disneyth04_disc_bg_mo.png");
   }
 }
 /*# sourceMappingURL=playful-disney.css.map */

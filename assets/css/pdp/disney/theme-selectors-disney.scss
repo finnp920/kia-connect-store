@@ -22,4 +22,9 @@
     background: linear-gradient(90deg, #E0397E 0%, #C3188A 100%);
     backdrop-filter: blur(3px);
   }
+
+  &[data-current-theme='04'] .theme-selector.buttons button[data-theme='04'] {
+    background: linear-gradient(90deg, #84C44E 0%, #1EB57D 50%, #00B39F 100%);
+    backdrop-filter: blur(3px);
+  }
 }
