@@ -136,6 +136,5 @@ export default dev;
 
 // 사용 예:
 //   npm run build                        → 전체 테마 빌드
-//   npm run build --theme=starwars       → starwars 테마만 빌드 (npm_config_theme 전달)
 //   npm run build -- --theme=starwars    → 동일 (yargs 인자 전달)
 //   gulp build --theme=pixar             → gulp 직접 실행
