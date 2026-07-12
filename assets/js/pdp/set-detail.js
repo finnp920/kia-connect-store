@@ -140,6 +140,12 @@ function setDetailEventListeners() {
   if (themeSelectors) {
     const stickyTop = parseInt(getComputedStyle(themeSelectors).top, 10) || 0;
     function checkThemeSelectorsSticky() {
+      // [현행화] 셀렉터가 화면에 노출되지 않은 경우(offsetParent 없음) sticky 해제 후 종료
+      if (!themeSelectors.offsetParent) {
+        document.body.classList.remove('tab-sticky');
+        themeSelectors.classList.remove('is-sticky');
+        return;
+      }
       const rect = themeSelectors.getBoundingClientRect();
       if (rect.top <= stickyTop) {
         document.body.classList.add('tab-sticky');
@@ -236,12 +242,17 @@ function initDetailSwiper() {
     });
   });
 
+  // [현행화] KV 슬라이드가 1장 이하면 loop/터치 이동 비활성 (Swiper loop 중복·경고 방지)
+  const kvSlideCount = document.querySelectorAll('.kv-swiper .swiper-slide').length;
+  const isKvSingleSlide = kvSlideCount <= 1;
+
   // Key Visual swiper
   if (kv_swiper_paging_type === 'dynamic_paging') {
     kv_swiper_paging_bars = document.querySelector('.swiper-pagination-bars');
 
     kv_swiper = new Swiper('.kv-swiper', {
-      loop: true,
+      loop: !isKvSingleSlide,
+      allowTouchMove: !isKvSingleSlide,
       pagination: {
         el: '#kv-swiper-fraction',
         type: 'fraction',
@@ -277,7 +288,8 @@ function initDetailSwiper() {
     });
   } else {
     kv_swiper = new Swiper('.kv-swiper', {
-      loop: true,
+      loop: !isKvSingleSlide,
+      allowTouchMove: !isKvSingleSlide,
       pagination: {
         el: '#kv-swiper-pagination',
         clickable: true,
