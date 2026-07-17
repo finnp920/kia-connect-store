@@ -9,13 +9,13 @@
 [data-product=marvel] .theme-selector.buttons button::before {
   background-image: url(../../../icons/icon_circle_unchecked_666.svg);
 }
-[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"], [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"], [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"] {
+[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"], [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"], [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"], [data-product=marvel][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"] {
   border: none;
   background: linear-gradient(90deg, #ED1C24 0%, #B51016 100%);
   backdrop-filter: blur(3px);
   color: #ffffff;
 }
-[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before, [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before, [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before {
+[data-product=marvel][data-current-theme="01"] .theme-selector.buttons button[data-theme="01"]::before, [data-product=marvel][data-current-theme="02"] .theme-selector.buttons button[data-theme="02"]::before, [data-product=marvel][data-current-theme="03"] .theme-selector.buttons button[data-theme="03"]::before, [data-product=marvel][data-current-theme="04"] .theme-selector.buttons button[data-theme="04"]::before {
   background-image: url(../../../icons/icon_circle_checked_fff.svg);
 }
 /*# sourceMappingURL=theme-selectors-marvel.css.map */

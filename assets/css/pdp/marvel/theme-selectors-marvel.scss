@@ -14,7 +14,8 @@
   }
   &[data-current-theme='01'] .theme-selector.buttons button[data-theme='01'],
   &[data-current-theme='02'] .theme-selector.buttons button[data-theme='02'],
-  &[data-current-theme='03'] .theme-selector.buttons button[data-theme='03'] {
+  &[data-current-theme='03'] .theme-selector.buttons button[data-theme='03'],
+  &[data-current-theme='04'] .theme-selector.buttons button[data-theme='04'] {
     border: none;
     background: linear-gradient(90deg, #ED1C24 0%, #B51016 100%);
     backdrop-filter: blur(3px);
