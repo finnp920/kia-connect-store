@@ -29,7 +29,7 @@
   color: #ffffff;
   font-size: clamp(24px, 2.5vw, 48px);
   font-weight: 600;
-  letter-spacing: -0.96px;
+  letter-spacing: 0; /* Figma: KV 타이틀은 자간 0 */
   line-height: 1.29; /* Figma: 62/48 */
 }
 [data-product=black] .kv-slide .kv-subtitle {
