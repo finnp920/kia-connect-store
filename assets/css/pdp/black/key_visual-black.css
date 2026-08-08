@@ -27,7 +27,6 @@
 }
 [data-product=black] .kv-slide .kv-title {
   color: #ffffff;
-  text-align: center;
   font-size: clamp(24px, 2.5vw, 48px);
   font-weight: 600;
   letter-spacing: -0.96px;
@@ -35,7 +34,6 @@
 }
 [data-product=black] .kv-slide .kv-subtitle {
   margin-top: clamp(10px, 1.3vw, 24px);
-  text-align: center;
   font-size: clamp(12px, 0.833vw, 16px);
   font-weight: 400;
   color: #ffffff;
