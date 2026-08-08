@@ -119,58 +119,6 @@
       }
     }
   }
-
-  /* STAY TUNED 카드 */
-  .card.card-stay-tuned {
-    width: 169px;
-    height: 312px;
-    background-color: rgba(247, 247, 247, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    cursor: default;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 32px;
-
-    .stay-tuned-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .stay-tuned-progress {
-      position: relative;
-      width: 43px;
-      height: 9px;
-      border: 1px solid #8d8d8d;
-      border-radius: 999px;
-      overflow: hidden;
-
-      .stay-tuned-bar {
-        position: absolute;
-        left: 1px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: block;
-        width: 22px;
-        height: 5px;
-        background-color: #8d8d8d;
-        border-radius: 499.5px;
-      }
-    }
-
-    .stay-tuned-label {
-      color: #8d8d8d;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: -0.28px;
-      text-align: center;
-      line-height: normal;
-    }
-  }
 }
 
 /* ========================================
@@ -230,17 +178,6 @@
         p {
           font-size: clamp(12px, 3.3vw, 16px);
           line-height: 1.4;
-        }
-      }
-
-      &.card-stay-tuned {
-        flex: 0 1 auto;
-        max-width: 35%;
-        height: auto;
-        aspect-ratio: 100 / 184;
-        padding: 0 16px;
-        .stay-tuned-label {
-          font-size: 10px;
         }
       }
     }
