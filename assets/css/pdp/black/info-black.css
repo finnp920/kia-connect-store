@@ -9,6 +9,13 @@
    ======================================== */
 [data-product=black] section.info {
   border-bottom: 1px solid #dedede;
+  /* 모바일(≤640px)에서는 upgrade-guides 제목·비디오가 숨겨져 버튼만 남으므로,
+     이 하단선이 버튼 바로 위에 붙어 어색하게 보임 → 제거 */
+}
+@media screen and (max-width: 640px) {
+  [data-product=black] section.info {
+    border-bottom: none;
+  }
 }
 
 [data-product=black] .info-description {
