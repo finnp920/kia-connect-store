@@ -53,7 +53,7 @@
       top: clamp(60px, 28vw, 140px);
     }
     .kv-title {
-      font-size: clamp(18px, 8.333vw, 48px);
+      font-size: clamp(18px, 7.778vw, 48px); /* Figma MO 360px 기준 28px */
     }
     .kv-subtitle {
       margin-top: clamp(8px, 5.5vw, 26px);
