@@ -158,8 +158,10 @@
     }
 
     .card {
-      flex: 0 1 auto;
-      width: auto;
+      /* black은 옵션 1개 → 단일 카드가 이미지 폭에 밀려 폭이 커지므로
+         Figma MO(156×184) 대로 폭 고정. 높이는 aspect-ratio로 184 산출 */
+      flex: 0 0 auto;
+      width: 156px;
       height: auto;
       aspect-ratio: 156 / 184;
 
