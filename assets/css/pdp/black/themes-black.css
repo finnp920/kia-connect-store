@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/* ========================================
+   Themes - Brand
+   ======================================== */
+/* 헤더 */
+[data-product=black] section.themes .themes-header {
+  background-color: #ffffff;
+  padding: clamp(32px, 4.7vw, 64px) 20px 0;
+  text-align: center;
+}
+[data-product=black] section.themes .themes-header .themes-title {
+  color: #000;
+  font-size: clamp(24px, 2.5vw, 48px);
+  font-weight: 600; /* Figma: 600 (기존 700 → 수정) */
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+}
+[data-product=black] section.themes .themes-header .themes-subtitle {
+  margin-top: clamp(10px, 1.25vw, 24px);
+  color: #05141f; /* Kia Black */
+  font-size: clamp(12px, 0.833vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.32px;
+}
+
+/* 카드 영역 */
+[data-product=black] .themes-stage {
+  position: relative;
+  margin-bottom: 0;
+  padding: clamp(40px, 4.4vw, 84px) 20px;
+  background-color: #000;
+  background-image: url("../../../images/kia/pdp/black/sec02_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* 공통 section/themes.css의 [data-product] .themes-stage::after
+     화살표 아이콘(SVG mask)을 black에서는 사용하지 않으므로 무효화 */
+}
+[data-product=black] .themes-stage::after {
+  content: none;
+}
+[data-product=black] .themes-stage .themes-stage-inner {
+  width: 100%;
+  max-width: 482px; /* 289 + 24 + 169 */
+  margin: 0 auto;
+}
+[data-product=black] .themes-stage .themes-cards-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin: 0 auto;
+  list-style: none;
+}
+[data-product=black] .themes-stage {
+  /* 일반 옵션 카드 */
+}
+[data-product=black] .themes-stage .card {
+  position: relative;
+  width: 289px;
+  height: 312px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+[data-product=black] .themes-stage .card .card-thumb {
+  display: block;
+  width: 100%;
+  height: 156px;
+  background-color: #131313;
+  overflow: hidden;
+}
+[data-product=black] .themes-stage .card .card-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-product=black] .themes-stage .card .card-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 156px;
+  padding: 16px 20px;
+}
+[data-product=black] .themes-stage .card .card-contents h3 {
+  width: 100%;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600; /* Figma: 600 (기존 700 → 수정) */
+  line-height: 32px;
+  letter-spacing: 0;
+}
+[data-product=black] .themes-stage .card .card-contents p {
+  width: 100%;
+  color: #888;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* ========================================
+   Sticky Layout Override - Brand
+   공통 pdp/index.css의
+     [data-product]:not([data-product=fifa]) .sticky-layout { padding-top: 91px / 24px }
+   가 명시도 (0,3,0)으로 black보다 강해서 !important 필요
+   ======================================== */
+[data-product=black] .sticky-layout {
+  padding-top: 0 !important;
+}
+
+/* ========================================
+   모바일 (max-width: 769px)
+   ======================================== */
+@media screen and (max-width: 769px) {
+  [data-product=black] section.themes .themes-header {
+    padding: 32px 16px 0;
+  }
+  [data-product=black] section.themes .themes-header .themes-subtitle {
+    font-size: 14px; /* Figma MO: 14px (공통 clamp은 360px에서 12px) */
+  }
+  [data-product=black] .themes-stage {
+    padding: 40px 16px;
+    background-image: url("../../../images/kia/pdp/black/sec02_bg_mo.png");
+  }
+  [data-product=black] .themes-stage .themes-stage-inner {
+    max-width: 100%;
+  }
+  [data-product=black] .themes-stage .themes-cards-grid {
+    gap: 12px;
+  }
+  [data-product=black] .themes-stage .card {
+    /* black은 옵션 1개 → 단일 카드가 이미지 폭에 밀려 폭이 커지므로
+       Figma MO(156×184) 대로 폭 고정. 높이는 aspect-ratio로 184 산출 */
+    flex: 0 0 auto;
+    width: 156px;
+    height: auto;
+    aspect-ratio: 156/184;
+  }
+  [data-product=black] .themes-stage .card .card-thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 156/92;
+  }
+  [data-product=black] .themes-stage .card .card-contents {
+    height: auto;
+    padding: 10px 12px;
+    aspect-ratio: 156/92;
+  }
+  [data-product=black] .themes-stage .card .card-contents h3 {
+    font-size: clamp(14px, 3.9vw, 22px); /* Figma MO 360px 기준 14px */
+    line-height: 1.3;
+  }
+  [data-product=black] .themes-stage .card .card-contents p {
+    font-size: clamp(10px, 2.8vw, 16px); /* Figma MO 360px 기준 10px */
+    line-height: 1.4;
+  }
+}

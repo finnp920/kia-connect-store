@@ -1,0 +1,24 @@
+/* ========================================
+   Discover Playful Designs - Brand
+   ======================================== */
+[data-product='black'][data-current-theme='01'] section.playful {
+  background-color: #060a14;
+  .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/black/img_disc_bg_01.png');
+  }
+}
+
+/* disc 이미지(cluster/navigation/homecard/profile)는 Figma상 직각 모서리.
+   공통 playful.css의 border-radius:8px 를 black에서 무효화
+   (PNG에 직각 프레임이 합성돼 있어 라운드 처리 시 모서리가 어긋남) */
+[data-product='black'] .playful-content-item > .image-wrapper img {
+  border-radius: 0;
+}
+
+@media screen and (max-width: 769px) {
+  [data-product='black'][data-current-theme='01']
+    section.playful
+    .playful-wrapper::before {
+    background-image: url('../../../images/kia/pdp/black/img_disc_bg_01_mo.png');
+  }
+}

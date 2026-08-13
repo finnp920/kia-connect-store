@@ -1,0 +1,96 @@
+/* ========================================
+   Theme Selectors - Brand
+
+   공통 section/theme-selectors.css 대비 black 차이점:
+   - theme-selector-wrapper: 배경 투명 → 검정 #000
+   - theme-selector.buttons: justify-content start → center
+   ======================================== */
+[data-product='black'] .theme-selector-wrapper {
+  background-color: #000;
+
+  /* PC + 비-sticky 상태일 때만 상하 패딩 20px */
+  @media screen and (min-width: 770px) {
+    &:not(.is-sticky) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    margin-bottom: 0;
+  }
+}
+
+[data-product='black'] .theme-selector.buttons {
+  justify-content: center;
+}
+
+/* 활성 테마 버튼 스타일 (테마 색상 매핑) */
+$black-themes: (
+  '01': #e8721e,
+);
+
+@each $theme, $color in $black-themes {
+  [data-product='black'][data-current-theme='#{$theme}'] {
+    .theme-selector.buttons button[data-theme='#{$theme}'] {
+      background-color: #777777;
+      color: #ffffff;
+
+      &::before {
+        background-color: $color;
+        background-image: url(../../../icons/icon_check.svg);
+      }
+    }
+  }
+}
+
+/* ========================================
+   Mobile Dropdown - Brand
+   KBO 패턴 (theme-selectors-kbo.scss) 포팅 (좌측 아이콘 제외)
+   ======================================== */
+@media screen and (max-width: 769px) {
+  [data-product='black'] {
+    .theme-selector.dropdown {
+      .theme-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background-color: #171717;
+        color: #fff;
+
+        &::after {
+          background-image: url('../../../icons/icon-angle-down_white.svg');
+        }
+      }
+
+      .theme-list {
+        overflow-y: auto;
+        transition-property: border;
+        transition-delay: 0.1s;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          color: #fff;
+          background-color: #171717;
+
+          &:hover {
+            background-color: rgba(23, 23, 23, 0.4);
+          }
+        }
+      }
+
+      &.active {
+        .theme-list {
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          background-color: #171717;
+          transition-delay: 0s;
+        }
+      }
+    }
+  }
+}
