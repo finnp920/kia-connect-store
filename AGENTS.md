@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 Kia Connect Store 디스플레이 테마 PDP(제품 상세 페이지) 정적 퍼블리싱 산출물.
 HTML/CSS/JS/이미지/비디오 리소스를 **기아에 납품**하는 것이 최종 목표.
@@ -223,3 +223,11 @@ root
 - `max-width: 769px` → 모바일
 - `max-width: 580px` → 작은 모바일
 - `max-width: 980px` → 태블릿
+
+## Imported Claude Cowork project instructions
+
+기아에 퍼블리싱한 html 납품하기 위한 프로젝트.
+
+폴더 구조는 비효율적이라도 유지 필수.
+하나의 테마를 시작하면 html, assets 속 전용 이미지, 비디오, css 폴더와 파일을 생성하여 작업.
+테마 퍼블리싱할 때 주의할 점은 다른 테마에는 영향이 없도록 해야한다는 점.
