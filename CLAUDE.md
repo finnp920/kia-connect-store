@@ -24,7 +24,7 @@ HTML/CSS/JS/이미지/비디오 리소스를 **기아에 납품**하는 것이 �
 
 | 테마 (`data-product`) | 테마 수 (`data-theme-list`) | 특징 섹션 | CHANGE_LOG |
 |---|---|---|---|
-| `black` | 1 (`01` 블랙 에디션) | 없음 (공통 섹션만) | **없음 (미작성)** |
+| `black` | 1 (`01` 블랙 에디션) | 없음 (공통 섹션만) | `CHANGE_LOG_black.md` |
 | `brand` | 1 (`01` Opposites united) | `experience` | `CHANGE_LOG_brand.md` |
 | `disney` | 4 (`01`~`04`) | `reasons-n`, `screenshots` | `CHANGE_LOG_disney.md` |
 | `fifa` | 17 (순서 비순차) | `experience` | `CHANGE_LOG_fifa.md` |
