@@ -30,8 +30,8 @@ HTML/CSS/JS/이미지/비디오 리소스를 **기아에 납품**하는 것이 �
 | `fifa` | 17 (순서 비순차) | `experience` | `CHANGE_LOG_fifa.md` |
 | `kbo` | 10 (`01`~`10`) | `reasons-n` | `CHANGE_LOG_kbo.md`, `CHANGE_LOG_kbo-2.md` |
 | `marvel` | 3 (`01`,`02`,`04`) | `reasons-n`, `screenshots` | `CHANGE_LOG_marvel_xmen.md` |
-| `natgeo` | 3 (`01`~`03`) | `reasons`(구버전), `screenshots`, `credit` | 없음 |
-| `pixar` | 2 (`01`,`02`) | `reasons-n`, `screenshots` | 없음 |
+| `natgeo` | 3 (`01`~`03`) | `reasons`(구버전), `screenshots`, `credit` | 불필요 (납품 완료) |
+| `pixar` | 2 (`01`,`02`) | `reasons-n`, `screenshots` | 불필요 (납품 완료) |
 | `starwars` | 6 (`01`~`06`) | `reasons-n`, `screenshots`, `credit`, foldable-list | `CHANGE_LOG_starwars.md` |
 
 - `marvel`의 테마 ID는 `03`이 비어 있음 — **연속이 아니어도 정상**. `data-theme-list` 순서가 곧 화면 노출 순서다(`fifa` 참고).
