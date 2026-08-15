@@ -38,8 +38,12 @@
   color: #ffffff;
   letter-spacing: -0.32px;
 }
+[data-product=disney] .kv-slide {
+  /* 헤로 상단이 밝아 흰색 텍스트로는 대비가 부족한 테마 */
+}
 [data-product=disney] .kv-slide[data-theme="01"] .kv-title,
-[data-product=disney] .kv-slide[data-theme="01"] .kv-subtitle {
+[data-product=disney] .kv-slide[data-theme="01"] .kv-subtitle, [data-product=disney] .kv-slide[data-theme="05"] .kv-title,
+[data-product=disney] .kv-slide[data-theme="05"] .kv-subtitle {
   color: #000000;
 }
 
@@ -65,4 +69,5 @@
     margin-top: 20px;
   }
 }
+
 /*# sourceMappingURL=key_visual-disney.css.map */

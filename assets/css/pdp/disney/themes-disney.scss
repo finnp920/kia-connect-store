@@ -21,7 +21,7 @@
 
   .themes-cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) 0.8fr;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) 0.8fr;
     gap: 24px;
     max-width: 1452px;
     margin: 0 auto;
@@ -123,7 +123,8 @@
 [data-product='disney'][data-current-theme='01'] .card[data-theme='01'],
 [data-product='disney'][data-current-theme='02'] .card[data-theme='02'],
 [data-product='disney'][data-current-theme='03'] .card[data-theme='03'],
-[data-product='disney'][data-current-theme='04'] .card[data-theme='04'] {
+[data-product='disney'][data-current-theme='04'] .card[data-theme='04'],
+[data-product='disney'][data-current-theme='05'] .card[data-theme='05'] {
   .card-layer img {
     opacity: 1;
   }

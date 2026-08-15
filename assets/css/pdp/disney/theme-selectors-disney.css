@@ -20,4 +20,10 @@
   background: linear-gradient(90deg, #84C44E 0%, #1EB57D 50%, #00B39F 100%);
   backdrop-filter: blur(3px);
 }
+[data-product=disney][data-current-theme="05"] .theme-selector.buttons button[data-theme="05"] {
+  background: linear-gradient(90deg, #FFC058 0%, #FF8000 100%);
+  color: #ffffff;
+  backdrop-filter: blur(3px);
+}
+
 /*# sourceMappingURL=theme-selectors-disney.css.map */

@@ -39,7 +39,9 @@
     letter-spacing: -0.32px;
   }
 
-  &[data-theme='01'] {
+  /* 헤로 상단이 밝아 흰색 텍스트로는 대비가 부족한 테마 */
+  &[data-theme='01'],
+  &[data-theme='05'] {
     .kv-title,
     .kv-subtitle {
       color: #000000;

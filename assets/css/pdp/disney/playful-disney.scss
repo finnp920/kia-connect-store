@@ -36,6 +36,20 @@
       }
     }
   }
+
+  &[data-current-theme='05'] {
+    section.playful {
+      /* 배경 이미지 하단 색상(rgb 130,209,233)에 맞춤 */
+      background-color: #82d1ea;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/disney/disneyth05_disc_bg.png');
+      }
+
+      .playful-title, h3, p:not(.warning) {
+        color: black;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -61,6 +75,14 @@
       section.playful {
         .playful-wrapper::before {
           background-image: url('../../../images/kia/pdp/disney/disneyth04_disc_bg_mo.png');
+        }
+      }
+    }
+
+    &[data-current-theme='05'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/disney/disneyth05_disc_bg_mo.png');
         }
       }
     }
