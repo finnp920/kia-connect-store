@@ -16,14 +16,16 @@
 
   .themes-stage-inner {
     width: 100%;
-    max-width: 1492px;
+    /* 그리드 1765px + 공통 좌우 패딩 20px */
+    max-width: 1805px;
   }
 
   .themes-cards-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) 0.8fr;
+    /* 테마 카드 289px × 5 + pick 카드 200px (200/289 = 0.692) */
+    grid-template-columns: repeat(5, minmax(0, 1fr)) 0.692fr;
     gap: 24px;
-    max-width: 1452px;
+    max-width: 1765px;
     margin: 0 auto;
     list-style: none;
   }
@@ -144,10 +146,12 @@
     background-image: url('../../../images/kia/pdp/marvel/sec02_cardlist_bg_mo.png');
 
     .themes-cards-grid {
-      width: fit-content;
+      /* 360px 뷰포트 기준 카드 156px × 2 + 컬럼 간격 8px = 320px */
+      width: 100%;
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: auto;
-      gap: clamp(8px, 2cqw, 24px);
+      column-gap: 8px;
+      row-gap: 20px;
     }
 
     .card {
@@ -175,24 +179,9 @@
       }
     }
 
+    /* pick 카드도 일반 카드와 같은 1칸(156×184)을 차지한다 */
     .card.pick {
-      max-width: none;
-      grid-column: 1 / span 2; /* 두 컬럼 전체 차지 */
-      height: 48px;
-      padding: 0;
-      .card-contents {
-        flex-direction: row;
-        img {
-          width: 18px;
-        }
-        h3 {
-          width: fit-content;
-          color: #05141f;
-          font-size: 12px;
-          font-weight: 400;
-          letter-spacing: -0.24px;
-        }
-      }
+      max-width: 289px;
     }
   }
 }
