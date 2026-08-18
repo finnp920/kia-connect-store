@@ -53,15 +53,9 @@ root
   - **Playful > 이미지** `xfade-stage.image-wrapper` × 4 (disc01~04)
   - **N Reasons > Reason 1** `reason-n-image` picture
 
-### 2. JS 로직 변경 없음
+### 2. 마크업 · 구조 변경
 
-`assets/js/pdp/set-detail.js` 는 `data-theme-list` 를 읽어 동작하고,
-공통 CSS(`assets/css/pdp/index.css`)의 테마 전환 규칙이 `01`~`17` 을 이미 포함하고 있어
-옵션 05 추가에 따른 스크립트·공통 CSS 수정이 없습니다.
-
-### 3. 마크업 · 구조 변경
-
-#### 3-1. `themes-cards-grid` 레이아웃 재구성
+#### 2-1. `themes-cards-grid` 레이아웃 재구성
 
 옵션이 5개가 되면서 카드 배치가 바뀌었습니다. **마크업 순서는 그대로**이고 `themes-disney.scss` 만 수정했습니다.
 
@@ -72,7 +66,7 @@ root
 | 모바일 pick 카드 | 2개 컬럼 전체를 차지하는 가로 바 | **일반 카드와 동일하게 1칸 차지** (3행 2열의 마지막 칸) |
 | 모바일 그리드 폭 | `width: fit-content` | `width: 100%` + `max-width: 586px` (카드 최대폭 도달 시 가운데 정렬) |
 
-#### 3-2. pick 카드 이미지 단일화 → `sec02_img_staytuned_mo.png` **삭제**
+#### 2-2. pick 카드 이미지 단일화 → `sec02_img_staytuned_mo.png` **삭제**
 
 pick 카드("곧 만나요!") 이미지가 모바일에서만 별도 파일로 교체되고 있었으나,
 디자인상 PC·모바일이 동일해져 `<picture>` 내 `<source>` 를 제거하고
@@ -81,24 +75,12 @@ pick 카드("곧 만나요!") 이미지가 모바일에서만 별도 파일로 �
 이에 따라 **`sec02_img_staytuned_mo.png` 는 참조처가 없어져 삭제**했습니다.
 Disney 테마 외에서 이 파일을 참조하는 곳은 없습니다.
 
-#### 3-3. 공통 이미지 `disneyth00_reasons_02` 교체
+#### 2-3. 공통 이미지 `disneyth00_reasons_02` 교체
 
 N Reasons 두 번째 항목 이미지가 옵션 5개 기준으로 갱신되어 PC·모바일 파일을 교체했습니다.
 파일명·마크업은 그대로이며, **모든 옵션에 공통 적용**됩니다.
 
-### 4. 이미지 · 비디오 네이밍
-
-기존 컨벤션을 그대로 따릅니다.
-
+### 3. 이미지 · 비디오
 - 이미지 — `disneyth05_*` (예: `disneyth05_hero.png`, `disneyth05_disc01.png`)
 - 비디오 — `assets/videos/pdp/disney/th05/` 폴더에 `welcome/goodbye × cluster/avnt` 4개
   (파일명은 전 옵션 동일, **폴더명으로 옵션을 구분**)
-
-### 5. 빌드
-
-```bash
-npm run build --theme=disney
-```
-
-빌드 설정 변경 사항은 없습니다. 비디오는 `assets/videos/pdp/disney/**` 를 통째로 복사하므로
-`th05` 폴더가 자동 포함됩니다.
