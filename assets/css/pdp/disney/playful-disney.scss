@@ -43,6 +43,8 @@
       background-color: #82d1ea;
       .playful-wrapper::before {
         background-image: url('../../../images/kia/pdp/disney/disneyth05_disc_bg.png');
+        /* 05 는 배경 하이라이트가 하단에 있어 공통값(top right)으로는 잘린다. */
+        background-position: bottom right;
       }
 
       .playful-title, h3, p:not(.warning) {
@@ -98,6 +100,9 @@
       section.playful {
         .playful-wrapper::before {
           background-image: url('../../../images/kia/pdp/disney/disneyth05_disc_bg_mo.png');
+          /* PC 와 동일하게 하단 하이라이트를 살린다.
+             공통 모바일값은 center top 이라 여기서 명시적으로 덮는다. */
+          background-position: bottom right;
         }
       }
     }
