@@ -64,9 +64,22 @@
   color: #dedede;
   margin: 0;
 }
+/* 옵션별 크레딧 토글.
+   data-theme 가 붙은 요소만 숨김 대상이라, 옵션 분기를 쓰지 않는 테마의
+   .credit-text 는 위 규칙(display:block)을 그대로 유지한다. */
+[data-product] .credit-text[data-theme] {
+  display: none;
+}
 [data-product][data-current-theme='01'] .credit-text[data-theme='01'],
 [data-product][data-current-theme='02'] .credit-text[data-theme='02'],
-[data-product][data-current-theme='03'] .credit-text[data-theme='03']{
+[data-product][data-current-theme='03'] .credit-text[data-theme='03'],
+[data-product][data-current-theme='04'] .credit-text[data-theme='04'],
+[data-product][data-current-theme='05'] .credit-text[data-theme='05'],
+[data-product][data-current-theme='06'] .credit-text[data-theme='06'],
+[data-product][data-current-theme='07'] .credit-text[data-theme='07'],
+[data-product][data-current-theme='08'] .credit-text[data-theme='08'],
+[data-product][data-current-theme='09'] .credit-text[data-theme='09'],
+[data-product][data-current-theme='10'] .credit-text[data-theme='10'] {
   display: block;
 }
 [data-product] .credit-text strong {
