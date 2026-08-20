@@ -50,6 +50,21 @@
       }
     }
   }
+
+  /* 옵션별 Playful 타이틀 토글.
+     공통 playful.css의 테마 루프는 .playful-content-item p[data-theme]와
+     .playful-video-player[data-theme]만 대상이라 타이틀은 여기서 처리한다. */
+  section.playful .playful-title[data-theme] {
+    display: none;
+  }
+
+  &[data-current-theme='01'] section.playful .playful-title[data-theme='01'],
+  &[data-current-theme='02'] section.playful .playful-title[data-theme='02'],
+  &[data-current-theme='03'] section.playful .playful-title[data-theme='03'],
+  &[data-current-theme='04'] section.playful .playful-title[data-theme='04'],
+  &[data-current-theme='05'] section.playful .playful-title[data-theme='05'] {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 769px) {

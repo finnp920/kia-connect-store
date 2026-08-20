@@ -2,10 +2,21 @@
 /* ========================================
    N Reasons Why you can’t miss out - Disney
    ======================================== */
+/* 옵션별 reasons-n 설명 토글.
+   공통 reasons-n.css 에는 .reason-n-description[data-theme] 분기가 없어
+   (구버전 reasons 섹션의 .reason-description 만 존재) 여기서 처리한다. */
+[data-product=disney] section.reasons-n .reason-n-description[data-theme] {
+  display: none;
+}
+[data-product=disney][data-current-theme="01"] section.reasons-n .reason-n-description[data-theme="01"], [data-product=disney][data-current-theme="02"] section.reasons-n .reason-n-description[data-theme="02"], [data-product=disney][data-current-theme="03"] section.reasons-n .reason-n-description[data-theme="03"], [data-product=disney][data-current-theme="04"] section.reasons-n .reason-n-description[data-theme="04"], [data-product=disney][data-current-theme="05"] section.reasons-n .reason-n-description[data-theme="05"] {
+  display: block;
+}
+
 @media screen and (max-width: 769px) {
   [data-product=disney] section.reasons-n ul.reasons li.reason-item:nth-child(1) .reason-image picture img,
   [data-product=disney] section.reasons-n ul.reasons li.reason-item:nth-child(2) .reason-image picture img {
     width: 100%;
   }
 }
+
 /*# sourceMappingURL=reasons-n-disney.css.map */
