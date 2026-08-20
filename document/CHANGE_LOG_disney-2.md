@@ -14,16 +14,11 @@ root
 │
 └── assets/
     ├── css/
-    │   ├── pdp/disney/                            # Disney 테마 전용 스타일
-    │   │   ├── themes-disney.scss                  # [수정] 카드 그리드 레이아웃 재구성
-    │   │   ├── key_visual-disney.scss              # [수정] 테마 05 대응
-    │   │   ├── playful-disney.scss                 # [수정] 테마 05 대응 + 옵션별 타이틀 토글
-    │   │   ├── reasons-n-disney.scss               # [수정] 주석만 (토글은 공통으로 이관)
-    │   │   └── theme-selectors-disney.scss         # [수정] 테마 05 버튼 대응
-    │   │
-    │   └── pdp/section/                           # ⚠️ 공통 섹션 — 전 테마 영향
-    │       ├── reasons-n.scss                      # [수정] 옵션별 설명 토글 추가 (아래 4-1)
-    │       └── credit.css                          # [수정] 옵션별 크레딧 토글 추가 (아래 4-2)
+    │   └── pdp/disney/                            # Disney 테마 전용 스타일
+    │       ├── themes-disney.scss                  # [수정] 카드 그리드 레이아웃 재구성
+    │       ├── key_visual-disney.scss              # [수정] 테마 05 대응
+    │       ├── playful-disney.scss                 # [수정] 테마 05 대응
+    │       └── theme-selectors-disney.scss         # [수정] 테마 05 버튼 대응
     │
     ├── images/
     │   └── kia/pdp/disney/                        # [추가] disneyth05_* 이미지 일체
@@ -35,9 +30,8 @@ root
             └── th05/                               # [추가] 테마 05 전용 폴더
 ```
 
-- `index.css`, `assets/js/**` 는 변경 없음.
-- **공통 `section/` 2개 파일을 수정했습니다.** 기존 버그 수정이라 Disney 외 테마(Marvel·NatGeo)에도
-  영향이 있습니다. 반드시 아래 **4장**을 확인하세요.
+- `index.css`, `reasons-n-disney.scss` 는 변경 없음.
+- 공통 자산(`assets/css/pdp/index.css`, `section/**`, `assets/js/**`)은 **변경 없음**.
 
 ---
 
@@ -89,7 +83,9 @@ N Reasons 두 번째 항목 이미지가 옵션 5개 기준으로 갱신되어 P
 #### 2-4. Playful · N Reasons 문구를 **옵션별로 분리**
 
 기존에는 5개 옵션이 문구 하나를 공유했으나, 옵션별 문구로 분리했습니다.
-**Marvel 테마와 동일한 패턴**이며, 표시 전환은 CSS가 담당합니다(JS 변경 없음).
+**HTML 만 수정했고 CSS·JS 변경은 없습니다.** 표시 전환은 공통
+`assets/css/pdp/index.css` 의 `[data-current-theme] :not(…) > [data-theme]` 규칙이
+그대로 처리합니다(01~17 지원).
 
 | 위치 | 이전 | 변경 |
 |---|---|---|
@@ -108,30 +104,3 @@ N Reasons 두 번째 항목 이미지가 옵션 5개 기준으로 갱신되어 P
 > **미수급 2건** — `disneyth05_detail_05.png` / `disneyth05_detail_05_mo.png`
 > (Screenshots 의 Goodbye Video 칸). 마크업은 이미 들어가 있어 **파일만 배치하면 동작**합니다.
 > 수급 전까지 해당 칸은 깨진 이미지로 표시됩니다.
-
-### 4. ⚠️ 공통 `section/` 파일 수정 — 전 테마 영향
-
-옵션별 문구 분리를 적용하려다 **공통 CSS에 옵션 분기가 누락되어 있던 기존 버그**를 발견해 함께 고쳤습니다.
-두 건 모두 `data-theme` 속성이 붙은 요소만 대상으로 하므로, **옵션 분기를 쓰지 않는 테마는 영향이 없습니다.**
-
-#### 4-1. `section/reasons-n.scss` — `.reason-n-description[data-theme]` 토글 추가
-
-`playful.css` 는 `.playful-content-item p[data-theme]` 를 옵션별로 토글하지만,
-`reasons-n` 에는 같은 분기가 없어 **`data-theme` 이 붙은 설명이 전부 동시에 노출**되고 있었습니다.
-
-- **Marvel: 기존 버그였습니다.** 옵션 01/02/04 설명 3개가 옵션과 무관하게 세로로 쌓여 보이던 상태 → **이번 수정으로 정상화**됩니다.
-- Disney: 이번에 추가한 5개 설명이 정상 동작합니다.
-- KBO·Pixar·StarWars 는 `data-theme` 없는 공통 설명만 사용 → **영향 없음**.
-
-`playful.scss` 와 동일하게 **01~17 루프**로 생성합니다.
-
-#### 4-2. `section/credit.css` — `.credit-text[data-theme]` 토글 추가
-
-`.credit-text` 의 기본값이 `display: block` 이라 옵션별 크레딧이 **전부 동시에 노출**되고 있었습니다.
-(기존 `[data-current-theme='01~03']` 규칙은 `display: block` 을 중복 지정할 뿐이라 무효한 코드였습니다.)
-
-- **NatGeo: 기존 버그였습니다.** 크레딧 3개가 옵션과 무관하게 모두 보이던 상태 → **이번 수정으로 정상화**됩니다.
-- StarWars 는 `credit-starwars.scss` 에서 섹션 자체를 옵션 03 에서만 노출하므로 **동작 변화 없음**.
-- Disney 는 `credit` 섹션을 사용하지 않습니다.
-
-`[data-theme]` 이 없는 `.credit-text` 는 기존처럼 항상 노출됩니다(기본값 유지).

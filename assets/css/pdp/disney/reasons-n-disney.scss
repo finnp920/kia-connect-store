@@ -2,8 +2,6 @@
    N Reasons Why you can’t miss out - Disney
    ======================================== */
 
-/* 옵션별 reasons-n 설명 토글은 공통 section/reasons-n.scss 로 이관(01~17 루프). */
-
 @media screen and (max-width: 769px) {
   [data-product="disney"] section.reasons-n {
     ul.reasons {

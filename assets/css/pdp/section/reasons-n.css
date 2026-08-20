@@ -2,17 +2,6 @@
 /* ========================================
    N Reasons Why you can’t miss out
    ======================================== */
-/* 옵션별 설명 토글 (01 ~ 17).
-   data-theme 가 붙은 요소만 대상이라, 옵션 분기를 쓰지 않는 테마는 영향 없다.
-   playful.scss 의 p[data-theme] 루프와 같은 패턴. */
-[data-product] section.reasons-n .reason-n-description[data-theme] {
-  display: none;
-}
-
-[data-product][data-current-theme="01"] section.reasons-n .reason-n-description[data-theme="01"], [data-product][data-current-theme="02"] section.reasons-n .reason-n-description[data-theme="02"], [data-product][data-current-theme="03"] section.reasons-n .reason-n-description[data-theme="03"], [data-product][data-current-theme="04"] section.reasons-n .reason-n-description[data-theme="04"], [data-product][data-current-theme="05"] section.reasons-n .reason-n-description[data-theme="05"], [data-product][data-current-theme="06"] section.reasons-n .reason-n-description[data-theme="06"], [data-product][data-current-theme="07"] section.reasons-n .reason-n-description[data-theme="07"], [data-product][data-current-theme="08"] section.reasons-n .reason-n-description[data-theme="08"], [data-product][data-current-theme="09"] section.reasons-n .reason-n-description[data-theme="09"], [data-product][data-current-theme="10"] section.reasons-n .reason-n-description[data-theme="10"], [data-product][data-current-theme="11"] section.reasons-n .reason-n-description[data-theme="11"], [data-product][data-current-theme="12"] section.reasons-n .reason-n-description[data-theme="12"], [data-product][data-current-theme="13"] section.reasons-n .reason-n-description[data-theme="13"], [data-product][data-current-theme="14"] section.reasons-n .reason-n-description[data-theme="14"], [data-product][data-current-theme="15"] section.reasons-n .reason-n-description[data-theme="15"], [data-product][data-current-theme="16"] section.reasons-n .reason-n-description[data-theme="16"], [data-product][data-current-theme="17"] section.reasons-n .reason-n-description[data-theme="17"] {
-  display: block;
-}
-
 [data-product] section.reasons-n {
   position: relative;
 }
@@ -187,5 +176,4 @@
     display: block;
   }
 }
-
 /*# sourceMappingURL=reasons-n.css.map */

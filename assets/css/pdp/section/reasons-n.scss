@@ -1,36 +1,6 @@
-@use 'sass:string';
-@use 'sass:list';
-
 /* ========================================
    N Reasons Why you can’t miss out
    ======================================== */
-
-/* 옵션별 설명 토글 (01 ~ 17).
-   data-theme 가 붙은 요소만 대상이라, 옵션 분기를 쓰지 않는 테마는 영향 없다.
-   playful.scss 의 p[data-theme] 루프와 같은 패턴. */
-[data-product] section.reasons-n .reason-n-description[data-theme] {
-  display: none;
-}
-
-$reason-desc-selectors: ();
-@for $i from 1 through 17 {
-  $theme: '#{$i}';
-  @if $i < 10 {
-    $theme: '0#{$i}';
-  }
-  $reason-desc-selectors: list.append(
-    $reason-desc-selectors,
-    string.unquote(
-      "[data-product][data-current-theme='#{$theme}'] section.reasons-n .reason-n-description[data-theme='#{$theme}']"
-    ),
-    comma
-  );
-}
-
-#{$reason-desc-selectors} {
-  display: block;
-}
-
 [data-product] section.reasons-n {
   position: relative;
 
