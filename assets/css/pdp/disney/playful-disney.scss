@@ -3,8 +3,8 @@
    ======================================== */
 [data-product="disney"] {
   .playful-wrapper {
-    /* 하단 여백 확대: 공통 130px + 150px */
-    padding-bottom: 280px;
+    /* 하단 여백 확대: 공통 130px + 220px */
+    padding-bottom: 350px;
   }
 
   &[data-current-theme='01'], &[data-current-theme='02'] {
@@ -63,8 +63,8 @@
 @media screen and (max-width: 769px) {
   [data-product="disney"] {
     .playful-wrapper {
-      /* 하단 여백 확대: 공통 78px + 52px */
-      padding-bottom: 130px;
+      /* 하단 여백 확대: 공통 78px + 102px */
+      padding-bottom: 180px;
     }
 
     &[data-current-theme='01'],
