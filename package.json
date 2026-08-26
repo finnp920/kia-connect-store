@@ -7,7 +7,8 @@
     "sass:watch": "sass --watch assets/css:assets/css",
     "start": "npx http-server -p 8000 -c-1",
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deliver": "gulp deliver"
   },
   "keywords": [
     "kia",

@@ -130,10 +130,12 @@ root
 | `npm run build` | **전체 테마 빌드** → `dist/` (Vercel 미리보기용, 기본값) |
 | `npm run build --theme={theme}` | **단일 테마 분리 빌드** (납품용) |
 | `gulp build --theme={theme}` | 위와 동일 (gulp 직접 실행) |
+| `npm run deliver --theme={theme}` | **납품 추출** — 단일 테마 빌드 후 `~/Downloads/kia_pdp_{theme}_{YYYYMMDD}` 로 이동 |
 
 - `--theme` 미지정 시 `theme='all'`로 동작해 **모든 테마가 `dist/`에 들어간다**. 납품 시에는 반드시 테마를 지정할 것.
 - 단일 테마 빌드에 포함되는 것: 해당 테마 HTML/CSS/이미지/비디오 + 공통 PDP 자산(`index.css`, `go_to_list.css`, `product-view-override.css`, `section/**`, `img_disc_video.png`) + 공통 js/font/icons. 자세한 목록은 `gulpfile.mjs` 참고.
 - `npm run build`는 `dist/`를 **먼저 지우고** 복사한다.
+- `npm run deliver`는 테마 미지정 시(`all`) **에러로 중단**한다. 납품은 단일 테마 단위이기 때문. 같은 날짜 폴더가 이미 있으면 덮어쓰지 않고 `_2`, `_3` … 을 붙인다.
 
 ---
 

@@ -5,6 +5,9 @@ import sourcemaps from 'gulp-sourcemaps'; // Source Map 생성
 import { deleteAsync } from 'del'; // del v7+ 방식 (deleteAsync 사용)
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+import { rename, cp, mkdir, access } from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
 
 // Gulp 메서드 추출
 const { src, dest, watch, series, parallel } = gulp;
@@ -27,6 +30,11 @@ const paths = {
     dest: 'dist',
   },
 };
+
+// 우선순위: gulp --theme=xxx (argv.theme) → npm run build --theme=xxx (npm_config_theme) → 기본 'all'
+function getTheme() {
+  return argv.theme || process.env.npm_config_theme || 'all';
+}
 
 // --------------------------------------------------------
 // 1. SCSS 컴파일 태스크
@@ -78,8 +86,7 @@ function copyCommon() {
 
 // (3) 선택된 테마 리소스 복사
 function copyThemeResources() {
-  // 우선순위: gulp --theme=xxx (argv.theme) → npm run build --theme=xxx (npm_config_theme) → 기본 'all'
-  const theme = argv.theme || process.env.npm_config_theme || 'all';
+  const theme = getTheme();
 
   console.log(`✨ [${theme.toUpperCase()}] 모드로 빌드를 시작합니다...`);
 
@@ -121,6 +128,52 @@ function copyThemeResources() {
 }
 
 // --------------------------------------------------------
+// 4. 납품 추출 태스크 — dist → ~/Downloads/kia_pdp_{theme}_{YYYYMMDD}
+// --------------------------------------------------------
+async function pathExists(p) {
+  try {
+    await access(p);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function moveToDownloads() {
+  const theme = getTheme();
+
+  // 납품은 단일 테마 단위. 전체 빌드(all)는 Vercel 미리보기용이라 추출 대상이 아니다.
+  if (theme === 'all') {
+    throw new Error(
+      '납품 추출은 테마를 지정해야 합니다. 예: npm run deliver --theme=disney'
+    );
+  }
+
+  const d = new Date();
+  const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+  const downloads = path.join(os.homedir(), 'Downloads');
+  await mkdir(downloads, { recursive: true });
+
+  // 같은 이름이 있으면 덮어쓰지 않고 _2, _3 … 으로 회피
+  const baseName = `kia_pdp_${theme}_${stamp}`;
+  let target = path.join(downloads, baseName);
+  for (let n = 2; await pathExists(target); n++) {
+    target = path.join(downloads, `${baseName}_${n}`);
+  }
+
+  try {
+    await rename(paths.build.dest, target);
+  } catch (e) {
+    // 볼륨이 다르면 rename이 안 되므로 복사 후 원본 삭제
+    if (e.code !== 'EXDEV') throw e;
+    await cp(paths.build.dest, target, { recursive: true });
+    await deleteAsync([paths.build.dest]);
+  }
+
+  console.log(`📦 납품 폴더 생성: ${target}`);
+}
+
+// --------------------------------------------------------
 // 실행 가능한 커맨드 정의 (ESM Export)
 // --------------------------------------------------------
 export { styles };
@@ -130,11 +183,13 @@ export const build = series(
   clean,
   parallel(copyCommon, copyThemeResources)
 );
+export const deliver = series(build, moveToDownloads);
 
 // 기본(default) 태스크 설정 (선택 사항)
 export default dev;
 
 // 사용 예:
-//   npm run build                        → 전체 테마 빌드
-//   npm run build -- --theme=starwars    → 동일 (yargs 인자 전달)
+//   npm run build                        → 전체 테마 빌드 (dist/, Vercel 미리보기용)
+//   npm run build --theme=starwars       → 단일 테마 빌드 (dist/)
 //   gulp build --theme=pixar             → gulp 직접 실행
+//   npm run deliver --theme=disney       → 단일 테마 빌드 후 ~/Downloads/kia_pdp_disney_YYYYMMDD 로 이동
