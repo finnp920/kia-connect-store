@@ -12,6 +12,7 @@ HTML/CSS/JS/이미지/비디오 리소스를 **기아에 납품**하는 것이 �
    - 모든 테마 전용 스타일은 반드시 `[data-product='{theme}']` 셀렉터로 스코프.
    - 공통 CSS(`assets/css/pdp/index.css`, `section/*.css`)는 `[data-product] .xxx` 형태로 **모든 테마에 자동 적용**. 테마 SCSS에서 룰을 삭제해도 공통 룰은 살아있으므로, 디자인에 맞지 않는 공통 룰은 `[data-product='{theme}']` 스코프로 **명시적 override해서 무효화** (예: `&::after { content: none; }`).
    - 공통 룰과 테마 룰의 명시도가 같으면 후순위(테마 룰)가 이김. 하지만 `:not()` 등으로 공통 명시도가 더 높은 경우 `!important` 필요 (예: `[data-product]:not([data-product=fifa]) .sticky-layout`).
+   - **격리는 CSS 셀렉터뿐 아니라 자산 참조에도 적용된다.** 테마 SCSS/HTML은 자기 테마 폴더(`images/kia/pdp/{theme}/`, `videos/pdp/{theme}/`)와 공통 자산만 가리킨다. 다른 테마 이미지를 쓰고 싶으면 **경로로 참조하지 말고 자기 테마 폴더로 복사**해서 쓸 것 — 단일 테마 납품 빌드에는 다른 테마 폴더가 들어가지 않으므로, 참조로 두면 로컬에서는 멀쩡한데 **납품본에서만 깨진다**. (실제 사례: `themes-disney.scss`가 `pdp/marvel/sec02_cardlist_bg.png`를 참조 — disney 납품본에서 배경 누락)
 3. **헤더(`.hederWarp_n`)는 테마 퍼블리싱 범위 밖 — 절대 수정 금지.**
    - 기아 측 공통 영역. 마크업/클래스/링크/속성/메뉴 텍스트 모두 원본 그대로 유지.
    - 새 테마 HTML은 기존 테마를 복사한 뒤 **`<main>` 영역과 sticky/breadcrumb 등 PDP 콘텐츠만** 수정.
@@ -217,6 +218,7 @@ root
 | **작업 전 `git pull` 안 함** | 원격에만 있는 테마를 "없다"고 오판하고 엉뚱한 폴더에 작업 | 착수 전 `git fetch && git status -sb`로 `behind` 확인 |
 | 에셋을 파일명만 보고 교체 | `img_disc_bg_01.png` 등 여러 테마에 같은 이름이 있어 **다른 테마를 덮어씀** | 교체 전 `find assets/images -name "{파일명}"`으로 중복 확인 후 경로 지정 |
 | 테마 CSS 파일명에 테마 접미사 누락 | 다른 테마 파일과 혼동 (`fifa/theme-selectors.css`, `starwars/screenshots.css` 등 기존 사례) | 신규 파일은 `{section}-{theme}.scss` 규칙 준수 |
+| 다른 테마 폴더의 이미지를 경로로 참조 | 로컬/전체 빌드에선 보이는데 **단일 테마 납품본에서만 깨짐** (빌드에 그 폴더가 없음) | 이미지를 자기 테마 폴더로 **복사**해서 참조. 납품 전 `theme-deliver` 스킬의 검증기가 잡아준다 |
 
 ---
 
