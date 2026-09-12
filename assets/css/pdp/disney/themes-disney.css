@@ -115,14 +115,50 @@
   color: #b2b8bd;
 }
 
-/* 카드가 디자인 폭(245px)에 근접하는 화면에서만 디자인 비율(245 × 265)을 고정한다.
-   더 좁은 화면에서는 폰트 clamp 하한 때문에 내용이 비율보다 높아져 잘리므로 내용 높이에 맡긴다. */
+/* 7장을 한 줄에 놓을 수 있는 폭에서만 디자인 비율(245 × 265)을 고정한다. */
 @media screen and (min-width: 1320px) {
   [data-product=disney] .themes-stage .card {
     aspect-ratio: 245/265;
   }
   [data-product=disney] .themes-stage .card.pick {
     aspect-ratio: 170/265;
+  }
+}
+/* 중간 폭: 한 줄에 7장을 넣으면 카드가 과도하게 좁아져 타이틀·해시태그가 깨진다.
+   테마 카드는 3열 × 2행으로 접고, STAY TUNED 는 모바일과 같은 가로 바로 내린다.
+   그리드 폭을 245×3 + 20.36×2 = 776px 로 묶어 카드가 디자인 규격(245×265)을 유지한다. */
+@media screen and (min-width: 770px) and (max-width: 1319px) {
+  [data-product=disney] .themes-stage .themes-cards-grid {
+    width: 100%;
+    max-width: 776px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    column-gap: 20.36px;
+    row-gap: 24px;
+  }
+  [data-product=disney] .themes-stage .card {
+    max-width: 245px;
+    aspect-ratio: 245/265;
+  }
+  [data-product=disney] .themes-stage .card.pick {
+    max-width: none;
+    aspect-ratio: auto;
+    grid-column: 1/span 3;
+    height: 48px;
+  }
+  [data-product=disney] .themes-stage .card.pick .card-contents {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    gap: 8px;
+  }
+  [data-product=disney] .themes-stage .card.pick .card-contents img {
+    width: 18px;
+  }
+  [data-product=disney] .themes-stage .card.pick .card-contents h3 {
+    width: fit-content;
+    font-size: 14px;
+    letter-spacing: -0.28px;
   }
 }
 @media screen and (max-width: 769px) {
