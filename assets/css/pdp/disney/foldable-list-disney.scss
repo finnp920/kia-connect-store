@@ -1,0 +1,90 @@
+/* ========================================
+   Foldable List - Disney
+   reason 2 의 PC 전용 아코디언.
+   접힌 탭(49×200)은 그라디언트 배경 + 세로 라벨,
+   펼친 카드(140×200)는 포스터 이미지만 노출한다(로고가 이미지에 합성되어 있음).
+   ======================================== */
+[data-product='disney'] .foldable-list {
+  overflow: hidden;
+
+  .foldable-cards {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 100%;
+    /* 140(펼침) + 49×5(접힘) + 12×5(간격) = 445 */
+    max-width: 445px;
+    aspect-ratio: 445 / 200;
+    margin: 0 0 0 auto;
+    padding: 0;
+    /* 445 기준 12px 간격 — 좁아져도 49:200 / 140:200 비율이 유지되도록 % 로 환산 */
+    gap: calc(100% * 12 / 445);
+  }
+
+  .foldable-card {
+    position: relative;
+    flex: 49 1 0;
+    min-width: 0;
+    max-width: 49px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      flex-grow 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+      max-width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .img-before {
+      opacity: 1;
+    }
+
+    .img-after {
+      opacity: 0;
+    }
+
+    .foldable-card-label {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* 세로쓰기: 시계방향 90도 */
+      transform: rotate(90deg);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.32px;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    /* 펼친 카드는 포스터에 로고가 들어 있어 라벨을 감춘다 */
+    &.active {
+      flex-grow: 140;
+      max-width: 140px;
+
+      .img-before {
+        opacity: 0;
+      }
+
+      .img-after {
+        opacity: 1;
+      }
+
+      .foldable-card-label {
+        opacity: 0;
+      }
+    }
+  }
+}

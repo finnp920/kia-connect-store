@@ -3,6 +3,7 @@
 @import url("theme-selectors-disney.css");
 @import url("playful-disney.css");
 @import url("reasons-n-disney.css");
+@import url("foldable-list-disney.css");
 
 @media screen and (max-width: 769px) {
   [data-product='disney'] .sticky-layout {

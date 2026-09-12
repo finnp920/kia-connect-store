@@ -2,10 +2,25 @@
 /* ========================================
    N Reasons Why you can’t miss out - Disney
    ======================================== */
+/* reason 2: PC 는 foldable 아코디언, 모바일은 6종 그리드 이미지 */
+[data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image .foldable-list {
+  display: block;
+}
+[data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image > img {
+  display: none;
+}
+
 @media screen and (max-width: 769px) {
-  [data-product=disney] section.reasons-n ul.reasons li.reason-item:nth-child(1) .reason-image picture img,
-  [data-product=disney] section.reasons-n ul.reasons li.reason-item:nth-child(2) .reason-image picture img {
+  [data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item .reason-n-image > img,
+  [data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item .reason-n-image picture img {
     width: 100%;
   }
+  [data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image .foldable-list {
+    display: none;
+  }
+  [data-product=disney] section.reasons-n ul.reasons-list li.reason-n-item:nth-child(2) .reason-n-image > img {
+    display: block;
+  }
 }
+
 /*# sourceMappingURL=reasons-n-disney.css.map */
