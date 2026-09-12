@@ -117,6 +117,8 @@ function copyThemeResources() {
       'assets/css/pdp/section/**/*',
       `assets/css/pdp/${theme}/**/*`,
       `assets/images/kia/pdp/img_disc_video.png`,
+      // 상단 상품정보 영역(productView)이 쓰는 샘플 썸네일
+      `assets/images/kia/pdp/sample/**/*`,
       `assets/images/kia/pdp/${theme}/**/*`,
       `assets/videos/pdp/${theme}/**/*`,
     ];
