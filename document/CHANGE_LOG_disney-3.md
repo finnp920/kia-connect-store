@@ -100,12 +100,11 @@ root
   펼친 카드의 로고가 `reasons_after_*` 이미지에 합성되어 있어 **별도 로고 요소를 두지 않습니다.**
 - 이에 따라 PC 전용이던 `disneyth00_reasons_02.png` 와 모바일용 `_mo.png` 는 참조처가 없어져 삭제했습니다.
 
-### 4. 이미지 네이밍 — 확인 필요
+### 4. 이미지 네이밍
 
-| 파일 | 내용 |
-|---|---|
-| `reasons_before_01~06.png`<br>`reasons_after_01~06.png` | reasons 2번 아코디언용. **옵션 접두사(`disneyth0N_`)가 없는** 네이밍이며 끝 두 자리가 옵션 번호입니다. |
-| `disneyth06_reasons_02.png` | reasons 2번 **모바일 전용**이지만 파일명에 `_mo` 가 없습니다. 전달받은 파일명을 그대로 사용했습니다. |
+- `reasons_before_01~06.png` / `reasons_after_01~06.png` — reasons 2번 아코디언용.
+  옵션 접두사(`disneyth0N_`) 없이 **끝 두 자리가 옵션 번호**입니다.
+- `disneyth06_reasons_02.png` — reasons 2번 **모바일 전용**입니다(파일명에 `_mo` 없음).
 
 ### 5. 옵션 06 외 교체된 이미지
 
@@ -125,5 +124,4 @@ root
 - `ic_sec03_00_unchecked.svg`, `ic_sec03_02_checked.svg`, `ic_sec03_03_checked.svg`, `ic_unchecked.svg`
 - `mainhumb_disneyth01.png`, `mainhumb_disneyth02.png`
 
-> `mainhumb_*` 는 옵션 01·02 에만 존재하고 03 이후에는 없습니다.
-> **PDP 외부(상품 목록 등)에서 직접 참조하고 있다면 알려주세요.** 복원하겠습니다.
+`mainhumb_*` 는 옵션 01·02 에만 있던 파일로, 현재 PDP 에서는 사용하지 않습니다.
