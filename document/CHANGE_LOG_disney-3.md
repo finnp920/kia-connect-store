@@ -1,7 +1,7 @@
 # Kia Connect Store Display Themes Publishing — Disney 테마 (옵션 06 추가)
 
-디스플레이 Disney 테마 제품 상세 페이지(PDP)에 **옵션 06 라이온 킹**을 추가한 산출물입니다.
-기존 옵션 산출물은 `CHANGE_LOG_disney.md`(옵션 01~04), `CHANGE_LOG_disney-2.md`(옵션 05)를 참고하세요.
+디스플레이 Disney 테마 제품 상세 페이지(PDP)에 **옵션 06 라이온 킹**을 추가하고,
+일부 기존 옵션 이미지를 교체한 산출물입니다.
 
 ---
 
@@ -32,7 +32,13 @@ root
     │       ├── disneyth05_detail_05(_mo).png       # [추가] 아래 5 참고
     │       ├── disneyth0{1,2,3,5}_disc0{1~4}.png   # [교체] 아래 5 참고
     │       ├── disneyth00_reasons_02(_mo).png      # [삭제] 아래 3 참고
-    │       └── sec02_img_staytuned.png             # [삭제] 아래 2 참고
+    │       ├── sec02_img_staytuned.png             # [삭제] 아래 2 참고
+    │       ├── ic_sec03_00_unchecked.svg           # [삭제] 아래 7 참고
+    │       ├── ic_sec03_02_checked.svg             # [삭제] 아래 7 참고
+    │       ├── ic_sec03_03_checked.svg             # [삭제] 아래 7 참고
+    │       ├── ic_unchecked.svg                    # [삭제] 아래 7 참고
+    │       ├── mainhumb_disneyth01.png             # [삭제] 아래 7 참고
+    │       └── mainhumb_disneyth02.png             # [삭제] 아래 7 참고
     │
     └── videos/
         └── pdp/disney/th06/                        # [추가] 옵션 06 전용 폴더
@@ -61,8 +67,7 @@ root
 ### 2. pick 카드 `곧 만나요!` → `STAY TUNED`
 
 문구와 아이콘이 바뀌었고, 아이콘은 공통 `assets/icons/icon_staytuned(_mo).png` 를 사용합니다.
-이에 따라 기존 `sec02_img_staytuned.png` 는 참조처가 없어져 삭제했습니다.
-(Disney 외 테마에서 이 파일을 참조하는 곳은 없습니다.)
+이에 따라 `sec02_img_staytuned.png` 는 참조처가 없어져 삭제했습니다.
 
 > **주의** — `<picture>` 의 `media` 가 `(max-width: 1319px)` 입니다.
 > 공통 모바일 분기(769px)가 아니라 **위 1번 표의 3열 전환점과 맞춘 값**입니다.
@@ -78,7 +83,11 @@ root
   <img src="…/disneyth06_reasons_02.png" />   <!-- 모바일 -->
   <div class="foldable-list">                  <!-- PC -->
     <div class="foldable-cards">
-      <div class="foldable-card active" data-theme="01"> … </div>
+      <div class="foldable-card active" data-theme="01">
+        <img class="img-before" src="…/reasons_before_01.png" />
+        <img class="img-after"  src="…/reasons_after_01.png" />
+        <div class="foldable-card-label">미키와 친구들</div>
+      </div>
       …
     </div>
   </div>
@@ -86,23 +95,22 @@ root
 ```
 
 - 표시 전환은 `reasons-n-disney.scss` 가 처리합니다(PC는 `foldable-list`, 모바일은 `> img`).
-- **JS 변경 없음.** `assets/js/pdp/set-detail.js` 의 foldable 로직이 제품 무관 코드라
+- **JS 변경 없음.** `assets/js/pdp/set-detail.js` 에 이미 들어 있는 foldable 로직이 제품 무관 코드라
   hover 확장 / 클릭 시 옵션 변경 / 옵션 변경 시 동기화가 그대로 동작합니다.
-  (Starwars 테마와 동일한 마크업 규약입니다.)
-- Starwars 와 달리 `.foldable-card-body`(타이틀·설명 오버레이)와 `.foldable-card-logo` 를 쓰지 않습니다.
-  펼친 카드의 로고가 `reasons_after_*` 이미지에 합성되어 있습니다.
+- 접힌 탭은 배경 이미지 + 세로 라벨(HTML 텍스트), 펼친 카드는 포스터 이미지만 노출합니다.
+  펼친 카드의 로고가 `reasons_after_*` 이미지에 합성되어 있어 **별도 로고 요소를 두지 않습니다.**
 - 이에 따라 PC 전용이던 `disneyth00_reasons_02.png` 와 모바일용 `_mo.png` 는 참조처가 없어져 삭제했습니다.
 
 ### 4. 이미지 네이밍 — 확인 필요
 
 | 파일 | 내용 |
 |---|---|
-| `reasons_before_01~06.png`<br>`reasons_after_01~06.png` | reasons 2번 아코디언용. **옵션 접두사(`disneyth0N_`)가 없는** 네이밍이며 숫자가 옵션 번호입니다. Starwars 테마도 같은 규칙의 동명 파일을 갖고 있으나 **테마 폴더가 달라 충돌하지 않습니다.** |
+| `reasons_before_01~06.png`<br>`reasons_after_01~06.png` | reasons 2번 아코디언용. **옵션 접두사(`disneyth0N_`)가 없는** 네이밍이며 끝 두 자리가 옵션 번호입니다. |
 | `disneyth06_reasons_02.png` | reasons 2번 **모바일 전용**이지만 파일명에 `_mo` 가 없습니다. 전달받은 파일명을 그대로 사용했습니다. |
 
 ### 5. 옵션 06 외 교체·추가된 이미지
 
-라이온 킹 추가와 별개로, 디자인 측 요청에 따라 기존 옵션 이미지도 함께 반영했습니다.
+옵션 06 추가와 별개로, 디자인 측 요청에 따라 다른 옵션의 이미지도 함께 반영했습니다.
 
 - `disneyth0{1,2,3,5}_disc0{1~4}.png` — 교체
 - `disneyth05_detail_05.png` / `_mo.png` — **신규 추가**.
@@ -112,3 +120,13 @@ root
 
 `assets/videos/pdp/disney/th06/` 에 `welcome/goodbye × cluster/avnt` 4개.
 파일명은 전 옵션 동일하며 **폴더명으로 옵션을 구분**합니다.
+
+### 7. 미참조 이미지 정리
+
+아래 6개는 HTML·CSS·JS 어디에서도 참조하지 않아 삭제했습니다.
+
+- `ic_sec03_00_unchecked.svg`, `ic_sec03_02_checked.svg`, `ic_sec03_03_checked.svg`, `ic_unchecked.svg`
+- `mainhumb_disneyth01.png`, `mainhumb_disneyth02.png`
+
+> `mainhumb_*` 는 옵션 01·02 에만 존재하고 03 이후에는 없습니다.
+> **PDP 외부(상품 목록 등)에서 직접 참조하고 있다면 알려주세요.** 복원하겠습니다.
