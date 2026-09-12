@@ -58,6 +58,20 @@
     }
   }
 
+  &[data-current-theme='06'] {
+    section.playful {
+      /* 배경 패턴 바탕색(rgb 122,21,26)에 맞춤 */
+      background-color: #7a151a;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/disney/disneyth06_disc_bg.png');
+      }
+
+      .playful-title, h3, p:not(.warning) {
+        color: white;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 769px) {
@@ -99,6 +113,14 @@
           /* PC 와 동일하게 하단 하이라이트를 살린다.
              공통 모바일값은 center top 이라 여기서 명시적으로 덮는다. */
           background-position: bottom right;
+        }
+      }
+    }
+
+    &[data-current-theme='06'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/disney/disneyth06_disc_bg_mo.png');
         }
       }
     }

@@ -33,4 +33,10 @@
     color: #ffffff;
     backdrop-filter: blur(3px);
   }
+
+  &[data-current-theme='06'] .theme-selector.buttons button[data-theme='06'] {
+    background: linear-gradient(90deg, #F2A33C 0%, #C43C1B 100%);
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+  }
 }
