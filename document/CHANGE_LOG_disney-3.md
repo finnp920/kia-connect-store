@@ -29,7 +29,6 @@ root
     │       ├── sec02_cardthumb_06(_mo).png         # [추가]
     │       ├── reasons_before_01~06.png            # [추가] reasons 2번 아코디언
     │       ├── reasons_after_01~06.png             # [추가] reasons 2번 아코디언
-    │       ├── disneyth05_detail_05(_mo).png       # [추가] 아래 5 참고
     │       ├── disneyth0{1,2,3,5}_disc0{1~4}.png   # [교체] 아래 5 참고
     │       ├── disneyth00_reasons_02(_mo).png      # [삭제] 아래 3 참고
     │       ├── sec02_img_staytuned.png             # [삭제] 아래 2 참고
@@ -108,13 +107,11 @@ root
 | `reasons_before_01~06.png`<br>`reasons_after_01~06.png` | reasons 2번 아코디언용. **옵션 접두사(`disneyth0N_`)가 없는** 네이밍이며 끝 두 자리가 옵션 번호입니다. |
 | `disneyth06_reasons_02.png` | reasons 2번 **모바일 전용**이지만 파일명에 `_mo` 가 없습니다. 전달받은 파일명을 그대로 사용했습니다. |
 
-### 5. 옵션 06 외 교체·추가된 이미지
+### 5. 옵션 06 외 교체된 이미지
 
-옵션 06 추가와 별개로, 디자인 측 요청에 따라 다른 옵션의 이미지도 함께 반영했습니다.
+옵션 06 추가와 별개로, 디자인 측 요청에 따라 다른 옵션의 `disc` 이미지도 함께 교체했습니다.
 
-- `disneyth0{1,2,3,5}_disc0{1~4}.png` — 교체
-- `disneyth05_detail_05.png` / `_mo.png` — **신규 추가**.
-  HTML 에 참조는 있었으나 파일이 없어 옵션 05 의 Goodbye Video 이미지가 표시되지 않던 건이 해소되었습니다.
+- `disneyth0{1,2,3,5}_disc0{1~4}.png`
 
 ### 6. 비디오 네이밍
 
