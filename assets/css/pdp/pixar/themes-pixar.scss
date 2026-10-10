@@ -75,6 +75,7 @@
         width: 100%;
         color: #CCCCCC;
         font-size: clamp(12px, 1.2cqw, 16px);
+        word-break: keep-all;
       }
     }
   }
@@ -148,21 +149,15 @@
       }
     }
 
+    /* 카드 3장 + pick → 2×2 그리드의 한 칸 */
     .card.pick {
-      max-width: none;
-      grid-column: 1 / span 2; /* 두 컬럼 전체 차지 */
-      height: 48px;
-      padding: 0;
       .card-contents {
-        flex-direction: row;
         img {
-          width: 18px;
+          width: 50px;
         }
         h3 {
           width: fit-content;
-          color: #05141f;
           font-size: 12px;
-          font-weight: 400;
           letter-spacing: -0.24px;
         }
       }

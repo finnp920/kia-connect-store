@@ -73,6 +73,7 @@
   width: 100%;
   color: #CCCCCC;
   font-size: clamp(12px, 1.2cqw, 16px);
+  word-break: keep-all;
 }
 [data-product=pixar] .themes-stage .card.pick {
   align-items: center;
@@ -137,23 +138,15 @@
     font-size: clamp(10px, 1.8cqw, 16px);
     letter-spacing: -0.2px;
   }
-  [data-product=pixar] .themes-stage .card.pick {
-    max-width: none;
-    grid-column: 1/span 2; /* 두 컬럼 전체 차지 */
-    height: 48px;
-    padding: 0;
-  }
-  [data-product=pixar] .themes-stage .card.pick .card-contents {
-    flex-direction: row;
+  [data-product=pixar] .themes-stage {
+    /* 카드 3장 + pick → 2×2 그리드의 한 칸 */
   }
   [data-product=pixar] .themes-stage .card.pick .card-contents img {
-    width: 18px;
+    width: 50px;
   }
   [data-product=pixar] .themes-stage .card.pick .card-contents h3 {
     width: fit-content;
-    color: #05141f;
     font-size: 12px;
-    font-weight: 400;
     letter-spacing: -0.24px;
   }
 }
