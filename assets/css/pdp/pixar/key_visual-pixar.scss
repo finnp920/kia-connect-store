@@ -32,7 +32,8 @@
     letter-spacing: -0.32px;
   }
 
-  &[data-theme='02'] {
+  &[data-theme='02'],
+  &[data-theme='03'] {
     .kv-title,
     .kv-subtitle {
       color: #ffffff;

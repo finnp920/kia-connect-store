@@ -32,7 +32,8 @@
   letter-spacing: -0.32px;
 }
 [data-product=pixar] .kv-slide[data-theme="02"] .kv-title,
-[data-product=pixar] .kv-slide[data-theme="02"] .kv-subtitle {
+[data-product=pixar] .kv-slide[data-theme="02"] .kv-subtitle, [data-product=pixar] .kv-slide[data-theme="03"] .kv-title,
+[data-product=pixar] .kv-slide[data-theme="03"] .kv-subtitle {
   color: #ffffff;
 }
 
@@ -52,4 +53,5 @@
     font-size: clamp(12px, 3.889vw, 22px);
   }
 }
+
 /*# sourceMappingURL=key_visual-pixar.css.map */

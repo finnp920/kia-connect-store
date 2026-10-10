@@ -27,4 +27,13 @@
       background-image: url(../../../icons/icon_circle_checked_fff.svg);
     }
   }
+
+  // TODO: 피그마 수령 후 그라데이션 색상 확정 (임시: 인크레더블 레드)
+  &[data-current-theme='03'] .theme-selector.buttons button[data-theme='03'] {
+    background: linear-gradient(90deg, #ED3A1C 0%, #B51010 100%);
+    backdrop-filter: blur(3px);
+    &::before {
+      background-image: url(../../../icons/icon_circle_checked_fff.svg);
+    }
+  }
 }

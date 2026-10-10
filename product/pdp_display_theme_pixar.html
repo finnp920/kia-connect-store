@@ -463,6 +463,21 @@
                     >
                   </label>
                 </div>
+                <div class="checkBtn">
+                  <input
+                    id="check3"
+                    name="check"
+                    type="checkbox"
+                    value="The Incredibles"
+                  />
+                  <label for="check3">
+                    <img
+                      alt="Option 3 - The Incredibles"
+                      src="../assets/images/kia/pdp/pixar/productthumb_pixarth03.png"
+                    />
+                    <span class="optionText">Pixar The Incredibles</span>
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -510,7 +525,7 @@
     <main
       data-current-theme="01"
       data-product="pixar"
-      data-theme-list='["01", "02"]'
+      data-theme-list='["01", "02", "03"]'
     >
       <!-- KV (Key Visual) START -->
       <section class="kv">
@@ -561,6 +576,30 @@
                 <p class="kv-subtitle">
                   This immersive in-car experience inspired by
                   <br class="view-mo" />Disney Pixar's Inside Out will make
+                  every drive feel like no other.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide kv-slide" data-theme="03">
+              <picture class="kv-image">
+                <source
+                  media="(max-width: 769px)"
+                  srcset="../assets/images/kia/pdp/pixar/pixarth03_hero_mo.png"
+                />
+                <img
+                  alt="KV Image 3"
+                  src="../assets/images/kia/pdp/pixar/pixarth03_hero.png"
+                />
+              </picture>
+              <!-- TODO: 피그마 수령 후 KV 문구 교체 -->
+              <div class="kv-contents">
+                <h2 class="kv-title">
+                  Bring artwork <br class="view-mo" />inspired by<br />
+                  Disney Pixar's <br class="view-mo" />The Incredibles to your Kia
+                </h2>
+                <p class="kv-subtitle">
+                  This immersive in-car experience inspired by
+                  <br class="view-mo" />Disney Pixar's The Incredibles will make
                   every drive feel like no other.
                 </p>
               </div>
@@ -630,6 +669,25 @@
                   <p>#EmotionsInMotion #OkayToFeel #ColorfulFeelings</p>
                 </div>
               </li>
+              <li class="card" data-theme="03">
+                <picture class="card-layer layer-active">
+                  <source
+                    media="(max-width: 769px)"
+                    srcset="
+                      ../assets/images/kia/pdp/pixar/sec02_cardthumb_03_mo.png
+                    "
+                  />
+                  <img
+                    alt="The Incredibles"
+                    src="../assets/images/kia/pdp/pixar/sec02_cardthumb_03.png"
+                  />
+                </picture>
+                <!-- TODO: 피그마 수령 후 카드 문구/해시태그 교체 -->
+                <div class="card-contents">
+                  <h3>Pixar The Incredibles</h3>
+                  <p>#SuperFamily #Teamwork #Heroes</p>
+                </div>
+              </li>
               <li class="card pick">
                 <div class="card-contents">
                   <picture>
@@ -662,6 +720,7 @@
             <button data-theme="02">
               Pixar Inside Out: An Emotional Journey
             </button>
+            <button data-theme="03">Pixar The Incredibles</button>
           </div>
 
           <div class="theme-selector dropdown">
@@ -675,6 +734,7 @@
             <ul class="theme-list">
               <li value="01">Pixar Toy Story</li>
               <li value="02">Pixar Inside Out: An Emotional Journey</li>
+              <li value="03">Pixar The Incredibles</li>
             </ul>
           </div>
         </div>
@@ -716,6 +776,19 @@
                           src="../assets/images/kia/pdp/pixar/pixarth02_detail_01.png"
                         />
                       </picture>
+                      <picture class="xfade-item" data-theme="03">
+                        <source
+                          media="(max-width: 769px)"
+                          srcset="
+                            ../assets/images/kia/pdp/pixar/pixarth03_detail_01_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/pixar/pixarth03_detail_01.png"
+                        />
+                      </picture>
                     </div>
                     <span class="preview-label">Cluster</span>
                   </div>
@@ -745,6 +818,19 @@
                           alt="Cluster"
                           loading="lazy"
                           src="../assets/images/kia/pdp/pixar/pixarth02_detail_02.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="03">
+                        <source
+                          media="(max-width: 769px)"
+                          srcset="
+                            ../assets/images/kia/pdp/pixar/pixarth03_detail_02_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/pixar/pixarth03_detail_02.png"
                         />
                       </picture>
                     </div>
@@ -782,6 +868,19 @@
                           src="../assets/images/kia/pdp/pixar/pixarth02_detail_03.png"
                         />
                       </picture>
+                      <picture class="xfade-item" data-theme="03">
+                        <source
+                          media="(max-width: 769px)"
+                          srcset="
+                            ../assets/images/kia/pdp/pixar/pixarth03_detail_03_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/pixar/pixarth03_detail_03.png"
+                        />
+                      </picture>
                     </div>
                     <span class="preview-label">Homecard</span>
                   </div>
@@ -817,6 +916,19 @@
                           src="../assets/images/kia/pdp/pixar/pixarth02_detail_04.png"
                         />
                       </picture>
+                      <picture class="xfade-item" data-theme="03">
+                        <source
+                          media="(max-width: 769px)"
+                          srcset="
+                            ../assets/images/kia/pdp/pixar/pixarth03_detail_04_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/pixar/pixarth03_detail_04.png"
+                        />
+                      </picture>
                     </div>
                     <span class="preview-label">Navigation</span>
                   </div>
@@ -846,6 +958,19 @@
                           alt="Cluster"
                           loading="lazy"
                           src="../assets/images/kia/pdp/pixar/pixarth02_detail_05.png"
+                        />
+                      </picture>
+                      <picture class="xfade-item" data-theme="03">
+                        <source
+                          media="(max-width: 769px)"
+                          srcset="
+                            ../assets/images/kia/pdp/pixar/pixarth03_detail_05_mo.png
+                          "
+                        />
+                        <img
+                          alt="Cluster"
+                          loading="lazy"
+                          src="../assets/images/kia/pdp/pixar/pixarth03_detail_05.png"
                         />
                       </picture>
                     </div>
@@ -900,6 +1025,20 @@
                     <video
                       autoplay
                       class="playful-video-player"
+                      data-theme="03"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/pixar/th03/welcome_cluster.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
                       data-theme="01"
                       loop
                       muted
@@ -922,6 +1061,20 @@
                     >
                       <source
                         src="../assets/videos/pdp/pixar/th02/welcome_avnt.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="03"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/pixar/th03/welcome_avnt.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -958,6 +1111,20 @@
                     <video
                       autoplay
                       class="playful-video-player"
+                      data-theme="03"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/pixar/th03/goodbye_cluster.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
                       data-theme="01"
                       loop
                       muted
@@ -983,6 +1150,20 @@
                         type="video/mp4"
                       />
                     </video>
+                    <video
+                      autoplay
+                      class="playful-video-player"
+                      data-theme="03"
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="../assets/videos/pdp/pixar/th03/goodbye_avnt.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
                   </div>
                 </div>
                 <p>
@@ -1003,6 +1184,12 @@
                     class="xfade-item"
                     data-theme="02"
                     src="../assets/images/kia/pdp/pixar/pixarth02_disc01.png"
+                  />
+                  <img
+                    alt="Cluster - The Incredibles"
+                    class="xfade-item"
+                    data-theme="03"
+                    src="../assets/images/kia/pdp/pixar/pixarth03_disc01.png"
                   />
                 </div>
                 <p>
@@ -1028,6 +1215,12 @@
                     data-theme="02"
                     src="../assets/images/kia/pdp/pixar/pixarth02_disc02.png"
                   />
+                  <img
+                    alt="Navigation - The Incredibles"
+                    class="xfade-item"
+                    data-theme="03"
+                    src="../assets/images/kia/pdp/pixar/pixarth03_disc02.png"
+                  />
                 </div>
                 <p>
                   Disney Pixar artwork highlights your current location during navigation.
@@ -1048,11 +1241,20 @@
                     data-theme="02"
                     src="../assets/images/kia/pdp/pixar/pixarth02_disc03.png"
                   />
+                  <img
+                    alt="Homecard - The Incredibles"
+                    class="xfade-item"
+                    data-theme="03"
+                    src="../assets/images/kia/pdp/pixar/pixarth03_disc03.png"
+                  />
                 </div>
                 <p data-theme="01">
                   Artwork of Disney Pixar characters and logos appear across various menu screens.
                 </p>
                 <p data-theme="02">
+                  Artwork of Disney Pixar characters appear across various menu screens.
+                </p>
+                <p data-theme="03">
                   Artwork of Disney Pixar characters appear across various menu screens.
                 </p>
               </div>
@@ -1070,6 +1272,12 @@
                     class="xfade-item"
                     data-theme="02"
                     src="../assets/images/kia/pdp/pixar/pixarth02_disc04.png"
+                  />
+                  <img
+                    alt="Profile - The Incredibles"
+                    class="xfade-item"
+                    data-theme="03"
+                    src="../assets/images/kia/pdp/pixar/pixarth03_disc04.png"
                   />
                 </div>
                 <p>
@@ -1131,6 +1339,19 @@
                       alt="Reason 1"
                       loading="lazy"
                       src="../assets/images/kia/pdp/pixar/pixarth02_reasons_01.png"
+                    />
+                  </picture>
+                  <picture data-theme="03">
+                    <source
+                      media="(max-width: 769px)"
+                      srcset="
+                        ../assets/images/kia/pdp/pixar/pixarth03_reasons_01_mo.png
+                      "
+                    />
+                    <img
+                      alt="Reason 1"
+                      loading="lazy"
+                      src="../assets/images/kia/pdp/pixar/pixarth03_reasons_01.png"
                     />
                   </picture>
                 </div>

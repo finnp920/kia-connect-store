@@ -23,6 +23,15 @@
       }
     }
   }
+
+  &[data-current-theme='03'] {
+    section.playful {
+      background-color: #0b0a0b;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/pixar/pixarth03_disc_bg.png');
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -39,6 +48,14 @@
       section.playful {
         .playful-wrapper::before {
           background-image: url('../../../images/kia/pdp/pixar/pixarth02_disc_bg_mo.png');
+        }
+      }
+    }
+
+    &[data-current-theme='03'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/pixar/pixarth03_disc_bg_mo.png');
         }
       }
     }
