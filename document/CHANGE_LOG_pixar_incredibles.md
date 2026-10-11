@@ -58,7 +58,7 @@ root
 
 ### 5. 비디오 네이밍
 
-`th03/` 에 `welcome/goodbye × cluster/avnt` 4개. 기존 규칙에 맞춰 `welcome_avnt.mp4` / `goodbye_avnt.mp4` 로 리네임했습니다.
+`th03/` 에 `welcome/goodbye × cluster/avnt` 4개. 파일명은 전 옵션 동일하며 폴더명으로 옵션을 구분합니다.
 
 ### 6. 미참조 이미지 정리
 
