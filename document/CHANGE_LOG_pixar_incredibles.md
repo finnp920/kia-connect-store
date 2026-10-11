@@ -67,3 +67,4 @@ root
 ### 7. 헤더 최신화
 
 `.hederWarp_n` 을 구버전에서 최신 공통 헤더(Disney 테마와 동일)로 교체했습니다.
+헤더 하단의 sticky 가격 바(`#info-sticky`)도 Disney 테마와 동일하게 제거했습니다.

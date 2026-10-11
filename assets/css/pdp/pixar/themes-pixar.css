@@ -74,6 +74,10 @@
   color: #CCCCCC;
   font-size: clamp(12px, 1.2cqw, 16px);
   word-break: keep-all;
+  /* 해시태그 단위로만 줄바꿈 */
+}
+[data-product=pixar] .themes-stage .card .card-contents p span {
+  white-space: nowrap;
 }
 [data-product=pixar] .themes-stage .card.pick {
   align-items: center;
