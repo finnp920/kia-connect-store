@@ -26,7 +26,9 @@ root
     │       ├── productthumb_pixarth03.png         # [추가]
     │       ├── sec02_cardthumb_03(_mo).png        # [추가]
     │       ├── pixarth0{1,2}_*                    # [교체] 아래 4 참고
-    │       └── pixarth00_reasons_02(_mo).png      # [교체] 아래 4 참고
+    │       ├── pixarth00_reasons_02(_mo).png      # [교체] 아래 4 참고
+    │       ├── ic_check.svg                       # [삭제] 아래 6 참고
+    │       └── ic_progress_bar.png                # [삭제] 아래 6 참고
     │
     └── videos/
         └── pdp/pixar/th03/                        # [추가] 옵션 03 전용 폴더
@@ -79,3 +81,9 @@ root
 `assets/videos/pdp/pixar/th03/` 에 `welcome/goodbye × cluster/avnt` 4개.
 전달 원본의 `avnt_welcome.mp4` / `avnt_goodbye.mp4` 는 기존 규칙에 맞춰
 **`welcome_avnt.mp4` / `goodbye_avnt.mp4` 로 이름을 바꿔** 넣었습니다. 폴더명으로 옵션을 구분합니다.
+
+### 6. 미참조 이미지 정리
+
+아래 2개는 HTML·CSS·JS 어디에서도 참조하지 않아 삭제했습니다.
+
+- `ic_check.svg`, `ic_progress_bar.png`
