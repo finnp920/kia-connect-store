@@ -9,7 +9,7 @@ Pixar 테마 PDP에 **옵션 03 인크레더블**을 추가하고, 페이지를 
 ```bash
 root
 ├── product/
-│   └── pdp_display_theme_pixar.html              # [수정] 옵션 03 추가, 국문화
+│   └── pdp_display_theme_pixar.html              # [수정] 옵션 03 추가, 국문화, 헤더 교체
 │
 └── assets/
     ├── css/
@@ -63,3 +63,7 @@ root
 ### 6. 미참조 이미지 정리
 
 어디에서도 참조하지 않는 `ic_check.svg`, `ic_progress_bar.png` 를 삭제했습니다.
+
+### 7. 헤더 최신화
+
+`.hederWarp_n` 을 구버전에서 최신 공통 헤더(Disney 테마와 동일)로 교체했습니다.
