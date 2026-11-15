@@ -32,6 +32,20 @@
       }
     }
   }
+
+  /* 04 도리를 찾아서 — 01 기준 임시값, 시안 수령 후 교체 */
+  &[data-current-theme='04'] {
+    section.playful {
+      background-color: #b4e1fe;
+      .playful-wrapper::before {
+        background-image: url('../../../images/kia/pdp/pixar/pixarth04_disc_bg.png');
+      }
+    }
+
+    .playful-title, .playful-content-item > h3, .playful-content-item > p:not(.warning) {
+      color: #000000;
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -56,6 +70,14 @@
       section.playful {
         .playful-wrapper::before {
           background-image: url('../../../images/kia/pdp/pixar/pixarth03_disc_bg_mo.png');
+        }
+      }
+    }
+
+    &[data-current-theme='04'] {
+      section.playful {
+        .playful-wrapper::before {
+          background-image: url('../../../images/kia/pdp/pixar/pixarth04_disc_bg_mo.png');
         }
       }
     }

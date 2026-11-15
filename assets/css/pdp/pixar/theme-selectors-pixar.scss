@@ -35,4 +35,13 @@
       background-image: url(../../../icons/icon_circle_checked_fff.svg);
     }
   }
+
+  /* 04 도리를 찾아서 — 01 기준 임시값, 시안 수령 후 교체 */
+  &[data-current-theme='04'] .theme-selector.buttons button[data-theme='04'] {
+    background: linear-gradient(90deg, #1C5EED 0%, #1031B5 100%);
+    backdrop-filter: blur(3px);
+    &::before {
+      background-image: url(../../../icons/icon_circle_checked_fff.svg);
+    }
+  }
 }
