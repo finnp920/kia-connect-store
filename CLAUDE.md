@@ -21,18 +21,18 @@ HTML/CSS/JS/이미지/비디오 리소스를 **기아에 납품**하는 것이 �
 
 ---
 
-## 2. 테마 현황 (2026-08-17 기준, 9종)
+## 2. 테마 현황 (2026-11-15 기준, 9종)
 
 | 테마 (`data-product`) | 테마 수 (`data-theme-list`) | 특징 섹션 | CHANGE_LOG |
 |---|---|---|---|
 | `black` | 1 (`01` 블랙 에디션) | 없음 (공통 섹션만) | `CHANGE_LOG_black.md` |
 | `brand` | 1 (`01` Opposites united) | `experience` | `CHANGE_LOG_brand.md` |
-| `disney` | 5 (`01`~`05`) | `reasons-n`, `screenshots` | `CHANGE_LOG_disney.md`, `CHANGE_LOG_disney-2.md` |
+| `disney` | 6 (`01`~`06`) | `reasons-n`, `screenshots`, foldable-list | `CHANGE_LOG_disney.md`, `CHANGE_LOG_disney-2.md`, `CHANGE_LOG_disney-3.md` |
 | `fifa` | 17 (순서 비순차) | `experience` | `CHANGE_LOG_fifa.md` |
 | `kbo` | 10 (`01`~`10`) | `reasons-n` | `CHANGE_LOG_kbo.md`, `CHANGE_LOG_kbo-2.md` |
 | `marvel` | 3 (`01`,`02`,`04`) | `reasons-n`, `screenshots` | `CHANGE_LOG_marvel_xmen.md` |
 | `natgeo` | 3 (`01`~`03`) | `reasons`(구버전), `screenshots`, `credit` | 불필요 (납품 완료) |
-| `pixar` | 3 (`01`~`03`) | `reasons-n`, `screenshots` | `CHANGE_LOG_pixar_incredibles.md` |
+| `pixar` | 4 (`01`~`04`, 04는 01 에셋 임시 복제) | `reasons-n`, `screenshots` | `CHANGE_LOG_pixar_incredibles.md` |
 | `starwars` | 6 (`01`~`06`) | `reasons-n`, `screenshots`, `credit`, foldable-list | `CHANGE_LOG_starwars.md` |
 
 - `marvel`의 테마 ID는 `03`이 비어 있음 — **연속이 아니어도 정상**. `data-theme-list` 순서가 곧 화면 노출 순서다(`fifa` 참고).
