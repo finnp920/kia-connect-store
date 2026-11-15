@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ========================================
    Discover Playful Designs - Pixar
    ======================================== */
@@ -23,17 +22,11 @@
 [data-product=pixar][data-current-theme="03"] section.playful .playful-wrapper::before {
   background-image: url("../../../images/kia/pdp/pixar/pixarth03_disc_bg.png");
 }
-[data-product=pixar] {
-  /* 04 도리를 찾아서 — 01 기준 임시값, 시안 수령 후 교체 */
-}
 [data-product=pixar][data-current-theme="04"] section.playful {
-  background-color: #b4e1fe;
+  background-color: #2d4d56;
 }
 [data-product=pixar][data-current-theme="04"] section.playful .playful-wrapper::before {
   background-image: url("../../../images/kia/pdp/pixar/pixarth04_disc_bg.png");
-}
-[data-product=pixar][data-current-theme="04"] .playful-title, [data-product=pixar][data-current-theme="04"] .playful-content-item > h3, [data-product=pixar][data-current-theme="04"] .playful-content-item > p:not(.warning) {
-  color: #000000;
 }
 
 @media screen and (max-width: 769px) {

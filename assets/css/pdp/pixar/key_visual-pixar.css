@@ -33,7 +33,8 @@
 }
 [data-product=pixar] .kv-slide[data-theme="02"] .kv-title,
 [data-product=pixar] .kv-slide[data-theme="02"] .kv-subtitle, [data-product=pixar] .kv-slide[data-theme="03"] .kv-title,
-[data-product=pixar] .kv-slide[data-theme="03"] .kv-subtitle {
+[data-product=pixar] .kv-slide[data-theme="03"] .kv-subtitle, [data-product=pixar] .kv-slide[data-theme="04"] .kv-title,
+[data-product=pixar] .kv-slide[data-theme="04"] .kv-subtitle {
   color: #ffffff;
 }
 

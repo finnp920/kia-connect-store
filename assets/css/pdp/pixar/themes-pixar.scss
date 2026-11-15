@@ -14,11 +14,18 @@
     display: none;
   }
 
+  .themes-stage-inner {
+    width: 100%;
+    /* 그리드 1452px + 공통 좌우 패딩 20px */
+    max-width: 1492px;
+  }
+
   .themes-cards-grid {
     display: grid;
+    /* 시안 기준 카드 289px × 4 + pick 200px + gap 24px × 4 */
     grid-template-columns: repeat(4, minmax(0, 1fr)) 0.7fr;
     gap: 24px;
-    max-width: 1200px;
+    max-width: 1452px;
     margin: 0 auto;
     list-style: none;
   }
@@ -154,16 +161,25 @@
       }
     }
 
-    /* 카드 3장 + pick → 2×2 그리드의 한 칸 */
+    /* 카드 4장 → 2×2, pick 카드는 두 컬럼을 모두 차지하는 가로형 바 (disney 동일 패턴) */
     .card.pick {
+      max-width: none;
+      aspect-ratio: auto;
+      grid-column: 1 / span 2;
+      height: 48px;
+
       .card-contents {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        gap: 8px;
         img {
-          width: 50px;
+          width: 18px;
         }
         h3 {
           width: fit-content;
-          font-size: 12px;
-          letter-spacing: -0.24px;
+          font-size: 14px;
+          letter-spacing: -0.28px;
         }
       }
     }
